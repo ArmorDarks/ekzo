@@ -14,13 +14,16 @@
  * twitter.com/redclov3r/status/250301539321798657
  */
 
-@mixin font-size($font-size, $line-height:true){
+@mixin font-size($font-size, $line-height:true) {
 	font-size: $font-size;
 	// font-size: ($font-size / $base-font-size)*1rem;
-	@if $line-height == true{
+
+	@if $line-height == true {
 		line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
 	}
+
 }
+
 
 
 /**
@@ -36,19 +39,26 @@
  * @thierrylemoulec for refining and improving my initial mixin.
  */
 
-@mixin headings($from: 1, $to: 6){
+@mixin headings($from: 1, $to: 6) {
+
 	%base-heading {
 		@content
 	}
 
-	@if $from >= 1 and $to <= 6{
-		@for $i from $from through $to{
-			h#{$i}{
+	@if $from >= 1 and $to <= 6 {
+
+		@for $i from $from through $to {
+
+			h#{$i} {
 				@extend %base-heading;
 			}
+
 		}
+
 	}
+
 }
+
 
 
 /**
@@ -58,13 +68,14 @@
  *
  */
 
-@mixin vendor($property, $value...){
-	-webkit-#{$property}:$value;
-		 -moz-#{$property}:$value;
-			-ms-#{$property}:$value;
-			 -o-#{$property}:$value;
-					#{$property}:$value;
+@mixin vendor($property, $value...) {
+	-webkit-#{$property}: $value;
+		 -moz-#{$property}: $value;
+			-ms-#{$property}: $value;
+			 -o-#{$property}: $value;
+					#{$property}: $value;
 }
+
 
 
 /**
@@ -83,26 +94,28 @@
  * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
  */
 
-@mixin keyframe ($animation-name){
-	@-webkit-keyframes $animation-name{
+@mixin keyframe ($animation-name) {
+
+	@-webkit-keyframes $animation-name {
 		@content;
 	}
 
-	@-moz-keyframes $animation-name{
+	@-moz-keyframes $animation-name {
 		@content;
 	}
 
-	@-ms-keyframes $animation-name{
+	@-ms-keyframes $animation-name {
 		@content;
 	}
 
-	@-o-keyframes $animation-name{
+	@-o-keyframes $animation-name {
 		@content;
 	}
 
-	@keyframes $animation-name{
+	@keyframes $animation-name {
 		@content;
 	}
+
 }
 
 
@@ -114,11 +127,13 @@
  * Where `$truncation-boundary` is a united measurement.
  */
 
-@mixin truncate($truncation-boundary){
-	max-width: $truncation-boundary;
-	white-space: nowrap;
+@mixin truncate($truncation-boundary) {
 	overflow: hidden;
 	text-overflow: ellipsis;
+
+	max-width: $truncation-boundary;
+
+	white-space: nowrap;
 }
 
 

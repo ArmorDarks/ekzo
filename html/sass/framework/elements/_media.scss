@@ -3,6 +3,7 @@
 		$MEDIA
 \*------------------------------------*/
 
+
 /**
  * Place any image- and text-like content side-by-side, as per:
  * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
@@ -20,25 +21,36 @@
 
 .media {
 	display: block;
+
 	@extend .clear;
+}
 
-	.img {
-		float: left;
 
-		display: block;
+	.media--right {
 
-		margin-right: $base-spacing-unit;
+		.media__img{
+			float: right;
+
+			margin-left: $base-spacing-unit;
+		}
+
 	}
-	&.right .img {
-		float: right;
-		margin-left: $base-spacing-unit;
-		margin-right: 0;
-	}
-	.content{
-		overflow: hidden;
-	}
-	.content,
-	.content > :last-child {
+
+
+.media__img{
+	float: left;
+
+	display: block;
+
+	margin-right: $base-spacing-unit;
+}
+
+
+.media__content{
+	overflow: hidden;
+}
+
+	.media__content,
+	.media__content > :last-child {
 		margin-bottom: 0;
 	}
-}

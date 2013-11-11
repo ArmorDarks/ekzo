@@ -1,25 +1,33 @@
+
 /*------------------------------------*\
 	$RESET
 \*------------------------------------*/
-
 
 /**
  * A more considered reset; more of a restart...
  * As per: csswizardry.com/2011/10/reset-restarted
  */
 
-// @if $global-border-box == true {
-//     /**
-//     * Let’s make the box model all nice, shall we...?
-//     */
-//     * {
-//         &,
-//         &:before,
-//         &:after {
-//             @include vendor(box-sizing, border-box);
-//         }
-//     }
-// }
+
+
+/**
+* Let’s make the box model all nice, shall we...?
+*/
+
+@if $global-border-box == true {
+
+	* {
+
+			&,
+			&:before,
+			&:after {
+				@include vendor(box-sizing, border-box);
+			}
+
+	}
+
+}
+
 
 
 /**
@@ -38,13 +46,12 @@ select, button, a, img {
 }
 
 
+
 /*
  * Remove most spacing between table cells and border
  */
 
 table {
-	width: 100%;
-
 	border: none;
 
 	border-collapse: collapse;
@@ -52,14 +59,17 @@ table {
 }
 
 
+
 fieldset {
 	border: none;
 }
 
 
+
 ul {
 	list-style: none;
 }
+
 
 
 input,
@@ -72,15 +82,18 @@ img {
 }
 
 
+
 pre,code,samp,kbd{
 	font-family: monospace, serif;
 	font-size: 1em;
 }
 
 
+
 small{
 	font-size: 80%;
 }
+
 
 
 /*
@@ -96,6 +109,7 @@ textarea {
 }
 
 
+
 /**
  * Give a help cursor to elements that give extra info on `:hover`.
  */
@@ -104,6 +118,7 @@ abbr[title],
 dfn[title] {
 	cursor: help;
 }
+
 
 
 /**
@@ -117,25 +132,25 @@ img {
 }
 
 
+
 /**
  * Give form elements some cursor interactions...
  */
 
-label,
-// input,
-// textarea,
 button,
 select,
 option {
 	cursor: pointer;
 }
-	.text-input:active,
-	.text-input:focus,
-	textarea:active,
-	textarea:focus {
-		cursor: text;
-		outline: none;
-	}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+	cursor: text;
+	outline: none;
+}
+
 
 
 /**

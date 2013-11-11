@@ -3,6 +3,7 @@
 		$NAV
 \*------------------------------------*/
 
+
 /**
  * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
  * When used on an `ol` or `ul`, this class throws the list into horizontal mode
@@ -21,7 +22,9 @@
 
 .nav {
 	list-style:none;
-	// margin-left:0;
+
+	margin-left: 0;
+
 	@extend .clear;
 
 	> li {
@@ -32,8 +35,11 @@
 			*display:inline;
 			zoom:1;
 		}
+
 	}
+
 }
+
 
 
 /**
@@ -56,8 +62,12 @@
 		> a {
 			display:block;
 		}
+
 	}
+
+
 }
+
 
 
 /**
@@ -88,7 +98,9 @@
 		> a {
 			padding:$half-spacing-unit;
 		}
+
 	}
+
 }
 
 
@@ -96,7 +108,7 @@
  * Force a nav to occupy 100% of the available width of its parent. Extends
  * `.nav`, e.g.:
  *
-		<ul class="nav  fit">
+		<ul class="nav--fit">
 			<li><a href=#>Home</a></li>
 			<li><a href=#>About</a></li>
 			<li><a href=#>Portfolio</a></li>
@@ -116,7 +128,9 @@
 		> a {
 			display:block;
 		}
+
 	}
+
 }
 
 
@@ -138,5 +152,7 @@
 		&:last-child:after {
 			display:none;
 		}
+
 	}
+
 }

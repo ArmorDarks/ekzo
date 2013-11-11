@@ -3,6 +3,7 @@
 	$HEADINGS
 \*------------------------------------*/
 
+
 /**
  * When we define a heading we also define a corresponding class to go with it.
  * This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
@@ -16,6 +17,7 @@ h1,.h1{
 
 	font-weight: $headings-font-weight;
 }
+
 h2,.h2{
 	font-family: $headings-font-family;
 
@@ -23,6 +25,7 @@ h2,.h2{
 
 	font-weight: $headings-font-weight;
 }
+
 h3,.h3{
 	font-family: $headings-font-family;
 
@@ -30,6 +33,7 @@ h3,.h3{
 
 	font-weight: $headings-font-weight;
 }
+
 h4,.h4{
 	font-family: $headings-font-family;
 
@@ -37,6 +41,7 @@ h4,.h4{
 
 	font-weight: $headings-font-weight;
 }
+
 h5,.h5{
 	font-family: $headings-font-family;
 
@@ -44,6 +49,7 @@ h5,.h5{
 
 	font-weight: $headings-font-weight;
 }
+
 h6,.h6{
 	font-family: $headings-font-family;
 
@@ -61,9 +67,11 @@ h6,.h6{
 .h-giga {
 		@include font-size($h-giga-size);
 }
+
 .h-mega {
 		@include font-size($h-mega-size);
 }
+
 .h-kilo {
 		font-family: $headings-font-family;
 

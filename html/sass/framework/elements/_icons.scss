@@ -3,10 +3,13 @@
 		$ICONS
 \*------------------------------------*/
 
+
 .icon {
-	background: url(../img/sprite.png) no-repeat;
-	vertical-align: middle;
 	position: relative;
 
-	@extend .inline;
+	background: url(../img/sprite.png) no-repeat;
+
+	vertical-align: middle;
+
+	@extend .display--inline;
 }

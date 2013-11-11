@@ -3,13 +3,13 @@
 	$IMAGES
 \*------------------------------------*/
 
+
 /**
  * Fluid images.
  */
 
-img {
-	max-width: 100%;
-}
+img { max-width: 100%; }
+
 
 
 /**
@@ -17,28 +17,29 @@ img {
  */
 
 img[width],
-img[height] {
-	max-width: none;
-}
+img[height] { max-width: none; }
+
 
 
 /**
  * Image placement variations.
  */
 
-.img-right {
+.img--right {
 	float: right;
 
 	margin-bottom: $half-spacing-unit;
 	margin-left: $base-spacing-unit;
 }
-.img-left {
+
+.img--left {
 	float: left;
 
 	margin-right: $base-spacing-unit;
 	margin-bottom: $half-spacing-unit;
 }
-.img-center {
+
+.img--center {
 	display: block;
 
 	margin-right: auto;

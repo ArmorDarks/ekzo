@@ -4,17 +4,29 @@
 \*------------------------------------*/
 
 
+table {
+    width: 100%;
+}
+
+
+
 /**
- * General paddings for all th and td
+ * Apply paddings for all th and td
  */
 
-.padding-cells th,
-.padding-cells td {
-	padding: $base-spacing-unit / 4;
-	@media screen and (min-width: 480px) {
-		padding: $half-spacing-unit;
+.table--padding {
+
+	th,
+	td {
+		padding: $base-spacing-unit / 4;
+
+		@media screen and (min-width: 480px) {
+			padding: $half-spacing-unit;
+		}
+
+		text-align: left;
 	}
-	text-align: left;
+
 }
 
 
@@ -22,18 +34,14 @@
  * Cell alignments
  */
 
-[colspan] {
-	text-align: center;
-}
-[colspan="1"] {
-	text-align: left;
-}
-[rowspan] {
-	vertical-align: middle;
-}
-[rowspan="1"] {
-	vertical-align: top;
-}
+[colspan]     { text-align: center; }
+
+[colspan="1"] { text-align: left; }
+
+[rowspan]     { vertical-align: middle; }
+
+[rowspan="1"] { vertical-align: top; }
+
 
 
 /**

@@ -3,17 +3,6 @@
 		$LISTS
 \*------------------------------------*/
 
-// /**
-//  * Remove vertical spacing from nested lists.
-//  */
-
-// li {
-//     > ul,
-//     > ol{
-//          margin-bottom:0;
-//      }
-// }
-
 
 /**
  * Create big blocky lists of content, e.g.:
@@ -31,20 +20,23 @@
  *
  */
 
-.block-list {
-		// list-style:none;
-		// margin-left:0;
+/*ul*/.block-list {
+		list-style:none;
+		margin-left:0;
 
 		> li {
 			padding: $half-spacing-unit;
 		}
+
 		> li > a {
 			display: block;
 
 			padding: $half-spacing-unit;
 			margin: -$half-spacing-unit;
 		}
+
 }
+
 
 
 /**
@@ -62,9 +54,9 @@
  *
  */
 
-.multi-list {
-	// list-style:none;
-	// margin-left:0;
+/*ul*/.multi-list {
+	list-style:none;
+	margin-left:0;
 	@extend .clear;
 
 	> li {
@@ -73,47 +65,43 @@
 }
 
 
-	/**
-	 * Apply these classes alongside the `.matrix` or `.multi-list` classes on
-	 * lists to determine how wide their columns are.
-	 */
 
-	.two-cols > li {
-			width: 50%;
-	}
-	.three-cols > li {
-			width: 33.333%;
-	}
-	.four-cols > li {
-			width: 25%;
-	}
-	.five-cols > li {
-			width: 20%;
-	}
+/**
+ * Apply these classes alongside the `.matrix` or `.multi-list` classes on
+ * lists to determine how wide their columns are.
+ */
+
+/*ul*/.two-cols > li    { width: 50%; }
+
+/*ul*/.three-cols > li  { width: 33.333%; }
+
+/*ul*/.four-cols > li   { width: 25%; }
+
+/*ul*/.five-cols > li   { width: 20%; }
 
 	/**
 	 * Unfortunately we have to qualify this selector in order to bring its
 	 * specificity above the `.[number]-cols > li` selectors above.
 	 */
 
-	.multi-list > .all-cols {
-			width: 100%;
-	}
+	/*ul*/.multi-list > .all-cols { width: 100%; }
 
 
-/* -------
+
+/**
  * Reduced margin between ul's elements
  */
 
-ul.list-margin-half {
+/*ul*/.list--margin-half {
 
 	> li + li {
 		margin-top: $half-spacing-unit;
 	}
+
 }
 
 
-/* -------
+/**
  * Ordered list defaults margins
  */
 
@@ -123,4 +111,5 @@ ol {
 	li + li {
 		margin-top: $half-spacing-unit;
 	}
+
 }

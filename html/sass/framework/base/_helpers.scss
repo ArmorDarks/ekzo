@@ -14,91 +14,96 @@
  */
 
 
+
 /**
  * Add/remove floats
  */
 
-.float-right   { float:right!important; }
-.float-left    { float:left !important; }
-.float-none    { float:none !important; }
+.float--right   { float: right!important; }
+.float--left    { float: left !important; }
+.float--none    { float: none !important; }
 
-
-/**
- * Text alignment
- */
-
-.text-left        { text-align:left  !important; }
-.text-center      { text-align:center!important; }
-.text-right       { text-align:right !important; }
-.text-justify > p { text-align: justify!important; }
 
 
 /**
- * Font styling
+ * Alignments
  */
 
-.light      { font-weight:300!important; }
-.normal     { font-weight:400!important; }
-.semibold   { font-weight:600!important; }
-.bold       { font-weight: bold!important; }
+.align--left        { text-align: left   !important; }
+.align--center      { text-align: center !important; }
+.align--right       { text-align: right  !important; }
+.align--justify > p { text-align: justify!important; }
 
-.italic     { font-style: italic!important; }
+.align--top         { vertical-align: top   !important; }
+.align--middle      { vertical-align: middle!important; }
+.align--bottom      { vertical-align: bottom!important; }
 
-.text-upper { text-transform: uppercase!important; }
-
-.nowrap     { white-space: nowrap; }
 
 
 /**
- * Varius unline stylings
- * Unline removes underline from element, but adds it to the span
+ * Text styling
  */
 
-.noline { text-decoration: none; }
+.text--light      { font-weight: 300  !important; }
+.text--normal     { font-weight: 400  !important; }
+.text--semibold   { font-weight: 600  !important; }
+.text--bold       { font-weight: bold !important; }
+
+.text--italic     { font-style: italic!important; }
+
+.text--caps       { text-transform: uppercase!important; }
+
+.text--nowrap     { white-space: nowrap; }
 
 
-.unline {
-	@extend .noline;
+
+/**
+ * Varius underline/unline stylings
+ */
+
+.underline { text-decoration: underline; }
+
+	/**
+	 * Reversed version of underline
+	 */
+
+	.underline--rev {
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; }
+	}
+
+
+.unline { text-decoration: none; }
+
+
+/**
+ * Removes underline from element, but adds it
+ * to child span
+ *
+ * Useful for anchors with icons inside it
+ */
+
+.reline {
+	text-decoration: none;
 
 	span { text-decoration: underline; }
 
-	&:hover span { @extend .noline; }
-
+	&:hover span { text-decoration: none; }
 }
 
-.unline--reversed {
-	@extend .noline;
+	/**
+	 * Removes underline, but adds it on hover
+	 */
 
-	span { @extend .noline; }
+	.reline--rev {
+		text-decoration: none;
 
-	&:hover span { text-decoration: underline; }
+		span { text-decoration: none; }
 
-}
+		&:hover span { text-decoration: underline; }
+	}
 
-
-/**
- * Dotted version of underline
- */
-
-.dotted {
-	@extend .noline;
-
-	span { border-bottom: 1px dotted; }
-
-	&:hover span { border-bottom: none; }
-
-}
-
-/**
- * Reversed version of underline
- */
-
-.underline--reversed {
-	@extend .noline;
-
-	&:hover { text-decoration: underline; }
-
-}
 
 
 /**
@@ -109,96 +114,96 @@
 .unrhythm { line-height: 1!important; }
 
 
-/**
- * Vertical alignment styling
- */
-
-.middle { vertical-align: middle!important; }
-
 
 /**
  * Inline styling
+ *
+ * 1. Fix for IE6+
  */
 
-.inline {
+.display--inline {
 	display: inline-block;
-	*display: inline;
-	*margin-right: 4px;
-	zoom: 1;
+	*display: inline;   /* [1] */
+	*margin-right: 4px; /* [1] */
+	zoom: 1;            /* [1] */
 }
+
+
 
 /**
  * Add/remove margins
  */
 
-.margin          { margin:       $base-spacing-unit!important; }
-.margin-top      { margin-top:   $base-spacing-unit!important; }
-.margin-right    { margin-right: $base-spacing-unit!important; }
-.margin-bottom   { margin-bottom:$base-spacing-unit!important; }
-.margin-left     { margin-left:  $base-spacing-unit!important; }
-.margin-ends     { margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
-.margin-sides    { margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
+.margin           { margin:       $base-spacing-unit!important; }
+.margin--top      { margin-top:   $base-spacing-unit!important; }
+.margin--right    { margin-right: $base-spacing-unit!important; }
+.margin--bottom   { margin-bottom:$base-spacing-unit!important; }
+.margin--left     { margin-left:  $base-spacing-unit!important; }
+.margin--ends     { margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
+.margin--sides    { margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
 
-.margin-half         { margin:       $half-spacing-unit!important; }
-.margin-half-top     { margin-top:   $half-spacing-unit!important; }
-.margin-half-right   { margin-right: $half-spacing-unit!important; }
-.margin-half-bottom  { margin-bottom:$half-spacing-unit!important; }
-.margin-half-left    { margin-left:  $half-spacing-unit!important; }
-.margin-half-ends    { margin-top:   $half-spacing-unit!important; margin-bottom:$half-spacing-unit!important; }
-.margin-half-sides   { margin-right: $half-spacing-unit!important; margin-left:  $half-spacing-unit!important; }
+.margin-half          { margin:       $half-spacing-unit!important; }
+.margin-half--top     { margin-top:   $half-spacing-unit!important; }
+.margin-half--right   { margin-right: $half-spacing-unit!important; }
+.margin-half--bottom  { margin-bottom:$half-spacing-unit!important; }
+.margin-half--left    { margin-left:  $half-spacing-unit!important; }
+.margin-half--ends    { margin-top:   $half-spacing-unit!important; margin-bottom:$half-spacing-unit!important; }
+.margin-half--sides   { margin-right: $half-spacing-unit!important; margin-left:  $half-spacing-unit!important; }
 
-.margin-twice          { margin:       $base-spacing-unit * 2!important; }
-.margin-twice-top      { margin-top:   $base-spacing-unit * 2!important; }
-.margin-twice-right    { margin-right: $base-spacing-unit * 2!important; }
-.margin-twice-bottom   { margin-bottom:$base-spacing-unit * 2!important; }
-.margin-twice-left     { margin-left:  $base-spacing-unit * 2!important; }
-.margin-twice-ends     { margin-top:   $base-spacing-unit * 2!important; margin-bottom:$base-spacing-unit * 2!important; }
-.margin-twice-sides    { margin-right: $base-spacing-unit * 2!important; margin-left:  $base-spacing-unit * 2!important; }
+.margin-twice           { margin:       $base-spacing-unit * 2!important; }
+.margin-twice--top      { margin-top:   $base-spacing-unit * 2!important; }
+.margin-twice--right    { margin-right: $base-spacing-unit * 2!important; }
+.margin-twice--bottom   { margin-bottom:$base-spacing-unit * 2!important; }
+.margin-twice--left     { margin-left:  $base-spacing-unit * 2!important; }
+.margin-twice--ends     { margin-top:   $base-spacing-unit * 2!important; margin-bottom:$base-spacing-unit * 2!important; }
+.margin-twice--sides    { margin-right: $base-spacing-unit * 2!important; margin-left:  $base-spacing-unit * 2!important; }
 
-.margin-no         { margin:       0!important; }
-.margin-no-top     { margin-top:   0!important; }
-.margin-no-right   { margin-right: 0!important; }
-.margin-no-bottom  { margin-bottom:0!important; }
-.margin-no-left    { margin-left:  0!important; }
-.margin-no-ends    { margin-top:   0!important; margin-bottom:0!important; }
-.margin-no-sides   { margin-right: 0!important; margin-left:  0!important; }
+.margin-no          { margin:       0!important; }
+.margin-no--top     { margin-top:   0!important; }
+.margin-no--right   { margin-right: 0!important; }
+.margin-no--bottom  { margin-bottom:0!important; }
+.margin-no--left    { margin-left:  0!important; }
+.margin-no--ends    { margin-top:   0!important; margin-bottom:0!important; }
+.margin-no--sides   { margin-right: 0!important; margin-left:  0!important; }
+
 
 
 /**
  * Add/remove paddings
  */
 
-.padding          { padding:       $base-spacing-unit!important; }
-.padding-top      { padding-top:   $base-spacing-unit!important; }
-.padding-right    { padding-right: $base-spacing-unit!important; }
-.padding-bottom   { padding-bottom:$base-spacing-unit!important; }
-.padding-left     { padding-left:  $base-spacing-unit!important; }
-.padding-ends     { padding-top:   $base-spacing-unit!important; padding-bottom:$base-spacing-unit!important; }
-.padding-sides    { padding-right: $base-spacing-unit!important; padding-left:  $base-spacing-unit!important; }
+.padding           { padding:       $base-spacing-unit!important; }
+.padding--top      { padding-top:   $base-spacing-unit!important; }
+.padding--right    { padding-right: $base-spacing-unit!important; }
+.padding--bottom   { padding-bottom:$base-spacing-unit!important; }
+.padding--left     { padding-left:  $base-spacing-unit!important; }
+.padding--ends     { padding-top:   $base-spacing-unit!important; padding-bottom:$base-spacing-unit!important; }
+.padding--sides    { padding-right: $base-spacing-unit!important; padding-left:  $base-spacing-unit!important; }
 
-.padding-half          { padding:       $half-spacing-unit!important; }
-.padding-half-top      { padding-top:   $half-spacing-unit!important; }
-.padding-half-right    { padding-right: $half-spacing-unit!important; }
-.padding-half-bottom   { padding-bottom:$half-spacing-unit!important; }
-.padding-half-left     { padding-left:  $half-spacing-unit!important; }
-.padding-half-ends     { padding-top:   $half-spacing-unit!important; padding-bottom:$half-spacing-unit!important; }
-.padding-half-sides    { padding-right: $half-spacing-unit!important; padding-left:  $half-spacing-unit!important; }
+.padding-half           { padding:       $half-spacing-unit!important; }
+.padding-half--top      { padding-top:   $half-spacing-unit!important; }
+.padding-half--right    { padding-right: $half-spacing-unit!important; }
+.padding-half--bottom   { padding-bottom:$half-spacing-unit!important; }
+.padding-half--left     { padding-left:  $half-spacing-unit!important; }
+.padding-half--ends     { padding-top:   $half-spacing-unit!important; padding-bottom:$half-spacing-unit!important; }
+.padding-half--sides    { padding-right: $half-spacing-unit!important; padding-left:  $half-spacing-unit!important; }
 
-.padding-twice          { padding:       $base-spacing-unit * 2!important; }
-.padding-twice-top      { padding-top:   $base-spacing-unit * 2!important; }
-.padding-twice-right    { padding-right: $base-spacing-unit * 2!important; }
-.padding-twice-bottom   { padding-bottom:$base-spacing-unit * 2!important; }
-.padding-twice-left     { padding-left:  $base-spacing-unit * 2!important; }
-.padding-twice-ends     { padding-top:   $base-spacing-unit * 2!important; padding-bottom:$base-spacing-unit * 2!important; }
-.padding-twice-sides    { padding-right: $base-spacing-unit * 2!important; padding-left:  $base-spacing-unit * 2!important; }
+.padding-twice           { padding:       $base-spacing-unit * 2!important; }
+.padding-twice--top      { padding-top:   $base-spacing-unit * 2!important; }
+.padding-twice--right    { padding-right: $base-spacing-unit * 2!important; }
+.padding-twice--bottom   { padding-bottom:$base-spacing-unit * 2!important; }
+.padding-twice--left     { padding-left:  $base-spacing-unit * 2!important; }
+.padding-twice--ends     { padding-top:   $base-spacing-unit * 2!important; padding-bottom:$base-spacing-unit * 2!important; }
+.padding-twice--sides    { padding-right: $base-spacing-unit * 2!important; padding-left:  $base-spacing-unit * 2!important; }
 
-.padding-no          { padding:       0!important; }
-.padding-no-top      { padding-top:   0!important; }
-.padding-no-right    { padding-right: 0!important; }
-.padding-no-bottom   { padding-bottom:0!important; }
-.padding-no-left     { padding-left:  0!important; }
-.padding-no-ends     { padding-top:   0!important; padding-bottom:0!important; }
-.padding-no-sides    { padding-right: 0!important; padding-left:  0!important; }
+.padding-no           { padding:       0!important; }
+.padding-no--top      { padding-top:   0!important; }
+.padding-no--right    { padding-right: 0!important; }
+.padding-no--bottom   { padding-bottom:0!important; }
+.padding-no--left     { padding-left:  0!important; }
+.padding-no--ends     { padding-top:   0!important; padding-bottom:0!important; }
+.padding-no--sides    { padding-right: 0!important; padding-left:  0!important; }
+
 
 
 /**
@@ -217,14 +222,16 @@
 }
 
 
+
 /**
  * Add a help cursor to any element that gives the user extra information on
  * `:hover`.
  */
 
-.cursor-help    { cursor:help!important; }
-.cursor-arrow   { cursor:default!important; }
-.cursor-pointer { cursor: pointer!important;}
+.cursor--help    { cursor: help   !important; }
+.cursor--arrow   { cursor: default!important; }
+.cursor--pointer { cursor: pointer!important;}
+
 
 
 /**
@@ -237,22 +244,26 @@
 }
 
 
+
 /**
  * Add a right-angled quote to links that imply movement, e.g.:
  *
-		<a href=# class=go>Read more</a>
+		<a href=# class="link--go">Read more</a>
  *
  */
 
-.go:after { content:"\00A0" "\00BB"!important; }
+.link--go:after { content:"\00A0" "\00BB"!important; }
+
+
 
 /**
  * Hide content
  */
 
-.hide { display: none; }
+.display-none { display: none; }
 
 .text-hide { text-indent: -9999px; }
+
 
 
 /**
@@ -272,25 +283,15 @@
 
 	.table__cell { display: table-cell; }
 
-	.table__row { display: table-row; }
+	.table__row  { display: table-row; }
 
-
-/**
- * Alligns elements in tables and cell-like divs
- */
-
-.align-top { vertical-align: top; }
-
-.align-middle { vertical-align: middle; }
-
-.align-bottom { vertical-align: bottom; }
 
 
 /**
  * Apply box-sizing model
  */
 
-.box-sizing {
+.border-box {
 	-webkit-box-sizing: border-box;
 		 -moz-box-sizing: border-box;
 					box-sizing: border-box;

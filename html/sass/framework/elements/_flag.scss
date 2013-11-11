@@ -10,7 +10,7 @@
 * E.g.:
 *
 		<div class="flag">
-			<div class="img">
+			<div class="flag__img">
 				<img src="" alt="">
 			</div>
 			<div class="content">
@@ -23,37 +23,62 @@
 .flag {
 	display: table;
 	width: 100%;
+}
 
-	.img,
-	.content {
-		display: table-cell;
-		vertical-align: middle;
-	}
-	&.top .img,
-	&.top .content {
-		vertical-align: top;
-	}
-	&.bottom .img,
-	&.bottom .content {
-		vertical-align: bottom;
-	}
-	.img {
-		padding-right: $base-spacing-unit;
 
-		> img {
-			display: block;
-			max-width: none;
+	.flag--top {
+
+		.flag__img,
+		.flag__content {
+			vertical-align: top;
 		}
+
 	}
-	&.right .img {
-		padding-right: 0;
-		padding-left: $base-spacing-unit;
+
+
+	.flag--bottom {
+
+		.flag__img,
+		.flag__content {
+			vertical-align: bottom;
+		}
+
 	}
-	.content {
-		width: 100%;
+
+
+	.flag--right {
+
+		.flag__img {
+			padding-right: 0;
+			padding-left: $base-spacing-unit;
+		}
+
 	}
-	.content,
-	.content > :last-child {
+
+
+.flag__img,
+.flag__content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+.flag__img {
+	padding-right: $base-spacing-unit;
+
+	> img {
+		display: block;
+		max-width: none;
+	}
+
+}
+
+
+.flag__content {
+	width: 100%;
+}
+
+	.flag__content,
+	.flag__content > :last-child {
 		margin-bottom: 0;
 	}
-}

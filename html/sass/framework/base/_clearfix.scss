@@ -9,14 +9,16 @@
  */
 
 .clear {
-	*zoom:1; /* For IE 6/7 (trigger hasLayout) */
+	*zoom:1; /* For IE 6/7 (triggers hasLayout) */
 
 	&:before,
 	&:after {
 		content: "";
 		display: table;
 	}
+
 	&:after {
 		clear: both;
 	}
+
 }

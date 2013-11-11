@@ -3,6 +3,7 @@
 		$BREADCRUMB
 \*------------------------------------*/
 
+
 /**
  * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
  *
@@ -22,6 +23,7 @@
 	> li + li:before {
 		content: "\00A0" "\2192" "\00A0" "\00A0";
 	}
+
 }
 
 
@@ -42,41 +44,9 @@
 	> li:after {
 		content: "\00A0" "\00A0" "\2192" "\00A0" ;
 	}
+
 }
 
-
-// /**
-//  * For denoting a path-like structure, GitHub style, e.g.:
-//  *
-// 		<ul class="breadcrumb--path">
-// 			<li class="breadcrumb_root"><a href="#">inuit.css</a></li>
-// 			<li><a href="#">inuit.css</a></li>
-// 			<li><a href="#">partials</a></li>
-// 			<li class="breadcrumb_current">objects</li>
-// 		</ul>
-//  *
-//  */
-
-// .breadcrumb--path > li + li:before {
-// 		content: "\002F" "\00A0";
-// }
-
-
-// /**
-//  * Assign a delimiter on the fly through a data attribute, e.g.:
-//  *
-// 		<ul class="breadcrumb">
-// 			<li><a href="#">Home</a></li>
-// 			<li data-breadcrumb="|"><a href="#">About</a></li>
-// 			<li data-breadcrumb="|"><a href="#">The Board</a></li>
-// 			<li data-breadcrumb="|" class="breadcrumb_current">Directors</li>
-// 		</ul>
-//  *
-//  */
-
-// .breadcrumb > li + li[data-breadcrumb]:before {
-// 	content: attr(data-breadcrumb) "\00A0";
-// }
 
 
 /**

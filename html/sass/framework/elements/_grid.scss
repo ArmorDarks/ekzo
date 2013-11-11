@@ -30,71 +30,18 @@
  *
  */
 
+
 /**
  * Grid wrapper
  */
 
 .grid {
 	margin-left: -$base-spacing-unit;
-	// list-style: none; // if you're going to use grid on lists
-	// margin-bottom: 0; // if you're going to use grid on lists
+	list-style: none; // if you're going to use grid on lists
+	margin-bottom: 0; // if you're going to use grid on lists
 
 	@extend .clear;
 }
-
-.grid--half {
-	margin-left: -$half-spacing-unit;
-
-	> .grid__item {
-		padding-left: $half-spacing-unit;
-	}
-}
-
-.grid--wide {
-	margin-left: -$twice-spacing-unit;
-
-	> .grid__item {
-		padding-left: $twice-spacing-unit;
-	}
-}
-
-.grid--wider {
-	margin-left: -$base-spacing-unit * 3;
-
-	> .grid__item {
-		padding-left: $base-spacing-unit * 3;
-	}
-}
-
-.grid--full {
-	margin-left: 0;
-
-	> .grid__item {
-		padding-left: 0;
-	}
-}
-
-.grid--center {
-	text-align: center;
-
-	> .grid__item {
-		text-align: left;
-	}
-}
-
-
-	/**
-	 * Very infrequently occuring grid wrappers as children of grid wrappers.
-	 */
-
-	.grid > .grid {
-		margin-left: 0;
-	}
-
-
-	/**
-	 * Grid item
-	 */
 
 	.grid__item {
 		display: inline-block;
@@ -105,29 +52,91 @@
 	}
 
 
-	/**
-	 * Grid's inline-blocks whitespace fix
-	 */
+.grid--half {
+	margin-left: -$half-spacing-unit;
 
-	.grid {
-		letter-spacing: -0.31em;
+	> .grid__item {
+		padding-left: $half-spacing-unit;
 	}
 
-	/* Opera hack */
+}
 
-	.opera:-o-prefocus,
-	.grid {
-		word-spacing: -0.43em;
+
+.grid--wide {
+	margin-left: -$twice-spacing-unit;
+
+	> .grid__item {
+		padding-left: $twice-spacing-unit;
 	}
 
-		.grid__item {
-			letter-spacing: normal;
-			word-spacing: normal;
-		}
+}
 
 
-	/* Used to fix strange behavior in Firefox on inline-grids */
+.grid--wider {
+	margin-left: -$base-spacing-unit * 3;
 
-	.grid--nofix {
+	> .grid__item {
+		padding-left: $base-spacing-unit * 3;
+	}
+
+}
+
+
+.grid--full {
+	margin-left: 0;
+
+	> .grid__item {
+		padding-left: 0;
+	}
+
+}
+
+
+.grid--center {
+	text-align: center;
+
+	> .grid__item {
+		text-align: left;
+	}
+
+}
+
+
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+
+.grid > .grid {
+	margin-left: 0;
+}
+
+
+
+/**
+ * Grid's inline-blocks whitespace fix
+ */
+
+.grid {
+	letter-spacing: -0.31em;
+}
+
+/* Opera hack */
+
+.opera:-o-prefocus,
+.grid {
+	word-spacing: -0.43em;
+}
+
+	.grid__item {
 		letter-spacing: normal;
+		word-spacing: normal;
 	}
+
+
+
+/* Used to fix strange behavior in Firefox on inline-grids */
+
+.grid--nofix {
+	letter-spacing: normal;
+}
