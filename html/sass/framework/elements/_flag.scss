@@ -1,0 +1,59 @@
+
+/*------------------------------------*\
+		$FLAG
+\*------------------------------------*/
+
+
+/**
+* Place any image- and text-like content side-by-side, arranged vertically,
+* horizontally or by baseline
+* E.g.:
+*
+		<div class="flag">
+			<div class="img">
+				<img src="" alt="">
+			</div>
+			<div class="content">
+				<p></p>
+			</div>
+		</div>
+ *
+ */
+
+.flag {
+	display: table;
+	width: 100%;
+
+	.img,
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&.top .img,
+	&.top .content {
+		vertical-align: top;
+	}
+	&.bottom .img,
+	&.bottom .content {
+		vertical-align: bottom;
+	}
+	.img {
+		padding-right: $base-spacing-unit;
+
+		> img {
+			display: block;
+			max-width: none;
+		}
+	}
+	&.right .img {
+		padding-right: 0;
+		padding-left: $base-spacing-unit;
+	}
+	.content {
+		width: 100%;
+	}
+	.content,
+	.content > :last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,297 @@
+
+/*------------------*\
+	$HELPERS
+\*------------------*/
+
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.float-left` class to the markup.
+ *
+ * A lot of these classes carry `!important` as you will always want them to win
+ * out over other selectors.
+ */
+
+
+/**
+ * Add/remove floats
+ */
+
+.float-right   { float:right!important; }
+.float-left    { float:left !important; }
+.float-none    { float:none !important; }
+
+
+/**
+ * Text alignment
+ */
+
+.text-left        { text-align:left  !important; }
+.text-center      { text-align:center!important; }
+.text-right       { text-align:right !important; }
+.text-justify > p { text-align: justify!important; }
+
+
+/**
+ * Font styling
+ */
+
+.light      { font-weight:300!important; }
+.normal     { font-weight:400!important; }
+.semibold   { font-weight:600!important; }
+.bold       { font-weight: bold!important; }
+
+.italic     { font-style: italic!important; }
+
+.text-upper { text-transform: uppercase!important; }
+
+.nowrap     { white-space: nowrap; }
+
+
+/**
+ * Varius unline stylings
+ * Unline removes underline from element, but adds it to the span
+ */
+
+.noline { text-decoration: none; }
+
+
+.unline {
+	@extend .noline;
+
+	span { text-decoration: underline; }
+
+	&:hover span { @extend .noline; }
+
+}
+
+.unline--reversed {
+	@extend .noline;
+
+	span { @extend .noline; }
+
+	&:hover span { text-decoration: underline; }
+
+}
+
+
+/**
+ * Dotted version of underline
+ */
+
+.dotted {
+	@extend .noline;
+
+	span { border-bottom: 1px dotted; }
+
+	&:hover span { border-bottom: none; }
+
+}
+
+/**
+ * Reversed version of underline
+ */
+
+.underline--reversed {
+	@extend .noline;
+
+	&:hover { text-decoration: underline; }
+
+}
+
+
+/**
+ * Take element out of typography rhythm
+ * Should be applied on custom elements with unusual styling
+ */
+
+.unrhythm { line-height: 1!important; }
+
+
+/**
+ * Vertical alignment styling
+ */
+
+.middle { vertical-align: middle!important; }
+
+
+/**
+ * Inline styling
+ */
+
+.inline {
+	display: inline-block;
+	*display: inline;
+	*margin-right: 4px;
+	zoom: 1;
+}
+
+/**
+ * Add/remove margins
+ */
+
+.margin          { margin:       $base-spacing-unit!important; }
+.margin-top      { margin-top:   $base-spacing-unit!important; }
+.margin-right    { margin-right: $base-spacing-unit!important; }
+.margin-bottom   { margin-bottom:$base-spacing-unit!important; }
+.margin-left     { margin-left:  $base-spacing-unit!important; }
+.margin-ends     { margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
+.margin-sides    { margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
+
+.margin-half         { margin:       $half-spacing-unit!important; }
+.margin-half-top     { margin-top:   $half-spacing-unit!important; }
+.margin-half-right   { margin-right: $half-spacing-unit!important; }
+.margin-half-bottom  { margin-bottom:$half-spacing-unit!important; }
+.margin-half-left    { margin-left:  $half-spacing-unit!important; }
+.margin-half-ends    { margin-top:   $half-spacing-unit!important; margin-bottom:$half-spacing-unit!important; }
+.margin-half-sides   { margin-right: $half-spacing-unit!important; margin-left:  $half-spacing-unit!important; }
+
+.margin-twice          { margin:       $base-spacing-unit * 2!important; }
+.margin-twice-top      { margin-top:   $base-spacing-unit * 2!important; }
+.margin-twice-right    { margin-right: $base-spacing-unit * 2!important; }
+.margin-twice-bottom   { margin-bottom:$base-spacing-unit * 2!important; }
+.margin-twice-left     { margin-left:  $base-spacing-unit * 2!important; }
+.margin-twice-ends     { margin-top:   $base-spacing-unit * 2!important; margin-bottom:$base-spacing-unit * 2!important; }
+.margin-twice-sides    { margin-right: $base-spacing-unit * 2!important; margin-left:  $base-spacing-unit * 2!important; }
+
+.margin-no         { margin:       0!important; }
+.margin-no-top     { margin-top:   0!important; }
+.margin-no-right   { margin-right: 0!important; }
+.margin-no-bottom  { margin-bottom:0!important; }
+.margin-no-left    { margin-left:  0!important; }
+.margin-no-ends    { margin-top:   0!important; margin-bottom:0!important; }
+.margin-no-sides   { margin-right: 0!important; margin-left:  0!important; }
+
+
+/**
+ * Add/remove paddings
+ */
+
+.padding          { padding:       $base-spacing-unit!important; }
+.padding-top      { padding-top:   $base-spacing-unit!important; }
+.padding-right    { padding-right: $base-spacing-unit!important; }
+.padding-bottom   { padding-bottom:$base-spacing-unit!important; }
+.padding-left     { padding-left:  $base-spacing-unit!important; }
+.padding-ends     { padding-top:   $base-spacing-unit!important; padding-bottom:$base-spacing-unit!important; }
+.padding-sides    { padding-right: $base-spacing-unit!important; padding-left:  $base-spacing-unit!important; }
+
+.padding-half          { padding:       $half-spacing-unit!important; }
+.padding-half-top      { padding-top:   $half-spacing-unit!important; }
+.padding-half-right    { padding-right: $half-spacing-unit!important; }
+.padding-half-bottom   { padding-bottom:$half-spacing-unit!important; }
+.padding-half-left     { padding-left:  $half-spacing-unit!important; }
+.padding-half-ends     { padding-top:   $half-spacing-unit!important; padding-bottom:$half-spacing-unit!important; }
+.padding-half-sides    { padding-right: $half-spacing-unit!important; padding-left:  $half-spacing-unit!important; }
+
+.padding-twice          { padding:       $base-spacing-unit * 2!important; }
+.padding-twice-top      { padding-top:   $base-spacing-unit * 2!important; }
+.padding-twice-right    { padding-right: $base-spacing-unit * 2!important; }
+.padding-twice-bottom   { padding-bottom:$base-spacing-unit * 2!important; }
+.padding-twice-left     { padding-left:  $base-spacing-unit * 2!important; }
+.padding-twice-ends     { padding-top:   $base-spacing-unit * 2!important; padding-bottom:$base-spacing-unit * 2!important; }
+.padding-twice-sides    { padding-right: $base-spacing-unit * 2!important; padding-left:  $base-spacing-unit * 2!important; }
+
+.padding-no          { padding:       0!important; }
+.padding-no-top      { padding-top:   0!important; }
+.padding-no-right    { padding-right: 0!important; }
+.padding-no-bottom   { padding-bottom:0!important; }
+.padding-no-left     { padding-left:  0!important; }
+.padding-no-ends     { padding-top:   0!important; padding-bottom:0!important; }
+.padding-no-sides    { padding-right: 0!important; padding-left:  0!important; }
+
+
+/**
+ * Pull items full width of `.island` parents.
+ */
+
+.full-bleed{
+	margin-right:-$base-spacing-unit!important;
+	margin-left: -$base-spacing-unit!important;
+
+	.islet &{
+		margin-right:-($half-spacing-unit)!important;
+		margin-left: -($half-spacing-unit)!important;
+	}
+
+}
+
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+
+.cursor-help    { cursor:help!important; }
+.cursor-arrow   { cursor:default!important; }
+.cursor-pointer { cursor: pointer!important;}
+
+
+/**
+ * Mute an object by reducing its opacity.
+ */
+
+.muted {
+	opacity:0.5!important;
+	filter:alpha(opacity = 50)!important;
+}
+
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+		<a href=# class=go>Read more</a>
+ *
+ */
+
+.go:after { content:"\00A0" "\00BB"!important; }
+
+/**
+ * Hide content
+ */
+
+.hide { display: none; }
+
+.text-hide { text-indent: -9999px; }
+
+
+/**
+ * Display as table
+ *
+ * Apply those classes to container and nested divs
+ * to make them behave like table
+ *
+ * Can be useful when you want two divs to have equal
+ * height
+
+ * Note: don't use floated position on table-cells
+ * 			 'cause they won't behave like table-cells
+ */
+
+.table { display: table; }
+
+	.table__cell { display: table-cell; }
+
+	.table__row { display: table-row; }
+
+
+/**
+ * Alligns elements in tables and cell-like divs
+ */
+
+.align-top { vertical-align: top; }
+
+.align-middle { vertical-align: middle; }
+
+.align-bottom { vertical-align: bottom; }
+
+
+/**
+ * Apply box-sizing model
+ */
+
+.box-sizing {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
+}

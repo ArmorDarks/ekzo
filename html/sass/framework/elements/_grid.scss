@@ -1,0 +1,133 @@
+
+/*------------------------------------*\
+	$GRIDS
+\*------------------------------------*/
+
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+		<div class="grid">
+
+			<div class="grid__item  one-third">
+				<p>One third grid</p>
+			</div>
+			<div class="grid__item  two-thirds">
+				<p>Two thirds grid</p>
+			</div>
+			<div class="grid__item  one-half">
+				<p>One half grid</p>
+			</div>
+			<div class="grid__item  one-quarter">
+				<p>One quarter grid</p>
+			</div>
+			<div class="grid__item  one-quarter">
+				<p>One quarter grid</p>
+			</div>
+
+		</div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+
+/**
+ * Grid wrapper
+ */
+
+.grid {
+	margin-left: -$base-spacing-unit;
+	// list-style: none; // if you're going to use grid on lists
+	// margin-bottom: 0; // if you're going to use grid on lists
+
+	@extend .clear;
+}
+
+.grid--half {
+	margin-left: -$half-spacing-unit;
+
+	> .grid__item {
+		padding-left: $half-spacing-unit;
+	}
+}
+
+.grid--wide {
+	margin-left: -$twice-spacing-unit;
+
+	> .grid__item {
+		padding-left: $twice-spacing-unit;
+	}
+}
+
+.grid--wider {
+	margin-left: -$base-spacing-unit * 3;
+
+	> .grid__item {
+		padding-left: $base-spacing-unit * 3;
+	}
+}
+
+.grid--full {
+	margin-left: 0;
+
+	> .grid__item {
+		padding-left: 0;
+	}
+}
+
+.grid--center {
+	text-align: center;
+
+	> .grid__item {
+		text-align: left;
+	}
+}
+
+
+	/**
+	 * Very infrequently occuring grid wrappers as children of grid wrappers.
+	 */
+
+	.grid > .grid {
+		margin-left: 0;
+	}
+
+
+	/**
+	 * Grid item
+	 */
+
+	.grid__item {
+		display: inline-block;
+		padding-left: $base-spacing-unit;
+		vertical-align: top;
+
+		@include vendor(box-sizing, border-box);
+	}
+
+
+	/**
+	 * Grid's inline-blocks whitespace fix
+	 */
+
+	.grid {
+		letter-spacing: -0.31em;
+	}
+
+	/* Opera hack */
+
+	.opera:-o-prefocus,
+	.grid {
+		word-spacing: -0.43em;
+	}
+
+		.grid__item {
+			letter-spacing: normal;
+			word-spacing: normal;
+		}
+
+
+	/* Used to fix strange behavior in Firefox on inline-grids */
+
+	.grid--nofix {
+		letter-spacing: normal;
+	}

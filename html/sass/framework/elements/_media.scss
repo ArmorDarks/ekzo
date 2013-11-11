@@ -1,0 +1,44 @@
+
+/*------------------------------------*\
+		$MEDIA
+\*------------------------------------*/
+
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+		<div class="media">
+			<img src=http://placekitten.com/200/300 alt="" class="img">
+			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+
+.media {
+	display: block;
+	@extend .clear;
+
+	.img {
+		float: left;
+
+		display: block;
+
+		margin-right: $base-spacing-unit;
+	}
+	&.right .img {
+		float: right;
+		margin-left: $base-spacing-unit;
+		margin-right: 0;
+	}
+	.content{
+		overflow: hidden;
+	}
+	.content,
+	.content > :last-child {
+		margin-bottom: 0;
+	}
+}

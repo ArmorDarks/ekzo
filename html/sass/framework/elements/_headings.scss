@@ -1,0 +1,71 @@
+
+/*------------------------------------*\
+	$HEADINGS
+\*------------------------------------*/
+
+/**
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+
+h1,.h1{
+	font-family: $headings-font-family;
+
+	@include font-size($h1-size);
+
+	font-weight: $headings-font-weight;
+}
+h2,.h2{
+	font-family: $headings-font-family;
+
+	@include font-size($h2-size);
+
+	font-weight: $headings-font-weight;
+}
+h3,.h3{
+	font-family: $headings-font-family;
+
+	@include font-size($h3-size);
+
+	font-weight: $headings-font-weight;
+}
+h4,.h4{
+	font-family: $headings-font-family;
+
+	@include font-size($h4-size);
+
+	font-weight: $headings-font-weight;
+}
+h5,.h5{
+	font-family: $headings-font-family;
+
+	@include font-size($h5-size);
+
+	font-weight: $headings-font-weight;
+}
+h6,.h6{
+	font-family: $headings-font-family;
+
+	@include font-size($h6-size);
+
+	font-weight: $headings-font-weight;
+}
+
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+
+.giga {
+		@include font-size($giga-size);
+}
+.mega {
+		@include font-size($mega-size);
+}
+.kilo {
+		font-family: $headings-font-family;
+
+		@include font-size($kilo-size);
+}

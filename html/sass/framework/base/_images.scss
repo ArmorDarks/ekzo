@@ -1,0 +1,47 @@
+
+/*------------------------------------*\
+	$IMAGES
+\*------------------------------------*/
+
+/**
+ * Fluid images.
+ */
+
+img {
+	max-width: 100%;
+}
+
+
+/**
+ * Non-fluid images if you specify `width` and/or `height` attributes.
+ */
+
+img[width],
+img[height] {
+	max-width: none;
+}
+
+
+/**
+ * Image placement variations.
+ */
+
+.img-right {
+	float: right;
+
+	margin-bottom: $half-spacing-unit;
+	margin-left: $base-spacing-unit;
+}
+.img-left {
+	float: left;
+
+	margin-right: $base-spacing-unit;
+	margin-bottom: $half-spacing-unit;
+}
+.img-center {
+	display: block;
+
+	margin-right: auto;
+	margin-bottom: $half-spacing-unit;
+	margin-left: auto;
+}

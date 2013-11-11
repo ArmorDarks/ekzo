@@ -1,0 +1,151 @@
+/*------------------------------------*\
+	$RESET
+\*------------------------------------*/
+
+
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+
+// @if $global-border-box == true {
+//     /**
+//     * Let’s make the box model all nice, shall we...?
+//     */
+//     * {
+//         &,
+//         &:before,
+//         &:after {
+//             @include vendor(box-sizing, border-box);
+//         }
+//     }
+// }
+
+
+/**
+ * The usual...
+ */
+
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr, body, input, textarea,
+select, button, a, img {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+ * Remove most spacing between table cells and border
+ */
+
+table {
+	width: 100%;
+
+	border: none;
+
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+fieldset {
+	border: none;
+}
+
+
+ul {
+	list-style: none;
+}
+
+
+input,
+textarea,
+select,
+button,
+a,
+img {
+	outline: none;
+}
+
+
+pre,code,samp,kbd{
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+
+
+small{
+	font-size: 80%;
+}
+
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ * 3. Allow only vertical resizing of textareas
+ */
+
+textarea {
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+	resize: vertical; /* 3 */
+}
+
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+
+abbr[title],
+dfn[title] {
+	cursor: help;
+}
+
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+
+img {
+	border: none;
+
+	font-style: italic;
+}
+
+
+/**
+ * Give form elements some cursor interactions...
+ */
+
+label,
+// input,
+// textarea,
+button,
+select,
+option {
+	cursor: pointer;
+}
+	.text-input:active,
+	.text-input:focus,
+	textarea:active,
+	textarea:focus {
+		cursor: text;
+		outline: none;
+	}
+
+
+/**
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}

@@ -1,0 +1,30 @@
+
+/*------------------------------------*\
+		$TEXTS
+\*------------------------------------*/
+
+/**
+ * A series of classes for setting varius text sizes
+ */
+
+.extra-larger {
+	@include font-size($extra-larger-size);
+}
+.larger {
+	@include font-size($larger-size);
+}
+.mid {
+	@include font-size($mid-size);
+}
+.mini {
+	@include font-size($mini-size);
+}
+.milli {
+	@include font-size($milli-size);
+}
+.micro {
+	@include font-size($micro-size);
+}
+.nano {
+	@include font-size($nano-size);
+}
