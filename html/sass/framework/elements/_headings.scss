@@ -11,48 +11,36 @@
  */
 
 h1,.h1{
-	font-family: $headings-font-family;
-
 	@include font-size($h1-size);
 
 	font-weight: $headings-font-weight;
 }
 
 h2,.h2{
-	font-family: $headings-font-family;
-
 	@include font-size($h2-size);
 
 	font-weight: $headings-font-weight;
 }
 
 h3,.h3{
-	font-family: $headings-font-family;
-
 	@include font-size($h3-size);
 
 	font-weight: $headings-font-weight;
 }
 
 h4,.h4{
-	font-family: $headings-font-family;
-
 	@include font-size($h4-size);
 
 	font-weight: $headings-font-weight;
 }
 
 h5,.h5{
-	font-family: $headings-font-family;
-
 	@include font-size($h5-size);
 
 	font-weight: $headings-font-weight;
 }
 
 h6,.h6{
-	font-family: $headings-font-family;
-
 	@include font-size($h6-size);
 
 	font-weight: $headings-font-weight;
