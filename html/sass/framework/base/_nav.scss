@@ -21,7 +21,7 @@
  */
 
 .nav {
-	list-style:none;
+	list-style: none;
 
 	margin-left: 0;
 
@@ -31,9 +31,9 @@
 
 		&,
 		> a {
-			display:inline-block;
-			*display:inline;
-			zoom:1;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
 		}
 
 	}
@@ -57,10 +57,10 @@
 .nav--stacked {
 
 	> li {
-		display:list-item;
+		display: list-item;
 
 		> a {
-			display:block;
+			display: block;
 		}
 
 	}
@@ -83,20 +83,19 @@
  */
 
 .nav--block {
-	line-height:1;
+	line-height: 1;
 	/**
 	 * Remove whitespace caused by `inline-block`.
 	 */
-	letter-spacing:-0.31em;
-	word-spacing:-0.43em;
-	white-space:nowrap;
+	letter-spacing: -0.31em;
+	word-spacing: -0.43em;
 
 	> li {
-		letter-spacing:normal;
-		word-spacing:normal;
+		letter-spacing: normal;
+		word-spacing: normal;
 
 		> a {
-			padding:$half-spacing-unit;
+			padding: $half-spacing-unit;
 		}
 
 	}
@@ -119,14 +118,14 @@
  */
 
 .nav--fit {
-	display:table;
-	width:100%;
+	display: table;
+	width: 100%;
 
 	> li {
-		display:table-cell;
+		display: table-cell;
 
 		> a {
-			display:block;
+			display: block;
 		}
 
 	}
@@ -146,11 +145,11 @@
 	> li {
 
 		&:after {
-			content:"\002C" "\00A0";
+			content: "\002C" "\00A0";
 		}
 
 		&:last-child:after {
-			display:none;
+			display: none;
 		}
 
 	}
