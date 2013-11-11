@@ -7,24 +7,24 @@
  * A series of classes for setting varius text sizes
  */
 
-.extra-larger {
-	@include font-size($extra-larger-size);
+.text-xlarge {
+	@include font-size($text-xlarge-size);
 }
-.larger {
-	@include font-size($larger-size);
+.text-large {
+	@include font-size($text-large-size);
 }
-.mid {
-	@include font-size($mid-size);
+.text-mid {
+	@include font-size($text-mid-size);
 }
-.mini {
-	@include font-size($mini-size);
+.text-mini {
+	@include font-size($text-mini-size);
 }
-.milli {
-	@include font-size($milli-size);
+.text-milli {
+	@include font-size($text-milli-size);
 }
-.micro {
-	@include font-size($micro-size);
+.text-micro {
+	@include font-size($text-micro-size);
 }
-.nano {
-	@include font-size($nano-size);
+.text-nano {
+	@include font-size($text-nano-size);
 }

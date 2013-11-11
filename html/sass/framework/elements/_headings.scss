@@ -58,14 +58,14 @@ h6,.h6{
  * promos, etc.
  */
 
-.giga {
-		@include font-size($giga-size);
+.h-giga {
+		@include font-size($h-giga-size);
 }
-.mega {
-		@include font-size($mega-size);
+.h-mega {
+		@include font-size($h-mega-size);
 }
-.kilo {
+.h-kilo {
 		font-family: $headings-font-family;
 
-		@include font-size($kilo-size);
+		@include font-size($h-kilo-size);
 }
