@@ -5,7 +5,9 @@
 
 /**
  * Yeap. That what you've thought about.
- * Just various basic settings. Move along.
+ * Various basic settings.
+ * Override them in your _vars.scss in case
+ * you want to change something
  */
 
 
@@ -76,16 +78,21 @@ $use-arrows:        false!default;
 
 
 /*------------------------------------*\
-		$FONT
+		$FONTS
 \*------------------------------------*/
 
 /**
- * Base font stuff
+ * Base font size
  */
 
 $base-font-size:        14px!default;
 
-$base-line-height:      $base-font-size * 1.5!default; // usually proportion is aroud 1.5 of base font size
+/**
+ * Base line-height
+ * Usually proportion is about 1.5 of base font size
+ */
+
+$base-line-height:      $base-font-size * 1.5!default;
 
 /**
  * Base font-family
@@ -93,19 +100,18 @@ $base-line-height:      $base-font-size * 1.5!default; // usually proportion is 
 
 $base-font-family:      sans-serif!default;
 
-
 /**
  * Second font-family
  */
 
 $second-font-family:    sans-serif!default;
 
-
 /**
  * Headers font-family and weight
  */
 
 $headings-font-family:  $second-font-family!default;
+
 $headings-font-weight:  normal!default;
 
 
@@ -115,7 +121,8 @@ $headings-font-weight:  normal!default;
 \*------------------------------------*/
 
 /**
- * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ * Font-sizes (in pixels).
+ * Refer to relevant sections for their implementations.
  */
 
 $h-giga-size:            96px!default;
@@ -142,6 +149,30 @@ $base-forms-font-size:   $text-xlarge-size!default;
 
 
 /*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+
+/**
+ * Make all default links underlined
+ */
+
+$base-link-underline:     true!default;
+
+/**
+ * Unline link on hover
+ */
+
+$base-link-hover-unline:  true!default;
+
+/**
+ * Apply color change on link hovering
+ */
+
+$base-link-hover-colored: true!default;
+
+
+
+/*------------------------------------*\
 		$COLORS
 \*------------------------------------*/
 
@@ -152,6 +183,7 @@ $base-forms-font-size:   $text-xlarge-size!default;
 $base-font-color:        #000!default;
 
 $base-link-color:        #35adda!default;
+$base-link-hover-color:  #35adda!default;
 
 $base-heading-color:     #585c5d!default;
 
