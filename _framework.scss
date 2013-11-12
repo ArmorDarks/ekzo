@@ -6,7 +6,7 @@
 
 /*
 
-		Version: 1.2.2
+		Version: 1.2.3
 
 */
 
@@ -23,33 +23,33 @@
  * Base styles. Mostly unclassed HTML elements, helpers etc.
  */
 
-@import "framework/base/mixins";
-@import "framework/base/clearfix";
-@import "framework/base/debug";
-@import "framework/base/helpers";
-@import "framework/base/images";
-@import "framework/base/main";
-@import "framework/base/nav";
-@import "framework/base/normalize";
-@import "framework/base/reset";
-@import "framework/base/widths";
+@import "./base/mixins";
+@import "./base/clearfix";
+@import "./base/debug";
+@import "./base/helpers";
+@import "./base/images";
+@import "./base/main";
+@import "./base/nav";
+@import "./base/normalize";
+@import "./base/reset";
+@import "./base/widths";
 
 
 /**
  * Objects and abstractions
  */
 
-@import "framework/elements/shared";
-@import "framework/elements/arrows";
-@import "framework/elements/breadcrumb";
-@import "framework/elements/flag";
-@import "framework/elements/forms";
-@import "framework/elements/grid";
-@import "framework/elements/headings";
-@import "framework/elements/icons";
-@import "framework/elements/island";
-@import "framework/elements/links";
-@import "framework/elements/lists";
-@import "framework/elements/media";
-@import "framework/elements/tables";
-@import "framework/elements/texts";
+@import "./elements/shared";
+@import "./elements/arrows";
+@import "./elements/breadcrumb";
+@import "./elements/flag";
+@import "./elements/forms";
+@import "./elements/grid";
+@import "./elements/headings";
+@import "./elements/icons";
+@import "./elements/island";
+@import "./elements/links";
+@import "./elements/lists";
+@import "./elements/media";
+@import "./elements/tables";
+@import "./elements/texts";
