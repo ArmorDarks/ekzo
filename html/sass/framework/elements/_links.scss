@@ -1,0 +1,59 @@
+
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+
+
+/**
+ * Default link styling
+ */
+
+a,
+.base-link {
+	color: $base-link-color;
+
+	@if $base-link-underline == true {
+		text-decoration: underline;
+	}
+
+	&:hover {
+
+		@if $base-link-hover-colored == true {
+			color: $base-link-hover-color;
+		}
+
+		@if $base-link-hover-unline == true {
+			text-decoration:none;
+		}
+
+	}
+
+}
+
+
+
+/**
+ * Makes link looks like ordinary text
+ * Add .cursor-arrow to remove "pointer" cursor
+ * and make it completely like ordinary text
+ */
+
+.unlink {
+	@if $base-link-underline == true {
+		text-decoration:none;
+	}
+
+	color: $base-font-color;
+
+	&:hover {
+		@if $base-link-underline == true {
+			text-decoration:none;
+		}
+
+		@if $base-link-hover-colored == true {
+			color: $base-font-color;
+		}
+
+	}
+
+}
