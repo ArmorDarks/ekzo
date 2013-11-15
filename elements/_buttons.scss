@@ -1,0 +1,220 @@
+@if $use-buttons == true{
+
+/*------------------------------------*\
+	$BUTTONS
+\*------------------------------------*/
+
+/**
+ * Basic buttons styling.
+ *
+ * Mainly based on Beautons by Harry Roberts (csswizardry.com/beautons)
+ */
+
+
+/*------------------------------------*\
+	$BASE
+\*------------------------------------*/
+
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+
+.btn {
+	display: inline-block;       /* [1] */
+
+	vertical-align: middle;      /* [2] */
+
+	white-space: nowrap;         /* [3] */
+
+	cursor: pointer;             /* [5] */
+
+	border: none;                /* [6] */
+
+	margin: 0;                   /* [6] */
+	padding-top:    0;           /* [6] */
+	padding-bottom: 0;           /* [6] */
+
+	line-height: 3;              /* [7] */
+
+	padding-right: 1em;          /* [7] */
+	padding-left:  1em;          /* [7] */
+
+	color: $base-button-color;
+
+	background-color: $base-button-bg-color;
+
+	&,
+	&:hover {
+		@if $base-link-underline == true {
+			text-decoration: underline;   /* [9] */
+		}
+
+	}
+
+}
+
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+
+.btn--natural {
+	vertical-align: baseline;
+
+	font-family: inherit;
+	font-size:   inherit;
+
+	line-height: inherit;
+
+	padding-right: 0.5em;
+	padding-left:  0.5em;
+}
+
+
+
+/*------------------------------------*\
+	$SIZES
+\*------------------------------------*/
+
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+
+.btn--small {
+	line-height: 2;
+
+	padding-right: 0.5em;
+	padding-left:  0.5em;
+}
+
+.btn--med {
+	line-height: 3;
+
+	padding-right: 1em;
+	padding-left:  1em;
+}
+
+.btn--large {
+	line-height: 4;
+
+	padding-right: 1.5em;
+	padding-left:  1.5em;
+}
+
+.btn--huge {
+	line-height: 5;
+
+	padding-right: 2em;
+	padding-left:  2em;
+}
+
+
+/**
+ * Wide version of button with unspecified line-height
+ */
+
+.btn--wide {
+	padding-right: 2em;
+	padding-left:  2em;
+}
+
+.btn--wider {
+	padding-right: 4em;
+	padding-left:  4em;
+}
+
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+
+.btn--full {
+	width: 100%;
+
+	text-align: center;
+
+	padding-right: 0;            /* [1] */
+	padding-left:  0;            /* [1] */
+}
+
+
+
+/*------------------------------------*\
+	$FONT-SIZES
+\*------------------------------------*/
+
+/**
+ * Button font-size modifiers.
+ */
+
+.btn--text--small  { font-size: $base-font-size * 0.8; }
+
+.btn--text--normal { font-size: $base-font-size; }
+
+.btn--text--med    { font-size: $base-font-size * 1.5; }
+
+.btn--text--large  { font-size: $base-font-size * 2; }
+
+.btn--text--huge   { font-size: $base-font-size * 3; }
+
+
+
+/*------------------------------------*\
+	$FUNCTIONS
+\*------------------------------------*/
+
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+
+.btn--positive {
+	background-color: $base-button-bg-color-positive;
+
+	color: $base-button-color-positive;
+}
+
+
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+
+.btn--negative {
+	background-color: $base-button-bg-color-negative;
+
+	color: $base-button-color-negative;
+}
+
+
+/**
+ * Inactive, disabled buttons.
+ *
+ * 1. Make the button look like normal text when hovered.
+ */
+
+.btn--disabled,
+.btn--disabled:hover,
+.btn--disabled:active,
+.btn--disabled:focus {
+	background-color: $base-button-bg-color-disabled;
+
+	color: $base-button-color-disabled;
+
+	cursor: text;            /* [1] */
+}
+
+}//endif
