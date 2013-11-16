@@ -1,4 +1,4 @@
-@if $use-buttons == true{
+@if $use-buttons == true {
 
 /*------------------------------------*\
 	$BUTTONS
@@ -56,7 +56,7 @@
 	&,
 	&:hover {
 		@if $base-link-underline == true {
-			text-decoration: underline;   /* [9] */
+			text-decoration: none;   /* [9] */
 		}
 
 	}
