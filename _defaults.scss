@@ -88,12 +88,14 @@ $use-buttons:       true!default;
 
 $base-font-size:        14px!default;
 
+
 /**
  * Base line-height
  * Usually proportion is about 1.5 of base font size
  */
 
 $base-line-height:      $base-font-size * 1.5!default;
+
 
 /**
  * Base font-family
@@ -107,12 +109,20 @@ $base-font-family:      sans-serif!default;
 
 $second-font-family:    sans-serif!default;
 
+
 /**
  * Headers font-family and weight
  */
 
 $headings-font-family:  $second-font-family!default;
 $headings-font-weight:  normal!default;
+
+
+/**
+ * Forms font-family and weight
+ */
+
+$base-form-font-family: $base-font-family!default;
 
 
 
@@ -144,7 +154,12 @@ $text-milli-size:        12px!default;
 $text-micro-size:        11px!default;
 $text-nano-size:         10px!default;
 
-$base-forms-font-size:   $text-xlarge-size!default;
+
+/**
+ * Forms font-size
+ */
+
+$base-form-font-size:   $text-xlarge-size!default;
 
 
 
@@ -156,19 +171,19 @@ $base-forms-font-size:   $text-xlarge-size!default;
  * Make all default links underlined
  */
 
-$base-link-underline:     true!default;
+$base-link-underline:       true!default;
 
 /**
  * Unline link on hover
  */
 
-$base-link-hover-unline:  true!default;
+$base-link-hover-unline:    true!default;
 
 /**
  * Apply color change on link hovering
  */
 
-$base-link-hover-colored: true!default;
+$base-link-hover-colored:   true!default;
 
 
 
@@ -177,25 +192,59 @@ $base-link-hover-colored: true!default;
 \*------------------------------------*/
 
 /**
- * Various colors
+ * Base font color
  */
 
-$base-font-color:        #313232!default;
+$base-font-color:               #313232!default;
 
-$base-link-color:        #35adda!default;
-$base-link-hover-color:  #69d1c6!default;
 
-$base-heading-color:     #585c5d!default;
+/**
+ * Base links color
+ */
 
-$base-placeholder-color: #a9a9a9!default; // used in forms placeholder
+$base-link-color:               #35adda!default;
+$base-link-hover-color:         #69d1c6!default;
 
-$base-forms-color:       #FFF!default;
+
+/**
+ * Base headings colors
+ */
+
+$base-heading-color:            #585c5d!default;
+
+
+/**
+ * Forms
+ */
+
+$base-form-bg-color:            #FFF!default;
+$base-form-color:               #8b8b8b!default;
+
+$base-form-placeholder-color:   #a9a9a9!default;
+
+
+/**
+ * Buttons
+ */
+
+$base-button-bg-color:          #e85716!default;
+$base-button-color:             #fee0cd!default;
+
+$base-button-bg-color-positive: #1fa205!default;
+$base-button-color-positive:    #7ef76a!default;
+
+$base-button-bg-color-negative: #a20b05!default;
+$base-button-color-negative:    #ff8877!default;
+
+$base-button-bg-color-disabled: #d3d3d3!default;
+$base-button-color-disabled:    #464646!default;
+
 
 /**
  * Background
  */
 
-$base-bg:                #f2f2f2!default;
+$base-bg:                       #f2f2f2!default;
 
 
 

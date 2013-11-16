@@ -4,10 +4,10 @@
 \*------------------------------------*/
 
 
-::-webkit-input-placeholder { color: $base-placeholder-color; font: italic $base-forms-font-size $base-font-family; }
-					:-moz-placeholder { color: $base-placeholder-color; font: italic $base-forms-font-size $base-font-family; }
-				 ::-moz-placeholder { color: $base-placeholder-color; font: italic $base-forms-font-size $base-font-family; }
-		 :-ms-input-placeholder { color: $base-placeholder-color; font: italic $base-forms-font-size $base-font-family; }
+::-webkit-input-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+					:-moz-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+				 ::-moz-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+		 :-ms-input-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
 
 
 
@@ -21,8 +21,10 @@ fieldset + fieldset {
 input,
 textarea,
 label {
-	color: $base-forms-color;
-	font: $base-forms-font-size $base-font-family;
+	background-color: $base-form-bg-color;;
+
+	color: $base-form-color;
+	font: $base-form-font-size $base-form-font-family;
 }
 
 
