@@ -55,7 +55,7 @@
 
 	&,
 	&:hover {
-		@if $base-link-underline == true {
+		@if $base-button-unline == true {
 			text-decoration: none;   /* [9] */
 		}
 
