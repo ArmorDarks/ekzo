@@ -16,6 +16,15 @@ fieldset + fieldset {
 }
 
 
+.text-input,
+input,
+textarea,
+fieldset {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
+}
+
 
 .text-input,
 input,
