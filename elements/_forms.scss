@@ -4,10 +4,10 @@
 \*------------------------------------*/
 
 
-::-webkit-input-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
-					:-moz-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
-				 ::-moz-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
-		 :-ms-input-placeholder { color: $base-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+::-webkit-input-placeholder { color: $base-form-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+					:-moz-placeholder { color: $base-form-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+				 ::-moz-placeholder { color: $base-form-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
+		 :-ms-input-placeholder { color: $base-form-placeholder-color; font: italic $base-form-font-size $base-form-font-family; }
 
 
 
