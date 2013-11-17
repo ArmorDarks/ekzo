@@ -139,27 +139,22 @@ $h-giga-size:            96px!default;
 $h-mega-size:            72px!default;
 $h-kilo-size:            44px!default;
 
-$h1-size:                30px!default; // .h1
-$h2-size:                26px!default; // .h2
+$h1-size:                36px!default; // .h1
+$h2-size:                30px!default; // .h2
 $h3-size:                24px!default; // .h3
-$h4-size:                20px!default; // .h4
+$h4-size:                21px!default; // .h4
 $h5-size:                18px!default; // .h5
 $h6-size:                16px!default; // .h6
 
-$text-xlarge-size:       18px!default;
-$text-large-size:        16px!default;
-$text-mid-size:          15px!default;
-$text-mini-size:         13px!default;
 $text-milli-size:        12px!default;
-$text-micro-size:        11px!default;
-$text-nano-size:         10px!default;
+$text-micro-size:        10px!default;
 
 
 /**
  * Forms font-size
  */
 
-$base-form-font-size:   $text-xlarge-size!default;
+$base-form-font-size:   $h5-size!default;
 
 
 
