@@ -8,9 +8,9 @@
  * A series of classes for setting varius text sizes
  */
 
-.text-milli {
+.text--milli {
 	@include font-size($text-milli-size);
 }
-.text-micro {
+.text--micro {
 	@include font-size($text-micro-size);
 }
