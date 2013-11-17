@@ -89,16 +89,30 @@
 
 
 /**
- * Reduced margin between ul's elements
+ * Applies standard margin between ul's elements
  */
 
-/*ul*/.list--margin-half {
+/*ul*/.list--margin {
+
+	> li + li {
+		margin-top: $base-spacing-unit;
+	}
+
+}
+
+
+/**
+ * Applies half margin between ul's elements
+ */
+
+/*ul*/.list--margin--half {
 
 	> li + li {
 		margin-top: $half-spacing-unit;
 	}
 
 }
+
 
 
 /**
