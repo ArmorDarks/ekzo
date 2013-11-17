@@ -60,12 +60,20 @@
 	> li {
 		display: list-item;
 
+	}
+
+}
+
+
+/**
+ * `.nav--blocky` extends `.nav` and throws all links inside in block mode
+ */
+
+.nav--blocky {
+
 		> a {
 			display: block;
 		}
-
-	}
-
 
 }
 
