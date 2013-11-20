@@ -203,7 +203,7 @@
 /**
  * Inactive, disabled buttons.
  *
- * 1. Make the button look like normal text when hovered.
+ * 1. Make the button look like normal cursor when hovered.
  */
 
 .btn--disabled,
@@ -214,7 +214,7 @@
 
 	color: $base-button-color-disabled;
 
-	cursor: text;            /* [1] */
+	cursor: default;            /* [1] */
 }
 
 }//endif
