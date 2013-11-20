@@ -9,7 +9,6 @@
  */
 
 
-
 /**
 * Let’s make the box model all nice, shall we...?
 */
@@ -83,19 +82,6 @@ img {
 
 
 
-pre,code,samp,kbd{
-	font-family: monospace, serif;
-	font-size: 1em;
-}
-
-
-
-small{
-	font-size: 80%;
-}
-
-
-
 /*
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
@@ -122,13 +108,14 @@ dfn[title] {
 
 
 /**
- * So that `alt` text is visually offset if images don’t load.
+ * 1. Remove border when inside `a` element in IE 8/9.
+ * 2. So that `alt` text is visually offset if images don’t load.
  */
 
 img {
-	border: none;
+	border: none;       /* [1] */
 
-	font-style: italic;
+	font-style: italic; /* [2] */
 }
 
 
@@ -164,3 +151,4 @@ img,
 video {
     vertical-align: middle;
 }
+
