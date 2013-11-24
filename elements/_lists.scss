@@ -114,6 +114,19 @@
 }
 
 
+/**
+ * Applies twice margin between ul's elements
+ */
+
+/*ul*/.list--margin--twice {
+
+	> li + li {
+		margin-top: $twice-spacing-unit;
+	}
+
+}
+
+
 
 /**
  * Ordered list defaults margins
