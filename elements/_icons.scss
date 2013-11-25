@@ -1,15 +1,68 @@
 
 /*------------------------------------*\
-		$ICONS
+		$ICONS and $SPRITES
 \*------------------------------------*/
 
+/**
+ * Giving an element a class of `.sprite` will throw it into ‘sprite’ mode and apply
+ * a background image e.g.:
+ *
+	 <a class="sprite  sprite--question-mark">More info&hellip;</a>
+ *
+ * or
+ *
+	 <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
+ *
+ * Requires extension in stylesheet.
+ */
 
+/**
+ * Giving an element a class of `.icon` will throw it into ‘icon’ mode and will
+ * not add a background, but should be used for icon fonts, e.g.:
+ *
+	 <a href=#><i class="icon icon--star"></i> View your favourites</a>
+ *
+ * Requires extension in stylesheet.
+ */
+
+.sprite,
 .icon {
 	position: relative;
 
-	background: url(../img/sprite.png) no-repeat;
+	display: inline-block;
+
+	/* reset line-height */
+	line-height: 1;
 
 	vertical-align: middle;
 
-	@extend .display--inline;
+	/* So icons added using `.icon` sit in the centre of the element */
+	text-align: center;
+
+	/* So using `.icon` on certain elements doesn’t make a visual difference */
+	font-style:  normal;
+	font-weight: normal;
+
+	speak: none;
 }
+
+
+
+/**
+ * Apply background to sprites by default
+ */
+
+.sprite { background: url(../img/sprite.png) no-repeat; }
+
+
+
+/**
+ * Apply to icon or sprite if simple margin with space is't enough
+ * or where space is unusable
+ */
+
+.icon--left,
+.sprite--left { margin-left:  .36em; }
+
+.icon--right,
+.sprite--right { margin-right:  .36em; }
