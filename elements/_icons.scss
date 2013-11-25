@@ -39,11 +39,9 @@
 	/* So icons added using `.icon` sit in the centre of the element */
 	text-align: center;
 
-	/* So using `.icon` on certain elements doesn’t make a visual difference */
+	/* So using `.icon` on certain elements doesn't make a visual difference */
 	font-style:  normal;
 	font-weight: normal;
-
-	speak: none;
 }
 
 
@@ -57,12 +55,34 @@
 
 
 /**
- * Apply to icon or sprite if simple margin with space is't enough
+ * Apply to change size of the icon
+ */
+
+.icon--75x   { font-size: .75em; }
+.icon--15x   { font-size: 1.5em; }
+.icon--2x    { font-size: 2em; }
+.icon--3x    { font-size: 3em; }
+.icon--4x    { font-size: 4em; }
+.icon--5x    { font-size: 5em; }
+
+
+
+/**
+ * Make width equal to height of icon
+ * Useful for lists and menus
+ */
+
+.icon--fixed { width: 1em; }
+
+
+
+/**
+ * Apply on icon or sprite if simple margin with space isn't enough
  * or where space is unusable
  */
 
 .icon--left,
-.sprite--left { margin-left:  .36em; }
+.sprite--left { margin-right:  .36em; }
 
 .icon--right,
-.sprite--right { margin-right:  .36em; }
+.sprite--right { margin-left:  .36em; }
