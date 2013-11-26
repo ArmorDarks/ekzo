@@ -202,7 +202,7 @@ $base-link-hover-colored:   true!default;
  * Paths to assets of site - images and fonts
  */
 
-$base-assets-path:       '../assets/'!default;
+$base-assets-path:       '../../assets/'!default;
 	$base-images-path:     '#{$base-assets-path}img/'!default;
 	$base-fonts-path:      '#{$base-assets-path}fonts/'!default;
 
