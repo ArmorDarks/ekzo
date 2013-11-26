@@ -186,12 +186,40 @@ $base-link-hover-colored:   true!default;
 		$BUTTONS
 \*------------------------------------*/
 
-
  /**
   * Unline buttons
   */
 
  $base-button-unline:       true!default;
+
+
+
+/*------------------------------------*\
+		$ASSETS
+\*------------------------------------*/
+
+/**
+ * Paths to assets of site - images and fonts
+ */
+
+$base-assets-path:       '../assets/'!default;
+	$base-images-path:     '#{$base-assets-path}img/'!default;
+	$base-fonts-path:      '#{$base-assets-path}fonts/'!default;
+
+
+/**
+ * Path to sprites file
+ */
+
+$base-sprites-file:      'sprites.png'!default;
+
+
+/**
+ * Icon-font
+ */
+
+$base-icon-font:         fontello!default;
+$base-icon-font-version: 1!default;
 
 
 
