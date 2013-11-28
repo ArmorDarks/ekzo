@@ -9,7 +9,6 @@
  */
 
 .clear {
-	*zoom:1; /* For IE 6/7 (triggers hasLayout) */
 
 	&:before,
 	&:after {
@@ -17,8 +16,6 @@
 		display: table;
 	}
 
-	&:after {
-		clear: both;
-	}
+	&:after { clear: both; }
 
 }
