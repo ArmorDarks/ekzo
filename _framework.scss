@@ -6,7 +6,7 @@
 
 /*
 
-		Version: 1.4.5
+		Version: 1.4.6
 
 */
 
@@ -27,9 +27,7 @@
 @import "./base/clearfix";
 @import "./base/debug";
 @import "./base/helpers";
-@import "./base/images";
 @import "./base/main";
-@import "./base/nav";
 @import "./base/normalize";
 @import "./base/reset";
 @import "./base/widths";
@@ -40,6 +38,7 @@
  */
 
 @import "./elements/shared";
+
 @import "./elements/arrows";
 @import "./elements/breadcrumb";
 @import "./elements/buttons";
@@ -48,9 +47,11 @@
 @import "./elements/grid";
 @import "./elements/headings";
 @import "./elements/icons";
+@import "./elements/images";
 @import "./elements/island";
 @import "./elements/links";
 @import "./elements/lists";
 @import "./elements/media";
+@import "./elements/nav";
 @import "./elements/tables";
 @import "./elements/texts";
