@@ -9,8 +9,11 @@ html {
 
 	overflow-y: scroll;
 
-	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-	// font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+	@if $use-rems == true {
+		font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+	} @else {
+		font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+	}
 
 	color: $base-font-color;
 }
