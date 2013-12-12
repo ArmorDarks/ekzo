@@ -140,3 +140,51 @@ ol {
 	}
 
 }
+
+
+
+/**
+ * Iconic list
+ *
+ * List with sprites or icons instead of bulletins.
+ * Should be used in conjuration with icons or sprites:
+ *
+		<ul class="list--iconic">
+			<li>
+				<i class="icon icon--ok"></i>
+				Item1
+			</li>
+			<li>
+				<i class="sprite sprite--ok"></i>
+				Item2
+			</li>
+		</ul>
+ *
+ *	Note: iconic list relays on `:first-child` selector, so it's important
+ *       to keep bulletin-icons right after `<li>` tag.
+ *
+ *	1. Pusing list twice left to align it with default list
+ *	   with default bulletings
+ *	2. We have to ensure that it targets only first icons and not all
+ *	   icons in list
+ * 	3. Used to algin icons properly and center it according to the first
+ *	   line of list
+ */
+
+/*ul*/.list--iconic {
+	margin-left: $twice-spacing-unit; // [1]
+
+	li {
+	position: relative;
+
+		> .icon:first-child,  // [2]
+		> .sprite:first-child {
+			position: absolute; // [4]
+
+			left: -20px; // [4]
+			top: .4em; // [4]
+		}
+
+	}
+
+}
