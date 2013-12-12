@@ -60,7 +60,6 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 	@extend .base-link;
 
 	position: relative;
-	display: inline-block;
 
 	&:before, &:after {
 		position: absolute;
