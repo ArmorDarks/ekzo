@@ -1,0 +1,293 @@
+
+/*------------------------------------*\
+		$TOOLTIPS
+\*------------------------------------*/
+
+
+/**
+ * Pure css tooltips
+ * Apply anywhere following code to use:
+ *
+		<span class="tooltip--top"
+					data-tooltip="Appearing text">
+			Text
+		</span>!
+ *
+ */
+
+
+
+
+
+// tooltip-variables.scss
+
+// font size
+$tooltip-font-size: 12px;
+
+// default tooltip height
+// quite tricky
+$tooltip-height: $tooltip-font-size + 2 * 8px !default;
+
+// border-width for tooltip arrow
+$tooltip-arrow-size: 6px !default;
+
+// transition distance
+$transitionDistance: 8px !default;
+
+
+
+// Various colors
+
+// Default color
+$tooltip-bg-color: rgba(1, 13, 14, 0.68) !default;
+
+// Error color
+$tooltip-bg-color-error: hsl(1, 40%, 50%) !default;
+
+// Info color
+$tooltip-bg-color-info: hsl(200, 50%, 45%) !default;
+
+// Success color
+$tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
+
+
+
+
+
+[data-tooltip] {
+
+	@extend .cursor-help;
+	@extend .base-link;
+
+	position: relative;
+	display: inline-block;
+
+	&:before, &:after {
+		position: absolute;
+
+		// HACK: Trigger hardware accelerated rendering, otherwise transform was not
+		// working on a hidden element
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+
+		// HACK: visibility is set to hidden because IE & Opera don't support
+		// pointer-events on HTML content yet because of which hovering a hidden tooltip
+		// shows the tooltip.
+		visibility: hidden;
+		opacity: 0;
+		z-index: 1000000;
+
+		-webkit-transition: 0.3s ease;
+		-moz-transition: 0.3s ease;
+		transition: 0.3s ease;
+	}
+
+	&:hover:before, &:hover:after,
+	&:focus:before, &:focus:after {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	/* tooltip arrow */
+
+	&:before {
+		content: '';
+		position: absolute;
+		background: transparent;
+		border: $tooltip-arrow-size solid transparent;
+		// move z-index 1 up than :after so that it shows over box-shadow
+		z-index: 1000000 + 1;
+	}
+
+	/* tooltip body */
+
+	&:after {
+		content: attr(data-tooltip);
+		background: $tooltip-bg-color;
+		color: white;
+		padding: .7em;
+		font-size: $tooltip-font-size;
+		line-height: 1;
+		white-space: nowrap;
+		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+		border-radius: 4px;
+
+		font-weight: normal;
+
+		text-transform: none;
+	}
+
+}
+
+
+
+.tooltip--sharp:after {
+		border-radius: 0;
+}
+
+
+
+.tooltip--always {
+	&:after, &:before {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.tooltip--top:after,
+	&.tooltip--top:before, {
+		@include vendor(transform, translateY($transitionDistance * -1));
+	}
+
+	&.tooltip--bottom:after,
+	&.tooltip--bottom:before {
+		@include vendor(transform, translateY($transitionDistance * 1));
+	}
+
+	&.tooltip--left:after,
+	&.tooltip--left:before {
+		@include vendor(transform, translateX($transitionDistance * -1));
+	}
+
+	&.tooltip--right:after,
+	&.tooltip--right:before {
+		@include vendor(transform, translateX($transitionDistance * 1));
+	}
+}
+
+
+
+// mixin to generate different color style tooltips
+@mixin tooltip-bg-color($color) {
+
+	@each $position in top, bottom, left, right {
+
+		&.tooltip--#{$position}:before {
+			border-#{$position}-color: $color;
+		}
+
+	}
+
+	&:after {
+		background-color: $color;
+	}
+
+}
+
+/**
+ * set default color for tooltip arrows
+ */
+
+.tooltip--top:before { border-top-color: $tooltip-bg-color; }
+
+.tooltip--bottom:before { border-bottom-color: $tooltip-bg-color; }
+
+.tooltip--left:before { border-left-color: $tooltip-bg-color; }
+
+.tooltip--right:before { border-right-color: $tooltip-bg-color; }
+
+.tooltip--error {
+	@include tooltip-bg-color($tooltip-bg-color-error);
+}
+.tooltip--info {
+	@include tooltip-bg-color($tooltip-bg-color-info);
+}
+.tooltip--success {
+	@include tooltip-bg-color($tooltip-bg-color-success);
+}
+
+
+
+/**
+ * Defines the positoning logic for the tooltips.
+ *
+ * Classes added:
+ *		1) tooltip--top
+ *		2) tooltip--bottom
+ *		3) tooltip--left
+ *		4) tooltip--right
+ */
+
+
+ // mixin to set margin on tooltip using translate transform
+
+@mixin tooltip-position ($tooltip-position) {
+
+	&:before {
+		// get the arrow out
+		margin-#{$tooltip-position}: -2 * $tooltip-arrow-size;
+
+		@if $tooltip-position == "left" or $tooltip-position == "right" {
+			// bring back to center
+			margin-bottom: -1 * $tooltip-arrow-size;
+		}
+	}
+
+	&:after {
+
+		@if $tooltip-position == "top" or $tooltip-position == "bottom" {
+		// bring back the tooltip by some offset so that arrow doesn't stick at end
+		margin-left: -1 * 3 * $tooltip-arrow-size;
+		}
+
+		@if $tooltip-position == "left" or $tooltip-position == "right" {
+		// bring back to center
+		margin-bottom: -1 * floor($tooltip-height / 2);
+		}
+
+	}
+
+	&:before, &:after {
+		#{$tooltip-position}: 100%;
+
+		@if $tooltip-position == "top" or $tooltip-position == "bottom" {
+			left: 50%;
+		}
+
+		@if $tooltip-position == "left" or $tooltip-position == "right" {
+			bottom: 50%;
+		}
+
+	}
+
+	&:hover:before, &:hover:after,
+	&:focus:before, &:focus:after {
+		@if $tooltip-position == "top" {
+			@include vendor(transform, translateY($transitionDistance * 1));
+		}
+		@if $tooltip-position == "bottom" {
+			@include vendor(transform, translateY($transitionDistance * -1));
+		}
+		@if $tooltip-position == "left" {
+			@include vendor(transform, translateX($transitionDistance * 1));
+		}
+		@if $tooltip-position == "right" {
+			@include vendor(transform, translateX($transitionDistance * -1));
+		}
+
+	}
+
+}
+
+/**
+ * top tooltip
+ */
+.tooltip--top { @include tooltip-position('bottom'); }
+
+/**
+ * bottom tooltip
+ */
+
+.tooltip--bottom { @include tooltip-position('top'); }
+
+/**
+ * right tooltip
+ */
+
+.tooltip--right { @include tooltip-position('left'); }
+
+/**
+ * left tooltip
+ */
+
+.tooltip--left { @include tooltip-position('right'); }
