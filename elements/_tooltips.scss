@@ -11,7 +11,7 @@
 		<span class="tooltip--top"
 					data-tooltip="Appearing text">
 			Text
-		</span>!
+		</span>
  *
  */
 
@@ -56,10 +56,11 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 [data-tooltip] {
 
-	@extend .cursor-help;
 	@extend .base-link;
 
 	position: relative;
+
+	cursor: help;
 
 	&:before, &:after {
 		position: absolute;
