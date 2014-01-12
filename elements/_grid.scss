@@ -102,9 +102,38 @@
 }
 
 
+/**
+ * Throws grid in flag mode
+ * In that mode grid behaves like table and it's content
+ * centred vertically
+ */
+
+.grid--flag {
+	width: 100%;
+	display: table;
+
+	> .grid__item {
+		display: table__cell;
+		vertical-align: middle;
+	}
+
+}
+
 
 /**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
+ * Extends .grid--flag
+ * Centrers content bottom
+ */
+
+.grid--flag--bottom {
+
+	> .grid__item { vertical-align: bottom; }
+
+}
+
+
+/**
+ * Very infrequently occurring grid wrappers as children of grid wrappers.
  */
 
 .grid > .grid {
@@ -135,7 +164,7 @@
 
 
 
-/* Used to fix strange behavior in Firefox on inline-grids */
+/* Used to fix strange behaviour in Firefox on inline-grids */
 
 .grid--nofix {
 	letter-spacing: normal;
