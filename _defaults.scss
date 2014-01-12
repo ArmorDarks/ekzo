@@ -111,18 +111,25 @@ $second-font-family:    sans-serif!default;
 
 
 /**
- * Headers font-family and weight
+ * Headers font-family
  */
 
 $headings-font-family:  $second-font-family!default;
-$headings-font-weight:  normal!default;
 
 
 /**
- * Forms font-family and weight
+ * Forms font-family (and weight, if needed)
  */
 
 $base-form-font-family: $base-font-family!default;
+
+
+/**
+ * Font weights
+ */
+
+$base-font-weight:      normal!default
+$headings-font-weight:  normal!default;
 
 
 
@@ -251,6 +258,7 @@ $base-link-hover-color:         #69d1c6!default;
 
 /**
  * Base headings colors
+ * Should be declared in your own stylesheet
  */
 
 $base-heading-color:            #585c5d!default;
