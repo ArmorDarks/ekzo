@@ -168,3 +168,60 @@
 .grid--nofix {
 	letter-spacing: normal;
 }
+
+
+
+/**
+ * Responsive grid classes
+ */
+
+@mixin grid-responsive ($namespace: "") {
+
+	.#{$namespace}grid {
+		display: inline-block;
+
+		> .grid__item {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+	}
+
+	.#{$namespace}grid--full {
+		margin-left: 0;
+
+		> .grid__item {
+			padding-left: 0;
+		}
+
+	}
+
+}
+
+@if $responsive == true {
+
+	@include media-query (lap) {
+		@include grid-responsive ("lap-");
+	}
+
+	@include media-query(palm){
+		@include grid-responsive("palm-");
+	}
+
+	@include media-query(lap){
+		@include grid-responsive("lap-");
+	}
+
+	@include media-query(lap-and-up){
+		@include grid-responsive("lap-and-up-");
+	}
+
+	@include media-query(portable){
+		@include grid-responsive("portable-");
+	}
+
+	@include media-query(desk){
+		@include grid-responsive("desk-");
+	}
+
+} /* endif */
