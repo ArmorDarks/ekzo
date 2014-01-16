@@ -34,14 +34,20 @@
 	/* reset line-height */
 	line-height: 1;
 
-	vertical-align: middle;
-
 	/* So icons added using `.icon` sit in the centre of the element */
 	text-align: center;
 
 	/* So using `.icon` on certain elements doesn't make a visual difference */
 	font-style:  normal;
 	font-weight: normal;
+}
+
+.sprite {
+	vertical-align: middle;
+}
+
+.icon:before {
+	position: relative;
 }
 
 
@@ -67,6 +73,20 @@
 			 url('#{$base-fonts-path}#{$base-icon-font}.svg?#{$base-icon-font-version}##{$base-icon-font}') format('svg');
 	font-weight: normal;
 	font-style: normal;
+}
+
+/**
+ * Serving SVG font specially for Chrome to make icons smooth
+ * Temporary solution because forces Chrome to download font twice
+ */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  @font-face {
+		font-family: '#{$base-icon-font}';
+    src: url('#{$base-fonts-path}#{$base-icon-font}.svg?#{$base-icon-font-version}##{$base-icon-font}') format('svg');
+  }
+
 }
 
 .icon { font-family: '#{$base-icon-font}'; }
