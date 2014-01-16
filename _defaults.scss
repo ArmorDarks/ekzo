@@ -46,7 +46,13 @@ $global-border-box: false!default;
  * Responsiveness?
  */
 
-$responsive:        true!default;
+$responsive:            true!default;
+
+$responsive-palm:       true!default;
+$responsive-lap:        true!default;
+$responsive-lap-and-up: true!default;
+$responsive-portable:   true!default;
+$responsive-desk:       true!default;
 
 /**
  * Responsiveness for widescreen/high resolution desktop monitors and beyond?

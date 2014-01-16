@@ -131,41 +131,61 @@
  *
  */
 
-@if $responsive == true{
+@if $responsive == true {
 
-@include media-query(palm){
-	@include grid-setup("palm-");
-}
+	@if $responsive-palm == true {
 
-@include media-query(lap){
-	@include grid-setup("lap-");
-}
+		@include media-query(palm) {
+			@include grid-setup("palm-");
+		}
 
-@include media-query(lap-and-up){
-	@include grid-setup("lap-and-up-");
-}
+	} /* endif */
 
-@include media-query(portable){
-	@include grid-setup("portable-");
-}
+	@if $responsive-lap == true {
 
-@include media-query(desk){
-	@include grid-setup("desk-");
-}
+		@include media-query(lap) {
+			@include grid-setup("lap-");
+		}
+
+	} /* endif */
+
+	@if $responsive-lap-and-up == true {
+
+		@include media-query(lap-and-up) {
+			@include grid-setup("lap-and-up-");
+		}
+
+	} /* endif */
+
+	@if $responsive-portable == true {
+
+		@include media-query(portable) {
+			@include grid-setup("portable-");
+		}
+
+	} /* endif */
+
+	@if $responsive-desk == true {
+
+		@include media-query(desk) {
+			@include grid-setup("desk-");
+		}
+
+	} /* endif */
 
 
-/**
- * If you have set the additional `$responsive-extra` variable to ‘true’ in
- * `_vars.scss` then you now have access to the following class available to
- * accomodate much larger screen resolutions.
- */
+	/**
+	 * If you have set the additional `$responsive-extra` variable to ‘true’ in
+	 * `_vars.scss` then you now have access to the following class available to
+	 * accomodate much larger screen resolutions.
+	 */
 
-@if $responsive-extra == true{
+	@if $responsive-desk-wide == true {
 
-@include media-query(desk-wide){
-	@include grid-setup("desk-wide-");
-}
+		@include media-query(desk-wide) {
+			@include grid-setup("desk-wide-");
+		}
 
-}
+	}
 
 } /* endif */

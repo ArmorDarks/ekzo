@@ -202,31 +202,49 @@
 }
 
 @if $use-grid == true {
+
 	@if $responsive == true {
 
-		@include media-query (lap) {
-			@include grid-responsive ("lap-");
-		}
+		@if $responsive-palm == true {
 
-		@include media-query(palm){
-			@include grid-responsive("palm-");
-		}
+			@include media-query(palm) {
+				@include grid-responsive("palm-");
+			}
 
-		@include media-query(lap){
-			@include grid-responsive("lap-");
-		}
+		} /* endif */
 
-		@include media-query(lap-and-up){
-			@include grid-responsive("lap-and-up-");
-		}
+		@if $responsive-lap == true {
 
-		@include media-query(portable){
-			@include grid-responsive("portable-");
-		}
+			@include media-query(lap) {
+				@include grid-responsive("lap-");
+			}
 
-		@include media-query(desk){
-			@include grid-responsive("desk-");
-		}
+		} /* endif */
+
+		@if $responsive-lap-and-up == true {
+
+			@include media-query(lap-and-up) {
+				@include grid-responsive("lap-and-up-");
+			}
+
+		} /* endif */
+
+		@if $responsive-portable == true {
+
+			@include media-query(portable) {
+				@include grid-responsive("portable-");
+			}
+
+		} /* endif */
+
+		@if $responsive-desk == true {
+
+			@include media-query(desk) {
+				@include grid-responsive("desk-");
+			}
+
+		} /* endif */
 
 	} /* endif */
+
 } /* endif */
