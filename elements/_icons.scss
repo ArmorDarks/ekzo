@@ -1,3 +1,4 @@
+@if $use-icons == true {
 
 /*------------------------------------*\
 		$ICONS and $SPRITES
@@ -125,3 +126,5 @@
 
 .icon--right,
 .sprite--right { margin-left:  .36em; }
+
+} /* endif */

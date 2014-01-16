@@ -1,3 +1,4 @@
+@if $use-flag == true {
 
 /*------------------------------------*\
 		$FLAG
@@ -82,3 +83,5 @@
 	.flag__content > :last-child {
 		margin-bottom: 0;
 	}
+
+}//endif

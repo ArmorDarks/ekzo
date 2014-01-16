@@ -1,3 +1,4 @@
+@if $use-media == true {
 
 /*------------------------------------*\
 		$MEDIA
@@ -54,3 +55,5 @@
 	.media__content > :last-child {
 		margin-bottom: 0;
 	}
+
+} /* endif */

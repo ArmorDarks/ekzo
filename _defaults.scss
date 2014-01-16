@@ -59,7 +59,7 @@ $responsive-extra:  false!default;
  * Tell inuit.css when breakpoints start.
  */
 
-$lap-start:         481px!default;
+$lap-start:         481px !default;
 $desk-start:        1024px!default;
 $desk-wide-start:   1200px!default;
 
@@ -74,7 +74,18 @@ $desk-wide-start:   1200px!default;
  */
 
 $use-arrows:        false!default;
-$use-buttons:       true!default;
+$use-breadcrumb:    true !default;
+$use-buttons:       true !default;
+$use-flag:          true !default;
+$use-forms:         true !default;
+$use-grid:          true !default;
+$use-icons:         true !default;
+$use-island:        true !default;
+$use-lists:         true !default;
+$use-media:         true !default;
+$use-nav:           true !default;
+$use-tables:        true !default;
+$use-tooltips:      true !default;
 
 
 
