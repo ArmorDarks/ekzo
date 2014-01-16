@@ -159,18 +159,20 @@
 \*------------------------------------*/
 
 /**
- * Button font-size modifiers.
+ * Button font-size modifiers based on headers sizes.
  */
 
-.btn--text--small  { font-size: $base-font-size * 0.8; }
+.btn--text--h1  { font-size: $h1-size; }
 
-.btn--text--normal { font-size: $base-font-size; }
+.btn--text--h2  { font-size: $h2-size; }
 
-.btn--text--med    { font-size: $base-font-size * 1.5; }
+.btn--text--h3  { font-size: $h3-size; }
 
-.btn--text--large  { font-size: $base-font-size * 2; }
+.btn--text--h4  { font-size: $h4-size; }
 
-.btn--text--huge   { font-size: $base-font-size * 3; }
+.btn--text--h5  { font-size: $h5-size; }
+
+.btn--text--h6  { font-size: $h6-size; }
 
 
 
