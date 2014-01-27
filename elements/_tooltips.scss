@@ -21,7 +21,7 @@
 * Tooltip variables
 */
 
-$tooltip-font-size: 12px;
+$tooltip-font-size: 12px !default;
 
 // default tooltip height
 // quite tricky due to proper positioning issues
@@ -138,48 +138,9 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 @if $use-tooltips == true {
 
-	// tooltip-variables.scss
-
-	// font size
-	$tooltip-font-size: 12px;
-
-	// default tooltip height
-	// quite tricky
-	$tooltip-height: $tooltip-font-size + 2 * 8px !default;
-
-	// border-width for tooltip arrow
-	$tooltip-arrow-size: 6px !default;
-
-	// transition distance
-	$transitionDistance: 8px !default;
-
-
-
-	// Various colors
-
-	// Default color
-	$tooltip-bg-color: rgba(1, 13, 14, 0.68) !default;
-
-	// Error color
-	$tooltip-bg-color-error: hsl(1, 40%, 50%) !default;
-
-	// Info color
-	$tooltip-bg-color-info: hsl(200, 50%, 45%) !default;
-
-	// Success color
-	$tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
-
-
-
-
-
 	[data-tooltip] {
 
-		@extend .base-link;
-
 		position: relative;
-
-		cursor: help;
 
 		&:before, &:after {
 			position: absolute;
