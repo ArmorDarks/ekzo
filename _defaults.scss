@@ -142,11 +142,14 @@ $base-form-font-family: $base-font-family!default;
 
 
 /**
- * Font weights
+ * Font weights and styles
  */
 
-$base-font-weight:      normal!default;
-$headings-font-weight:  normal!default;
+$base-font-weight:            normal!default;
+
+$headings-font-weight:        normal!default;
+
+$form-placeholder-font-style: italic!default;
 
 
 
