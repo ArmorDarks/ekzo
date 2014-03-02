@@ -273,6 +273,16 @@
 
 
 /**
+ * Set position to `relative`
+ * Useful in case you need to put in it absolutely-positioned container
+ * or to move it around
+ */
+
+.position--relative { position: relative; }
+
+
+
+/**
  * Display as table
  *
  * Apply those classes to container and nested divs
