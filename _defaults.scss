@@ -151,6 +151,8 @@ $headings-font-weight:        normal!default;
 
 $form-placeholder-font-style: italic!default;
 
+$breadcrumb-root-font-weight: bold!default;
+
 
 
 /*------------------------------------*\
@@ -281,41 +283,48 @@ $base-link-hover-color:         #69d1c6!default;
  * Should be declared in your own stylesheet
  */
 
-$base-heading-color:            #585c5d!default;
+$base-heading-color:              #585c5d!default;
 
 
 /**
  * Forms
  */
 
-$base-form-bg-color:            #FFF!default;
-$base-form-color:               #8b8b8b!default;
+$base-form-bg-color:              #FFF!default;
+$base-form-color:                 #8b8b8b!default;
 
-$base-form-placeholder-color:   #a9a9a9!default;
+$base-form-placeholder-color:     #a9a9a9!default;
 
 
 /**
  * Buttons
  */
 
-$base-button-bg-color:          #e85716!default;
-$base-button-color:             #fee0cd!default;
+$base-button-bg-color:            #e85716!default;
+$base-button-color:               #fee0cd!default;
 
-$base-button-bg-color-positive: #1fa205!default;
-$base-button-color-positive:    #7ef76a!default;
+$base-button-bg-color-positive:   #1fa205!default;
+$base-button-color-positive:      #7ef76a!default;
 
-$base-button-bg-color-negative: #a20b05!default;
-$base-button-color-negative:    #ff8877!default;
+$base-button-bg-color-negative:   #a20b05!default;
+$base-button-color-negative:      #ff8877!default;
 
-$base-button-bg-color-disabled: #d3d3d3!default;
-$base-button-color-disabled:    #464646!default;
+$base-button-bg-color-disabled:   #d3d3d3!default;
+$base-button-color-disabled:      #464646!default;
 
 
 /**
  * Background
  */
 
-$base-bg:                       #f2f2f2!default;
+$base-bg:                         #f2f2f2!default;
+
+
+/**
+ * Breadcrumb
+ */
+
+$base-breadcrumb-separator-color: #d3d3d3!default;
 
 
 

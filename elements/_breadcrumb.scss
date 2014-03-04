@@ -9,7 +9,7 @@
  * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
  *
 		<ul class="nav breadcrumb">
-			<li class="breadcrumb_root"><a href="#">Home</a></li>
+			<li class="breadcrumb__root"><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">The Board</a></li>
 			<li class="breadcrumb_current">Directors</li>
@@ -23,6 +23,11 @@
 
 	> li + li:before {
 		content: "\00A0" "\2192" "\00A0" "\00A0";
+
+		@if $base-breadcrumb-separator-color != $base-font-color  {
+			color: $base-breadcrumb-separator-color;
+		}
+
 	}
 
 }
@@ -32,7 +37,7 @@
  * Same breadcrumb, but with heading as last item
  *
 		<ul class="nav breadcrumb--rev">
-			<li class="breadcrumb_root"><a href="#">Home</a></li>
+			<li class="breadcrumb__root"><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">The Board</a></li>
 		</ul>
@@ -43,7 +48,12 @@
 .breadcrumb--rev {
 
 	> li:after {
-		content: "\00A0" "\00A0" "\2192" "\00A0" ;
+		content: "\00A0" "\00A0" "\2192" "\00A0";
+
+		@if $base-breadcrumb-separator-color != $base-font-color {
+			color: $base-breadcrumb-separator-color;
+		}
+
 	}
 
 }
@@ -54,9 +64,7 @@
 * Denote the root of the tree and current state styling
 */
 
-.breadcrumb__root {
-	font-weight: bold;
-}
+.breadcrumb__root { font-weight: $breadcrumb-root-font-weight; }
 
 .breadcrumb__current {}
 
