@@ -22,12 +22,7 @@
  */
 
 .nav {
-	list-style: none;
-
-	margin-left:   0;
-	margin-bottom: 0;
-
-	@extend .clear;
+	@extend .list--flush;
 
 	> li {
 
