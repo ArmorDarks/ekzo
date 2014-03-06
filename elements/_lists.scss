@@ -22,19 +22,19 @@
  */
 
 /*ul*/.block-list {
-		list-style:none;
-		margin-left:0;
+	list-style:none;
+	margin-left:0;
 
-		> li {
-			padding: $half-spacing-unit;
-		}
+	> li {
+		padding: $half-spacing-unit;
+	}
 
-		> li > a {
-			display: block;
+	> li > a {
+		display: block;
 
-			padding: $half-spacing-unit;
-			margin: -$half-spacing-unit;
-		}
+		padding: $half-spacing-unit;
+		margin: -$half-spacing-unit;
+	}
 
 }
 
@@ -188,6 +188,25 @@ ol {
 
 	}
 
+}
+
+
+
+/**
+ * Flush default styling and margins from list:
+ *
+		<ul class="list--flush">
+			<li>Foo</li>
+			<li>Bar</li>
+		</ul>
+ *
+ */
+
+/*ul*/.list--flush {
+	list-style:none;
+
+	margin-left:0;
+	margin-bottom: 0;
 }
 
 } /* endif */
