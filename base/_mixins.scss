@@ -87,17 +87,17 @@
  *
  */
 
-@mixin font ($font, $font-version) {
+@mixin font ($font, $font-version:1, $font-file-name:$font, $font-weight:normal, $font-style:normal) {
 
 	@font-face {
 		font-family: '#{$font}';
-		src: url('#{$base-fonts-path}#{$font}.eot?#{$font-version}');
-		src: url('#{$base-fonts-path}#{$font}.eot?#{$font-version}#iefix') format('embedded-opentype'),
-				 url('#{$base-fonts-path}#{$font}.woff?#{$font-version}') format('woff'),
-				 url('#{$base-fonts-path}#{$font}.ttf?#{$font-version}') format('truetype'),
-				 url('#{$base-fonts-path}#{$font}.svg?#{$font-version}##{$font}') format('svg');
-		font-weight: normal;
-		font-style: normal;
+		src: url('#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version}');
+		src: url('#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version}#iefix') format('embedded-opentype'),
+				 url('#{$base-fonts-path}#{$font-file-name}.woff?#{$font-version}') format('woff'),
+				 url('#{$base-fonts-path}#{$font-file-name}.ttf?#{$font-version}') format('truetype'),
+				 url('#{$base-fonts-path}#{$font-file-name}.svg?#{$font-version}##{$font}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
 	}
 
 	/**
@@ -108,7 +108,7 @@
 
 		@font-face {
 			font-family: '#{$font}';
-			src: url('#{$base-fonts-path}#{$font}.svg?#{$font-version}##{$font}') format('svg');
+			src: url('#{$base-fonts-path}#{$font-file-name}.svg?#{$font-version}##{$font}') format('svg');
 		}
 
 	}
