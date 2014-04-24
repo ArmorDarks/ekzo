@@ -73,10 +73,46 @@
 
 @mixin vendor ($property, $value...) {
 	-webkit-#{$property}: $value;
-		 -moz-#{$property}: $value;
-			-ms-#{$property}: $value;
-			 -o-#{$property}: $value;
-					#{$property}: $value;
+	-moz-#{$property}:    $value;
+	-ms-#{$property}:     $value;
+	-o-#{$property}:      $value;
+	#{$property}:         $value;
+}
+
+
+/**
+ * Fast including of custom fonts
+ *
+		@include vendor(border-radius, 4px);
+ *
+ */
+
+@mixin font ($font, $font-version) {
+
+	@font-face {
+		font-family: '#{$font}';
+		src: url('#{$base-fonts-path}#{$font}.eot?#{$font-version}');
+		src: url('#{$base-fonts-path}#{$font}.eot?#{$font-version}#iefix') format('embedded-opentype'),
+				 url('#{$base-fonts-path}#{$font}.woff?#{$font-version}') format('woff'),
+				 url('#{$base-fonts-path}#{$font}.ttf?#{$font-version}') format('truetype'),
+				 url('#{$base-fonts-path}#{$font}.svg?#{$font-version}##{$font}') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/**
+	 * Serving SVG font at first specially for Chrome to make it smoother
+	 */
+
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+		@font-face {
+			font-family: '#{$font}';
+			src: url('#{$base-fonts-path}#{$font}.svg?#{$font-version}##{$font}') format('svg');
+		}
+
+	}
+
 }
 
 

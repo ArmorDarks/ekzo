@@ -65,30 +65,7 @@
  * Declaration of default icon-font
  */
 
-@font-face {
-	font-family: '#{$base-icon-font}';
-	src: url('#{$base-fonts-path}#{$base-icon-font}.eot?#{$base-icon-font-version}');
-	src: url('#{$base-fonts-path}#{$base-icon-font}.eot?#{$base-icon-font-version}#iefix') format('embedded-opentype'),
-			 url('#{$base-fonts-path}#{$base-icon-font}.woff?#{$base-icon-font-version}') format('woff'),
-			 url('#{$base-fonts-path}#{$base-icon-font}.ttf?#{$base-icon-font-version}') format('truetype'),
-			 url('#{$base-fonts-path}#{$base-icon-font}.svg?#{$base-icon-font-version}##{$base-icon-font}') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/**
- * Serving SVG font specially for Chrome to make icons smooth
- * Temporary solution because forces Chrome to download font twice
- */
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-  @font-face {
-		font-family: '#{$base-icon-font}';
-    src: url('#{$base-fonts-path}#{$base-icon-font}.svg?#{$base-icon-font-version}##{$base-icon-font}') format('svg');
-  }
-
-}
+@include font ($base-icon-font, $base-icon-font-version);
 
 .icon { font-family: '#{$base-icon-font}'; }
 
