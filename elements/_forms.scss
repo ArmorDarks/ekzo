@@ -21,9 +21,7 @@ fieldset + fieldset {
 input,
 textarea,
 fieldset {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
+	@include vendor(box-sizing, border-box);
 }
 
 
@@ -31,11 +29,13 @@ fieldset {
 input,
 textarea,
 label {
-	background-color: $base-form-bg-color;;
-
 	color: $base-form-color;
 	font: $base-form-font-size $base-form-font-family;
 }
+
+.text-input,
+input,
+textarea{ background-color: $base-form-bg-color; }
 
 
 
