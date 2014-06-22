@@ -185,9 +185,9 @@
  */
 
 .btn--positive {
-	background-color: $base-button-bg-color-positive;
+	background-color: $base-button-bg-color--positive;
 
-	color: $base-button-color-positive;
+	color: $base-button-color--positive;
 }
 
 
@@ -196,9 +196,9 @@
  */
 
 .btn--negative {
-	background-color: $base-button-bg-color-negative;
+	background-color: $base-button-bg-color--negative;
 
-	color: $base-button-color-negative;
+	color: $base-button-color--negative;
 }
 
 
@@ -212,9 +212,9 @@
 .btn--disabled:hover,
 .btn--disabled:active,
 .btn--disabled:focus {
-	background-color: $base-button-bg-color-disabled;
+	background-color: $base-button-bg-color--disabled;
 
-	color: $base-button-color-disabled;
+	color: $base-button-color--disabled;
 
 	cursor: default;            /* [1] */
 }
