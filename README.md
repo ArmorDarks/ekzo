@@ -1,4 +1,4 @@
-SASS Framework
+Ekzo.sass — SASS framework
 =====================================
 
 OOCSS-driven, layered, design-free, BEM-based, responsive and little, but mighty SASS framework for rapid and painless development
