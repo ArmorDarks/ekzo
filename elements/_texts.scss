@@ -8,6 +8,9 @@
  * A series of classes for setting varius text sizes
  */
 
+ .text--base {
+ 	@include font-size($base-font-size);
+ }
 .text--milli {
 	@include font-size($text-milli-size);
 }
