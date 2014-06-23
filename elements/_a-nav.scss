@@ -1,0 +1,31 @@
+@if $use-a-nav == true {
+
+/*------------------------------------*\
+		$A-NAV
+\*------------------------------------*/
+
+
+/**
+ * `.a-nav--stacked` extends `.a-nav` and throws the list into vertical mode, e.g.:
+ *
+		<nav class="a-nav  -anav--stacked">
+			<a href=#>Home</a>
+			<a href=#>About</a>
+			<a href=#>Portfolio</a>
+			<a href=#>Contact</a>
+		</nav>
+ *
+ */
+
+.a-nav--stacked {
+
+	@extend .clear;
+
+	a {
+		float: left;
+
+		clear: both;
+	}
+}
+
+} /* endif */
