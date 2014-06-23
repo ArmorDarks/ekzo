@@ -11,8 +11,8 @@
  * E.g.:
  *
 		<div class="media">
-			<img src=http://placekitten.com/200/300 alt="" class="img">
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			<img class="media__image" src=http://placekitten.com/200/300 alt="">
+			<p class="media__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
  *
@@ -29,7 +29,7 @@
 
 	.media--right {
 
-		.media__img{
+		.media__image{
 			float: right;
 
 			margin-left: $base-spacing-unit;
@@ -38,7 +38,7 @@
 	}
 
 
-.media__img{
+.media__image{
 	float: left;
 
 	display: block;
