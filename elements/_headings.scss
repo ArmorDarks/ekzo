@@ -14,36 +14,60 @@ h1,.h1{
 	@include font-size($h1-size);
 
 	font-weight: $headings-font-weight;
+
+	@if $apply-color-to-base-headings {
+		color: $base-headings-color;
+	}
 }
 
 h2,.h2{
 	@include font-size($h2-size);
 
 	font-weight: $headings-font-weight;
+
+	@if $apply-color-to-base-headings {
+		color: $base-headings-color;
+	}
 }
 
 h3,.h3{
 	@include font-size($h3-size);
 
 	font-weight: $headings-font-weight;
+
+	@if $apply-color-to-base-headings {
+		color: $base-headings-color;
+	}
 }
 
 h4,.h4{
 	@include font-size($h4-size);
 
 	font-weight: $headings-font-weight;
+
+	@if $apply-color-to-base-headings {
+		color: $base-headings-color;
+	}
 }
 
 h5,.h5{
 	@include font-size($h5-size);
 
 	font-weight: $headings-font-weight;
+
+	@if $apply-color-to-base-headings {
+		color: $base-headings-color;
+	}
 }
 
 h6,.h6{
 	@include font-size($h6-size);
 
 	font-weight: $headings-font-weight;
+
+	@if $apply-color-to-base-headings {
+		color: $base-headings-color;
+	}
 }
 
 
@@ -54,14 +78,26 @@ h6,.h6{
 
 .h-giga {
 		@include font-size($h-giga-size);
+
+		@if $apply-color-to-extra-headings {
+			color: $extra-headings-color;
+		}
 }
 
 .h-mega {
 		@include font-size($h-mega-size);
+
+		@if $apply-color-to-extra-headings {
+			color: $extra-headings-color;
+		}
 }
 
 .h-kilo {
 		font-family: $headings-font-family;
 
 		@include font-size($h-kilo-size);
+
+		@if $apply-color-to-extra-headings {
+			color: $extra-headings-color;
+		}
 }
