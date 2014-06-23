@@ -79,6 +79,7 @@ $desk-wide-start:   1200px!default;
  * Which objects and abstractions would you like to use?
  */
 
+$use-a-nav:         true !default;
 $use-arrows:        false!default;
 $use-breadcrumb:    true !default;
 $use-buttons:       true !default;
@@ -202,19 +203,19 @@ $use-rems:              false!default;
  * Make all default links underlined
  */
 
-$base-link-underline:       true!default;
+$base-links-underline:       true!default;
 
 /**
  * Unline link on hover
  */
 
-$base-link-hover-unline:    true!default;
+$base-links-hover-unline:    true!default;
 
 /**
  * Apply color change on link hovering
  */
 
-$base-link-hover-colored:   true!default;
+$base-links-hover-colored:   true!default;
 
 
 
@@ -274,8 +275,8 @@ $base-font-color:               #313232!default;
  * Base links color
  */
 
-$base-link-color:               #35adda!default;
-$base-link-hover-color:         #69d1c6!default;
+$base-links-color:               #35adda!default;
+$base-links-hover-color:         #69d1c6!default;
 
 
 /**
@@ -283,7 +284,11 @@ $base-link-hover-color:         #69d1c6!default;
  * Should be declared in your own stylesheet
  */
 
-$base-heading-color:              #585c5d!default;
+$base-headings-color:             #585c5d!default;
+$apply-color-to-base-headings:    false!default;
+
+$extra-headings-color:            $base-headings-color!default;
+$apply-color-to-extra-headings:   false!default;
 
 
 /**
