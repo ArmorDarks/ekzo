@@ -10,22 +10,22 @@
 
 a,
 .base-link {
-	color: $base-link-color;
+	color: $base-links-color;
 
-	@if $base-link-underline == true {
+	@if $base-links-underline {
 		text-decoration: underline;
+	} @else {
+		text-decoration: none;
 	}
 
 	&:hover {
-
-		@if $base-link-hover-colored == true {
-			color: $base-link-hover-color;
+		@if $base-links-hover-colored {
+			color: $base-links-hover-color;
 		}
 
-		@if $base-link-hover-unline == true {
-			text-decoration:none;
+		@if $base-links-hover-unline {
+			text-decoration: none;
 		}
-
 	}
 
 }
@@ -39,21 +39,20 @@ a,
  */
 
 .unlink {
-	@if $base-link-underline == true {
-		text-decoration:none;
+	@if $base-links-underline {
+		text-decoration: none;
 	}
 
 	color: $base-font-color;
 
 	&:hover {
-		@if $base-link-underline == true {
-			text-decoration:none;
+		@if $base-links-underline {
+			text-decoration: none;
 		}
 
-		@if $base-link-hover-colored == true {
+		@if $base-links-hover-colored {
 			color: $base-font-color;
 		}
-
 	}
 
 }
