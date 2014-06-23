@@ -68,6 +68,20 @@
 
 }
 
+/**
+ * `.nav--inline` extends `.nav` and throws all links inside in inline mode
+ */
+
+.nav--inline {
+
+	li {
+
+		> a { display: inline; }
+
+	}
+
+}
+
 
 
 /**
