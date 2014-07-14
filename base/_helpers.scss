@@ -271,6 +271,13 @@
 
 .display--none { display: none; }
 
+.hide {
+	position: absolute!important;
+
+	top:  -9999px!important;
+	left: -9999px!important;
+}
+
 .text--hidden { text-indent: -9999px; }
 
 
