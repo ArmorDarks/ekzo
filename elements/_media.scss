@@ -21,7 +21,11 @@
  */
 
 .media {
-	display: block;
+	// #note disabled experimentaly. It seems there is no need
+	// in such property in most cases
+	// Note that for obvious reasons element should always be
+	// block or inline-block element.
+	// display: block;
 
 	@extend .clear;
 }
