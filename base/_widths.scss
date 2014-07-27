@@ -20,6 +20,12 @@
 	@if $use-fractions == true {
 
 	/**
+	 * Whole
+	 */
+
+	[class~="#{$namespace}1/1"]       { width: 100% !important; }
+
+	/**
 	 * Halves
 	 */
 
