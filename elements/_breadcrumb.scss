@@ -8,11 +8,16 @@
 /**
  * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
  *
-		<ul class="nav breadcrumb">
-			<li class="breadcrumb__root"><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">The Board</a></li>
-			<li class="breadcrumb_current">Directors</li>
+		<ul class="breadcrumb--rev">
+			<li class="breadcrumb__entry breadcrumb__root">
+				<a class="breadcrumb__link" href="#">Main</a>
+			</li>
+			<li class="breadcrumb__entry">
+				<a class="breadcrumb__link" href="#">Section 1</a>
+			</li>
+			<li class="breadcrumb__entry breadcrumb__current">
+				<a class="breadcrumb__link" href="#">Section 2</a>
+			</li>
 		</ul>
  *
  * Demo: jsfiddle.net/inuitcss/rkAY9
@@ -21,7 +26,9 @@
 
 .breadcrumb {
 
-	> li + li:before {
+	@extend .nav;
+
+	> .breadcrumb__entry + .breadcrumb__entry:before {
 		content: "\00A0" "\2192" "\00A0" "\00A0";
 
 		@if $base-breadcrumb-separator-color != $base-font-color  {
@@ -36,10 +43,16 @@
 /**
  * Same breadcrumb, but with heading as last item
  *
-		<ul class="nav breadcrumb--rev">
-			<li class="breadcrumb__root"><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">The Board</a></li>
+		<ul class="breadcrumb--rev">
+			<li class="breadcrumb__entry breadcrumb__root">
+				<a class="breadcrumb__link" href="#">Main</a>
+			</li>
+			<li class="breadcrumb__entry">
+				<a class="breadcrumb__link" href="#">Section 1</a>
+			</li>
+			<li class="breadcrumb__entry">
+				<a class="breadcrumb__link" href="#">Section 2</a>
+			</li>
 		</ul>
 		<h1>Header as last item</h1>
  *
@@ -47,7 +60,9 @@
 
 .breadcrumb--rev {
 
-	> li:after {
+	@extend .nav;
+
+	> .breadcrumb__entry:after {
 		content: "\00A0" "\00A0" "\2192" "\00A0";
 
 		@if $base-breadcrumb-separator-color != $base-font-color {
