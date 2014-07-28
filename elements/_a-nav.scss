@@ -4,11 +4,10 @@
 		$A-NAV
 \*------------------------------------*/
 
-
 /**
- * `.a-nav--stacked` extends `.a-nav` and throws the list into vertical mode, e.g.:
+ * Throws plain list of anchors into inline-block mode, e.g.:
  *
-		<nav class="a-nav  -anav--stacked">
+		<nav class="a-nav">
 			<a href=#>Home</a>
 			<a href=#>About</a>
 			<a href=#>Portfolio</a>
@@ -17,15 +16,36 @@
  *
  */
 
-.a-nav--stacked {
+.a-nav {
+
+	> a { display: inline-block; }
+
+}
+
+
+/**
+ * Throws plain list of anchors into vertical mode
+ * with inline-block-like behaviour, e.g.:
+ *
+		<nav class="a-nav--stacked">
+			<a href=#>Home</a>
+			<a href=#>About</a>
+			<a href=#>Portfolio</a>
+			<a href=#>Contact</a>
+		</nav>
+ *
+ */
+
+.a-stacked-nav {
 
 	@extend .clear;
 
-	a {
+	> a {
 		float: left;
 
 		clear: both;
 	}
+
 }
 
 } /* endif */
