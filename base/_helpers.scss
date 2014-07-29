@@ -29,14 +29,23 @@
  * Alignments
  */
 
-.align--left        { text-align: left   !important; }
-.align--center      { text-align: center !important; }
-.align--right       { text-align: right  !important; }
-.align--justify > p { text-align: justify!important; }
+.align--left          { text-align: left   !important; }
+.align--center        { text-align: center !important; }
 
-.align--top         { vertical-align: top   !important; }
-.align--middle      { vertical-align: middle!important; }
-.align--bottom      { vertical-align: bottom!important; }
+.align--center--block {
+
+	> * { display: inline-block; }
+
+	> * > * { text-align: left }
+
+}
+
+.align--right         { text-align: right  !important; }
+.align--justify > p   { text-align: justify!important; }
+
+.align--top           { vertical-align: top   !important; }
+.align--middle        { vertical-align: middle!important; }
+.align--bottom        { vertical-align: bottom!important; }
 
 
 
