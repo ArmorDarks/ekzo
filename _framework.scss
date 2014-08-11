@@ -10,25 +10,24 @@
  */
 
 
-/**
- * Default options, styles, colors etc.
- */
+/* Default options, styles, colors etc */
 
 @import "settings.fonts.defaults";
+@import "settings.framework.defaults";
 @import "settings.colors.defaults";
 @import "settings.assets.defaults";
 @import "settings.options.defaults";
 
 
+/* Mixins */
 
-/**
- * Base styles. Mostly unclassed HTML elements.
- */
+@import "./mixins/arrows";
+@import "./mixins/font";
+@import "./mixins/media-queries";
+@import "./mixins/misc";
 
-@import "./base/mixins.arrows";
-@import "./base/mixins.font";
-@import "./base/mixins.generic";
-@import "./base/mixins.media-queries";
+
+/* Base styles */
 
 @import "./base/normalize";
 @import "./base/reset";
@@ -38,10 +37,7 @@
 @import "./base/debug";
 
 
-
-/**
- * Generic
- */
+/* Generic. Mostly unclassed HTML elements */
 
 @import "./generic/shared";
 
@@ -52,17 +48,17 @@
 @import "./generic/lists";
 @import "./generic/tables";
 @import "./generic/texts";
-@import "./generic/widths";
-
-@import "./generic/helpers.generic";
-@import "./generic/helpers.clearfix";
-@import "./generic/helpers.spacing";
 
 
+/* Helpers */
 
-/**
- * Objects and abstractions
- */
+@import "./helpers/clearfix";
+@import "./helpers/misc";
+@import "./helpers/spacing";
+@import "./helpers/widths";
+
+
+/* Objects and abstractions */
 
 @import "./objects/a-nav";
 @import "./objects/arrows";

@@ -1,0 +1,15 @@
+
+/*------------------------------------*\
+		$SETTING.FRAMEWORK.DEFAULTS
+\*------------------------------------*/
+
+
+/**
+ * Used for various framework calculations
+ */
+
+$base-spacing-unit:   $base-line-height !default;
+$half-spacing-unit:   $base-spacing-unit / 2 !default;
+$twice-spacing-unit:  $base-spacing-unit * 2 !default;
+
+$line-height-ratio:   $base-line-height / $base-font-size !default;
