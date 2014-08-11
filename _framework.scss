@@ -3,56 +3,75 @@
 		$FRAMEWORK
 \*------------------------------------*/
 
-/*
-	Ekzo.sass framework — https://github.com/ArmorDarks/ekzo.sass
-	Version: 1.18.0
-*/
+
+/*!
+ * Ekzo.sass framework — https://github.com/ArmorDarks/ekzo.sass
+ * Version: 1.19.0
+ */
 
 
 /**
  * Default options, styles, colors etc.
  */
 
-@import "defaults";
+@import "settings.fonts.defaults";
+@import "settings.colors.defaults";
+@import "settings.assets.defaults";
+@import "settings.options.defaults";
 
 
 
 /**
- * Base styles. Mostly unclassed HTML elements, helpers etc.
+ * Base styles. Mostly unclassed HTML elements.
  */
 
-@import "./base/mixins";
-@import "./base/clearfix";
-@import "./base/debug";
-@import "./base/helpers";
-@import "./base/main";
+@import "./base/mixins.arrows";
+@import "./base/mixins.font";
+@import "./base/mixins.generic";
+@import "./base/mixins.media-queries";
+
 @import "./base/normalize";
-@import "./base/print";
 @import "./base/reset";
-@import "./base/widths";
+@import "./base/print";
+@import "./base/main";
+
+@import "./base/debug";
+
+
+
+/**
+ * Generic
+ */
+
+@import "./generic/shared";
+
+@import "./generic/forms";
+@import "./generic/headings";
+@import "./generic/images";
+@import "./generic/links";
+@import "./generic/lists";
+@import "./generic/tables";
+@import "./generic/texts";
+@import "./generic/widths";
+
+@import "./generic/helpers.generic";
+@import "./generic/helpers.clearfix";
+@import "./generic/helpers.spacing";
+
 
 
 /**
  * Objects and abstractions
  */
 
-@import "./elements/shared";
-
-@import "./elements/a-nav";
-@import "./elements/arrows";
-@import "./elements/breadcrumb";
-@import "./elements/buttons";
-@import "./elements/flag";
-@import "./elements/forms";
-@import "./elements/grid";
-@import "./elements/headings";
-@import "./elements/icons";
-@import "./elements/images";
-@import "./elements/island";
-@import "./elements/links";
-@import "./elements/lists";
-@import "./elements/media";
-@import "./elements/nav";
-@import "./elements/tables";
-@import "./elements/texts";
-@import "./elements/tooltips";
+@import "./objects/a-nav";
+@import "./objects/arrows";
+@import "./objects/breadcrumb";
+@import "./objects/buttons";
+@import "./objects/flag";
+@import "./objects/grid";
+@import "./objects/icons";
+@import "./objects/island";
+@import "./objects/media";
+@import "./objects/nav";
+@import "./objects/tooltips";

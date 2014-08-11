@@ -1,0 +1,139 @@
+
+/*------------------------------------*\
+		$SETTING.OPTIONS.DEFAULTS
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+		$DEBUG
+\*------------------------------------*/
+
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+
+$debug-mode:        false !default;
+
+
+
+/*------------------------------------*\
+		$BORDER-BOX
+\*------------------------------------*/
+
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+
+$global-border-box: false !default;
+
+
+
+/*------------------------------------*\
+		$RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * Responsiveness?
+ */
+
+$responsive:            true !default;
+
+$responsive-palm:       true !default;
+$responsive-lap:        true !default;
+$responsive-lap-and-up: true !default;
+$responsive-portable:   true !default;
+$responsive-desk:       true !default;
+
+/**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: `$responsive` variable above must be set to true before enabling this.
+ */
+
+$responsive-desk-wide:  false !default;
+
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+
+$lap-start:         481px  !default;
+$desk-start:        1024px !default;
+$desk-wide-start:   1200px !default;
+
+
+
+/*------------------------------------*\
+	$ELEMENTS AND ABSTRACTIONS
+\*------------------------------------*/
+
+/**
+ * Which objects and abstractions would you like to use?
+ */
+
+$use-a-nav:         true  !default;
+$use-arrows:        false !default;
+$use-breadcrumb:    true  !default;
+$use-buttons:       true  !default;
+$use-flag:          true  !default;
+$use-forms:         true  !default;
+$use-grid:          true  !default;
+$use-icons:         true  !default;
+$use-island:        true  !default;
+$use-lists:         true  !default;
+$use-media:         true  !default;
+$use-nav:           true  !default;
+$use-tables:        true  !default;
+$use-tooltips:      true  !default;
+
+
+
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+
+/**
+ * Make all default links underlined
+ */
+
+$base-links-underline:       true !default;
+
+/**
+ * Unline link on hover
+ */
+
+$base-links-hover-unline:    true !default;
+
+/**
+ * Apply color change on link hovering
+ */
+
+$base-links-hover-colored:   true !default;
+
+
+
+/*------------------------------------*\
+		$BUTTONS
+\*------------------------------------*/
+
+/**
+ * Unline buttons
+ */
+
+$base-button-unline:        true !default;
+
+
+
+/*------------------------------------*\
+	$FRAMEWORK
+\*------------------------------------*/
+
+/**
+ * Used for various framework calculations
+ */
+
+$base-spacing-unit:   $base-line-height !default;
+$half-spacing-unit:   $base-spacing-unit / 2 !default;
+$twice-spacing-unit:  $base-spacing-unit * 2 !default;
+
+$line-height-ratio:   $base-line-height / $base-font-size !default;

@@ -1,5 +1,6 @@
+
 /*------------------------------------*\
-		$CLEARFIX
+		$HELPERS.CLEARFIX
 \*------------------------------------*/
 
 /**
@@ -8,12 +9,15 @@
  * and over in your markup.
  */
 
+%clear,
 .clear {
 
 	&:after {
-		content:"";
-		display:table;
-		clear:both;
+		display: table;
+
+		clear:   both;
+
+		content: "";
 	}
 
 }

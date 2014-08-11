@@ -1,0 +1,235 @@
+
+/*------------------------------------*\
+		$HELPERS.GENERIC
+\*------------------------------------*/
+
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.float-left` class to the markup.
+ *
+ * A lot of these classes carry `!important` as you will always want them to win
+ * out over other selectors.
+ */
+
+
+
+/**
+ * Add/remove floats
+ */
+
+.float--right   { float: right!important; }
+.float--left    { float: left !important; }
+.float--flush   { float: none !important; }
+
+
+
+/**
+ * Alignments
+ */
+
+.align--left          { text-align: left   !important; }
+.align--center        { text-align: center !important; }
+
+.align--center--block {
+
+	> * { display: inline-block; }
+
+	> * > * { text-align: left }
+
+}
+
+.align--right         { text-align: right  !important; }
+.align--justify > p   { text-align: justify!important; }
+
+.align--top           { vertical-align: top   !important; }
+.align--middle        { vertical-align: middle!important; }
+.align--bottom        { vertical-align: bottom!important; }
+
+
+
+/**
+ * Text styling
+ */
+
+.text--light      { font-weight: 300  !important; }
+.text--normal     { font-weight: 400  !important; }
+.text--semibold   { font-weight: 600  !important; }
+.text--bold       { font-weight: bold !important; }
+
+.text--italic     { font-style: italic!important; }
+
+.text--caps       { text-transform: uppercase!important; }
+
+.text--nowrap     { white-space: nowrap; }
+
+
+
+/**
+ * Varius underline/unline stylings
+ */
+
+.underline { text-decoration: underline; }
+
+	/**
+	 * Reversed version of underline
+	 */
+
+	.underline--rev {
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; }
+	}
+
+
+.unline { text-decoration: none; }
+
+
+/**
+ * Removes underline from element, but adds it
+ * to child span
+ *
+ * Useful for anchors with icons inside it
+ */
+
+.reline {
+	text-decoration: none;
+
+	span { text-decoration: underline; }
+
+	&:hover span { text-decoration: none; }
+}
+
+	/**
+	 * Removes underline, but adds it on hover
+	 */
+
+	.reline--rev {
+		text-decoration: none;
+
+		span { text-decoration: none; }
+
+		&:hover span { text-decoration: underline; }
+	}
+
+
+
+/**
+ * Take element out of typography rhythm
+ * Should be applied on custom elements with unusual styling
+ */
+
+.unrhythm { line-height: 1!important; }
+
+
+
+/**
+ * Display styling
+ */
+
+.display--inline { display: inline; }
+.display--inline-block { display: inline-block; }
+.display--block  { display: block; }
+
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+
+.cursor--help    { cursor: help   !important; }
+.cursor--arrow   { cursor: default!important; }
+.cursor--pointer { cursor: pointer!important;}
+
+
+
+/**
+ * Mute an object by reducing its opacity.
+ */
+
+.muted {
+	opacity: 0.5!important;
+	filter:  alpha(opacity = 50)!important;
+}
+
+
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+		<a href=# class="link--go">Read more</a>
+ *
+ */
+
+.link--go:after { content:"\00A0" "\00BB"!important; }
+
+
+/**
+ * Add a left-angled quote to links that imply backwards movement, e.g.:
+ *
+		<a href=# class="link--back">Go back</a>
+ *
+ */
+
+.link--back:before { content:"\00AB" "\00A0"!important; }
+
+
+
+/**
+ * Hide content
+ */
+
+.display--none { display: none; }
+
+.hide {
+	position: absolute!important;
+
+	top:  -9999px!important;
+	left: -9999px!important;
+}
+
+.text--hidden { text-indent: -9999px; }
+
+
+
+/**
+ * Set position to `relative`
+ * Useful in case you need to put in it absolutely-positioned container
+ * or to move it around
+ */
+
+.position--relative { position: relative; }
+
+
+
+/**
+ * Display as table
+ *
+ * Apply those classes to container and nested divs
+ * to make them behave like table
+ *
+ * Can be useful when you want two divs to have equal
+ * height
+
+ * Note: don't use floated position on table-cells
+ * 			 'cause they won't behave like table-cells
+ */
+
+.table { display: table; }
+
+	.table__cell { display: table-cell; }
+
+	.table__row  { display: table-row; }
+
+
+
+/**
+ * Apply box-sizing model
+ */
+
+.border-box {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
+}
