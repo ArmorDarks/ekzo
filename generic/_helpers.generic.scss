@@ -9,7 +9,7 @@
  * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
  * that ruleset as opposed to adding the `.float-left` class to the markup.
  *
- * A lot of these classes carry `!important` as you will always want them to win
+ * A lot of these classes carry ` !important` as you will always want them to win
  * out over other selectors.
  */
 
@@ -19,7 +19,7 @@
  * Add/remove floats
  */
 
-.float--right   { float: right!important; }
+.float--right   { float: right !important; }
 .float--left    { float: left !important; }
 .float--flush   { float: none !important; }
 
@@ -41,11 +41,11 @@
 }
 
 .align--right         { text-align: right  !important; }
-.align--justify > p   { text-align: justify!important; }
+.align--justify > p   { text-align: justify !important; }
 
 .align--top           { vertical-align: top   !important; }
-.align--middle        { vertical-align: middle!important; }
-.align--bottom        { vertical-align: bottom!important; }
+.align--middle        { vertical-align: middle !important; }
+.align--bottom        { vertical-align: bottom !important; }
 
 
 
@@ -58,9 +58,9 @@
 .text--semibold   { font-weight: 600  !important; }
 .text--bold       { font-weight: bold !important; }
 
-.text--italic     { font-style: italic!important; }
+.text--italic     { font-style: italic !important; }
 
-.text--caps       { text-transform: uppercase!important; }
+.text--caps       { text-transform: uppercase !important; }
 
 .text--nowrap     { white-space: nowrap; }
 
@@ -120,7 +120,7 @@
  * Should be applied on custom elements with unusual styling
  */
 
-.unrhythm { line-height: 1!important; }
+.unrhythm { line-height: 1 !important; }
 
 
 
@@ -139,8 +139,8 @@
  */
 
 .cursor--help    { cursor: help   !important; }
-.cursor--arrow   { cursor: default!important; }
-.cursor--pointer { cursor: pointer!important;}
+.cursor--arrow   { cursor: default !important; }
+.cursor--pointer { cursor: pointer !important;}
 
 
 
@@ -149,8 +149,8 @@
  */
 
 .muted {
-	opacity: 0.5!important;
-	filter:  alpha(opacity = 50)!important;
+	opacity: 0.5 !important;
+	filter:  alpha(opacity = 50) !important;
 }
 
 
@@ -162,7 +162,7 @@
  *
  */
 
-.link--go:after { content:"\00A0" "\00BB"!important; }
+.link--go:after { content:"\00A0" "\00BB" !important; }
 
 
 /**
@@ -172,7 +172,7 @@
  *
  */
 
-.link--back:before { content:"\00AB" "\00A0"!important; }
+.link--back:before { content:"\00AB" "\00A0" !important; }
 
 
 
@@ -183,10 +183,10 @@
 .display--none { display: none; }
 
 .hide {
-	position: absolute!important;
+	position: absolute !important;
 
-	top:  -9999px!important;
-	left: -9999px!important;
+	top:  -9999px !important;
+	left: -9999px !important;
 }
 
 .text--hidden { text-indent: -9999px; }
