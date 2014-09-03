@@ -220,7 +220,7 @@
 	}
 
 
-	// #note — make above version with extends
+	// #note - make above version with extends
 
 	// /**
 	// * Whole
@@ -325,15 +325,15 @@
 
 
 /**
- * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
- * access to these classes. You can define at which breakpoint you’d like an
+ * If you have set `$responsive` to 'true' in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint you'd like an
  * element to be a certain size, e.g.:
  *
  * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
  *
- * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
- * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
- * at ‘mobile’ sizes.
+ * This would create a `div` that, at 'desktop' sizes, takes up a quarter of the
+ * horizontal space, a half of that space at 'tablet' sizes, and goes full width
+ * at 'mobile' sizes.
  *
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
@@ -383,7 +383,7 @@
 
 
 	/**
-	 * If you have set the additional `$responsive-extra` variable to ‘true’ in
+	 * If you have set the additional `$responsive-extra` variable to 'true' in
 	 * `_vars.scss` then you now have access to the following class available to
 	 * accomodate much larger screen resolutions.
 	 */

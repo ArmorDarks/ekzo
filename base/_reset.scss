@@ -10,7 +10,7 @@
 
 
 /**
-* Let’s make the box model all nice, shall we...?
+* Let's make the box model all nice, shall we...?
 */
 
 @if $global-border-box == true {
@@ -103,7 +103,7 @@ dfn[title] {
 
 /**
  * 1. Remove border when inside `a` element in IE 8/9.
- * 2. So that `alt` text is visually offset if images don’t load.
+ * 2. So that `alt` text is visually offset if images don't load.
  */
 
 img {

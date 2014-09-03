@@ -23,10 +23,10 @@
  * 3. Stop buttons wrapping and looking broken.
  * 5. Force all elements using beautons to appear clickable.
  * 6. Normalise box model styles.
- * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ * 7. If the button's text is 1em, and the button is (3 * font-size) tall, then
  *    there is 1em of space above and below that text. We therefore apply 1em
  *    of space to the left and right, as padding, to keep consistent spacing.
- * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ * 9. Don't allow buttons to have underlines; it kinda ruins the illusion.
  */
 
 .btn {
@@ -140,7 +140,7 @@
 /**
  * These buttons will fill the entirety of their container.
  *
- * 1. Remove padding so that widths and paddings don’t conflict.
+ * 1. Remove padding so that widths and paddings don't conflict.
  */
 
 .btn--full {

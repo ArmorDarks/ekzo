@@ -44,7 +44,7 @@
 
 	/**
 	 * Links sometimes, though not always, benefit from `title` attributes. Links
-	 * without are never invalid but it’s a good idea to check.
+	 * without are never invalid but it's a good idea to check.
 	 */
 
 	a{
@@ -66,7 +66,7 @@
 
 
 	/**
-	 * The `target` attribute ain’t too nice...
+	 * The `target` attribute ain't too nice...
 	 */
 
 	a[target]{
@@ -87,7 +87,7 @@
 
 
 	/**
-	 * It’s always nice to give `th`s `scope` attributes.
+	 * It's always nice to give `th`s `scope` attributes.
 	 */
 
 	th{
@@ -99,7 +99,7 @@
 
 
 	/**
-	 * `tr`s as children of `table`s ain’t great, did you need a `thead`/`tbody`?
+	 * `tr`s as children of `table`s ain't great, did you need a `thead`/`tbody`?
 	 */
 
 	table > tr{
