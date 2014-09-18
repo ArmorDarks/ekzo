@@ -83,7 +83,7 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 		// get the arrow out
 		margin-#{$tooltip-position}: -2 * $tooltip-arrow-size;
 
-		@if $tooltip-position == "left" or $tooltip-position == "right" {
+		@if $tooltip-position == 'left' or $tooltip-position == 'right' {
 			// bring back to center
 			margin-bottom: -1 * $tooltip-arrow-size;
 		}
@@ -91,12 +91,12 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 	&:after {
 
-		@if $tooltip-position == "top" or $tooltip-position == "bottom" {
+		@if $tooltip-position == 'top' or $tooltip-position == 'bottom' {
 		// bring back the tooltip by some offset so that arrow doesn't stick at end
 		margin-left: -1 * 3 * $tooltip-arrow-size;
 		}
 
-		@if $tooltip-position == "left" or $tooltip-position == "right" {
+		@if $tooltip-position == 'left' or $tooltip-position == 'right' {
 		// bring back to center
 		margin-bottom: -1 * floor($tooltip-height / 2);
 		}
@@ -106,11 +106,11 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 	&:before, &:after {
 		#{$tooltip-position}: 100%;
 
-		@if $tooltip-position == "top" or $tooltip-position == "bottom" {
+		@if $tooltip-position == 'top' or $tooltip-position == 'bottom' {
 			left: 50%;
 		}
 
-		@if $tooltip-position == "left" or $tooltip-position == "right" {
+		@if $tooltip-position == 'left' or $tooltip-position == 'right' {
 			bottom: 50%;
 		}
 
@@ -118,16 +118,16 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 	&:hover:before, &:hover:after,
 	&:focus:before, &:focus:after {
-		@if $tooltip-position == "top" {
+		@if $tooltip-position == 'top' {
 			@include vendor(transform, translateY($transitionDistance * 1));
 		}
-		@if $tooltip-position == "bottom" {
+		@if $tooltip-position == 'bottom' {
 			@include vendor(transform, translateY($transitionDistance * -1));
 		}
-		@if $tooltip-position == "left" {
+		@if $tooltip-position == 'left' {
 			@include vendor(transform, translateX($transitionDistance * 1));
 		}
-		@if $tooltip-position == "right" {
+		@if $tooltip-position == 'right' {
 			@include vendor(transform, translateX($transitionDistance * -1));
 		}
 

@@ -12,62 +12,62 @@
 
 /* Default options, styles, colors etc */
 
-@import "settings.fonts.defaults";
-@import "settings.framework.defaults";
-@import "settings.colors.defaults";
-@import "settings.assets.defaults";
-@import "settings.options.defaults";
+@import 'settings.fonts.defaults';
+@import 'settings.framework.defaults';
+@import 'settings.colors.defaults';
+@import 'settings.assets.defaults';
+@import 'settings.options.defaults';
 
 
 /* Mixins */
 
-@import "./mixins/arrows";
-@import "./mixins/font";
-@import "./mixins/media-queries";
-@import "./mixins/misc";
+@import './mixins/arrows';
+@import './mixins/font';
+@import './mixins/media-queries';
+@import './mixins/misc';
 
 
 /* Base styles */
 
-@import "./base/normalize";
-@import "./base/reset";
-@import "./base/print";
-@import "./base/main";
+@import './base/normalize';
+@import './base/reset';
+@import './base/print';
+@import './base/main';
 
-@import "./base/debug";
+@import './base/debug';
 
 
 /* Generic. Mostly unclassed HTML elements */
 
-@import "./generic/shared";
+@import './generic/shared';
 
-@import "./generic/forms";
-@import "./generic/headings";
-@import "./generic/images";
-@import "./generic/links";
-@import "./generic/lists";
-@import "./generic/tables";
-@import "./generic/texts";
+@import './generic/forms';
+@import './generic/headings';
+@import './generic/images';
+@import './generic/links';
+@import './generic/lists';
+@import './generic/tables';
+@import './generic/texts';
 
 
 /* Helpers */
 
-@import "./helpers/clearfix";
-@import "./helpers/misc";
-@import "./helpers/spacing";
-@import "./helpers/widths";
+@import './helpers/clearfix';
+@import './helpers/misc';
+@import './helpers/spacing';
+@import './helpers/widths';
 
 
 /* Objects and abstractions */
 
-@import "./objects/a-nav";
-@import "./objects/arrows";
-@import "./objects/breadcrumb";
-@import "./objects/buttons";
-@import "./objects/flag";
-@import "./objects/grid";
-@import "./objects/icons";
-@import "./objects/island";
-@import "./objects/media";
-@import "./objects/nav";
-@import "./objects/tooltips";
+@import './objects/a-nav';
+@import './objects/arrows';
+@import './objects/breadcrumb';
+@import './objects/buttons';
+@import './objects/flag';
+@import './objects/grid';
+@import './objects/icons';
+@import './objects/island';
+@import './objects/media';
+@import './objects/nav';
+@import './objects/tooltips';

@@ -24,7 +24,7 @@ $arrow:                 $arrow-size - $arrow-border;
 
 	&:before,
 	&:after {
-		content:"";
+		content:'';
 		position:absolute;
 		border-collapse:separate;
 	}

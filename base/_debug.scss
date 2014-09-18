@@ -37,7 +37,7 @@
 	img[alt]{
 		outline:none;
 	}
-	img[alt=""]{
+	img[alt='']{
 		outline:5px solid yellow;
 	}
 
@@ -59,8 +59,8 @@
 	 * Double-check any links whose `href` is something questionable.
 	 */
 
-	a[href="#"],
-	a[href*="javascript"]{
+	a[href='#'],
+	a[href*='javascript']{
 		outline:5px solid yellow;
 	}
 
@@ -189,17 +189,17 @@
 	 * General styling
 	 */
 
-	a:not([href]), a[href=""], a[href$="#"], a[href^="javascript"],
-	.button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
-	.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
-	a[class*="button"]:not([role="button"]),
-	a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"]),
-	a[role="button"][href=""], a[role="button"][href$="#"], a[role="button"][href^="javascript"],
-	.button:not(button):not([role="button"]):not(input),
-	.btn:not(button):not([role="button"]):not(input),
-	a[class*="button"]:not([role="button"]),
-	a.button[class*="disabled"],
-	a.btn.disabled, a[class*="button"][class*="disabled"],
+	a:not([href]), a[href=''], a[href$='#'], a[href^='javascript'],
+	.button:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']),
+	.btn:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']),
+	a[class*='button']:not([role='button']),
+	a[role='button']:not([href*='/']):not([href*='.']):not([href*='?']),
+	a[role='button'][href=''], a[role='button'][href$='#'], a[role='button'][href^='javascript'],
+	.button:not(button):not([role='button']):not(input),
+	.btn:not(button):not([role='button']):not(input),
+	a[class*='button']:not([role='button']),
+	a.button[class*='disabled'],
+	a.btn.disabled, a[class*='button'][class*='disabled'],
 	form button:not([type]),
 	a:empty:not([aria-label]):not([aria-labelledby]),
 	button:empty:not([aria-label]):not([aria-labelledby]),
@@ -210,17 +210,17 @@
 		overflow: visible !important;
 	}
 
-	a:not([href]):after, a[href=""]:after, a[href$="#"]:after, a[href^="javascript"]:after,
-	.button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]):after,
-	.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]):after,
-	a[class*="button"]:not([role="button"]):after,
-	a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"]):after,
-	a[role="button"][href=""]:after, a[role="button"][href$="#"]:after, a[role="button"][href^="javascript"]:after,
-	.button:not(button):not([role="button"]):not(input):after,
-	.btn:not(button):not([role="button"]):not(input):after,
-	a[class*="button"]:not([role="button"]):after,
-	a.button[class*="disabled"]:after,
-	a.btn.disabled:after, a[class*="button"][class*="disabled"]:after,
+	a:not([href]):after, a[href='']:after, a[href$='#']:after, a[href^='javascript']:after,
+	.button:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']):after,
+	.btn:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']):after,
+	a[class*='button']:not([role='button']):after,
+	a[role='button']:not([href*='/']):not([href*='.']):not([href*='?']):after,
+	a[role='button'][href='']:after, a[role='button'][href$='#']:after, a[role='button'][href^='javascript']:after,
+	.button:not(button):not([role='button']):not(input):after,
+	.btn:not(button):not([role='button']):not(input):after,
+	a[class*='button']:not([role='button']):after,
+	a.button[class*='disabled']:after,
+	a.btn.disabled:after, a[class*='button'][class*='disabled']:after,
 	form button:not([type]):after,
 	a:empty:not([aria-label]):not([aria-labelledby]):after,
 	button:empty:not([aria-label]):not([aria-labelledby]):after,
@@ -248,38 +248,38 @@
 		content: 'Do you mean for this to be a link or a <button>? It does not link to anything!';
 	}
 
-	a[href=""]:after, a[href$="#"]:after, a[href^="javascript"]:after {
+	a[href='']:after, a[href$='#']:after, a[href^='javascript']:after {
 		content: 'Do you mean for this to be a <button>? It is a link that does not go anywhere!';
 	}
 
-	.button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]):after,
-	.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]):after,
-	a[class*="button"]:not([role="button"]):after {
+	.button:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']):after,
+	.btn:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']):after,
+	a[class*='button']:not([role='button']):after {
 		content: 'If you are going to make it look like a button, make it a button, dammit!';
 	}
 
 	.button:not(a):not(button):not(input):after,
 	.btn:not(a):not(button):not(input):after {
-		content: 'You are not using a standard focusable element for your "button". Can keyboard users focus on it?';
+		content: 'You are not using a standard focusable element for your 'button'. Can keyboard users focus on it?';
 	}
 
-	a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"]):after,
-	a[role="button"][href=""]:after, a[role="button"][href$="#"]:after, a[role="button"][href^="javascript"]:after {
+	a[role='button']:not([href*='/']):not([href*='.']):not([href*='?']):after,
+	a[role='button'][href='']:after, a[role='button'][href$='#']:after, a[role='button'][href^='javascript']:after {
 		content: 'Either use a proper href fallback or just use a button element.';
 	}
 
-	a.button[class*="disabled"]:after,
+	a.button[class*='disabled']:after,
 	a.btn.disabled:after,
-	a[class*="button"][class*="disabled"]:after {
-		content: 'You cannot disable a hyperlink. Use a button element with disabled="disabled".';
+	a[class*='button'][class*='disabled']:after {
+		content: 'You cannot disable a hyperlink. Use a button element with disabled='disabled'.';
 	}
 
-	[class*="toggle"]:not([aria-pressed]) {
+	[class*='toggle']:not([aria-pressed]) {
 		content: 'If it is toggleable, you should supply an aria-pressed attribute';
 	}
 
 	form button:not([type]):after {
-		content: 'Is this a submit button, a reset button or just a button? Use type="submit", type="reset" or type="button"';
+		content: 'Is this a submit button, a reset button or just a button? Use type='submit', type='reset' or type='button'';
 	}
 
 	a:empty:not([aria-label]):not([aria-labelledby]):after,

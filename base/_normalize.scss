@@ -115,7 +115,7 @@ sub { bottom: -0.25em; }
  *    (include `-moz` to future-proof).
  */
 
-input[type="search"] {
+input[type='search'] {
 	-webkit-appearance: textfield; /* 1 */
 }
 
@@ -129,9 +129,9 @@ input[type="search"] {
  */
 
 button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'], /* 1 */
+input[type='reset'],
+input[type='submit'] {
 	-webkit-appearance: button; /* 2 */
 }
 
