@@ -178,7 +178,7 @@
  * Responsive grid classes
  */
 
-@mixin grid-responsive ($namespace: '') {
+@mixin grid-responsive($namespace: '') {
 
 	.#{$namespace}grid {
 		display: inline-block;

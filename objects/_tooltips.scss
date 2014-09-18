@@ -77,7 +77,7 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 * Mixin to set margin on tooltip using translate transform
 */
 
-@mixin tooltip-position ($tooltip-position) {
+@mixin tooltip-position($tooltip-position) {
 
 	&:before {
 		// get the arrow out

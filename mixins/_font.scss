@@ -14,7 +14,7 @@
  * twitter.com/redclov3r/status/250301539321798657
  */
 
-@mixin font-size ($font-size, $line-height:true) {
+@mixin font-size($font-size, $line-height:true) {
 	font-size: $font-size;
 
 	@if $use-rems { font-size: ($font-size / $base-font-size) * 1rem; }
@@ -32,7 +32,7 @@
  *
  */
 
-@mixin font ($font, $font-version:1, $font-file-name:$font, $font-weight:normal, $font-style:normal) {
+@mixin font($font, $font-version:1, $font-file-name:$font, $font-weight:normal, $font-style:normal) {
 
 	@font-face {
 		font-family: '#{$font}';

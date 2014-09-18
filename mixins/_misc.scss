@@ -17,7 +17,7 @@
  * @thierrylemoulec for refining and improving my initial mixin.
  */
 
-@mixin headings ($from: 1, $to: 6) {
+@mixin headings($from: 1, $to: 6) {
 
 	%base-heading {
 		@content;
@@ -46,12 +46,12 @@
  *
  */
 
-@mixin vendor ($property, $value...) {
+@mixin vendor($property, $value...) {
 	-webkit-#{$property}: $value;
-	-moz-#{$property}:    $value;
-	-ms-#{$property}:     $value;
-	-o-#{$property}:      $value;
-	#{$property}:         $value;
+	   -moz-#{$property}: $value;
+	    -ms-#{$property}: $value;
+	     -o-#{$property}: $value;
+	        #{$property}: $value;
 }
 
 
@@ -72,17 +72,17 @@
  * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
  */
 
-@mixin keyframe ($animation-name) {
+@mixin keyframe($animation-name) {
 
 	@-webkit-keyframes #{$animation-name} { @content; }
 
-	@-moz-keyframes #{$animation-name} { @content; }
+	@-moz-keyframes #{$animation-name}    { @content; }
 
-	@-ms-keyframes #{$animation-name} { @content; }
+	@-ms-keyframes #{$animation-name}     { @content; }
 
-	@-o-keyframes #{$animation-name} { @content; }
+	@-o-keyframes #{$animation-name}      { @content; }
 
-	@keyframes #{$animation-name} { @content; }
+	@keyframes #{$animation-name}         { @content; }
 
 }
 
@@ -95,7 +95,7 @@
  * Where `$truncation-boundary` is a united measurement.
  */
 
-@mixin truncate ($truncation-boundary) {
+@mixin truncate($truncation-boundary) {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
