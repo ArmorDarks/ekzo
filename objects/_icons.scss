@@ -57,7 +57,7 @@
  * Apply background to sprites by default
  */
 
-.sprite { background: url('#{$base-images-path}#{$base-sprites-file}') no-repeat; }
+.sprite { background: url(#{$base-images-path}#{$base-sprites-file}) no-repeat; }
 
 
 
