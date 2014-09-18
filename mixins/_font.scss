@@ -37,12 +37,12 @@
 	@font-face {
 		font-family: '#{$font}';
 		src: url(#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version});
-		src: url(#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version}#iefix) format('embedded-opentype'),
-			 url(#{$base-fonts-path}#{$font-file-name}.woff?#{$font-version}) format('woff'),
-			 url(#{$base-fonts-path}#{$font-file-name}.ttf?#{$font-version}) format('truetype'),
+		src: url(#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version}#iefix)    format('embedded-opentype'),
+			 url(#{$base-fonts-path}#{$font-file-name}.woff?#{$font-version})         format('woff'),
+			 url(#{$base-fonts-path}#{$font-file-name}.ttf?#{$font-version})          format('truetype'),
 			 url(#{$base-fonts-path}#{$font-file-name}.svg?#{$font-version}##{$font}) format('svg');
 		font-weight: $font-weight;
-		font-style: $font-style;
+		font-style:  $font-style;
 	}
 
 	/**
