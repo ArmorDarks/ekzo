@@ -1,4 +1,4 @@
-@if $use-flag == true {
+@if $use-flag {
 
 /*------------------------------------*\
 		$FLAG
@@ -84,4 +84,4 @@
 		margin-bottom: 0;
 	}
 
-}//endif
+} // endif

@@ -1,4 +1,4 @@
-@if $use-media == true {
+@if $use-media {
 
 /*------------------------------------*\
 		$MEDIA
@@ -60,4 +60,4 @@
 		margin-bottom: 0;
 	}
 
-} /* endif */
+} // endif

@@ -1,4 +1,4 @@
-@if $use-tables == true {
+@if $use-tables {
 
 /*------------------------------------*\
 	$TABLES
@@ -78,4 +78,4 @@ table {
 .t90    { width: 90% }
 .t95    { width: 95% }
 
-} /* endif */
+} // endif

@@ -1,4 +1,4 @@
-@if $use-grid == true {
+@if $use-grid {
 
 /*------------------------------------*\
 	$GRIDS
@@ -170,7 +170,7 @@
 	letter-spacing: normal;
 }
 
-}//endif
+} // endif
 
 
 
@@ -201,50 +201,50 @@
 
 }
 
-@if $use-grid == true {
+@if $use-grid {
 
-	@if $responsive == true {
+	@if $responsive {
 
-		@if $responsive-palm == true {
+		@if $responsive-palm {
 
 			@include media-query(palm) {
 				@include grid-responsive('palm-');
 			}
 
-		} /* endif */
+		} // endif
 
-		@if $responsive-lap == true {
+		@if $responsive-lap {
 
 			@include media-query(lap) {
 				@include grid-responsive('lap-');
 			}
 
-		} /* endif */
+		} // endif
 
-		@if $responsive-lap-and-up == true {
+		@if $responsive-lap-and-up {
 
 			@include media-query(lap-and-up) {
 				@include grid-responsive('lap-and-up-');
 			}
 
-		} /* endif */
+		} // endif
 
-		@if $responsive-portable == true {
+		@if $responsive-portable {
 
 			@include media-query(portable) {
 				@include grid-responsive('portable-');
 			}
 
-		} /* endif */
+		} // endif
 
-		@if $responsive-desk == true {
+		@if $responsive-desk {
 
 			@include media-query(desk) {
 				@include grid-responsive('desk-');
 			}
 
-		} /* endif */
+		} // endif
 
-	} /* endif */
+	} // endif
 
-} /* endif */
+} // endif

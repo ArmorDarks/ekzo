@@ -1,4 +1,4 @@
-@if $use-island == true {
+@if $use-island {
 
 /*------------------------------------*\
 		$ISLAND
@@ -43,4 +43,4 @@
 	padding: $half-spacing-unit;
 }
 
-} /* endif */
+} // endif

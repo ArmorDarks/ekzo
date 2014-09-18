@@ -1,4 +1,4 @@
-@if $debug-mode == true{
+@if $debug-mode {
 
 	/*------------------------------------*\
 		$DEBUG
@@ -290,4 +290,4 @@
 	}
 
 
-}/* endif */
+}// endif

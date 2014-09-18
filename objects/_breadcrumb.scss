@@ -1,4 +1,4 @@
-@if $use-breadcrumb == true {
+@if $use-breadcrumb {
 
 /*------------------------------------*\
 		$BREADCRUMB
@@ -31,7 +31,7 @@
 	> .breadcrumb__entry + .breadcrumb__entry:before {
 		content: '\00A0' '\2192' '\00A0' '\00A0';
 
-		@if $base-breadcrumb-separator-color != $base-font-color  {
+		@if $base-breadcrumb-separator-color != $base-font-color {
 			color: $base-breadcrumb-separator-color;
 		}
 
@@ -76,11 +76,11 @@
 
 
 /**
-* Denote the root of the tree and current state styling
-*/
+ * Denote the root of the tree and current state styling
+ */
 
 .breadcrumb__root { font-weight: $breadcrumb-root-font-weight; }
 
 .breadcrumb__current {}
 
-}//endif
+} // endif

@@ -136,7 +136,7 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 }
 
 
-@if $use-tooltips == true {
+@if $use-tooltips {
 
 	[data-tooltip] {
 
@@ -271,27 +271,19 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
  *		4) tooltip--right
  */
 
-	/**
-	 * top tooltip
-	 */
+	/* top tooltip */
 	.tooltip--top { @include tooltip-position('bottom'); }
 
-	/**
-	 * bottom tooltip
-	 */
+	/* bottom tooltip */
 
 	.tooltip--bottom { @include tooltip-position('top'); }
 
-	/**
-	 * right tooltip
-	 */
+	/* right tooltip */
 
 	.tooltip--right { @include tooltip-position('left'); }
 
-	/**
-	 * left tooltip
-	 */
+	/* left tooltip */
 
 	.tooltip--left { @include tooltip-position('right'); }
 
-} /* endif */
+} // endif

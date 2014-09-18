@@ -13,7 +13,7 @@
 * Let's make the box model all nice, shall we...?
 */
 
-@if $global-border-box == true {
+@if $global-border-box {
 
 	* {
 

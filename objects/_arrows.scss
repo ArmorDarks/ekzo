@@ -1,4 +1,4 @@
-@if $use-arrows == true {
+@if $use-arrows {
 
 /*------------------------------------*\
 	$ARROWS
@@ -147,4 +147,4 @@ $arrow:                 $arrow-size - $arrow-border;
 	}
 }
 
-}//endif
+} // endif

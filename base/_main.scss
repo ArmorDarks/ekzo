@@ -9,7 +9,7 @@ html {
 
 	overflow-y: scroll;
 
-	@if $use-rems == true {
+	@if $use-rems {
 		font: $base-font-weight #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
 	} @else {
 		font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;

@@ -1,4 +1,4 @@
-@if $use-buttons == true {
+@if $use-buttons {
 
 /*------------------------------------*\
 	$BUTTONS
@@ -55,7 +55,7 @@
 
 	&,
 	&:hover {
-		@if $base-button-unline == true {
+		@if $base-button-unline {
 			text-decoration: none;   /* [9] */
 		}
 
@@ -162,17 +162,12 @@
  * Button font-size modifiers based on headers sizes.
  */
 
-.btn--text--h1  { font-size: $h1-size; }
-
-.btn--text--h2  { font-size: $h2-size; }
-
-.btn--text--h3  { font-size: $h3-size; }
-
-.btn--text--h4  { font-size: $h4-size; }
-
-.btn--text--h5  { font-size: $h5-size; }
-
-.btn--text--h6  { font-size: $h6-size; }
+.btn--text--h1 { font-size: $h1-size; }
+.btn--text--h2 { font-size: $h2-size; }
+.btn--text--h3 { font-size: $h3-size; }
+.btn--text--h4 { font-size: $h4-size; }
+.btn--text--h5 { font-size: $h5-size; }
+.btn--text--h6 { font-size: $h6-size; }
 
 
 
@@ -219,4 +214,4 @@
 	cursor: default;            /* [1] */
 }
 
-}//endif
+} // endif

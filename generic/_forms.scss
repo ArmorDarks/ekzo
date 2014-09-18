@@ -1,4 +1,4 @@
-@if $use-forms == true {
+@if $use-forms {
 
 /*------------------------------------*\
 		$FORMS
@@ -95,4 +95,4 @@ textarea{ background-color: $base-form-bg-color; }
 
 }
 
-}//endif
+} // endif
