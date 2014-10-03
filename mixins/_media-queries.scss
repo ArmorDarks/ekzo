@@ -1,51 +1,47 @@
 
-/*------------------------------------*\
-	$MIXINS.MEDIA-QUERIES
-\*------------------------------------*/
+// =======================================
+// ^MIXINS.BREAKPOINT
+// =======================================
+//
+// Advanced media query mixin.
+// Accepts sass map of predefined breakpoints which can be used
+// across whole project.
+//
+// It's not recommend to used media-query on it's own -
+// instead it's better keep list of all available media-queries
+// in project in single sass map. Due to that fact, that mixin
+// doesn't accept custom queries in plain form.
+//
+// @param {string} $breakpoint - breakpoint name in sass map of predefined breakpoints `$breakpoints`.
+//                               Example of entry:
+//                               `lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',`
+//
+// @throws Undefined breakpoint `#{$breakpoint}` in map of breakpoints!
+//
+// @example
+//
+// 		.component {
+// 			@include breakpoint(palm){ border: 0px; }
+// 			border: 2px;
+// 		}
+//
 
+@mixin breakpoint($breakpoint) {
 
-/**
- * Media query mixin.
- *
- * It's not great practice to define solid breakpoints up-front, preferring to
- * modify your design when it needs it, rather than assuming you'll want a
- * change at 'mobile'. However, as inuit.css is required to take a hands off
- * approach to design decisions, this is the closest we can get to baked-in
- * responsiveness. It's flexible enough to allow you to set your own breakpoints
- * but solid enough to be frameworkified.
- *
- * We define some broad breakpoints in our vars file that are picked up here
- * for use in a simple media query mixin. Our options are:
- *
- * palm
- * lap
- * lap-and-up
- * portable
- * desk
- * desk-wide
- *
- * Not using a media query will, naturally, serve styles to all devices.
- *
- * `@include media-query(palm){ [styles here] }`
- *
- * We work out your end points for you:
- */
+	$breakpoint-value: '';
 
-$palm-end: $lap-start - 1px;
-$lap-end:  $desk-start - 1px;
+	// assigning value from list of breakpoints
+	@each $key, $value in $breakpoints {
+		@if $key == $breakpoint {
+			$breakpoint-value: $value;
+		}
+	}
 
-@mixin media-query($media-query) {
+	// checking wether defined breakpoint exists in list
+	@if $breakpoint-value == '' {
+		@error 'Undefined breakpoint `#{$breakpoint}` in map of breakpoints!'
+	}
 
-	@if $media-query == palm { @media only screen and (max-width: $palm-end) { @content; } }
-
-	@if $media-query == lap { @media only screen and (min-width: $lap-start) and (max-width: $lap-end) { @content; } }
-
-	@if $media-query == lap-and-up { @media only screen and (min-width: $lap-start) { @content; } }
-
-	@if $media-query == portable { @media only screen and (max-width: $lap-end) { @content; } }
-
-	@if $media-query == desk { @media only screen and (min-width: $desk-start) { @content; } }
-
-	@if $media-query == desk-wide { @media only screen and (min-width: $desk-wide-start) { @content; } }
+	@media only screen and #{$breakpoint-value} { @content; }
 
 }
