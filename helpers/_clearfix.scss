@@ -7,7 +7,8 @@
 // Extend `%clear` clearfix silent class to avoid the `%clear` class appearing over
 // and over in your markup and css bloat.
 
-#{silent(clear)} {
+%clear,
+.clear {
 
 	&:after {
 		display: table;
