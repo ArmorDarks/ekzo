@@ -1,15 +1,13 @@
 
-/*------------------------------------*\
-		$SETTING.FRAMEWORK.DEFAULTS
-\*------------------------------------*/
+// =======================================
+// ^SETTING.FRAMEWORK.DEFAULTS
+// =======================================
+//
+// Used for various framework calculations
 
+$base-spacing-unit:    $base-line-height      !default;
+$half-spacing-unit:    $base-spacing-unit / 2 !default;
+$twice-spacing-unit:   $base-spacing-unit * 2 !default;
+$triple-spacing-unit:  $base-spacing-unit * 3 !default;
 
-/**
- * Used for various framework calculations
- */
-
-$base-spacing-unit:   $base-line-height !default;
-$half-spacing-unit:   $base-spacing-unit / 2 !default;
-$twice-spacing-unit:  $base-spacing-unit * 2 !default;
-
-$line-height-ratio:   $base-line-height / $base-font-size !default;
+$line-height-ratio:    $base-line-height / $base-font-size !default;
