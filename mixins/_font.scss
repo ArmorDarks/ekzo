@@ -1,59 +1,82 @@
 
-/*------------------------------------*\
-	$MIXINS.FONT
-\*------------------------------------*/
+// =======================================
+// ^MIXINS.FONT
+// =======================================
 
 
-/**
- * Create a fully formed type style (sizing and vertical rhythm) by passing in a
- * single value, e.g.:
- *
-		@include font-size(10px);
- *
- * Thanks to @redclov3r for the `line-height` Sass:
- * twitter.com/redclov3r/status/250301539321798657
- */
+// ----
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value
+//
+// @param {value:px} $size         - desired `font-size`
+// @param {bool=true} $line-height - should line-height rhythm calculation be applied or no
+//
+// @example
+//
+//		@include font-size(10px);
+//
+// Thanks to @redclov3r for the `line-height` Sass:
+// twitter.com/redclov3r/status/250301539321798657
 
-@mixin font-size($font-size, $line-height:true) {
-	font-size: $font-size;
+@mixin font-size($size, $line-height:true) {
 
-	@if $use-rems { font-size: ($font-size / $base-font-size) * 1rem; }
+	font-size: $size;
 
-	@if $line-height { line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size); }
+	@if $use-rems {
+		font-size: ($size / $base-font-size) * 1rem;
+	}
+
+	@if $line-height {
+		line-height: ceil($size / $base-line-height) * ($base-line-height / $size);
+	}
 
 }
 
 
 
-/**
- * Fast including of custom fonts
- *
-		@include vendor(border-radius, 4px);
- *
- */
+// ----
+// Bulding proper font-face based on provided parameters
+//
+// @param {string} $font                  - font name
+// @param {value=1} $version              - font version. Ensure reloading of cache in
+//                                          case of any changes in font file
+// @param {string=$font} $file-name       - should be specified in case of different
+//                                          font file name from font name
+// @param {value|string=normal} $weight   - `font-weight` of font-face
+// @param {string=normal} $style          - `font-style` of font-face
+// @param {string=$file-name} $svg-id     - should be specified in case it's different
+//                                          from font file name
+//                                          (can be found in `svg-file -> <font> -> id`)
+//
+// @example
+//
+//		@include font (Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, $svg-id: helvId );
+//
 
-@mixin font($font, $font-version:1, $font-file-name:$font, $font-weight:normal, $font-style:normal) {
+@mixin font($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg-id:$file-name) {
 
 	@font-face {
 		font-family: '#{$font}';
-		src: url(#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version});
-		src: url(#{$base-fonts-path}#{$font-file-name}.eot?#{$font-version}#iefix)    format('embedded-opentype'),
-			 url(#{$base-fonts-path}#{$font-file-name}.woff?#{$font-version})         format('woff'),
-			 url(#{$base-fonts-path}#{$font-file-name}.ttf?#{$font-version})          format('truetype'),
-			 url(#{$base-fonts-path}#{$font-file-name}.svg?#{$font-version}##{$font}) format('svg');
-		font-weight: $font-weight;
-		font-style:  $font-style;
+
+		src: url(#{$base-fonts-path}#{$file-name}.eot?#{$version});
+		src: url(#{$base-fonts-path}#{$file-name}.eot?#{$version}#iefix)      format('embedded-opentype'),
+			 url(#{$base-fonts-path}#{$file-name}.woff?#{$version})           format('woff'),
+			 url(#{$base-fonts-path}#{$file-name}.ttf?#{$version})            format('truetype'),
+			 url(#{$base-fonts-path}#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+
+		font-weight: $weight;
+		font-style:  $style;
 	}
 
-	/**
-	 * Serving SVG font at first specially for Chrome to make it smoother
-	 */
+	// Serving SVG font at first specially for Chrome to make it smoother
+	//
+	// @note Disabled because seems latest versions of Chrome doesn't have such issue
 
-	@media screen and (-webkit-min-device-pixel-ratio: 0) {
-		@font-face {
-			font-family: '#{$font}';
-			src: url(#{$base-fonts-path}#{$font-file-name}.svg?#{$font-version}##{$font}) format('svg');
-		}
-	}
+	// @media screen and (-webkit-min-device-pixel-ratio: 0) {
+	// 	@font-face {
+	// 		font-family: '#{$font}';
+	// 		src: url(#{$base-fonts-path}#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+	// 	}
+	// }
 
 }
