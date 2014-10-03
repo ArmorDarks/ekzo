@@ -58,7 +58,7 @@
 /*ul*/.multi-list {
 	list-style:none;
 	margin-left:0;
-	@extend .clear;
+	@extend %clear;
 
 	> li {
 			float: left;
