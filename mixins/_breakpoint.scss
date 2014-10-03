@@ -42,6 +42,6 @@
 		@error 'Undefined breakpoint `#{$breakpoint}` in map of breakpoints!'
 	}
 
-	@media only screen and #{$breakpoint-value} { @content; }
+	@media only #{$breakpoint-value} { @content; }
 
 }
