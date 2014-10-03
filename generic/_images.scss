@@ -5,7 +5,7 @@
 
 
 /**
- * Fluid images.
+ * Fluid images for responsive purposes.
  */
 
 img { max-width: 100%; }
@@ -13,7 +13,8 @@ img { max-width: 100%; }
 
 
 /**
- * Non-fluid images if you specify `width` and/or `height` attributes.
+ * If a `width` and/or `height` attribute have been explicitly defined, let’s
+ * not make the image fluid.
  */
 
 img[width],
