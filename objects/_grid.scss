@@ -1,113 +1,76 @@
 @if $use-grid {
 
-/*------------------------------------*\
-	$GRIDS
-\*------------------------------------*/
+// =======================================
+// ^GRIDS
+// =======================================
+//
+// Fluid and nestable grid system, e.g.:
+//
+// @example
+//
+//		<div class="grid">
+//
+//			<div class="grid__item 1/3">
+//				<p>One third grid</p>
+//			</div>
+//			<div class="grid__item 2/2">
+//				<p>Two thirds grid</p>
+//			</div>
+//			<div class="grid__item 1/2">
+//				<p>One half grid</p>
+//			</div>
+//			<div class="grid__item 1/4">
+//				<p>One quarter grid</p>
+//			</div>
+//			<div class="grid__item 1/4">
+//				<p>One quarter grid</p>
+//			</div>
+//
+//		</div>
+//
+// @demo: jsfiddle.net/inuitcss/CLYUC
 
-/**
- * Fluid and nestable grid system, e.g.:
- *
-		<div class="grid">
 
-			<div class="grid__item  one-third">
-				<p>One third grid</p>
-			</div>
-			<div class="grid__item  two-thirds">
-				<p>Two thirds grid</p>
-			</div>
-			<div class="grid__item  one-half">
-				<p>One half grid</p>
-			</div>
-			<div class="grid__item  one-quarter">
-				<p>One quarter grid</p>
-			</div>
-			<div class="grid__item  one-quarter">
-				<p>One quarter grid</p>
-			</div>
-
-		</div>
- *
- * Demo: jsfiddle.net/inuitcss/CLYUC
- *
- */
-
-
-/**
- * Grid wrapper
- */
+// ---------------------------------------
+// Grid
+// ---------------------------------------
+//
+// 1. Positioning gutter in the center
+// 2. For usage of the grid on lists
 
 .grid {
-	margin-left: -$base-spacing-unit;
-	list-style: none; // if you're going to use grid on lists
-	margin-bottom: 0; // if you're going to use grid on lists
+	list-style: none; // 2
+
+	margin-bottom: 0; // 2
+	margin-left:   -$base-spacing-unit; // 1
 
 	@extend %clear;
 }
 
 	.grid__item {
 		display: inline-block;
-		padding-left: $base-spacing-unit;
+		@include vendor(box-sizing, border-box);
+
 		vertical-align: top;
 
-		@include vendor(box-sizing, border-box);
+		padding-left: $base-spacing-unit; // 1
 	}
 
 
-.grid--half {
-	margin-left: -$half-spacing-unit;
+// -----
+// Very infrequently occurring grid wrappers as children of grid wrappers.
 
-	> .grid__item {
-		padding-left: $half-spacing-unit;
-	}
-
-}
+.grid > .grid { margin-left: 0; }
 
 
-.grid--wide {
-	margin-left: -$twice-spacing-unit;
 
-	> .grid__item {
-		padding-left: $twice-spacing-unit;
-	}
-
-}
-
-
-.grid--wider {
-	margin-left: -$base-spacing-unit * 3;
-
-	> .grid__item {
-		padding-left: $base-spacing-unit * 3;
-	}
-
-}
-
-
-.grid--full {
-	margin-left: 0;
-
-	> .grid__item {
-		padding-left: 0;
-	}
-
-}
-
-
-.grid--center {
-	text-align: center;
-
-	> .grid__item {
-		text-align: left;
-	}
-
-}
-
-
-/**
- * Throws grid in flag mode
- * In that mode grid behaves like table and it's content
- * centred vertically
- */
+// ---------------------------------------
+// Flag Grid
+// ---------------------------------------
+//
+// Throws grid in flag mode
+// In that mode grid behaves like table and it's content
+// centred vertically
 
 .grid--flag {
 	display: table;
@@ -120,67 +83,47 @@
 }
 
 
-/**
- * Extends .grid--flag
- * Centrers content bottom
- */
+// -----
+// Centrers content bottom
+//
+// @extends .grid--flag
 
-.grid--flag--bottom {
-
-	> .grid__item { vertical-align: bottom; }
-
-}
-
-
-/**
- * Very infrequently occurring grid wrappers as children of grid wrappers.
- */
-
-.grid > .grid {
-	margin-left: 0;
-}
+.grid--flag--bottom { > .grid__item { vertical-align: bottom; } }
 
 
 
-/**
- * Grid's inline-blocks whitespace fix
- */
+// ---------------------------------------
+// Grid fixes
+// ---------------------------------------
 
-.grid {
-	letter-spacing: -0.31em;
-}
+// -----
+// Grid's inline-blocks whitespace fix
 
-/* Opera hack */
-
+.grid { letter-spacing: -0.31em; }
+// Opera hack
 .opera:-o-prefocus,
-.grid {
-	word-spacing: -0.43em;
-}
+.grid { word-spacing: -0.43em; }
 
 	.grid__item {
 		letter-spacing: normal;
 		word-spacing: normal;
 	}
 
+// -----
+// Used to fix strange behaviour in Firefox on inline-grids
 
-
-/* Used to fix strange behaviour in Firefox on inline-grids */
-
-.grid--nofix {
-	letter-spacing: normal;
-}
+.grid--nofix { letter-spacing: normal; }
 
 } // endif
 
 
 
-/**
- * Responsive grid classes
- */
+// -----
+// Grid types
 
-@mixin grid-responsive($namespace: '') {
+@mixin grid-types($namespace: '') {
 
-	.#{$namespace}grid {
+	.#{$namespace}grid--reset {
 		display: inline-block;
 
 		> .grid__item {
@@ -190,61 +133,53 @@
 
 	}
 
+	.#{$namespace}grid--half {
+		margin-left: -$half-spacing-unit;
+
+		> .grid__item { padding-left: $half-spacing-unit; }
+
+	}
+
+	.#{$namespace}grid--wide {
+		margin-left: -$twice-spacing-unit;
+
+		> .grid__item { padding-left: $twice-spacing-unit; }
+
+	}
+
+	.#{$namespace}grid--wider {
+		margin-left: -$base-spacing-unit * 3;
+
+		> .grid__item { padding-left: $base-spacing-unit * 3; }
+
+	}
+
 	.#{$namespace}grid--full {
 		margin-left: 0;
 
-		> .grid__item {
-			padding-left: 0;
-		}
+		> .grid__item { padding-left: 0; }
+
+	}
+
+	.#{$namespace}grid--center {
+		text-align: center;
+
+		> .grid__item { text-align: left; }
 
 	}
 
 }
 
-@if $use-grid {
+@include grid-types();
 
+@if $use-grid {
 	@if $responsive {
 
-		@if $responsive-palm {
-
-			@include media-query(palm) {
-				@include grid-responsive('palm-');
+		@each $breakpoint, $value in $breakpoints {
+			@include breakpoint($breakpoint) {
+				@include grid-types('#{$breakpoint}-');
 			}
-
-		} // endif
-
-		@if $responsive-lap {
-
-			@include media-query(lap) {
-				@include grid-responsive('lap-');
-			}
-
-		} // endif
-
-		@if $responsive-lap-and-up {
-
-			@include media-query(lap-and-up) {
-				@include grid-responsive('lap-and-up-');
-			}
-
-		} // endif
-
-		@if $responsive-portable {
-
-			@include media-query(portable) {
-				@include grid-responsive('portable-');
-			}
-
-		} // endif
-
-		@if $responsive-desk {
-
-			@include media-query(desk) {
-				@include grid-responsive('desk-');
-			}
-
-		} // endif
+		}
 
 	} // endif
-
 } // endif
