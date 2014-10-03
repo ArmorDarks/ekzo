@@ -56,3 +56,22 @@ a,
 	}
 
 }
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+		<a href=# class="link--go">Read more</a>
+ *
+ */
+
+.link--go:after { content:'\00A0' '\00BB' !important; }
+
+
+/**
+ * Add a left-angled quote to links that imply backwards movement, e.g.:
+ *
+		<a href=# class="link--back">Go back</a>
+ *
+ */
+
+.link--back:before { content:'\00AB' '\00A0' !important; }
