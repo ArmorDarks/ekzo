@@ -55,6 +55,24 @@
 }
 
 
+/**
+ * Create vendor-prefixed CSS for placeholders in one go, e.g.
+ *
+		@include placeholder() {
+			color: #fff;
+			background-color: #000;
+		}
+ *
+ */
+
+@mixin placeholder() {
+	::-webkit-input-placeholder { @content }
+			  :-moz-placeholder { @content }
+			 ::-moz-placeholder { @content }
+		 :-ms-input-placeholder { @content }
+}
+
+
 
 /**
  * Create CSS keyframe animations for all vendors in one go, e.g.:
