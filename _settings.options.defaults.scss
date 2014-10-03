@@ -31,39 +31,6 @@ $global-border-box: false !default;
 
 
 /*------------------------------------*\
-		$RESPONSIVE
-\*------------------------------------*/
-
-/**
- * Responsiveness?
- */
-
-$responsive:            true !default;
-
-$responsive-palm:       true !default;
-$responsive-lap:        true !default;
-$responsive-lap-and-up: true !default;
-$responsive-portable:   true !default;
-$responsive-desk:       true !default;
-
-/**
- * Responsiveness for widescreen/high resolution desktop monitors and beyond?
- * Note: `$responsive` variable above must be set to true before enabling this.
- */
-
-$responsive-desk-wide:  false !default;
-
-/**
- * Tell inuit.css when breakpoints start.
- */
-
-$lap-start:         481px  !default;
-$desk-start:        1024px !default;
-$desk-wide-start:   1200px !default;
-
-
-
-/*------------------------------------*\
 	$ELEMENTS AND ABSTRACTIONS
 \*------------------------------------*/
 
@@ -121,3 +88,13 @@ $base-links-hover-colored:   true !default;
  */
 
 $base-button-unline:        true !default;
+
+
+
+
+
+/**
+ * Enable rems
+ */
+
+$use-rems:              false !default;

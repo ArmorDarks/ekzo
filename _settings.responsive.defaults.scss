@@ -1,0 +1,31 @@
+
+/*------------------------------------*\
+		$SETTING.RESPONSIVE.DEFAULTS
+\*------------------------------------*/
+
+/**
+ * Responsiveness?
+ */
+
+$responsive:            true !default;
+
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+
+$lap:         481px  !default;
+$desk:        1024px !default;
+$desk-wide:   1200px !default;
+
+$breakpoints: (
+	palm:       'screen and (max-width: #{$lap - 1px})',
+	lap:        'screen and (min-width: #{$lap}) and (max-width: #{$desk - 1px})',
+	lap-and-up: 'screen and (min-width: #{$lap})',
+	portable:   'screen and (max-width: #{$desk - 1px})',
+	desk:       'screen and (min-width: #{$desk})',
+	desk-wide:  'screen and (min-width: #{$desk-wide})',
+) !default;
+
+// If we have included this file, set a variable to tell the rest of the
+// framework that we have some responsive settings.
+// $inuit-responsive-settings: true;
