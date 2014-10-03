@@ -1,16 +1,13 @@
 
-/*------------------------------------*\
-		$HELPERS.CLEARFIX
-\*------------------------------------*/
+// =======================================
+// ^HELPERS.CLEARFIX
+// =======================================
+//
+// Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+// Extend `%clear` clearfix silent class to avoid the `.clear` class appearing over
+// and over in your markup and css bloat.
 
-/**
- * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
- * Extend the clearfix class with Sass to avoid the `.clear` class appearing over
- * and over in your markup.
- */
-
-%clear,
-.clear {
+#{silent(clear)} {
 
 	&:after {
 		display: table;
