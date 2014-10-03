@@ -15,15 +15,15 @@
  * Base elements
  */
 
-h1,h2,h3,h4,h5,h6,hgroup,
-ul,ol,dl,
-blockquote,p,address,
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
 table,
-fieldset,figure,
+fieldset, figure,
 pre,
-%sass-margin-bottom,
-.media,.flag,
-.island,.islet {
+%base-margin--bottom,
+.media, .flag,
+.island, .islet {
 	margin-bottom: $base-spacing-unit;
 
 	.islet & {
@@ -50,6 +50,7 @@ hr {
  * by a consistent amount. Define that amount once, here.
  */
 
-ul,ol,dd {
+ul,ol,dd,
+%base-margin--left {
 	margin-left: $twice-spacing-unit;
 }
