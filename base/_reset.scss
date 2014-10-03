@@ -5,11 +5,10 @@
 //
 // A more considered reset; more of a restart...
 // As per: csswizardry.com/2011/10/reset-restarted
-//
 
 
 // ----
-// Let's make the box model all nice, shall we...?
+// Set default box-sizing to `border-box`
 //
 // Usage of `inherit` allows to override that parameter
 // in components easier.
@@ -45,13 +44,34 @@
 // ----
 // The usual...
 
-h1,h2,h3,h4,h5,h6,
-p,blockquote,pre,
-dl,dd,ol,ul,
-form,fieldset,legend,
-table,th,td,caption,
-hr, body, input, textarea,
-select, button, a, img {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+table,
+th,
+td,
+caption,
+hr,
+body,
+input,
+textarea,
+select,
+button,
+a,
+img {
 	margin:  0;
 	padding: 0;
 }
@@ -133,15 +153,3 @@ textarea:focus {
 	cursor: text;
 	outline: none;
 }
-
-
-
-// ----
-// Remove the gap between images, videos, audio and canvas and the bottom of
-// their containers: h5bp.com/i/440
-
-img,
-svg,
-audio,
-canvas,
-video { vertical-align: middle; }
