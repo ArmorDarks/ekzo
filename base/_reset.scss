@@ -92,9 +92,9 @@ img { outline: none; }
 // 3. Allow only vertical resizing of textareas
 
 textarea {
-	overflow: auto; // 1
+	overflow: auto;      // 1
 	vertical-align: top; // 2
-	resize: vertical; // 3
+	resize: vertical;    // 3
 }
 
 
