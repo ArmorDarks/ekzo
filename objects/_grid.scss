@@ -41,7 +41,7 @@
 	list-style: none; // if you're going to use grid on lists
 	margin-bottom: 0; // if you're going to use grid on lists
 
-	@extend .clear;
+	@extend %clear;
 }
 
 	.grid__item {

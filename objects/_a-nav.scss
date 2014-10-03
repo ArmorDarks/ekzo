@@ -38,7 +38,7 @@
 
 .a-stacked-nav {
 
-	@extend .clear;
+	@extend %clear;
 
 	> a {
 		float: left;

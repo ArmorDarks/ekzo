@@ -27,7 +27,7 @@
 	// block or inline-block element.
 	// display: block;
 
-	@extend .clear;
+	@extend %clear;
 }
 
 

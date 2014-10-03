@@ -20,7 +20,7 @@
 .island,
 .islet {
 	display: block;
-	@extend .clear;
+	@extend %clear;
 
 	> :last-child,
 	> :last-child {

@@ -4,7 +4,7 @@
 // =======================================
 //
 // Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
-// Extend `%clear` clearfix silent class to avoid the `.clear` class appearing over
+// Extend `%clear` clearfix silent class to avoid the `%clear` class appearing over
 // and over in your markup and css bloat.
 
 #{silent(clear)} {
