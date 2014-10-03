@@ -1,0 +1,35 @@
+
+// =======================================
+// ^BOX-SIZING
+// =======================================
+//
+// Set the global `box-sizing` state to `border-box`
+//
+// Usage of `inherit` allows to override that parameter
+// in components easier.
+//
+// In result, instead of
+//
+//		.component { @include vendor(box-sizing, content-box);
+//
+//			*,
+//			*:before,
+//			*:after { @include vendor(box-sizing, content-box) }
+//
+//		}
+//
+// to override we can specify simply
+//
+//		.component { @include vendor(box-sizing, content-box); }
+//
+// @details http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+@if $global-border-box {
+
+	html { @include vendor(box-sizing, border-box); }
+
+	*,
+	*:before,
+	*:after { @include vendor(box-sizing, inherit); }
+
+}
