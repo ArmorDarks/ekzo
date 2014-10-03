@@ -1,16 +1,16 @@
 
-/*------------------------------------*\
-		$FRAMEWORK
-\*------------------------------------*/
+// =======================================
+// ^FRAMEWORK
+// =======================================
+//
+// Ekzo.sass framework - https://github.com/ArmorDarks/ekzo.sass
+// Version: 1.19.1
+//
 
 
-/*!
- * Ekzo.sass framework - https://github.com/ArmorDarks/ekzo.sass
- * Version: 1.19.1
- */
-
-
-/* Default options, styles, colors etc */
+// ---------------------------------------
+// Default options, styles, colors etc
+// ---------------------------------------
 
 @import 'settings.fonts.defaults';
 @import 'settings.framework.defaults';
@@ -19,7 +19,9 @@
 @import 'settings.options.defaults';
 
 
-/* Mixins */
+// ---------------------------------------
+// Mixins
+// ---------------------------------------
 
 @import './mixins/arrows';
 @import './mixins/typography';
@@ -27,7 +29,9 @@
 @import './mixins/misc';
 
 
-/* Base styles */
+// ---------------------------------------
+// Base styles
+// ---------------------------------------
 
 @import './base/normalize';
 @import './base/reset';
@@ -37,7 +41,9 @@
 @import './base/debug';
 
 
-/* Generic. Mostly unclassed HTML elements */
+// ---------------------------------------
+// Generic. Mostly unclassed HTML elements
+// ---------------------------------------
 
 @import './generic/shared';
 
@@ -50,7 +56,9 @@
 @import './generic/texts';
 
 
-/* Helpers */
+// ---------------------------------------
+// Helpers
+// ---------------------------------------
 
 @import './helpers/clearfix';
 @import './helpers/misc';
@@ -58,7 +66,9 @@
 @import './helpers/widths';
 
 
-/* Objects and abstractions */
+// ---------------------------------------
+// Objects and abstractions
+// ---------------------------------------
 
 @import './objects/a-nav';
 @import './objects/arrows';
