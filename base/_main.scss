@@ -1,19 +1,24 @@
 
-/*------------------------------------*\
-		$MAIN
-\*------------------------------------*/
-
+// =======================================
+// ^MAIN
+// =======================================
 
 html {
 	height: 100%;
 
 	overflow-y: scroll;
 
+	font-family: $base-font-family;
+
 	@if $use-rems {
-		font: $base-font-weight #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+		font-size:   #{($base-font-size/16px)*1em};
+		line-height: #{$line-height-ratio};
 	} @else {
-		font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+		font-size:   $base-font-size;
+		line-height: $base-line-height;
 	}
+
+	font-weight: $base-font-weight;
 
 	color: $base-font-color;
 
