@@ -1,44 +1,61 @@
 
-/*------------------------------------*\
-		$NORMALIZE
-\*------------------------------------*/
-
-/**
- * Basic normalization
- */
+// =======================================
+// *NORMALIZE
+// =======================================
 
 
-/**
- * Correct `block` display not defined in IE 8/9.
- */
+// ---------------------------------------
+// HTML5 display definitions
+// ---------------------------------------
 
-header,
-nav,
-main,
-section,
+// ----
+// Correct `block` display not defined for any HTML5 element in IE 8/9.
+// Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+// Correct `block` display not defined for `main` in IE 11.
+
 article,
-footer {
-	display: block;
-}
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary { display: block; }
 
 
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
+// ----
+// Correct `inline-block` display not defined in IE 8/9.
 
 audio,
 canvas,
-video {
-	display: inline-block;
-}
+progress,
+video { display: inline-block; }
 
 
+// ----
+// Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
+progress { vertical-align: baseline; }
+
+
+// ----
+// Remove the gap between images, videos, audio and canvas and the bottom of
+// their containers: h5bp.com/i/440
+
+img,
+svg,
+audio,
+canvas,
+video { vertical-align: middle; }
+
+
+// ----
+// Prevent modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
 
 audio:not([controls]) {
 	display: none;
@@ -46,55 +63,57 @@ audio:not([controls]) {
 }
 
 
+// ----
+// Address `[hidden]` styling not present in IE 8/9/10.
+// Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
 
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
+[hidden],
+template { display: none; }
+
+
+
+
+
+// ---------------------------------------
+// Links
+// ---------------------------------------
+
+// ----
+// Remove the gray background color from active links in IE 10.
+
+a { background: transparent; }
+
+
+// ----
+// Improve readability when focused and also mouse hovered in all browsers.
+
+a:active,
+a:hover { outline: 0; }
+
+
+
+
+
+// ---------------------------------------
+// Text-level semantics
+// ---------------------------------------
+
+// ----
+// Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
 
 b,
-strong {
-	font-weight: bold;
-}
+strong { font-weight: bold; }
+
+
+// ----
+// Address inconsistent and variable font size in all browsers.
+
+small { font-size: 80%; }
 
 
 
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, serif;
-	font-size: 1em;
-}
-
-
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-
-pre {
-	white-space: pre-wrap;
-}
-
-
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-
-small {
-	font-size: 80%;
-}
-
-
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
+// ----
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
 
 sub,
 sup {
@@ -110,38 +129,114 @@ sub { bottom: -0.25em; }
 
 
 
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- *    (include `-moz` to future-proof).
- */
 
-input[type='search'] {
-	-webkit-appearance: textfield; /* 1 */
+
+// ---------------------------------------
+// Embedded content
+// ---------------------------------------
+
+// ----
+// Correct overflow not hidden in IE 9/10/11.
+
+svg:not(:root) { overflow: hidden; }
+
+
+
+
+
+// ---------------------------------------
+// Grouping content
+// ---------------------------------------
+
+// ----
+// Address differences between Firefox and other browsers.
+
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+
+
+// ----
+// 1. Contain overflow in all browsers.
+// 2. Improve readability of pre-formatted text in all browsers.
+
+pre {
+	overflow: auto; // 1
+	// white-space: pre-wrap; // 2
+}
+
+
+// ----
+// 1. Corrects font family set
+// 2. Address odd `em`-unit font size rendering in all browsers.
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace; // 1
+	font-size: 1em; // 2
 }
 
 
 
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- *    `input` and others.
- */
+
+
+// ---------------------------------------
+// Forms
+// ---------------------------------------
+//
+// Known limitation: by default, Chrome and Safari on OS X allow very limited
+// styling of `select`, unless a `border` property is set.
+
+// ----
+// 1. Correct color not being inherited.
+//    Known issue: affects color of disabled elements.
+// 2. Correct font properties not being inherited.
+// 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
 
 button,
-html input[type='button'], /* 1 */
+input,
+optgroup,
+select,
+textarea {
+	color: inherit; // 1
+	font: inherit; // 2
+	margin: 0; // 3
+}
+
+
+// ----
+// Address `overflow` set to `hidden` in IE 8/9/10/11.
+
+button { overflow: visible; }
+
+
+// ----
+// Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+// (include `-moz` to future-proof).
+
+input[type='search'] { -webkit-appearance: textfield; }
+
+
+// ----
+// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+//    and `video` controls.
+// 2. Correct inability to style clickable `input` types in iOS.
+//    `input` and others.
+
+button,
+html input[type='button'], // 1
 input[type='reset'],
 input[type='submit'] {
-	-webkit-appearance: button; /* 2 */
+	-webkit-appearance: button; // 2
 }
 
 
-
-/**
- * Re-set default cursor for disabled elements.
- */
+// ----
+// Re-set default cursor for disabled elements.
 
 button[disabled],
-html input[disabled] {
-	cursor: default;
-}
+html input[disabled] { cursor: default; }
