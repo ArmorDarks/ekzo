@@ -5,11 +5,13 @@
 \*------------------------------------*/
 
 
-::-webkit-input-placeholder { color: $base-form-placeholder-color; font: $form-placeholder-font-style $base-form-font-size $base-form-font-family; }
-		  :-moz-placeholder { color: $base-form-placeholder-color; font: $form-placeholder-font-style $base-form-font-size $base-form-font-family; }
-		 ::-moz-placeholder { color: $base-form-placeholder-color; font: $form-placeholder-font-style $base-form-font-size $base-form-font-family; }
-	 :-ms-input-placeholder { color: $base-form-placeholder-color; font: $form-placeholder-font-style $base-form-font-size $base-form-font-family; }
+@include placeholder() {
+	font-family: $base-form-font-family;
+	font-size: $base-form-font-size;
+	font-style: $form-placeholder-font-style;
 
+	color: $base-form-placeholder-color;
+}
 
 
 fieldset + fieldset {
