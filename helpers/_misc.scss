@@ -40,10 +40,10 @@
 
 }
 
-.align--right         { text-align: right  !important; }
+.align--right         { text-align: right   !important; }
 .align--justify > p   { text-align: justify !important; }
 
-.align--top           { vertical-align: top   !important; }
+.align--top           { vertical-align: top    !important; }
 .align--middle        { vertical-align: middle !important; }
 .align--bottom        { vertical-align: bottom !important; }
 
@@ -128,9 +128,9 @@
  * Display styling
  */
 
-.display--inline { display: inline; }
+.display--inline       { display: inline; }
 .display--inline-block { display: inline-block; }
-.display--block  { display: block; }
+.display--block        { display: block; }
 
 
 /**
@@ -138,7 +138,7 @@
  * `:hover`.
  */
 
-.cursor--help    { cursor: help   !important; }
+.cursor--help    { cursor: help    !important; }
 .cursor--arrow   { cursor: default !important; }
 .cursor--pointer { cursor: pointer !important;}
 
@@ -148,31 +148,7 @@
  * Mute an object by reducing its opacity.
  */
 
-.muted {
-	opacity: 0.5 !important;
-	filter:  alpha(opacity = 50) !important;
-}
-
-
-
-/**
- * Add a right-angled quote to links that imply movement, e.g.:
- *
-		<a href=# class="link--go">Read more</a>
- *
- */
-
-.link--go:after { content:'\00A0' '\00BB' !important; }
-
-
-/**
- * Add a left-angled quote to links that imply backwards movement, e.g.:
- *
-		<a href=# class="link--back">Go back</a>
- *
- */
-
-.link--back:before { content:'\00AB' '\00A0' !important; }
+.muted { opacity: 0.5 !important; }
 
 
 
@@ -182,14 +158,36 @@
 
 .display--none { display: none; }
 
-.hide {
-	position: absolute !important;
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
 
-	top:  -9999px !important;
-	left: -9999px !important;
+.visibility--hidden { visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+
+.hide {
+	position: absolute;
+
+	width:  1px;
+	height: 1px;
+
+	margin:  -1px;
+	padding: 0;
+
+	clip: rect(0 0 0 0);
+
+	overflow: hidden;
+
+	border: 0;
 }
 
-.text--hidden { text-indent: -9999px; }
+.text--hidden {
+	text-indent: -9999px;
+	text-align: left;
+}
 
 
 
@@ -225,11 +223,8 @@
 
 
 /**
- * Apply box-sizing model
+ * Apply box-sizing models
  */
 
-.border-box {
-	-webkit-box-sizing: border-box;
-		 -moz-box-sizing: border-box;
-					box-sizing: border-box;
-}
+.border-box  { @include vendor(box-sizing, border-box); }
+.content-box { @include vendor(box-sizing, content-box); }
