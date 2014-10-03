@@ -2,15 +2,23 @@
 // =======================================
 // ^MAIN
 // =======================================
+//
+// 1. Ensure the page always fills at least the entire height of the viewport.
+// 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+//    navigating between pages that do/do not have enough content to produce
+//    scrollbars naturally.
+// 3. Set the default font parameters for the entire project
+// 4. Fonts on OSX will look more consistent with other systems that do not
+//    render text using sub-pixel anti-aliasing.
 
 html {
-	height: 100%;
+	height: 100%; // 1
 
-	overflow-y: scroll;
+	overflow-y: scroll; // 2
 
-	font-family: $base-font-family;
+	font-family: $base-font-family; // 3
 
-	@if $use-rems {
+	@if $use-rems { // 3
 		font-size:   #{($base-font-size/16px)*1em};
 		line-height: #{$line-height-ratio};
 	} @else {
@@ -18,11 +26,14 @@ html {
 		line-height: $base-line-height;
 	}
 
-	font-weight: $base-font-weight;
+	font-weight: $base-font-weight; // 3
 
-	color: $base-font-color;
+	color: $base-font-color; // 3
 
 	background: #{$base-bg};
+
+	-moz-osx-font-smoothing: grayscale;   // 4
+	 -webkit-font-smoothing: antialiased; // 4
 }
 
 body {}
