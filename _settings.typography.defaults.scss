@@ -9,40 +9,15 @@
  */
 
 $base-font-size:        14px !default;
-
-
-/**
- * Base line-height
- * Usually proportion is about 1.5 of base font size
- */
-
 $base-line-height:      $base-font-size * 1.5 !default;
 
-
 /**
- * Base font-family
+ * Font famylies
  */
 
 $base-font-family:      sans-serif !default;
-
-/**
- * Second font-family
- */
-
 $second-font-family:    sans-serif !default;
-
-
-/**
- * Headers font-family
- */
-
 $headings-font-family:  $second-font-family !default;
-
-
-/**
- * Forms font-family (and weight, if needed)
- */
-
 $base-form-font-family: $base-font-family !default;
 
 
@@ -51,11 +26,8 @@ $base-form-font-family: $base-font-family !default;
  */
 
 $base-font-weight:            normal !default;
-
 $headings-font-weight:        normal !default;
-
 $form-placeholder-font-style: italic !default;
-
 $breadcrumb-root-font-weight: bold !default;
 
 
@@ -89,10 +61,3 @@ $text-micro-size:        10px !default;
  */
 
 $base-form-font-size:   $h5-size !default;
-
-
-/**
- * Enable rems
- */
-
-$use-rems:              false !default;
