@@ -43,8 +43,6 @@
 
 	margin-bottom: 0; // 2
 	margin-left:   -$base-spacing-unit; // 1
-
-	@extend %clear;
 }
 
 	.grid__item {
@@ -83,14 +81,6 @@
 }
 
 
-// -----
-// Centrers content bottom
-//
-// @extends .grid--flag
-
-.grid--flag--bottom { > .grid__item { vertical-align: bottom; } }
-
-
 
 // ---------------------------------------
 // Grid fixes
@@ -118,11 +108,13 @@
 
 
 
-// -----
+// ---------------------------------------
 // Grid types
+// ---------------------------------------
 
 @mixin grid-types($namespace: '') {
 
+	// @todo Check do we need it
 	.#{$namespace}grid--reset {
 		display: inline-block;
 
@@ -133,6 +125,17 @@
 
 	}
 
+	.#{$namespace}grid--flush {
+		margin-left: 0;
+
+		> .grid__item { padding-left:0; }
+
+	}
+
+
+	// ----
+	// Grid gutter sizes
+
 	.#{$namespace}grid--half {
 		margin-left: -$half-spacing-unit;
 
@@ -140,17 +143,17 @@
 
 	}
 
-	.#{$namespace}grid--wide {
+	.#{$namespace}grid--double {
 		margin-left: -$twice-spacing-unit;
 
 		> .grid__item { padding-left: $twice-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid--wider {
-		margin-left: -$base-spacing-unit * 3;
+	.#{$namespace}grid--triple {
+		margin-left: -$triple-spacing-unit;
 
-		> .grid__item { padding-left: $base-spacing-unit * 3; }
+		> .grid__item { padding-left: $triple-spacing-unit; }
 
 	}
 
@@ -161,10 +164,36 @@
 
 	}
 
+
+	// ----
+	// Grid items aligment
+
 	.#{$namespace}grid--center {
 		text-align: center;
 
 		> .grid__item { text-align: left; }
+
+	}
+
+	.#{$namespace}grid--middle {
+
+		> .grid__item { vertical-align: middle; }
+
+	}
+
+	.#{$namespace}grid--bottom {
+
+		> .grid__item { vertical-align: bottom; }
+
+	}
+
+
+	// ----
+	// Grid items widths
+
+	.#{$namespace}grid--auto {
+
+		> .grid__item { width: auto;; }
 
 	}
 
