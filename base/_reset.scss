@@ -1,37 +1,49 @@
 
-/*------------------------------------*\
-	$RESET
-\*------------------------------------*/
+// =======================================
+// ^RESET
+// =======================================
+//
+// A more considered reset; more of a restart...
+// As per: csswizardry.com/2011/10/reset-restarted
+//
 
-/**
- * A more considered reset; more of a restart...
- * As per: csswizardry.com/2011/10/reset-restarted
- */
 
-
-/**
-* Let's make the box model all nice, shall we...?
-*/
+// ----
+// Let's make the box model all nice, shall we...?
+//
+// Usage of `inherit` allows to override that parameter
+// in components easier.
+//
+// In result, instead of
+//
+//		.component { @include vendor(box-sizing, content-box);
+//
+//			*,
+//			*:before,
+//			*:after { @include vendor(box-sizing, content-box) }
+//
+//		}
+//
+// to override we can specify simply
+//
+//		.component { @include vendor(box-sizing, content-box); }
+//
+// @details http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
 @if $global-border-box {
 
-	* {
+	html { @include vendor(box-sizing, border-box); }
 
-			&,
-			&:before,
-			&:after {
-				@include vendor(box-sizing, border-box);
-			}
-
-	}
+	*,
+	*:before,
+	*:after { @include vendor(box-sizing, inherit); }
 
 }
 
 
 
-/**
- * The usual...
- */
+// ----
+// The usual...
 
 h1,h2,h3,h4,h5,h6,
 p,blockquote,pre,
@@ -40,15 +52,14 @@ form,fieldset,legend,
 table,th,td,caption,
 hr, body, input, textarea,
 select, button, a, img {
-	margin: 0;
+	margin:  0;
 	padding: 0;
 }
 
 
 
-/*
- * Remove most spacing between table cells and border
- */
+// ----
+// Remove most spacing between table cells and border
 
 table {
 	border: none;
@@ -59,9 +70,10 @@ table {
 
 
 
-fieldset {
-	border: none;
-}
+// ----
+// Remove default border from `fieldset`
+
+fieldset { border: none; }
 
 
 
@@ -70,59 +82,49 @@ textarea,
 select,
 button,
 a,
-img {
-	outline: none;
-}
+img { outline: none; }
 
 
 
-/*
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- * 3. Allow only vertical resizing of textareas
- */
+// ----
+// 1. Remove default vertical scrollbar in IE 8/9.
+// 2. Improve readability and alignment in all browsers.
+// 3. Allow only vertical resizing of textareas
 
 textarea {
-	overflow: auto; /* 1 */
-	vertical-align: top; /* 2 */
-	resize: vertical; /* 3 */
+	overflow: auto; // 1
+	vertical-align: top; // 2
+	resize: vertical; // 3
 }
 
 
 
-/**
- * Give a help cursor to elements that give extra info on `:hover`.
- */
+// ----
+// Give a help cursor to elements that give extra info on `:hover`.
 
 abbr[title],
-dfn[title] {
-	cursor: help;
-}
+dfn[title] { cursor: help; }
 
 
 
-/**
- * 1. Remove border when inside `a` element in IE 8/9.
- * 2. So that `alt` text is visually offset if images don't load.
- */
+// ----
+// 1. Remove border when inside `a` element in IE 8/9.
+// 2. So that `alt` text is visually offset if images don't load.
 
 img {
-	border: none;       /* [1] */
+	border: none;       // 1
 
-	font-style: italic; /* [2] */
+	font-style: italic; // 2
 }
 
 
 
-/**
- * Give form elements some cursor interactions...
- */
+// ----
+// Give form elements some cursor interactions...
 
 button,
 select,
-option {
-	cursor: pointer;
-}
+option { cursor: pointer; }
 
 .text-input:active,
 .text-input:focus,
@@ -134,16 +136,12 @@ textarea:focus {
 
 
 
-/**
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
+// ----
+// Remove the gap between images, videos, audio and canvas and the bottom of
+// their containers: h5bp.com/i/440
 
 img,
 svg,
 audio,
 canvas,
-video {
-	vertical-align: middle;
-}
-
+video { vertical-align: middle; }
