@@ -7,6 +7,7 @@
 //
 // @version: 1.19.1
 
+
 // ---------------------------------------
 // Default options, styles, colors etc
 // ---------------------------------------
@@ -25,14 +26,18 @@
 
 @import './functions/misc';
 
+
 // ---------------------------------------
 // Mixins
 // ---------------------------------------
 
-@import './mixins/arrows';
 @import './mixins/typography';
+@import './mixins/arrows';
 @import './mixins/breakpoint';
+@import './mixins/icons';
 @import './mixins/misc';
+@import './mixins/sprites';
+@import './mixins/vendor';
 
 
 // ---------------------------------------
@@ -88,52 +93,3 @@
 @import './objects/media';
 @import './objects/nav';
 @import './objects/tooltips';
-
-
-$sprites-map: (
-	'best#test': ( width: 1px, height: 2 ),
-	best: ( width: 1px, height: 2 ),
-);
-
-
-// @function sprite($sprite) {
-//   @if map-has-key($sprites-map, $sprite) {
-//     @return map-get($sprites-map, $sprite);
-//   }
-
-//   @warn "Unknown `#{$sprite}` in $colors.";
-//   @return null;
-// }
-
-@function sprite($sprite, $property:false) {
-
-	@if $property {
-
-		@if map-has-key($sprites-map, $sprite) {
-			$sprite: map-get($sprites-map, $sprite);
-		} @else {
-			@error "Unknown sprite `#{$sprite}` in `$sprites-map`.";
-			@return null;
-		}
-
-		@if map-has-key($sprite, $property) {
-			@return map-get($sprite, $property);
-		} @else {
-			@error "Unknown sprite property `#{$property}` in `$sprites-map`.";
-			@return null;
-		}
-
-	} @else {
-
-		@each $key, $value in $sprites-map {
-			@return $key;
-		}
-
-	}
-
-}
-
-.testThis {
-	bottom: sprite('best#test', width);
-	border: sprite('best#test');
-}
