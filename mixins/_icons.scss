@@ -1,0 +1,35 @@
+
+// =======================================
+// ^MIXINS.ICONS
+// =======================================
+//
+// Call all icons
+//
+// Simple mixin to convert all icons into  classes
+// within single loop.
+//
+// All sprites names will be appended with specified
+// in projects settings `$icons-prefix`
+//
+// @dep {map} $icons                    - map of sprites
+//
+//      @example
+//
+//			$icons: (
+//				icon-name: '\e815',
+//			);
+//
+//      {string=sprite--} $icons-prefix - prefix which will be appended to
+//                                        icon name
+
+@mixin icons() {
+
+	@each $name, $param in $icons {
+
+		$prefixed-name: $icons-prefix + $name;
+
+		.#{$prefixed-name}:before { content: $param; }
+
+	}
+
+}
