@@ -4,28 +4,6 @@
 // =======================================
 
 
-// ----
-// Double class name with identical silent class.
-// Use it on classes which should be expendable to
-// avoid css bloat.
-//
-// @req It always should be wrapped in #{} for interpolation
-//
-// @param {string} $class - class name without . which will be doubled
-//
-// @return {string} - class name and it's silent version
-//
-// @example
-//
-//		#{silent(component)} { border: 0; }
-//		// will output `%component, .component`
-//
-
-@function silent($class) {
-	@return '.' + $class, '%' + $class
-}
-
-
 // Convert Direction
 // =================
 //
