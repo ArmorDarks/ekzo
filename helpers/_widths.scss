@@ -12,6 +12,11 @@
 // We have a mixin to generate our widths and their breakpoint-specific
 // variations.
 
+
+// ---------------------------------------
+// Mixin
+// ---------------------------------------
+
 @mixin widths($namespace: '') {
 
 	// Whole
@@ -95,13 +100,21 @@
 	[class~='#{$namespace}7/12']      { width: 58.3333333% !important; }
 	[class~='#{$namespace}11/12']     { width: 91.6666666% !important; }
 
-}
+} // widths()
 
 
+
+// ---------------------------------------
+// Call all widths
+// ---------------------------------------
 
 @include widths();
 
 
+
+// ---------------------------------------
+// Responsive widths
+// ---------------------------------------
 
 // If you have set `$responsive` to 'true' in options then you now have
 // access to these classes. You can define at which breakpoint you'd like an
@@ -111,7 +124,7 @@
 //
 // @example
 //
-// 		<div class='grid  1/4  lap-1/2  palm-1/1'> ... </div>
+// 		<div class='grid 1/4 lap-1/2 palm-1/1'> ... </div>
 //
 // This would create a `div` that, at 'desktop' sizes, takes up a quarter of the
 // horizontal space, a half of that space at 'tablet' sizes, and goes full width
