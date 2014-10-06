@@ -54,20 +54,20 @@
 // ----
 // Bulding proper font-face based on provided parameters
 //
-// @param {string} $font                  - font name
-// @param {value=1} $version              - font version. Ensure reloading of cache in
-//                                          case of any changes in font file
-// @param {string=$font} $file-name       - should be specified in case of different
-//                                          font file name from font name
-// @param {value|string=normal} $weight   - `font-weight` of font-face
-// @param {string=normal} $style          - `font-style` of font-face
-// @param {string=$file-name} $svg-id     - should be specified in case it's different
-//                                          from font file name
-//                                          (can be found in `svg-file -> <font> -> id`)
+// @param {string} $font                   - font name
+// @param {number=1} $version              - font version. Ensure reloading of cache in
+//                                           case of any changes in font file
+// @param {string=$font} $file-name        - should be specified in case of different
+//                                           font file name from font name
+// @param {number|string=normal} $weight   - `font-weight` of font-face
+// @param {string=normal} $style           - `font-style` of font-face
+// @param {string=$file-name} $svg-id      - should be specified in case it's different
+//                                           from font file name
+//                                           (can be found in `svg-file -> <font> -> id`)
 //
 // @example
 //
-//		@include font (Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, $svg-id: helvId );
+//		@include font(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
 //
 
 @mixin font($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg-id:$file-name) {
