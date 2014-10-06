@@ -1,7 +1,7 @@
 
-/*------------------------------------*\
-		$SETTING.RESPONSIVE.DEFAULTS
-\*------------------------------------*/
+// =======================================
+// ^SETTING.RESPONSIVE.DEFAULTS
+// =======================================
 
 /**
  * Responsiveness?
@@ -23,9 +23,11 @@ $breakpoints: (
 	lap-and-up: 'screen and (min-width: #{$lap})',
 	portable:   'screen and (max-width: #{$desk - 1px})',
 	desk:       'screen and (min-width: #{$desk})',
-	desk-wide:  'screen and (min-width: #{$desk-wide})',
+	desk-wide:  'screen and (min-width: #{$desk-wide})'
 ) !default;
 
-// If we have included this file, set a variable to tell the rest of the
-// framework that we have some responsive settings.
-// $inuit-responsive-settings: true;
+$breakpoints--devices: (
+	retina:     'screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi)'
+) !default;
+
+$breakpoints--custom: () !default;
