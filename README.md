@@ -1,6 +1,11 @@
-SWITCH TO BRANCH
-================
+Ekzo.sass framework
+===================
 
-Please, **switch to [latest branch](https://github.com/ArmorDarks/ekzo.sass/tree/feature/2.0.0-alpha)** to get actual release
+OOCSS-driven, layered, design-free, BEM-based, responsive and little, but mighty Sass framework for rapid and painless development.
 
-That version of Ekzo.sass is obsolete.
+Inspired by [Inuit.css](https://github.com/csswizardry/inuit.css).
+
+Best used with
+--------------
+
+[Kotsu](https://github.com/LotusTM/Kotsu) — advanced Grunt-based web starter kit with Werker continuous deployment integration.
