@@ -25,4 +25,12 @@ $base-sprites-file:      'sprites.png' !default;
  */
 
 $base-icon-font:         fontello !default;
-$base-icon-font-version: 1 !default;
+$base-icon-font-version: 11111111 !default;
+
+
+/**
+ * Prefixes
+ */
+
+$icons-prefix:   icon--   !default;
+$sprites-prefix: sprite-- !default;
