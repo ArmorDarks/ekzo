@@ -1,71 +1,61 @@
 
-/*------------------------------------*\
-		$SETTING.COLORS.DEFAULTS
-\*------------------------------------*/
+// =======================================
+// ^SETTING.COLORS.DEFAULTS
+// =======================================
 
 
-/**
- * Base font color
- */
+// ---------------------------------------
+// Font
+// ---------------------------------------
 
-$base-font-color:               #313232 !default;
+$base-font-color:               #313232  !default;
 
-
-/**
- * Base links color
- */
+// ---------------------------------------
+// Links
+// ---------------------------------------
 
 $base-links-color:               #35adda !default;
 $base-links-hover-color:         #69d1c6 !default;
 
+// ---------------------------------------
+// Headings
+// ---------------------------------------
 
-/**
- * Base headings colors
- * Should be declared in your own stylesheet
- */
-
-$base-headings-color:             #585c5d !default;
-$apply-color-to-base-headings:    false !default;
+$base-headings-color:             #585c5d              !default;
 $extra-headings-color:            $base-headings-color !default;
-$apply-color-to-extra-headings:   false !default;
 
+// ---------------------------------------
+// Forms
+// ---------------------------------------
 
-/**
- * Forms
- */
-
-$base-form-bg-color:              #FFF !default;
+$base-form-bg-color:              #FFF    !default;
 $base-form-color:                 #8b8b8b !default;
-
 $base-form-placeholder-color:     #a9a9a9 !default;
 
+// ---------------------------------------
+// Buttons
+// ---------------------------------------
 
-/**
- * Buttons
- */
-
-$base-button-bg-color:            #e85716 !default;
 $base-button-color:               #fee0cd !default;
+$base-button-bg-color:            #e85716 !default;
 
-$base-button-bg-color--positive:  #1fa205 !default;
 $base-button-color--positive:     #7ef76a !default;
+$base-button-bg-color--positive:  #1fa205 !default;
 
-$base-button-bg-color--negative:  #a20b05 !default;
 $base-button-color--negative:     #ff8877 !default;
+$base-button-bg-color--negative:  #a20b05 !default;
 
-$base-button-bg-color--disabled:  #d3d3d3 !default;
 $base-button-color--disabled:     #464646 !default;
+$base-button-bg-color--disabled:  #d3d3d3 !default;
 
-
-/**
- * Background
- */
-
-$base-bg:                         #f2f2f2 !default;
-
-
-/**
- * Breadcrumb
- */
+// ---------------------------------------
+// Breadcrumb
+// ---------------------------------------
 
 $base-breadcrumb-separator-color: #d3d3d3 !default;
+
+// ---------------------------------------
+// Background
+// ---------------------------------------
+
+$base-bg:                         #f2f2f2 !default;
