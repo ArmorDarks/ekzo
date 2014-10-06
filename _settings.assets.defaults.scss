@@ -1,36 +1,28 @@
 
-/*------------------------------------*\
-		$SETTING.ASSETS.DEFAULTS
-\*------------------------------------*/
+// =======================================
+// ^SETTING.ASSETS.DEFAULTS
+// =======================================
 
-
-/**
- * Paths to assets of site - images and fonts
- */
-
-$base-assets-path:       '../../assets/' !default;
+$base-assets-path:       '../../assets/'               !default;
 $base-images-path:       '#{$base-assets-path}images/' !default;
-$base-fonts-path:        '#{$base-assets-path}fonts/' !default;
+$base-fonts-path:        '#{$base-assets-path}fonts/'  !default;
 
+// ---------------------------------------
+// Prefixes
+// ---------------------------------------
 
-/**
- * Path to sprites file
- */
+$icons-prefix:           icon--   !default;
+$sprites-prefix:         sprite-- !default;
 
-$base-sprites-file:      'sprites.png' !default;
-
-
-/**
- * Icon-font
- */
+// ---------------------------------------
+// Icon font
+// ---------------------------------------
 
 $base-icon-font:         fontello !default;
 $base-icon-font-version: 11111111 !default;
 
+// ---------------------------------------
+// Sprites
+// ---------------------------------------
 
-/**
- * Prefixes
- */
-
-$icons-prefix:   icon--   !default;
-$sprites-prefix: sprite-- !default;
+$base-sprites-file:      'sprites.png' !default;
