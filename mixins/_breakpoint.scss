@@ -12,9 +12,16 @@
 // in project in single sass map. Due to that fact, that mixin
 // doesn't accept custom queries in plain form.
 //
-// @param {string} $breakpoint - breakpoint name in sass map of predefined breakpoints `$breakpoints`.
+// @param {string} $breakpoint - breakpoint name in Sass map of predefined breakpoints `$breakpoints`.
 //                               Example of entry:
 //                               `lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',`
+// @param (boolean|string|map) $custom-map=false
+//                             - in case `device` or `devices` mixin will look
+//                               for breakpoint in `$breakpoints--devices` map
+//                               In case of `true` mixin will look for breakpoint
+//                               in `$breakpoints--custom` map
+//                               In case of map or variable - mixin will look in specified
+//                               map or variable
 //
 // @throws Undefined breakpoint `#{$breakpoint}` in map of breakpoints!
 //
@@ -26,21 +33,57 @@
 // 		}
 //
 
-@mixin breakpoint($breakpoint) {
+@mixin breakpoint($breakpoint, $custom-map:false) {
 
 	$breakpoint-value: '';
+	$breakpoint-map:   '';
 
-	// assigning value from list of breakpoints
-	@each $key, $value in $breakpoints {
-		@if $key == $breakpoint {
-			$breakpoint-value: $value;
+	// use default breakpoints map
+	@if not $custom-map {
+
+		// assigning value from map of breakpoints in `$breakpoints`
+		@each $key, $value in $breakpoints {
+			@if $key == $breakpoint { $breakpoint-value: $value; }
 		}
-	}
 
-	// checking wether defined breakpoint exists in list
+		$breakpoint-map: '$breakpoints';
+
+	// use devices breakpoints map
+	} @else if $custom-map == device or $custom-map == devices {
+
+		// assigning value from map of breakpoints in `$breakpoints--devices`
+		@each $key, $value in $breakpoints--devices {
+			@if $key == $breakpoint { $breakpoint-value: $value; }
+		}
+
+		$breakpoint-map: '$breakpoints--devices';
+
+	// use custom breakpoints map
+	} @else if $custom-map {
+
+		// assigning value from map of breakpoints in `$breakpoints--custom`
+		@each $key, $value in $breakpoints--custom {
+			@if $key == $breakpoint { $breakpoint-value: $value; }
+		}
+
+		$breakpoint-map: '$breakpoints--custom';
+
+	// use specified breakpoints map
+	} @else {
+
+		// assigning value from specified map
+		@each $key, $value in $custom-map {
+			@if $key == $breakpoint { $breakpoint-value: $value; }
+		}
+
+		$breakpoint-map: 'specified';
+
+	} // endif
+
+	// checking wether defined breakpoint exists in requested map
 	@if $breakpoint-value == '' {
-		@error 'Undefined breakpoint `#{$breakpoint}` in map of breakpoints!'
-	}
+		@error 'Undefined breakpoint `#{$breakpoint}` in `#{$breakpoint-map}` map!'
+	} // endif
 
 	// Use `only` to hide media query from old browsers
 	// @details http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
