@@ -18,13 +18,8 @@ html {
 
 	font-family: $base-font-family; // 3
 
-	@if $use-rems { // 3
-		font-size:   #{($base-font-size/16px)*1em};
-		line-height: #{$line-height-ratio};
-	} @else {
-		font-size:   $base-font-size;
-		line-height: $base-line-height;
-	}
+	font-size:   $base-font-size;
+	line-height: $base-line-height;
 
 	font-weight: $base-font-weight; // 3
 

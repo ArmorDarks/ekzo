@@ -28,10 +28,6 @@
 
 	font-size: $size;
 
-	@if $use-rems {
-		font-size: ($size / $base-font-size) * 1rem;
-	}
-
 	// use custom line-height
 	@if type-of($line-height) == number {
 
