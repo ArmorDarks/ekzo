@@ -7,20 +7,20 @@
 // ELEMENTS AND ABSTRACTIONS
 // ---------------------------------------
 
-$use-a-nav:         true  !default;
-$use-arrows:        false !default;
-$use-breadcrumb:    true  !default;
-$use-buttons:       true  !default;
-$use-flag:          true  !default;
-$use-forms:         true  !default;
-$use-grid:          true  !default;
-$use-icons:         true  !default;
-$use-island:        true  !default;
-$use-lists:         true  !default;
-$use-media:         true  !default;
-$use-nav:           true  !default;
-$use-tables:        true  !default;
-$use-tooltips:      true  !default;
+$enable-a-nav:                  true  !default;
+$enable-arrows:                 false !default;
+$enable-breadcrumb:             true  !default;
+$enable-buttons:                true  !default;
+$enable-flag:                   true  !default;
+$enable-forms:                  true  !default;
+$enable-grid:                   true  !default;
+$enable-icons:                  true  !default;
+$enable-island:                 true  !default;
+$enable-lists:                  true  !default;
+$enable-media:                  true  !default;
+$enable-nav:                    true  !default;
+$enable-tables:                 true  !default;
+$enable-tooltips:               true  !default;
 
 // ---------------------------------------
 // Typographic options
@@ -39,7 +39,7 @@ $base-button-unline:            true  !default;
 // BORDER-BOX
 // ---------------------------------------
 
-$global-border-box: false !default;
+$global-border-box:             false !default;
 
 // ---------------------------------------
 // DEBUG
@@ -48,4 +48,4 @@ $global-border-box: false !default;
 // Debug mode will visually highlight any potential markup/accessibility quirks
 // in the browser. Set to `true` or `false`.
 
-$debug-mode:        false !default;
+$debug-mode:                    false !default;

@@ -136,7 +136,7 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 }
 
 
-@if $use-tooltips {
+@if $enable-tooltips {
 
 	[data-tooltip] {
 

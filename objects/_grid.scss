@@ -1,4 +1,4 @@
-@if $use-grid {
+@if $enable-grid {
 
 // =======================================
 // ^GRIDS
@@ -207,7 +207,7 @@
 
 @include grid-types();
 
-@if $use-grid {
+@if $enable-grid {
 	@if $responsive-grid {
 
 		@each $breakpoint, $value in $breakpoints {
