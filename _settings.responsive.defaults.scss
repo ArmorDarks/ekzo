@@ -7,7 +7,9 @@
  * Responsiveness?
  */
 
-$responsive:            true !default;
+$responsive-grid:    true !default;
+$responsive-spacing: true !default;
+$responsive-widths:  true !default;
 
 /**
  * Tell inuit.css when breakpoints start.
