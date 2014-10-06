@@ -3,17 +3,17 @@
 // ^SETTING.RESPONSIVE.DEFAULTS
 // =======================================
 
-/**
- * Responsiveness?
- */
+// ---------------------------------------
+// Responsiveness
+// ---------------------------------------
 
 $responsive-grid:    true !default;
 $responsive-spacing: true !default;
 $responsive-widths:  true !default;
 
-/**
- * Tell inuit.css when breakpoints start.
- */
+// ---------------------------------------
+// Breakpoints
+// ---------------------------------------
 
 $lap:         481px  !default;
 $desk:        1024px !default;
