@@ -38,6 +38,9 @@
 // 1. Positioning gutter in the center
 // 2. For usage of the grid on lists
 
+// -----
+// Standard grid
+
 .grid {
 	list-style: none; // 2
 
@@ -47,6 +50,7 @@
 
 	.grid__item {
 		display: inline-block;
+
 		@include vendor(box-sizing, border-box);
 
 		vertical-align: top;
@@ -54,6 +58,15 @@
 		padding-left: $base-spacing-unit; // 1
 	}
 
+// -----
+// Floated grid
+// For places, where inline-block-based grid simply doesn't cut
+
+.grid--floated {
+
+	.grid__item { float: left; }
+
+}
 
 // -----
 // Very infrequently occurring grid wrappers as children of grid wrappers.
@@ -109,7 +122,7 @@
 
 
 // ---------------------------------------
-// Grid types
+// Grid modifiers
 // ---------------------------------------
 
 @mixin grid-types($namespace: '') {
@@ -125,39 +138,32 @@
 
 	}
 
-	.#{$namespace}grid--flush {
-		margin-left: 0;
-
-		> .grid__item { padding-left:0; }
-
-	}
-
 
 	// ----
 	// Grid gutter sizes
 
-	.#{$namespace}grid--half {
+	.#{$namespace}grid- {
 		margin-left: -$half-spacing-unit;
 
 		> .grid__item { padding-left: $half-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid--double {
+	.#{$namespace}grid\+ {
 		margin-left: -$twice-spacing-unit;
 
 		> .grid__item { padding-left: $twice-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid--triple {
+	.#{$namespace}grid\+\+ {
 		margin-left: -$triple-spacing-unit;
 
 		> .grid__item { padding-left: $triple-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid--full {
+	.#{$namespace}grid--flush {
 		margin-left: 0;
 
 		> .grid__item { padding-left: 0; }
@@ -202,7 +208,7 @@
 @include grid-types();
 
 @if $use-grid {
-	@if $responsive {
+	@if $responsive-grid {
 
 		@each $breakpoint, $value in $breakpoints {
 			@include breakpoint($breakpoint) {
