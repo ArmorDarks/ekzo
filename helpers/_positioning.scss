@@ -1,0 +1,51 @@
+
+// =======================================
+// ^HELPERS.POSITIONING
+// =======================================
+
+
+// ---------------------------------------
+// Position
+// ---------------------------------------
+//
+// Set position to `relative` or `absolute`
+// Useful in case you need to put in it absolutely-positioned container
+// or to move it around
+
+.position--relative { position: relative; }
+.position--absolute { position: absolute; }
+
+
+
+// ---------------------------------------
+// Floats
+// ---------------------------------------
+
+.float--right   { float: right !important; }
+.float--left    { float: left  !important; }
+.float--flush   { float: none  !important; }
+
+
+
+// ---------------------------------------
+// Alignments
+// ---------------------------------------
+
+.align--left          { text-align: left    !important; }
+.align--right         { text-align: right   !important; }
+.align--justify       { text-align: justify !important; }
+
+.align--center        { text-align: center  !important; }
+
+.align--center-block  {
+	text-align: center;
+
+	> * { display: inline-block; }
+
+	> * > * { text-align: left }
+
+}
+
+.align--top           { vertical-align: top    !important; }
+.align--middle        { vertical-align: middle !important; }
+.align--bottom        { vertical-align: bottom !important; }
