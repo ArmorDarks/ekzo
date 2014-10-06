@@ -4,79 +4,53 @@
 // =======================================
 
 
+// ---------------------------------------
 // Convert Direction
-// =================
+// ---------------------------------------
 //
 // Takes a direction and returns the opposite
 //
-// @param $direction [String] : initial direction
-// @return [String]
+// @param {string} $direction - initial direction
+//
+// @return {string}
 
 @function convert-direction($direction) {
-	@if $direction == 'top' {
-		@return 'bottom';
-	} @else if $direction == 'bottom' {
-		@return 'top';
-	} @else if $direction == 'left' {
-		@return 'right';
-	} @else if $direction == 'right' {
-		@return 'left';
-	}
+    @if $direction == 'top'         { @return 'bottom'; }
+    @else if $direction == 'bottom' { @return 'top'; }
+    @else if $direction == 'left'   { @return 'right'; }
+    @else if $direction == 'right'  { @return 'left'; }
 }
 
 
 
-
+// ---------------------------------------
 // Tint & Shade
-// ============
+// ---------------------------------------
 
-
-// Tint
 // ----
+// Tint
 //
 // Add percentage of white to a color
 //
-// @param $color [Color] : The color to be tinted
-// @param $percent [Number] : The percentage amount the color is to be tinted
-// @return [Color]
+// @param {color}  $color   - The color to be tinted
+// @param {number} $percent - The percentage amount the color is to be tinted
+//
+// @return {color}
 
 @function tint($color, $percent){
   @return mix(white, $color, $percent);
 }
 
-
-// Shade
 // -----
+// Shade
 //
 // Add percentage of black to a color
 //
-// @param $color [Color] : The color to be shaded
-// @param $percent [Number] : The percentage amount the color is to be shaded
-// @return [Color]
+// @param {color} $color    - The color to be tinted
+// @param {number} $percent - The percentage amount the color is to be shaded
+//
+// @return {color}
 
 @function shade($color, $percent){
   @return mix(black, $color, $percent);
-}
-
-
-
-
-// Convert Direction
-// =================
-//
-// Takes a direction and returns the opposite
-//
-// @param $direction [String] : initial direction
-// @return [String]
-
-@function convert-direction($direction) {
-    @if $direction == 'top' {
-        @return 'bottom';
-    } @else if $direction == 'bottom' {
-        @return 'top';
-    } @else if $direction == 'left' {
-        @return 'right';
-    } @else if $direction == 'right' {
-        @return 'left';
-    }
 }
