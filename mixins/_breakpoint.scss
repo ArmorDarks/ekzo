@@ -42,6 +42,8 @@
 		@error 'Undefined breakpoint `#{$breakpoint}` in map of breakpoints!'
 	}
 
+	// Use `only` to hide media query from old browsers
+	// @details http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
 	@media only #{$breakpoint-value} { @content; }
 
 }
