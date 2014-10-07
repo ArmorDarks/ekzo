@@ -4,30 +4,14 @@
 	$TABLES
 \*------------------------------------*/
 
+// @todo Update docs
 
 table {
 	width: 100%;
 }
 
-
-
-/**
- * Apply paddings for all th and td
- */
-
-.table--padding {
-
-	th,
-	td {
-		padding: $base-spacing-unit / 4;
-
-		@media screen and (min-width: 480px) {
-			padding: $half-spacing-unit;
-		}
-
-		text-align: left;
-	}
-
+.table--fixed {
+	table-layout: fixed;
 }
 
 
@@ -44,38 +28,64 @@ table {
 [rowspan='1'] { vertical-align: top; }
 
 
+} // endif
 
-/**
- * In the HTML above we see several `col` elements with classes whose numbers
- * represent a percentage width for that column. We leave one column free of a
- * class so that column can soak up the effects of any accidental breakage in
- * the table.
- */
+@mixin table-spacing($n: '') {
 
-.t5     { width:  5% }
-.t10    { width: 10% }
-.t12    { width: 12.5% }     /* 1/8 */
-.t15    { width: 15% }
-.t20    { width: 20% }
-.t25    { width: 25% }       /* 1/4 */
-.t30    { width: 30% }
-.t33    { width: 33.333% }   /* 1/3 */
-.t35    { width: 35% }
-.t37    { width: 37.5% }     /* 3/8 */
-.t40    { width: 40% }
-.t45    { width: 45% }
-.t50    { width: 50% }       /* 1/2 */
-.t55    { width: 55% }
-.t60    { width: 60% }
-.t62    { width: 62.5% }     /* 5/8 */
-.t65    { width: 65% }
-.t66    { width: 66.666% }   /* 2/3 */
-.t70    { width: 70% }
-.t75    { width: 75% }       /* 3/4*/
-.t80    { width: 80% }
-.t85    { width: 85% }
-.t87    { width: 87.5% }     /* 7/8 */
-.t90    { width: 90% }
-.t95    { width: 95% }
+	// ---------------------------------------
+	// Paddings
+	// ---------------------------------------
+
+	.#{$n}table--padding-- {
+
+		th,
+		td { padding: $half-spacing-unit / 2; }
+
+	}
+
+	.#{$n}table--padding- {
+
+		th,
+		td { padding: $half-spacing-unit; }
+
+	}
+
+	.#{$n}table--padding {
+
+		th,
+		td { padding: $base-spacing-unit; }
+
+	}
+
+	.#{$n}table--padding\+ {
+
+		th,
+		td { padding: $twice-spacing-unit; }
+
+	}
+
+	.#{$n}table--padding--flush {
+
+		th,
+		td { padding: 0; }
+
+	}
+
+} // table-spacing()
+
+
+@if $enable-tables {
+
+	@include table-spacing();
+
+		@if $responsive-tables {
+
+			@each $breakpoint, $value in $breakpoints {
+				@include breakpoint($breakpoint) {
+					@include table-spacing('#{$breakpoint}-');
+				}
+			}
+
+		} // endif
 
 } // endif
