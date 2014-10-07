@@ -9,23 +9,24 @@
 
 $font-sizes: (
 	content: (
-		base:  14px,
-		small: 12px,
-		micro: 10px,
+		base:  14px, // used for vertical rhythm calculation; = .text--base
+		small: 12px, // = .text--small
+		micro: 10px, // = .text--micro
 	),
 	headings: (
-		h1: 36px, // .h1
-		h2: 30px, // .h2
-		h3: 24px, // .h3
-		h4: 21px, // .h4
-		h5: 18px, // .h5
-		h6: 16px, // .h6
+		h1: 36px, // = h1, .h1, .btn--h1
+		h2: 30px, // = h2, .h2, .btn--h2
+		h3: 24px, // = h3, .h3, .btn--h3
+		h4: 21px, // = h4, .h4, .btn--h4
+		h5: 18px, // = h5, .h5, .btn--h5
+		h6: 16px, // = h6, .h6, .btn--h6
 	),
 	extra-headings: (
-		giga: 96px,
-		mega: 72px,
-		kilo: 44px,
-	)
+		giga: 96px, // = .giga
+		mega: 72px, // = .mega
+		kilo: 44px, // = .kilo
+	),
+	buttons: () // = .btn--*name*
 ) !default;
 
 $forms-font-size:              font-size(h5, headings) !default;
