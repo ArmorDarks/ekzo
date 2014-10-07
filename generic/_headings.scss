@@ -10,8 +10,8 @@
  * heading hierarchy.
  */
 
-h1,.h1{
-	@include font-size($h1-size);
+h1,.h1 {
+	@include font-size($h1-font-size);
 
 	font-weight: $headings-font-weight;
 
@@ -20,8 +20,8 @@ h1,.h1{
 	}
 }
 
-h2,.h2{
-	@include font-size($h2-size);
+h2,.h2 {
+	@include font-size($h2-font-size);
 
 	font-weight: $headings-font-weight;
 
@@ -30,8 +30,8 @@ h2,.h2{
 	}
 }
 
-h3,.h3{
-	@include font-size($h3-size);
+h3,.h3 {
+	@include font-size($h3-font-size);
 
 	font-weight: $headings-font-weight;
 
@@ -40,8 +40,8 @@ h3,.h3{
 	}
 }
 
-h4,.h4{
-	@include font-size($h4-size);
+h4,.h4 {
+	@include font-size($h4-font-size);
 
 	font-weight: $headings-font-weight;
 
@@ -50,8 +50,8 @@ h4,.h4{
 	}
 }
 
-h5,.h5{
-	@include font-size($h5-size);
+h5,.h5 {
+	@include font-size($h5-font-size);
 
 	font-weight: $headings-font-weight;
 
@@ -60,8 +60,8 @@ h5,.h5{
 	}
 }
 
-h6,.h6{
-	@include font-size($h6-size);
+h6,.h6 {
+	@include font-size($h6-font-size);
 
 	font-weight: $headings-font-weight;
 
@@ -77,7 +77,7 @@ h6,.h6{
  */
 
 .h-giga {
-		@include font-size($h-giga-size);
+		@include font-size($giga-font-size);
 
 		@if $apply-color-to-extra-headings {
 			color: $extra-headings-color;
@@ -85,7 +85,7 @@ h6,.h6{
 }
 
 .h-mega {
-		@include font-size($h-mega-size);
+		@include font-size($mega-font-size);
 
 		@if $apply-color-to-extra-headings {
 			color: $extra-headings-color;
@@ -95,7 +95,7 @@ h6,.h6{
 .h-kilo {
 		font-family: $headings-font-family;
 
-		@include font-size($h-kilo-size);
+		@include font-size($kilo-font-size);
 
 		@if $apply-color-to-extra-headings {
 			color: $extra-headings-color;
