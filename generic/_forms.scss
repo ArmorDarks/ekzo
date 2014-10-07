@@ -6,11 +6,11 @@
 
 
 @include placeholder() {
-	font-family: $base-form-font-family;
-	font-size: $base-form-font-size;
-	font-style: $form-placeholder-font-style;
+	font-family: $forms-font-family;
+	font-size: $forms-placeholder-font-size;
+	font-style: $forms-placeholder-font-style;
 
-	color: $base-form-placeholder-color;
+	color: $forms-placeholder-color;
 }
 
 
@@ -31,13 +31,13 @@ fieldset {
 input,
 textarea,
 label {
-	color: $base-form-color;
-	font: $base-form-font-size $base-form-font-family;
+	color: $forms-color;
+	font: $forms-font-size $forms-font-family;
 }
 
 .text-input,
 input,
-textarea{ background-color: $base-form-bg-color; }
+textarea{ background-color: $forms-bg-color; }
 
 
 
