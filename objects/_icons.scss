@@ -26,8 +26,8 @@
  * Requires extension in stylesheet.
  */
 
-.sprite,
-.icon {
+.icon,
+.sprite {
 	position: relative;
 
 	display: inline-block;
@@ -43,32 +43,19 @@
 	font-weight: normal;
 }
 
-.sprite {
-	vertical-align: middle;
-}
-
-.icon:before {
-	position: relative;
-}
-
-
-
-/**
- * Apply background to sprites by default
- */
-
-.sprite { background: url(#{$base-images-path}#{$base-sprites-file}) no-repeat; }
-
-
-
-/**
- * Declaration of default icon-font
- */
-
 @include font ($base-icon-font, $base-icon-font-version);
 
-.icon { font-family: '#{$base-icon-font}'; }
+.icon {
+	font-family: '#{$base-icon-font}';
 
+	&:before { position: relative; }
+}
+
+.sprite {
+	background: url(#{$base-images-path}#{$base-sprites-file}) no-repeat;
+
+	vertical-align: middle;
+}
 
 
 /**
