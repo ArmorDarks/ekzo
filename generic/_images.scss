@@ -26,24 +26,24 @@ img[height] { max-width: none; }
  * Image placement variations.
  */
 
-.img--right {
+.image--right {
 	float: right;
 
 	margin-bottom: $half-spacing-unit;
-	margin-left: $base-spacing-unit;
+	margin-left:   $base-spacing-unit;
 }
 
-.img--left {
+.image--left {
 	float: left;
 
-	margin-right: $base-spacing-unit;
+	margin-right:  $base-spacing-unit;
 	margin-bottom: $half-spacing-unit;
 }
 
-.img--center {
+.image--center {
 	display: block;
 
-	margin-right: auto;
+	margin-right:  auto;
+	margin-left:   auto;
 	margin-bottom: $half-spacing-unit;
-	margin-left: auto;
 }
