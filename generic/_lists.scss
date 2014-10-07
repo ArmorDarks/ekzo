@@ -6,190 +6,32 @@
 
 
 /**
- * Create big blocky lists of content, e.g.:
- *
-		<ul class="block-list">
-			<li>Foo</li>
-			<li>Bar</li>
-			<li>Baz</li>
-			<li><a href="#" class="block-list__link">Foo Bar Baz</a></li>
-		</ul>
- *
- * Extend this object in your theme stylesheet.
- *
- * Demo: jsfiddle.net/inuitcss/hR57q
- *
+ * Lists defaults margins
  */
 
-/*ul*/.block-list {
-	list-style:none;
-	margin-left:0;
+ul, ol {
+	// margin-left already defined in shared
 
-	> li {
-		padding: $half-spacing-unit;
-	}
-
-	> li > a {
-		display: block;
-
-		padding: $half-spacing-unit;
-		margin: -$half-spacing-unit;
-	}
+	li + li { margin-top: $base-spacing-unit; }
 
 }
 
 
-
-/**
- * The `.multi-list` object is a lot like the `.matrix` object only without the
- * blocky borders and padding.
- *
-		<ul class="multi-list  four-cols">
-				<li>Lorem</li>
-				<li>Ipsum</li>
-				<li>Dolor</li>
-				<li>Sit</li>
-		</ul>
- *
- * Demo: jsfiddle.net/inuitcss/Y2zrU
- *
- */
-
-/*ul*/.multi-list {
-	list-style:none;
-	margin-left:0;
+.list--floated {
+	@extend %list--flush;
 	@extend %clear;
 
-	> li {
-			float: left;
-	}
-}
-
-
-
-/**
- * Apply these classes alongside the `.matrix` or `.multi-list` classes on
- * lists to determine how wide their columns are.
- */
-
-/*ul*/.two-cols > li    { width: 50%; }
-
-/*ul*/.three-cols > li  { width: 33.333%; }
-
-/*ul*/.four-cols > li   { width: 25%; }
-
-/*ul*/.five-cols > li   { width: 20%; }
-
-	/**
-	 * Unfortunately we have to qualify this selector in order to bring its
-	 * specificity above the `.[number]-cols > li` selectors above.
-	 */
-
-	/*ul*/.multi-list > .all-cols { width: 100%; }
-
-
-
-/**
- * Applies standard margin between ul's elements
- */
-
-/*ul*/.list--margin {
-
-	> li + li {
-		margin-top: $base-spacing-unit;
-	}
+	> li { float: left; }
 
 }
 
+.list--floated--rev {
+	@extend %list--flush;
+	@extend %clear;
 
-/**
- * Applies half margin between ul's elements
- */
-
-/*ul*/.list--margin--half {
-
-	> li + li {
-		margin-top: $half-spacing-unit;
-	}
+	> li { float: right; }
 
 }
-
-
-/**
- * Applies twice margin between ul's elements
- */
-
-/*ul*/.list--margin--twice {
-
-	> li + li {
-		margin-top: $twice-spacing-unit;
-	}
-
-}
-
-
-
-/**
- * Ordered list defaults margins
- */
-
-ol {
-	margin-left: $twice-spacing-unit;
-
-	li + li {
-		margin-top: $half-spacing-unit;
-	}
-
-}
-
-
-
-/**
- * Iconic list
- *
- * List with sprites or icons instead of bulletins.
- * Should be used in conjuration with icons or sprites:
- *
-		<ul class="list--iconic">
-			<li>
-				<i class="icon icon--ok"></i>
-				Item1
-			</li>
-			<li>
-				<i class="sprite sprite--ok"></i>
-				Item2
-			</li>
-		</ul>
- *
- *	Note: iconic list relays on `:first-child` selector, so it's important
- *       to keep bulletin-icons right after `<li>` tag.
- *
- *	1. Pusing list twice left to align it with default list
- *	   with default bulletings
- *	2. We have to ensure that it targets only first icons and not all
- *	   icons in list
- * 	3. Used to algin icons properly and center it according to the first
- *	   line of list
- */
-
-/*ul*/.list--iconic {
-	margin-left: $twice-spacing-unit; // [1]
-
-	li {
-	position: relative;
-
-		> .icon:first-child,  // [2]
-		> .sprite:first-child {
-			position: absolute; // [4]
-
-			left: -20px; // [4]
-			top: .4em; // [4]
-		}
-
-	}
-
-}
-
 
 
 /**
@@ -202,11 +44,37 @@ ol {
  *
  */
 
-/*ul*/.list--flush {
-	list-style:none;
+.list--flush,
+%list--flush {
+	list-style: none;
 
-	margin-left:0;
+	margin-left:   0;
 	margin-bottom: 0;
 }
+
+
+
+/**
+ * Applies margin between ul's elements
+ */
+
+.list-          > li + li { margin-top: $half-spacing-unit; }
+.list\+         > li + li { margin-top: $twice-spacing-unit; }
+.list--li-flush > li + li { margin-top: 0; }
+
+.list--margin-       > li { margin: $half-spacing-unit; }
+.list--margin\+      > li { margin: $twice-spacing-unit; }
+.list--margin--flush > li { margin: 0; }
+
+.list--padding-       > li { padding: $half-spacing-unit; }
+.list--padding\+      > li { padding: $twice-spacing-unit; }
+.list--padding--flush > li { padding: 0; }
+
+
+// @todo With borders between elements
+.list--keyline {}
+// @todo With borders inside
+.list--matrix {}
+
 
 } // endif
