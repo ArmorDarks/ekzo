@@ -1,0 +1,46 @@
+@if $enable-pack {
+
+/*------------------------------------*\
+		$PACK
+\*------------------------------------*/
+
+/**
+ * The pack object simply causes any number of elements pack up horizontally to
+ * automatically fill an equal, fluid width of their parent.
+ *
+		<ul class="nav--fit">
+			...
+ *
+ * Thanks to @pimpl for this idea!
+ *
+ * 1. Fill all available space.
+ * 2. Cause children to be automatically equally sized.
+ */
+
+.pack {
+	display: table;
+	table-layout: fixed; /* [2] */
+
+	width: 100%;  /* [1] */
+
+	border-spacing: $base-spacing-unit;
+
+	> li {
+		display: table-cell;
+
+		> a { display: block; }
+
+	}
+
+}
+
+.pack--middle {}
+.pack--bottom {}
+
+.pack--auto {}
+
+.pack-       { border-spacing: $half-spacing-unit; }
+.pack\+      { border-spacing: $twice-spacing-unit; }
+.pack--flush { border-spacing: 0; }
+
+} // endif
