@@ -22,144 +22,58 @@
  */
 
 .nav {
-	@extend .list--flush;
+	@extend %list--flush;
 
-	> li {
-
-		&,
-		> a { display: inline-block; }
-
-	}
+	> li,
+	> li > a { display: inline-block; }
 
 }
-
 
 
 /**
  * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
  *
-		<ul class="nav  nav--stacked">
-			<li><a href=#>Home</a></li>
-			<li><a href=#>About</a></li>
-			<li><a href=#>Portfolio</a></li>
-			<li><a href=#>Contact</a></li>
-		</ul>
+		<ul class="nav nav--stacked">
+			...
  *
  */
 
-.nav--stacked {
-
-	> li { display: list-item; }
-
-}
-
+.nav--stacked > li { display: list-item; }
 
 /**
- * `.nav--blocky` extends `.nav` and throws all links inside in block mode
+ * Extends `.nav` and throws all links inside in block or inline mode
  */
 
-.nav--blocky {
-
-	li {
-
-		> a { display: block; }
-
-	}
-
-}
-
-/**
- * `.nav--inline` extends `.nav` and throws all links inside in inline mode
- */
-
-.nav--inline {
-
-	li {
-
-		> a { display: inline; }
-
-	}
-
-}
-
+.nav--block  > li > a { display: block; }
+.nav--inline > li > a { display: inline; }
 
 
 /**
  * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
  *
-		<ul class="nav  block">
-			<li><a href=#>Home</a></li>
-			<li><a href=#>About</a></li>
-			<li><a href=#>Portfolio</a></li>
-			<li><a href=#>Contact</a></li>
-		</ul>
+		<ul class="nav block">
+			...
  *
  */
 
-.nav--block {
-	line-height: 1;
-
-	/* Remove whitespace caused by `inline-block` */
-
-	letter-spacing: -0.31em;
-	word-spacing: -0.43em;
-
-	> li {
-		letter-spacing: normal;
-		word-spacing: normal;
-
-		> a { padding: $half-spacing-unit; }
-
-	}
-
-}
-
-
-/**
- * Force a nav to occupy 100% of the available width of its parent. Extends
- * `.nav`, e.g.:
- *
-		<ul class="nav--fit">
-			<li><a href=#>Home</a></li>
-			<li><a href=#>About</a></li>
-			<li><a href=#>Portfolio</a></li>
-			<li><a href=#>Contact</a></li>
-		</ul>
- *
- * Thanks to @pimpl for this idea!
- */
-
-.nav--fit {
-	display: table;
-
-	width: 100%;
-
-	> li {
-		display: table-cell;
-
-		> a { display: block; }
-
-	}
-
-}
+.nav--padding-  > li > a { padding: $half-spacing-unit; }
+.nav--padding   > li > a { padding: $base-spacing-unit; }
+.nav--padding\+ > li > a { padding: $twice-spacing-unit; }
 
 
 /**
  * Make a list of keywords. Extends `.nav`, e.g.:
  *
-		<ul class="nav  keywords>
+		<ul class="nav keywords>
+			...
  *
  */
 
 .nav--keywords {
 
-	> li {
+	li:after { content: '\002C' '\00A0'; }
 
-		&:after { content: '\002C' '\00A0'; }
-
-		&:last-child:after { display: none; }
-
-	}
+	li:last-child:after { display: none; }
 
 }
 
