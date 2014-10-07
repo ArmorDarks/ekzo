@@ -8,17 +8,6 @@
 // @version: 1.19.1
 
 // ---------------------------------------
-// Default options, styles, colors etc
-// ---------------------------------------
-
-@import 'settings.typography.defaults';
-@import 'settings.framework.defaults';
-@import 'settings.colors.defaults';
-@import 'settings.assets.defaults';
-@import 'settings.options.defaults';
-@import 'settings.responsive.defaults';
-
-// ---------------------------------------
 // Functions
 // ---------------------------------------
 
@@ -35,6 +24,17 @@
 @import './mixins/misc';
 @import './mixins/sprites';
 @import './mixins/vendor';
+
+// ---------------------------------------
+// Default options, styles, colors etc
+// ---------------------------------------
+
+@import 'settings.typography.defaults';
+@import 'settings.framework.defaults';
+@import 'settings.colors.defaults';
+@import 'settings.assets.defaults';
+@import 'settings.options.defaults';
+@import 'settings.responsive.defaults';
 
 // ---------------------------------------
 // Base styles
