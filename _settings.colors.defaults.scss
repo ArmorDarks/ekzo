@@ -3,6 +3,8 @@
 // ^SETTING.COLORS.DEFAULTS
 // =======================================
 
+$base-color:                     #ff6600  !default;
+
 // ---------------------------------------
 // Font
 // ---------------------------------------
@@ -35,20 +37,26 @@ $forms-placeholder-color:         #a9a9a9 !default;
 // Buttons
 // ---------------------------------------
 
-$base-button-color:               #fee0cd !default;
-$base-button-bg-color:            #e85716 !default;
+$base-button-color:               $base-font-color !default;
+$base-button-bg-color:            $base-color !default;
 
-$base-button-color--positive:     #7ef76a !default;
-$base-button-bg-color--positive:  #1fa205 !default;
+$base-button-color--positive:     #7ef76a     !default;
+$base-button-bg-color--positive:  #1fa205     !default;
 
-$base-button-color--negative:     #ff8877 !default;
-$base-button-bg-color--negative:  #a20b05 !default;
+$base-button-color--negative:     #ff8877     !default;
+$base-button-bg-color--negative:  #a20b05     !default;
 
-$base-button-color--disabled:     #464646 !default;
-$base-button-bg-color--disabled:  #d3d3d3 !default;
+$base-button-color--disabled:     #464646     !default;
+$base-button-bg-color--disabled:  #d3d3d3     !default;
 
 // ---------------------------------------
 // Breadcrumb
 // ---------------------------------------
 
 $base-breadcrumb-separator-color: #d3d3d3 !default;
+
+// ---------------------------------------
+// Backgrounds
+// ---------------------------------------
+
+$base-bg-color:                   #353a39;

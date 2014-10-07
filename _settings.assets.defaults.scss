@@ -15,7 +15,7 @@ $base-fonts-path:        '#{$base-assets-path}fonts/'  !default;
 // Background
 // ---------------------------------------
 
-$base-bg:                #f2f2f2 !default;
+$base-bg:                $base-bg-color !default;
 
 // ---------------------------------------
 // Icons and sprites
@@ -25,6 +25,6 @@ $icons-prefix:           icon--        !default;
 $sprites-prefix:         sprite--      !default;
 
 $base-icon-font:         fontello      !default;
-$base-icon-font-version: 11111111      !default;
+$base-icon-font-version: 79220573      !default;
 
 $base-sprites-file:      'sprites.png' !default;
