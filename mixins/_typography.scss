@@ -48,6 +48,93 @@
 
 
 // ----
+// Iterate through specified or predefined map and build series of classes
+// with font sizes based on specified in that map names and values
+//
+// @param {strng} $type          - name of group in specified map
+// @param {strng} $name=false    - specific name of font-size which should be called
+//                                 If specified, only 1 specified class will be outputed
+// @param {boolean|'include'} $plain-class=false
+//                               - whether class shouid be outputed as normal, or as
+//                                 plain (like `h1`, without dot).
+//                                 `include` parameter will include both
+// @param {string} $prefix=null  - should class name be prefixed or no.
+//                                 Plain class names won't be prefixed independantly from
+//                                 that parameter
+// @param {map} $map=$font-sizes - should mixin search for font sizes in default, or specified map
+//                                 ```
+//                                 		$example: (
+//                                 			headings: (
+//                                 				h1: 36px,
+//                                 				h2: 30px,
+//                                 			),
+//                                 			extra-headings: (
+//                                 				giga: 96px,
+//                                 			)
+//                                 		);
+//                                 ```
+//
+// @example
+//
+//		@include font-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
+//
+
+@mixin font-class($type, $name:false, $plain-class:false, $prefix:null, $map:$font-sizes ) {
+
+	$working-map: null;
+	$class:       null;
+
+	@if map-has-key($font-sizes, $type) {
+		$working-map: map-get($map, $type);
+	} @else {
+		@error 'No such `#{$type}` font type!';
+	}
+
+	@if not $name {
+
+		@each $name, $value in $working-map {
+
+			@if $plain-class == include {
+				$class: $name + ', .' + $prefix + $name;
+			} @else if $plain-class {
+				$class: $name;
+			} @else {
+				$class: '.' + $prefix + $name;
+			}
+
+			#{$class} {
+				font-size: $value;
+				@content
+			}
+
+		} //endeach
+
+	} @else if $name and $type and map-has-key($working-map, $name) {
+
+		$value: map-get($working-map, $name);
+
+		@if $plain-class == include {
+			$class: $name + ', .' + $prefix + $name;
+		} @else if $plain-class {
+			$class: $name;
+		} @else {
+			$class: '.' + $prefix + $name;
+		}
+
+		#{$class} {
+			font-size: $value;
+			@content
+		}
+
+	} @else {
+		@error 'No such `#{$name}` font name in specified map!';
+	}
+
+}
+
+
+
+// ----
 // Bulding proper font-face based on provided parameters
 //
 // @param {string} $font                   - font name
