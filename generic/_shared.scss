@@ -10,7 +10,6 @@
  */
 
 
-
 /**
  * Base elements
  */
@@ -21,16 +20,8 @@ blockquote, p, address,
 table,
 fieldset, figure,
 pre,
-%base-margin--bottom,
 .media, .flag,
-.island, .islet {
-	margin-bottom: $base-spacing-unit;
-
-	.islet & {
-		margin-bottom: $base-spacing-unit / 2;
-	}
-
-}
+.island { margin-bottom: $base-spacing-unit; }
 
 
 
@@ -39,9 +30,7 @@ pre,
  * treatment regarding vertical rhythm.
  */
 
-hr {
-	margin-bottom: $base-spacing-unit - 2px;
-}
+hr { margin-bottom: $base-spacing-unit - 2px; }
 
 
 
@@ -50,7 +39,4 @@ hr {
  * by a consistent amount. Define that amount once, here.
  */
 
-ul,ol,dd,
-%base-margin--left {
-	margin-left: $twice-spacing-unit;
-}
+ul, ol, dd { margin-left: $twice-spacing-unit; }
