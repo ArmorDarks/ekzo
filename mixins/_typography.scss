@@ -98,7 +98,7 @@
 //		@include font-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
 //
 
-@mixin font-class($type, $name:false, $plain-class:false, $prefix:null, $map:$font-sizes ) {
+@mixin font-class($type, $name:false, $plain-class:false, $prefix:'', $map:$font-sizes ) {
 
 	$working-map: null;
 	$class:       null;
