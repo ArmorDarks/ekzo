@@ -7,21 +7,40 @@
 // ----
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value
+// On contrary to `font-size()` function, that mixin embending `font-size` and
+// caluclated `line-height` into class, within which it was called
 //
-// @param {value:px} $size                  - desired `font-size` in pixels
-// @param {bool=true|value:px} $line-height - should `line-height` rhythm calculation
-//                                                  be applied or no.
-//                                                  Set to value in pixels to define custom
-//                                                  `line-height`.
+// @param {number|string} $size           - desired `font-size` in pixels or
+//                                          font name, specified in default font sizes map
+//                                          or specified one
+// @param {string} $type=false            - group's name of font in default or specified map
+//                                          should be specified only if `$size` set to string
+// @param {bool=true|number} $line-height - should `line-height` rhythm calculation
+//                                          be applied or no.
+//                                          Set to value in pixels to define custom
+//                                          `line-height`.
+// @param {map} $map=$font-sizes          - should mixin search for font sizes in default,
+//                                          or specified map
+//                                          See `font-class()` mixin for details about format
 //
 // @example
 //
-//		@include font-size(10px, 25px);
+//		.heading { @include font-size(10px, 25px); }
+//		.heading { @include font-size(h1, headings); }
+//		.heading { @include font-size(big, my-group, $map:$my-custom-sizes); }
 //
 // Thanks to @redclov3r for the `line-height` Sass:
 // twitter.com/redclov3r/status/250301539321798657
 
-@mixin font-size($size, $line-height:true) {
+@mixin font-size($size, $type:false, $line-height:true, $map:$font-sizes) {
+
+	$value: null;
+
+	@if type-of($size) == string {
+
+		$size: font-size($size, $type, $map);
+
+	}
 
 	// ensure that we're working with pixels
 	$size: $size + 0px;
@@ -84,10 +103,10 @@
 	$working-map: null;
 	$class:       null;
 
-	@if map-has-key($font-sizes, $type) {
+	@if map-has-key($map, $type) {
 		$working-map: map-get($map, $type);
 	} @else {
-		@error 'No such `#{$type}` font type!';
+		@error 'No such `#{$type}` font type in specified map!';
 	}
 
 	@if not $name {

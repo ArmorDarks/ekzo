@@ -4,6 +4,42 @@
 // =======================================
 
 
+// ----
+// Shorthand function to call quickly values from default
+// `$font-sizes` or specified map with set of font sizes values
+//
+// @param {string} $name         - font name, specified in default font sizes map
+//                                 or specified one
+// @param {string} $type         - group's name of font in default or specified map
+// @param {map} $map=$font-sizes - should mixin search for font sizes in default,
+//                                 or specified map
+//                                 See `font-class()` mixin for details about format
+//
+// @example
+//
+//		.heading { font-size: font-size(h1, headings); }
+//		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
+
+@function font-size($name, $type, $map:$font-sizes) {
+
+	$value: null;
+
+	@if map-has-key($map, $type) {
+		$working-map: map-get($map, $type);
+		@if map-has-key($working-map, $name) {
+			$value: map-get($working-map, $name);
+		} @else {
+			@error 'No such `#{$name}` font name in specified map!';
+		}
+	} @else {
+		@error 'No such `#{$type}` font type in specified map!';
+	}
+
+	@return $value
+}
+
+
+
 // ---------------------------------------
 // Convert Direction
 // ---------------------------------------
