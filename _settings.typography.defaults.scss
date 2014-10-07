@@ -4,22 +4,48 @@
 // =======================================
 
 // ---------------------------------------
-// Base typographic settings
+// Font sizes
 // ---------------------------------------
 
-$base-font-size:        14px !default;
+$font-sizes: (
+	content: (
+		base:  14px,
+		small: 12px,
+		micro: 10px,
+	),
+	headings: (
+		h1: 36px, // .h1
+		h2: 30px, // .h2
+		h3: 24px, // .h3
+		h4: 21px, // .h4
+		h5: 18px, // .h5
+		h6: 16px, // .h6
+	),
+	extra-headings: (
+		giga: 96px,
+		mega: 72px,
+		kilo: 44px,
+	)
+) !default;
 
-$base-line-height:      $base-font-size * 1.5 !default;
+$forms-font-size:              font-size(h5, headings) !default;
+$forms-placeholder-font-size:  $forms-font-size        !default;
+
+// ---------------------------------------
+// Line heights
+// ---------------------------------------
+
+$base-line-height:             font-size(base) * 1.5 !default;
 
 // ---------------------------------------
 // Font famylies
 // ---------------------------------------
 
-$base-font-family:      sans-serif          !default;
-$second-font-family:    sans-serif          !default;
+$base-font-family:             sans-serif          !default;
+$second-font-family:           sans-serif          !default;
 
-$headings-font-family:  $second-font-family !default;
-$forms-font-family:     $base-font-family   !default;
+$headings-font-family:         $second-font-family !default;
+$forms-font-family:            $base-font-family   !default;
 
 // ---------------------------------------
 // Font weights and styles
@@ -31,24 +57,3 @@ $headings-font-weight:         normal !default;
 $breadcrumb-root-font-weight:  bold   !default;
 
 $forms-placeholder-font-style: italic !default;
-
-// ---------------------------------------
-// FONT-SIZES
-// ---------------------------------------
-
-$giga-font-size:              96px !default;
-$mega-font-size:              72px !default;
-$kilo-font-size:              44px !default;
-
-$h1-font-size:                36px !default; // .h1
-$h2-font-size:                30px !default; // .h2
-$h3-font-size:                24px !default; // .h3
-$h4-font-size:                21px !default; // .h4
-$h5-font-size:                18px !default; // .h5
-$h6-font-size:                16px !default; // .h6`
-
-$small-font-size:             12px !default;
-$micro-font-size:             10px !default;
-
-$forms-font-size:             $h5-font-size    !default;
-$forms-placeholder-font-size: $forms-font-size !default;
