@@ -28,7 +28,8 @@
 
 	@extend .nav;
 
-	> .breadcrumb__entry + .breadcrumb__entry:before {
+	> .breadcrumb__entry + .breadcrumb__entry:before,
+	> li + li:before {
 		content: '\00A0' '\2192' '\00A0' '\00A0';
 
 		@if $base-breadcrumb-separator-color != $base-font-color {
@@ -62,7 +63,8 @@
 
 	@extend .nav;
 
-	> .breadcrumb__entry:after {
+	> .breadcrumb__entry:after,
+	> li:after {
 		content: '\00A0' '\00A0' '\2192' '\00A0';
 
 		@if $base-breadcrumb-separator-color != $base-font-color {
@@ -81,6 +83,6 @@
 
 .breadcrumb__root { font-weight: $breadcrumb-root-font-weight; }
 
-.breadcrumb__current {}
+.breadcrumb__is-current {}
 
 } // endif
