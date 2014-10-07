@@ -13,7 +13,7 @@
 // @param {number|string} $size           - desired `font-size` in pixels or
 //                                          font name, specified in default font sizes map
 //                                          or specified one
-// @param {string} $type=false            - group's name of font in default or specified map
+// @param {string} $type=fonts            - group's name of font in default or specified map
 //                                          should be specified only if `$size` set to string
 // @param {bool=true|number} $line-height - should `line-height` rhythm calculation
 //                                          be applied or no.
@@ -32,7 +32,7 @@
 // Thanks to @redclov3r for the `line-height` Sass:
 // twitter.com/redclov3r/status/250301539321798657
 
-@mixin font-size($size, $type:false, $line-height:true, $map:$font-sizes) {
+@mixin font-size($size, $type:fonts, $line-height:true, $map:$font-sizes) {
 
 	$value: null;
 

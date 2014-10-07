@@ -10,7 +10,7 @@
 //
 // @param {string} $name         - font name, specified in default font sizes map
 //                                 or specified one
-// @param {string} $type         - group's name of font in default or specified map
+// @param {string} $type=fonts   - group's name of font in default or specified map
 // @param {map} $map=$font-sizes - should mixin search for font sizes in default,
 //                                 or specified map
 //                                 See `font-class()` mixin for details about format
@@ -20,7 +20,7 @@
 //		.heading { font-size: font-size(h1, headings); }
 //		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
-@function font-size($name, $type, $map:$font-sizes) {
+@function font-size($name, $type:fonts, $map:$font-sizes) {
 
 	$value: null;
 
