@@ -4,6 +4,7 @@
 		$MEDIA
 \*------------------------------------*/
 
+// @todo Reorder, add mixin, improve docs
 
 /**
  * Place any image- and text-like content side-by-side, as per:
@@ -30,34 +31,58 @@
 	@extend %clear;
 }
 
+	.media__image{
+		float: left;
 
-	.media--right {
+		display: block;
 
-		.media__image{
-			float: right;
+		margin-right: $base-spacing-unit;
+	}
 
-			margin-left: $base-spacing-unit;
+	.media__content{
+		overflow: hidden;
+
+		&,
+		> :last-child { margin-bottom: 0; }
+
+	}
+
+
+
+.media--rev {
+
+	.media__image{
+		float: right;
+
+		margin-right: 0;
+		margin-left:  $base-spacing-unit;
+	}
+
+}
+
+
+.media--flush {
+
+	.media__image {
+		padding-right: 0;
+		padding-left:  0;
+	}
+
+}
+
+.media\+ {
+
+	.media__image { padding-right: $twice-spacing-unit; }
+
+	&.media--rev {
+
+		.media__image {
+			padding-right: 0;
+			padding-left:  $twice-spacing-unit;
 		}
 
 	}
 
-
-.media__image{
-	float: left;
-
-	display: block;
-
-	margin-right: $base-spacing-unit;
 }
-
-
-.media__content{
-	overflow: hidden;
-}
-
-	.media__content,
-	.media__content > :last-child {
-		margin-bottom: 0;
-	}
 
 } // endif
