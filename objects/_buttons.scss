@@ -4,6 +4,8 @@
 	$BUTTONS
 \*------------------------------------*/
 
+// @todo Improve and update docs
+
 /**
  * Basic buttons styling.
  *
@@ -68,7 +70,7 @@
  * Make the button inherit sizing from its parent.
  */
 
-.btn--natural {
+.btn--inherit {
 	vertical-align: baseline;
 
 	font-family: inherit;
@@ -93,28 +95,35 @@
  * remains uniform.
  */
 
-.btn--small {
+ .btn-- {
+ 	line-height: 1.5;
+
+ 	padding-right: .6em;
+ 	padding-left:  .6em;
+ }
+
+.btn- {
 	line-height: 2;
 
 	padding-right: .8em;
 	padding-left:  .8em;
 }
 
-.btn--med {
+.btn--reset {
 	line-height: 3;
 
 	padding-right: 1em;
 	padding-left:  1em;
 }
 
-.btn--large {
+.btn\+ {
 	line-height: 4;
 
 	padding-right: 1.5em;
 	padding-left:  1.5em;
 }
 
-.btn--huge {
+.btn\+\+ {
 	line-height: 5;
 
 	padding-right: 2em;
@@ -145,8 +154,6 @@
 
 .btn--full {
 	width: 100%;
-
-	text-align: center;
 
 	padding-right: 0;            /* [1] */
 	padding-left:  0;            /* [1] */
