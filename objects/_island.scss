@@ -4,6 +4,7 @@
 		$ISLAND
 \*------------------------------------*/
 
+// @todo Improve docs
 
 /**
  * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
@@ -17,30 +18,19 @@
  *
  */
 
-.island,
-.islet {
+.island {
 	display: block;
 	@extend %clear;
 
-	> :last-child,
-	> :last-child {
-		margin-bottom:0;
-	}
-
-}
-
-
-.island {
 	padding: $base-spacing-unit;
+
+	> :last-child,
+	> :last-child { margin-bottom: 0; }
+
 }
 
-
-/**
- * Just like `.island`, only smaller.
- */
-
-.islet {
-	padding: $half-spacing-unit;
-}
+.island-       { padding: $half-spacing-unit; }
+.island\+      { padding: $twice-spacing-unit; }
+.island--flush { padding: 0; }
 
 } // endif
