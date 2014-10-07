@@ -12,17 +12,18 @@
 // ---------------------------------------
 
 @import './functions/misc';
+@import './functions/typography';
 
 // ---------------------------------------
 // Mixins
 // ---------------------------------------
 
-@import './mixins/typography';
 @import './mixins/arrows';
 @import './mixins/breakpoint';
 @import './mixins/icons';
 @import './mixins/misc';
 @import './mixins/sprites';
+@import './mixins/typography';
 @import './mixins/vendor';
 
 // ---------------------------------------
