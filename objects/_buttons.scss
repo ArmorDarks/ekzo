@@ -162,12 +162,8 @@
  * Button font-size modifiers based on headers sizes.
  */
 
-.btn--text--h1 { font-size: $h1-font-size; }
-.btn--text--h2 { font-size: $h2-font-size; }
-.btn--text--h3 { font-size: $h3-font-size; }
-.btn--text--h4 { font-size: $h4-font-size; }
-.btn--text--h5 { font-size: $h5-font-size; }
-.btn--text--h6 { font-size: $h6-font-size; }
+@include font-class(headings, $prefix: btn--);
+@include font-class(buttons,  $prefix: btn--);
 
 
 

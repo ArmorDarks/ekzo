@@ -10,59 +10,7 @@
  * heading hierarchy.
  */
 
-h1,.h1 {
-	@include font-size($h1-font-size);
-
-	font-weight: $headings-font-weight;
-
-	@if $apply-color-to-base-headings {
-		color: $base-headings-color;
-	}
-}
-
-h2,.h2 {
-	@include font-size($h2-font-size);
-
-	font-weight: $headings-font-weight;
-
-	@if $apply-color-to-base-headings {
-		color: $base-headings-color;
-	}
-}
-
-h3,.h3 {
-	@include font-size($h3-font-size);
-
-	font-weight: $headings-font-weight;
-
-	@if $apply-color-to-base-headings {
-		color: $base-headings-color;
-	}
-}
-
-h4,.h4 {
-	@include font-size($h4-font-size);
-
-	font-weight: $headings-font-weight;
-
-	@if $apply-color-to-base-headings {
-		color: $base-headings-color;
-	}
-}
-
-h5,.h5 {
-	@include font-size($h5-font-size);
-
-	font-weight: $headings-font-weight;
-
-	@if $apply-color-to-base-headings {
-		color: $base-headings-color;
-	}
-}
-
-h6,.h6 {
-	@include font-size($h6-font-size);
-
+@include font-class(headings, $plain-class: include) {
 	font-weight: $headings-font-weight;
 
 	@if $apply-color-to-base-headings {
@@ -76,28 +24,8 @@ h6,.h6 {
  * promos, etc.
  */
 
-.h-giga {
-		@include font-size($giga-font-size);
-
-		@if $apply-color-to-extra-headings {
-			color: $extra-headings-color;
-		}
-}
-
-.h-mega {
-		@include font-size($mega-font-size);
-
-		@if $apply-color-to-extra-headings {
-			color: $extra-headings-color;
-		}
-}
-
-.h-kilo {
-		font-family: $headings-font-family;
-
-		@include font-size($kilo-font-size);
-
-		@if $apply-color-to-extra-headings {
-			color: $extra-headings-color;
-		}
+@include font-class(extra-headings, $prefix: text--) {
+	@if $apply-color-to-extra-headings {
+		color: $extra-headings-color;
+	}
 }
