@@ -16,11 +16,7 @@
  *
  */
 
-.a-nav {
-
-	> a { display: inline-block; }
-
-}
+.a-nav > a { display: inline-block; }
 
 
 /**
@@ -37,14 +33,9 @@
  */
 
 .a-stacked-nav {
-
 	@extend %clear;
 
-	> a {
-		float: left;
-
-		clear: both;
-	}
+	> a { float: left; clear: both; }
 
 }
 
