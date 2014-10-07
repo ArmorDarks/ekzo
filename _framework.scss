@@ -7,7 +7,6 @@
 //
 // @version: 1.19.1
 
-
 // ---------------------------------------
 // Default options, styles, colors etc
 // ---------------------------------------
@@ -19,13 +18,11 @@
 @import 'settings.options.defaults';
 @import 'settings.responsive.defaults';
 
-
 // ---------------------------------------
 // Functions
 // ---------------------------------------
 
 @import './functions/misc';
-
 
 // ---------------------------------------
 // Mixins
@@ -39,7 +36,6 @@
 @import './mixins/sprites';
 @import './mixins/vendor';
 
-
 // ---------------------------------------
 // Base styles
 // ---------------------------------------
@@ -51,7 +47,6 @@
 @import './base/main';
 
 @import './base/debug';
-
 
 // ---------------------------------------
 // Generic. Mostly unclassed HTML elements
@@ -68,7 +63,6 @@
 @import './generic/tables';
 @import './generic/texts';
 
-
 // ---------------------------------------
 // Helpers
 // ---------------------------------------
@@ -80,7 +74,6 @@
 @import './helpers/spacing';
 @import './helpers/typography';
 @import './helpers/widths';
-
 
 // ---------------------------------------
 // Objects and abstractions
