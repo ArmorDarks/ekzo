@@ -7,24 +7,20 @@
 
 @include placeholder() {
 	font-family: $forms-font-family;
-	font-size: $forms-placeholder-font-size;
-	font-style: $forms-placeholder-font-style;
+	font-size:   $forms-placeholder-font-size;
+	font-style:  $forms-placeholder-font-style;
 
-	color: $forms-placeholder-color;
+	color:       $forms-placeholder-color;
 }
 
 
-fieldset + fieldset {
-	margin-top: $twice-spacing-unit;
-}
+fieldset + fieldset { margin-top: $twice-spacing-unit; }
 
 
 .text-input,
 input,
 textarea,
-fieldset {
-	@include vendor(box-sizing, border-box);
-}
+fieldset { @include vendor(box-sizing, border-box); }
 
 
 .text-input,
@@ -35,41 +31,10 @@ label {
 	font: $forms-font-size $forms-font-family;
 }
 
+
 .text-input,
 input,
 textarea{ background-color: $forms-bg-color; }
-
-
-
-/**
- * Group sets of form fields in a list, e.g.:
- *
-		<ul class="form-fields">
-				<li>
-						<label />
-						<input />
-				</li>
-				<li>
-						<label />
-						<select />
-				</li>
-				<li>
-						<label />
-						<input />
-				</li>
-		</ul>
- *
- */
-
-.form-fields {
-	list-style: none;
-
-	margin: 0;
-
-	> li + li { margin-top: $base-spacing-unit; }
-
-}
-
 
 
 /**
