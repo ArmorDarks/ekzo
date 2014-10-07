@@ -4,6 +4,7 @@
 		$FLAG
 \*------------------------------------*/
 
+// @todo Reorder, add mixin, improve docs
 
 /**
 * Place any image- and text-like content side-by-side, arranged vertically,
@@ -11,7 +12,7 @@
 * E.g.:
 *
 		<div class="flag">
-			<div class="flag__img">
+			<div class="flag__image">
 				<img src="" alt="">
 			</div>
 			<div class="flag__content">
@@ -19,69 +20,94 @@
 			</div>
 		</div>
  *
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
  */
 
 .flag {
-	display: table;
-	width: 100%;
+	display: table; // 1
+	width: 100%; // 2
 }
 
 
-	.flag--top {
+	.flag__image,
+	.flag__content {
+		display: table-cell;
+		vertical-align: middle;
+	}
 
-		.flag__img,
-		.flag__content {
-			vertical-align: top;
+
+	.flag__image {
+		padding-right: $base-spacing-unit; // Flag images have a space between them and the body of the object
+
+		> img {
+			display: block;
+			max-width: none;
 		}
 
 	}
 
 
-	.flag--bottom {
+	.flag__content {
+		width: 100%; // Forces the `.flag__body` to take up all remaining space.
 
-		.flag__img,
-		.flag__content {
-			vertical-align: bottom;
-		}
+		&,
+		> :last-child { margin-bottom: 0; }
 
 	}
 
 
-	.flag--right {
 
-		.flag__img {
+
+
+.flag--top {
+
+	.flag__image,
+	.flag__content { vertical-align: top; }
+
+}
+
+
+.flag--bottom {
+
+	.flag__image,
+	.flag__content { vertical-align: bottom; }
+
+}
+
+
+.flag--rev {
+
+	.flag__image {
+		padding-right: 0;
+		padding-left:  $base-spacing-unit;
+	}
+
+}
+
+.flag--flush {
+
+	.flag__image {
+		padding-right: 0;
+		padding-left:  0;
+	}
+
+}
+
+.flag\+ {
+
+	.flag__image { padding-right: $twice-spacing-unit; }
+
+	&.flag--rev {
+
+		.flag__image {
 			padding-right: 0;
-			padding-left: $base-spacing-unit;
+			padding-left:  $twice-spacing-unit;
 		}
 
 	}
 
-
-.flag__img,
-.flag__content {
-	display: table-cell;
-	vertical-align: middle;
 }
-
-
-.flag__img {
-	padding-right: $base-spacing-unit;
-
-	> img {
-		display: block;
-		max-width: none;
-	}
-
-}
-
-
-.flag__content {
-	width: 100%;
-}
-
-	.flag__content,
-	.flag__content > :last-child {
-		margin-bottom: 0;
-	}
 
 } // endif
