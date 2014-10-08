@@ -177,11 +177,11 @@
 	@font-face {
 		font-family: '#{$font}';
 
-		src: url(#{$base-fonts-path}#{$file-name}.eot?#{$version});
-		src: url(#{$base-fonts-path}#{$file-name}.eot?#{$version}#iefix)      format('embedded-opentype'),
-			 url(#{$base-fonts-path}#{$file-name}.woff?#{$version})           format('woff'),
-			 url(#{$base-fonts-path}#{$file-name}.ttf?#{$version})            format('truetype'),
-			 url(#{$base-fonts-path}#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+		src: url(#{$base-fonts-path}/#{$file-name}.eot?#{$version});
+		src: url(#{$base-fonts-path}/#{$file-name}.eot?#{$version}#iefix)      format('embedded-opentype'),
+			 url(#{$base-fonts-path}/#{$file-name}.woff?#{$version})           format('woff'),
+			 url(#{$base-fonts-path}/#{$file-name}.ttf?#{$version})            format('truetype'),
+			 url(#{$base-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
 
 		font-weight: $weight;
 		font-style:  $style;
@@ -194,7 +194,7 @@
 	// @media screen and (-webkit-min-device-pixel-ratio: 0) {
 	// 	@font-face {
 	// 		font-family: '#{$font}';
-	// 		src: url(#{$base-fonts-path}#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+	// 		src: url(#{$base-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
 	// 	}
 	// }
 

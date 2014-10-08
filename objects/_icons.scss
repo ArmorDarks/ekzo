@@ -52,7 +52,7 @@
 }
 
 .sprite {
-	background: url(#{$base-images-path}#{$base-sprites-file}) no-repeat;
+	background: url(#{$base-images-path}/#{$base-sprites-file}) no-repeat;
 
 	vertical-align: middle;
 }
