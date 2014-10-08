@@ -30,10 +30,10 @@
 
 	> .breadcrumb__entry + .breadcrumb__entry:before,
 	> li + li:before {
-		content: '\00A0' '\2192' '\00A0' '\00A0';
+		content: $breadcrumb-delimiter;
 
-		@if $base-breadcrumb-separator-color != $base-font-color {
-			color: $base-breadcrumb-separator-color;
+		@if $base-breadcrumb-delimiter-color != $base-font-color {
+			color: $base-breadcrumb-delimiter-color;
 		}
 
 	}
@@ -65,10 +65,10 @@
 
 	> .breadcrumb__entry:after,
 	> li:after {
-		content: '\00A0' '\00A0' '\2192' '\00A0';
+		content: $breadcrumb-rev-delimiter;
 
-		@if $base-breadcrumb-separator-color != $base-font-color {
-			color: $base-breadcrumb-separator-color;
+		@if $base-breadcrumb-delimiter-color != $base-font-color {
+			color: $base-breadcrumb-delimiter-color;
 		}
 
 	}

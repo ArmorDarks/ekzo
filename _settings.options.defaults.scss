@@ -38,6 +38,16 @@ $base-links-hover-colored:      true  !default;
 $base-button-unline:            true  !default;
 
 // ---------------------------------------
+// Contents and delimiters
+// ---------------------------------------
+
+$breadcrumb-delimiter:     '\00A0' '\2192' '\00A0' '\00A0' !default;
+$breadcrumb-rev-delimiter: '\00A0' '\00A0' '\2192' '\00A0' !default;
+
+$link-go-content:          '\00A0' '\00BB'                 !default;
+$link-back-content:        '\00AB' '\00A0'                 !default;
+
+// ---------------------------------------
 // BORDER-BOX
 // ---------------------------------------
 
