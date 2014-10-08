@@ -40,7 +40,7 @@
 .pack--auto {}
 
 .pack-       { border-spacing: $half-spacing-unit; }
-.pack\+      { border-spacing: $twice-spacing-unit; }
+.pack\+      { border-spacing: $double-spacing-unit; }
 .pack--flush { border-spacing: 0; }
 
 } // endif
