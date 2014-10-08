@@ -169,8 +169,8 @@
  * Button font-size modifiers based on headers sizes.
  */
 
-@include font-class(headings, $prefix: btn--);
-@include font-class(buttons,  $prefix: btn--);
+@include font-size-class(headings, $prefix: btn--);
+@include font-size-class(buttons,  $prefix: btn--);
 
 
 

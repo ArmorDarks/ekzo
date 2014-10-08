@@ -8,4 +8,4 @@
  * A series of classes for setting varius text sizes
  */
 
-@include font-class(content, $prefix: text--);
+@include font-size-class(content, $prefix: text--);
