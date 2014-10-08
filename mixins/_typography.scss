@@ -21,7 +21,7 @@
 //                                          `line-height`.
 // @param {map} $map=$font-sizes          - should mixin search for font sizes in default,
 //                                          or specified map
-//                                          See `font-class()` mixin for details about format
+//                                          See `font-size-class()` mixin for details about format
 //
 // @example
 //
@@ -95,10 +95,10 @@
 //
 // @example
 //
-//		@include font-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
+//		@include font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
 //
 
-@mixin font-class($type, $name:false, $plain-class:false, $prefix:'', $map:$font-sizes ) {
+@mixin font-size-class($type, $name:false, $plain-class:false, $prefix:'', $map:$font-sizes ) {
 
 	$working-map: null;
 	$class:       null;
