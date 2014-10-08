@@ -15,9 +15,8 @@
 //                                          or specified one
 // @param {string} $type=content            - group's name of font in default or specified map
 //                                          should be specified only if `$size` set to string
-// @param {bool=true|number} $line-height - should `line-height` rhythm calculation
-//                                          be applied or no.
-//                                          Set to value in pixels to define custom
+// @param {bool=true|number} $line-height - should `line-height` rhythm calculation be applied or no.
+//                                          Set to number in pixels to define custom
 //                                          `line-height`.
 // @param {map} $map=$font-sizes          - should mixin search for font sizes in default,
 //                                          or specified map
@@ -73,6 +72,10 @@
 // @param {strng} $type          - name of group in specified map
 // @param {strng} $name=false    - specific name of font-size which should be called
 //                                 If specified, only 1 specified class will be outputed
+// @param {bool=true|number} $line-height
+//                               - should `line-height` rhythm calculation be applied or no.
+//                                 Set to number in pixels to define custom
+//                                 `line-height`.
 // @param {boolean|'include'} $plain-class=false
 //                               - whether class shouid be outputed as normal, or as
 //                                 plain (like `h1`, without dot).
@@ -98,7 +101,7 @@
 //		@include font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
 //
 
-@mixin font-size-class($type, $name:false, $plain-class:false, $prefix:'', $map:$font-sizes ) {
+@mixin font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$font-sizes ) {
 
 	$working-map: null;
 	$class:       null;
@@ -122,7 +125,7 @@
 			}
 
 			#{$class} {
-				font-size: $value;
+				@include font-size($value, $line-height:$line-height);
 				@content
 			}
 
@@ -141,7 +144,7 @@
 		}
 
 		#{$class} {
-			font-size: $value;
+			@include font-size($value, $line-height:$line-height);
 			@content
 		}
 
