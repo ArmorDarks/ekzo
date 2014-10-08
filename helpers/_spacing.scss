@@ -35,13 +35,13 @@
 	.#{$n}margin--ends          { margin-top:    $base-spacing-unit !important; margin-bottom: $base-spacing-unit !important; }
 	.#{$n}margin--sides         { margin-right:  $base-spacing-unit !important; margin-left:   $base-spacing-unit !important; }
 
-	.#{$n}margin\+              { margin:        $twice-spacing-unit !important; }
-	.#{$n}margin--top\+         { margin-top:    $twice-spacing-unit !important; }
-	.#{$n}margin--right\+       { margin-right:  $twice-spacing-unit !important; }
-	.#{$n}margin--bottom\+      { margin-bottom: $twice-spacing-unit !important; }
-	.#{$n}margin--left\+        { margin-left:   $twice-spacing-unit !important; }
-	.#{$n}margin--ends\+        { margin-top:    $twice-spacing-unit !important; margin-bottom: $twice-spacing-unit !important; }
-	.#{$n}margin--sides\+       { margin-right:  $twice-spacing-unit !important; margin-left:   $twice-spacing-unit !important; }
+	.#{$n}margin\+              { margin:        $double-spacing-unit !important; }
+	.#{$n}margin--top\+         { margin-top:    $double-spacing-unit !important; }
+	.#{$n}margin--right\+       { margin-right:  $double-spacing-unit !important; }
+	.#{$n}margin--bottom\+      { margin-bottom: $double-spacing-unit !important; }
+	.#{$n}margin--left\+        { margin-left:   $double-spacing-unit !important; }
+	.#{$n}margin--ends\+        { margin-top:    $double-spacing-unit !important; margin-bottom: $double-spacing-unit !important; }
+	.#{$n}margin--sides\+       { margin-right:  $double-spacing-unit !important; margin-left:   $double-spacing-unit !important; }
 
 	.#{$n}margin--flush         { margin:        0 !important; }
 	.#{$n}margin--top--flush    { margin-top:    0 !important; }
@@ -70,13 +70,13 @@
 	.#{$n}bleed--ends          { margin-top:    -$base-spacing-unit !important; margin-bottom: -$base-spacing-unit !important; }
 	.#{$n}bleed--sides         { margin-right:  -$base-spacing-unit !important; margin-left:   -$base-spacing-unit !important; }
 
-	.#{$n}bleed\+              { margin:        -$twice-spacing-unit !important; }
-	.#{$n}bleed--top\+         { margin-top:    -$twice-spacing-unit !important; }
-	.#{$n}bleed--right\+       { margin-right:  -$twice-spacing-unit !important; }
-	.#{$n}bleed--bottom\+      { margin-bottom: -$twice-spacing-unit !important; }
-	.#{$n}bleed--left\+        { margin-left:   -$twice-spacing-unit !important; }
-	.#{$n}bleed--ends\+        { margin-top:    -$twice-spacing-unit !important; margin-bottom: -$twice-spacing-unit !important; }
-	.#{$n}bleed--sides\+       { margin-right:  -$twice-spacing-unit !important; margin-left:   -$twice-spacing-unit !important; }
+	.#{$n}bleed\+              { margin:        -$double-spacing-unit !important; }
+	.#{$n}bleed--top\+         { margin-top:    -$double-spacing-unit !important; }
+	.#{$n}bleed--right\+       { margin-right:  -$double-spacing-unit !important; }
+	.#{$n}bleed--bottom\+      { margin-bottom: -$double-spacing-unit !important; }
+	.#{$n}bleed--left\+        { margin-left:   -$double-spacing-unit !important; }
+	.#{$n}bleed--ends\+        { margin-top:    -$double-spacing-unit !important; margin-bottom: -$double-spacing-unit !important; }
+	.#{$n}bleed--sides\+       { margin-right:  -$double-spacing-unit !important; margin-left:   -$double-spacing-unit !important; }
 
 
 
@@ -100,13 +100,13 @@
 	.#{$n}padding--ends          { padding-top:    $base-spacing-unit !important; padding-bottom: $base-spacing-unit !important; }
 	.#{$n}padding--sides         { padding-right:  $base-spacing-unit !important; padding-left:   $base-spacing-unit !important; }
 
-	.#{$n}padding\+              { padding:        $twice-spacing-unit !important; }
-	.#{$n}padding--top\+         { padding-top:    $twice-spacing-unit !important; }
-	.#{$n}padding--right\+       { padding-right:  $twice-spacing-unit !important; }
-	.#{$n}padding--bottom\+      { padding-bottom: $twice-spacing-unit !important; }
-	.#{$n}padding--left\+        { padding-left:   $twice-spacing-unit !important; }
-	.#{$n}padding--ends\+        { padding-top:    $twice-spacing-unit !important; padding-bottom: $twice-spacing-unit !important; }
-	.#{$n}padding--sides\+       { padding-right:  $twice-spacing-unit !important; padding-left:   $twice-spacing-unit !important; }
+	.#{$n}padding\+              { padding:        $double-spacing-unit !important; }
+	.#{$n}padding--top\+         { padding-top:    $double-spacing-unit !important; }
+	.#{$n}padding--right\+       { padding-right:  $double-spacing-unit !important; }
+	.#{$n}padding--bottom\+      { padding-bottom: $double-spacing-unit !important; }
+	.#{$n}padding--left\+        { padding-left:   $double-spacing-unit !important; }
+	.#{$n}padding--ends\+        { padding-top:    $double-spacing-unit !important; padding-bottom: $double-spacing-unit !important; }
+	.#{$n}padding--sides\+       { padding-right:  $double-spacing-unit !important; padding-left:   $double-spacing-unit !important; }
 
 	.#{$n}padding--flush         { padding:        0 !important; }
 	.#{$n}padding--top--flush    { padding-top:    0 !important; }

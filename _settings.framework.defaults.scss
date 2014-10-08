@@ -7,7 +7,7 @@
 
 $base-spacing-unit:    $base-line-height      !default;
 $half-spacing-unit:    $base-spacing-unit / 2 !default;
-$twice-spacing-unit:   $base-spacing-unit * 2 !default;
+$double-spacing-unit:  $base-spacing-unit * 2 !default;
 $triple-spacing-unit:  $base-spacing-unit * 3 !default;
 
 $line-height-ratio:    $base-line-height / font-size(base) !default;

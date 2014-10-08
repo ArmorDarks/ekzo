@@ -150,9 +150,9 @@
 	}
 
 	.#{$namespace}grid\+ {
-		margin-left: -$twice-spacing-unit;
+		margin-left: -$double-spacing-unit;
 
-		> .grid__item { padding-left: $twice-spacing-unit; }
+		> .grid__item { padding-left: $double-spacing-unit; }
 
 	}
 

@@ -72,13 +72,13 @@
 
 .media\+ {
 
-	.media__image { padding-right: $twice-spacing-unit; }
+	.media__image { padding-right: $double-spacing-unit; }
 
 	&.media--rev {
 
 		.media__image {
 			padding-right: 0;
-			padding-left:  $twice-spacing-unit;
+			padding-left:  $double-spacing-unit;
 		}
 
 	}
