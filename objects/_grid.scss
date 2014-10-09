@@ -125,7 +125,7 @@
 // Grid modifiers
 // ---------------------------------------
 
-@mixin grid-types($namespace: '') {
+@mixin ekzo-grid-types($namespace: '') {
 
 	// @todo Check do we need it
 	.#{$namespace}grid--reset {

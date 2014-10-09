@@ -23,7 +23,7 @@
 //		.heading { font-size: font-size(h1, headings); }
 //		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
-@function font-size($name, $type:content, $map:$font-sizes) {
+@function ekzo-font-size($name, $type:content, $map:$font-sizes) {
 
 	$value: null;
 
