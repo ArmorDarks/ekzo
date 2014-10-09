@@ -11,7 +11,7 @@
  *
  */
 
-@mixin vendor($property, $value...) {
+@mixin ekzo-vendor($property, $value...) {
 	-webkit-#{$property}: $value;
 	   -moz-#{$property}: $value;
 	    -ms-#{$property}: $value;
@@ -31,7 +31,7 @@
  *
  */
 
-@mixin placeholder() {
+@mixin ekzo-placeholder() {
 	::-webkit-input-placeholder { @content }
 			  :-moz-placeholder { @content }
 			 ::-moz-placeholder { @content }
@@ -56,7 +56,7 @@
  * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
  */
 
-@mixin keyframe($animation-name) {
+@mixin ekzo-keyframe($animation-name) {
 
 	@-webkit-keyframes #{$animation-name} { @content; }
 

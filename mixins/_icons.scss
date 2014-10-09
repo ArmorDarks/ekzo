@@ -22,7 +22,7 @@
 //      {string=sprite--} $icons-prefix - prefix which will be appended to
 //                                        icon name
 
-@mixin icons() {
+@mixin ekzo-icons() {
 
 	@each $name, $param in $icons {
 

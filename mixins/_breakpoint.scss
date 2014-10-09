@@ -33,7 +33,7 @@
 // 		}
 //
 
-@mixin breakpoint($breakpoint, $custom-map:false) {
+@mixin ekzo-breakpoint($breakpoint, $custom-map:false) {
 
 	$breakpoint-value: '';
 	$breakpoint-map:   '';

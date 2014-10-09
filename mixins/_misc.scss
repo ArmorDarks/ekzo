@@ -17,7 +17,7 @@
  * @thierrylemoulec for refining and improving my initial mixin.
  */
 
-@mixin headings($from: 1, $to: 6) {
+@mixin ekzo-headings($from: 1, $to: 6) {
 
 	%base-heading {
 		@content;
@@ -47,7 +47,7 @@
  * Where `$truncation-boundary` is a united measurement.
  */
 
-@mixin truncate($truncation-boundary) {
+@mixin ekzo-truncate($truncation-boundary) {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
@@ -63,22 +63,22 @@
 //
 // Quick way to specify multiple border radii at once
 
-@mixin border-top-radius($radius) {
+@mixin ekzo-border-top-radius($radius) {
 	border-top-left-radius:  $radius;
 	border-top-right-radius: $radius;
 }
 
-@mixin border-bottom-radius($radius) {
+@mixin ekzo-border-bottom-radius($radius) {
 	border-bottom-left-radius:  $radius;
 	border-bottom-right-radius: $radius;
 }
 
-@mixin border-left-radius($radius) {
+@mixin ekzo-border-left-radius($radius) {
 	border-top-left-radius:    $radius;
 	border-bottom-left-radius: $radius;
 }
 
-@mixin border-right-radius($radius) {
+@mixin ekzo-border-right-radius($radius) {
 	border-top-right-radius:    $radius;
 	border-bottom-right-radius: $radius;
 }

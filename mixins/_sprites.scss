@@ -26,7 +26,7 @@
 //      {string=sprite--} $sprites-prefix - prefix which will be appended to
 //                                         sprite name
 
-@mixin sprites() {
+@mixin ekzo-sprites() {
 
 	@each $name, $params in $sprites {
 
@@ -54,7 +54,7 @@
 //
 // @todo Improve docs
 
-@function sprite-map($sprite, $property:false) {
+@function ekzo-sprite-map($sprite, $property:false) {
 
 	@if map-has-key($sprites, $sprite) {
 		$sprite: map-get($sprites, $sprite);
@@ -89,7 +89,7 @@
 //
 // @todo Improve docs
 
-@mixin sprite($name, $type:false, $padding:false, $sufix-1:false, $sufix-2:false, $sufix-3:false) {
+@mixin ekzo-sprite($name, $type:false, $padding:false, $sufix-1:false, $sufix-2:false, $sufix-3:false) {
 
 	$prefixed-name: $sprites-prefix + $name;
 
