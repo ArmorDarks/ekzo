@@ -10,7 +10,7 @@
  * heading hierarchy.
  */
 
-@include font-size-class(headings, $plain-class: include) {
+@include ekzo-font-size-class(headings, $plain-class: include) {
 	font-weight: $headings-font-weight;
 
 	@if $apply-color-to-base-headings {
@@ -24,7 +24,7 @@
  * promos, etc.
  */
 
-@include font-size-class(extra-headings, $prefix: text--) {
+@include ekzo-font-size-class(extra-headings, $prefix: text--) {
 	@if $apply-color-to-extra-headings {
 		color: $extra-headings-color;
 	}

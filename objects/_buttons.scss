@@ -171,8 +171,8 @@
 
 $base-button-prefix: btn--;
 
-@include font-size-class(headings, $prefix: $base-button-prefix, $line-height:false);
-@include font-size-class(buttons,  $prefix: $base-button-prefix, $line-height:false);
+@include ekzo-font-size-class(headings, $prefix: $base-button-prefix, $line-height:false);
+@include ekzo-font-size-class(buttons,  $prefix: $base-button-prefix, $line-height:false);
 
 
 

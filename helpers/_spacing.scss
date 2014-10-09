@@ -124,7 +124,7 @@
 // Call all spacing helpers
 // ---------------------------------------
 
-@include spacings();
+@include ekzo-spacings();
 
 
 
@@ -146,8 +146,8 @@
 @if $responsive-spacing {
 
 	@each $breakpoint, $value in $breakpoints {
-		@include breakpoint($breakpoint) {
-			@include spacings('#{$breakpoint}-');
+		@include ekzo-breakpoint($breakpoint) {
+			@include ekzo-spacings('#{$breakpoint}-');
 		}
 	}
 

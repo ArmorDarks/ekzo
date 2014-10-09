@@ -24,9 +24,9 @@
 //
 // @example
 //
-//		.heading { @include font-size(10px, 25px); }
-//		.heading { @include font-size(h1, headings); }
-//		.heading { @include font-size(big, my-group, $map:$my-custom-sizes); }
+//		.heading { @include ekzo-font-size(10px, 25px); }
+//		.heading { @include ekzo-font-size(h1, headings); }
+//		.heading { @include ekzo-font-size(big, my-group, $map:$my-custom-sizes); }
 //
 // Thanks to @redclov3r for the `line-height` Sass:
 // twitter.com/redclov3r/status/250301539321798657
@@ -98,7 +98,7 @@
 //
 // @example
 //
-//		@include font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
+//		@include ekzo-font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
 //
 
 @mixin ekzo-font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$font-sizes ) {
@@ -125,7 +125,7 @@
 			}
 
 			#{$class} {
-				@include font-size($value, $line-height:$line-height);
+				@include ekzo-font-size($value, $line-height:$line-height);
 				@content
 			}
 
@@ -144,7 +144,7 @@
 		}
 
 		#{$class} {
-			@include font-size($value, $line-height:$line-height);
+			@include ekzo-font-size($value, $line-height:$line-height);
 			@content
 		}
 
@@ -172,7 +172,7 @@
 //
 // @example
 //
-//		@include font(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
+//		@include ekzo-font(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
 //
 
 @mixin ekzo-font($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg-id:$file-name) {

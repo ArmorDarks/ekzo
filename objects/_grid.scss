@@ -51,7 +51,7 @@
 	.grid__item {
 		display: inline-block;
 
-		@include vendor(box-sizing, border-box);
+		@include ekzo-vendor(box-sizing, border-box);
 
 		vertical-align: top;
 
@@ -205,14 +205,14 @@
 
 }
 
-@include grid-types();
+@include ekzo-grid-types();
 
 @if $enable-grid {
 	@if $responsive-grid {
 
 		@each $breakpoint, $value in $breakpoints {
-			@include breakpoint($breakpoint) {
-				@include grid-types('#{$breakpoint}-');
+			@include ekzo-breakpoint($breakpoint) {
+				@include ekzo-grid-types('#{$breakpoint}-');
 			}
 		}
 
