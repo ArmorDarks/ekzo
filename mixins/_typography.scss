@@ -13,7 +13,7 @@
 // @param {number|string} $size           - desired `font-size` in pixels or
 //                                          font name, specified in default font sizes map
 //                                          or specified one
-// @param {string} $type=content            - group's name of font in default or specified map
+// @param {string} $type=text            - group's name of font in default or specified map
 //                                          should be specified only if `$size` set to string
 // @param {bool=true|number} $line-height - should `line-height` rhythm calculation be applied or no.
 //                                          Set to number in pixels to define custom
@@ -31,7 +31,7 @@
 // Thanks to @redclov3r for the `line-height` Sass:
 // twitter.com/redclov3r/status/250301539321798657
 
-@mixin ekzo-font-size($size, $type:content, $line-height:true, $map:$ekzo-font-sizes) {
+@mixin ekzo-font-size($size, $type:text, $line-height:true, $map:$ekzo-font-sizes) {
 
 	$value: null;
 
