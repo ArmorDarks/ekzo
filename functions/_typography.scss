@@ -13,7 +13,7 @@
 //
 // @param {string} $name         - font name, specified in default font sizes map
 //                                 or specified one
-// @param {string} $type=content   - group's name of font in default or specified map
+// @param {string} $type=text   - group's name of font in default or specified map
 // @param {map} $map=$font-sizes - should mixin search for font sizes in default,
 //                                 or specified map
 //                                 See `font-size-class()` mixin for details about format
@@ -23,7 +23,7 @@
 //		.heading { font-size: ekzo-font-size(h1, headings); }
 //		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
-@function ekzo-font-size($name, $type:content, $map:$ekzo-font-sizes) {
+@function ekzo-font-size($name, $type:text, $map:$ekzo-font-sizes) {
 
 	$value: null;
 
