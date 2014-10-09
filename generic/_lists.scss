@@ -1,4 +1,4 @@
-@if $enable-lists {
+@if $ekzo-enable-lists {
 
 /*------------------------------------*\
 		$LISTS
@@ -12,7 +12,7 @@
 ul, ol {
 	// margin-left already defined in shared
 
-	li + li { margin-top: $base-spacing-unit; }
+	li + li { margin-top: $ekzo-spacing-unit; }
 
 }
 
@@ -58,16 +58,16 @@ ul, ol {
  * Applies margin between ul's elements
  */
 
-.list-          > li + li { margin-top: $half-spacing-unit; }
-.list\+         > li + li { margin-top: $double-spacing-unit; }
+.list-          > li + li { margin-top: $ekzo-half-spacing-unit; }
+.list\+         > li + li { margin-top: $ekzo-double-spacing-unit; }
 .list--li-flush > li + li { margin-top: 0; }
 
-.list--margin-       > li { margin: $half-spacing-unit; }
-.list--margin\+      > li { margin: $double-spacing-unit; }
+.list--margin-       > li { margin: $ekzo-half-spacing-unit; }
+.list--margin\+      > li { margin: $ekzo-double-spacing-unit; }
 .list--margin--flush > li { margin: 0; }
 
-.list--padding-       > li { padding: $half-spacing-unit; }
-.list--padding\+      > li { padding: $double-spacing-unit; }
+.list--padding-       > li { padding: $ekzo-half-spacing-unit; }
+.list--padding\+      > li { padding: $ekzo-double-spacing-unit; }
 .list--padding--flush > li { padding: 0; }
 
 

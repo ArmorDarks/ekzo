@@ -1,4 +1,4 @@
-@if $enable-icons {
+@if $ekzo-enable-icons {
 
 /*------------------------------------*\
 		$ICONS and $SPRITES
@@ -43,16 +43,16 @@
 	font-weight: normal;
 }
 
-@include ekzo-font($base-icon-font, $base-icon-font-version);
+@include ekzo-font($ekzo-icon-font, $ekzo-icon-font-version);
 
 .icon {
-	font-family: '#{$base-icon-font}';
+	font-family: '#{$ekzo-icon-font}';
 
 	&:before { position: relative; }
 }
 
 .sprite {
-	background: url(#{$base-images-path}/#{$base-sprites-file}) no-repeat;
+	background: url(#{$ekzo-images-path}/#{$ekzo-sprites-file}) no-repeat;
 
 	vertical-align: middle;
 }

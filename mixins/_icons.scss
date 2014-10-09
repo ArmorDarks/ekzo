@@ -9,9 +9,9 @@
 // within single loop.
 //
 // All sprites names will be appended with specified
-// in projects settings `$icons-prefix`
+// in projects settings `$ekzo-icons-prefix`
 //
-// @dep {map} $icons                    - map of sprites
+// @dep {map} $ekzo-icons               - map of sprites
 //
 //      @example
 //
@@ -24,9 +24,9 @@
 
 @mixin ekzo-icons() {
 
-	@each $name, $param in $icons {
+	@each $name, $param in $ekzo-icons {
 
-		$prefixed-name: $icons-prefix + $name;
+		$prefixed-name: $ekzo-icons-prefix + $name;
 
 		.#{$prefixed-name}:before { content: $param; }
 

@@ -16,16 +16,16 @@ html {
 
 	overflow-y: scroll; // 2
 
-	font-family: $base-font-family; // 3
+	font-family: $ekzo-font-family; // 3
 
 	font-size:   ekzo-font-size(base);
-	line-height: $base-line-height;
+	line-height: $ekzo-line-height;
 
-	font-weight: $base-font-weight; // 3
+	font-weight: $ekzo-font-weight; // 3
 
-	color: $base-font-color; // 3
+	color: $ekzo-text-color; // 3
 
-	background: #{$base-bg};
+	background: #{$ekzo-bg};
 
 	-moz-osx-font-smoothing: grayscale;   // 4
 	 -webkit-font-smoothing: antialiased; // 4

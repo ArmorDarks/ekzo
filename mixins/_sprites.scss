@@ -14,7 +14,7 @@
 // All sprites names will be appended with specified
 // in projects settings `$sprites-prefix`
 //
-// @dep {map} $sprites                    - 2-dimensional map of sprites.
+// @dep {map} $ekzo-sprites               - 2-dimensional map of sprites.
 //
 //      @example
 //
@@ -28,9 +28,9 @@
 
 @mixin ekzo-sprites() {
 
-	@each $name, $params in $sprites {
+	@each $name, $params in $ekzo-sprites {
 
-		$prefixed-name: $sprites-prefix + $name;
+		$prefixed-name: $ekzo-sprites-prefix + $name;
 
 		.#{$prefixed-name} {
 			width: map-get($params, width);
@@ -50,23 +50,23 @@
 
 // ----
 // Quick way to look for specific property in
-// 2-dimensional map `$sprites`
+// 2-dimensional map `$ekzo-sprites`
 //
 // @todo Improve docs
 
 @function ekzo-sprite-map($sprite, $property:false) {
 
-	@if map-has-key($sprites, $sprite) {
-		$sprite: map-get($sprites, $sprite);
+	@if map-has-key($ekzo-sprites, $sprite) {
+		$sprite: map-get($ekzo-sprites, $sprite);
 	} @else {
-		@error "Unknown sprite `#{$sprite}` in `$sprites`.";
+		@error "Unknown sprite `#{$sprite}` in `$ekzo-sprites`.";
 		@return null;
 	}
 
 	@if map-has-key($sprite, $property) {
 		@return map-get($sprite, $property);
 	} @else {
-		@error "Unknown sprite property `#{$property}` in `$sprites`.";
+		@error "Unknown sprite property `#{$property}` in `$ekzo-sprites`.";
 		@return null;
 	}
 
@@ -74,10 +74,10 @@
 
 
 // ----
-// Call specific sprite from 2-dimensional map `$sprites`
+// Call specific sprite from 2-dimensional map `$ekzo-sprites`
 // with specific parameters or CSS properties
 //
-// @dep {map} $sprites                    - 2-dimensional map of sprites.
+// @dep {map} $ekzo-sprites               - 2-dimensional map of sprites.
 //                                          See `sprites()` mixin for details
 //      {string=sprite--} $sprites-prefix - prefix which will be appended to
 //                                          sprite name
@@ -91,7 +91,7 @@
 
 @mixin ekzo-sprite($name, $type:false, $padding:false, $sufix-1:false, $sufix-2:false, $sufix-3:false) {
 
-	$prefixed-name: $sprites-prefix + $name;
+	$prefixed-name: $ekzo-sprites-prefix + $name;
 
 	$width:       sprite-map($name, width)  !default;
 	$height:      sprite-map($name, height) !default;

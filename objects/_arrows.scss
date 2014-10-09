@@ -1,7 +1,7 @@
-@if $enable-arrows {
+@if $ekzo-enable-arrows {
 
 /*------------------------------------*\
-	$ARROWS
+	$ekzo-ARROWS
 \*------------------------------------*/
 
 /**
@@ -10,10 +10,10 @@
  * generate these arbitrarily with a mixin, `@arrow()`.
  */
 
-$arrow-size:            $half-spacing-unit!default;
-$arrow-border:          1!default;
-$border:                $arrow-size;
-$arrow:                 $arrow-size - $arrow-border;
+$ekzo-arrow-size:            $ekzo-half-spacing-unit!default;
+$ekzo-arrow-border:          1!default;
+$ekzo-border:                $ekzo-arrow-size;
+$ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 /**
  * Forms the basis for any/all CSS arrows.
@@ -29,10 +29,10 @@ $arrow:                 $arrow-size - $arrow-border;
 		border-collapse:separate;
 	}
 	&:before {
-		border:$border solid transparent;
+		border:$ekzo-border solid transparent;
 	}
 	&:after {
-		border:$arrow solid transparent;
+		border:$ekzo-arrow solid transparent;
 	}
 }
 
@@ -54,10 +54,10 @@ $arrow:                 $arrow-size - $arrow-border;
 	@extend %arrow;
 
 	&:before {
-		top:$arrow;
+		top:$ekzo-arrow;
 	}
 	&:after {
-		top:$border;
+		top:$ekzo-border;
 	}
 }
 
@@ -67,10 +67,10 @@ $arrow:                 $arrow-size - $arrow-border;
 	&:before,
 	&:after {
 		top:50%;
-		margin-top:-$border;
+		margin-top:-$ekzo-border;
 	}
 	&:after {
-		margin-top:-$arrow;
+		margin-top:-$ekzo-arrow;
 	}
 }
 
@@ -78,10 +78,10 @@ $arrow:                 $arrow-size - $arrow-border;
 	@extend %arrow;
 
 	&:before {
-		bottom:$arrow;
+		bottom:$ekzo-arrow;
 	}
 	&:after {
-		bottom:$border;
+		bottom:$ekzo-border;
 	}
 }
 
@@ -107,10 +107,10 @@ $arrow:                 $arrow-size - $arrow-border;
 	@extend %arrow;
 
 	&:before {
-		left:$arrow;
+		left:$ekzo-arrow;
 	}
 	&:after {
-		left:$border;
+		left:$ekzo-border;
 	}
 }
 
@@ -120,10 +120,10 @@ $arrow:                 $arrow-size - $arrow-border;
 	&:before,
 	&:after {
 		left:50%;
-		margin-left:-$border;
+		margin-left:-$ekzo-border;
 	}
 	&:after {
-		margin-left:-$arrow;
+		margin-left:-$ekzo-arrow;
 	}
 }
 
@@ -131,10 +131,10 @@ $arrow:                 $arrow-size - $arrow-border;
 	@extend %arrow;
 
 	&:before {
-		right:$arrow;
+		right:$ekzo-arrow;
 	}
 	&:after {
-		right:$border;
+		right:$ekzo-border;
 	}
 }
 

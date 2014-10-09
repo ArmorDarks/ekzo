@@ -41,32 +41,32 @@
 	// use default breakpoints map
 	@if not $custom-map {
 
-		// assigning value from map of breakpoints in `$breakpoints`
-		@each $key, $value in $breakpoints {
+		// assigning value from map of breakpoints in `$ekzo-breakpoints`
+		@each $key, $value in $ekzo-breakpoints {
 			@if $key == $breakpoint { $breakpoint-value: $value; }
 		}
 
-		$breakpoint-map: '$breakpoints';
+		$breakpoint-map: '$ekzo-breakpoints';
 
 	// use devices breakpoints map
 	} @else if $custom-map == device or $custom-map == devices {
 
-		// assigning value from map of breakpoints in `$breakpoints--devices`
-		@each $key, $value in $breakpoints--devices {
+		// assigning value from map of breakpoints in `$ekzo-devices-breakpoints`
+		@each $key, $value in $ekzo-devices-breakpoints {
 			@if $key == $breakpoint { $breakpoint-value: $value; }
 		}
 
-		$breakpoint-map: '$breakpoints--devices';
+		$breakpoint-map: '$ekzo-devices-breakpoints';
 
 	// use custom breakpoints map
 	} @else if $custom-map {
 
-		// assigning value from map of breakpoints in `$breakpoints--custom`
-		@each $key, $value in $breakpoints--custom {
+		// assigning value from map of breakpoints in `$ekzo-custom-breakpoints`
+		@each $key, $value in $ekzo-custom-breakpoints {
 			@if $key == $breakpoint { $breakpoint-value: $value; }
 		}
 
-		$breakpoint-map: '$breakpoints--custom';
+		$breakpoint-map: '$ekzo-custom-breakpoints';
 
 	// use specified breakpoints map
 	} @else {
