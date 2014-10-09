@@ -24,7 +24,7 @@
 //
 // @details http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
-@if $global-border-box {
+@if $ekzo-global-border-box {
 
 	html { @include ekzo-vendor(box-sizing, border-box); }
 

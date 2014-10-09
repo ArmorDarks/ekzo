@@ -1,4 +1,4 @@
-@if $enable-nav {
+@if $ekzo-enable-nav {
 
 /*------------------------------------*\
 		$NAV
@@ -56,9 +56,9 @@
  *
  */
 
-.nav--padding-  > li > a { padding: $half-spacing-unit; }
-.nav--padding   > li > a { padding: $base-spacing-unit; }
-.nav--padding\+ > li > a { padding: $double-spacing-unit; }
+.nav--padding-  > li > a { padding: $ekzo-half-spacing-unit; }
+.nav--padding   > li > a { padding: $ekzo-spacing-unit; }
+.nav--padding\+ > li > a { padding: $ekzo-double-spacing-unit; }
 
 
 /**

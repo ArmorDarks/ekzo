@@ -1,4 +1,4 @@
-@if $enable-pack {
+@if $ekzo-enable-pack {
 
 /*------------------------------------*\
 		$PACK
@@ -23,7 +23,7 @@
 
 	width: 100%;  /* [1] */
 
-	border-spacing: $base-spacing-unit;
+	border-spacing: $ekzo-spacing-unit;
 
 	> li {
 		display: table-cell;
@@ -39,8 +39,8 @@
 
 .pack--auto {}
 
-.pack-       { border-spacing: $half-spacing-unit; }
-.pack\+      { border-spacing: $double-spacing-unit; }
+.pack-       { border-spacing: $ekzo-half-spacing-unit; }
+.pack\+      { border-spacing: $ekzo-double-spacing-unit; }
 .pack--flush { border-spacing: 0; }
 
 } // endif

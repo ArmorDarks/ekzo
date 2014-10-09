@@ -1,4 +1,4 @@
-@if $enable-flag {
+@if $ekzo-enable-flag {
 
 /*------------------------------------*\
 		$FLAG
@@ -39,7 +39,7 @@
 
 
 	.flag__image {
-		padding-right: $base-spacing-unit; // Flag images have a space between them and the body of the object
+		padding-right: $ekzo-spacing-unit; // Flag images have a space between them and the body of the object
 
 		> img {
 			display: block;
@@ -81,7 +81,7 @@
 
 	.flag__image {
 		padding-right: 0;
-		padding-left:  $base-spacing-unit;
+		padding-left:  $ekzo-spacing-unit;
 	}
 
 }
@@ -97,13 +97,13 @@
 
 .flag\+ {
 
-	.flag__image { padding-right: $double-spacing-unit; }
+	.flag__image { padding-right: $ekzo-double-spacing-unit; }
 
 	&.flag--rev {
 
 		.flag__image {
 			padding-right: 0;
-			padding-left:  $double-spacing-unit;
+			padding-left:  $ekzo-double-spacing-unit;
 		}
 
 	}

@@ -1,4 +1,4 @@
-@if $enable-island {
+@if $ekzo-enable-island {
 
 /*------------------------------------*\
 		$ISLAND
@@ -22,15 +22,15 @@
 	display: block;
 	@extend %clear;
 
-	padding: $base-spacing-unit;
+	padding: $ekzo-spacing-unit;
 
 	> :last-child,
 	> :last-child { margin-bottom: 0; }
 
 }
 
-.island-       { padding: $half-spacing-unit; }
-.island\+      { padding: $double-spacing-unit; }
+.island-       { padding: $ekzo-half-spacing-unit; }
+.island\+      { padding: $ekzo-double-spacing-unit; }
 .island--flush { padding: 0; }
 
 } // endif

@@ -9,7 +9,7 @@
 // ---------------------------------------
 //
 // Shorthand function to call quickly values from default
-// `$font-sizes` or specified map with set of font sizes values
+// `$ekzo-font-sizes` or specified map with set of font sizes values
 //
 // @param {string} $name         - font name, specified in default font sizes map
 //                                 or specified one
@@ -23,7 +23,7 @@
 //		.heading { font-size: ekzo-font-size(h1, headings); }
 //		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
-@function ekzo-font-size($name, $type:content, $map:$font-sizes) {
+@function ekzo-font-size($name, $type:content, $map:$ekzo-font-sizes) {
 
 	$value: null;
 

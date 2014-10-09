@@ -132,9 +132,9 @@
 //
 // @demo: jsfiddle.net/inuitcss/WS4Ge
 
-@if $responsive-widths {
+@if $ekzo-enable-responsive-widths {
 
-	@each $breakpoint, $value in $breakpoints {
+	@each $breakpoint, $value in $ekzo-breakpoints {
 		@include ekzo-breakpoint($breakpoint) {
 			@include ekzo-widths('#{$breakpoint}-');
 		}

@@ -1,4 +1,4 @@
-@if $enable-tables {
+@if $ekzo-enable-tables {
 
 /*------------------------------------*\
 	$TABLES
@@ -39,28 +39,28 @@ table {
 	.#{$n}table--padding-- {
 
 		th,
-		td { padding: $half-spacing-unit / 2; }
+		td { padding: $ekzo-half-spacing-unit / 2; }
 
 	}
 
 	.#{$n}table--padding- {
 
 		th,
-		td { padding: $half-spacing-unit; }
+		td { padding: $ekzo-half-spacing-unit; }
 
 	}
 
 	.#{$n}table--padding {
 
 		th,
-		td { padding: $base-spacing-unit; }
+		td { padding: $ekzo-spacing-unit; }
 
 	}
 
 	.#{$n}table--padding\+ {
 
 		th,
-		td { padding: $double-spacing-unit; }
+		td { padding: $ekzo-double-spacing-unit; }
 
 	}
 
@@ -74,13 +74,13 @@ table {
 } // table-spacing()
 
 
-@if $enable-tables {
+@if $ekzo-enable-tables {
 
 	@include ekzo-table-spacing();
 
-		@if $responsive-tables {
+		@if $ekzo-enable-responsive-tables {
 
-			@each $breakpoint, $value in $breakpoints {
+			@each $breakpoint, $value in $ekzo-breakpoints {
 				@include ekzo-breakpoint($breakpoint) {
 					@include ekzo-table-spacing('#{$breakpoint}-');
 				}

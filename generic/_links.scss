@@ -9,21 +9,21 @@
  */
 
 a,
-.base-link {
-	color: $base-links-color;
+.ekzo-link {
+	color: $ekzo-links-color;
 
-	@if $base-links-underline {
+	@if $ekzo-links-underline {
 		text-decoration: underline;
 	} @else {
 		text-decoration: none;
 	}
 
 	&:hover {
-		@if $base-links-hover-colored {
-			color: $base-links-hover-color;
+		@if $ekzo-links-hover-colored {
+			color: $ekzo-links-hover-color;
 		}
 
-		@if $base-links-hover-unline {
+		@if $ekzo-links-hover-unline {
 			text-decoration: none;
 		}
 	}
@@ -39,19 +39,19 @@ a,
  */
 
 .unlink {
-	@if $base-links-underline {
+	@if $ekzo-links-underline {
 		text-decoration: none;
 	}
 
-	color: $base-font-color;
+	color: $ekzo-text-color;
 
 	&:hover {
-		@if $base-links-underline {
+		@if $ekzo-links-underline {
 			text-decoration: none;
 		}
 
-		@if $base-links-hover-colored {
-			color: $base-font-color;
+		@if $ekzo-links-hover-colored {
+			color: $ekzo-text-color;
 		}
 	}
 
@@ -66,7 +66,7 @@ a,
  *
  */
 
-.link--go:after { content: $link-go-content; }
+.link--go:after { content: $ekzo-links--go-content; }
 
 
 /**
@@ -76,4 +76,4 @@ a,
  *
  */
 
-.link--back:before { content: $link-back-content; }
+.link--back:before { content: $ekzo-links--back-content; }

@@ -1,4 +1,4 @@
-@if $enable-buttons {
+@if $ekzo-enable-buttons {
 
 /*------------------------------------*\
 	$BUTTONS
@@ -51,13 +51,13 @@
 	padding-right: 1em;          /* [7] */
 	padding-left:  1em;          /* [7] */
 
-	color: $base-button-color;
+	color: $ekzo-btn-color;
 
-	background-color: $base-button-bg-color;
+	background-color: $ekzo-btn-bg-color;
 
 	&,
 	&:hover {
-		@if $base-button-unline {
+		@if $ekzo-btn-unline {
 			text-decoration: none;   /* [9] */
 		}
 
@@ -169,10 +169,10 @@
  * Button font-size modifiers based on headers sizes.
  */
 
-$base-button-prefix: btn--;
+$ekzo-btn-prefix: btn--;
 
-@include ekzo-font-size-class(headings, $prefix: $base-button-prefix, $line-height:false);
-@include ekzo-font-size-class(buttons,  $prefix: $base-button-prefix, $line-height:false);
+@include ekzo-font-size-class(headings, $prefix: $ekzo-btn-prefix, $line-height:false);
+@include ekzo-font-size-class(buttons,  $prefix: $ekzo-btn-prefix, $line-height:false);
 
 
 
@@ -185,9 +185,9 @@ $base-button-prefix: btn--;
  */
 
 .btn--positive {
-	background-color: $base-button-bg-color--positive;
+	background-color: $ekzo-btn--positive-bg-color;
 
-	color: $base-button-color--positive;
+	color: $ekzo-btn--positive-color;
 }
 
 
@@ -196,9 +196,9 @@ $base-button-prefix: btn--;
  */
 
 .btn--negative {
-	background-color: $base-button-bg-color--negative;
+	background-color: $ekzo-btn--negative-bg-color;
 
-	color: $base-button-color--negative;
+	color: $ekzo-btn--negative-color;
 }
 
 
@@ -212,9 +212,9 @@ $base-button-prefix: btn--;
 .btn--disabled:hover,
 .btn--disabled:active,
 .btn--disabled:focus {
-	background-color: $base-button-bg-color--disabled;
+	background-color: $ekzo-btn--disabled-bg-color;
 
-	color: $base-button-color--disabled;
+	color: $ekzo-btn--disabled-color;
 
 	cursor: default;            /* [1] */
 }

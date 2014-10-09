@@ -1,4 +1,4 @@
-@if $enable-media {
+@if $ekzo-enable-media {
 
 /*------------------------------------*\
 		$MEDIA
@@ -36,7 +36,7 @@
 
 		display: block;
 
-		margin-right: $base-spacing-unit;
+		margin-right: $ekzo-spacing-unit;
 	}
 
 	.media__content{
@@ -55,7 +55,7 @@
 		float: right;
 
 		margin-right: 0;
-		margin-left:  $base-spacing-unit;
+		margin-left:  $ekzo-spacing-unit;
 	}
 
 }
@@ -72,13 +72,13 @@
 
 .media\+ {
 
-	.media__image { padding-right: $double-spacing-unit; }
+	.media__image { padding-right: $ekzo-double-spacing-unit; }
 
 	&.media--rev {
 
 		.media__image {
 			padding-right: 0;
-			padding-left:  $double-spacing-unit;
+			padding-left:  $ekzo-double-spacing-unit;
 		}
 
 	}

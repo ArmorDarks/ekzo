@@ -8,4 +8,4 @@
  * A series of classes for setting varius text sizes
  */
 
-@include ekzo-font-size-class(content, $prefix: text--, $line-height:false);
+@include ekzo-font-size-class(text, $prefix: text--, $line-height:false);

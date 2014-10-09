@@ -1,4 +1,4 @@
-@if $enable-grid {
+@if $ekzo-enable-grid {
 
 // =======================================
 // ^GRIDS
@@ -45,7 +45,7 @@
 	list-style: none; // 2
 
 	margin-bottom: 0; // 2
-	margin-left:   -$base-spacing-unit; // 1
+	margin-left:   -$ekzo-spacing-unit; // 1
 }
 
 	.grid__item {
@@ -55,7 +55,7 @@
 
 		vertical-align: top;
 
-		padding-left: $base-spacing-unit; // 1
+		padding-left: $ekzo-spacing-unit; // 1
 	}
 
 // -----
@@ -143,23 +143,23 @@
 	// Grid gutter sizes
 
 	.#{$namespace}grid- {
-		margin-left: -$half-spacing-unit;
+		margin-left: -$ekzo-half-spacing-unit;
 
-		> .grid__item { padding-left: $half-spacing-unit; }
+		> .grid__item { padding-left: $ekzo-half-spacing-unit; }
 
 	}
 
 	.#{$namespace}grid\+ {
-		margin-left: -$double-spacing-unit;
+		margin-left: -$ekzo-double-spacing-unit;
 
-		> .grid__item { padding-left: $double-spacing-unit; }
+		> .grid__item { padding-left: $ekzo-double-spacing-unit; }
 
 	}
 
 	.#{$namespace}grid\+\+ {
-		margin-left: -$triple-spacing-unit;
+		margin-left: -$ekzo-triple-spacing-unit;
 
-		> .grid__item { padding-left: $triple-spacing-unit; }
+		> .grid__item { padding-left: $ekzo-triple-spacing-unit; }
 
 	}
 
@@ -207,10 +207,10 @@
 
 @include ekzo-grid-types();
 
-@if $enable-grid {
-	@if $responsive-grid {
+@if $ekzo-enable-grid {
+	@if $ekzo-enable-responsive-grid {
 
-		@each $breakpoint, $value in $breakpoints {
+		@each $breakpoint, $value in $ekzo-breakpoints {
 			@include ekzo-breakpoint($breakpoint) {
 				@include ekzo-grid-types('#{$breakpoint}-');
 			}

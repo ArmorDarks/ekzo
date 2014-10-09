@@ -1,4 +1,4 @@
-@if $enable-breadcrumb {
+@if $ekzo-enable-breadcrumb {
 
 /*------------------------------------*\
 		$BREADCRUMB
@@ -30,10 +30,10 @@
 
 	> .breadcrumb__entry + .breadcrumb__entry:before,
 	> li + li:before {
-		content: $breadcrumb-delimiter;
+		content: $ekzo-breadcrumb-delimiter;
 
-		@if $base-breadcrumb-delimiter-color != $base-font-color {
-			color: $base-breadcrumb-delimiter-color;
+		@if $ekzo-breadcrumb-delimiter-color != $ekzo-text-color {
+			color: $ekzo-breadcrumb-delimiter-color;
 		}
 
 	}
@@ -65,10 +65,10 @@
 
 	> .breadcrumb__entry:after,
 	> li:after {
-		content: $breadcrumb-rev-delimiter;
+		content: $ekzo-breadcrumb--rev-delimiter;
 
-		@if $base-breadcrumb-delimiter-color != $base-font-color {
-			color: $base-breadcrumb-delimiter-color;
+		@if $ekzo-breadcrumb-delimiter-color != $ekzo-text-color {
+			color: $ekzo-breadcrumb-delimiter-color;
 		}
 
 	}
@@ -81,7 +81,7 @@
  * Denote the root of the tree and current state styling
  */
 
-.breadcrumb__root { font-weight: $breadcrumb-root-font-weight; }
+.breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
 
 .breadcrumb__is-current {}
 

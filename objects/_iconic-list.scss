@@ -1,4 +1,4 @@
-@if $enable-iconic-list {
+@if $ekzo-enable-iconic-list {
 
 /*------------------------------------*\
 		$ICONIC-LIST
@@ -33,7 +33,7 @@
  */
 
 .iconic-list {
-	margin-left: $double-spacing-unit; // 1
+	margin-left: $ekzo-double-spacing-unit; // 1
 
 	li {
 		position: relative;

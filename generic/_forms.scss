@@ -1,4 +1,4 @@
-@if $enable-forms {
+@if $ekzo-enable-forms {
 
 /*------------------------------------*\
 		$FORMS
@@ -6,15 +6,15 @@
 
 
 @include ekzo-placeholder() {
-	font-family: $forms-font-family;
-	font-size:   $forms-placeholder-font-size;
-	font-style:  $forms-placeholder-font-style;
+	font-family: $ekzo-forms-font-family;
+	font-size:   $ekzo-forms-placeholder-font-size;
+	font-style:  $ekzo-forms-placeholder-font-style;
 
-	color:       $forms-placeholder-color;
+	color:       $ekzo-forms-placeholder-color;
 }
 
 
-fieldset + fieldset { margin-top: $double-spacing-unit; }
+fieldset + fieldset { margin-top: $ekzo-double-spacing-unit; }
 
 
 .text-input,
@@ -27,14 +27,14 @@ fieldset { @include ekzo-vendor(box-sizing, border-box); }
 input,
 textarea,
 label {
-	color: $forms-color;
-	font: $forms-font-size $forms-font-family;
+	color: $ekzo-forms-color;
+	font:  $ekzo-forms-font-size $ekzo-forms-font-family;
 }
 
 
 .text-input,
 input,
-textarea{ background-color: $forms-bg-color; }
+textarea{ background-color: $ekzo-forms-bg-color; }
 
 
 /**

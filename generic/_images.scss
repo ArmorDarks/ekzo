@@ -29,15 +29,15 @@ img[height] { max-width: none; }
 .image--right {
 	float: right;
 
-	margin-bottom: $half-spacing-unit;
-	margin-left:   $base-spacing-unit;
+	margin-bottom: $ekzo-half-spacing-unit;
+	margin-left:   $ekzo-spacing-unit;
 }
 
 .image--left {
 	float: left;
 
-	margin-right:  $base-spacing-unit;
-	margin-bottom: $half-spacing-unit;
+	margin-right:  $ekzo-spacing-unit;
+	margin-bottom: $ekzo-half-spacing-unit;
 }
 
 .image--center {
@@ -45,5 +45,5 @@ img[height] { max-width: none; }
 
 	margin-right:  auto;
 	margin-left:   auto;
-	margin-bottom: $half-spacing-unit;
+	margin-bottom: $ekzo-half-spacing-unit;
 }

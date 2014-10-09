@@ -18,7 +18,7 @@
 // @param {bool=true|number} $line-height - should `line-height` rhythm calculation be applied or no.
 //                                          Set to number in pixels to define custom
 //                                          `line-height`.
-// @param {map} $map=$font-sizes          - should mixin search for font sizes in default,
+// @param {map} $map=$ekzo-font-sizes     - should mixin search for font sizes in default,
 //                                          or specified map
 //                                          See `font-size-class()` mixin for details about format
 //
@@ -31,7 +31,7 @@
 // Thanks to @redclov3r for the `line-height` Sass:
 // twitter.com/redclov3r/status/250301539321798657
 
-@mixin ekzo-font-size($size, $type:content, $line-height:true, $map:$font-sizes) {
+@mixin ekzo-font-size($size, $type:content, $line-height:true, $map:$ekzo-font-sizes) {
 
 	$value: null;
 
@@ -54,10 +54,10 @@
 
 		line-height: ceil($size / $line-height) * ($line-height / $size);
 
-	// or base value from predefined `$base-line-height`
+	// or base value from predefined `$ekzo-line-height`
 	} @else if $line-height {
 
-		line-height: ceil($size / $base-line-height) * ($base-line-height / $size);
+		line-height: ceil($size / $ekzo-line-height) * ($ekzo-line-height / $size);
 
 	}
 
@@ -101,7 +101,7 @@
 //		@include ekzo-font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
 //
 
-@mixin ekzo-font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$font-sizes ) {
+@mixin ekzo-font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$ekzo-font-sizes ) {
 
 	$working-map: null;
 	$class:       null;
@@ -180,11 +180,11 @@
 	@font-face {
 		font-family: '#{$font}';
 
-		src: url(#{$base-fonts-path}/#{$file-name}.eot?#{$version});
-		src: url(#{$base-fonts-path}/#{$file-name}.eot?#{$version}#iefix)      format('embedded-opentype'),
-			 url(#{$base-fonts-path}/#{$file-name}.woff?#{$version})           format('woff'),
-			 url(#{$base-fonts-path}/#{$file-name}.ttf?#{$version})            format('truetype'),
-			 url(#{$base-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+		src: url(#{$ekzo-fonts-path}/#{$file-name}.eot?#{$version});
+		src: url(#{$ekzo-fonts-path}/#{$file-name}.eot?#{$version}#iefix)      format('embedded-opentype'),
+			 url(#{$ekzo-fonts-path}/#{$file-name}.woff?#{$version})           format('woff'),
+			 url(#{$ekzo-fonts-path}/#{$file-name}.ttf?#{$version})            format('truetype'),
+			 url(#{$ekzo-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
 
 		font-weight: $weight;
 		font-style:  $style;
@@ -197,7 +197,7 @@
 	// @media screen and (-webkit-min-device-pixel-ratio: 0) {
 	// 	@font-face {
 	// 		font-family: '#{$font}';
-	// 		src: url(#{$base-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+	// 		src: url(#{$ekzo-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
 	// 	}
 	// }
 
