@@ -20,7 +20,7 @@
 //
 // @example
 //
-//		.heading { font-size: font-size(h1, headings); }
+//		.heading { font-size: ekzo-font-size(h1, headings); }
 //		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
 @function ekzo-font-size($name, $type:content, $map:$font-sizes) {

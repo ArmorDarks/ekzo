@@ -7,7 +7,7 @@
 // ----
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value
-// On contrary to `font-size()` function, that mixin embending `font-size` and
+// On contrary to `ekzo-font-size()` function, that mixin embending `font-size` and
 // caluclated `line-height` into class, within which it was called
 //
 // @param {number|string} $size           - desired `font-size` in pixels or
@@ -37,7 +37,7 @@
 
 	@if type-of($size) == string {
 
-		$size: font-size($size, $type, $map);
+		$size: ekzo-font-size($size, $type, $map);
 
 	}
 

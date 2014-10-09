@@ -29,14 +29,14 @@ $ekzo-font-sizes: (
 	buttons: () // = .btn--*name*
 ) !default;
 
-$ekzo-forms-font-size:              font-size(h5, headings) !default;
-$ekzo-forms-placeholder-font-size:  $ekzo-forms-font-size   !default;
+$ekzo-forms-font-size:              ekzo-font-size(h5, headings) !default;
+$ekzo-forms-placeholder-font-size:  $ekzo-forms-font-size        !default;
 
 // ---------------------------------------
 // Line heights
 // ---------------------------------------
 
-$ekzo-line-height:                  font-size(base) * 1.5 !default;
+$ekzo-line-height:                  ekzo-font-size(base) * 1.5   !default;
 
 // ---------------------------------------
 // Font famylies

@@ -10,4 +10,4 @@ $ekzo-half-spacing-unit:   $ekzo-spacing-unit / 2 !default;
 $ekzo-double-spacing-unit: $ekzo-spacing-unit * 2 !default;
 $ekzo-triple-spacing-unit: $ekzo-spacing-unit * 3 !default;
 
-$ekzo-line-height-ratio:   $ekzo-line-height / font-size(base) !default;
+$ekzo-line-height-ratio:   $ekzo-line-height / ekzo-font-size(base) !default;
