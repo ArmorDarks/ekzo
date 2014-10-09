@@ -108,7 +108,7 @@
 // Call all widths
 // ---------------------------------------
 
-@include widths();
+@include ekzo-widths();
 
 
 
@@ -135,8 +135,8 @@
 @if $responsive-widths {
 
 	@each $breakpoint, $value in $breakpoints {
-		@include breakpoint($breakpoint) {
-			@include widths('#{$breakpoint}-');
+		@include ekzo-breakpoint($breakpoint) {
+			@include ekzo-widths('#{$breakpoint}-');
 		}
 	}
 

@@ -119,16 +119,16 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 	&:hover:before, &:hover:after,
 	&:focus:before, &:focus:after {
 		@if $tooltip-position == 'top' {
-			@include vendor(transform, translateY($transitionDistance * 1));
+			@include ekzo-vendor(transform, translateY($transitionDistance * 1));
 		}
 		@if $tooltip-position == 'bottom' {
-			@include vendor(transform, translateY($transitionDistance * -1));
+			@include ekzo-vendor(transform, translateY($transitionDistance * -1));
 		}
 		@if $tooltip-position == 'left' {
-			@include vendor(transform, translateX($transitionDistance * 1));
+			@include ekzo-vendor(transform, translateX($transitionDistance * 1));
 		}
 		@if $tooltip-position == 'right' {
-			@include vendor(transform, translateX($transitionDistance * -1));
+			@include ekzo-vendor(transform, translateX($transitionDistance * -1));
 		}
 
 	}
@@ -216,22 +216,22 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 		&.tooltip--top:after,
 		&.tooltip--top:before {
-			@include vendor(transform, translateY($transitionDistance * -1));
+			@include ekzo-vendor(transform, translateY($transitionDistance * -1));
 		}
 
 		&.tooltip--bottom:after,
 		&.tooltip--bottom:before {
-			@include vendor(transform, translateY($transitionDistance * 1));
+			@include ekzo-vendor(transform, translateY($transitionDistance * 1));
 		}
 
 		&.tooltip--left:after,
 		&.tooltip--left:before {
-			@include vendor(transform, translateX($transitionDistance * -1));
+			@include ekzo-vendor(transform, translateX($transitionDistance * -1));
 		}
 
 		&.tooltip--right:after,
 		&.tooltip--right:before {
-			@include vendor(transform, translateX($transitionDistance * 1));
+			@include ekzo-vendor(transform, translateX($transitionDistance * 1));
 		}
 	}
 
@@ -250,13 +250,13 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 	.tooltip--right:before { border-right-color: $tooltip-bg-color; }
 
 	.tooltip--error {
-		@include tooltip-bg-color($tooltip-bg-color-error);
+		@include ekzo-tooltip-bg-color($tooltip-bg-color-error);
 	}
 	.tooltip--info {
-		@include tooltip-bg-color($tooltip-bg-color-info);
+		@include ekzo-tooltip-bg-color($tooltip-bg-color-info);
 	}
 	.tooltip--success {
-		@include tooltip-bg-color($tooltip-bg-color-success);
+		@include ekzo-tooltip-bg-color($tooltip-bg-color-success);
 	}
 
 
@@ -272,18 +272,18 @@ $tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
  */
 
 	/* top tooltip */
-	.tooltip--top { @include tooltip-position('bottom'); }
+	.tooltip--top { @include ekzo-tooltip-position('bottom'); }
 
 	/* bottom tooltip */
 
-	.tooltip--bottom { @include tooltip-position('top'); }
+	.tooltip--bottom { @include ekzo-tooltip-position('top'); }
 
 	/* right tooltip */
 
-	.tooltip--right { @include tooltip-position('left'); }
+	.tooltip--right { @include ekzo-tooltip-position('left'); }
 
 	/* left tooltip */
 
-	.tooltip--left { @include tooltip-position('right'); }
+	.tooltip--left { @include ekzo-tooltip-position('right'); }
 
 } // endif

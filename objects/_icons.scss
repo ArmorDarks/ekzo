@@ -43,7 +43,7 @@
 	font-weight: normal;
 }
 
-@include font ($base-icon-font, $base-icon-font-version);
+@include ekzo-font($base-icon-font, $base-icon-font-version);
 
 .icon {
 	font-family: '#{$base-icon-font}';

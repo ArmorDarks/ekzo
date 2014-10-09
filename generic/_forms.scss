@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 
-@include placeholder() {
+@include ekzo-placeholder() {
 	font-family: $forms-font-family;
 	font-size:   $forms-placeholder-font-size;
 	font-style:  $forms-placeholder-font-style;
@@ -20,7 +20,7 @@ fieldset + fieldset { margin-top: $double-spacing-unit; }
 .text-input,
 input,
 textarea,
-fieldset { @include vendor(box-sizing, border-box); }
+fieldset { @include ekzo-vendor(box-sizing, border-box); }
 
 
 .text-input,

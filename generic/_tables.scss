@@ -76,13 +76,13 @@ table {
 
 @if $enable-tables {
 
-	@include table-spacing();
+	@include ekzo-table-spacing();
 
 		@if $responsive-tables {
 
 			@each $breakpoint, $value in $breakpoints {
-				@include breakpoint($breakpoint) {
-					@include table-spacing('#{$breakpoint}-');
+				@include ekzo-breakpoint($breakpoint) {
+					@include ekzo-table-spacing('#{$breakpoint}-');
 				}
 			}
 

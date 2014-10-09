@@ -26,5 +26,5 @@
 // Apply box-sizing models
 // ---------------------------------------
 
-.border-box  { @include vendor(box-sizing, border-box); }
-.content-box { @include vendor(box-sizing, content-box); }
+.border-box  { @include ekzo-vendor(box-sizing, border-box); }
+.content-box { @include ekzo-vendor(box-sizing, content-box); }
