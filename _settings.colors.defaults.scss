@@ -3,60 +3,61 @@
 // ^SETTING.COLORS.DEFAULTS
 // =======================================
 
-$base-color:                      #ff6600 !default;
+$brand-color:                  #ff6600 !default;
 
 // ---------------------------------------
-// Font
+// Text
 // ---------------------------------------
 
-$base-font-color:                 #ccc    !default;
+$ekzo-text-color:              #ccc    !default;
 
 // ---------------------------------------
 // Links
 // ---------------------------------------
 
-$base-links-color:                #35adda !default;
-$base-links-hover-color:          #69d1c6 !default;
+$ekzo-links-color:             #35adda !default;
+$ekzo-links-hover-color:       #69d1c6 !default;
 
 // ---------------------------------------
 // Headings
 // ---------------------------------------
 
-$base-headings-color:             #585c5d              !default;
-$extra-headings-color:            $base-headings-color !default;
+$ekzo-headings-color:          #585c5d              !default;
+$ekzo-extra-headings-color:    $ekzo-headings-color !default;
 
 // ---------------------------------------
 // Forms
 // ---------------------------------------
 
-$forms-bg-color:                  #FFF    !default;
-$forms-color:                     #8b8b8b !default;
-$forms-placeholder-color:         #a9a9a9 !default;
+$ekzo-forms-bg-color:          #FFF    !default;
+$ekzo-forms-color:             #8b8b8b !default;
+$ekzo-forms-placeholder-color: #a9a9a9 !default;
 
 // ---------------------------------------
 // Buttons
 // ---------------------------------------
 
-$base-button-color:               $base-font-color !default;
-$base-button-bg-color:            $base-color      !default;
+$ekzo-btn-color:               $ekzo-text-color !default;
+$ekzo-btn-bg-color:            $brand-color     !default;
 
-$base-button-color--positive:     #7ef76a          !default;
-$base-button-bg-color--positive:  #1fa205          !default;
+$ekzo-btn--positive-color:     #7ef76a          !default;
+$ekzo-btn--positive-bg-color:  #1fa205          !default;
 
-$base-button-color--negative:     #ff8877          !default;
-$base-button-bg-color--negative:  #a20b05          !default;
+$ekzo-btn--negative-color:     #ff8877          !default;
+$ekzo-btn--negative-bg-color:  #a20b05          !default;
 
-$base-button-color--disabled:     #464646          !default;
-$base-button-bg-color--disabled:  #d3d3d3          !default;
+$ekzo-btn--disabled-color:     #464646          !default;
+$ekzo-btn--disabled-bg-color:  #d3d3d3          !default;
 
 // ---------------------------------------
 // Breadcrumb
 // ---------------------------------------
 
-$base-breadcrumb-delimiter-color: #d3d3d3 !default;
+$ekzo-breadcrumb-link-color:      #d3d3d3 !default;
+$ekzo-breadcrumb-delimiter-color: #d3d3d3 !default;
 
 // ---------------------------------------
 // Backgrounds
 // ---------------------------------------
 
-$base-bg-color:                   #353a39 !default;
+$ekzo-bg-color:                   #353a39 !default;

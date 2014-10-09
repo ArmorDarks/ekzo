@@ -7,8 +7,8 @@
 // Font sizes
 // ---------------------------------------
 
-$font-sizes: (
-	content: (
+$ekzo-font-sizes: (
+	text: (
 		base:  14px, // used for vertical rhythm calculation; = .text--base
 		small: 12px, // = .text--small
 		tiny:  10px, // = .text--tiny
@@ -29,32 +29,36 @@ $font-sizes: (
 	buttons: () // = .btn--*name*
 ) !default;
 
-$forms-font-size:              font-size(h5, headings) !default;
-$forms-placeholder-font-size:  $forms-font-size        !default;
+$ekzo-forms-font-size:              font-size(h5, headings) !default;
+$ekzo-forms-placeholder-font-size:  $ekzo-forms-font-size   !default;
 
 // ---------------------------------------
 // Line heights
 // ---------------------------------------
 
-$base-line-height:             font-size(base) * 1.5 !default;
+$ekzo-line-height:                  font-size(base) * 1.5 !default;
 
 // ---------------------------------------
 // Font famylies
 // ---------------------------------------
 
-$base-font-family:             sans-serif          !default;
-$second-font-family:           sans-serif          !default;
+$ekzo-font-family:                  sans-serif               !default;
+$second-font-family:                sans-serif               !default;
 
-$headings-font-family:         $second-font-family !default;
-$forms-font-family:            $base-font-family   !default;
+$ekzo-headings-font-family:         $ekzo-second-font-family !default;
+$ekzo-extra-headings-font-family:   $ekzo-second-font-family !default;
+
+$ekzo-forms-font-family:            $ekzo-font-family        !default;
 
 // ---------------------------------------
 // Font weights and styles
 // ---------------------------------------
 
-$base-font-weight:             normal !default;
+$ekzo-font-weight:                  normal !default;
 
-$headings-font-weight:         normal !default;
-$breadcrumb-root-font-weight:  bold   !default;
+$ekzo-headings-font-weight:         normal !default;
+$ekzo-extra-headings-font-weight:   normal !default;
 
-$forms-placeholder-font-style: italic !default;
+$ekzo-breadcrumb-root-font-weight:  bold   !default;
+
+$ekzo-forms-placeholder-font-style: italic !default;

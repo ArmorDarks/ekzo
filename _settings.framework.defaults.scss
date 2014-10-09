@@ -5,9 +5,9 @@
 //
 // Used for various framework calculations
 
-$base-spacing-unit:    $base-line-height      !default;
-$half-spacing-unit:    $base-spacing-unit / 2 !default;
-$double-spacing-unit:  $base-spacing-unit * 2 !default;
-$triple-spacing-unit:  $base-spacing-unit * 3 !default;
+$ekzo-spacing-unit:        $ekzo-line-height      !default;
+$ekzo-half-spacing-unit:   $ekzo-spacing-unit / 2 !default;
+$ekzo-double-spacing-unit: $ekzo-spacing-unit * 2 !default;
+$ekzo-triple-spacing-unit: $ekzo-spacing-unit * 3 !default;
 
-$line-height-ratio:    $base-line-height / font-size(base) !default;
+$ekzo-line-height-ratio:   $ekzo-line-height / font-size(base) !default;
