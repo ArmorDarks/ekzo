@@ -13,6 +13,10 @@
 @include ekzo-font-size-class(headings, $plain-class: include) {
 	font-weight: $ekzo-headings-font-weight;
 
+	@if $ekzo-set-font-headings {
+		font-family: $ekzo-headings-font-family;
+	}
+
 	@if $ekzo-color-headings {
 		color: $ekzo-headings-color;
 	}
@@ -25,6 +29,11 @@
  */
 
 @include ekzo-font-size-class(extra-headings, $prefix: text--) {
+
+	@if $ekzo-set-font-extra-headings {
+		font-family: $ekzo-extra-headings-font-family;
+	}
+
 	@if $ekzo-color-extra-headings {
 		color: $ekzo-extra-headings-color;
 	}
