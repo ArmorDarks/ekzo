@@ -27,14 +27,15 @@ fieldset { @include ekzo-vendor(box-sizing, border-box); }
 input,
 textarea,
 label {
-	color: $ekzo-forms-color;
 	font:  $ekzo-forms-font-size $ekzo-forms-font-family;
+
+	color: $ekzo-forms-color;
 }
 
 
 .text-input,
 input,
-textarea{ background-color: $ekzo-forms-bg-color; }
+textarea { background-color: $ekzo-forms-bg-color; }
 
 
 /**
@@ -56,9 +57,7 @@ textarea{ background-color: $ekzo-forms-bg-color; }
 	visibility: hidden;
 
 	.text-input:active + &,
-	.text-input:focus + & {
-		visibility: visible;
-	}
+	.text-input:focus + & { visibility: visible; }
 
 }
 

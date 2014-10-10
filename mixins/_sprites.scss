@@ -95,8 +95,8 @@
 
 	$width:       sprite-map($name, width)  !default;
 	$height:      sprite-map($name, height) !default;
-	$full-width:  0px !default;
-	$full-height: 0px !default;
+	$full-width:  0 !default;
+	$full-height: 0 !default;
 
 	@if $sufix-1 == false {
 
@@ -113,7 +113,7 @@
 			$width:  (sprite-map($name, width) - $padding) / 2;
 			$full-width:  $width + $padding;
 		} @else {
-			$height: (sprite-map($name, height) - $padding)  / 2;
+			$height: (sprite-map($name, height) - $padding) / 2;
 			$full-height: $height + $padding;
 		}
 
@@ -127,7 +127,7 @@
 			$width:  (sprite-map($name, width) - $padding * 2) / 3;
 			$full-width:  $width + $padding;
 		} @else {
-			$height: (sprite-map($name, height) - $padding * 2 )  / 3;
+			$height: (sprite-map($name, height) - $padding * 2) / 3;
 			$full-height: $height + $padding;
 		}
 

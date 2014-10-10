@@ -101,7 +101,7 @@
 //		@include ekzo-font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
 //
 
-@mixin ekzo-font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$ekzo-font-sizes ) {
+@mixin ekzo-font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$ekzo-font-sizes) {
 
 	$working-map: null;
 	$class:       null;

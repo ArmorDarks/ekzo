@@ -3,7 +3,7 @@
 // ^SETTING.COLORS.DEFAULTS
 // =======================================
 
-$brand-color:                  #ff6600 !default;
+$brand-color:                  #f60    !default;
 
 // ---------------------------------------
 // Text
@@ -29,7 +29,7 @@ $ekzo-extra-headings-color:    $ekzo-headings-color !default;
 // Forms
 // ---------------------------------------
 
-$ekzo-forms-bg-color:          #FFF    !default;
+$ekzo-forms-bg-color:          #fff    !default;
 $ekzo-forms-color:             #8b8b8b !default;
 $ekzo-forms-placeholder-color: #a9a9a9 !default;
 
@@ -43,7 +43,7 @@ $ekzo-btn-bg-color:            $brand-color     !default;
 $ekzo-btn--positive-color:     #7ef76a          !default;
 $ekzo-btn--positive-bg-color:  #1fa205          !default;
 
-$ekzo-btn--negative-color:     #ff8877          !default;
+$ekzo-btn--negative-color:     #f87             !default;
 $ekzo-btn--negative-bg-color:  #a20b05          !default;
 
 $ekzo-btn--disabled-color:     #464646          !default;

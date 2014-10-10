@@ -31,7 +31,7 @@
 	@extend %clear;
 }
 
-	.media__image{
+	.media__image {
 		float: left;
 
 		display: block;
@@ -39,7 +39,7 @@
 		margin-right: $ekzo-spacing-unit;
 	}
 
-	.media__content{
+	.media__content {
 		overflow: hidden;
 
 		&,
@@ -51,7 +51,7 @@
 
 .media--rev {
 
-	.media__image{
+	.media__image {
 		float: right;
 
 		margin-right: 0;

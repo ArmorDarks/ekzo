@@ -9,7 +9,8 @@
  * Lists defaults margins
  */
 
-ul, ol {
+ul,
+ol {
 	// margin-left already defined in shared
 
 	li + li { margin-top: $ekzo-spacing-unit; }

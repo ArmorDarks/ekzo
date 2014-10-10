@@ -102,10 +102,10 @@
 // -----
 // Grid's inline-blocks whitespace fix
 
-.grid { letter-spacing: -0.31em; }
+.grid { letter-spacing: -.31em; }
 // Opera hack
 .opera:-o-prefocus,
-.grid { word-spacing: -0.43em; }
+.grid { word-spacing: -.43em; }
 
 	.grid__item {
 		letter-spacing: normal;

@@ -19,8 +19,9 @@
  */
 
 .island {
-	display: block;
 	@extend %clear;
+
+	display: block;
 
 	padding: $ekzo-spacing-unit;
 
