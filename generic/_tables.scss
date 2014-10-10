@@ -1,23 +1,18 @@
 @if $ekzo-enable-tables {
 
-/*------------------------------------*\
-	$TABLES
-\*------------------------------------*/
-
-// @todo Update docs
-
-table {
-	width: 100%;
-}
-
-.table--fixed {
-	table-layout: fixed;
-}
+// =======================================
+// ^TABLES
+// =======================================
 
 
-/**
- * Cell alignments
- */
+table { width: 100%; }
+
+.table--fixed { table-layout: fixed; }
+
+
+// ---------------------------------------
+// Cell alignments
+// ---------------------------------------
 
 [colspan]     { text-align: center; }
 
@@ -29,6 +24,11 @@ table {
 
 
 } // endif
+
+
+// ---------------------------------------
+// Table modifiers mixin
+// ---------------------------------------
 
 @mixin ekzo-table-spacing($n: '') {
 
@@ -74,9 +74,17 @@ table {
 } // table-spacing()
 
 
+// ---------------------------------------
+// Call tables modifiers mixin
+// ---------------------------------------
+
 @if $ekzo-enable-tables {
 
 	@include ekzo-table-spacing();
+
+		// ---------------------------------------
+		// Call responsive tables modifiers mixin
+		// ---------------------------------------
 
 		@if $ekzo-enable-responsive-tables {
 
