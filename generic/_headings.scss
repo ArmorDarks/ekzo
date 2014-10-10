@@ -1,40 +1,34 @@
 
-/*------------------------------------*\
-	$HEADINGS
-\*------------------------------------*/
+// =======================================
+// ^HEADINGS
+// =======================================
 
-
-/**
- * When we define a heading we also define a corresponding class to go with it.
- * This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
- * heading hierarchy.
- */
+// ---------------------------------------
+// Standard headings
+// ---------------------------------------
+//
+// When we define a heading we also define a corresponding class to go with it.
+// This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
+// heading hierarchy.
 
 @include ekzo-font-size-class(headings, $plain-class: include) {
 	font-weight: $ekzo-headings-font-weight;
 
-	@if $ekzo-set-font-headings {
-		font-family: $ekzo-headings-font-family;
-	}
+	@if $ekzo-set-font-headings { font-family: $ekzo-headings-font-family; }
 
-	@if $ekzo-color-headings {
-		color: $ekzo-headings-color;
-	}
+	@if $ekzo-color-headings { color: $ekzo-headings-color; }
 }
 
-
-/**
- * A series of classes for setting massive type; for use in heroes, mastheads,
- * promos, etc.
- */
+// ---------------------------------------
+// Extra headings
+// ---------------------------------------
+//
+// A series of classes for setting massive type; for use in heroes, mastheads,
+// promos, etc.
 
 @include ekzo-font-size-class(extra-headings, $prefix: text--) {
 
-	@if $ekzo-set-font-extra-headings {
-		font-family: $ekzo-extra-headings-font-family;
-	}
+	@if $ekzo-set-font-extra-headings { font-family: $ekzo-extra-headings-font-family; }
 
-	@if $ekzo-color-extra-headings {
-		color: $ekzo-extra-headings-color;
-	}
+	@if $ekzo-color-extra-headings { color: $ekzo-extra-headings-color; }
 }
