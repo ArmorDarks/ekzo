@@ -1,11 +1,8 @@
 
-/*------------------------------------*\
-		$TEXTS
-\*------------------------------------*/
-
-
-/**
- * A series of classes for setting varius text sizes
- */
+// =======================================
+// ^TEXTS
+// =======================================
+//
+// A series of classes for setting varius text sizes
 
 @include ekzo-font-size-class(text, $prefix: text--, $line-height:false);
