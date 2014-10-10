@@ -125,10 +125,10 @@
 // Grid modifiers
 // ---------------------------------------
 
-@mixin ekzo-grid-types($namespace: '') {
+@mixin ekzo-grid-types($n: '') {
 
 	// @todo Check do we need it
-	.#{$namespace}grid--reset {
+	.#{$n}grid--reset {
 		display: inline-block;
 
 		> .grid__item {
@@ -142,28 +142,28 @@
 	// ----
 	// Grid gutter sizes
 
-	.#{$namespace}grid- {
+	.#{$n}grid- {
 		margin-left: -$ekzo-half-spacing-unit;
 
 		> .grid__item { padding-left: $ekzo-half-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid\+ {
+	.#{$n}grid\+ {
 		margin-left: -$ekzo-double-spacing-unit;
 
 		> .grid__item { padding-left: $ekzo-double-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid\+\+ {
+	.#{$n}grid\+\+ {
 		margin-left: -$ekzo-triple-spacing-unit;
 
 		> .grid__item { padding-left: $ekzo-triple-spacing-unit; }
 
 	}
 
-	.#{$namespace}grid--flush {
+	.#{$n}grid--flush {
 		margin-left: 0;
 
 		> .grid__item { padding-left: 0; }
@@ -174,20 +174,20 @@
 	// ----
 	// Grid items aligment
 
-	.#{$namespace}grid--center {
+	.#{$n}grid--center {
 		text-align: center;
 
 		> .grid__item { text-align: left; }
 
 	}
 
-	.#{$namespace}grid--middle {
+	.#{$n}grid--middle {
 
 		> .grid__item { vertical-align: middle; }
 
 	}
 
-	.#{$namespace}grid--bottom {
+	.#{$n}grid--bottom {
 
 		> .grid__item { vertical-align: bottom; }
 
@@ -197,7 +197,7 @@
 	// ----
 	// Grid items widths
 
-	.#{$namespace}grid--auto {
+	.#{$n}grid--auto {
 
 		> .grid__item { width: auto;; }
 
