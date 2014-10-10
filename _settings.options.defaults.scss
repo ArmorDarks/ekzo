@@ -25,11 +25,15 @@ $ekzo-enable-tables:             true  !default;
 $ekzo-enable-tooltips:           true  !default;
 
 // ---------------------------------------
-// Typographic options
+// Typographic and color options
 // ---------------------------------------
 
 $ekzo-color-headings:            false !default;
+$ekzo-set-font-headings:         false !default;
 $ekzo-color-extra-headings:      false !default;
+$ekzo-set-font-extra-headings:   false !default;
+
+$ekzo-color-breadcrumb-links:    false !default;
 
 $ekzo-links-underline:           true  !default;
 $ekzo-links-hover-unline:        true  !default;
@@ -41,11 +45,11 @@ $ekzo-btn-unline:                true  !default;
 // Contents and delimiters
 // ---------------------------------------
 
-$ekzo-breadcrumb-delimiter:      '\00A0' '\2192' '\00A0' '\00A0' !default;
-$ekzo-breadcrumb--rev-delimiter: '\00A0' '\00A0' '\2192' '\00A0' !default;
+$ekzo-breadcrumb-delimiters-content:      '\00A0' '\2192' '\00A0' '\00A0' !default;
+$ekzo-breadcrumb--rev-delimiters-content: '\00A0' '\00A0' '\2192' '\00A0' !default;
 
-$ekzo-links--go-content:         '\00A0' '\00BB'                 !default;
-$ekzo-links--back-content:       '\00AB' '\00A0'                 !default;
+$ekzo-links--go-content:                  '\00A0' '\00BB'                 !default;
+$ekzo-links--back-content:                '\00AB' '\00A0'                 !default;
 
 // ---------------------------------------
 // BORDER-BOX
