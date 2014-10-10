@@ -19,14 +19,14 @@
 
 @mixin ekzo-headings($from: 1, $to: 6) {
 
-	%base-heading { @content; }
+	%heading { @content; }
 
 	@if $from >= 1 and $to <= 6 {
 
 		@for $i from $from through $to {
 
 			h#{$i} {
-				@extend %base-heading;
+				@extend %heading;
 			}
 
 		}
