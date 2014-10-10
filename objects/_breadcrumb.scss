@@ -30,12 +30,16 @@
 
 	> .breadcrumb__entry + .breadcrumb__entry:before,
 	> li + li:before {
-		content: $ekzo-breadcrumb-delimiter;
+		content: $ekzo-breadcrumb-delimiters-content;
 
-		@if $ekzo-breadcrumb-delimiter-color != $ekzo-text-color {
-			color: $ekzo-breadcrumb-delimiter-color;
+		@if $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
+			color: $ekzo-breadcrumb-delimiters-color;
 		}
 
+	}
+
+	@if $ekzo-color-breadcrumb-links and $ekzo-color-breadcrumb-links != $ekzo-links-color {
+		> a { color: $ekzo-breadcrumb-links-color; }
 	}
 
 }
@@ -65,12 +69,16 @@
 
 	> .breadcrumb__entry:after,
 	> li:after {
-		content: $ekzo-breadcrumb--rev-delimiter;
+		content: $ekzo-breadcrumb--rev-delimiters-content;
 
-		@if $ekzo-breadcrumb-delimiter-color != $ekzo-text-color {
-			color: $ekzo-breadcrumb-delimiter-color;
+		@if $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
+			color: $ekzo-breadcrumb-delimiters-color;
 		}
 
+	}
+
+	@if $ekzo-color-breadcrumb-links and $ekzo-color-breadcrumb-links != $ekzo-links-color {
+		> a { color: $ekzo-breadcrumb-links-color; }
 	}
 
 }
