@@ -19,28 +19,45 @@
 
 .pack {
 	display: table;
-	table-layout: fixed; /* [2] */
+
 
 	width: 100%;  /* [1] */
 
-	border-spacing: $ekzo-spacing-unit;
-
 	> li {
 		display: table-cell;
+
+		padding: $ekzo-spacing-unit;
 
 		> a { display: block; }
 
 	}
 
+	> a {
+		display: table-cell;
+
+		padding: $ekzo-spacing-unit;
+	}
+
 }
+
+.pack--fixed { table-layout: fixed; /* [2] */ }
 
 .pack--middle {}
 .pack--bottom {}
 
 .pack--auto {}
 
-.pack-       { border-spacing: $ekzo-half-spacing-unit; }
-.pack\+      { border-spacing: $ekzo-double-spacing-unit; }
-.pack--flush { border-spacing: 0; }
+.pack-       { > li, > a { padding: $ekzo-half-spacing-unit; } }
+.pack\+      { > li, > a { padding: $ekzo-double-spacing-unit; } }
+.pack--flush { > li, > a { padding: 0; } }
+
+// .pack--sides-       { > li, > a { padding-left: $ekzo-half-spacing-unit;   padding-right: $ekzo-half-spacing-unit; } }
+// .pack--sides\+      { > li, > a { padding-left: $ekzo-double-spacing-unit; padding-right: $ekzo-double-spacing-unit; } }
+// .pack--sides--flush { > li, > a { padding-left: 0; padding-right: 0; } }
+
+.pack--border-spacing-       { border-spacing: $ekzo-half-spacing-unit; }
+.pack--border-spacing        { border-spacing: $ekzo-spacing-unit; }
+.pack--border-spacing\+      { border-spacing: $ekzo-double-spacing-unit; }
+.pack--border-spacing--flush { border-spacing: 0; }
 
 } // endif
