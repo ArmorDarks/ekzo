@@ -7,8 +7,9 @@
 // Paths
 // ---------------------------------------
 
-$ekzo-assets-path:       '../../assets'                 !default;
+$ekzo-assets-path:       '../assets'                 !default;
 $ekzo-images-path:       '#{$ekzo-assets-path}/images/' !default;
+$ekzo-sprites-path:      '#{$ekzo-assets-path}/sprites/'!default;
 $ekzo-fonts-path:        '#{$ekzo-assets-path}/fonts/'  !default;
 
 // ---------------------------------------

@@ -52,7 +52,7 @@
 }
 
 .sprite {
-	background: url(#{$ekzo-images-path}/#{$ekzo-sprites-file}) no-repeat;
+	background: url(#{$ekzo-sprites-path}/#{$ekzo-sprites-file}) no-repeat;
 
 	vertical-align: middle;
 }
