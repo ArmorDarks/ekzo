@@ -20,24 +20,24 @@
 .pack {
 	display: table;
 
-
 	width: 100%;  /* [1] */
 
 	> li {
-		display: table-cell;
-
-		padding: $ekzo-spacing-unit;
+		@extend %pack__item;
 
 		> a { display: block; }
 
 	}
 
-	> a {
-		display: table-cell;
+	> a { @extend %pack__item; }
 
-		padding: $ekzo-spacing-unit;
-	}
+}
 
+.pack__item,
+%pack__item {
+	display: table-cell;
+
+	padding: $ekzo-spacing-unit;
 }
 
 .pack--fixed { table-layout: fixed; /* [2] */ }
