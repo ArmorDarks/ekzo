@@ -5,12 +5,12 @@
 //
 // Used for various framework calculations
 
-$ekzo-spacing-unit:        $ekzo-line-height      !default;
+$ekzo-spacing-unit:         $ekzo-line-height      !default;
 
-$ekzo-quarter-unit:        $ekzo-line-height  / 4 !default;
-$ekzo-half-spacing-unit:   $ekzo-spacing-unit / 2 !default;
-$ekzo-double-spacing-unit: $ekzo-spacing-unit * 2 !default;
-$ekzo-triple-spacing-unit: $ekzo-spacing-unit * 3 !default;
-$ekzo-quad-spacing-unit:   $ekzo-spacing-unit * 4 !default;
+$ekzo-quarter-spacing-unit: $ekzo-line-height  / 4 !default;
+$ekzo-half-spacing-unit:    $ekzo-spacing-unit / 2 !default;
+$ekzo-double-spacing-unit:  $ekzo-spacing-unit * 2 !default;
+$ekzo-triple-spacing-unit:  $ekzo-spacing-unit * 3 !default;
+$ekzo-quad-spacing-unit:    $ekzo-spacing-unit * 4 !default;
 
-$ekzo-line-height-ratio:   $ekzo-line-height / ekzo-font-size(base) !default;
+$ekzo-line-height-ratio:    $ekzo-line-height / ekzo-font-size(base) !default;
