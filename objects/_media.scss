@@ -64,21 +64,21 @@
 .media--flush {
 
 	.media__image {
-		padding-right: 0;
-		padding-left:  0;
+		margin-right: 0;
+		margin-left:  0;
 	}
 
 }
 
 .media\+ {
 
-	.media__image { padding-right: $ekzo-double-spacing-unit; }
+	.media__image { margin-right: $ekzo-double-spacing-unit; }
 
 	&.media--rev {
 
 		.media__image {
-			padding-right: 0;
-			padding-left:  $ekzo-double-spacing-unit;
+			margin-right: 0;
+			margin-left:  $ekzo-double-spacing-unit;
 		}
 
 	}
