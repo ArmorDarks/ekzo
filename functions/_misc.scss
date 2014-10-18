@@ -24,6 +24,23 @@
 
 
 // ---------------------------------------
+// To percent
+// ---------------------------------------
+//
+// Calculates percentage based on provided values
+//
+// @param {number:px} $value - value which should be converted into percent
+// @param {number:px} $total - value according to which should be calculated percentage
+//
+// @return {string}
+
+@function ekzo-percent($value, $total) {
+	@return $value / $total * 100%;
+}
+
+
+
+// ---------------------------------------
 // To em
 // ---------------------------------------
 //
