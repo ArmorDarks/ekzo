@@ -24,6 +24,25 @@
 
 
 // ---------------------------------------
+// To em
+// ---------------------------------------
+//
+// Calculates ems based on provided values
+//
+// @param {number:px} $value                     - value which should be converted
+//                                                 into ems
+// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be
+//                                                 calculated em value
+//
+// @return {string}
+
+@function ekzo-em($value, $base:ekzo-font-size(base)) {
+	@return $value / $base * 1em;
+}
+
+
+
+// ---------------------------------------
 // Tint & Shade
 // ---------------------------------------
 
