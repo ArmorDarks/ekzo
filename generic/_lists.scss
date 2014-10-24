@@ -13,7 +13,7 @@ ul,
 ol {
 	// margin-left already defined in shared
 
-	li + li { margin-top: $ekzo-spacing-unit; }
+	li + li { margin-top: $ekzo-half-spacing-unit; }
 
 }
 
@@ -59,8 +59,9 @@ ol {
  * Applies margin between ul's elements
  */
 
-.list-          > li + li { margin-top: $ekzo-half-spacing-unit; }
-.list\+         > li + li { margin-top: $ekzo-double-spacing-unit; }
+.list-          > li + li { margin-top: $ekzo-quarter-spacing-unit; }
+.list\+         > li + li { margin-top: $ekzo-spacing-unit; }
+.list\+\+       > li + li { margin-top: $ekzo-double-spacing-unit; }
 .list--li-flush > li + li { margin-top: 0; }
 
 .list--margin-       > li { margin: $ekzo-half-spacing-unit; }
