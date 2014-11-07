@@ -16,6 +16,8 @@
 // ---------------------------------------
 // Widths mixin
 // ---------------------------------------
+//
+// @param {string} $n='' - namespace (used for breakpoins generation)
 
 @mixin ekzo-widths($n: '') {
 
