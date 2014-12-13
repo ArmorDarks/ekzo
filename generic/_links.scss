@@ -19,7 +19,7 @@ a,
 	}
 
 	&:hover {
-		@if $ekzo-links-hover-colored {
+		@if $ekzo-links-hover-color {
 			color: $ekzo-links-hover-color;
 		}
 
@@ -50,7 +50,7 @@ a,
 			text-decoration: none;
 		}
 
-		@if $ekzo-links-hover-colored {
+		@if $ekzo-links-hover-color {
 			color: $ekzo-text-color;
 		}
 	}
