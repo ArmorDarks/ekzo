@@ -32,13 +32,13 @@
 	> li + li:before {
 		content: $ekzo-breadcrumb-delimiters-content;
 
-		@if $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
+		@if $ekzo-breadcrumb-delimiters-color and $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
 			color: $ekzo-breadcrumb-delimiters-color;
 		}
 
 	}
 
-	@if $ekzo-color-breadcrumb-links and $ekzo-color-breadcrumb-links != $ekzo-links-color {
+	@if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
 		> a { color: $ekzo-breadcrumb-links-color; }
 	}
 

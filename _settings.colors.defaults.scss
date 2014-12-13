@@ -22,8 +22,8 @@ $ekzo-links-hover-color:       #69d1c6 !default; // false to disable, color valu
 // Headings
 // ---------------------------------------
 
-$ekzo-headings-color:          #585c5d              !default;
-$ekzo-extra-headings-color:    $ekzo-headings-color !default;
+$ekzo-headings-color:          false !default; // false to disable, color value to enable
+$ekzo-extra-headings-color:    false !default; // false to disable, color value to enable
 
 // ---------------------------------------
 // Forms
@@ -58,8 +58,8 @@ $ekzo-btn--disabled-bg-color:  #d3d3d3          !default;
 // Breadcrumb
 // ---------------------------------------
 
-$ekzo-breadcrumb-links-color:      #d3d3d3 !default;
-$ekzo-breadcrumb-delimiters-color: #d3d3d3 !default;
+$ekzo-breadcrumb-links-color:      #d3d3d3 !default; // false to disable, color value to enable
+$ekzo-breadcrumb-delimiters-color: #d3d3d3 !default; // false to disable, color value to enable
 
 // ---------------------------------------
 // Backgrounds

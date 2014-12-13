@@ -28,19 +28,12 @@ $ekzo-enable-tooltips:           true  !default;
 // Typographic and color options
 // ---------------------------------------
 
-$ekzo-color-headings:            false !default;
-$ekzo-set-font-headings:         false !default;
-$ekzo-color-extra-headings:      false !default;
-$ekzo-set-font-extra-headings:   false !default;
-
-$ekzo-color-breadcrumb-links:    false !default;
-
 $ekzo-links-underline:           true  !default;
 $ekzo-links-hover-unline:        true  !default;
 
 $ekzo-btn-unline:                true  !default;
 
-$ekzo-btn-radius:                false !default;
+$ekzo-btn-radius:                false !default; // false to disable, px to enable
 
 $ekzo-btn-border-width:          false !default; // false to disable, width to enable
 $ekzo-btn-border-style:          false !default; // false to disable, type to enable
