@@ -7,8 +7,9 @@
 // Paths
 // ---------------------------------------
 
-$ekzo-assets-path:       '../assets'                 !default;
+$ekzo-assets-path:       '../assets'                   !default;
 $ekzo-images-path:       '#{$ekzo-assets-path}/images' !default;
+$ekzo-ui-path:           '#{$ekzo-images-path}/ui'     !default;
 $ekzo-sprites-path:      '#{$ekzo-assets-path}/sprites'!default;
 $ekzo-fonts-path:        '#{$ekzo-assets-path}/fonts'  !default;
 
@@ -29,4 +30,4 @@ $ekzo-icon-font:         fontello        !default;
 $ekzo-icon-font-version: 79220573        !default;
 $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
 
-$ekzo-sprites-file:      'sprites.png'   !default;
+$ekzo-sprites-file:      '/sprites.png'   !default;
