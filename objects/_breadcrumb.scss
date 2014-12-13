@@ -77,7 +77,7 @@
 
 	}
 
-	@if $ekzo-color-breadcrumb-links and $ekzo-color-breadcrumb-links != $ekzo-links-color {
+	@if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
 		> a { color: $ekzo-breadcrumb-links-color; }
 	}
 
