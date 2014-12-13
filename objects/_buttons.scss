@@ -25,31 +25,35 @@
  * 3. Stop buttons wrapping and looking broken.
  * 5. Force all elements using beautons to appear clickable.
  * 6. Normalise box model styles.
- * 7. If the button's text is 1em, and the button is (3 * font-size) tall, then
- *    there is 1em of space above and below that text. We therefore apply 1em
- *    of space to the left and right, as padding, to keep consistent spacing.
+ * 7. Using paddings instead of line-height to allow multi-line buttons
+ * 8. If the button's text is 1em with default 1.5 line-height, and the button
+      is 3 * font-size tall, then there is .75em of space above and below
+      that text. We therefore apply 1em of space to the left and right,
+      as padding, to keep consistent spacing.
  * 9. Don't allow buttons to have underlines; it kinda ruins the illusion.
  */
+
+ $btn-padding-top:    ekzo-em($ekzo-half-spacing-unit);
+ $btn-padding-bottom: ekzo-em($ekzo-half-spacing-unit);
 
 .btn {
 	display: inline-block;       /* [1] */
 
 	vertical-align: middle;      /* [2] */
 
-	// white-space: nowrap;         /* [3] */ // should be applied manually if needed with `.text--nowrap`
+	// white-space: nowrap;      /* [3] */ // should be applied manually if needed with `.text--nowrap`
 
 	cursor: pointer;             /* [5] */
 
 	border: none;                /* [6] */
 
 	margin: 0;                   /* [6] */
-	padding-top:    0;           /* [6] */
-	padding-bottom: 0;           /* [6] */
 
-	line-height: 3;              /* [7] */
+	padding-top:    $btn-padding-top;    /* [7] */
+	padding-bottom: $btn-padding-bottom; /* [7] */
 
-	padding-right: 1em;          /* [7] */
-	padding-left:  1em;          /* [7] */
+	padding-right: 1em;          /* [8] */
+	padding-left:  1em;          /* [8] */
 
 	color: $ekzo-btn-color;
 
@@ -110,39 +114,45 @@
  * remains uniform.
  */
 
+ // line-height = `$ekzo-line-height`
 .btn-- {
-	line-height: 1.5;
+	line-height: $ekzo-line-height;
 
-	padding-right: .6em;
-	padding-left:  .6em;
+	padding-top:     0;
+	padding-bottom:  0;
+	padding-right:  .6em;
+	padding-left:   .6em;
 }
 
+// line-height = 2
 .btn- {
-	line-height: 2;
-
-	padding-right: .8em;
-	padding-left:  .8em;
+	padding-top:    ekzo-em($ekzo-half-spacing-unit / 3);
+	padding-bottom: ekzo-em($ekzo-half-spacing-unit / 3);
+	padding-right:  .8em;
+	padding-left:   .8em;
 }
 
 .btn--reset {
-	line-height: 3;
-
-	padding-right: 1em;
-	padding-left:  1em;
+	padding-top:    $btn-padding-top;
+	padding-bottom: $btn-padding-bottom;
+	padding-right:  1em;
+	padding-left:   1em;
 }
 
+// line-height = 3
 .btn\+ {
-	line-height: 4;
-
-	padding-right: 1.5em;
-	padding-left:  1.5em;
+	padding-top:    ekzo-em($ekzo-spacing-unit * .84);
+	padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
+	padding-right:  1.5em;
+	padding-left:   1.5em;
 }
 
+// line-height = 5
 .btn\+\+ {
-	line-height: 5;
-
-	padding-right: 2em;
-	padding-left:  2em;
+	padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
+	padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
+	padding-right:  2em;
+	padding-left:   2em;
 }
 
 
