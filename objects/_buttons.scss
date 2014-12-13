@@ -36,7 +36,7 @@
 
 	vertical-align: middle;      /* [2] */
 
-	white-space: nowrap;         /* [3] */
+	// white-space: nowrap;         /* [3] */ // should be applied manually if needed with `.text--nowrap`
 
 	cursor: pointer;             /* [5] */
 
@@ -60,7 +60,12 @@
 		@if $ekzo-btn-unline {
 			text-decoration: none;   /* [9] */
 		}
+	}
 
+	&:hover {
+		@if $ekzo-btn-hover-color {
+			color: $ekzo-btn-hover-color;
+		}
 	}
 
 }

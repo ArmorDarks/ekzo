@@ -38,6 +38,7 @@ $ekzo-forms-placeholder-color: #a9a9a9 !default;
 // ---------------------------------------
 
 $ekzo-btn-color:               $ekzo-text-color !default;
+$ekzo-btn-hover-color:         false            !default; // false to disable, color value to enable
 $ekzo-btn-bg-color:            $brand-color     !default;
 
 $ekzo-btn--positive-color:     #7ef76a          !default;
