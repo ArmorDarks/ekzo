@@ -40,6 +40,13 @@ $ekzo-links-hover-unline:        true  !default;
 
 $ekzo-btn-unline:                true  !default;
 
+$ekzo-btn-radius:                false !default;
+
+$ekzo-btn-border-width:          false !default; // false to disable, width to enable
+$ekzo-btn-border-style:          false !default; // false to disable, type to enable
+$ekzo-btn-hover-border-width:    false !default; // false to disable, width to enable
+$ekzo-btn-hover-border-style:    false !default; // false to disable, type to enable
+
 // ---------------------------------------
 // Contents and delimiters
 // ---------------------------------------

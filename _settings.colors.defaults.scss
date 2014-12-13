@@ -41,6 +41,10 @@ $ekzo-btn-color:               $ekzo-text-color !default;
 $ekzo-btn-hover-color:         false            !default; // false to disable, color value to enable
 $ekzo-btn-bg-color:            $brand-color     !default;
 
+// You have to enable width and style in `settings.options` too!
+$ekzo-btn-border-color:        false            !default; // false to disable, color value to enable
+$ekzo-btn-hover-border-color:  false            !default; // false to disable, color value to enable
+
 $ekzo-btn--positive-color:     #7ef76a          !default;
 $ekzo-btn--positive-bg-color:  #1fa205          !default;
 

@@ -55,6 +55,14 @@
 
 	background-color: $ekzo-btn-bg-color;
 
+	@if $ekzo-btn-radius {
+		border-radius: $ekzo-btn-radius;
+	}
+
+	@if $ekzo-btn-border-width { border-width: $ekzo-btn-border-width; }
+	@if $ekzo-btn-border-style { border-style: $ekzo-btn-border-style; }
+	@if $ekzo-btn-border-color { border-color: $ekzo-btn-border-color; }
+
 	&,
 	&:hover {
 		@if $ekzo-btn-unline {
@@ -63,9 +71,11 @@
 	}
 
 	&:hover {
-		@if $ekzo-btn-hover-color {
-			color: $ekzo-btn-hover-color;
-		}
+		@if $ekzo-btn-hover-color { color: $ekzo-btn-hover-color; }
+
+		@if $ekzo-btn-hover-border-width { border-width: $ekzo-btn-hover-border-width; }
+		@if $ekzo-btn-hover-border-style { border-style: $ekzo-btn-hover-border-style; }
+		@if $ekzo-btn-hover-border-color { border-color: $ekzo-btn-hover-border-color; }
 	}
 
 }
