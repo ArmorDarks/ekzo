@@ -77,7 +77,7 @@
 	&:hover {
 		@if $ekzo-btn-hover-color { color: $ekzo-btn-hover-color; }
 
-		@if $ekzo-btn-hover-bg-color { color: $ekzo-btn-hover-bg-color; }
+		@if $ekzo-btn-hover-bg-color { background-color: $ekzo-btn-hover-bg-color; }
 
 		@if $ekzo-btn-hover-border-width { border-width: $ekzo-btn-hover-border-width; }
 		@if $ekzo-btn-hover-border-style { border-style: $ekzo-btn-hover-border-style; }
