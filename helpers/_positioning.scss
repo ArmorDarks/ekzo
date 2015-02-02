@@ -37,13 +37,13 @@
 
 .align--center        { text-align: center  !important; }
 
-.align--center-block  {
+.align--center-block {
 	text-align: center;
 
 	> * {
 		display: inline-block;
 
-		> * { text-align: left }
+		> * { text-align: left; }
 
 	}
 

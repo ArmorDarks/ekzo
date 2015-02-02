@@ -1,7 +1,7 @@
 @if $ekzo-enable-arrows {
 
 /*------------------------------------*\
-	$ekzo-ARROWS
+	ARROWS
 \*------------------------------------*/
 
 /**
@@ -20,20 +20,23 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
  */
 
 %arrow {
-	position:relative;
+	position: relative;
 
 	&:before,
 	&:after {
-		content:'';
-		position:absolute;
-		border-collapse:separate;
+		content: '';
+		position: absolute;
+		border-collapse: separate;
 	}
+
 	&:before {
-		border:$ekzo-border solid transparent;
+		border: $ekzo-border solid transparent;
 	}
+
 	&:after {
-		border:$ekzo-arrow solid transparent;
+		border: $ekzo-arrow solid transparent;
 	}
+
 }
 
 
@@ -46,19 +49,22 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 	&:before,
 	&:after {
-		bottom:100%;
+		bottom: 100%;
 	}
+
 }
 
 %arrow--upper {
 	@extend %arrow;
 
 	&:before {
-		top:$ekzo-arrow;
+		top: $ekzo-arrow;
 	}
+
 	&:after {
-		top:$ekzo-border;
+		top: $ekzo-border;
 	}
+
 }
 
 %arrow--middle {
@@ -66,23 +72,27 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 	&:before,
 	&:after {
-		top:50%;
-		margin-top:-$ekzo-border;
+		top: 50%;
+		margin-top: -$ekzo-border;
 	}
+
 	&:after {
-		margin-top:-$ekzo-arrow;
+		margin-top: -$ekzo-arrow;
 	}
+
 }
 
 %arrow--lower {
 	@extend %arrow;
 
 	&:before {
-		bottom:$ekzo-arrow;
+		bottom: $ekzo-arrow;
 	}
+
 	&:after {
-		bottom:$ekzo-border;
+		bottom: $ekzo-border;
 	}
+
 }
 
 %arrow--bottom {
@@ -90,8 +100,9 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 	&:before,
 	&:after {
-		top:100%;
+		top: 100%;
 	}
+
 }
 
 %arrow--near {
@@ -99,19 +110,22 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 	&:before,
 	&:after {
-		right:100%;
+		right: 100%;
 	}
+
 }
 
 %arrow--left {
 	@extend %arrow;
 
 	&:before {
-		left:$ekzo-arrow;
+		left: $ekzo-arrow;
 	}
+
 	&:after {
-		left:$ekzo-border;
+		left: $ekzo-border;
 	}
+
 }
 
 %arrow--center {
@@ -119,23 +133,27 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 	&:before,
 	&:after {
-		left:50%;
-		margin-left:-$ekzo-border;
+		left: 50%;
+		margin-left: -$ekzo-border;
 	}
+
 	&:after {
-		margin-left:-$ekzo-arrow;
+		margin-left: -$ekzo-arrow;
 	}
+
 }
 
 %arrow--right {
 	@extend %arrow;
 
 	&:before {
-		right:$ekzo-arrow;
+		right: $ekzo-arrow;
 	}
+
 	&:after {
-		right:$ekzo-border;
+		right: $ekzo-border;
 	}
+
 }
 
 %arrow--far {
@@ -143,8 +161,9 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 	&:before,
 	&:after {
-		left:100%;
+		left: 100%;
 	}
+
 }
 
 } // endif

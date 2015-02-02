@@ -47,9 +47,26 @@
 
 .pack--auto {}
 
-.pack-       { > li, > a { padding: $ekzo-half-spacing-unit; } }
-.pack\+      { > li, > a { padding: $ekzo-double-spacing-unit; } }
-.pack--flush { > li, > a { padding: 0; } }
+.pack- {
+
+	> li,
+	> a { padding: $ekzo-half-spacing-unit; }
+
+}
+
+.pack\+ {
+
+	> li,
+	> a { padding: $ekzo-double-spacing-unit; }
+
+}
+
+.pack--flush {
+
+	> li,
+	> a { padding: 0; }
+
+}
 
 // .pack--sides-       { > li, > a { padding-left: $ekzo-half-spacing-unit;   padding-right: $ekzo-half-spacing-unit; } }
 // .pack--sides\+      { > li, > a { padding-left: $ekzo-double-spacing-unit; padding-right: $ekzo-double-spacing-unit; } }

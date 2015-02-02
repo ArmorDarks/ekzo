@@ -1,8 +1,8 @@
+// scss-lint:disable QualifyingElement
 
 // =======================================
 // *NORMALIZE
 // =======================================
-
 
 // ---------------------------------------
 // HTML5 display definitions
@@ -27,7 +27,6 @@ nav,
 section,
 summary { display: block; }
 
-
 // ----
 // 1. Correct `inline-block` display not defined in IE 8/9.
 // 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
@@ -50,7 +49,6 @@ audio:not([controls]) {
   height: 0;
 }
 
-
 // ----
 // Remove the gap between images, videos, iframes, audio and canvas and the bottom of
 // their containers: h5bp.com/i/440
@@ -61,18 +59,6 @@ audio,
 canvas,
 video,
 iframe { vertical-align: middle; }
-
-
-// ----
-// Prevent modern browsers from displaying `audio` without controls.
-// Remove excess height in iOS 5 devices.
-
-audio:not([controls]) {
-	display: none;
-
-	height: 0;
-}
-
 
 // ----
 // Address `[hidden]` styling not present in IE 8/9/10.
@@ -145,9 +131,11 @@ small { font-size: 80%; }
 
 sub,
 sup {
+	position: relative;
+
 	font-size: 75%;
 	line-height: 0;
-	position: relative;
+
 	vertical-align: baseline;
 }
 
@@ -180,8 +168,7 @@ svg:not(:root) { overflow: hidden; }
 // Address differences between Firefox and other browsers.
 
 hr {
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
+	@include ekzo-vendor(box-sixing, content-box);
 
 	height: 0;
 }
@@ -267,7 +254,7 @@ input { line-height: inherit; }
 // 1. Address box sizing set to `content-box` in IE 8/9/10.
 
 input[type="checkbox"],
-input[type="radio"] { @include vendor (box-sixing, border-box); } // 1
+input[type="radio"] { @include ekzo-vendor(box-sixing, border-box); } // 1
 
 // ----
 // 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -276,7 +263,7 @@ input[type="radio"] { @include vendor (box-sixing, border-box); } // 1
 input[type='search'] {
 	-webkit-appearance: textfield;            // 1
 
-	// @include vendor (box-sixing, border-box); // 2
+	// @include ekzo-vendor(box-sixing, border-box); // 2
 }
 
 // ----

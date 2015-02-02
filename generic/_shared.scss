@@ -1,3 +1,4 @@
+// scss-lint:disable SingleLinePerSelector
 
 /*------------------------------------*\
 	$SHARED
@@ -39,4 +40,6 @@ hr { margin-bottom: $ekzo-spacing-unit - 2px; }
  * by a consistent amount. Define that amount once, here.
  */
 
-ul, ol, dd { margin-left: $ekzo-double-spacing-unit; }
+ul,
+ol,
+dd { margin-left: $ekzo-double-spacing-unit; }

@@ -1,3 +1,5 @@
+// scss-lint:disable ColorKeyword, QualifyingElement, SingleLinePerSelector
+
 @if $ekzo-debug-mode {
 
 	/*------------------------------------*\
@@ -136,19 +138,23 @@
 
 	textarea,
 	input {
-		outline:5px solid red;
+		outline: 5px solid red;
 	}
+
 	input[type] {
 		outline: none;
 	}
+
 	textarea[rows][cols] {
 		outline: none;
 	}
+
 	input[type=submit] {
 		outline: 5px solid red;
 	}
+
 	input[type=submit][value] {
-		outline:none;
+		outline: none;
 	}
 
 
@@ -157,7 +163,7 @@
 	 */
 
 	[style] {
-		outline:5px solid yellow;
+		outline: 5px solid yellow;
 	}
 
 
@@ -166,7 +172,7 @@
 	 */
 
 	[id] {
-		outline:5px solid yellow;
+		outline: 5px solid yellow;
 	}
 
 
@@ -230,7 +236,7 @@
 	.btn:not(a):not(button):not(input):after {
 		display: inline-block !important;
 		background: pink !important;
-		padding: 0.25em !important;
+		padding: .25em !important;
 		font-family: 'comic sans ms', cursive !important;
 		color: #000 !important;
 		font-size: 16px !important;

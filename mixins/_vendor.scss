@@ -1,8 +1,8 @@
+// scss-lint:disable VendorPrefixes
 
 /*------------------------------------*\
 	$MIXINS.VENDOR
 \*------------------------------------*/
-
 
 /**
  * Create vendor-prefixed CSS in one go, e.g.
@@ -21,21 +21,13 @@
 
 
 
-/**
- * Create vendor-prefixed CSS for placeholders in one go, e.g.
- *
-		@include ekzo-placeholder() {
-			color: #fff;
-			background-color: #000;
-		}
- *
- */
-
 @mixin ekzo-placeholder() {
+
 	::-webkit-input-placeholder { @content }
 			  :-moz-placeholder { @content }
 			 ::-moz-placeholder { @content }
 		 :-ms-input-placeholder { @content }
+
 }
 
 

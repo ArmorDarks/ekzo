@@ -74,7 +74,7 @@
 // @return {color}
 
 @function ekzo-tint($color, $percent) {
-  @return mix(white, $color, $percent);
+  @return mix(#fff, $color, $percent);
 }
 
 // -----
@@ -88,5 +88,5 @@
 // @return {color}
 
 @function ekzo-shade($color, $percent) {
-  @return mix(black, $color, $percent);
+  @return mix(#000, $color, $percent);
 }

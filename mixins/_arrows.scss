@@ -32,7 +32,7 @@
  * which will create a red triangle with a black border which sits at the bottom
  * center of the element. Call the mixin thus:
  *
-		.foo{
+		.foo {
 			background-color:#BADA55;
 			border:1px solid #ACE;
 			@include ekzo-arrow(top, left, #BADA55, #ACE);
@@ -46,11 +46,11 @@
 
 		@extend %arrow--top;
 
-		&:before{
+		&:before {
 			border-bottom-color: $border-color !important;
 		}
 
-		&:after{
+		&:after {
 			border-bottom-color: $arrow-color !important;
 		}
 
@@ -72,11 +72,11 @@
 
 		@extend %arrow--far;
 
-		&:before{
+		&:before {
 			border-left-color: $border-color !important;
 		}
 
-		&:after{
+		&:after {
 			border-left-color: $arrow-color !important;
 		}
 
@@ -98,11 +98,11 @@
 
 		@extend %arrow--bottom;
 
-		&:before{
+		&:before {
 			border-top-color: $border-color !important;
 		}
 
-		&:after{
+		&:after {
 			border-top-color: $arrow-color !important;
 		}
 
@@ -124,11 +124,11 @@
 
 		@extend %arrow--near;
 
-		&:before{
+		&:before {
 			border-right-color: $border-color !important;
 		}
 
-		&:after{
+		&:after {
 			border-right-color: $arrow-color !important;
 		}
 

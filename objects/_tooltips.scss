@@ -31,14 +31,14 @@ $ekzo-tooltip-height: $ekzo-tooltip-font-size + 2 * 8px !default;
 $ekzo-tooltip-arrow-size: 6px !default;
 
 // transition distance
-$ekzo-transitionDistance: 8px !default;
+$ekzo-transition-distance: 8px !default;
 
 /**
 * Tooltip colors
 */
 
 // Default color
-$ekzo-tooltip-bg-color: rgba(1, 13, 14, 0.68) !default;
+$ekzo-tooltip-bg-color: rgba(1, 13, 14, .68) !default;
 
 // Error color
 $ekzo-tooltip-bg-color-error: hsl(1, 40%, 50%) !default;
@@ -103,7 +103,8 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 	}
 
-	&:before, &:after {
+	&:before,
+	&:after {
 		#{$position}: 100%;
 
 		@if $position == 'top' or $position == 'bottom' {
@@ -116,19 +117,21 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 	}
 
-	&:hover:before, &:hover:after,
-	&:focus:before, &:focus:after {
+	&:hover:before,
+	&:hover:after,
+	&:focus:before,
+	&:focus:after {
 		@if $position == 'top' {
-			@include ekzo-vendor(transform, translateY($ekzo-transitionDistance * 1));
+			@include ekzo-vendor(transform, translateY($ekzo-transition-distance * 1));
 		}
 		@if $position == 'bottom' {
-			@include ekzo-vendor(transform, translateY($ekzo-transitionDistance * -1));
+			@include ekzo-vendor(transform, translateY($ekzo-transition-distance * -1));
 		}
 		@if $position == 'left' {
-			@include ekzo-vendor(transform, translateX($ekzo-transitionDistance * 1));
+			@include ekzo-vendor(transform, translateX($ekzo-transition-distance * 1));
 		}
 		@if $position == 'right' {
-			@include ekzo-vendor(transform, translateX($ekzo-transitionDistance * -1));
+			@include ekzo-vendor(transform, translateX($ekzo-transition-distance * -1));
 		}
 
 	}
@@ -142,14 +145,15 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 		position: relative;
 
-		&:before, &:after {
-			position: absolute;
-
+		&:before,
+		&:after {
 			// HACK: Trigger hardware accelerated rendering, otherwise transform was not
 			// working on a hidden element
-			-webkit-transform: translate3d(0, 0, 0);
-			-moz-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
+			@include ekzo-vendor(transform, translate3d(0, 0, 0));
+
+			@include ekzo-vendor(transition, .3s ease);
+
+			position: absolute;
 
 			// HACK: visibility is set to hidden because IE & Opera don't support
 			// pointer-events on HTML content yet because of which hovering a hidden tooltip
@@ -157,14 +161,12 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 			visibility: hidden;
 			opacity: 0;
 			z-index: 1000000;
-
-			-webkit-transition: 0.3s ease;
-			-moz-transition: 0.3s ease;
-			transition: 0.3s ease;
 		}
 
-		&:hover:before, &:hover:after,
-		&:focus:before, &:focus:after {
+		&:hover:before,
+		&:hover:after,
+		&:focus:before,
+		&:focus:after {
 			visibility: visible;
 			opacity: 1;
 		}
@@ -185,12 +187,12 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 		&:after {
 			content: attr(data-tooltip);
 			background: $ekzo-tooltip-bg-color;
-			color: white;
+			color: #fff;
 			padding: .7em;
 			font-size: $ekzo-tooltip-font-size;
 			line-height: 1;
 			white-space: nowrap;
-			box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+			box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
 			border-radius: 4px;
 
 			font-weight: normal;
@@ -209,29 +211,30 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 
 	.tooltip--always {
-		&:after, &:before {
+		&:after,
+		&:before {
 			opacity: 1;
 			visibility: visible;
 		}
 
 		&.tooltip--top:after,
 		&.tooltip--top:before {
-			@include ekzo-vendor(transform, translateY($ekzo-transitionDistance * -1));
+			@include ekzo-vendor(transform, translateY($ekzo-transition-distance * -1));
 		}
 
 		&.tooltip--bottom:after,
 		&.tooltip--bottom:before {
-			@include ekzo-vendor(transform, translateY($ekzo-transitionDistance * 1));
+			@include ekzo-vendor(transform, translateY($ekzo-transition-distance * 1));
 		}
 
 		&.tooltip--left:after,
 		&.tooltip--left:before {
-			@include ekzo-vendor(transform, translateX($ekzo-transitionDistance * -1));
+			@include ekzo-vendor(transform, translateX($ekzo-transition-distance * -1));
 		}
 
 		&.tooltip--right:after,
 		&.tooltip--right:before {
-			@include ekzo-vendor(transform, translateX($ekzo-transitionDistance * 1));
+			@include ekzo-vendor(transform, translateX($ekzo-transition-distance * 1));
 		}
 	}
 
@@ -249,15 +252,9 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 	.tooltip--right:before { border-right-color: $ekzo-tooltip-bg-color; }
 
-	.tooltip--error {
-		@include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error);
-	}
-	.tooltip--info {
-		@include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info);
-	}
-	.tooltip--success {
-		@include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success);
-	}
+	.tooltip--error   { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error); }
+	.tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
+	.tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
 
 
 

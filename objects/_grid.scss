@@ -49,9 +49,9 @@
 }
 
 	.grid__item {
-		display: inline-block;
-
 		@include ekzo-vendor(box-sizing, border-box);
+
+		display: inline-block;
 
 		vertical-align: top;
 
@@ -199,7 +199,7 @@
 
 	.#{$n}grid--auto {
 
-		> .grid__item { width: auto;; }
+		> .grid__item { width: auto; }
 
 	}
 

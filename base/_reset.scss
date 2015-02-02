@@ -47,7 +47,7 @@ img {
 // Remove most spacing between table cells and border
 
 table {
-	border: none;
+	border: 0;
 
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -56,7 +56,7 @@ table {
 // ----
 // Remove default border from `fieldset` and `legend`.
 
-fieldset { border: none; }
+fieldset { border: 0; }
 
 // ----
 // Remove outline
@@ -73,7 +73,7 @@ img { outline: none; }
 // 2. So that `alt` text is visually offset if images don't load.
 
 img {
-	border: none;       // 1
+	border: 0;       // 1
 
 	font-style: italic; // 2
 }

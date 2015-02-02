@@ -45,7 +45,7 @@
 
 	cursor: pointer;             /* [5] */
 
-	border: none;                /* [6] */
+	border: 0;                /* [6] */
 
 	margin: 0;                   /* [6] */
 
@@ -199,7 +199,7 @@
 $ekzo-btn-prefix: btn--;
 
 @include ekzo-font-size-class(headings, $prefix: $ekzo-btn-prefix, $line-height:false);
-@include ekzo-font-size-class(buttons,  $prefix: $ekzo-btn-prefix, $line-height:false);
+@include ekzo-font-size-class(buttons, $prefix: $ekzo-btn-prefix, $line-height:false);
 
 
 
