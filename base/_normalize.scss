@@ -45,8 +45,8 @@ video {
 // Remove excess height in iOS 5 devices.
 
 audio:not([controls]) {
-  display: none;
-  height: 0;
+	display: none;
+	height: 0;
 }
 
 // ----
@@ -116,9 +116,9 @@ strong { font-weight: bold; }
 // Address styling not present in IE 8/9.
 
 mark {
-  background: #ff0;
+	background: #ff0;
 
-  color: #000;
+	color: #000;
 }
 
 // ----

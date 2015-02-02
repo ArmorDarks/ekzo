@@ -15,10 +15,10 @@
 // @return {string}
 
 @function ekzo-convert-direction($direction) {
-    @if $direction == 'top'         { @return 'bottom'; }
-    @else if $direction == 'bottom' { @return 'top'; }
-    @else if $direction == 'left'   { @return 'right'; }
-    @else if $direction == 'right'  { @return 'left'; }
+	@if $direction == 'top'         { @return 'bottom'; }
+	@else if $direction == 'bottom' { @return 'top'; }
+	@else if $direction == 'left'   { @return 'right'; }
+	@else if $direction == 'right'  { @return 'left'; }
 }
 
 
@@ -74,7 +74,7 @@
 // @return {color}
 
 @function ekzo-tint($color, $percent) {
-  @return mix(#fff, $color, $percent);
+	@return mix(#fff, $color, $percent);
 }
 
 // -----
@@ -88,5 +88,5 @@
 // @return {color}
 
 @function ekzo-shade($color, $percent) {
-  @return mix(#000, $color, $percent);
+	@return mix(#000, $color, $percent);
 }
