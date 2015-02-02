@@ -6,7 +6,9 @@
 
 @media print {
 
-	* {
+	*,
+	*:before,
+	*:after {
 		background: transparent !important;
 
 		box-shadow: none !important;
@@ -50,8 +52,6 @@
 	}
 
 	img { max-width: 100% !important; }
-
-	@page { margin: .5cm; }
 
 	p,
 	h2,
