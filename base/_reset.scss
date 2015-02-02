@@ -43,8 +43,6 @@ img {
 	padding: 0;
 }
 
-
-
 // ----
 // Remove most spacing between table cells and border
 
@@ -55,14 +53,13 @@ table {
 	border-spacing: 0;
 }
 
-
-
 // ----
-// Remove default border from `fieldset`
+// Remove default border from `fieldset` and `legend`.
 
 fieldset { border: none; }
 
-
+// ----
+// Remove outline
 
 input,
 textarea,
@@ -70,29 +67,6 @@ select,
 button,
 a,
 img { outline: none; }
-
-
-
-// ----
-// 1. Remove default vertical scrollbar in IE 8/9.
-// 2. Improve readability and alignment in all browsers.
-// 3. Allow only vertical resizing of textareas
-
-textarea {
-	overflow: auto;      // 1
-	vertical-align: top; // 2
-	resize: vertical;    // 3
-}
-
-
-
-// ----
-// Give a help cursor to elements that give extra info on `:hover`.
-
-abbr[title],
-dfn[title] { cursor: help; }
-
-
 
 // ----
 // 1. Remove border when inside `a` element in IE 8/9.
@@ -102,21 +76,4 @@ img {
 	border: none;       // 1
 
 	font-style: italic; // 2
-}
-
-
-
-// ----
-// Give form elements some cursor interactions...
-
-button,
-select,
-option { cursor: pointer; }
-
-.text-input:active,
-.text-input:focus,
-textarea:active,
-textarea:focus {
-	cursor: text;
-	outline: none;
 }

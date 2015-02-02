@@ -22,35 +22,45 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary { display: block; }
 
 
 // ----
-// Correct `inline-block` display not defined in IE 8/9.
+// 1. Correct `inline-block` display not defined in IE 8/9.
+// 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 
 audio,
 canvas,
 progress,
-video { display: inline-block; }
+video {
+	display: inline-block;    // 1
+
+	vertical-align: baseline; // 2
+}
+
+// ----
+// Prevent modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 
 
 // ----
-// Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-
-progress { vertical-align: baseline; }
-
-
-// ----
-// Remove the gap between images, videos, audio and canvas and the bottom of
+// Remove the gap between images, videos, iframes, audio and canvas and the bottom of
 // their containers: h5bp.com/i/440
 
 img,
 svg,
 audio,
 canvas,
-video { vertical-align: middle; }
+video,
+iframe { vertical-align: middle; }
 
 
 // ----
@@ -59,6 +69,7 @@ video { vertical-align: middle; }
 
 audio:not([controls]) {
 	display: none;
+
 	height: 0;
 }
 
@@ -99,18 +110,35 @@ a:hover { outline: 0; }
 // ---------------------------------------
 
 // ----
+// Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+
+abbr[title] { border-bottom: 1px dotted; }
+
+// ----
+// Give a help cursor to elements that give extra info on `:hover`.
+
+abbr[title],
+dfn[title] { cursor: help; }
+
+// ----
 // Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
 
 b,
 strong { font-weight: bold; }
 
+// ----
+// Address styling not present in IE 8/9.
+
+mark {
+  background: #ff0;
+
+  color: #000;
+}
 
 // ----
 // Address inconsistent and variable font size in all browsers.
 
 small { font-size: 80%; }
-
-
 
 // ----
 // Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -154,18 +182,15 @@ svg:not(:root) { overflow: hidden; }
 hr {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+
 	height: 0;
 }
 
 
 // ----
 // 1. Contain overflow in all browsers.
-// 2. Improve readability of pre-formatted text in all browsers.
 
-pre {
-	overflow: auto; // 1
-	// white-space: pre-wrap; // 2
-}
+pre { overflow: auto; } // 1
 
 
 // ----
@@ -177,7 +202,8 @@ kbd,
 pre,
 samp {
 	font-family: monospace, monospace; // 1
-	font-size: 1em; // 2
+
+	font-size: 1em;                    // 2
 }
 
 
@@ -203,23 +229,70 @@ optgroup,
 select,
 textarea {
 	color: inherit; // 1
-	font: inherit; // 2
-	margin: 0; // 3
+
+	font: inherit;  // 2
+
+	margin: 0;      // 3
 }
 
+// ----
+// 1. Remove default vertical scrollbar in IE 8/9.
+// 2. Improve readability and alignment in all browsers.
+// 3. Allow only vertical resizing of textareas
+
+textarea {
+	overflow: auto;      // 1
+
+	vertical-align: top; // 2
+
+	resize: vertical;    // 3
+}
 
 // ----
 // Address `overflow` set to `hidden` in IE 8/9/10/11.
 
 button { overflow: visible; }
 
+// ----
+// Inputs should inherift line-height from parent
+//
+// @todo Check is it working properly
+
+input { line-height: inherit; }
 
 // ----
-// Address `appearance` set to `searchfield` in Safari 5 and Chrome.
-// (include `-moz` to future-proof).
+// It's recommended that you don't attempt to style these elements.
+// Firefox's implementation doesn't respect box-sizing, padding, or width.
+//
+// 1. Address box sizing set to `content-box` in IE 8/9/10.
 
-input[type='search'] { -webkit-appearance: textfield; }
+input[type="checkbox"],
+input[type="radio"] { @include vendor (box-sixing, border-box); } // 1
 
+// ----
+// 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+// 2. Address `box-sizing` set to `border-box` in Safari and Chrome, but not Firefox
+
+input[type='search'] {
+	-webkit-appearance: textfield;            // 1
+
+	// @include vendor (box-sixing, border-box); // 2
+}
+
+// ----
+// Correct `color` not being inherited in IE 8/9/10/11.
+
+legend { color: inherit; }
+
+// ----
+// Fix the cursor style for Chrome's increment/decrement buttons. For certain
+// `font-size` values of the `input`, it causes the cursor style of the
+// decrement button to change from `default` to `text`.
+//
+// @note Seems to be fixed
+
+// input[type="number"]::-webkit-inner-spin-button,
+// input[type="number"]::-webkit-outer-spin-button { height: auto; }
 
 // ----
 // 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -228,11 +301,9 @@ input[type='search'] { -webkit-appearance: textfield; }
 //    `input` and others.
 
 button,
-html input[type='button'], // 1
+html input[type='button'],      // 1
 input[type='reset'],
-input[type='submit'] {
-	-webkit-appearance: button; // 2
-}
+input[type='submit'] { -webkit-appearance: button; } // 2
 
 
 // ----
@@ -240,3 +311,22 @@ input[type='submit'] {
 
 button[disabled],
 html input[disabled] { cursor: default; }
+
+// ----
+// Give form elements some cursor interactions...
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+select,
+option { cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+	cursor: text;
+
+	outline: none;
+}
