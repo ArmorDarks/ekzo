@@ -11,20 +11,20 @@
 // Functions
 // ---------------------------------------
 
-@import './functions/misc';
-@import './functions/typography';
+@import './tools/functions.misc';
+@import './tools/functions.typography';
 
 // ---------------------------------------
 // Mixins
 // ---------------------------------------
 
-@import './mixins/arrows';
-@import './mixins/breakpoint';
-@import './mixins/icons';
-@import './mixins/misc';
-@import './mixins/sprites';
-@import './mixins/typography';
-@import './mixins/vendor';
+@import './tools/mixins.arrows';
+@import './tools/mixins.breakpoint';
+@import './tools/mixins.icons';
+@import './tools/mixins.misc';
+@import './tools/mixins.sprites';
+@import './tools/mixins.typography';
+@import './tools/mixins.vendor';
 
 // ---------------------------------------
 // Default options, styles, colors etc
@@ -55,7 +55,6 @@
 
 @import './generic/shared';
 
-@import './generic/animations';
 @import './generic/forms';
 @import './generic/headings';
 @import './generic/images';
@@ -68,6 +67,7 @@
 // Helpers
 // ---------------------------------------
 
+@import './helpers/animations';
 @import './helpers/clearfix';
 @import './helpers/display';
 @import './helpers/misc';
