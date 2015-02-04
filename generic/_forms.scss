@@ -20,12 +20,6 @@ fieldset + fieldset { margin-top: $ekzo-double-spacing-unit; }
 .text-input,
 input,
 textarea,
-fieldset { @include ekzo-vendor(box-sizing, border-box); }
-
-
-.text-input,
-input,
-textarea,
 label {
 	font-family: $ekzo-forms-font-family;
 	font-size:   $ekzo-forms-font-size;
