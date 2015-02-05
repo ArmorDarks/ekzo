@@ -1,6 +1,6 @@
-Ekzo.sass framework
-===================
+SWITCH TO BRANCH
+================
 
-OOCSS-driven, layered, design-free, BEM-based, responsive and little, but mighty SASS framework for rapid and painless development
+Please, **switch to [latest branch](https://github.com/ArmorDarks/ekzo.sass/tree/feature/2.0.0-alpha)** to get actual release
 
-Inspired by [Inuit.css](https://github.com/csswizardry/inuit.css)
+That version of Ekzo.sass is obsolete.
