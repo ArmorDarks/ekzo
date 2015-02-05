@@ -32,9 +32,3 @@ node_modules
 
 ## Sass
 .sass-cache
-
-## Bower
-vendor/
-
-## Build folder
-build/
