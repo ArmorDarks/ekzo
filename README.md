@@ -5,6 +5,11 @@ OOCSS-driven, layered, design-free, BEM-based, responsive and little, but mighty
 
 Inspired by [Inuit.css](https://github.com/csswizardry/inuit.css).
 
+Requirements
+------------
+
+[Sass](http://sass-lang.com/install) 3.4.2 or higher
+
 Best used with
 --------------
 
