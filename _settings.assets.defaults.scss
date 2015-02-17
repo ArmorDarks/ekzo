@@ -26,8 +26,14 @@ $ekzo-bg:                $ekzo-bg-color  !default;
 $ekzo-icons-prefix:      icon--          !default;
 $ekzo-sprites-prefix:    sprite--        !default;
 
-$ekzo-icon-font:         fontello        !default;
+$ekzo-sprites-file:      'sprite.png'    !default;
+
+// ---------------------------------------
+// Fonts
+// ---------------------------------------
+
+$ekzo-use-svg-fonts:     false           !default;
+
+$ekzo-icon-font:         icons           !default;
 $ekzo-icon-font-version: 79220573        !default;
 $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
-
-$ekzo-sprites-file:      'sprite.png'   !default;
