@@ -76,9 +76,9 @@
 //                               - should `line-height` rhythm calculation be applied or no.
 //                                 Set to number in pixels to define custom
 //                                 `line-height`.
-// @param {boolean|'include'} $plain-class=false
-//                               - whether class shouid be outputed as normal, or as
-//                                 plain (like `h1`, without dot).
+// @param {boolean|'include'} $element-selector=false
+//                               - whether selector shouid be outputed as class, as
+//                                 general selector (like `h1`, without dot) or as both.
 //                                 `include` parameter will include both
 // @param {string} $prefix=null  - should class name be prefixed or no.
 //                                 Plain class names won't be prefixed independantly from
@@ -98,10 +98,10 @@
 //
 // @example
 //
-//		@include ekzo-font-size-class(fonts, $plain-class:false, $prefix:'text--') { border: 1px; };
+//		@include ekzo-font-size-classes(fonts, $element-selector:false, $prefix:'text--') { border: 1px; };
 //
 
-@mixin ekzo-font-size-class($type, $name:false, $line-height:true, $plain-class:false, $prefix:'', $map:$ekzo-font-sizes) {
+@mixin ekzo-font-size-classes($type, $name:false, $line-height:true, $element-selector:false, $prefix:'', $map:$ekzo-font-sizes) {
 
 	$working-map: null;
 	$class:       null;
@@ -116,9 +116,9 @@
 
 		@each $name, $value in $working-map {
 
-			@if $plain-class == include {
+			@if $element-selector == include {
 				$class: $name + ', .' + $prefix + $name;
-			} @else if $plain-class {
+			} @else if $element-selector {
 				$class: $name;
 			} @else {
 				$class: '.' + $prefix + $name;
@@ -135,9 +135,9 @@
 
 		$value: map-get($working-map, $name);
 
-		@if $plain-class == include {
+		@if $element-selector == include {
 			$class: $name + ', .' + $prefix + $name;
-		} @else if $plain-class {
+		} @else if $element-selector {
 			$class: $name;
 		} @else {
 			$class: '.' + $prefix + $name;
