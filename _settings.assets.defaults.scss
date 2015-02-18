@@ -35,5 +35,5 @@ $ekzo-sprites-file:      'sprite.png'    !default;
 $ekzo-use-svg-fonts:     false           !default;
 
 $ekzo-icon-font:         icons           !default;
-$ekzo-icon-font-version: 79220573        !default;
+$ekzo-icon-font-version: 79220573        !default; // `false` to disable, number to enable
 $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
