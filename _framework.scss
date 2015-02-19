@@ -7,6 +7,7 @@
 // Functions
 // ---------------------------------------
 
+@import './tools/functions.maps';
 @import './tools/functions.misc';
 @import './tools/functions.typography';
 
@@ -57,7 +58,6 @@
 @import './generic/links';
 @import './generic/lists';
 @import './generic/tables';
-@import './generic/texts';
 
 // ---------------------------------------
 // Helpers
@@ -81,6 +81,7 @@
 @import './objects/breadcrumb';
 @import './objects/buttons';
 @import './objects/flag';
+@import './objects/floated-nav';
 @import './objects/grid';
 @import './objects/iconic-list';
 @import './objects/icons';
@@ -88,4 +89,5 @@
 @import './objects/media';
 @import './objects/nav';
 @import './objects/pack';
+@import './objects/sprites';
 @import './objects/tooltips';
