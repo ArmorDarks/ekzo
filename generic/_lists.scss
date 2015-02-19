@@ -13,24 +13,7 @@ ul,
 ol {
 	// margin-left already defined in shared
 
-	li + li { margin-top: $ekzo-half-spacing-unit; }
-
-}
-
-
-.list--floated {
-	@extend %list--flush;
-	@extend %clear;
-
-	> li { float: left; }
-
-}
-
-.list--floated--rev {
-	@extend %list--flush;
-	@extend %clear;
-
-	> li { float: right; }
+	li + li { margin-top: $ekzo-spacing-unit--half; }
 
 }
 
@@ -59,17 +42,17 @@ ol {
  * Applies margin between ul's elements
  */
 
-.list-          > li + li { margin-top: $ekzo-quarter-spacing-unit; }
+.list-          > li + li { margin-top: $ekzo-spacing-unit--quarter; }
 .list\+         > li + li { margin-top: $ekzo-spacing-unit; }
-.list\+\+       > li + li { margin-top: $ekzo-double-spacing-unit; }
+.list\+\+       > li + li { margin-top: $ekzo-spacing-unit--double; }
 .list--li-flush > li + li { margin-top: 0; }
 
-.list--margin-       > li { margin: $ekzo-half-spacing-unit; }
-.list--margin\+      > li { margin: $ekzo-double-spacing-unit; }
+.list--margin-       > li { margin: $ekzo-spacing-unit--half; }
+.list--margin\+      > li { margin: $ekzo-spacing-unit--double; }
 .list--margin--flush > li { margin: 0; }
 
-.list--padding-       > li { padding: $ekzo-half-spacing-unit; }
-.list--padding\+      > li { padding: $ekzo-double-spacing-unit; }
+.list--padding-       > li { padding: $ekzo-spacing-unit--half; }
+.list--padding\+      > li { padding: $ekzo-spacing-unit--double; }
 .list--padding--flush > li { padding: 0; }
 
 

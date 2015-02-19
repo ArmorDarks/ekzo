@@ -1,0 +1,24 @@
+@if $ekzo-enable-floated-nav {
+
+/*------------------------------------*\
+		$FLOATED-NAV
+\*------------------------------------*/
+
+.floated-nav {
+	@extend %list--flush;
+	@extend %clear;
+
+	> li { float: left; }
+
+}
+
+.floated-nav--rev {
+	@extend %list--flush;
+	@extend %clear;
+
+	> li { float: right; }
+
+}
+
+
+} // endif
