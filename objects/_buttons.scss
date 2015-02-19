@@ -1,3 +1,7 @@
+
+$btn-padding-top:    ekzo-em($ekzo-spacing-unit--half);
+$btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
+
 @if $ekzo-enable-buttons {
 
 /*------------------------------------*\
@@ -33,8 +37,7 @@
  * 9. Don't allow buttons to have underlines; it kinda ruins the illusion.
  */
 
-$btn-padding-top:    ekzo-em($ekzo-half-spacing-unit);
-$btn-padding-bottom: ekzo-em($ekzo-half-spacing-unit);
+
 
 .btn {
 	display: inline-block;       /* [1] */
@@ -103,7 +106,7 @@ $btn-padding-bottom: ekzo-em($ekzo-half-spacing-unit);
 	padding-left:  .5em;
 }
 
-
+} // endif
 
 /*------------------------------------*\
 	$SIZES
@@ -116,92 +119,140 @@ $btn-padding-bottom: ekzo-em($ekzo-half-spacing-unit);
  * remains uniform.
  */
 
- // line-height = `$ekzo-line-height`
-.btn-- {
-	line-height: $ekzo-line-height;
+// ---------------------------------------
+// Buttons sizes
+// ---------------------------------------
+//
+// @param {string} $n='' - namespace (used for breakpoins generation)
 
-	padding-top:     0;
-	padding-bottom:  0;
-	padding-right:  .6em;
-	padding-left:   .6em;
-}
+@mixin ekzo-buttons-sizes($n: '') {
 
-// line-height = 2
-.btn- {
-	padding-top:    ekzo-em($ekzo-half-spacing-unit / 3);
-	padding-bottom: ekzo-em($ekzo-half-spacing-unit / 3);
-	padding-right:  .8em;
-	padding-left:   .8em;
-}
+	// line-height = `$ekzo-line-height`
+	.#{$n}btn-- {
+		line-height: $ekzo-line-height;
 
-.btn--reset {
-	padding-top:    $btn-padding-top;
-	padding-bottom: $btn-padding-bottom;
-	padding-right:  1em;
-	padding-left:   1em;
-}
+		padding-top:     0;
+		padding-bottom:  0;
+		padding-right:  .6em;
+		padding-left:   .6em;
+	}
 
-// line-height = 3
-.btn\+ {
-	padding-top:    ekzo-em($ekzo-spacing-unit * .84);
-	padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
-	padding-right:  1.5em;
-	padding-left:   1.5em;
-}
+	// line-height = 2
+	.#{$n}btn- {
+		padding-top:    ekzo-em($ekzo-spacing-unit--half / 3);
+		padding-bottom: ekzo-em($ekzo-spacing-unit--half / 3);
+		padding-right:  .8em;
+		padding-left:   .8em;
+	}
 
-// line-height = 5
-.btn\+\+ {
-	padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
-	padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
-	padding-right:  2em;
-	padding-left:   2em;
-}
+	.#{$n}btn--reset {
+		padding-top:    $btn-padding-top;
+		padding-bottom: $btn-padding-bottom;
+		padding-right:  1em;
+		padding-left:   1em;
+	}
 
+	// line-height = 3
+	.#{$n}btn\+ {
+		padding-top:    ekzo-em($ekzo-spacing-unit * .84);
+		padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
+		padding-right:  1.5em;
+		padding-left:   1.5em;
+	}
 
-/**
- * Wide version of button with unspecified line-height
- */
-
-.btn--wide {
-	padding-right: 2em;
-	padding-left:  2em;
-}
-
-.btn--wider {
-	padding-right: 4em;
-	padding-left:  4em;
-}
+	// line-height = 5
+	.#{$n}btn\+\+ {
+		padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
+		padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
+		padding-right:  2em;
+		padding-left:   2em;
+	}
 
 
-/**
- * These buttons will fill the entirety of their container.
- *
- * 1. Remove padding so that widths and paddings don't conflict.
- */
+	/**
+	 * Wide version of button with unspecified line-height
+	 */
 
-.btn--full {
-	width: 100%;
+	.#{$n}btn--wide {
+		padding-right: 2em;
+		padding-left:  2em;
+	}
 
-	padding-right: 0;            /* [1] */
-	padding-left:  0;            /* [1] */
-}
-
-
-
-/*------------------------------------*\
-	$FONT-SIZES
-\*------------------------------------*/
-
-/**
- * Button font-size modifiers based on headers sizes.
- */
-
-$ekzo-btn-prefix: btn--;
-
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-btn-prefix, $line-height:false);
-@include ekzo-font-size-classes(buttons, $prefix: $ekzo-btn-prefix, $line-height:false);
+	.#{$n}btn--wider {
+		padding-right: 4em;
+		padding-left:  4em;
+	}
 
 
+	/**
+	 * These buttons will fill the entirety of their container.
+	 *
+	 * 1. Remove padding so that widths and paddings don't conflict.
+	 */
+
+	.#{$n}btn--full {
+		width: 100%;
+
+		padding-right: 0;            /* [1] */
+		padding-left:  0;            /* [1] */
+	}
+
+	/*------------------------------------*\
+		$FONT-SIZES
+	\*------------------------------------*/
+
+	/**
+	 * Button font-size modifiers based on map's values.
+	 */
+
+	$ekzo-btn-prefix: btn--;
+
+	@include ekzo-font-size-classes(buttons, $prefix: $n + $ekzo-btn-prefix, $line-height:false);
+
+
+} // ekzo-buttons-sizes()
+
+
+
+// ---------------------------------------
+// Call all widths
+// ---------------------------------------
+
+@include ekzo-buttons-sizes();
+
+
+
+// ---------------------------------------
+// Responsive widths
+// ---------------------------------------
+
+// If you have set `$responsive` to 'true' in options then you now have
+// access to these classes. You can define at which breakpoint you'd like an
+// element to be a certain size.
+//
+// @todo Updated docs
+//
+// @example
+//
+// 		<div class='grid 1/4 lap-1/2 palm-1/1'> ... </div>
+//
+// This would create a `div` that, at 'desktop' sizes, takes up a quarter of the
+// horizontal space, a half of that space at 'tablet' sizes, and goes full width
+// at 'mobile' sizes.
+//
+// @demo: jsfiddle.net/inuitcss/WS4Ge
+
+@if $ekzo-enable-responsive-buttons {
+
+	@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+		@include ekzo-breakpoint($breakpoint) {
+			@include ekzo-buttons-sizes('#{$breakpoint}-');
+		}
+	}
+
+} // endif
+
+@if $ekzo-enable-buttons {
 
 /*------------------------------------*\
 	$FUNCTIONS

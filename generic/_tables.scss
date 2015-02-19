@@ -39,14 +39,14 @@ table { width: 100%; }
 	.#{$n}table--padding-- {
 
 		th,
-		td { padding: $ekzo-half-spacing-unit / 2; }
+		td { padding: $ekzo-spacing-unit--quarter; }
 
 	}
 
 	.#{$n}table--padding- {
 
 		th,
-		td { padding: $ekzo-half-spacing-unit; }
+		td { padding: $ekzo-spacing-unit--half; }
 
 	}
 
@@ -60,7 +60,7 @@ table { width: 100%; }
 	.#{$n}table--padding\+ {
 
 		th,
-		td { padding: $ekzo-double-spacing-unit; }
+		td { padding: $ekzo-spacing-unit--double; }
 
 	}
 
@@ -88,7 +88,7 @@ table { width: 100%; }
 
 		@if $ekzo-enable-responsive-tables {
 
-			@each $breakpoint, $value in $ekzo-breakpoints {
+			@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
 				@include ekzo-breakpoint($breakpoint) {
 					@include ekzo-table-spacing('#{$breakpoint}-');
 				}
