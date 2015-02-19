@@ -97,13 +97,13 @@
 
 .flag\+ {
 
-	.flag__image { padding-right: $ekzo-double-spacing-unit; }
+	.flag__image { padding-right: $ekzo-spacing-unit--double; }
 
 	&.flag--rev {
 
 		.flag__image {
 			padding-right: 0;
-			padding-left:  $ekzo-double-spacing-unit;
+			padding-left:  $ekzo-spacing-unit--double;
 		}
 
 	}

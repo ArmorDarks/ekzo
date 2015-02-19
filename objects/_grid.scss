@@ -143,23 +143,23 @@
 	// Grid gutter sizes
 
 	.#{$n}grid- {
-		margin-left: -$ekzo-half-spacing-unit;
+		margin-left: -$ekzo-spacing-unit--half;
 
-		> .grid__item { padding-left: $ekzo-half-spacing-unit; }
+		> .grid__item { padding-left: $ekzo-spacing-unit--half; }
 
 	}
 
 	.#{$n}grid\+ {
-		margin-left: -$ekzo-double-spacing-unit;
+		margin-left: -$ekzo-spacing-unit--double;
 
-		> .grid__item { padding-left: $ekzo-double-spacing-unit; }
+		> .grid__item { padding-left: $ekzo-spacing-unit--double; }
 
 	}
 
 	.#{$n}grid\+\+ {
-		margin-left: -$ekzo-triple-spacing-unit;
+		margin-left: -$ekzo-spacing-unit--triple;
 
-		> .grid__item { padding-left: $ekzo-triple-spacing-unit; }
+		> .grid__item { padding-left: $ekzo-spacing-unit--triple; }
 
 	}
 
@@ -210,7 +210,7 @@
 @if $ekzo-enable-grid {
 	@if $ekzo-enable-responsive-grid {
 
-		@each $breakpoint, $value in $ekzo-breakpoints {
+		@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
 			@include ekzo-breakpoint($breakpoint) {
 				@include ekzo-grid-types('#{$breakpoint}-');
 			}

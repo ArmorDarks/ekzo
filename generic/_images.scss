@@ -29,7 +29,7 @@ img[height] { max-width: none; }
 .image--right {
 	float: right;
 
-	margin-bottom: $ekzo-half-spacing-unit;
+	margin-bottom: $ekzo-spacing-unit--half;
 	margin-left:   $ekzo-spacing-unit;
 }
 
@@ -37,7 +37,7 @@ img[height] { max-width: none; }
 	float: left;
 
 	margin-right:  $ekzo-spacing-unit;
-	margin-bottom: $ekzo-half-spacing-unit;
+	margin-bottom: $ekzo-spacing-unit--half;
 }
 
 .image--center {
@@ -45,5 +45,5 @@ img[height] { max-width: none; }
 
 	margin-right:  auto;
 	margin-left:   auto;
-	margin-bottom: $ekzo-half-spacing-unit;
+	margin-bottom: $ekzo-spacing-unit--half;
 }

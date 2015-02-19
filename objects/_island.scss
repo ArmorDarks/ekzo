@@ -30,8 +30,8 @@
 
 }
 
-.island-       { padding: $ekzo-half-spacing-unit; }
-.island\+      { padding: $ekzo-double-spacing-unit; }
+.island-       { padding: $ekzo-spacing-unit--half; }
+.island\+      { padding: $ekzo-spacing-unit--double; }
 .island--flush { padding: 0; }
 
 } // endif

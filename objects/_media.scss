@@ -72,13 +72,13 @@
 
 .media\+ {
 
-	.media__image { margin-right: $ekzo-double-spacing-unit; }
+	.media__image { margin-right: $ekzo-spacing-unit--double; }
 
 	&.media--rev {
 
 		.media__image {
 			margin-right: 0;
-			margin-left:  $ekzo-double-spacing-unit;
+			margin-left:  $ekzo-spacing-unit--double;
 		}
 
 	}
