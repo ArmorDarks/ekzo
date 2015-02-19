@@ -99,12 +99,17 @@
 // @example
 //
 //		@include ekzo-font-size-classes(fonts, $element-selector:false, $prefix:'text--') { border: 1px; };
+//      @include ekzo-font-size-classes(headings, h1);
 //
 
 @mixin ekzo-font-size-classes($type, $name:false, $line-height:true, $element-selector:false, $prefix:'', $map:$ekzo-font-sizes) {
 
 	$working-map: null;
 	$class:       null;
+
+	@if not $prefix {
+		$prefix: '';
+	}
 
 	@if map-has-key($map, $type) {
 		$working-map: map-get($map, $type);
@@ -115,6 +120,12 @@
 	@if not $name {
 
 		@each $name, $value in $working-map {
+
+			@if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
+				@if $prefix != true and $prefix != null and $prefix != '' {
+					$prefix: str-replace($prefix, '--', '');
+				}
+			}
 
 			@if $element-selector == include {
 				$class: $name + ', .' + $prefix + $name;
@@ -134,6 +145,12 @@
 	} @else if $name and $type and map-has-key($working-map, $name) {
 
 		$value: map-get($working-map, $name);
+
+		@if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
+			@if $prefix != true and $prefix != null and $prefix != '' {
+				$prefix: str-replace($prefix, '--', '');
+			}
+		}
 
 		@if $element-selector == include {
 			$class: $name + ', .' + $prefix + $name;
