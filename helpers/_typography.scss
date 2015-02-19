@@ -3,30 +3,87 @@
 // ^HELPERS.TYPOGRAPHY
 // =======================================
 
+// ---------------------------------------
+// Complex text helpers
+// ---------------------------------------
+//
+// Including font-sizes, line-heights
+// For headings also included font-weight, font style and colors (if enabled in settings)
+
+// ----
+// Text
+
+@include ekzo-font-size-classes(text, $prefix: text--);
+
+// ----
+// Standard headings
+//
+// When we define a heading we also define a corresponding class to go with it.
+// This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
+
+@include ekzo-font-size-classes(headings, $prefix: false) { @extend %headings-properties; }
+
+// ----
+// Extra headings
+//
+// A series of classes for setting massive type; for use in heroes, promos, etc.
+
+@include ekzo-font-size-classes(extra-headings, $prefix: text--) {
+
+	@if $ekzo-extra-headings-font-family { font-family: $ekzo-extra-headings-font-family; }
+
+	@if $ekzo-extra-headings-color { color: $ekzo-extra-headings-color; }
+
+}
+
+// ---------------------------------------
+// Font-sizes helpers
+// ---------------------------------------
+
+@include ekzo-font-size-classes(text, $prefix: font-size--, $line-height: false);
+
+@include ekzo-font-size-classes(headings, $prefix: font-size--, $line-height: false);
+
+@include ekzo-font-size-classes(extra-headings, $prefix: font-size--, $line-height: false);
+
+// ---------------------------------------
+// Line-height helpers
+// ---------------------------------------
+
+@include ekzo-font-size-classes(text, $prefix: line-height--, $line-height: only);
+
+@include ekzo-font-size-classes(headings, $prefix: line-height--, $line-height: only);
+
+@include ekzo-font-size-classes(extra-headings, $prefix: line-height--, $line-height: only);
+
+// ----
+// Take element out of typography rhythm
+// Should be applied on custom elements with unusual styling
+
+.line-height--flush { line-height: 1 !important; }
 
 // ---------------------------------------
 // Text styling
 // ---------------------------------------
 
-.text--light      { font-weight: 300  !important; }
-.text--normal     { font-weight: 400  !important; }
-.text--semibold   { font-weight: 600  !important; }
-.text--bold       { font-weight: bold !important; }
+.font-weight--light    { font-weight: 300  !important; }
+.font-weight--normal   { font-weight: 400  !important; }
+.font-weight--semibold { font-weight: 600  !important; }
+.font-weight--bold     { font-weight: bold !important; }
 
-.text--italic     { font-style: italic !important; }
+.font-style--normal    { font-style: normal !important; }
+.font-style--italic    { font-style: italic !important; }
 
-.text--caps       { text-transform: uppercase !important; }
+.text--uppercase  { text-transform: uppercase !important; }
 
 .text--nowrap     { white-space: nowrap; }
-
-
 
 // ---------------------------------------
 // Underline styling
 // ---------------------------------------
 
-.text--underline { text-decoration: underline; }
-.text--unline    { text-decoration: none; }
+.text--underline        { text-decoration: underline; }
+.text--underline--flush { text-decoration: none; }
 
 // ----
 // Removes underline, but adds it on hover
@@ -61,14 +118,3 @@
 
 	&:hover span { text-decoration: underline; }
 }
-
-
-
-// ---------------------------------------
-// Line height
-// ---------------------------------------
-//
-// Take element out of typography rhythm
-// Should be applied on custom elements with unusual styling
-
-.line-height--flush { line-height: 1 !important; }

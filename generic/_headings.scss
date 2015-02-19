@@ -3,6 +3,15 @@
 // ^HEADINGS
 // =======================================
 
+%headings-properties {
+	font-weight: $ekzo-headings-font-weight;
+
+	@if $ekzo-headings-font-family { font-family: $ekzo-headings-font-family; }
+
+	@if $ekzo-headings-color { color: $ekzo-headings-color; }
+
+}
+
 // ---------------------------------------
 // Standard headings
 // ---------------------------------------
@@ -11,24 +20,4 @@
 // This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
 // heading hierarchy.
 
-@include ekzo-font-size-classes(headings, $element-selector: include) {
-	font-weight: $ekzo-headings-font-weight;
-
-	@if $ekzo-headings-font-family { font-family: $ekzo-headings-font-family; }
-
-	@if $ekzo-headings-color { color: $ekzo-headings-color; }
-}
-
-// ---------------------------------------
-// Extra headings
-// ---------------------------------------
-//
-// A series of classes for setting massive type; for use in heroes, mastheads,
-// promos, etc.
-
-@include ekzo-font-size-classes(extra-headings, $prefix: text--) {
-
-	@if $ekzo-extra-headings-font-family { font-family: $ekzo-extra-headings-font-family; }
-
-	@if $ekzo-extra-headings-color { color: $ekzo-extra-headings-color; }
-}
+@include ekzo-font-size-classes(headings, $element-selector: true) { @extend %headings-properties; }
