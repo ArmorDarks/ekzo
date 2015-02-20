@@ -33,21 +33,8 @@
 
 .align--left          { text-align: left    !important; }
 .align--right         { text-align: right   !important; }
-.align--justify       { text-align: justify !important; }
-
 .align--center        { text-align: center  !important; }
-
-.align--center-block {
-	text-align: center;
-
-	> * {
-		display: inline-block;
-
-		> * { text-align: left; }
-
-	}
-
-}
+.align--justify       { text-align: justify !important; }
 
 .align--top           { vertical-align: top    !important; }
 .align--middle        { vertical-align: middle !important; }

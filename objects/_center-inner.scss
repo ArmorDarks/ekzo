@@ -1,0 +1,19 @@
+@if $ekzo-enable-center-inner {
+
+/*------------------------------------*\
+		$CENTER-INNER
+\*------------------------------------*/
+
+.center-inner {
+	text-align: center;
+
+	> * {
+		display: inline-block;
+
+		> * { text-align: left; }
+
+	}
+
+}
+
+} // endif
