@@ -7,44 +7,76 @@
 // ELEMENTS AND ABSTRACTIONS
 // ---------------------------------------
 
-$ekzo-enable-a-nav:              true  !default;
-$ekzo-enable-arrows:             true  !default;
-$ekzo-enable-breadcrumb:         true  !default;
-$ekzo-enable-buttons:            true  !default;
-$ekzo-enable-flag:               true  !default;
-$ekzo-enable-floated-nav:        true  !default;
-$ekzo-enable-forms:              true  !default;
-$ekzo-enable-grid:               true  !default;
-$ekzo-enable-iconic-list:        true  !default;
-$ekzo-enable-icons:              true  !default;
-$ekzo-enable-island:             true  !default;
-$ekzo-enable-lists:              true  !default;
-$ekzo-enable-media:              true  !default;
-$ekzo-enable-nav:                true  !default;
-$ekzo-enable-pack:               true  !default;
-$ekzo-enable-sprites:            true  !default;
-$ekzo-enable-tables:             true  !default;
-$ekzo-enable-tooltips:           true  !default;
+$ekzo-enable-a-nav:                    true  !default;
+$ekzo-enable-arrows:                   true  !default;
+$ekzo-enable-breadcrumb:               true  !default;
+$ekzo-enable-buttons:                  true  !default;
+$ekzo-enable-center-inner:             true  !default;
+$ekzo-enable-flag:                     true  !default;
+$ekzo-enable-floated-nav:              true  !default;
+$ekzo-enable-forms:                    true  !default;
+$ekzo-enable-grid:                     true  !default;
+$ekzo-enable-iconic-list:              true  !default;
+$ekzo-enable-icons:                    true  !default;
+$ekzo-enable-island:                   true  !default;
+$ekzo-enable-lists:                    true  !default;
+$ekzo-enable-media:                    true  !default;
+$ekzo-enable-nav:                      true  !default;
+$ekzo-enable-pack:                     true  !default;
+$ekzo-enable-sprites:                  true  !default;
+$ekzo-enable-tables:                   true  !default;
+$ekzo-enable-tooltips:                 true  !default;
 
 // ---------------------------------------
 // Links options
 // ---------------------------------------
 
-$ekzo-links-underline:           true  !default;
-$ekzo-links-hover-unline:        true  !default;
+$ekzo-links-underline:                 true  !default; // false to force-unline
+$ekzo-links-hover-unline:              true  !default;
+
+$ekzo-links-border-top-width:          false !default; // false to disable, width to enable
+$ekzo-links-border-top-style:          false !default; // false to disable, type to enable
+$ekzo-links-border-right-width:        false !default; // false to disable, width to enable
+$ekzo-links-border-right-style:        false !default; // false to disable, type to enable
+$ekzo-links-border-bottom-width:       false !default; // false to disable, width to enable
+$ekzo-links-border-bottom-style:       false !default; // false to disable, type to enable
+$ekzo-links-border-left-width:         false !default; // false to disable, width to enable
+$ekzo-links-border-left-style:         false !default; // false to disable, type to enable
+
+$ekzo-links-hover-border-top-width:    false !default; // false to disable, width to enable
+$ekzo-links-hover-border-top-style:    false !default; // false to disable, type to enable
+$ekzo-links-hover-border-right-width:  false !default; // false to disable, width to enable
+$ekzo-links-hover-border-right-style:  false !default; // false to disable, type to enable
+$ekzo-links-hover-border-bottom-width: false !default; // false to disable, width to enable
+$ekzo-links-hover-border-bottom-style: false !default; // false to disable, type to enable
+$ekzo-links-hover-border-left-width:   false !default; // false to disable, width to enable
+$ekzo-links-hover-border-left-style:   false !default; // false to disable, type to enable
 
 // ---------------------------------------
 // Buttons options
 // ---------------------------------------
 
-$ekzo-btn-unline:                true  !default;
+$ekzo-btn-unline:                      true  !default;
 
-$ekzo-btn-radius:                false !default; // false to disable, px to enable
+$ekzo-btn-radius:                      false !default; // false to disable, value to enable
 
-$ekzo-btn-border-width:          false !default; // false to disable, width to enable
-$ekzo-btn-border-style:          false !default; // false to disable, type to enable
-$ekzo-btn-hover-border-width:    false !default; // false to disable, width to enable
-$ekzo-btn-hover-border-style:    false !default; // false to disable, type to enable
+$ekzo-btn-border-top-width:            false !default; // false to disable, width to enable
+$ekzo-btn-border-top-style:            false !default; // false to disable, type to enable
+$ekzo-btn-border-right-width:          false !default; // false to disable, width to enable
+$ekzo-btn-border-right-style:          false !default; // false to disable, type to enable
+$ekzo-btn-border-bottom-width:         false !default; // false to disable, width to enable
+$ekzo-btn-border-bottom-style:         false !default; // false to disable, type to enable
+$ekzo-btn-border-left-width:           false !default; // false to disable, width to enable
+$ekzo-btn-border-left-style:           false !default; // false to disable, type to enable
+
+$ekzo-btn-hover-border-top-width:      false !default; // false to disable, width to enable
+$ekzo-btn-hover-border-top-style:      false !default; // false to disable, type to enable
+$ekzo-btn-hover-border-right-width:    false !default; // false to disable, width to enable
+$ekzo-btn-hover-border-right-style:    false !default; // false to disable, type to enable
+$ekzo-btn-hover-border-bottom-width:   false !default; // false to disable, width to enable
+$ekzo-btn-hover-border-bottom-style:   false !default; // false to disable, type to enable
+$ekzo-btn-hover-border-left-width:     false !default; // false to disable, width to enable
+$ekzo-btn-hover-border-left-style:     false !default; // false to disable, type to enable
 
 // ---------------------------------------
 // Contents and delimiters
@@ -60,7 +92,7 @@ $ekzo-links--back-content:                '\00AB' '\00A0'                 !defau
 // BORDER-BOX
 // ---------------------------------------
 
-$ekzo-global-border-box:         false !default;
+$ekzo-global-border-box:               false !default;
 
 // ---------------------------------------
 // DEBUG
@@ -69,4 +101,4 @@ $ekzo-global-border-box:         false !default;
 // Debug mode will visually highlight any potential markup/accessibility quirks
 // in the browser. Set to `true` or `false`.
 
-$ekzo-debug-mode:                false !default;
+$ekzo-debug-mode:                      false !default;
