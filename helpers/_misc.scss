@@ -11,7 +11,6 @@
 // A lot of these classes carry `!important` as you will always want them to win
 // out over other selectors.
 
-
 // ---------------------------------------
 // Cursors
 // ---------------------------------------
@@ -20,11 +19,20 @@
 .cursor--arrow   { cursor: default !important; }
 .cursor--pointer { cursor: pointer !important; }
 
-
-
 // ---------------------------------------
 // Apply box-sizing models
 // ---------------------------------------
 
-.border-box  { @include ekzo-vendor(box-sizing, border-box); }
-.content-box { @include ekzo-vendor(box-sizing, content-box); }
+.box-sizing--border  { @include ekzo-vendor(box-sizing, border-box  !important); }
+.box-sizing--content { @include ekzo-vendor(box-sizing, content-box !important); }
+
+// ---------------------------------------
+// Border
+// ---------------------------------------
+
+.border--flush         { border: 0              !important; }
+
+.border-width--flush   { border-width: 0        !important; }
+.border-style--flush   { border-style: none     !important; }
+
+.border-color--inherit { border-color: inherit  !important; }
