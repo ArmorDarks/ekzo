@@ -1,0 +1,40 @@
+@if $ekzo-enable-border-reline {
+
+/*------------------------------------*\
+		$BORDER-RELINE
+\*------------------------------------*/
+
+// ----
+// Removes underline from element, but adds it
+// to child span
+//
+// Useful for anchors with icons inside it
+
+.border-reline {
+	border-bottom-width: 0;
+
+	&:hover .border-reline__to { border-bottom-width: 0; }
+
+}
+
+	.border-reline__to {
+		border-bottom-width: $ekzo-links-border-bottom-width;
+		border-bottom-style: $ekzo-links-border-bottom-style;
+	}
+
+
+// ----
+// Removes underline, but adds it to child span on hover
+
+.border-reline--rev {
+	border-bottom-width: 0;
+
+	.border-reline__to { border-bottom-width: 0; }
+
+	&:hover .border-reline__to {
+		border-bottom-width: $ekzo-links-border-bottom-width;
+		border-bottom-style: $ekzo-links-border-bottom-style;
+	}
+}
+
+} // endif
