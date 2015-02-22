@@ -56,9 +56,9 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 	padding-right: 1em;          /* [8] */
 	padding-left:  1em;          /* [8] */
 
-	color: $ekzo-btn-color;
+	@if $ekzo-btn-color { color: $ekzo-btn-color; }
 
-	background-color: $ekzo-btn-bg-color;
+	@if $ekzo-btn-bg-color { background-color: $ekzo-btn-bg-color; }
 
 	@if $ekzo-btn-radius { border-radius: $ekzo-btn-radius; }
 
@@ -97,27 +97,19 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 		@if $ekzo-btn-hover-bg-color { background-color: $ekzo-btn-hover-bg-color; }
 
 		@if $ekzo-btn-hover-border-top-width    { border-top-width:   $ekzo-btn-hover-border-top-width; }
-		@else if $ekzo-links-hover-border-top-width and not $ekzo-btn-hover-border-top-width { border-top-width:    0; }
 		@if $ekzo-btn-hover-border-top-style    { border-top-style:   $ekzo-btn-hover-border-top-style; }
-		@else if $ekzo-links-hover-border-top-style and not $ekzo-btn-hover-border-top-style { border-top-style:    none; }
 		@if $ekzo-btn-hover-border-top-color    { border-top-color:   $ekzo-btn-hover-border-top-color; }
 
 		@if $ekzo-btn-hover-border-right-width  { border-right-width: $ekzo-btn-hover-border-right-width; }
-		@else if $ekzo-links-hover-border-right-width and not $ekzo-btn-hover-border-right-width { border-right-width:    0; }
 		@if $ekzo-btn-hover-border-right-style  { border-right-style: $ekzo-btn-hover-border-right-style; }
-		@else if $ekzo-links-hover-border-right-style and not $ekzo-btn-hover-border-right-style { border-right-style:    none; }
 		@if $ekzo-btn-hover-border-right-color  { border-right-color: $ekzo-btn-hover-border-right-color; }
 
 		@if $ekzo-btn-hover-border-bottom-width { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
-		@else if $ekzo-links-hover-border-bottom-width and not $ekzo-btn-hover-border-bottom-width { border-bottom-width:    0; }
 		@if $ekzo-btn-hover-border-bottom-style { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
-		@else if $ekzo-links-hover-border-bottom-style and not $ekzo-btn-hover-border-bottom-style { border-bottom-style:    none; }
 		@if $ekzo-btn-hover-border-bottom-color { border-bottom-color: $ekzo-btn-hover-border-bottom-color; }
 
 		@if $ekzo-btn-hover-border-left-width   { border-left-width:  $ekzo-btn-hover-border-left-width; }
-		@else if $ekzo-links-hover-border-left-width and not $ekzo-btn-hover-border-left-width { border-left-width:    0; }
 		@if $ekzo-btn-hover-border-left-style   { border-left-style:  $ekzo-btn-hover-border-left-style; }
-		@else if $ekzo-links-hover-border-left-style and not $ekzo-btn-hover-border-left-style { border-left-style:    none; }
 		@if $ekzo-btn-hover-border-left-color   { border-left-color:  $ekzo-btn-hover-border-left-color; }
 	}
 
@@ -207,12 +199,17 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 	 * Wide version of button with unspecified line-height
 	 */
 
-	.#{$n}btn--wide {
+	.#{$n}btn--wide\+ {
 		padding-right: 2em;
 		padding-left:  2em;
 	}
 
-	.#{$n}btn--wider {
+	.#{$n}btn--wide\+-- {
+		padding-right: 1.5em;
+		padding-left:  1.5em;
+	}
+
+	.#{$n}btn--wide\+\+\+ {
 		padding-right: 4em;
 		padding-left:  4em;
 	}
