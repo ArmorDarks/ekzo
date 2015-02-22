@@ -93,28 +93,3 @@
 
 	&:hover { text-decoration: underline; }
 }
-
-// ----
-// Removes underline from element, but adds it
-// to child span
-//
-// Useful for anchors with icons inside it
-
-.text--reline {
-	text-decoration: none;
-
-	span { text-decoration: underline; }
-
-	&:hover span { text-decoration: none; }
-}
-
-// ----
-// Removes underline, but adds it to child span on hover
-
-.text--reline--rev {
-	text-decoration: none;
-
-	span { text-decoration: none; }
-
-	&:hover span { text-decoration: underline; }
-}
