@@ -46,6 +46,19 @@
 
 @include ekzo-font-size-classes(extra-headings, $prefix: font-size--, $line-height: false);
 
+// @todo Add to font-sizes map
+
+.font-size--em--       { font-size: .5em; }
+.font-size--em-        { font-size: .75em; }
+.font-size--em\+-      { font-size: 1.25em; }
+.font-size--em\+--     { font-size: 1.5em; }
+.font-size--em\+       { font-size: 2em; }
+.font-size--em\+\+-    { font-size: 2.25em; }
+.font-size--em\+\+--   { font-size: 2.5em; }
+.font-size--em\+\+     { font-size: 3em; }
+.font-size--em\+\+\+   { font-size: 4em; }
+.font-size--em\+\+\+\+ { font-size: 5em; }
+
 // ---------------------------------------
 // Line-height helpers
 // ---------------------------------------
