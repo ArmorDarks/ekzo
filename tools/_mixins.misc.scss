@@ -81,3 +81,35 @@
 	border-top-right-radius:    $radius;
 	border-bottom-right-radius: $radius;
 }
+
+
+
+// ---------------------------------------
+// ASPECT RATIO
+// ---------------------------------------
+//
+// For making iframes (YouTubes, Google Map) and some
+// occasion divs obeying to certein aspect ratio
+//
+// @param (number) $width  - width of aspect ration
+// @param (height) $height - height of aspect ration
+//
+// @example
+//
+//	.responsive-iframe--widescreen {
+//
+//		@include ekzo-aspect-ratio(16, 9);
+//
+//	}
+//
+
+@mixin ekzo-aspect-ratio($width, $height) {
+	height: 0;
+
+	width: 100%;
+
+	$aspect-ratio: $height / $width * 100%;
+
+	padding-bottom: $aspect-ratio;
+
+}
