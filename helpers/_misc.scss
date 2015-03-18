@@ -36,3 +36,11 @@
 .border-style--flush   { border-style: none     !important; }
 
 .border-color--inherit { border-color: inherit  !important; }
+
+// ---------------------------------------
+// Column count
+// ---------------------------------------
+
+.column-count--flush { column-count: auto }
+.column-count--2     { column-count: 2 }
+.column-count--3     { column-count: 3 }
