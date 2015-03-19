@@ -87,9 +87,9 @@
 .font-style--normal    { font-style: normal !important; }
 .font-style--italic    { font-style: italic !important; }
 
-.text--uppercase  { text-transform: uppercase !important; }
+.text--uppercase       { text-transform: uppercase !important; }
 
-.text--nowrap     { white-space: nowrap; }
+.text--nowrap          { white-space: nowrap; }
 
 // ---------------------------------------
 // Underline styling
@@ -105,4 +105,27 @@
 	text-decoration: none;
 
 	&:hover { text-decoration: underline; }
+
+}
+
+// ---------------------------------------
+// Underline with border styling
+// ---------------------------------------
+
+.text--underline--border {
+	text-decoration: none;
+
+	border-bottom-width: 1px;
+}
+
+// ----
+// Removes underline, but adds it on hover
+
+.text--underline--border--rev {
+	text-decoration: none;
+
+	border-bottom-width: 0;
+
+	&:hover { border-bottom-width: 1px; }
+
 }
