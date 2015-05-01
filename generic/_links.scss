@@ -82,7 +82,7 @@ a,
 	@if $ekzo-links-border-left-width   { border-left-width:   0; }
 	@if $ekzo-links-border-left-style   { border-left-style:   none; }
 
-	color: $ekzo-text-color;
+	color: inherit;
 
 	&:hover {
 		@if $ekzo-links-underline { text-decoration: none; }
