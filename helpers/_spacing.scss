@@ -116,7 +116,7 @@
 	.#{$n}padding-ends\+        { padding-top:    $ekzo-spacing-unit--double !important; padding-bottom: $ekzo-spacing-unit--double !important; }
 	.#{$n}padding-sides\+       { padding-right:  $ekzo-spacing-unit--double !important; padding-left:   $ekzo-spacing-unit--double !important; }
 
-	.#{$n}padding-flush         { padding:        0 !important; }
+	.#{$n}padding--flush        { padding:        0 !important; }
 	.#{$n}padding-top--flush    { padding-top:    0 !important; }
 	.#{$n}padding-right--flush  { padding-right:  0 !important; }
 	.#{$n}padding-bottom--flush { padding-bottom: 0 !important; }
