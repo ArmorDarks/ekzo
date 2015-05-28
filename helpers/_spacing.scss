@@ -53,6 +53,14 @@
 	.#{$n}margin-ends\+         { margin-top:    $ekzo-spacing-unit--double !important; margin-bottom: $ekzo-spacing-unit--double !important; }
 	.#{$n}margin-sides\+        { margin-right:  $ekzo-spacing-unit--double !important; margin-left:   $ekzo-spacing-unit--double !important; }
 
+	.#{$n}margin\+\+            { margin:        $ekzo-spacing-unit * 3 !important; }
+	.#{$n}margin-top\+\+        { margin-top:    $ekzo-spacing-unit * 3 !important; }
+	.#{$n}margin-right\+\+      { margin-right:  $ekzo-spacing-unit * 3 !important; }
+	.#{$n}margin-bottom\+\+     { margin-bottom: $ekzo-spacing-unit * 3 !important; }
+	.#{$n}margin-left\+\+       { margin-left:   $ekzo-spacing-unit * 3 !important; }
+	.#{$n}margin-ends\+\+       { margin-top:    $ekzo-spacing-unit * 3 !important; margin-bottom: $ekzo-spacing-unit * 3 !important; }
+	.#{$n}margin-sides\+\+      { margin-right:  $ekzo-spacing-unit * 3 !important; margin-left:   $ekzo-spacing-unit * 3 !important; }
+
 	.#{$n}margin--flush         { margin:        0 !important; }
 	.#{$n}margin-top--flush     { margin-top:    0 !important; }
 	.#{$n}margin-right--flush   { margin-right:  0 !important; }
