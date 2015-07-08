@@ -25,29 +25,35 @@
  *       to keep bulletin-icons right after `<li>` tag.
  *
  *	1. Pusing list twice left to align it with default list
- *	   with default bulletings
- *	2. We have to ensure that it targets only first icons and not all
- *	   icons in list
- * 	3. Used to algin icons properly and center it according to the first
- *	   line of list
+ *	   with default bullets
+ *	2. Assume that first icons in list are bullets
  */
 
 .iconic-list {
-	margin-left: $ekzo-spacing-unit--double; // 1
+	padding-left: $ekzo-spacing-unit--double; // 1
+
+	list-style-type: none;
 
 	li {
 		position: relative;
 
-		> .icon:first-child,    // 2
-		> .sprite:first-child {
-			position: absolute; // 4
-
-			left: -20px;        // 4
-			top: .4em;          // 4
-		}
+		> .icon,                  // 2
+		> .sprite { @extend .iconic-list__icon; }
 
 	}
 
 }
+
+	.iconic-list__icon {
+		position: absolute;
+
+		width: 1.5em;
+
+		text-align: center;
+
+		line-height: inherit;
+
+		margin-left: -2em;
+	}
 
 } // endif
