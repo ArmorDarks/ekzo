@@ -30,12 +30,14 @@
 // ---------------------------------------
 // Alignments
 // ---------------------------------------
+//
+// 1. @legacy Forcing flex alignment for grids, which have been written before flex-based implementation
 
-.align--left          { text-align: left    !important; }
-.align--right         { text-align: right   !important; }
-.align--center        { text-align: center  !important; }
-.align--justify       { text-align: justify !important; }
+.align--left          { text-align: left    !important; justify-content: flex-start    !important; } // 1
+.align--right         { text-align: right   !important; justify-content: flex-end      !important; } // 1
+.align--center        { text-align: center  !important; justify-content: center        !important; } // 1
+.align--justify       { text-align: justify !important; justify-content: space-between !important; } // 1
 
-.align--top           { vertical-align: top    !important; }
-.align--middle        { vertical-align: middle !important; }
-.align--bottom        { vertical-align: bottom !important; }
+.align--top           { vertical-align: top    !important; align-items: flex-start !important; } // 1
+.align--middle        { vertical-align: middle !important; align-items: center     !important; } // 1
+.align--bottom        { vertical-align: bottom !important; align-items: flex-end   !important; } // 1
