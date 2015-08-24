@@ -42,19 +42,18 @@
 // Standard grid
 
 .grid {
-	list-style: none; // 2
+	display:    flex;
+	flex-wrap:  wrap;
+	list-style: none;                   // 2
 
-	padding-left:  0; // 2
+	padding-left:  0;                   // 2
 
-	margin-bottom: 0; // 2
-
+	margin-bottom: 0;                   // 2
 	margin-left:   -$ekzo-spacing-unit; // 1
 }
 
 	.grid__item {
 		@include ekzo-vendor(box-sizing, border-box);
-
-		display: inline-block;
 
 		vertical-align: top;
 
@@ -66,8 +65,9 @@
 // For places, where inline-block-based grid simply doesn't cut
 
 .grid--floated {
-
 	@extend %clear;
+
+	display: block; // forcing block model to avoid wrong width of floated elements inside flexbox
 
 	.grid__item { float: left; }
 
@@ -93,34 +93,11 @@
 
 	> .grid__item {
 		display: table-cell;
+
 		vertical-align: middle;
 	}
 
 }
-
-
-
-// ---------------------------------------
-// Grid fixes
-// ---------------------------------------
-
-// -----
-// Grid's inline-blocks whitespace fix
-
-.grid { letter-spacing: -.31em; }
-// Opera hack
-.opera:-o-prefocus,
-.grid { word-spacing: -.43em; }
-
-	.grid__item {
-		letter-spacing: normal;
-		word-spacing: normal;
-	}
-
-// -----
-// Used to fix strange behaviour in Firefox on inline-grids
-
-.grid--nofix { letter-spacing: normal; }
 
 } // endif
 
@@ -131,18 +108,6 @@
 // ---------------------------------------
 
 @mixin ekzo-grid-types($n: '') {
-
-	// @todo Check do we need it
-	.#{$n}grid--reset {
-		display: inline-block;
-
-		> .grid__item {
-			display: inline-block;
-			vertical-align: top;
-		}
-
-	}
-
 
 	// ----
 	// Grid gutter sizes
@@ -179,24 +144,11 @@
 	// ----
 	// Grid items aligment
 
-	.#{$n}grid--center {
-		text-align: center;
+	.#{$n}grid--center { justify-content: center; }
 
-		> .grid__item { text-align: left; }
+	.#{$n}grid--middle { align-items: center; }
 
-	}
-
-	.#{$n}grid--middle {
-
-		> .grid__item { vertical-align: middle; }
-
-	}
-
-	.#{$n}grid--bottom {
-
-		> .grid__item { vertical-align: bottom; }
-
-	}
+	.#{$n}grid--bottom { align-items: flex-end; }
 
 
 	// ----
