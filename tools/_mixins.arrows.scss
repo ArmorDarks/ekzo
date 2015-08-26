@@ -50,11 +50,11 @@
 		@extend %arrow--top;
 
 		&:before {
-			border-bottom-color: $border-color !important;
+			border-bottom-color: $border-color;
 		}
 
 		&:after {
-			border-bottom-color: $arrow-color !important;
+			border-bottom-color: $arrow-color;
 		}
 
 		@if $arrow-location == left {
@@ -76,11 +76,11 @@
 		@extend %arrow--far;
 
 		&:before {
-			border-left-color: $border-color !important;
+			border-left-color: $border-color;
 		}
 
 		&:after {
-			border-left-color: $arrow-color !important;
+			border-left-color: $arrow-color;
 		}
 
 		@if $arrow-location == top {
@@ -102,11 +102,11 @@
 		@extend %arrow--bottom;
 
 		&:before {
-			border-top-color: $border-color !important;
+			border-top-color: $border-color;
 		}
 
 		&:after {
-			border-top-color: $arrow-color !important;
+			border-top-color: $arrow-color;
 		}
 
 		@if $arrow-location == left {
@@ -128,11 +128,11 @@
 		@extend %arrow--near;
 
 		&:before {
-			border-right-color: $border-color !important;
+			border-right-color: $border-color;
 		}
 
 		&:after {
-			border-right-color: $arrow-color !important;
+			border-right-color: $arrow-color;
 		}
 
 		@if $arrow-location == top {

@@ -1,4 +1,4 @@
-// scss-lint:disable ColorKeyword, QualifyingElement, SingleLinePerSelector
+// scss-lint:disable ColorKeyword, QualifyingElement, SingleLinePerSelector, ImportantRule
 
 @if $ekzo-debug-mode {
 
@@ -36,9 +36,11 @@
 	img {
 		outline: 5px solid red;
 	}
+
 	img[alt] {
 		outline: none;
 	}
+
 	img[alt=''] {
 		outline: 5px solid yellow;
 	}
@@ -52,6 +54,7 @@
 	a {
 		outline: 5px solid yellow;
 	}
+
 	a[title] {
 		outline: none;
 	}
@@ -95,6 +98,7 @@
 	th {
 		outline: 5px solid yellow;
 	}
+
 	th[scope] {
 		outline: none;
 	}
@@ -125,6 +129,7 @@
 	form {
 		outline: 5px solid red;
 	}
+
 	form[action] {
 		outline: none;
 	}

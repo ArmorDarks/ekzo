@@ -1,3 +1,4 @@
+// scss-lint:disable ImportantRule
 
 // =======================================
 // ^HELPERS.MISC
@@ -41,6 +42,6 @@
 // Column count
 // ---------------------------------------
 
-.column-count--flush { column-count: auto }
-.column-count--2     { column-count: 2 }
-.column-count--3     { column-count: 3 }
+.column-count--flush { column-count: auto; }
+.column-count--2     { column-count: 2; }
+.column-count--3     { column-count: 3; }

@@ -92,13 +92,13 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 	&:after {
 
 		@if $position == 'top' or $position == 'bottom' {
-		// bring back the tooltip by some offset so that arrow doesn't stick at end
-		margin-left: -1 * 3 * $ekzo-tooltip-arrow-size;
+			// bring back the tooltip by some offset so that arrow doesn't stick at end
+			margin-left: -1 * 3 * $ekzo-tooltip-arrow-size;
 		}
 
 		@if $position == 'left' or $position == 'right' {
-		// bring back to center
-		margin-bottom: -1 * floor($ekzo-tooltip-height / 2);
+			// bring back to center
+			margin-bottom: -1 * floor($ekzo-tooltip-height / 2);
 		}
 
 	}
@@ -204,9 +204,7 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 
 
-	.tooltip--sharp:after {
-			border-radius: 0;
-	}
+	.tooltip--sharp:after { border-radius: 0; }
 
 
 

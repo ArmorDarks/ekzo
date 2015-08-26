@@ -35,9 +35,7 @@
 					@return map-get-deep-warning($warn, $get, nth($keys, $i));
 				}
 
-			}
-
-			@else {
+			} @else {
 				@return map-get-deep-warning($warn, $get, nth($keys, $i));
 			}
 
