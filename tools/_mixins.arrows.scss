@@ -36,9 +36,9 @@
  * center of the element. Call the mixin thus:
  *
 		.foo {
-			background-color:#BADA55;
-			border:1px solid #ACE;
-			@include ekzo-arrow(top, left, #BADA55, #ACE);
+			background-color:#bada55;
+			border:1px solid #ace;
+			@include ekzo-arrow(top, left, #bada55, #ace);
 		}
  *
  */
