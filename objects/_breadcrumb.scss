@@ -1,42 +1,42 @@
 @if $ekzo-enable-breadcrumb {
 
-/*------------------------------------*\
-		$BREADCRUMB
-\*------------------------------------*/
+// =======================================
+// ^BREADCRUMB
+// =======================================
 
+// ----
+// Predefine mixing for breadcrumb's elements
+//
+// @param  {string} $delimiter Delimiter for elements
+// @return {properties} Properties for elements
 
-/**
- * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
- *
-		<ul class="breadcrumb--rev">
-			<li class="breadcrumb__entry breadcrumb__root">
-				<a class="breadcrumb__link" href="#">Main</a>
-			</li>
-			<li class="breadcrumb__entry">
-				<a class="breadcrumb__link" href="#">Section 1</a>
-			</li>
-			<li class="breadcrumb__entry breadcrumb__current">
-				<a class="breadcrumb__link" href="#">Section 2</a>
-			</li>
-		</ul>
- *
- * Demo: jsfiddle.net/inuitcss/rkAY9
- *
- */
+@mixin breadcrumb__entry($delimiter) {
+  content: $delimiter;
+
+  @if $ekzo-breadcrumb-delimiters-color and $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
+    color: $ekzo-breadcrumb-delimiters-color;
+  }
+
+}
+
+// ----
+// Breadcrumb styling to apply to lists
+//
+// @example
+//   <ul class="breadcrumb">
+//     <li class="breadcrumb__entry breadcrumb__root">
+//       <a class="breadcrumb__link" href="#">Home</a>
+//     </li>
+//     <li class="breadcrumb__entry">
+//       <a class="breadcrumb__link" href="#">Section</a>
+//     </li>
+//   </ul>
 
 .breadcrumb {
 
 	@extend .nav;
 
-	> .breadcrumb__entry + .breadcrumb__entry:before,
-	> li + li:before {
-		content: $ekzo-breadcrumb-delimiters-content;
-
-		@if $ekzo-breadcrumb-delimiters-color and $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
-			color: $ekzo-breadcrumb-delimiters-color;
-		}
-
-	}
+	> li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
 	@if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
 		> a { color: $ekzo-breadcrumb-links-color; }
@@ -44,53 +44,30 @@
 
 }
 
+  .breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
 
-/**
- * Same breadcrumb, but with heading as last item
- *
-		<ul class="breadcrumb--rev">
-			<li class="breadcrumb__entry breadcrumb__root">
-				<a class="breadcrumb__link" href="#">Main</a>
-			</li>
-			<li class="breadcrumb__entry">
-				<a class="breadcrumb__link" href="#">Section 1</a>
-			</li>
-			<li class="breadcrumb__entry">
-				<a class="breadcrumb__link" href="#">Section 2</a>
-			</li>
-		</ul>
-		<h1>Header as last item</h1>
- *
- */
+  .breadcrumb__entry + .breadcrumb__entry:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
+
+// ----
+// Same breadcrumb, but with heading as last item
+//
+// @extends .breadcrumb
+// @example
+//   <ul class="breadcrumb breadcrumb--rev">
+//     <li class="breadcrumb__entry breadcrumb__root">
+//       <a class="breadcrumb__link" href="#">Home</a>
+//     </li>
+//   </ul>
+//   <h1>Section/h1>
 
 .breadcrumb--rev {
 
-	@extend .nav;
+  > .breadcrumb__entry + .breadcrumb__entry:before,
+  > li + li:before { content: none; }
 
 	> .breadcrumb__entry:after,
-	> li:after {
-		content: $ekzo-breadcrumb--rev-delimiters-content;
-
-		@if $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
-			color: $ekzo-breadcrumb-delimiters-color;
-		}
-
-	}
-
-	@if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
-		> a { color: $ekzo-breadcrumb-links-color; }
-	}
+	> li:after { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb--rev-delimiters-content); }
 
 }
-
-
-
-/**
- * Denote the root of the tree and current state styling
- */
-
-.breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
-
-.breadcrumb__is-current {}
 
 } // endif
