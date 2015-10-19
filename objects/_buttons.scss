@@ -5,7 +5,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 @if $ekzo-enable-buttons {
 
 /*------------------------------------*\
-	$BUTTONS
+  $BUTTONS
 \*------------------------------------*/
 
 // @todo Improve and update docs
@@ -18,7 +18,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
 
 /*------------------------------------*\
-	$BASE
+  $BASE
 \*------------------------------------*/
 
 /**
@@ -40,78 +40,78 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
 
 .btn {
-	display: inline-block;       /* [1] */
+  display: inline-block;       /* [1] */
 
-	vertical-align: middle;      /* [2] */
+  vertical-align: middle;      /* [2] */
 
-	// white-space: nowrap;      /* [3] */ // should be applied manually if needed with `.text--nowrap`
+  // white-space: nowrap;      /* [3] */ // should be applied manually if needed with `.text--nowrap`
 
-	cursor: pointer;             /* [5] */
+  cursor: pointer;             /* [5] */
 
-	margin: 0;                   /* [6] */
+  margin: 0;                   /* [6] */
 
-	padding-top:    $btn-padding-top;    /* [7] */
-	padding-bottom: $btn-padding-bottom; /* [7] */
+  padding-top:    $btn-padding-top;    /* [7] */
+  padding-bottom: $btn-padding-bottom; /* [7] */
 
-	padding-right: 1em;          /* [8] */
-	padding-left:  1em;          /* [8] */
+  padding-right: 1em;          /* [8] */
+  padding-left:  1em;          /* [8] */
 
-	@if $ekzo-btn-color { color: $ekzo-btn-color; }
+  @if $ekzo-btn-color { color: $ekzo-btn-color; }
 
-	@if $ekzo-btn-bg-color { background-color: $ekzo-btn-bg-color; }
+  @if $ekzo-btn-bg-color { background-color: $ekzo-btn-bg-color; }
 
-	@if $ekzo-btn-radius { border-radius: $ekzo-btn-radius; }
+  @if $ekzo-btn-radius { border-radius: $ekzo-btn-radius; }
 
-	@if $ekzo-btn-border-top-width    { border-top-width:    $ekzo-btn-border-top-width;}
-	@else                             { border-top-width:    0; }    // 6
-	@if $ekzo-btn-border-top-style    { border-top-style:    $ekzo-btn-border-top-style; }
-	@else                             { border-top-style:    none; } // 6
-	@if $ekzo-btn-border-top-color    { border-top-color:    $ekzo-btn-border-top-color; }
+  @if $ekzo-btn-border-top-width    { border-top-width:    $ekzo-btn-border-top-width;}
+  @else                             { border-top-width:    0; }    // 6
+  @if $ekzo-btn-border-top-style    { border-top-style:    $ekzo-btn-border-top-style; }
+  @else                             { border-top-style:    none; } // 6
+  @if $ekzo-btn-border-top-color    { border-top-color:    $ekzo-btn-border-top-color; }
 
-	@if $ekzo-btn-border-right-width  { border-right-width:  $ekzo-btn-border-right-width; }
-	@else                             { border-right-width:  0; }    // 6
-	@if $ekzo-btn-border-right-style  { border-right-style:  $ekzo-btn-border-right-style; }
-	@else                             { border-right-style:  none; } // 6
-	@if $ekzo-btn-border-right-color  { border-right-color:  $ekzo-btn-border-right-color; }
+  @if $ekzo-btn-border-right-width  { border-right-width:  $ekzo-btn-border-right-width; }
+  @else                             { border-right-width:  0; }    // 6
+  @if $ekzo-btn-border-right-style  { border-right-style:  $ekzo-btn-border-right-style; }
+  @else                             { border-right-style:  none; } // 6
+  @if $ekzo-btn-border-right-color  { border-right-color:  $ekzo-btn-border-right-color; }
 
-	@if $ekzo-btn-border-bottom-width { border-bottom-width: $ekzo-btn-border-bottom-width; }
-	@else                             { border-bottom-width: 0; }    // 6
-	@if $ekzo-btn-border-bottom-style { border-bottom-style: $ekzo-btn-border-bottom-style; }
-	@else                             { border-bottom-style: none; } // 6
-	@if $ekzo-btn-border-bottom-color { border-bottom-color: $ekzo-btn-border-bottom-color; }
+  @if $ekzo-btn-border-bottom-width { border-bottom-width: $ekzo-btn-border-bottom-width; }
+  @else                             { border-bottom-width: 0; }    // 6
+  @if $ekzo-btn-border-bottom-style { border-bottom-style: $ekzo-btn-border-bottom-style; }
+  @else                             { border-bottom-style: none; } // 6
+  @if $ekzo-btn-border-bottom-color { border-bottom-color: $ekzo-btn-border-bottom-color; }
 
-	@if $ekzo-btn-border-left-width   { border-left-width:   $ekzo-btn-border-left-width; }
-	@else                             { border-left-width:   0; }    // 6
-	@if $ekzo-btn-border-left-style   { border-left-style:   $ekzo-btn-border-left-style; }
-	@else                             { border-left-style:   none; } // 6
-	@if $ekzo-btn-border-left-color   { border-left-color:   $ekzo-btn-border-left-color; }
+  @if $ekzo-btn-border-left-width   { border-left-width:   $ekzo-btn-border-left-width; }
+  @else                             { border-left-width:   0; }    // 6
+  @if $ekzo-btn-border-left-style   { border-left-style:   $ekzo-btn-border-left-style; }
+  @else                             { border-left-style:   none; } // 6
+  @if $ekzo-btn-border-left-color   { border-left-color:   $ekzo-btn-border-left-color; }
 
-	&,
-	&:hover {
-		@if $ekzo-btn-unline { text-decoration: none; } /* [9] */
-	}
+  &,
+  &:hover {
+    @if $ekzo-btn-unline { text-decoration: none; } /* [9] */
+  }
 
-	&:hover {
-		@if $ekzo-btn-hover-color { color: $ekzo-btn-hover-color; }
+  &:hover {
+    @if $ekzo-btn-hover-color { color: $ekzo-btn-hover-color; }
 
-		@if $ekzo-btn-hover-bg-color { background-color: $ekzo-btn-hover-bg-color; }
+    @if $ekzo-btn-hover-bg-color { background-color: $ekzo-btn-hover-bg-color; }
 
-		@if $ekzo-btn-hover-border-top-width    { border-top-width:   $ekzo-btn-hover-border-top-width; }
-		@if $ekzo-btn-hover-border-top-style    { border-top-style:   $ekzo-btn-hover-border-top-style; }
-		@if $ekzo-btn-hover-border-top-color    { border-top-color:   $ekzo-btn-hover-border-top-color; }
+    @if $ekzo-btn-hover-border-top-width    { border-top-width:   $ekzo-btn-hover-border-top-width; }
+    @if $ekzo-btn-hover-border-top-style    { border-top-style:   $ekzo-btn-hover-border-top-style; }
+    @if $ekzo-btn-hover-border-top-color    { border-top-color:   $ekzo-btn-hover-border-top-color; }
 
-		@if $ekzo-btn-hover-border-right-width  { border-right-width: $ekzo-btn-hover-border-right-width; }
-		@if $ekzo-btn-hover-border-right-style  { border-right-style: $ekzo-btn-hover-border-right-style; }
-		@if $ekzo-btn-hover-border-right-color  { border-right-color: $ekzo-btn-hover-border-right-color; }
+    @if $ekzo-btn-hover-border-right-width  { border-right-width: $ekzo-btn-hover-border-right-width; }
+    @if $ekzo-btn-hover-border-right-style  { border-right-style: $ekzo-btn-hover-border-right-style; }
+    @if $ekzo-btn-hover-border-right-color  { border-right-color: $ekzo-btn-hover-border-right-color; }
 
-		@if $ekzo-btn-hover-border-bottom-width { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
-		@if $ekzo-btn-hover-border-bottom-style { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
-		@if $ekzo-btn-hover-border-bottom-color { border-bottom-color: $ekzo-btn-hover-border-bottom-color; }
+    @if $ekzo-btn-hover-border-bottom-width { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
+    @if $ekzo-btn-hover-border-bottom-style { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
+    @if $ekzo-btn-hover-border-bottom-color { border-bottom-color: $ekzo-btn-hover-border-bottom-color; }
 
-		@if $ekzo-btn-hover-border-left-width   { border-left-width:  $ekzo-btn-hover-border-left-width; }
-		@if $ekzo-btn-hover-border-left-style   { border-left-style:  $ekzo-btn-hover-border-left-style; }
-		@if $ekzo-btn-hover-border-left-color   { border-left-color:  $ekzo-btn-hover-border-left-color; }
-	}
+    @if $ekzo-btn-hover-border-left-width   { border-left-width:  $ekzo-btn-hover-border-left-width; }
+    @if $ekzo-btn-hover-border-left-style   { border-left-style:  $ekzo-btn-hover-border-left-style; }
+    @if $ekzo-btn-hover-border-left-color   { border-left-color:  $ekzo-btn-hover-border-left-color; }
+  }
 
 }
 
@@ -121,21 +121,21 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  */
 
 .btn--inherit {
-	vertical-align: baseline;
+  vertical-align: baseline;
 
-	font-family: inherit;
-	font-size:   inherit;
+  font-family: inherit;
+  font-size:   inherit;
 
-	line-height: inherit;
+  line-height: inherit;
 
-	padding-right: .5em;
-	padding-left:  .5em;
+  padding-right: .5em;
+  padding-left:  .5em;
 }
 
 } // endif
 
 /*------------------------------------*\
-	$SIZES
+  $SIZES
 \*------------------------------------*/
 
 /**
@@ -153,92 +153,92 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
 @mixin ekzo-buttons-sizes($n: '') {
 
-	// line-height = `$ekzo-line-height`
-	.#{$n}btn-- {
-		line-height: $ekzo-line-height;
+  // line-height = `$ekzo-line-height`
+  .#{$n}btn-- {
+    line-height: $ekzo-line-height;
 
-		padding-top:     0;
-		padding-bottom:  0;
-		padding-right:  .6em;
-		padding-left:   .6em;
-	}
+    padding-top:     0;
+    padding-bottom:  0;
+    padding-right:  .6em;
+    padding-left:   .6em;
+  }
 
-	// line-height = 2
-	.#{$n}btn- {
-		padding-top:    ekzo-em($ekzo-spacing-unit--half / 3);
-		padding-bottom: ekzo-em($ekzo-spacing-unit--half / 3);
-		padding-right:  .8em;
-		padding-left:   .8em;
-	}
+  // line-height = 2
+  .#{$n}btn- {
+    padding-top:    ekzo-em($ekzo-spacing-unit--half / 3);
+    padding-bottom: ekzo-em($ekzo-spacing-unit--half / 3);
+    padding-right:  .8em;
+    padding-left:   .8em;
+  }
 
-	.#{$n}btn--reset {
-		padding-top:    $btn-padding-top;
-		padding-bottom: $btn-padding-bottom;
-		padding-right:  1em;
-		padding-left:   1em;
-	}
+  .#{$n}btn--reset {
+    padding-top:    $btn-padding-top;
+    padding-bottom: $btn-padding-bottom;
+    padding-right:  1em;
+    padding-left:   1em;
+  }
 
-	// line-height = 3
-	.#{$n}btn\+ {
-		padding-top:    ekzo-em($ekzo-spacing-unit * .84);
-		padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
-		padding-right:  1.5em;
-		padding-left:   1.5em;
-	}
+  // line-height = 3
+  .#{$n}btn\+ {
+    padding-top:    ekzo-em($ekzo-spacing-unit * .84);
+    padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
+    padding-right:  1.5em;
+    padding-left:   1.5em;
+  }
 
-	// line-height = 5
-	.#{$n}btn\+\+ {
-		padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
-		padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
-		padding-right:  2em;
-		padding-left:   2em;
-	}
-
-
-	/**
-	 * Wide version of button with unspecified line-height
-	 */
-
-	.#{$n}btn--wide\+ {
-		padding-right: 2em;
-		padding-left:  2em;
-	}
-
-	.#{$n}btn--wide\+-- {
-		padding-right: 1.5em;
-		padding-left:  1.5em;
-	}
-
-	.#{$n}btn--wide\+\+\+ {
-		padding-right: 4em;
-		padding-left:  4em;
-	}
+  // line-height = 5
+  .#{$n}btn\+\+ {
+    padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
+    padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
+    padding-right:  2em;
+    padding-left:   2em;
+  }
 
 
-	/**
-	 * These buttons will fill the entirety of their container.
-	 *
-	 * 1. Remove padding so that widths and paddings don't conflict.
-	 */
+  /**
+   * Wide version of button with unspecified line-height
+   */
 
-	.#{$n}btn--full {
-		width: 100%;
+  .#{$n}btn--wide\+ {
+    padding-right: 2em;
+    padding-left:  2em;
+  }
 
-		padding-right: 0;            /* [1] */
-		padding-left:  0;            /* [1] */
-	}
+  .#{$n}btn--wide\+-- {
+    padding-right: 1.5em;
+    padding-left:  1.5em;
+  }
 
-	/*------------------------------------*\
-		$FONT-SIZES
-	\*------------------------------------*/
+  .#{$n}btn--wide\+\+\+ {
+    padding-right: 4em;
+    padding-left:  4em;
+  }
 
-	/**
-	 * Button font-size modifiers based on map's values.
-	 */
 
-	$ekzo-btn-prefix: btn--;
+  /**
+   * These buttons will fill the entirety of their container.
+   *
+   * 1. Remove padding so that widths and paddings don't conflict.
+   */
 
-	@include ekzo-font-size-classes(buttons, $prefix: $n + $ekzo-btn-prefix, $line-height:false);
+  .#{$n}btn--full {
+    width: 100%;
+
+    padding-right: 0;            /* [1] */
+    padding-left:  0;            /* [1] */
+  }
+
+  /*------------------------------------*\
+    $FONT-SIZES
+  \*------------------------------------*/
+
+  /**
+   * Button font-size modifiers based on map's values.
+   */
+
+  $ekzo-btn-prefix: btn--;
+
+  @include ekzo-font-size-classes(buttons, $prefix: $n + $ekzo-btn-prefix, $line-height:false);
 
 
 } // ekzo-buttons-sizes()
@@ -267,7 +267,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 //
 // @example
 //
-// 		<div class='grid 1/4 lap-1/2 palm-1/1'> ... </div>
+//     <div class='grid 1/4 lap-1/2 palm-1/1'> ... </div>
 //
 // This would create a `div` that, at 'desktop' sizes, takes up a quarter of the
 // horizontal space, a half of that space at 'tablet' sizes, and goes full width
@@ -277,16 +277,16 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
 @if $ekzo-enable-responsive-buttons {
 
-	@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
-		@include ekzo-breakpoint($breakpoint) {
-			@include ekzo-buttons-sizes('#{$breakpoint}-');
-		}
-	}
+  @each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+    @include ekzo-breakpoint($breakpoint) {
+      @include ekzo-buttons-sizes('#{$breakpoint}-');
+    }
+  }
 
 } // endif
 
 /*------------------------------------*\
-	$FUNCTIONS
+  $FUNCTIONS
 \*------------------------------------*/
 
 /**
@@ -294,9 +294,9 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  */
 
 .btn--positive {
-	background-color: $ekzo-btn--positive-bg-color;
+  background-color: $ekzo-btn--positive-bg-color;
 
-	color: $ekzo-btn--positive-color;
+  color: $ekzo-btn--positive-color;
 }
 
 
@@ -305,9 +305,9 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  */
 
 .btn--negative {
-	background-color: $ekzo-btn--negative-bg-color;
+  background-color: $ekzo-btn--negative-bg-color;
 
-	color: $ekzo-btn--negative-color;
+  color: $ekzo-btn--negative-color;
 }
 
 
@@ -321,11 +321,11 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 .btn--disabled:hover,
 .btn--disabled:active,
 .btn--disabled:focus {
-	background-color: $ekzo-btn--disabled-bg-color;
+  background-color: $ekzo-btn--disabled-bg-color;
 
-	color: $ekzo-btn--disabled-color;
+  color: $ekzo-btn--disabled-color;
 
-	cursor: default;            /* [1] */
+  cursor: default;            /* [1] */
 }
 
 } // endif

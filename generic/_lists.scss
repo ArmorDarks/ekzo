@@ -1,7 +1,7 @@
 @if $ekzo-enable-lists {
 
 /*------------------------------------*\
-		$LISTS
+    $LISTS
 \*------------------------------------*/
 
 
@@ -11,27 +11,27 @@
 
 ul,
 ol {
-	// margin-left already defined in shared
+  // margin-left already defined in shared
 }
 
 
 /**
  * Flush default styling and margins from list:
  *
-		<ul class="list--flush">
-			<li>Foo</li>
-			<li>Bar</li>
-		</ul>
+    <ul class="list--flush">
+      <li>Foo</li>
+      <li>Bar</li>
+    </ul>
  *
  */
 
 .list--flush,
 %list--flush {
-	list-style: none;
+  list-style: none;
 
-	margin-left:   0;
-	padding-left:  0;
-	margin-bottom: 0;
+  margin-left:   0;
+  padding-left:  0;
+  margin-bottom: 0;
 }
 
 

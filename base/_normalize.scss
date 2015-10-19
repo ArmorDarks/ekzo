@@ -35,9 +35,9 @@ audio,
 canvas,
 progress,
 video {
-	display: inline-block;    // 1
+  display: inline-block;    // 1
 
-	vertical-align: baseline; // 2
+  vertical-align: baseline; // 2
 }
 
 // ----
@@ -45,8 +45,8 @@ video {
 // Remove excess height in iOS 5 devices.
 
 audio:not([controls]) {
-	display: none;
-	height: 0;
+  display: none;
+  height: 0;
 }
 
 // ----
@@ -116,9 +116,9 @@ strong { font-weight: bold; }
 // Address styling not present in IE 8/9.
 
 mark {
-	background: #ff0;
+  background: #ff0;
 
-	color: #000;
+  color: #000;
 }
 
 // ----
@@ -131,12 +131,12 @@ small { font-size: 80%; }
 
 sub,
 sup {
-	position: relative;
+  position: relative;
 
-	font-size: 75%;
-	line-height: 0;
+  font-size: 75%;
+  line-height: 0;
 
-	vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 sup { top: -.5em; }
@@ -168,9 +168,9 @@ svg:not(:root) { overflow: hidden; }
 // Address differences between Firefox and other browsers.
 
 hr {
-	@include ekzo-vendor(box-sixing, content-box);
+  @include ekzo-vendor(box-sixing, content-box);
 
-	height: 0;
+  height: 0;
 }
 
 
@@ -188,9 +188,9 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace; // 1
+  font-family: monospace, monospace; // 1
 
-	font-size: 1em;                    // 2
+  font-size: 1em;                    // 2
 }
 
 
@@ -215,11 +215,11 @@ input,
 optgroup,
 select,
 textarea {
-	color: inherit; // 1
+  color: inherit; // 1
 
-	font: inherit;  // 2
+  font: inherit;  // 2
 
-	margin: 0;      // 3
+  margin: 0;      // 3
 }
 
 // ----
@@ -228,11 +228,11 @@ textarea {
 // 3. Allow only vertical resizing of textareas
 
 textarea {
-	overflow: auto;      // 1
+  overflow: auto;      // 1
 
-	vertical-align: top; // 2
+  vertical-align: top; // 2
 
-	resize: vertical;    // 3
+  resize: vertical;    // 3
 }
 
 // ----
@@ -261,9 +261,9 @@ input[type="radio"] { @include ekzo-vendor(box-sixing, border-box); } // 1
 // 2. Address `box-sizing` set to `border-box` in Safari and Chrome, but not Firefox
 
 input[type='search'] {
-	-webkit-appearance: textfield;            // 1
+  -webkit-appearance: textfield;            // 1
 
-	// @include ekzo-vendor(box-sixing, border-box); // 2
+  // @include ekzo-vendor(box-sixing, border-box); // 2
 }
 
 // ----
@@ -313,7 +313,7 @@ option { cursor: pointer; }
 .text-input:focus,
 textarea:active,
 textarea:focus {
-	cursor: text;
+  cursor: text;
 
-	outline: none;
+  outline: none;
 }

@@ -13,12 +13,12 @@
 %clear,
 .clear {
 
-	&:after {
-		display: table;
+  &:after {
+    display: table;
 
-		clear:   both;
+    clear:   both;
 
-		content: '';
-	}
+    content: '';
+  }
 
 }

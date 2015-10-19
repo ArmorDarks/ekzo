@@ -20,24 +20,24 @@
 //
 // @example
 //
-//		.heading { font-size: ekzo-font-size(h1, headings); }
-//		.heading { font-size: (big, my-group, $map:$my-custom-sizes); }
+//    .heading { font-size: ekzo-font-size(h1, headings); }
+//    .heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
 @function ekzo-font-size($name, $type:text, $map:$ekzo-font-sizes) {
 
-	$value: null;
+  $value: null;
 
-	@if map-has-key($map, $type) {
-		$working-map: map-get($map, $type);
-		@if map-has-key($working-map, $name) {
-			$value: map-get($working-map, $name);
-		} @else {
-			@error 'No such `#{$name}` font name in specified map!';
-		}
-	} @else {
-		@error 'No such `#{$type}` font type in specified map!';
-	}
+  @if map-has-key($map, $type) {
+    $working-map: map-get($map, $type);
+    @if map-has-key($working-map, $name) {
+      $value: map-get($working-map, $name);
+    } @else {
+      @error 'No such `#{$name}` font name in specified map!';
+    }
+  } @else {
+    @error 'No such `#{$type}` font type in specified map!';
+  }
 
-	@return $value
+  @return $value
 
 }

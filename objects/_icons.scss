@@ -1,18 +1,18 @@
 @if $ekzo-enable-icons {
 
 /*------------------------------------*\
-		$ICONS and $SPRITES
+    $ICONS and $SPRITES
 \*------------------------------------*/
 
 /**
  * Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
  * a background image e.g.:
  *
-	 <a class="sprite  sprite--question-mark">More info&hellip;</a>
+   <a class="sprite  sprite--question-mark">More info&hellip;</a>
  *
  * or
  *
-	 <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
+   <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
  *
  * Requires extension in stylesheet.
  */
@@ -21,35 +21,35 @@
  * Giving an element a class of `.icon` will throw it into 'icon' mode and will
  * not add a background, but should be used for icon fonts, e.g.:
  *
-	 <a href=#><i class="icon icon--star"></i> View your favourites</a>
+   <a href=#><i class="icon icon--star"></i> View your favourites</a>
  *
  * Requires extension in stylesheet.
  */
 
 @include ekzo-font(
-	$font:    $ekzo-icon-font,
-	$version: $ekzo-icon-font-version,
-	$svg-id:  $ekzo-icon-font-svg-id
+  $font:    $ekzo-icon-font,
+  $version: $ekzo-icon-font-version,
+  $svg-id:  $ekzo-icon-font-svg-id
 );
 
 .icon {
-	position: relative;
+  position: relative;
 
-	display: inline-block;
+  display: inline-block;
 
-	/* reset line-height */
-	line-height: 1;
+  /* reset line-height */
+  line-height: 1;
 
-	/* So icons added using `.icon` sit in the centre of the element */
-	text-align: center;
+  /* So icons added using `.icon` sit in the centre of the element */
+  text-align: center;
 
-	font-family: '#{$ekzo-icon-font}';
+  font-family: '#{$ekzo-icon-font}';
 
-	/* So using `.icon` on certain elements doesn't make a visual difference */
-	font-style:  normal;
-	font-weight: normal;
+  /* So using `.icon` on certain elements doesn't make a visual difference */
+  font-style:  normal;
+  font-weight: normal;
 
-	&:before { position: relative; }
+  &:before { position: relative; }
 
 }
 

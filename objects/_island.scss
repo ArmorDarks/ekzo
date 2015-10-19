@@ -1,7 +1,7 @@
 @if $ekzo-enable-island {
 
 /*------------------------------------*\
-		$ISLAND
+    $ISLAND
 \*------------------------------------*/
 
 // @todo Improve docs
@@ -10,23 +10,23 @@
  * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
  * E.g.:
  *
-		<div class=island>
-				I am boxed off.
-		</div>
+    <div class=island>
+        I am boxed off.
+    </div>
  *
  * Demo: jsfiddle.net/inuitcss/u8pV3
  *
  */
 
 .island {
-	@extend %clear;
+  @extend %clear;
 
-	display: block;
+  display: block;
 
-	padding: $ekzo-spacing-unit;
+  padding: $ekzo-spacing-unit;
 
-	> :last-child,
-	> :last-child { margin-bottom: 0; }
+  > :last-child,
+  > :last-child { margin-bottom: 0; }
 
 }
 

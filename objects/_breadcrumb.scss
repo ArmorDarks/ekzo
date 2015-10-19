@@ -34,13 +34,13 @@
 
 .breadcrumb {
 
-	@extend .nav;
+  @extend .nav;
 
-	> li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
+  > li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
-	@if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
-		> a { color: $ekzo-breadcrumb-links-color; }
-	}
+  @if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
+    > a { color: $ekzo-breadcrumb-links-color; }
+  }
 
 }
 
@@ -65,8 +65,8 @@
   > .breadcrumb__entry + .breadcrumb__entry:before,
   > li + li:before { content: none; }
 
-	> .breadcrumb__entry:after,
-	> li:after { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb--rev-delimiters-content); }
+  > .breadcrumb__entry:after,
+  > li:after { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb--rev-delimiters-content); }
 
 }
 

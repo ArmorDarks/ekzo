@@ -1,7 +1,7 @@
 @if $ekzo-enable-iconic-list {
 
 /*------------------------------------*\
-		$ICONIC-LIST
+    $ICONIC-LIST
 \*------------------------------------*/
 
 /**
@@ -10,50 +10,50 @@
  * List with sprites or icons instead of bulletins.
  * Should be used in conjuration with icons or sprites:
  *
-		<ul class="list--iconic">
-			<li>
-				<i class="icon icon--ok"></i>
-				Item1
-			</li>
-			<li>
-				<i class="sprite sprite--ok"></i>
-				Item2
-			</li>
-		</ul>
+    <ul class="list--iconic">
+      <li>
+        <i class="icon icon--ok"></i>
+        Item1
+      </li>
+      <li>
+        <i class="sprite sprite--ok"></i>
+        Item2
+      </li>
+    </ul>
  *
- *	Note: iconic list relays on `:first-child` selector, so it's important
+ *  Note: iconic list relays on `:first-child` selector, so it's important
  *       to keep bulletin-icons right after `<li>` tag.
  *
- *	1. Pusing list twice left to align it with default list
- *	   with default bullets
- *	2. Assume that first icons in list are bullets
+ *  1. Pusing list twice left to align it with default list
+ *     with default bullets
+ *  2. Assume that first icons in list are bullets
  */
 
 .iconic-list {
-	padding-left: $ekzo-spacing-unit--double; // 1
+  padding-left: $ekzo-spacing-unit--double; // 1
 
-	list-style-type: none;
+  list-style-type: none;
 
-	li {
-		position: relative;
+  li {
+    position: relative;
 
-		> .icon,                  // 2
-		> .sprite { @extend .iconic-list__icon; }
+    > .icon,                  // 2
+    > .sprite { @extend .iconic-list__icon; }
 
-	}
+  }
 
 }
 
-	.iconic-list__icon {
-		position: absolute;
+  .iconic-list__icon {
+    position: absolute;
 
-		width: 1.5em;
+    width: 1.5em;
 
-		text-align: center;
+    text-align: center;
 
-		line-height: inherit;
+    line-height: inherit;
 
-		margin-left: -2em;
-	}
+    margin-left: -2em;
+  }
 
 } // endif

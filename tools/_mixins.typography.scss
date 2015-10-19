@@ -24,42 +24,42 @@
 //
 // @example
 //
-//		.heading { @include ekzo-font-size(10px, 25px); }
-//		.heading { @include ekzo-font-size(h1, headings); }
-//		.heading { @include ekzo-font-size(big, my-group, $map:$my-custom-sizes); }
+//    .heading { @include ekzo-font-size(10px, 25px); }
+//    .heading { @include ekzo-font-size(h1, headings); }
+//    .heading { @include ekzo-font-size(big, my-group, $map:$my-custom-sizes); }
 //
 // Thanks to @redclov3r for the `line-height` Sass:
 // twitter.com/redclov3r/status/250301539321798657
 
 @mixin ekzo-font-size($size, $type:text, $line-height:true, $map:$ekzo-font-sizes) {
 
-	$value: null;
+  $value: null;
 
-	@if type-of($size) == string {
+  @if type-of($size) == string {
 
-		$size: ekzo-font-size($size, $type, $map);
+    $size: ekzo-font-size($size, $type, $map);
 
-	}
+  }
 
-	// ensure that we're working with pixels
-	$size: $size + 1px - 1px;
+  // ensure that we're working with pixels
+  $size: $size + 1px - 1px;
 
-	font-size: $size;
+  font-size: $size;
 
-	// use custom line-height
-	@if type-of($line-height) == number {
+  // use custom line-height
+  @if type-of($line-height) == number {
 
-		// ensure that we're working with pixels
-		$line-height: $line-height + 1px - 1px;
+    // ensure that we're working with pixels
+    $line-height: $line-height + 1px - 1px;
 
-		line-height: ceil($size / $line-height) * ($line-height / $size);
+    line-height: ceil($size / $line-height) * ($line-height / $size);
 
-	// or base value from predefined `$ekzo-line-height`
-	} @else if $line-height {
+  // or base value from predefined `$ekzo-line-height`
+  } @else if $line-height {
 
-		line-height: ceil($size / $ekzo-line-height) * ($ekzo-line-height / $size);
+    line-height: ceil($size / $ekzo-line-height) * ($ekzo-line-height / $size);
 
-	}
+  }
 
 }
 
@@ -85,89 +85,89 @@
 //                                 that parameter
 // @param {map} $map=$font-sizes - should mixin search for font sizes in default, or specified map
 //                                 ```
-//                                 		$example: (
-//                                 			headings: (
-//                                 				h1: 36px,
-//                                 				h2: 30px,
-//                                 			),
-//                                 			extra-headings: (
-//                                 				giga: 96px,
-//                                 			)
-//                                 		);
+//                                     $example: (
+//                                       headings: (
+//                                         h1: 36px,
+//                                         h2: 30px,
+//                                       ),
+//                                       extra-headings: (
+//                                         giga: 96px,
+//                                       )
+//                                     );
 //                                 ```
 //
 // @example
 //
-//		@include ekzo-font-size-classes(fonts, $element-selector:false, $prefix:'text--') { border: 1px; };
+//    @include ekzo-font-size-classes(fonts, $element-selector:false, $prefix:'text--') { border: 1px; };
 //      @include ekzo-font-size-classes(headings, h1);
 //
 
 @mixin ekzo-font-size-classes($type, $name:false, $line-height:true, $element-selector:false, $prefix:'', $map:$ekzo-font-sizes) {
 
-	$working-map: null;
-	$class:       null;
+  $working-map: null;
+  $class:       null;
 
-	@if not $prefix {
-		$prefix: '';
-	}
+  @if not $prefix {
+    $prefix: '';
+  }
 
-	@if map-has-key($map, $type) {
-		$working-map: map-get($map, $type);
-	} @else {
-		@error 'No such `#{$type}` font type in specified map!';
-	}
+  @if map-has-key($map, $type) {
+    $working-map: map-get($map, $type);
+  } @else {
+    @error 'No such `#{$type}` font type in specified map!';
+  }
 
-	@if not $name {
+  @if not $name {
 
-		@each $name, $value in $working-map {
+    @each $name, $value in $working-map {
 
-			@if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
-				@if $prefix != true and $prefix != null and $prefix != '' {
-					$prefix: str-replace($prefix, '--', '');
-				}
-			}
+      @if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
+        @if $prefix != true and $prefix != null and $prefix != '' {
+          $prefix: str-replace($prefix, '--', '');
+        }
+      }
 
-			@if $element-selector == include {
-				$class: $name + ', .' + $prefix + $name;
-			} @else if $element-selector {
-				$class: $name;
-			} @else {
-				$class: '.' + $prefix + $name;
-			}
+      @if $element-selector == include {
+        $class: $name + ', .' + $prefix + $name;
+      } @else if $element-selector {
+        $class: $name;
+      } @else {
+        $class: '.' + $prefix + $name;
+      }
 
-			#{$class} {
-				@include ekzo-font-size($value, $line-height:$line-height);
-				@content
-			}
+      #{$class} {
+        @include ekzo-font-size($value, $line-height:$line-height);
+        @content
+      }
 
-		} //endeach
+    } //endeach
 
-	} @else if $name and $type and map-has-key($working-map, $name) {
+  } @else if $name and $type and map-has-key($working-map, $name) {
 
-		$value: map-get($working-map, $name);
+    $value: map-get($working-map, $name);
 
-		@if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
-			@if $prefix != true and $prefix != null and $prefix != '' {
-				$prefix: str-replace($prefix, '--', '');
-			}
-		}
+    @if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
+      @if $prefix != true and $prefix != null and $prefix != '' {
+        $prefix: str-replace($prefix, '--', '');
+      }
+    }
 
-		@if $element-selector == include {
-			$class: $name + ', .' + $prefix + $name;
-		} @else if $element-selector {
-			$class: $name;
-		} @else {
-			$class: '.' + $prefix + $name;
-		}
+    @if $element-selector == include {
+      $class: $name + ', .' + $prefix + $name;
+    } @else if $element-selector {
+      $class: $name;
+    } @else {
+      $class: '.' + $prefix + $name;
+    }
 
-		#{$class} {
-			@include ekzo-font-size($value, $line-height:$line-height);
-			@content
-		}
+    #{$class} {
+      @include ekzo-font-size($value, $line-height:$line-height);
+      @content
+    }
 
-	} @else {
-		@error 'No such `#{$name}` font name in specified map!';
-	}
+  } @else {
+    @error 'No such `#{$name}` font name in specified map!';
+  }
 
 }
 
@@ -191,35 +191,35 @@
 //
 // @example
 //
-//		@include ekzo-font(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
+//    @include ekzo-font(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
 //
 
 @mixin ekzo-font($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg: $ekzo-use-svg-fonts, $svg-id:$file-name) {
 
-	@if $version { $version: '?#' + $version; } @else { $version: ''; }
+  @if $version { $version: '?#' + $version; } @else { $version: ''; }
 
-	@font-face {
-		font-family: $font;
+  @font-face {
+    font-family: $font;
 
-		src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version);
-		src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version + '#iefix')                           format('embedded-opentype'),
-		     url($ekzo-fonts-path + '/' + $file-name + '.woff' + $version)                                      format('woff'),
-		     url($ekzo-fonts-path + '/' + $file-name + '.ttf'  + $version)                                      format('truetype')
-		     #{if($svg, ', url(' + $ekzo-fonts-path + '/' + $file-name + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
+    src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version);
+    src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version + '#iefix')                           format('embedded-opentype'),
+         url($ekzo-fonts-path + '/' + $file-name + '.woff' + $version)                                      format('woff'),
+         url($ekzo-fonts-path + '/' + $file-name + '.ttf'  + $version)                                      format('truetype')
+         #{if($svg, ', url(' + $ekzo-fonts-path + '/' + $file-name + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
 
-		font-weight: $weight;
-		font-style:  $style;
-	}
+    font-weight: $weight;
+    font-style:  $style;
+  }
 
-	// Serving SVG font at first specially for Chrome to make it smoother
-	//
-	// @note Disabled because seems latest versions of Chrome doesn't have such issue
+  // Serving SVG font at first specially for Chrome to make it smoother
+  //
+  // @note Disabled because seems latest versions of Chrome doesn't have such issue
 
-	// @media screen and (-webkit-min-device-pixel-ratio: 0) {
-	// 	@font-face {
-	// 		font-family: '#{$font}';
-	// 		src: url(#{$ekzo-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
-	// 	}
-	// }
+  // @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  //   @font-face {
+  //     font-family: '#{$font}';
+  //     src: url(#{$ekzo-fonts-path}/#{$file-name}.svg?#{$version}##{$svg-id}) format('svg');
+  //   }
+  // }
 
 }

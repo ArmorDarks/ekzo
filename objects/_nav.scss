@@ -1,7 +1,7 @@
 @if $ekzo-enable-nav {
 
 /*------------------------------------*\
-		$NAV
+    $NAV
 \*------------------------------------*/
 
 
@@ -10,22 +10,22 @@
  * When used on an `ol` or `ul`, this class throws the list into horizontal mode
  * e.g.:
  *
-		<ul class=nav>
-			<li><a href=#>Home</a></li>
-			<li><a href=#>About</a></li>
-			<li><a href=#>Portfolio</a></li>
-			<li><a href=#>Contact</a></li>
-		</ul>
+    <ul class=nav>
+      <li><a href=#>Home</a></li>
+      <li><a href=#>About</a></li>
+      <li><a href=#>Portfolio</a></li>
+      <li><a href=#>Contact</a></li>
+    </ul>
  *
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
 
 .nav {
-	@extend %list--flush;
+  @extend %list--flush;
 
-	> li,
-	> li > a { display: inline-block; }
+  > li,
+  > li > a { display: inline-block; }
 
 }
 
@@ -33,8 +33,8 @@
 /**
  * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
  *
-		<ul class="nav nav--stacked">
-			...
+    <ul class="nav nav--stacked">
+      ...
  *
  */
 
@@ -51,8 +51,8 @@
 /**
  * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
  *
-		<ul class="nav block">
-			...
+    <ul class="nav block">
+      ...
  *
  */
 
@@ -64,16 +64,16 @@
 /**
  * Make a list of keywords. Extends `.nav`, e.g.:
  *
-		<ul class="nav keywords>
-			...
+    <ul class="nav keywords>
+      ...
  *
  */
 
 .nav--keywords {
 
-	li:after { content: '\002C' '\00A0'; }
+  li:after { content: '\002C' '\00A0'; }
 
-	li:last-child:after { display: none; }
+  li:last-child:after { display: none; }
 
 }
 

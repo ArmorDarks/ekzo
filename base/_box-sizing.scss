@@ -10,26 +10,26 @@
 //
 // In result, instead of
 //
-//		.component { @include ekzo-vendor(box-sizing, content-box);
+//    .component { @include ekzo-vendor(box-sizing, content-box);
 //
-//			*,
-//			*:before,
-//			*:after { @include ekzo-vendor(box-sizing, content-box) }
+//      *,
+//      *:before,
+//      *:after { @include ekzo-vendor(box-sizing, content-box) }
 //
-//		}
+//    }
 //
 // to override we can specify simply
 //
-//		.component { @include ekzo-vendor(box-sizing, content-box); }
+//    .component { @include ekzo-vendor(box-sizing, content-box); }
 //
 // @details https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
 @if $ekzo-global-border-box {
 
-	html { @include ekzo-vendor(box-sizing, border-box); }
+  html { @include ekzo-vendor(box-sizing, border-box); }
 
-	*,
-	*:before,
-	*:after { @include ekzo-vendor(box-sizing, inherit); }
+  *,
+  *:before,
+  *:after { @include ekzo-vendor(box-sizing, inherit); }
 
 }

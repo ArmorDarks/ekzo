@@ -15,21 +15,21 @@
 //
 //      @example
 //
-//			$icons: (
-//				icon-name: '\e815',
-//			);
+//      $icons: (
+//        icon-name: '\e815',
+//      );
 //
 //      {string=sprite--} $icons-prefix - prefix which will be appended to
 //                                        icon name
 
 @mixin ekzo-icons($map: $ekzo-icons, $prefix: $ekzo-icons-prefix) {
 
-	@each $name, $param in $map {
+  @each $name, $param in $map {
 
-		$prefixed-name: $prefix + $name;
+    $prefixed-name: $prefix + $name;
 
-		.#{$prefixed-name}:before { content: $param; }
+    .#{$prefixed-name}:before { content: $param; }
 
-	}
+  }
 
 }

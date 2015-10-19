@@ -15,10 +15,10 @@
 // @return {string}
 
 @function ekzo-convert-direction($direction) {
-	@if $direction == 'top'         { @return 'bottom'; }
-	@else if $direction == 'bottom' { @return 'top'; }
-	@else if $direction == 'left'   { @return 'right'; }
-	@else if $direction == 'right'  { @return 'left'; }
+  @if $direction == 'top'         { @return 'bottom'; }
+  @else if $direction == 'bottom' { @return 'top'; }
+  @else if $direction == 'left'   { @return 'right'; }
+  @else if $direction == 'right'  { @return 'left'; }
 }
 
 
@@ -35,7 +35,7 @@
 // @return {string}
 
 @function ekzo-percent($value, $total) {
-	@return $value / $total * 100%;
+  @return $value / $total * 100%;
 }
 
 
@@ -54,7 +54,7 @@
 // @return {string}
 
 @function ekzo-em($value, $base:ekzo-font-size(base)) {
-	@return $value / $base * 1em;
+  @return $value / $base * 1em;
 }
 
 
@@ -74,7 +74,7 @@
 // @return {color}
 
 @function ekzo-tint($color, $percent) {
-	@return mix(#fff, $color, $percent);
+  @return mix(#fff, $color, $percent);
 }
 
 // -----
@@ -88,7 +88,7 @@
 // @return {color}
 
 @function ekzo-shade($color, $percent) {
-	@return mix(#000, $color, $percent);
+  @return mix(#000, $color, $percent);
 }
 
 // -----
@@ -105,15 +105,15 @@
 // @return {string} - with replaced value
 
 @function str-replace($string, $search, $replace: '') {
-	@if type-of($string) != string or type-of($search) != string or type-of($replace) != string {
-		@error "One of the 3 arguments is not a string.";
-	}
+  @if type-of($string) != string or type-of($search) != string or type-of($replace) != string {
+    @error "One of the 3 arguments is not a string.";
+  }
 
-	$index: str-index($string, $search);
+  $index: str-index($string, $search);
 
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
 
-	@return $string;
+  @return $string;
 }

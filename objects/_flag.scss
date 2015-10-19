@@ -1,7 +1,7 @@
 @if $ekzo-enable-flag {
 
 /*------------------------------------*\
-		$FLAG
+    $FLAG
 \*------------------------------------*/
 
 // @todo Reorder, add mixin, improve docs
@@ -11,14 +11,14 @@
 * horizontally or by baseline
 * E.g.:
 *
-		<div class="flag">
-			<div class="flag__image">
-				<img src="" alt="">
-			</div>
-			<div class="flag__content">
-				<p></p>
-			</div>
-		</div>
+    <div class="flag">
+      <div class="flag__image">
+        <img src="" alt="">
+      </div>
+      <div class="flag__content">
+        <p></p>
+      </div>
+    </div>
  *
  * 1. Allows us to control vertical alignments
  * 2. Force the object to be the full width of its parent. Combined with [1],
@@ -26,36 +26,36 @@
  */
 
 .flag {
-	display: table; // 1
-	width: 100%; // 2
+  display: table; // 1
+  width: 100%; // 2
 }
 
 
-	.flag__image,
-	.flag__content {
-		display: table-cell;
-		vertical-align: middle;
-	}
+  .flag__image,
+  .flag__content {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
 
-	.flag__image {
-		padding-right: $ekzo-spacing-unit; // Flag images have a space between them and the body of the object
+  .flag__image {
+    padding-right: $ekzo-spacing-unit; // Flag images have a space between them and the body of the object
 
-		> img {
-			display: block;
-			max-width: none;
-		}
+    > img {
+      display: block;
+      max-width: none;
+    }
 
-	}
+  }
 
 
-	.flag__content {
-		width: 100%; // Forces the `.flag__body` to take up all remaining space.
+  .flag__content {
+    width: 100%; // Forces the `.flag__body` to take up all remaining space.
 
-		&,
-		> :last-child { margin-bottom: 0; }
+    &,
+    > :last-child { margin-bottom: 0; }
 
-	}
+  }
 
 
 
@@ -63,50 +63,50 @@
 
 .flag--top {
 
-	.flag__image,
-	.flag__content { vertical-align: top; }
+  .flag__image,
+  .flag__content { vertical-align: top; }
 
 }
 
 
 .flag--bottom {
 
-	.flag__image,
-	.flag__content { vertical-align: bottom; }
+  .flag__image,
+  .flag__content { vertical-align: bottom; }
 
 }
 
 
 .flag--rev {
 
-	.flag__image {
-		padding-right: 0;
-		padding-left:  $ekzo-spacing-unit;
-	}
+  .flag__image {
+    padding-right: 0;
+    padding-left:  $ekzo-spacing-unit;
+  }
 
 }
 
 .flag--flush {
 
-	.flag__image {
-		padding-right: 0;
-		padding-left:  0;
-	}
+  .flag__image {
+    padding-right: 0;
+    padding-left:  0;
+  }
 
 }
 
 .flag\+ {
 
-	.flag__image { padding-right: $ekzo-spacing-unit--double; }
+  .flag__image { padding-right: $ekzo-spacing-unit--double; }
 
-	&.flag--rev {
+  &.flag--rev {
 
-		.flag__image {
-			padding-right: 0;
-			padding-left:  $ekzo-spacing-unit--double;
-		}
+    .flag__image {
+      padding-right: 0;
+      padding-left:  $ekzo-spacing-unit--double;
+    }
 
-	}
+  }
 
 }
 

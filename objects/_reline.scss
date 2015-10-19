@@ -1,7 +1,7 @@
 @if $ekzo-enable-reline {
 
 /*------------------------------------*\
-		$RELINE
+    $RELINE
 \*------------------------------------*/
 
 // ----
@@ -11,22 +11,22 @@
 // Useful for anchors with icons inside it
 
 .reline {
-	text-decoration: none;
+  text-decoration: none;
 
-	&:hover .reline__to { text-decoration: none; }
+  &:hover .reline__to { text-decoration: none; }
 }
 
-	.reline__to { text-decoration: underline; }
+  .reline__to { text-decoration: underline; }
 
 // ----
 // Removes underline, but adds it to child span on hover
 
 .reline--rev {
-	text-decoration: none;
+  text-decoration: none;
 
-	.reline__to { text-decoration: none; }
+  .reline__to { text-decoration: none; }
 
-	&:hover .reline__to { text-decoration: underline; }
+  &:hover .reline__to { text-decoration: underline; }
 }
 
 } // endif

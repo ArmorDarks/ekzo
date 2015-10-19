@@ -1,7 +1,7 @@
 // scss-lint:disable QualifyingElement
 
 /*------------------------------------*\
-	$IMAGES
+  $IMAGES
 \*------------------------------------*/
 
 /**
@@ -27,23 +27,23 @@ img[height] { max-width: none; }
  */
 
 .image--right {
-	float: right;
+  float: right;
 
-	margin-bottom: $ekzo-spacing-unit--half;
-	margin-left:   $ekzo-spacing-unit;
+  margin-bottom: $ekzo-spacing-unit--half;
+  margin-left:   $ekzo-spacing-unit;
 }
 
 .image--left {
-	float: left;
+  float: left;
 
-	margin-right:  $ekzo-spacing-unit;
-	margin-bottom: $ekzo-spacing-unit--half;
+  margin-right:  $ekzo-spacing-unit;
+  margin-bottom: $ekzo-spacing-unit--half;
 }
 
 .image--center {
-	display: block;
+  display: block;
 
-	margin-right:  auto;
-	margin-left:   auto;
-	margin-bottom: $ekzo-spacing-unit--half;
+  margin-right:  auto;
+  margin-left:   auto;
+  margin-bottom: $ekzo-spacing-unit--half;
 }

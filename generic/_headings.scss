@@ -4,11 +4,11 @@
 // =======================================
 
 %headings-properties {
-	font-weight: $ekzo-headings-font-weight;
+  font-weight: $ekzo-headings-font-weight;
 
-	@if $ekzo-headings-font-family { font-family: $ekzo-headings-font-family; }
+  @if $ekzo-headings-font-family { font-family: $ekzo-headings-font-family; }
 
-	@if $ekzo-headings-color { color: $ekzo-headings-color; }
+  @if $ekzo-headings-color { color: $ekzo-headings-color; }
 
 }
 

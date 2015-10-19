@@ -32,44 +32,44 @@ table { width: 100%; }
 
 @mixin ekzo-table-spacing($n: '') {
 
-	// ---------------------------------------
-	// Paddings
-	// ---------------------------------------
+  // ---------------------------------------
+  // Paddings
+  // ---------------------------------------
 
-	.#{$n}table--padding-- {
+  .#{$n}table--padding-- {
 
-		th,
-		td { padding: $ekzo-spacing-unit--quarter; }
+    th,
+    td { padding: $ekzo-spacing-unit--quarter; }
 
-	}
+  }
 
-	.#{$n}table--padding- {
+  .#{$n}table--padding- {
 
-		th,
-		td { padding: $ekzo-spacing-unit--half; }
+    th,
+    td { padding: $ekzo-spacing-unit--half; }
 
-	}
+  }
 
-	.#{$n}table--padding {
+  .#{$n}table--padding {
 
-		th,
-		td { padding: $ekzo-spacing-unit; }
+    th,
+    td { padding: $ekzo-spacing-unit; }
 
-	}
+  }
 
-	.#{$n}table--padding\+ {
+  .#{$n}table--padding\+ {
 
-		th,
-		td { padding: $ekzo-spacing-unit--double; }
+    th,
+    td { padding: $ekzo-spacing-unit--double; }
 
-	}
+  }
 
-	.#{$n}table--padding--flush {
+  .#{$n}table--padding--flush {
 
-		th,
-		td { padding: 0; }
+    th,
+    td { padding: 0; }
 
-	}
+  }
 
 } // table-spacing()
 
@@ -80,20 +80,20 @@ table { width: 100%; }
 
 @if $ekzo-enable-tables {
 
-	@include ekzo-table-spacing();
+  @include ekzo-table-spacing();
 
-		// ---------------------------------------
-		// Call responsive tables modifiers mixin
-		// ---------------------------------------
+    // ---------------------------------------
+    // Call responsive tables modifiers mixin
+    // ---------------------------------------
 
-		@if $ekzo-enable-responsive-tables {
+    @if $ekzo-enable-responsive-tables {
 
-			@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
-				@include ekzo-breakpoint($breakpoint) {
-					@include ekzo-table-spacing('#{$breakpoint}-');
-				}
-			}
+      @each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+        @include ekzo-breakpoint($breakpoint) {
+          @include ekzo-table-spacing('#{$breakpoint}-');
+        }
+      }
 
-		} // endif
+    } // endif
 
 } // endif

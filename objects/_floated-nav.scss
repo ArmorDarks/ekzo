@@ -1,22 +1,22 @@
 @if $ekzo-enable-floated-nav {
 
 /*------------------------------------*\
-		$FLOATED-NAV
+    $FLOATED-NAV
 \*------------------------------------*/
 
 .floated-nav {
-	@extend %list--flush;
-	@extend %clear;
+  @extend %list--flush;
+  @extend %clear;
 
-	> li { float: left; }
+  > li { float: left; }
 
 }
 
 .floated-nav--rev {
-	@extend %list--flush;
-	@extend %clear;
+  @extend %list--flush;
+  @extend %clear;
 
-	> li { float: right; }
+  > li { float: right; }
 
 }
 

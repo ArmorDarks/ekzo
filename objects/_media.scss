@@ -1,7 +1,7 @@
 @if $ekzo-enable-media {
 
 /*------------------------------------*\
-		$MEDIA
+    $MEDIA
 \*------------------------------------*/
 
 // @todo Reorder, add mixin, improve docs
@@ -11,77 +11,77 @@
  * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
  * E.g.:
  *
-		<div class="media">
-			<img class="media__image" src=https://placekitten.com/200/300 alt="">
-			<p class="media__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
+    <div class="media">
+      <img class="media__image" src=https://placekitten.com/200/300 alt="">
+      <p class="media__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
  *
  * Demo: jsfiddle.net/inuitcss/cf4Qs
  *
  */
 
 .media {
-	// #note disabled experimentaly. It seems there is no need
-	// in such property in most cases
-	// Note that for obvious reasons element should always be
-	// block or inline-block element.
-	// display: block;
+  // #note disabled experimentaly. It seems there is no need
+  // in such property in most cases
+  // Note that for obvious reasons element should always be
+  // block or inline-block element.
+  // display: block;
 
-	@extend %clear;
+  @extend %clear;
 }
 
-	.media__image {
-		float: left;
+  .media__image {
+    float: left;
 
-		display: block;
+    display: block;
 
-		margin-right: $ekzo-spacing-unit;
-	}
+    margin-right: $ekzo-spacing-unit;
+  }
 
-	.media__content {
-		overflow: hidden;
+  .media__content {
+    overflow: hidden;
 
-		&,
-		> :last-child { margin-bottom: 0; }
+    &,
+    > :last-child { margin-bottom: 0; }
 
-	}
+  }
 
 
 
 .media--rev {
 
-	.media__image {
-		float: right;
+  .media__image {
+    float: right;
 
-		margin-right: 0;
-		margin-left:  $ekzo-spacing-unit;
-	}
+    margin-right: 0;
+    margin-left:  $ekzo-spacing-unit;
+  }
 
 }
 
 
 .media--flush {
 
-	.media__image {
-		margin-right: 0;
-		margin-left:  0;
-	}
+  .media__image {
+    margin-right: 0;
+    margin-left:  0;
+  }
 
 }
 
 .media\+ {
 
-	.media__image { margin-right: $ekzo-spacing-unit--double; }
+  .media__image { margin-right: $ekzo-spacing-unit--double; }
 
-	&.media--rev {
+  &.media--rev {
 
-		.media__image {
-			margin-right: 0;
-			margin-left:  $ekzo-spacing-unit--double;
-		}
+    .media__image {
+      margin-right: 0;
+      margin-left:  $ekzo-spacing-unit--double;
+    }
 
-	}
+  }
 
 }
 

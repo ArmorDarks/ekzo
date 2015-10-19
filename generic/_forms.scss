@@ -1,16 +1,16 @@
 @if $ekzo-enable-forms {
 
 /*------------------------------------*\
-		$FORMS
+    $FORMS
 \*------------------------------------*/
 
 
 @include ekzo-placeholder() {
-	font-family: $ekzo-forms-font-family;
-	font-size:   $ekzo-forms-placeholder-font-size;
-	font-style:  $ekzo-forms-placeholder-font-style;
+  font-family: $ekzo-forms-font-family;
+  font-size:   $ekzo-forms-placeholder-font-size;
+  font-style:  $ekzo-forms-placeholder-font-style;
 
-	color:       $ekzo-forms-placeholder-color;
+  color:       $ekzo-forms-placeholder-color;
 }
 
 
@@ -21,10 +21,10 @@ fieldset + fieldset { margin-top: $ekzo-spacing-unit--double; }
 input,
 textarea,
 label {
-	font-family: $ekzo-forms-font-family;
-	font-size:   $ekzo-forms-font-size;
+  font-family: $ekzo-forms-font-family;
+  font-size:   $ekzo-forms-font-size;
 
-	color: $ekzo-forms-color;
+  color: $ekzo-forms-color;
 }
 
 
@@ -36,9 +36,9 @@ textarea { background-color: $ekzo-forms-bg-color; }
 /**
  * Extra help text displayed after a field when that field is in focus, e.g.:
  *
-		<label for=email>Email:</label>
-		<input type=email class=text-input id=email>
-		<small class=extra-help>.edu emails only</small>
+    <label for=email>Email:</label>
+    <input type=email class=text-input id=email>
+    <small class=extra-help>.edu emails only</small>
  *
  * We leave the help text in the document flow and merely set it to
  * `visibility:hidden;`. This means that it won't interfere with anything once
@@ -47,12 +47,12 @@ textarea { background-color: $ekzo-forms-bg-color; }
  */
 
 /*small*/.extra-help {
-	display: inline-block;
+  display: inline-block;
 
-	visibility: hidden;
+  visibility: hidden;
 
-	.text-input:active + &,
-	.text-input:focus + & { visibility: visible; }
+  .text-input:active + &,
+  .text-input:focus + & { visibility: visible; }
 
 }
 

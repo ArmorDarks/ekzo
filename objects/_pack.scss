@@ -1,15 +1,15 @@
 @if $ekzo-enable-pack {
 
 /*------------------------------------*\
-		$PACK
+    $PACK
 \*------------------------------------*/
 
 /**
  * The pack object simply causes any number of elements pack up horizontally to
  * automatically fill an equal, fluid width of their parent.
  *
-		<ul class="nav--fit">
-			...
+    <ul class="nav--fit">
+      ...
  *
  * Thanks to @pimpl for this idea!
  *
@@ -18,26 +18,26 @@
  */
 
 .pack {
-	display: table;
+  display: table;
 
-	width: 100%;  /* [1] */
+  width: 100%;  /* [1] */
 
-	> li {
-		@extend %pack__item;
+  > li {
+    @extend %pack__item;
 
-		> a { display: block; }
+    > a { display: block; }
 
-	}
+  }
 
-	> a { @extend %pack__item; }
+  > a { @extend %pack__item; }
 
 }
 
 .pack__item,
 %pack__item {
-	display: table-cell;
+  display: table-cell;
 
-	padding: $ekzo-spacing-unit;
+  padding: $ekzo-spacing-unit;
 }
 
 .pack--fixed { table-layout: fixed; /* [2] */ }
@@ -49,22 +49,22 @@
 
 .pack- {
 
-	> li,
-	> a { padding: $ekzo-spacing-unit--half; }
+  > li,
+  > a { padding: $ekzo-spacing-unit--half; }
 
 }
 
 .pack\+ {
 
-	> li,
-	> a { padding: $ekzo-spacing-unit--double; }
+  > li,
+  > a { padding: $ekzo-spacing-unit--double; }
 
 }
 
 .pack--flush {
 
-	> li,
-	> a { padding: 0; }
+  > li,
+  > a { padding: 0; }
 
 }
 

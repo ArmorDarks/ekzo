@@ -27,66 +27,66 @@
 //
 // @example
 //
-// 		.component {
-// 			@include ekzo-breakpoint(palm){ border: 0px; }
-// 			border: 2px;
-// 		}
+//     .component {
+//       @include ekzo-breakpoint(palm){ border: 0px; }
+//       border: 2px;
+//     }
 //
 
 @mixin ekzo-breakpoint($breakpoint, $custom-map:false) {
 
-	$breakpoint-value: '';
-	$breakpoint-map:   '';
+  $breakpoint-value: '';
+  $breakpoint-map:   '';
 
-	// use default breakpoints map
-	@if not $custom-map or $custom-map == breakpoint or $custom-map == breakpoints {
+  // use default breakpoints map
+  @if not $custom-map or $custom-map == breakpoint or $custom-map == breakpoints {
 
-		// assigning value from map of breakpoints in `$ekzo-breakpoints`
-		@each $key, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
-			@if $key == $breakpoint { $breakpoint-value: $value; }
-		}
+    // assigning value from map of breakpoints in `$ekzo-breakpoints`
+    @each $key, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+      @if $key == $breakpoint { $breakpoint-value: $value; }
+    }
 
-		$breakpoint-map: '$ekzo-breakpoints';
+    $breakpoint-map: '$ekzo-breakpoints';
 
-	// use devices breakpoints map
-	} @else if $custom-map == type or $custom-map == types {
+  // use devices breakpoints map
+  } @else if $custom-map == type or $custom-map == types {
 
-		// assigning value from map of breakpoints in `$ekzo-devices-breakpoints`
-		@each $key, $value in map-get-deep($ekzo-breakpoints, types) {
-			@if $key == $breakpoint { $breakpoint-value: $value; }
-		}
+    // assigning value from map of breakpoints in `$ekzo-devices-breakpoints`
+    @each $key, $value in map-get-deep($ekzo-breakpoints, types) {
+      @if $key == $breakpoint { $breakpoint-value: $value; }
+    }
 
-		$breakpoint-map: '$ekzo-devices-breakpoints';
+    $breakpoint-map: '$ekzo-devices-breakpoints';
 
-	// use custom breakpoints map
-	} @else if $custom-map or $custom-map == custom {
+  // use custom breakpoints map
+  } @else if $custom-map or $custom-map == custom {
 
-		// assigning value from map of breakpoints in `$ekzo-custom-breakpoints`
-		@each $key, $value in map-get-deep($ekzo-breakpoints, custom) {
-			@if $key == $breakpoint { $breakpoint-value: $value; }
-		}
+    // assigning value from map of breakpoints in `$ekzo-custom-breakpoints`
+    @each $key, $value in map-get-deep($ekzo-breakpoints, custom) {
+      @if $key == $breakpoint { $breakpoint-value: $value; }
+    }
 
-		$breakpoint-map: '$ekzo-custom-breakpoints';
+    $breakpoint-map: '$ekzo-custom-breakpoints';
 
-	// use specified breakpoints map
-	} @else {
+  // use specified breakpoints map
+  } @else {
 
-		// assigning value from specified map
-		@each $key, $value in $custom-map {
-			@if $key == $breakpoint { $breakpoint-value: $value; }
-		}
+    // assigning value from specified map
+    @each $key, $value in $custom-map {
+      @if $key == $breakpoint { $breakpoint-value: $value; }
+    }
 
-		$breakpoint-map: 'specified';
+    $breakpoint-map: 'specified';
 
-	} // endif
+  } // endif
 
-	// checking wether defined breakpoint exists in requested map
-	@if $breakpoint-value == '' {
-		@error 'Undefined breakpoint `#{$breakpoint}` in `#{$breakpoint-map}` map!'
-	} // endif
+  // checking wether defined breakpoint exists in requested map
+  @if $breakpoint-value == '' {
+    @error 'Undefined breakpoint `#{$breakpoint}` in `#{$breakpoint-map}` map!'
+  } // endif
 
-	// Use `only` to hide media query from old browsers
-	// @details https://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
-	@media only #{$breakpoint-value} { @content; }
+  // Use `only` to hide media query from old browsers
+  // @details https://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
+  @media only #{$breakpoint-value} { @content; }
 
 }

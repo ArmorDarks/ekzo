@@ -25,11 +25,11 @@
 
 .grid { letter-spacing: -.31em; }
 
-	.grid__item {
-		display: inline-block; // 1
+  .grid__item {
+    display: inline-block; // 1
 
-		letter-spacing: normal; // 2
-	}
+    letter-spacing: normal; // 2
+  }
 
 
 // ---------------------------------------
@@ -38,40 +38,40 @@
 
 @mixin ekzo-grid-types($n: '') {
 
-	// ----
-	// Grid items aligment
+  // ----
+  // Grid items aligment
 
-	.#{$n}grid--center {
-		text-align: center;
+  .#{$n}grid--center {
+    text-align: center;
 
-		> .grid__item { text-align: left; }
+    > .grid__item { text-align: left; }
 
-	}
+  }
 
-	.#{$n}grid--middle {
+  .#{$n}grid--middle {
 
-		> .grid__item { vertical-align: middle; }
+    > .grid__item { vertical-align: middle; }
 
-	}
+  }
 
-	.#{$n}grid--bottom {
+  .#{$n}grid--bottom {
 
-		> .grid__item { vertical-align: bottom; }
+    > .grid__item { vertical-align: bottom; }
 
-	}
+  }
 
 }
 
 @include ekzo-grid-types();
 
 @if $ekzo-enable-grid {
-	@if $ekzo-enable-responsive-grid {
+  @if $ekzo-enable-responsive-grid {
 
-		@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
-			@include ekzo-breakpoint($breakpoint) {
-				@include ekzo-grid-types('#{$breakpoint}-');
-			}
-		}
+    @each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+      @include ekzo-breakpoint($breakpoint) {
+        @include ekzo-grid-types('#{$breakpoint}-');
+      }
+    }
 
-	} // endif
+  } // endif
 } // endif

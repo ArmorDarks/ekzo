@@ -22,86 +22,86 @@
 
 @mixin ekzo-widths($n: '') {
 
-	// Whole
+  // Whole
 
-	[class~='#{$n}1/1']       { width: 100% !important; }
+  [class~='#{$n}1/1']       { width: 100% !important; }
 
-	// Halves
+  // Halves
 
-	[class~='#{$n}1/2'],
-	[class~='#{$n}2/4'],
-	[class~='#{$n}3/6'],
-	[class~='#{$n}4/8'],
-	[class~='#{$n}5/10'],
-	[class~='#{$n}6/12']      { width: 50% !important; }
+  [class~='#{$n}1/2'],
+  [class~='#{$n}2/4'],
+  [class~='#{$n}3/6'],
+  [class~='#{$n}4/8'],
+  [class~='#{$n}5/10'],
+  [class~='#{$n}6/12']      { width: 50% !important; }
 
-	// Thirds
+  // Thirds
 
-	[class~='#{$n}1/3'],
-	[class~='#{$n}2/6'],
-	[class~='#{$n}3/9'],
-	[class~='#{$n}4/12']      { width: 33.3333333% !important; }
-	[class~='#{$n}2/3'],
-	[class~='#{$n}4/6'],
-	[class~='#{$n}6/9'],
-	[class~='#{$n}8/12']      { width: 66.6666666% !important; }
+  [class~='#{$n}1/3'],
+  [class~='#{$n}2/6'],
+  [class~='#{$n}3/9'],
+  [class~='#{$n}4/12']      { width: 33.3333333% !important; }
+  [class~='#{$n}2/3'],
+  [class~='#{$n}4/6'],
+  [class~='#{$n}6/9'],
+  [class~='#{$n}8/12']      { width: 66.6666666% !important; }
 
-	// Quarters
+  // Quarters
 
-	[class~='#{$n}1/4'],
-	[class~='#{$n}2/8'],
-	[class~='#{$n}3/12']      { width: 25% !important; }
-	[class~='#{$n}3/4'],
-	[class~='#{$n}6/8'],
-	[class~='#{$n}9/12']      { width: 75% !important; }
+  [class~='#{$n}1/4'],
+  [class~='#{$n}2/8'],
+  [class~='#{$n}3/12']      { width: 25% !important; }
+  [class~='#{$n}3/4'],
+  [class~='#{$n}6/8'],
+  [class~='#{$n}9/12']      { width: 75% !important; }
 
-	// Fifths
+  // Fifths
 
-	[class~='#{$n}1/5'],
-	[class~='#{$n}2/10']      { width: 20% !important; }
-	[class~='#{$n}2/5'],
-	[class~='#{$n}4/10']      { width: 40% !important; }
-	[class~='#{$n}3/5'],
-	[class~='#{$n}6/10']      { width: 60% !important; }
-	[class~='#{$n}4/5'],
-	[class~='#{$n}8/10']      { width: 80% !important; }
+  [class~='#{$n}1/5'],
+  [class~='#{$n}2/10']      { width: 20% !important; }
+  [class~='#{$n}2/5'],
+  [class~='#{$n}4/10']      { width: 40% !important; }
+  [class~='#{$n}3/5'],
+  [class~='#{$n}6/10']      { width: 60% !important; }
+  [class~='#{$n}4/5'],
+  [class~='#{$n}8/10']      { width: 80% !important; }
 
-	// Sixths
+  // Sixths
 
-	[class~='#{$n}1/6'],
-	[class~='#{$n}2/12']      { width: 16.6666666% !important; }
-	[class~='#{$n}5/6'],
-	[class~='#{$n}10/12']     { width: 83.3333333% !important; }
+  [class~='#{$n}1/6'],
+  [class~='#{$n}2/12']      { width: 16.6666666% !important; }
+  [class~='#{$n}5/6'],
+  [class~='#{$n}10/12']     { width: 83.3333333% !important; }
 
-	// Eighths
+  // Eighths
 
-	[class~='#{$n}1/8']       { width: 12.5% !important; }
-	[class~='#{$n}3/8']       { width: 37.5% !important; }
-	[class~='#{$n}5/8']       { width: 62.5% !important; }
-	[class~='#{$n}7/8']       { width: 87.5% !important; }
+  [class~='#{$n}1/8']       { width: 12.5% !important; }
+  [class~='#{$n}3/8']       { width: 37.5% !important; }
+  [class~='#{$n}5/8']       { width: 62.5% !important; }
+  [class~='#{$n}7/8']       { width: 87.5% !important; }
 
-	// Ninths
+  // Ninths
 
-	[class~='#{$n}1/9']       { width: 11.1111111% !important; }
-	[class~='#{$n}2/9']       { width: 22.2222222% !important; }
-	[class~='#{$n}4/9']       { width: 44.4444444% !important; }
-	[class~='#{$n}5/9']       { width: 55.5555555% !important; }
-	[class~='#{$n}7/9']       { width: 77.7777777% !important; }
-	[class~='#{$n}8/9']       { width: 88.8888888% !important; }
+  [class~='#{$n}1/9']       { width: 11.1111111% !important; }
+  [class~='#{$n}2/9']       { width: 22.2222222% !important; }
+  [class~='#{$n}4/9']       { width: 44.4444444% !important; }
+  [class~='#{$n}5/9']       { width: 55.5555555% !important; }
+  [class~='#{$n}7/9']       { width: 77.7777777% !important; }
+  [class~='#{$n}8/9']       { width: 88.8888888% !important; }
 
-	// Tenths
+  // Tenths
 
-	[class~='#{$n}1/10']      { width: 10% !important; }
-	[class~='#{$n}3/10']      { width: 30% !important; }
-	[class~='#{$n}7/10']      { width: 70% !important; }
-	[class~='#{$n}9/10']      { width: 90% !important; }
+  [class~='#{$n}1/10']      { width: 10% !important; }
+  [class~='#{$n}3/10']      { width: 30% !important; }
+  [class~='#{$n}7/10']      { width: 70% !important; }
+  [class~='#{$n}9/10']      { width: 90% !important; }
 
-	// Twelfths
+  // Twelfths
 
-	[class~='#{$n}1/12']      { width:  8.3333333% !important; }
-	[class~='#{$n}5/12']      { width: 41.6666666% !important; }
-	[class~='#{$n}7/12']      { width: 58.3333333% !important; }
-	[class~='#{$n}11/12']     { width: 91.6666666% !important; }
+  [class~='#{$n}1/12']      { width:  8.3333333% !important; }
+  [class~='#{$n}5/12']      { width: 41.6666666% !important; }
+  [class~='#{$n}7/12']      { width: 58.3333333% !important; }
+  [class~='#{$n}11/12']     { width: 91.6666666% !important; }
 
 } // widths()
 
@@ -127,7 +127,7 @@
 //
 // @example
 //
-// 		<div class='grid 1/4 lap-1/2 palm-1/1'> ... </div>
+//     <div class='grid 1/4 lap-1/2 palm-1/1'> ... </div>
 //
 // This would create a `div` that, at 'desktop' sizes, takes up a quarter of the
 // horizontal space, a half of that space at 'tablet' sizes, and goes full width
@@ -137,10 +137,10 @@
 
 @if $ekzo-enable-responsive-widths {
 
-	@each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
-		@include ekzo-breakpoint($breakpoint) {
-			@include ekzo-widths('#{$breakpoint}-');
-		}
-	}
+  @each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+    @include ekzo-breakpoint($breakpoint) {
+      @include ekzo-widths('#{$breakpoint}-');
+    }
+  }
 
 } // endif

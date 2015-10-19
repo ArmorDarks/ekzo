@@ -1,6 +1,6 @@
 
 /*------------------------------------*\
-		$LINKS
+    $LINKS
 \*------------------------------------*/
 
 
@@ -10,52 +10,52 @@
 
 a,
 .link {
-	color: $ekzo-links-color;
+  color: $ekzo-links-color;
 
-	@if $ekzo-links-underline {
-		text-decoration: underline;
-	} @else {
-		text-decoration: none;
-	}
+  @if $ekzo-links-underline {
+    text-decoration: underline;
+  } @else {
+    text-decoration: none;
+  }
 
-	@if $ekzo-links-border-top-width    { border-top-width:    $ekzo-links-border-top-width; }
-	@if $ekzo-links-border-top-style    { border-top-style:    $ekzo-links-border-top-style; }
-	@if $ekzo-links-border-top-color    { border-top-color:    $ekzo-links-border-top-color; }
+  @if $ekzo-links-border-top-width    { border-top-width:    $ekzo-links-border-top-width; }
+  @if $ekzo-links-border-top-style    { border-top-style:    $ekzo-links-border-top-style; }
+  @if $ekzo-links-border-top-color    { border-top-color:    $ekzo-links-border-top-color; }
 
-	@if $ekzo-links-border-right-width  { border-right-width:  $ekzo-links-border-right-width; }
-	@if $ekzo-links-border-right-style  { border-right-style:  $ekzo-links-border-right-style; }
-	@if $ekzo-links-border-right-color  { border-right-color:  $ekzo-links-border-right-color; }
+  @if $ekzo-links-border-right-width  { border-right-width:  $ekzo-links-border-right-width; }
+  @if $ekzo-links-border-right-style  { border-right-style:  $ekzo-links-border-right-style; }
+  @if $ekzo-links-border-right-color  { border-right-color:  $ekzo-links-border-right-color; }
 
-	@if $ekzo-links-border-bottom-width { border-bottom-width: $ekzo-links-border-bottom-width; }
-	@if $ekzo-links-border-bottom-style { border-bottom-style: $ekzo-links-border-bottom-style; }
-	@if $ekzo-links-border-bottom-color { border-bottom-color: $ekzo-links-border-bottom-color; }
+  @if $ekzo-links-border-bottom-width { border-bottom-width: $ekzo-links-border-bottom-width; }
+  @if $ekzo-links-border-bottom-style { border-bottom-style: $ekzo-links-border-bottom-style; }
+  @if $ekzo-links-border-bottom-color { border-bottom-color: $ekzo-links-border-bottom-color; }
 
-	@if $ekzo-links-border-left-width   { border-left-width:   $ekzo-links-border-left-width; }
-	@if $ekzo-links-border-left-style   { border-left-style:   $ekzo-links-border-left-style; }
-	@if $ekzo-links-border-left-color   { border-left-color:   $ekzo-links-border-left-color; }
+  @if $ekzo-links-border-left-width   { border-left-width:   $ekzo-links-border-left-width; }
+  @if $ekzo-links-border-left-style   { border-left-style:   $ekzo-links-border-left-style; }
+  @if $ekzo-links-border-left-color   { border-left-color:   $ekzo-links-border-left-color; }
 
-	&:hover {
-		@if $ekzo-links-hover-color { color: $ekzo-links-hover-color; }
+  &:hover {
+    @if $ekzo-links-hover-color { color: $ekzo-links-hover-color; }
 
-		@if $ekzo-links-hover-unline { text-decoration: none; }
+    @if $ekzo-links-hover-unline { text-decoration: none; }
 
-		@if $ekzo-links-hover-border-top-width    { border-top-width:    $ekzo-links-hover-border-top-width; }
-		@if $ekzo-links-hover-border-top-style    { border-top-style:    $ekzo-links-hover-border-top-style; }
-		@if $ekzo-links-hover-border-top-color    { border-top-color:    $ekzo-links-hover-border-top-color; }
+    @if $ekzo-links-hover-border-top-width    { border-top-width:    $ekzo-links-hover-border-top-width; }
+    @if $ekzo-links-hover-border-top-style    { border-top-style:    $ekzo-links-hover-border-top-style; }
+    @if $ekzo-links-hover-border-top-color    { border-top-color:    $ekzo-links-hover-border-top-color; }
 
-		@if $ekzo-links-hover-border-right-width  { border-right-width:  $ekzo-links-hover-border-right-width; }
-		@if $ekzo-links-hover-border-right-style  { border-right-style:  $ekzo-links-hover-border-right-style; }
-		@if $ekzo-links-hover-border-right-color  { border-right-color:  $ekzo-links-hover-border-right-color; }
+    @if $ekzo-links-hover-border-right-width  { border-right-width:  $ekzo-links-hover-border-right-width; }
+    @if $ekzo-links-hover-border-right-style  { border-right-style:  $ekzo-links-hover-border-right-style; }
+    @if $ekzo-links-hover-border-right-color  { border-right-color:  $ekzo-links-hover-border-right-color; }
 
-		@if $ekzo-links-hover-border-bottom-width { border-bottom-width: $ekzo-links-hover-border-bottom-width; }
-		@if $ekzo-links-hover-border-bottom-style { border-bottom-style: $ekzo-links-hover-border-bottom-style; }
-		@if $ekzo-links-hover-border-bottom-color { border-bottom-color: $ekzo-links-hover-border-bottom-color; }
+    @if $ekzo-links-hover-border-bottom-width { border-bottom-width: $ekzo-links-hover-border-bottom-width; }
+    @if $ekzo-links-hover-border-bottom-style { border-bottom-style: $ekzo-links-hover-border-bottom-style; }
+    @if $ekzo-links-hover-border-bottom-color { border-bottom-color: $ekzo-links-hover-border-bottom-color; }
 
-		@if $ekzo-links-hover-border-left-width   { border-left-width:   $ekzo-links-hover-border-left-width; }
-		@if $ekzo-links-hover-border-left-style   { border-left-style:   $ekzo-links-hover-border-left-style; }
-		@if $ekzo-links-hover-border-left-color   { border-left-color:   $ekzo-links-hover-border-left-color; }
+    @if $ekzo-links-hover-border-left-width   { border-left-width:   $ekzo-links-hover-border-left-width; }
+    @if $ekzo-links-hover-border-left-style   { border-left-style:   $ekzo-links-hover-border-left-style; }
+    @if $ekzo-links-hover-border-left-color   { border-left-color:   $ekzo-links-hover-border-left-color; }
 
-	}
+  }
 
 }
 
@@ -68,40 +68,40 @@ a,
  */
 
 .link--flush {
-	@if $ekzo-links-underline { text-decoration: none; }
+  @if $ekzo-links-underline { text-decoration: none; }
 
-	@if $ekzo-links-border-top-width    { border-top-width:    0; }
-	@if $ekzo-links-border-top-style    { border-top-style:    none; }
+  @if $ekzo-links-border-top-width    { border-top-width:    0; }
+  @if $ekzo-links-border-top-style    { border-top-style:    none; }
 
-	@if $ekzo-links-border-right-width  { border-right-width:  0; }
-	@if $ekzo-links-border-right-style  { border-right-style:  none; }
+  @if $ekzo-links-border-right-width  { border-right-width:  0; }
+  @if $ekzo-links-border-right-style  { border-right-style:  none; }
 
-	@if $ekzo-links-border-bottom-width { border-bottom-width: 0; }
-	@if $ekzo-links-border-bottom-style { border-bottom-style: none; }
+  @if $ekzo-links-border-bottom-width { border-bottom-width: 0; }
+  @if $ekzo-links-border-bottom-style { border-bottom-style: none; }
 
-	@if $ekzo-links-border-left-width   { border-left-width:   0; }
-	@if $ekzo-links-border-left-style   { border-left-style:   none; }
+  @if $ekzo-links-border-left-width   { border-left-width:   0; }
+  @if $ekzo-links-border-left-style   { border-left-style:   none; }
 
-	color: inherit;
+  color: inherit;
 
-	&:hover {
-		@if $ekzo-links-underline { text-decoration: none; }
+  &:hover {
+    @if $ekzo-links-underline { text-decoration: none; }
 
-		@if $ekzo-links-hover-color { color: $ekzo-text-color; }
+    @if $ekzo-links-hover-color { color: $ekzo-text-color; }
 
-		@if $ekzo-links-hover-border-top-width    { border-top-width:    0; }
-		@if $ekzo-links-hover-border-top-style    { border-top-style:    none; }
+    @if $ekzo-links-hover-border-top-width    { border-top-width:    0; }
+    @if $ekzo-links-hover-border-top-style    { border-top-style:    none; }
 
-		@if $ekzo-links-hover-border-right-width  { border-right-width:  0; }
-		@if $ekzo-links-hover-border-right-style  { border-right-style:  none; }
+    @if $ekzo-links-hover-border-right-width  { border-right-width:  0; }
+    @if $ekzo-links-hover-border-right-style  { border-right-style:  none; }
 
-		@if $ekzo-links-hover-border-bottom-width { border-bottom-width: 0; }
-		@if $ekzo-links-hover-border-bottom-style { border-bottom-style: none; }
+    @if $ekzo-links-hover-border-bottom-width { border-bottom-width: 0; }
+    @if $ekzo-links-hover-border-bottom-style { border-bottom-style: none; }
 
-		@if $ekzo-links-hover-border-left-width   { border-left-width:   0; }
-		@if $ekzo-links-hover-border-left-style   { border-left-style:   none; }
+    @if $ekzo-links-hover-border-left-width   { border-left-width:   0; }
+    @if $ekzo-links-hover-border-left-style   { border-left-style:   none; }
 
-	}
+  }
 
 }
 
@@ -110,7 +110,7 @@ a,
 /**
  * Add a right-angled quote to links that imply movement, e.g.:
  *
-		<a href=# class="link--go">Read more</a>
+    <a href=# class="link--go">Read more</a>
  *
  */
 
@@ -120,7 +120,7 @@ a,
 /**
  * Add a left-angled quote to links that imply backwards movement, e.g.:
  *
-		<a href=# class="link--back">Go back</a>
+    <a href=# class="link--back">Go back</a>
  *
  */
 

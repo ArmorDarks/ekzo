@@ -1,6 +1,6 @@
 
 /*------------------------------------*\
-	$MIXINS.ARROWS
+  $MIXINS.ARROWS
 \*------------------------------------*/
 
 // @legacy This code is obsolete.
@@ -35,118 +35,118 @@
  * which will create a red triangle with a black border which sits at the bottom
  * center of the element. Call the mixin thus:
  *
-		.foo {
-			background-color:#bada55;
-			border:1px solid #ace;
-			@include ekzo-arrow(top, left, #bada55, #ace);
-		}
+    .foo {
+      background-color:#bada55;
+      border:1px solid #ace;
+      @include ekzo-arrow(top, left, #bada55, #ace);
+    }
  *
  */
 
 @mixin ekzo-arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
 
-	@if $arrow-edge == top {
+  @if $arrow-edge == top {
 
-		@extend %arrow--top;
+    @extend %arrow--top;
 
-		&:before {
-			border-bottom-color: $border-color;
-		}
+    &:before {
+      border-bottom-color: $border-color;
+    }
 
-		&:after {
-			border-bottom-color: $arrow-color;
-		}
+    &:after {
+      border-bottom-color: $arrow-color;
+    }
 
-		@if $arrow-location == left {
-			@extend %arrow--left;
-		}
+    @if $arrow-location == left {
+      @extend %arrow--left;
+    }
 
-		@if $arrow-location == center {
-			@extend %arrow--center;
-		}
+    @if $arrow-location == center {
+      @extend %arrow--center;
+    }
 
-		@if $arrow-location == right {
-			@extend %arrow--right;
-		}
+    @if $arrow-location == right {
+      @extend %arrow--right;
+    }
 
-	}
+  }
 
-	@if $arrow-edge == right {
+  @if $arrow-edge == right {
 
-		@extend %arrow--far;
+    @extend %arrow--far;
 
-		&:before {
-			border-left-color: $border-color;
-		}
+    &:before {
+      border-left-color: $border-color;
+    }
 
-		&:after {
-			border-left-color: $arrow-color;
-		}
+    &:after {
+      border-left-color: $arrow-color;
+    }
 
-		@if $arrow-location == top {
-			@extend %arrow--upper;
-		}
+    @if $arrow-location == top {
+      @extend %arrow--upper;
+    }
 
-		@if $arrow-location == center {
-			@extend %arrow--middle;
-		}
+    @if $arrow-location == center {
+      @extend %arrow--middle;
+    }
 
-		@if $arrow-location == bottom {
-			@extend %arrow--lower;
-		}
+    @if $arrow-location == bottom {
+      @extend %arrow--lower;
+    }
 
-	}
+  }
 
-	@if $arrow-edge == bottom {
+  @if $arrow-edge == bottom {
 
-		@extend %arrow--bottom;
+    @extend %arrow--bottom;
 
-		&:before {
-			border-top-color: $border-color;
-		}
+    &:before {
+      border-top-color: $border-color;
+    }
 
-		&:after {
-			border-top-color: $arrow-color;
-		}
+    &:after {
+      border-top-color: $arrow-color;
+    }
 
-		@if $arrow-location == left {
-			@extend %arrow--left;
-		}
+    @if $arrow-location == left {
+      @extend %arrow--left;
+    }
 
-		@if $arrow-location == center {
-			@extend %arrow--center;
-		}
+    @if $arrow-location == center {
+      @extend %arrow--center;
+    }
 
-		@if $arrow-location == right {
-			@extend %arrow--right;
-		}
+    @if $arrow-location == right {
+      @extend %arrow--right;
+    }
 
-	}
+  }
 
-	@if $arrow-edge == left {
+  @if $arrow-edge == left {
 
-		@extend %arrow--near;
+    @extend %arrow--near;
 
-		&:before {
-			border-right-color: $border-color;
-		}
+    &:before {
+      border-right-color: $border-color;
+    }
 
-		&:after {
-			border-right-color: $arrow-color;
-		}
+    &:after {
+      border-right-color: $arrow-color;
+    }
 
-		@if $arrow-location == top {
-			@extend %arrow--upper;
-		}
+    @if $arrow-location == top {
+      @extend %arrow--upper;
+    }
 
-		@if $arrow-location == center {
-			@extend %arrow--middle;
-		}
+    @if $arrow-location == center {
+      @extend %arrow--middle;
+    }
 
-		@if $arrow-location == bottom {
-			@extend %arrow--lower;
-		}
+    @if $arrow-location == bottom {
+      @extend %arrow--lower;
+    }
 
-	}
+  }
 
 }

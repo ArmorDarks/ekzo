@@ -1,18 +1,18 @@
 @if $ekzo-enable-center-inner {
 
 /*------------------------------------*\
-		$CENTER-INNER
+    $CENTER-INNER
 \*------------------------------------*/
 
 .center-inner {
-	text-align: center;
+  text-align: center;
 
-	> * {
-		display: inline-block;
+  > * {
+    display: inline-block;
 
-		text-align: left;
+    text-align: left;
 
-	}
+  }
 
 }
 

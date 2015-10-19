@@ -39,18 +39,18 @@ select,
 button,
 a,
 img {
-	margin:  0;
-	padding: 0;
+  margin:  0;
+  padding: 0;
 }
 
 // ----
 // Remove most spacing between table cells and border
 
 table {
-	border: 0;
+  border: 0;
 
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 // ----
@@ -73,7 +73,7 @@ img { outline: none; }
 // 2. So that `alt` text is visually offset if images don't load.
 
 img {
-	border: 0;       // 1
+  border: 0;       // 1
 
-	font-style: italic; // 2
+  font-style: italic; // 2
 }

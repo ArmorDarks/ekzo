@@ -31,9 +31,9 @@
 
 @include ekzo-font-size-classes(extra-headings, $prefix: text--) {
 
-	@if $ekzo-extra-headings-font-family { font-family: $ekzo-extra-headings-font-family; }
+  @if $ekzo-extra-headings-font-family { font-family: $ekzo-extra-headings-font-family; }
 
-	@if $ekzo-extra-headings-color { color: $ekzo-extra-headings-color; }
+  @if $ekzo-extra-headings-color { color: $ekzo-extra-headings-color; }
 
 }
 
@@ -103,9 +103,9 @@
 // Removes underline, but adds it on hover
 
 .text--underline--rev {
-	text-decoration: none;
+  text-decoration: none;
 
-	&:hover { text-decoration: underline; }
+  &:hover { text-decoration: underline; }
 
 }
 
@@ -114,19 +114,19 @@
 // ---------------------------------------
 
 .text--underline--border {
-	text-decoration: none;
+  text-decoration: none;
 
-	border-bottom-width: 1px;
+  border-bottom-width: 1px;
 }
 
 // ----
 // Removes underline, but adds it on hover
 
 .text--underline--border--rev {
-	text-decoration: none;
+  text-decoration: none;
 
-	border-bottom-width: 0;
+  border-bottom-width: 0;
 
-	&:hover { border-bottom-width: 1px; }
+  &:hover { border-bottom-width: 1px; }
 
 }
