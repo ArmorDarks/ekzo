@@ -57,10 +57,10 @@
 @function ekzo-get-warning($warn, $get, $key) {
 
   @if $get == null {
-    @warn "Map has no value for key search `#{$warn}`";
+    @warn "[ekzo-get]: map has no value for key search `#{$warn}`";
 
   } @else if type-of($get) != 'map' {
-    @warn "Non-map value found for key search `#{$warn}`, cannot search for key `#{$key}`";
+    @warn "[ekzo-get]: non-map value found for key search `#{$warn}`, can't search for key `#{$key}`";
   }
 
   @return null;

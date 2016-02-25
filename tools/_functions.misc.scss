@@ -106,7 +106,7 @@
 
 @function str-replace($string, $search, $replace: '') {
   @if type-of($string) != string or type-of($search) != string or type-of($replace) != string {
-    @error "One of the 3 arguments is not a string.";
+    @error "[str-replace]: one of the arguments isn't a string.";
   }
 
   $index: str-index($string, $search);

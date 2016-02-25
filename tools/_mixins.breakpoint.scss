@@ -82,7 +82,7 @@
 
   // checking wether defined breakpoint exists in requested map
   @if $breakpoint-value == '' {
-    @error 'Undefined breakpoint `#{$breakpoint}` in `#{$breakpoint-map}` map!'
+    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` in `#{$breakpoint-map}` map!'
   } // endif
 
   // Use `only` to hide media query from old browsers
