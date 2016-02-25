@@ -10,6 +10,8 @@ Requirements
 
 [Sass](http://sass-lang.com/install) 3.4.2 or higher
 
+[Autoprefixer](https://github.com/postcss/autoprefixer) in conjuration with Grunt or Gulp highly advised
+
 Best used with
 --------------
 
