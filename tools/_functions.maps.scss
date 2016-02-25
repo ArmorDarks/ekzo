@@ -13,7 +13,7 @@
 //
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
 
-@function map-get-deep($map, $keys...) {
+@function ekzo-get($map, $keys...) {
 
   @if length($keys) == 1 {
     $keys: nth($keys, 1);
@@ -32,11 +32,11 @@
         $get: map-get($get, nth($keys, $i));
 
         @if $get == null {
-          @return map-get-deep-warning($warn, $get, nth($keys, $i));
+          @return ekzo-get-warning($warn, $get, nth($keys, $i));
         }
 
       } @else {
-        @return map-get-deep-warning($warn, $get, nth($keys, $i));
+        @return ekzo-get-warning($warn, $get, nth($keys, $i));
       }
 
     }
@@ -54,7 +54,7 @@
 //
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
 
-@function map-get-deep-warning($warn, $get, $key) {
+@function ekzo-get-warning($warn, $get, $key) {
 
   @if $get == null {
     @warn "Map has no value for key search `#{$warn}`";

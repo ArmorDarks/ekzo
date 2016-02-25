@@ -88,7 +88,7 @@ table { width: 100%; }
 
     @if $ekzo-enable-responsive-tables {
 
-      @each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+      @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
         @include ekzo-breakpoint($breakpoint) {
           @include ekzo-table-spacing('#{$breakpoint}-');
         }

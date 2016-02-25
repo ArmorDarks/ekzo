@@ -67,7 +67,7 @@
 @if $ekzo-enable-grid {
   @if $ekzo-enable-responsive-grid {
 
-    @each $breakpoint, $value in map-get-deep($ekzo-breakpoints, breakpoints) {
+    @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
       @include ekzo-breakpoint($breakpoint) {
         @include ekzo-grid-types('#{$breakpoint}-');
       }
