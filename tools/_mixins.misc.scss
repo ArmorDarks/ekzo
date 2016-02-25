@@ -3,47 +3,18 @@
 // ^MIXINS.MISC
 // =======================================
 
-
-/**
- * Style any number of headings in one fell swoop, e.g.:
- *
-    .foo {
-      @include ekzo-headings(1, 3){
-      color:#bada55;
-    }
-  }
- *
- * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
- * @thierrylemoulec for refining and improving my initial mixin.
- */
-
-@mixin ekzo-headings($from: 1, $to: 6) {
-
-  %heading { @content; }
-
-  @if $from >= 1 and $to <= 6 {
-
-    @for $i from $from through $to {
-
-      h#{$i} {
-        @extend %heading;
-      }
-
-    }
-
-  }
-
-}
-
-
-
-/**
- * Force overly long spans of text to truncate, e.g.:
- *
-    @include ekzo-truncate(100%);
- *
- * Where `$truncation-boundary` is a united measurement.
- */
+// ---------------------------------------
+// Truncate
+// ---------------------------------------
+//
+// Quick way to specify multiple border radii at once
+//
+// @prop {percent|px|em|rem} $truncation-boundary - widths of text, which shouldn't be truncated
+// @example
+//
+//  .box {
+//    @include ekzo-truncate(100%);
+//  }
 
 @mixin ekzo-truncate($truncation-boundary) {
   overflow: hidden;
@@ -53,8 +24,6 @@
 
   white-space: nowrap;
 }
-
-
 
 // ---------------------------------------
 // SHORTHAND BORDER RADIUS
@@ -82,8 +51,6 @@
   border-bottom-right-radius: $radius;
 }
 
-
-
 // ---------------------------------------
 // ASPECT RATIO
 // ---------------------------------------
@@ -97,11 +64,8 @@
 // @example
 //
 //  .responsive-iframe--widescreen {
-//
 //    @include ekzo-aspect-ratio(16, 9);
-//
 //  }
-//
 
 @mixin ekzo-aspect-ratio($width, $height) {
   height: 0;
@@ -111,5 +75,4 @@
   $aspect-ratio: $height / $width * 100%;
 
   padding-bottom: $aspect-ratio;
-
 }
