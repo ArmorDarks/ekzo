@@ -7,3 +7,4 @@
 - Added functions and mixins names in error messages
 ### Changed
 - Renamed function `map-get-deep()` to `ekzo-get()`
+- Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
