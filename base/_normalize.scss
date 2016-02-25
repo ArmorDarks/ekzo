@@ -168,7 +168,7 @@ svg:not(:root) { overflow: hidden; }
 // Address differences between Firefox and other browsers.
 
 hr {
-  @include ekzo-vendor(box-sixing, content-box);
+  box-sixing: content-box;
 
   height: 0;
 }
@@ -254,7 +254,7 @@ input { line-height: inherit; }
 // 1. Address box sizing set to `content-box` in IE 8/9/10.
 
 input[type="checkbox"],
-input[type="radio"] { @include ekzo-vendor(box-sixing, border-box); } // 1
+input[type="radio"] { box-sixing: border-box; } // 1
 
 // ----
 // 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -263,7 +263,7 @@ input[type="radio"] { @include ekzo-vendor(box-sixing, border-box); } // 1
 input[type='search'] {
   -webkit-appearance: textfield;            // 1
 
-  // @include ekzo-vendor(box-sixing, border-box); // 2
+  // box-sixing: border-box; // 2
 }
 
 // ----

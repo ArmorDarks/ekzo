@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 
-@include ekzo-placeholder() {
+::placeholder {
   font-family: $ekzo-forms-font-family;
   font-size:   $ekzo-forms-placeholder-font-size;
   font-style:  $ekzo-forms-placeholder-font-style;

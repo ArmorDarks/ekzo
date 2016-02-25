@@ -122,16 +122,16 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
   &:focus:before,
   &:focus:after {
     @if $position == 'top' {
-      @include ekzo-vendor(transform, translateY($ekzo-transition-distance * 1));
+      transform: translateY($ekzo-transition-distance * 1);
     }
     @if $position == 'bottom' {
-      @include ekzo-vendor(transform, translateY($ekzo-transition-distance * -1));
+      transform: translateY($ekzo-transition-distance * -1);
     }
     @if $position == 'left' {
-      @include ekzo-vendor(transform, translateX($ekzo-transition-distance * 1));
+      transform: translateX($ekzo-transition-distance * 1);
     }
     @if $position == 'right' {
-      @include ekzo-vendor(transform, translateX($ekzo-transition-distance * -1));
+      transform: translateX($ekzo-transition-distance * -1);
     }
 
   }
@@ -149,9 +149,9 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
     &:after {
       // HACK: Trigger hardware accelerated rendering, otherwise transform was not
       // working on a hidden element
-      @include ekzo-vendor(transform, translate3d(0, 0, 0));
+      transform: translate3d(0, 0, 0);
 
-      @include ekzo-vendor(transition, .3s ease);
+      transition: .3s ease;
 
       position: absolute;
 
@@ -217,22 +217,22 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
     &.tooltip--top:after,
     &.tooltip--top:before {
-      @include ekzo-vendor(transform, translateY($ekzo-transition-distance * -1));
+      transform: translateY($ekzo-transition-distance * -1);
     }
 
     &.tooltip--bottom:after,
     &.tooltip--bottom:before {
-      @include ekzo-vendor(transform, translateY($ekzo-transition-distance * 1));
+      transform: translateY($ekzo-transition-distance * 1);
     }
 
     &.tooltip--left:after,
     &.tooltip--left:before {
-      @include ekzo-vendor(transform, translateX($ekzo-transition-distance * -1));
+      transform: translateX($ekzo-transition-distance * -1);
     }
 
     &.tooltip--right:after,
     &.tooltip--right:before {
-      @include ekzo-vendor(transform, translateX($ekzo-transition-distance * 1));
+      transform: translateX($ekzo-transition-distance * 1);
     }
   }
 

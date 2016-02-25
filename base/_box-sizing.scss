@@ -3,33 +3,32 @@
 // ^BOX-SIZING
 // =======================================
 //
-// Set the global `box-sizing` state to `border-box`
+// Set global `box-sizing` state to `border-box`
 //
-// Usage of `inherit` allows to override that parameter
-// in components easier.
+// @note: Usage of `inherit` allows easier override of that parameter in components.
+//        So, instead of
 //
-// In result, instead of
+//           .component {
+//             box-sizing: content-box;
 //
-//    .component { @include ekzo-vendor(box-sizing, content-box);
+//             *,
+//             *:before,
+//             *:after { box-sizing: content-box }
 //
-//      *,
-//      *:before,
-//      *:after { @include ekzo-vendor(box-sizing, content-box) }
+//           }
 //
-//    }
+//        to override we need to specify only
 //
-// to override we can specify simply
+//           .component { box-sizing: content-box; }
 //
-//    .component { @include ekzo-vendor(box-sizing, content-box); }
-//
-// @details https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+//        Details https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
 @if $ekzo-global-border-box {
 
-  html { @include ekzo-vendor(box-sizing, border-box); }
+  html { box-sizing: border-box; }
 
   *,
   *:before,
-  *:after { @include ekzo-vendor(box-sizing, inherit); }
+  *:after { box-sizing: inherit; }
 
 }

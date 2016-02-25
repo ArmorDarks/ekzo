@@ -24,8 +24,8 @@
 // Apply box-sizing models
 // ---------------------------------------
 
-.box-sizing--border  { @include ekzo-vendor(box-sizing, border-box  !important); }
-.box-sizing--content { @include ekzo-vendor(box-sizing, content-box !important); }
+.box-sizing--border  { box-sizing: border-box  !important; }
+.box-sizing--content { box-sizing: content-box !important; }
 
 // ---------------------------------------
 // Border
