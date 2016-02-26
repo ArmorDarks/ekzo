@@ -50,7 +50,7 @@
 
 .#{$ekzo-ns}grid { letter-spacing: -.31em; }
 
-  .grid__item {
+  .#{$ekzo-ns}grid__item {
     display: inline-block; // 1
     letter-spacing: normal; // 2
   }
@@ -66,22 +66,22 @@
   // ----
   // Grid items aligment
 
-  .grid--center#{$postfix} {
+  .#{$ekzo-ns}grid--center#{$postfix} {
     text-align: center;
 
-    > .grid__item { text-align: left; }
+    > .#{$ekzo-ns}grid__item { text-align: left; }
 
   }
 
-  .grid--middle#{$postfix} {
+  .#{$ekzo-ns}grid--middle#{$postfix} {
 
-    > .grid__item { vertical-align: middle; }
+    > .#{$ekzo-ns}grid__item { vertical-align: middle; }
 
   }
 
-  .grid--bottom#{$postfix} {
+  .#{$ekzo-ns}grid--bottom#{$postfix} {
 
-    > .grid__item { vertical-align: bottom; }
+    > .#{$ekzo-ns}grid__item { vertical-align: bottom; }
 
   }
 

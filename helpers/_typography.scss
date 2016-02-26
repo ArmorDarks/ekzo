@@ -22,7 +22,7 @@
 // When we define a heading we also define a corresponding class to go with it.
 // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns) { @extend %headings-properties; }
+@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns) { @extend %#{$ekzo-ns}headings-properties; }
 
 // ----
 // Extra headings

@@ -23,13 +23,13 @@
   width: 100%;  /* [1] */
 
   > li {
-    @extend %pack__item;
+    @extend %#{$ekzo-ns}pack__item;
 
     > a { display: block; }
 
   }
 
-  > a { @extend %pack__item; }
+  > a { @extend %#{$ekzo-ns}pack__item; }
 
 }
 

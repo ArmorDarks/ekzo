@@ -5,16 +5,16 @@
 \*------------------------------------*/
 
 .#{$ekzo-ns}floated-nav {
-  @extend %list--flush;
-  @extend %clear;
+  @extend %#{$ekzo-ns}list--flush;
+  @extend %#{$ekzo-ns}clear;
 
   > li { float: left; }
 
 }
 
 .#{$ekzo-ns}floated-nav--rev {
-  @extend %list--flush;
-  @extend %clear;
+  @extend %#{$ekzo-ns}list--flush;
+  @extend %#{$ekzo-ns}clear;
 
   > li { float: right; }
 
