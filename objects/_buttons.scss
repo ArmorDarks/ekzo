@@ -26,7 +26,6 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  *
  * 1. Allow us to better style box model properties.
  * 2. Line different sized buttons up a little nicer.
- * 3. Stop buttons wrapping and looking broken.
  * 5. Force all elements using beautons to appear clickable.
  * 6. Normalise box model styles.
  * 7. Using paddings instead of line-height to allow multi-line buttons
@@ -134,27 +133,16 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
 } // endif
 
-/*------------------------------------*\
-  $SIZES
-\*------------------------------------*/
-
-/**
- * Button size modifiers.
- *
- * These all follow the same sizing rules as above; text is 1em, space around it
- * remains uniform.
- */
-
 // ---------------------------------------
 // Buttons sizes
 // ---------------------------------------
 //
-// @param {string} $n='' - namespace (used for breakpoins generation)
+// @param {string} $postfix='' - namespace (used for breakpoins generation)
 
-@mixin ekzo-buttons-sizes($n: '') {
+@mixin ekzo-buttons-sizes($postfix: '') {
 
   // line-height = `$ekzo-line-height`
-  .#{$n}btn-- {
+  .btn--#{$postfix} {
     line-height: $ekzo-line-height;
 
     padding-top:     0;
@@ -164,14 +152,14 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   // line-height = 2
-  .#{$n}btn- {
+  .btn-#{$postfix} {
     padding-top:    ekzo-em($ekzo-spacing-unit--half / 3);
     padding-bottom: ekzo-em($ekzo-spacing-unit--half / 3);
     padding-right:  .8em;
     padding-left:   .8em;
   }
 
-  .#{$n}btn--reset {
+  .btn--reset#{$postfix} {
     padding-top:    $btn-padding-top;
     padding-bottom: $btn-padding-bottom;
     padding-right:  1em;
@@ -179,7 +167,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   // line-height = 3
-  .#{$n}btn\+ {
+  .btn\+#{$postfix} {
     padding-top:    ekzo-em($ekzo-spacing-unit * .84);
     padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
     padding-right:  1.5em;
@@ -187,73 +175,60 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   // line-height = 5
-  .#{$n}btn\+\+ {
+  .btn\+\+#{$postfix} {
     padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
     padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
     padding-right:  2em;
     padding-left:   2em;
   }
 
+  // ----
+  // Wide version of button with unspecified line-height
 
-  /**
-   * Wide version of button with unspecified line-height
-   */
-
-  .#{$n}btn--wide\+ {
+  .btn--wide\+#{$postfix} {
     padding-right: 2em;
     padding-left:  2em;
   }
 
-  .#{$n}btn--wide\+-- {
+  .btn--wide\+--#{$postfix} {
     padding-right: 1.5em;
     padding-left:  1.5em;
   }
 
-  .#{$n}btn--wide\+\+\+ {
+  .btn--wide\+\+\+#{$postfix} {
     padding-right: 4em;
     padding-left:  4em;
   }
 
+  // ----
+  // Fill the entirety of their container.
+  //
+  // 1. Remove padding so that widths and paddings don't conflict.
 
-  /**
-   * These buttons will fill the entirety of their container.
-   *
-   * 1. Remove padding so that widths and paddings don't conflict.
-   */
-
-  .#{$n}btn--full {
+  .btn--full#{$postfix} {
     width: 100%;
 
     padding-right: 0;            /* [1] */
     padding-left:  0;            /* [1] */
   }
 
-  /*------------------------------------*\
-    $FONT-SIZES
-  \*------------------------------------*/
-
-  /**
-   * Button font-size modifiers based on map's values.
-   */
+  // ----
+  // Button font-size modifiers based on map's values.
 
   $ekzo-btn-prefix: btn--;
 
-  @include ekzo-font-size-classes(buttons, $prefix: $n + $ekzo-btn-prefix, $line-height:false);
-
+  @include ekzo-font-size-classes(buttons, $prefix: $ekzo-btn-prefix, $postfix: $postfix, $line-height:false);
 
 } // ekzo-buttons-sizes()
 
 
 @if $ekzo-enable-buttons {
 
-
 // ---------------------------------------
 // Call all widths
 // ---------------------------------------
 
 @include ekzo-buttons-sizes();
-
-
 
 // ---------------------------------------
 // Responsive widths
@@ -279,7 +254,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
   @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
     @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-buttons-sizes('#{$breakpoint}-');
+      @include ekzo-buttons-sizes($postfix: '\\@#{$breakpoint}');
     }
   }
 

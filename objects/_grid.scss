@@ -4,32 +4,19 @@
 // ^GRIDS
 // =======================================
 //
-// Fluid and nestable grid system, e.g.:
+// Fluid and nestable grid system
 //
 // @example
 //
 //    <div class="grid">
 //
 //      <div class="grid__item 1/3">
-//        <p>One third grid</p>
+//        <p>Section 1</p>
 //      </div>
-//      <div class="grid__item 2/2">
-//        <p>Two thirds grid</p>
+//      <div class="grid__item 2/3">
+//        <p>Section 2</p>
 //      </div>
-//      <div class="grid__item 1/2">
-//        <p>One half grid</p>
-//      </div>
-//      <div class="grid__item 1/4">
-//        <p>One quarter grid</p>
-//      </div>
-//      <div class="grid__item 1/4">
-//        <p>One quarter grid</p>
-//      </div>
-//
 //    </div>
-//
-// @demo: jsfiddle.net/inuitcss/CLYUC
-
 
 // ---------------------------------------
 // Grid
@@ -74,15 +61,7 @@
 }
 
 // -----
-// Very infrequently occurring grid wrappers as children of grid wrappers.
-
-.grid > .grid { margin-left: 0; }
-
-
-
-// ---------------------------------------
 // Flag Grid
-// ---------------------------------------
 //
 // Throws grid in flag mode
 // In that mode grid behaves like table and it's content
@@ -99,62 +78,63 @@
 
 }
 
+// -----
+// Very infrequently occurring grid wrappers as children of grid wrappers.
+
+.grid > .grid { margin-left: 0; }
+
 } // endif
-
-
 
 // ---------------------------------------
 // Grid modifiers
 // ---------------------------------------
 
-@mixin ekzo-grid-types($n: '') {
+@mixin ekzo-grid-types($postfix: '') {
 
   // ----
   // Grid gutter sizes
 
-  .#{$n}grid- {
+  .grid-#{$postfix} {
     margin-left: -$ekzo-spacing-unit--half;
 
     > .grid__item { padding-left: $ekzo-spacing-unit--half; }
 
   }
 
-  .#{$n}grid\+ {
+  .grid\+#{$postfix} {
     margin-left: -$ekzo-spacing-unit--double;
 
     > .grid__item { padding-left: $ekzo-spacing-unit--double; }
 
   }
 
-  .#{$n}grid\+\+ {
+  .grid\+\+#{$postfix} {
     margin-left: -$ekzo-spacing-unit--triple;
 
     > .grid__item { padding-left: $ekzo-spacing-unit--triple; }
 
   }
 
-  .#{$n}grid--flush {
+  .grid--flush#{$postfix} {
     margin-left: 0;
 
     > .grid__item { padding-left: 0; }
 
   }
 
-
   // ----
   // Grid items aligment
 
-  .#{$n}grid--center { justify-content: center; }
+  .grid--center#{$postfix} { justify-content: center; }
 
-  .#{$n}grid--middle { align-items: center; }
+  .grid--middle#{$postfix} { align-items: center; }
 
-  .#{$n}grid--bottom { align-items: flex-end; }
-
+  .grid--bottom#{$postfix} { align-items: flex-end; }
 
   // ----
   // Grid items widths
 
-  .#{$n}grid--auto {
+  .grid--auto#{$postfix} {
 
     > .grid__item { width: auto; }
 
@@ -162,16 +142,26 @@
 
 }
 
-@include ekzo-grid-types();
+// ---------------------------------------
+// Call grid modifiers mixin
+// ---------------------------------------
 
 @if $ekzo-enable-grid {
-  @if $ekzo-enable-responsive-grid {
 
-    @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-      @include ekzo-breakpoint($breakpoint) {
-        @include ekzo-grid-types('#{$breakpoint}-');
-      }
+  @include ekzo-grid-types();
+
+} // endif
+
+// ---------------------------------------
+// Call responsive grid modifiers mixin
+// ---------------------------------------
+
+@if $ekzo-enable-grid and $ekzo-enable-responsive-grid {
+
+  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
+    @include ekzo-breakpoint($breakpoint) {
+      @include ekzo-grid-types($postfix: '\\@#{$breakpoint}');
     }
+  }
 
-  } // endif
 } // endif

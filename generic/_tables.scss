@@ -4,11 +4,9 @@
 // ^TABLES
 // =======================================
 
-
 table { width: 100%; }
 
 .table--fixed { table-layout: fixed; }
-
 
 // ---------------------------------------
 // Cell alignments
@@ -25,46 +23,44 @@ table { width: 100%; }
 
 } // endif
 
-
 // ---------------------------------------
 // Table modifiers mixin
 // ---------------------------------------
 
-@mixin ekzo-table-spacing($n: '') {
+@mixin ekzo-table-spacing($postfix: '') {
 
-  // ---------------------------------------
+  // ----
   // Paddings
-  // ---------------------------------------
 
-  .#{$n}table--padding-- {
+  .table--padding--#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--quarter; }
 
   }
 
-  .#{$n}table--padding- {
+  .table--padding-#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--half; }
 
   }
 
-  .#{$n}table--padding {
+  .table--padding#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit; }
 
   }
 
-  .#{$n}table--padding\+ {
+  .table--padding\+#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--double; }
 
   }
 
-  .#{$n}table--padding--flush {
+  .table--padding--flush#{$postfix} {
 
     th,
     td { padding: 0; }
@@ -72,7 +68,6 @@ table { width: 100%; }
   }
 
 } // table-spacing()
-
 
 // ---------------------------------------
 // Call tables modifiers mixin
@@ -82,18 +77,18 @@ table { width: 100%; }
 
   @include ekzo-table-spacing();
 
-    // ---------------------------------------
-    // Call responsive tables modifiers mixin
-    // ---------------------------------------
+} // endif
 
-    @if $ekzo-enable-responsive-tables {
+// ---------------------------------------
+// Call responsive tables modifiers mixin
+// ---------------------------------------
 
-      @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-        @include ekzo-breakpoint($breakpoint) {
-          @include ekzo-table-spacing('#{$breakpoint}-');
-        }
-      }
+@if $ekzo-enable-tables and $ekzo-enable-responsive-tables {
 
-    } // endif
+  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
+    @include ekzo-breakpoint($breakpoint) {
+      @include ekzo-table-spacing($postfix: '\\@#{$breakpoint}');
+    }
+  }
 
 } // endif

@@ -6,6 +6,12 @@
 // Making world a bit better for IE
 // Usually you don't want to write anything here
 
+// ---------------------------------------
+// Imports
+// ---------------------------------------
+//
+// @note We need to declare here imports too, since it's standalone file
+
 @import './tools/functions.maps';
 
 @import './tools/mixins.breakpoint';
@@ -27,34 +33,34 @@
 
   .grid__item {
     display: inline-block; // 1
-
     letter-spacing: normal; // 2
   }
-
 
 // ---------------------------------------
 // Grid modifiers hacks
 // ---------------------------------------
+//
+// @legacy
 
-@mixin ekzo-grid-types($n: '') {
+@mixin ekzo-grid-types($postfix: '') {
 
   // ----
   // Grid items aligment
 
-  .#{$n}grid--center {
+  .grid--center#{$postfix} {
     text-align: center;
 
     > .grid__item { text-align: left; }
 
   }
 
-  .#{$n}grid--middle {
+  .grid--middle#{$postfix} {
 
     > .grid__item { vertical-align: middle; }
 
   }
 
-  .#{$n}grid--bottom {
+  .grid--bottom#{$postfix} {
 
     > .grid__item { vertical-align: bottom; }
 
@@ -62,16 +68,26 @@
 
 }
 
-@include ekzo-grid-types();
+// ---------------------------------------
+// Call grid modifiers mixin
+// ---------------------------------------
 
 @if $ekzo-enable-grid {
-  @if $ekzo-enable-responsive-grid {
 
-    @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-      @include ekzo-breakpoint($breakpoint) {
-        @include ekzo-grid-types('#{$breakpoint}-');
-      }
+  @include ekzo-grid-types();
+
+} // endif
+
+// ---------------------------------------
+// Call responsive grid modifiers mixin
+// ---------------------------------------
+
+@if $ekzo-enable-grid and $ekzo-enable-responsive-grid {
+
+  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
+    @include ekzo-breakpoint($breakpoint) {
+      @include ekzo-grid-types($postfix: '\\@#{$breakpoint}');
     }
+  }
 
-  } // endif
 } // endif
