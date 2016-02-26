@@ -69,10 +69,7 @@
 
 @mixin ekzo-aspect-ratio($width, $height) {
   height: 0;
-
   width: 100%;
 
-  $aspect-ratio: $height / $width * 100%;
-
-  padding-bottom: $aspect-ratio;
+  padding-bottom: $height / $width * 100%;
 }
