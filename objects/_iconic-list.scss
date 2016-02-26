@@ -29,7 +29,7 @@
  *  2. Assume that first icons in list are bullets
  */
 
-.iconic-list {
+.#{$ekzo-ns}iconic-list {
   padding-left: $ekzo-spacing-unit--double; // 1
 
   list-style-type: none;
@@ -37,14 +37,14 @@
   li {
     position: relative;
 
-    > .icon,                  // 2
-    > .sprite { @extend .iconic-list__icon; }
+    > .#{$ekzo-ns}icon,                  // 2
+    > .#{$ekzo-ns}sprite { @extend .#{$ekzo-ns}iconic-list__icon; }
 
   }
 
 }
 
-  .iconic-list__icon {
+  .#{$ekzo-ns}iconic-list__icon {
     position: absolute;
 
     width: 1.5em;

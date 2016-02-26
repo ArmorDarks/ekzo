@@ -21,8 +21,8 @@ blockquote, p, address,
 table,
 fieldset, figure,
 pre,
-.media, .flag,
-.island { margin-bottom: $ekzo-spacing-unit; }
+.#{$ekzo-ns}media, .#{$ekzo-ns}flag,
+.#{$ekzo-ns}island { margin-bottom: $ekzo-spacing-unit; }
 
 
 

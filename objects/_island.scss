@@ -18,8 +18,8 @@
  *
  */
 
-.island {
-  @extend %clear;
+.#{$ekzo-ns}island {
+  @extend %#{$ekzo-ns}clear;
 
   display: block;
 
@@ -30,8 +30,8 @@
 
 }
 
-.island-       { padding: $ekzo-spacing-unit--half; }
-.island\+      { padding: $ekzo-spacing-unit--double; }
-.island--flush { padding: 0; }
+.#{$ekzo-ns}island-       { padding: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}island\+      { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}island--flush { padding: 0; }
 
 } // endif

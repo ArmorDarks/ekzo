@@ -49,16 +49,16 @@
 
 // @todo Add to font-sizes map
 
-.font-size--em--       { font-size: .5em; }
-.font-size--em-        { font-size: .75em; }
-.font-size--em\+-      { font-size: 1.25em; }
-.font-size--em\+--     { font-size: 1.5em; }
-.font-size--em\+       { font-size: 2em; }
-.font-size--em\+\+-    { font-size: 2.25em; }
-.font-size--em\+\+--   { font-size: 2.5em; }
-.font-size--em\+\+     { font-size: 3em; }
-.font-size--em\+\+\+   { font-size: 4em; }
-.font-size--em\+\+\+\+ { font-size: 5em; }
+.#{$ekzo-ns}font-size--em--       { font-size: .5em; }
+.#{$ekzo-ns}font-size--em-        { font-size: .75em; }
+.#{$ekzo-ns}font-size--em\+-      { font-size: 1.25em; }
+.#{$ekzo-ns}font-size--em\+--     { font-size: 1.5em; }
+.#{$ekzo-ns}font-size--em\+       { font-size: 2em; }
+.#{$ekzo-ns}font-size--em\+\+-    { font-size: 2.25em; }
+.#{$ekzo-ns}font-size--em\+\+--   { font-size: 2.5em; }
+.#{$ekzo-ns}font-size--em\+\+     { font-size: 3em; }
+.#{$ekzo-ns}font-size--em\+\+\+   { font-size: 4em; }
+.#{$ekzo-ns}font-size--em\+\+\+\+ { font-size: 5em; }
 
 // ---------------------------------------
 // Line-height helpers
@@ -74,35 +74,35 @@
 // Take element out of typography rhythm
 // Should be applied on custom elements with unusual styling
 
-.line-height--flush { line-height: 1 !important; }
+.#{$ekzo-ns}line-height--flush { line-height: 1 !important; }
 
 // ---------------------------------------
 // Text styling
 // ---------------------------------------
 
-.font-weight--light    { font-weight: 300  !important; }
-.font-weight--normal   { font-weight: 400  !important; }
-.font-weight--semibold { font-weight: 600  !important; }
-.font-weight--bold     { font-weight: bold !important; }
+.#{$ekzo-ns}font-weight--light    { font-weight: 300  !important; }
+.#{$ekzo-ns}font-weight--normal   { font-weight: 400  !important; }
+.#{$ekzo-ns}font-weight--semibold { font-weight: 600  !important; }
+.#{$ekzo-ns}font-weight--bold     { font-weight: bold !important; }
 
-.font-style--normal    { font-style: normal !important; }
-.font-style--italic    { font-style: italic !important; }
+.#{$ekzo-ns}font-style--normal    { font-style: normal !important; }
+.#{$ekzo-ns}font-style--italic    { font-style: italic !important; }
 
-.text--uppercase       { text-transform: uppercase !important; }
+.#{$ekzo-ns}text--uppercase       { text-transform: uppercase !important; }
 
-.text--nowrap          { white-space: nowrap; }
+.#{$ekzo-ns}text--nowrap          { white-space: nowrap; }
 
 // ---------------------------------------
 // Underline styling
 // ---------------------------------------
 
-.text--underline        { text-decoration: underline; }
-.text--underline--flush { text-decoration: none; }
+.#{$ekzo-ns}text--underline        { text-decoration: underline; }
+.#{$ekzo-ns}text--underline--flush { text-decoration: none; }
 
 // ----
 // Removes underline, but adds it on hover
 
-.text--underline--rev {
+.#{$ekzo-ns}text--underline--rev {
   text-decoration: none;
 
   &:hover { text-decoration: underline; }
@@ -113,7 +113,7 @@
 // Underline with border styling
 // ---------------------------------------
 
-.text--underline--border {
+.#{$ekzo-ns}text--underline--border {
   text-decoration: none;
 
   border-bottom-width: 1px;
@@ -122,7 +122,7 @@
 // ----
 // Removes underline, but adds it on hover
 
-.text--underline--border--rev {
+.#{$ekzo-ns}text--underline--border--rev {
   text-decoration: none;
 
   border-bottom-width: 0;

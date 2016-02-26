@@ -23,7 +23,7 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
  * Forms the basis for any/all CSS arrows.
  */
 
-%arrow {
+%#{$ekzo-ns}arrow {
   position: relative;
 
   &:before,
@@ -48,8 +48,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
  * Define individual edges so we can combine what we need, when we need.
  */
 
-%arrow--top {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--top {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before,
   &:after {
@@ -58,8 +58,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--upper {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--upper {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before {
     top: $ekzo-arrow;
@@ -71,8 +71,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--middle {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--middle {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before,
   &:after {
@@ -86,8 +86,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--lower {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--lower {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before {
     bottom: $ekzo-arrow;
@@ -99,8 +99,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--bottom {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--bottom {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before,
   &:after {
@@ -109,8 +109,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--near {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--near {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before,
   &:after {
@@ -119,8 +119,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--left {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--left {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before {
     left: $ekzo-arrow;
@@ -132,8 +132,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--center {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--center {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before,
   &:after {
@@ -147,8 +147,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--right {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--right {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before {
     right: $ekzo-arrow;
@@ -160,8 +160,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%arrow--far {
-  @extend %arrow;
+%#{$ekzo-ns}arrow--far {
+  @extend %#{$ekzo-ns}arrow;
 
   &:before,
   &:after {

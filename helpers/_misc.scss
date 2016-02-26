@@ -16,32 +16,32 @@
 // Cursors
 // ---------------------------------------
 
-.cursor--help    { cursor: help    !important; }
-.cursor--arrow   { cursor: default !important; }
-.cursor--pointer { cursor: pointer !important; }
+.#{$ekzo-ns}cursor--help    { cursor: help    !important; }
+.#{$ekzo-ns}cursor--arrow   { cursor: default !important; }
+.#{$ekzo-ns}cursor--pointer { cursor: pointer !important; }
 
 // ---------------------------------------
 // Apply box-sizing models
 // ---------------------------------------
 
-.box-sizing--border  { box-sizing: border-box  !important; }
-.box-sizing--content { box-sizing: content-box !important; }
+.#{$ekzo-ns}box-sizing--border  { box-sizing: border-box  !important; }
+.#{$ekzo-ns}box-sizing--content { box-sizing: content-box !important; }
 
 // ---------------------------------------
 // Border
 // ---------------------------------------
 
-.border--flush         { border: 0              !important; }
+.#{$ekzo-ns}border--flush         { border: 0              !important; }
 
-.border-width--flush   { border-width: 0        !important; }
-.border-style--flush   { border-style: none     !important; }
+.#{$ekzo-ns}border-width--flush   { border-width: 0        !important; }
+.#{$ekzo-ns}border-style--flush   { border-style: none     !important; }
 
-.border-color--inherit { border-color: inherit  !important; }
+.#{$ekzo-ns}border-color--inherit { border-color: inherit  !important; }
 
 // ---------------------------------------
 // Column count
 // ---------------------------------------
 
-.column-count--flush { column-count: auto; }
-.column-count--2     { column-count: 2; }
-.column-count--3     { column-count: 3; }
+.#{$ekzo-ns}column-count--flush { column-count: auto; }
+.#{$ekzo-ns}column-count--2     { column-count: 2; }
+.#{$ekzo-ns}column-count--3     { column-count: 3; }

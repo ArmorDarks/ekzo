@@ -10,8 +10,8 @@
 //
 // @source css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 
-%clear,
-.clear {
+%#{$ekzo-ns}clear,
+.#{$ekzo-ns}clear {
 
   &:after {
     display: table;

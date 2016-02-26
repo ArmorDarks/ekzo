@@ -32,9 +32,9 @@
 //     </li>
 //   </ul>
 
-.breadcrumb {
+.#{$ekzo-ns}breadcrumb {
 
-  @extend .nav;
+  @extend .#{$ekzo-ns}nav;
 
   > li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
@@ -44,9 +44,9 @@
 
 }
 
-  .breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
+  .#{$ekzo-ns}breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
 
-  .breadcrumb__entry + .breadcrumb__entry:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
+  .#{$ekzo-ns}breadcrumb__entry + .#{$ekzo-ns}breadcrumb__entry:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
 // ----
 // Same breadcrumb, but with heading as last item
@@ -60,12 +60,12 @@
 //   </ul>
 //   <h1>Section/h1>
 
-.breadcrumb--rev {
+.#{$ekzo-ns}breadcrumb--rev {
 
-  > .breadcrumb__entry + .breadcrumb__entry:before,
+  > .#{$ekzo-ns}breadcrumb__entry + .#{$ekzo-ns}breadcrumb__entry:before,
   > li + li:before { content: none; }
 
-  > .breadcrumb__entry:after,
+  > .#{$ekzo-ns}breadcrumb__entry:after,
   > li:after { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb--rev-delimiters-content); }
 
 }

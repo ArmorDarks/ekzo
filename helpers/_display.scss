@@ -12,16 +12,16 @@
 // ----
 // Display styling
 
-.display--inline       { display: inline       !important; }
-.display--inline-block { display: inline-block !important; }
-.display--block        { display: block        !important; }
-.display--none         { display: none         !important; }
+.#{$ekzo-ns}display--inline       { display: inline       !important; }
+.#{$ekzo-ns}display--inline-block { display: inline-block !important; }
+.#{$ekzo-ns}display--block        { display: block        !important; }
+.#{$ekzo-ns}display--none         { display: none         !important; }
 
 // ----
 // Overflow
 
-.overflow--auto   { overflow: auto   !important; }
-.overflow--hidden { overflow: hidden !important; }
+.#{$ekzo-ns}overflow--auto   { overflow: auto   !important; }
+.#{$ekzo-ns}overflow--hidden { overflow: hidden !important; }
 
 
 // ----
@@ -36,10 +36,10 @@
 // Note: don't use floated position on table-cells
 //        'cause they won't behave like table-cells
 
-.table           { display: table      !important; }
+.#{$ekzo-ns}table           { display: table      !important; }
 
-  .table__row  { display: table-row  !important; }
-  .table__cell { display: table-cell !important; }
+  .#{$ekzo-ns}table__row  { display: table-row  !important; }
+  .#{$ekzo-ns}table__cell { display: table-cell !important; }
 
 
 
@@ -50,13 +50,13 @@
 // ----
 // Mute an object by reducing its opacity.
 
-.muted { opacity: .5 !important; }
+.#{$ekzo-ns}muted { opacity: .5 !important; }
 
 
 // ----
 // Hide visually and from screen readers, but maintain layout
 
-.visibility--hidden { visibility: hidden; }
+.#{$ekzo-ns}visibility--hidden { visibility: hidden; }
 
 
 // ----
@@ -64,7 +64,7 @@
 //
 // @source h5bp.com/v
 
-.hide {
+.#{$ekzo-ns}hide {
   position: absolute;
 
   width:  1px;
@@ -84,7 +84,7 @@
 // ----
 // Hide only text
 
-.text--hidden {
+.#{$ekzo-ns}text--hidden {
   text-indent: -9999px;
 
   text-align: left;

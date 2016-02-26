@@ -26,21 +26,21 @@ img[height] { max-width: none; }
  * Image placement variations.
  */
 
-.image--right {
+.#{$ekzo-ns}image--right {
   float: right;
 
   margin-bottom: $ekzo-spacing-unit--half;
   margin-left:   $ekzo-spacing-unit;
 }
 
-.image--left {
+.#{$ekzo-ns}image--left {
   float: left;
 
   margin-right:  $ekzo-spacing-unit;
   margin-bottom: $ekzo-spacing-unit--half;
 }
 
-.image--center {
+.#{$ekzo-ns}image--center {
   display: block;
 
   margin-right:  auto;

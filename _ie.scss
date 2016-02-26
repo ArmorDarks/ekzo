@@ -13,9 +13,28 @@
 // @note We need to declare here imports too, since it's standalone file
 
 @import './tools/functions.maps';
+@import './tools/functions.misc';
+@import './tools/functions.typography';
 
+// ---------------------------------------
+// Mixins
+// ---------------------------------------
+
+@import './tools/mixins.arrows';
 @import './tools/mixins.breakpoint';
+@import './tools/mixins.icons';
+@import './tools/mixins.misc';
+@import './tools/mixins.sprites';
+@import './tools/mixins.typography';
 
+// ---------------------------------------
+// Default options, styles, colors etc
+// ---------------------------------------
+
+@import 'settings.typography.defaults';
+@import 'settings.framework.defaults';
+@import 'settings.colors.defaults';
+@import 'settings.assets.defaults';
 @import 'settings.options.defaults';
 @import 'settings.responsive.defaults';
 
@@ -29,7 +48,7 @@
 // 2. Used display model `inline-block` yeilds unwanted whitespaces
 //    which we have to removed with quite cruel method
 
-.grid { letter-spacing: -.31em; }
+.#{$ekzo-ns}grid { letter-spacing: -.31em; }
 
   .grid__item {
     display: inline-block; // 1

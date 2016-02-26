@@ -13,8 +13,8 @@
 // Useful in case you need to put in it absolutely-positioned container
 // or to move it around
 
-.position--relative { position: relative; }
-.position--absolute { position: absolute; }
+.#{$ekzo-ns}position--relative { position: relative; }
+.#{$ekzo-ns}position--absolute { position: absolute; }
 
 
 
@@ -22,9 +22,9 @@
 // Floats
 // ---------------------------------------
 
-.float--right   { float: right !important; }
-.float--left    { float: left  !important; }
-.float--flush   { float: none  !important; }
+.#{$ekzo-ns}float--right   { float: right !important; }
+.#{$ekzo-ns}float--left    { float: left  !important; }
+.#{$ekzo-ns}float--flush   { float: none  !important; }
 
 
 
@@ -34,11 +34,11 @@
 //
 // 1. @legacy Forcing flex alignment for grids, which have been written before flex-based implementation
 
-.align--left          { text-align: left    !important; justify-content: flex-start    !important; } // 1
-.align--right         { text-align: right   !important; justify-content: flex-end      !important; } // 1
-.align--center        { text-align: center  !important; justify-content: center        !important; } // 1
-.align--justify       { text-align: justify !important; justify-content: space-between !important; } // 1
+.#{$ekzo-ns}align--left          { text-align: left    !important; justify-content: flex-start    !important; } // 1
+.#{$ekzo-ns}align--right         { text-align: right   !important; justify-content: flex-end      !important; } // 1
+.#{$ekzo-ns}align--center        { text-align: center  !important; justify-content: center        !important; } // 1
+.#{$ekzo-ns}align--justify       { text-align: justify !important; justify-content: space-between !important; } // 1
 
-.align--top           { vertical-align: top    !important; align-items: flex-start !important; } // 1
-.align--middle        { vertical-align: middle !important; align-items: center     !important; } // 1
-.align--bottom        { vertical-align: bottom !important; align-items: flex-end   !important; } // 1
+.#{$ekzo-ns}align--top           { vertical-align: top    !important; align-items: flex-start !important; } // 1
+.#{$ekzo-ns}align--middle        { vertical-align: middle !important; align-items: center     !important; } // 1
+.#{$ekzo-ns}align--bottom        { vertical-align: bottom !important; align-items: flex-end   !important; } // 1

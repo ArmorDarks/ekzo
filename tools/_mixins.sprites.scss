@@ -30,7 +30,7 @@
 
   @each $name, $params in $map {
 
-    $prefixed-name: $prefix + $name;
+    $prefixed-name: $ekzo-ns + $prefix + $name;
 
     .#{$prefixed-name} {
       width: map-get($params, width);
@@ -91,7 +91,7 @@
 
 @mixin ekzo-sprite($name, $type:false, $padding:false, $sufix-1:false, $sufix-2:false, $sufix-3:false) {
 
-  $prefixed-name: $ekzo-sprites-prefix + $name;
+  $prefixed-name: $ekzo-ns + $ekzo-sprites-prefix + $name;
 
   $width:       sprite-map($name, width)  !default;
   $height:      sprite-map($name, height) !default;

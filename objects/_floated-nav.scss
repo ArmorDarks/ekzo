@@ -4,7 +4,7 @@
     $FLOATED-NAV
 \*------------------------------------*/
 
-.floated-nav {
+.#{$ekzo-ns}floated-nav {
   @extend %list--flush;
   @extend %clear;
 
@@ -12,7 +12,7 @@
 
 }
 
-.floated-nav--rev {
+.#{$ekzo-ns}floated-nav--rev {
   @extend %list--flush;
   @extend %clear;
 

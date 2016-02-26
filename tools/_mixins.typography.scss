@@ -116,11 +116,11 @@
     }
 
     @if $element-selector == include {
-      $class: '#{$name}, .#{$prefix}#{$name}#{$postfix}';
+      $class: '#{$name}, .#{$ekzo-ns}#{$prefix}#{$name}#{$postfix}';
     } @else if $element-selector {
       $class: $name;
     } @else {
-      $class: '.#{$prefix}#{$name}#{$postfix}';
+      $class: '.#{$ekzo-ns}#{$prefix}#{$name}#{$postfix}';
     }
 
     #{$class} {

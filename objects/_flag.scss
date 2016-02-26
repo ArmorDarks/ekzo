@@ -25,20 +25,20 @@
  *    this makes the object behave in a quasi-`display: block;` manner.
  */
 
-.flag {
+.#{$ekzo-ns}flag {
   display: table; // 1
   width: 100%; // 2
 }
 
 
-  .flag__image,
-  .flag__content {
+  .#{$ekzo-ns}flag__image,
+  .#{$ekzo-ns}flag__content {
     display: table-cell;
     vertical-align: middle;
   }
 
 
-  .flag__image {
+  .#{$ekzo-ns}flag__image {
     padding-right: $ekzo-spacing-unit; // Flag images have a space between them and the body of the object
 
     > img {
@@ -49,7 +49,7 @@
   }
 
 
-  .flag__content {
+  .#{$ekzo-ns}flag__content {
     width: 100%; // Forces the `.flag__body` to take up all remaining space.
 
     &,
@@ -61,47 +61,47 @@
 
 
 
-.flag--top {
+.#{$ekzo-ns}flag--top {
 
-  .flag__image,
-  .flag__content { vertical-align: top; }
-
-}
-
-
-.flag--bottom {
-
-  .flag__image,
-  .flag__content { vertical-align: bottom; }
+  .#{$ekzo-ns}flag__image,
+  .#{$ekzo-ns}flag__content { vertical-align: top; }
 
 }
 
 
-.flag--rev {
+.#{$ekzo-ns}flag--bottom {
 
-  .flag__image {
+  .#{$ekzo-ns}flag__image,
+  .#{$ekzo-ns}flag__content { vertical-align: bottom; }
+
+}
+
+
+.#{$ekzo-ns}flag--rev {
+
+  .#{$ekzo-ns}flag__image {
     padding-right: 0;
     padding-left:  $ekzo-spacing-unit;
   }
 
 }
 
-.flag--flush {
+.#{$ekzo-ns}flag--flush {
 
-  .flag__image {
+  .#{$ekzo-ns}flag__image {
     padding-right: 0;
     padding-left:  0;
   }
 
 }
 
-.flag\+ {
+.#{$ekzo-ns}flag\+ {
 
-  .flag__image { padding-right: $ekzo-spacing-unit--double; }
+  .#{$ekzo-ns}flag__image { padding-right: $ekzo-spacing-unit--double; }
 
-  &.flag--rev {
+  &.#{$ekzo-ns}flag--rev {
 
-    .flag__image {
+    .#{$ekzo-ns}flag__image {
       padding-right: 0;
       padding-left:  $ekzo-spacing-unit--double;
     }

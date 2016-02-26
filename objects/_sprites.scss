@@ -26,7 +26,7 @@
  * Requires extension in stylesheet.
  */
 
-.sprite {
+.#{$ekzo-ns}sprite {
   position: relative;
 
   display: inline-block;
@@ -44,7 +44,7 @@
  * or where space is unusable
  */
 
-.sprite--left  { margin-right: .36em; }
-.sprite--right { margin-left:  .36em; }
+.#{$ekzo-ns}sprite--left  { margin-right: .36em; }
+.#{$ekzo-ns}sprite--right { margin-left:  .36em; }
 
 } // endif

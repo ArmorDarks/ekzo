@@ -21,8 +21,8 @@
  *
  */
 
-.nav {
-  @extend %list--flush;
+.#{$ekzo-ns}nav {
+  @extend %#{$ekzo-ns}list--flush;
 
   > li,
   > li > a { display: inline-block; }
@@ -38,14 +38,14 @@
  *
  */
 
-.nav--stacked > li { display: list-item; }
+.#{$ekzo-ns}nav--stacked > li { display: list-item; }
 
 /**
  * Extends `.nav` and throws all links inside in block or inline mode
  */
 
-.nav--block  > li > a { display: block; }
-.nav--inline > li > a { display: inline; }
+.#{$ekzo-ns}nav--block  > li > a { display: block; }
+.#{$ekzo-ns}nav--inline > li > a { display: inline; }
 
 
 /**
@@ -56,9 +56,9 @@
  *
  */
 
-.nav--padding-  > li > a { padding: $ekzo-spacing-unit--half; }
-.nav--padding   > li > a { padding: $ekzo-spacing-unit; }
-.nav--padding\+ > li > a { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}nav--padding-  > li > a { padding: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}nav--padding   > li > a { padding: $ekzo-spacing-unit; }
+.#{$ekzo-ns}nav--padding\+ > li > a { padding: $ekzo-spacing-unit--double; }
 
 
 /**
@@ -69,7 +69,7 @@
  *
  */
 
-.nav--keywords {
+.#{$ekzo-ns}nav--keywords {
 
   li:after { content: '\002C' '\00A0'; }
 

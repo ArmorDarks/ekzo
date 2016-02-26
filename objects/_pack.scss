@@ -17,7 +17,7 @@
  * 2. Cause children to be automatically equally sized.
  */
 
-.pack {
+.#{$ekzo-ns}pack {
   display: table;
 
   width: 100%;  /* [1] */
@@ -33,35 +33,35 @@
 
 }
 
-.pack__item,
-%pack__item {
+.#{$ekzo-ns}pack__item,
+%#{$ekzo-ns}pack__item {
   display: table-cell;
 
   padding: $ekzo-spacing-unit;
 }
 
-.pack--fixed { table-layout: fixed; /* [2] */ }
+.#{$ekzo-ns}pack--fixed { table-layout: fixed; /* [2] */ }
 
-.pack--middle {}
-.pack--bottom {}
+.#{$ekzo-ns}pack--middle {}
+.#{$ekzo-ns}pack--bottom {}
 
-.pack--auto {}
+.#{$ekzo-ns}pack--auto {}
 
-.pack- {
+.#{$ekzo-ns}pack- {
 
   > li,
   > a { padding: $ekzo-spacing-unit--half; }
 
 }
 
-.pack\+ {
+.#{$ekzo-ns}pack\+ {
 
   > li,
   > a { padding: $ekzo-spacing-unit--double; }
 
 }
 
-.pack--flush {
+.#{$ekzo-ns}pack--flush {
 
   > li,
   > a { padding: 0; }
@@ -72,9 +72,9 @@
 // .pack--sides\+      { > li, > a { padding-left: $ekzo-spacing-unit--double; padding-right: $ekzo-spacing-unit--double; } }
 // .pack--sides--flush { > li, > a { padding-left: 0; padding-right: 0; } }
 
-.pack--border-spacing-       { border-spacing: $ekzo-spacing-unit--half; }
-.pack--border-spacing        { border-spacing: $ekzo-spacing-unit; }
-.pack--border-spacing\+      { border-spacing: $ekzo-spacing-unit--double; }
-.pack--border-spacing--flush { border-spacing: 0; }
+.#{$ekzo-ns}pack--border-spacing-       { border-spacing: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}pack--border-spacing        { border-spacing: $ekzo-spacing-unit; }
+.#{$ekzo-ns}pack--border-spacing\+      { border-spacing: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}pack--border-spacing--flush { border-spacing: 0; }
 
 } // endif

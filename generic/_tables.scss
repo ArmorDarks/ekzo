@@ -6,7 +6,7 @@
 
 table { width: 100%; }
 
-.table--fixed { table-layout: fixed; }
+.#{$ekzo-ns}table--fixed { table-layout: fixed; }
 
 // ---------------------------------------
 // Cell alignments
@@ -32,35 +32,35 @@ table { width: 100%; }
   // ----
   // Paddings
 
-  .table--padding--#{$postfix} {
+  .#{$ekzo-ns}table--padding--#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--quarter; }
 
   }
 
-  .table--padding-#{$postfix} {
+  .#{$ekzo-ns}table--padding-#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--half; }
 
   }
 
-  .table--padding#{$postfix} {
+  .#{$ekzo-ns}table--padding#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit; }
 
   }
 
-  .table--padding\+#{$postfix} {
+  .#{$ekzo-ns}table--padding\+#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--double; }
 
   }
 
-  .table--padding--flush#{$postfix} {
+  .#{$ekzo-ns}table--padding--flush#{$postfix} {
 
     th,
     td { padding: 0; }

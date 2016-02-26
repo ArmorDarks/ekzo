@@ -4,7 +4,7 @@
     $CENTER-INNER
 \*------------------------------------*/
 
-.center-inner {
+.#{$ekzo-ns}center-inner {
   text-align: center;
 
   > * {

@@ -28,7 +28,7 @@
 // -----
 // Standard grid
 
-.grid {
+.#{$ekzo-ns}grid {
   display:    flex;
   flex-wrap:  wrap;
   list-style: none;                   // 2
@@ -39,7 +39,7 @@
   margin-left:   -$ekzo-spacing-unit; // 1
 }
 
-  .grid__item {
+  .#{$ekzo-ns}grid__item {
     box-sizing: border-box;
 
     vertical-align: top;
@@ -51,12 +51,12 @@
 // Floated grid
 // For places, where inline-block-based grid simply doesn't cut
 
-.grid--floated {
+.#{$ekzo-ns}grid--floated {
   @extend %clear;
 
   display: block; // forcing block model to avoid wrong width of floated elements inside flexbox
 
-  .grid__item { float: left; }
+  .#{$ekzo-ns}grid__item { float: left; }
 
 }
 
@@ -67,10 +67,10 @@
 // In that mode grid behaves like table and it's content
 // centred vertically
 
-.grid--flag {
+.#{$ekzo-ns}grid--flag {
   display: table;
 
-  > .grid__item {
+  > .#{$ekzo-ns}grid__item {
     display: table-cell;
 
     vertical-align: middle;
@@ -81,7 +81,7 @@
 // -----
 // Very infrequently occurring grid wrappers as children of grid wrappers.
 
-.grid > .grid { margin-left: 0; }
+.#{$ekzo-ns}grid > .#{$ekzo-ns}grid { margin-left: 0; }
 
 } // endif
 
@@ -94,49 +94,49 @@
   // ----
   // Grid gutter sizes
 
-  .grid-#{$postfix} {
+  .#{$ekzo-ns}grid-#{$postfix} {
     margin-left: -$ekzo-spacing-unit--half;
 
-    > .grid__item { padding-left: $ekzo-spacing-unit--half; }
+    > .#{$ekzo-ns}grid__item { padding-left: $ekzo-spacing-unit--half; }
 
   }
 
-  .grid\+#{$postfix} {
+  .#{$ekzo-ns}grid\+#{$postfix} {
     margin-left: -$ekzo-spacing-unit--double;
 
-    > .grid__item { padding-left: $ekzo-spacing-unit--double; }
+    > .#{$ekzo-ns}grid__item { padding-left: $ekzo-spacing-unit--double; }
 
   }
 
-  .grid\+\+#{$postfix} {
+  .#{$ekzo-ns}grid\+\+#{$postfix} {
     margin-left: -$ekzo-spacing-unit--triple;
 
-    > .grid__item { padding-left: $ekzo-spacing-unit--triple; }
+    > .#{$ekzo-ns}grid__item { padding-left: $ekzo-spacing-unit--triple; }
 
   }
 
-  .grid--flush#{$postfix} {
+  .#{$ekzo-ns}grid--flush#{$postfix} {
     margin-left: 0;
 
-    > .grid__item { padding-left: 0; }
+    > .#{$ekzo-ns}grid__item { padding-left: 0; }
 
   }
 
   // ----
   // Grid items aligment
 
-  .grid--center#{$postfix} { justify-content: center; }
+  .#{$ekzo-ns}grid--center#{$postfix} { justify-content: center; }
 
-  .grid--middle#{$postfix} { align-items: center; }
+  .#{$ekzo-ns}grid--middle#{$postfix} { align-items: center; }
 
-  .grid--bottom#{$postfix} { align-items: flex-end; }
+  .#{$ekzo-ns}grid--bottom#{$postfix} { align-items: flex-end; }
 
   // ----
   // Grid items widths
 
-  .grid--auto#{$postfix} {
+  .#{$ekzo-ns}grid--auto#{$postfix} {
 
-    > .grid__item { width: auto; }
+    > .#{$ekzo-ns}grid__item { width: auto; }
 
   }
 

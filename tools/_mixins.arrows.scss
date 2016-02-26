@@ -47,7 +47,7 @@
 
   @if $arrow-edge == top {
 
-    @extend %arrow--top;
+    @extend %#{$ekzo-ns}arrow--top;
 
     &:before {
       border-bottom-color: $border-color;
@@ -58,22 +58,22 @@
     }
 
     @if $arrow-location == left {
-      @extend %arrow--left;
+      @extend %#{$ekzo-ns}arrow--left;
     }
 
     @if $arrow-location == center {
-      @extend %arrow--center;
+      @extend %#{$ekzo-ns}arrow--center;
     }
 
     @if $arrow-location == right {
-      @extend %arrow--right;
+      @extend %#{$ekzo-ns}arrow--right;
     }
 
   }
 
   @if $arrow-edge == right {
 
-    @extend %arrow--far;
+    @extend %#{$ekzo-ns}arrow--far;
 
     &:before {
       border-left-color: $border-color;
@@ -84,22 +84,22 @@
     }
 
     @if $arrow-location == top {
-      @extend %arrow--upper;
+      @extend %#{$ekzo-ns}arrow--upper;
     }
 
     @if $arrow-location == center {
-      @extend %arrow--middle;
+      @extend %#{$ekzo-ns}arrow--middle;
     }
 
     @if $arrow-location == bottom {
-      @extend %arrow--lower;
+      @extend %#{$ekzo-ns}arrow--lower;
     }
 
   }
 
   @if $arrow-edge == bottom {
 
-    @extend %arrow--bottom;
+    @extend %#{$ekzo-ns}arrow--bottom;
 
     &:before {
       border-top-color: $border-color;
@@ -110,22 +110,22 @@
     }
 
     @if $arrow-location == left {
-      @extend %arrow--left;
+      @extend %#{$ekzo-ns}arrow--left;
     }
 
     @if $arrow-location == center {
-      @extend %arrow--center;
+      @extend %#{$ekzo-ns}arrow--center;
     }
 
     @if $arrow-location == right {
-      @extend %arrow--right;
+      @extend %#{$ekzo-ns}arrow--right;
     }
 
   }
 
   @if $arrow-edge == left {
 
-    @extend %arrow--near;
+    @extend %#{$ekzo-ns}arrow--near;
 
     &:before {
       border-right-color: $border-color;
@@ -136,15 +136,15 @@
     }
 
     @if $arrow-location == top {
-      @extend %arrow--upper;
+      @extend %#{$ekzo-ns}arrow--upper;
     }
 
     @if $arrow-location == center {
-      @extend %arrow--middle;
+      @extend %#{$ekzo-ns}arrow--middle;
     }
 
     @if $arrow-location == bottom {
-      @extend %arrow--lower;
+      @extend %#{$ekzo-ns}arrow--lower;
     }
 
   }

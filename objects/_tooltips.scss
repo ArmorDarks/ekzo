@@ -59,7 +59,7 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
   @each $position in top, bottom, left, right {
 
-    &.tooltip--#{$position}:before {
+    &.#{$ekzo-ns}tooltip--#{$position}:before {
       border-#{$position}-color: $color;
     }
 
@@ -204,34 +204,34 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 
 
-  .tooltip--sharp:after { border-radius: 0; }
+  .#{$ekzo-ns}tooltip--sharp:after { border-radius: 0; }
 
 
 
-  .tooltip--always {
+  .#{$ekzo-ns}tooltip--always {
     &:after,
     &:before {
       opacity: 1;
       visibility: visible;
     }
 
-    &.tooltip--top:after,
-    &.tooltip--top:before {
+    &.#{$ekzo-ns}tooltip--top:after,
+    &.#{$ekzo-ns}tooltip--top:before {
       transform: translateY($ekzo-transition-distance * -1);
     }
 
-    &.tooltip--bottom:after,
-    &.tooltip--bottom:before {
+    &.#{$ekzo-ns}tooltip--bottom:after,
+    &.#{$ekzo-ns}tooltip--bottom:before {
       transform: translateY($ekzo-transition-distance * 1);
     }
 
-    &.tooltip--left:after,
-    &.tooltip--left:before {
+    &.#{$ekzo-ns}tooltip--left:after,
+    &.#{$ekzo-ns}tooltip--left:before {
       transform: translateX($ekzo-transition-distance * -1);
     }
 
-    &.tooltip--right:after,
-    &.tooltip--right:before {
+    &.#{$ekzo-ns}tooltip--right:after,
+    &.#{$ekzo-ns}tooltip--right:before {
       transform: translateX($ekzo-transition-distance * 1);
     }
   }
@@ -242,17 +242,17 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
    * set default color for tooltip arrows
    */
 
-  .tooltip--top:before { border-top-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-ns}tooltip--top:before { border-top-color: $ekzo-tooltip-bg-color; }
 
-  .tooltip--bottom:before { border-bottom-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-ns}tooltip--bottom:before { border-bottom-color: $ekzo-tooltip-bg-color; }
 
-  .tooltip--left:before { border-left-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-ns}tooltip--left:before { border-left-color: $ekzo-tooltip-bg-color; }
 
-  .tooltip--right:before { border-right-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-ns}tooltip--right:before { border-right-color: $ekzo-tooltip-bg-color; }
 
-  .tooltip--error   { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error); }
-  .tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
-  .tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
+  .#{$ekzo-ns}tooltip--error   { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error); }
+  .#{$ekzo-ns}tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
+  .#{$ekzo-ns}tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
 
 
 
@@ -267,18 +267,18 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
  */
 
   /* top tooltip */
-  .tooltip--top { @include ekzo-tooltip-position('bottom'); }
+  .#{$ekzo-ns}tooltip--top { @include ekzo-tooltip-position('bottom'); }
 
   /* bottom tooltip */
 
-  .tooltip--bottom { @include ekzo-tooltip-position('top'); }
+  .#{$ekzo-ns}tooltip--bottom { @include ekzo-tooltip-position('top'); }
 
   /* right tooltip */
 
-  .tooltip--right { @include ekzo-tooltip-position('left'); }
+  .#{$ekzo-ns}tooltip--right { @include ekzo-tooltip-position('left'); }
 
   /* left tooltip */
 
-  .tooltip--left { @include ekzo-tooltip-position('right'); }
+  .#{$ekzo-ns}tooltip--left { @include ekzo-tooltip-position('right'); }
 
 } // endif

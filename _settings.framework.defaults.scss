@@ -2,7 +2,9 @@
 // =======================================
 // ^SETTING.FRAMEWORK.DEFAULTS
 // =======================================
-//
+
+$ekzo-ns:                    'ekzo-' !default;
+
 // Used for various framework calculations
 
 $ekzo-spacing-unit:          $ekzo-line-height      !default;

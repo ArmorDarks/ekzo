@@ -16,7 +16,7 @@
  *
  */
 
-.a-nav > a { display: inline-block; }
+.#{$ekzo-ns}a-nav > a { display: inline-block; }
 
 
 /**
@@ -32,10 +32,13 @@
  *
  */
 
-.a-stacked-nav {
-  @extend %clear;
+.#{$ekzo-ns}a-stacked-nav {
+  @extend %#{$ekzo-ns}clear;
 
-  > a { float: left; clear: both; }
+  > a {
+    float: left;
+    clear: both;
+  }
 
 }
 

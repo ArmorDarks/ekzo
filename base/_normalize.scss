@@ -309,8 +309,8 @@ input[type="submit"],
 select,
 option { cursor: pointer; }
 
-.text-input:active,
-.text-input:focus,
+.#{$ekzo-ns}text-input:active,
+.#{$ekzo-ns}text-input:focus,
 textarea:active,
 textarea:focus {
   cursor: text;

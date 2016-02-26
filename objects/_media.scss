@@ -21,17 +21,17 @@
  *
  */
 
-.media {
+.#{$ekzo-ns}media {
   // #note disabled experimentaly. It seems there is no need
   // in such property in most cases
   // Note that for obvious reasons element should always be
   // block or inline-block element.
   // display: block;
 
-  @extend %clear;
+  @extend %#{$ekzo-ns}clear;
 }
 
-  .media__image {
+  .#{$ekzo-ns}media__image {
     float: left;
 
     display: block;
@@ -39,7 +39,7 @@
     margin-right: $ekzo-spacing-unit;
   }
 
-  .media__content {
+  .#{$ekzo-ns}media__content {
     overflow: hidden;
 
     &,
@@ -49,9 +49,9 @@
 
 
 
-.media--rev {
+.#{$ekzo-ns}media--rev {
 
-  .media__image {
+  .#{$ekzo-ns}media__image {
     float: right;
 
     margin-right: 0;
@@ -61,22 +61,22 @@
 }
 
 
-.media--flush {
+.#{$ekzo-ns}media--flush {
 
-  .media__image {
+  .#{$ekzo-ns}media__image {
     margin-right: 0;
     margin-left:  0;
   }
 
 }
 
-.media\+ {
+.#{$ekzo-ns}media\+ {
 
-  .media__image { margin-right: $ekzo-spacing-unit--double; }
+  .#{$ekzo-ns}media__image { margin-right: $ekzo-spacing-unit--double; }
 
-  &.media--rev {
+  &.#{$ekzo-ns}media--rev {
 
-    .media__image {
+    .#{$ekzo-ns}media__image {
       margin-right: 0;
       margin-left:  $ekzo-spacing-unit--double;
     }
