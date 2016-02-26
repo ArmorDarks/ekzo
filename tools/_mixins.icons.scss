@@ -28,7 +28,7 @@
 
     $prefixed-name: $prefix + $name;
 
-    .#{$ekzo-ns}#{$prefixed-name}:before { content: $param; }
+    .#{$prefixed-name}:before { content: $param; }
 
   }
 
