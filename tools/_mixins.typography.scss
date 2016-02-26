@@ -107,10 +107,6 @@
   $working-map: null;
   $class:       null;
 
-  @if not $prefix {
-    $prefix: '';
-  }
-
   @if map-has-key($map, $type) {
     $working-map: map-get($map, $type);
   } @else {
