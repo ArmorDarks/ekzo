@@ -3,19 +3,20 @@
 // ^MIXINS.TYPOGRAPHY
 // =======================================
 
-
-// ----
-// Create a fully formed type style (sizing and vertical rhythm) by passing in a
-// single value
+// ---------------------------------------
+// Font-size mixin
+// ---------------------------------------
+//
+// Create a fully formed type style (sizing and vertical rhythm by passing in single value
 // On contrary to `ekzo-font-size()` function, that mixin embending `font-size` and
-// caluclated `line-height` into class, within which it was called
+// caluclated `line-height` into class within which it was called
 //
 // @param {number|string} $size           - desired `font-size` in pixels or
 //                                          font name, specified in default font sizes map
 //                                          or specified one
-// @param {string} $type=text            - group's name of font in default or specified map
+// @param {string} $type=text             - group's name of font in default or specified map
 //                                          should be specified only if `$size` set to string
-// @param {bool=true|number} $line-height - should `line-height` rhythm calculation be applied or no.
+// @param {bool|number} $line-height=true - should `line-height` rhythm calculation be applied or no.
 //                                          Set to number in pixels to define custom
 //                                          `line-height`.
 // @param {map} $map=$ekzo-font-sizes     - should mixin search for font sizes in default,
@@ -36,9 +37,7 @@
   $value: null;
 
   @if type-of($size) == string {
-
     $size: ekzo-font-size($size, $type, $map);
-
   }
 
   // ensure that we're working with pixels
@@ -56,14 +55,10 @@
 
   // or base value from predefined `$ekzo-line-height`
   } @else if $line-height {
-
     line-height: ceil($size / $ekzo-line-height) * ($ekzo-line-height / $size);
-
   }
 
 }
-
-
 
 // ---------------------------------------
 // Font-size class
@@ -189,21 +184,21 @@
 
 }
 
-
-
-// ----
-// Bulding proper font-face based on provided parameters
+// ---------------------------------------
+// Font-face
+// ---------------------------------------
+//
+// Build proper font-face based on provided parameters
 //
 // @param {string} $font                   - font name
 // @param {number=1|bool(false)} $version  - font version. Ensure reloading of cache in
 //                                           case of any changes in font file
-//                                           Set to `false` in case you don't need it
-// @param {string=$font} $file-name        - should be specified in case of different
+// @param {string} $file-name=$font        - should be specified in case of different
 //                                           font file name from font name
-// @param {number|string=normal} $weight   - `font-weight` of font-face
-// @param {string=normal} $style           - `font-style` of font-face
-// @param {bool=$ekzo-use-svg-fonts} $svg  - include or no svg version of font (for iOS 5.0 and lower)
-// @param {string=$file-name} $svg-id      - should be specified in case it's different
+// @param {number|string} $weight=normal   - `font-weight` of font-face
+// @param {string} $style=normal           - `font-style` of font-face
+// @param {bool} $svg=$ekzo-use-svg-fonts  - include or no svg version of font (for iOS 5.0 and lower)
+// @param {string} $svg-id=$file-name      - should be specified in case it's different
 //                                           from font file name
 //                                           (can be found in `svg-file -> <font> -> id`)
 //
