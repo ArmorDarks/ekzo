@@ -83,6 +83,9 @@
 // @param {string} $prefix=null  - should class name be prefixed or no.
 //                                 Plain class names won't be prefixed independantly from
 //                                 that parameter
+// @param {string} $postfix=null  - should class name have postfix or no.
+//                                  Plain class names won't be prefixed independantly from
+//                                  that parameter
 // @param {map} $map=$font-sizes - should mixin search for font sizes in default, or specified map
 //                                 ```
 //                                     $example: (
@@ -102,7 +105,7 @@
 //      @include ekzo-font-size-classes(headings, h1);
 //
 
-@mixin ekzo-font-size-classes($type, $name:false, $line-height:true, $element-selector:false, $prefix:'', $map:$ekzo-font-sizes) {
+@mixin ekzo-font-size-classes($type, $name:false, $line-height:true, $element-selector:false, $prefix:'', $postfix:'', $map:$ekzo-font-sizes) {
 
   $working-map: null;
   $class:       null;
@@ -124,11 +127,11 @@
       }
 
       @if $element-selector == include {
-        $class: $name + ', .' + $prefix + $name;
+        $class: $name + ', .' + $prefix + $name + $postfix;
       } @else if $element-selector {
         $class: $name;
       } @else {
-        $class: '.' + $prefix + $name;
+        $class: '.' + $prefix + $name + $postfix;
       }
 
       #{$class} {
@@ -149,11 +152,11 @@
     }
 
     @if $element-selector == include {
-      $class: $name + ', .' + $prefix + $name;
+      $class: $name + ', .' + $prefix + $name + $postfix;
     } @else if $element-selector {
       $class: $name;
     } @else {
-      $class: '.' + $prefix + $name;
+      $class: '.' + $prefix + $name + $postfix;
     }
 
     #{$class} {
