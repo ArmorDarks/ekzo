@@ -115,13 +115,17 @@
 // Call all widths
 // ---------------------------------------
 
-@include ekzo-widths();
+@if $ekzo-enable-widths {
+
+  @include ekzo-widths();
+
+} // endif
 
 // ---------------------------------------
 // Responsive widths
 // ---------------------------------------
 
-@if $ekzo-enable-responsive-widths {
+@if $ekzo-enable-widths and $ekzo-enable-responsive-widths {
 
   @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
     @include ekzo-breakpoint($breakpoint) {

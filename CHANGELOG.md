@@ -6,6 +6,7 @@
 - Dropped mixin `ekzo-headings()`
 ### Added
 - Added functions and mixins names in error messages
+- Added `$ekzo-enable-widths` option for widths
 ### Changed
 - Renamed function `map-get-deep()` to `ekzo-get()`
 - Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
