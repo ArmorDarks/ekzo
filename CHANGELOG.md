@@ -6,6 +6,7 @@
 - [BREAKING] Dropped mixin `ekzo-headings()`
 
 ### Added
+- Option to set global namespace via `$ekzo-ns` variable. By default set to `''`
 - `ekzo-font-size-class()` mixin for generation of single font-size class
 - Added functions and mixins names in error messages
 - Added `$ekzo-enable-widths` option for widths
