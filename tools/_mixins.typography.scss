@@ -65,83 +65,52 @@
 
 
 
-// ----
-// Iterate through specified or predefined map and build series of classes
-// with font sizes based on specified in that map names and values
+// ---------------------------------------
+// Font-size class
+// ---------------------------------------
 //
-// @param {strng} $type          - name of group in specified map
-// @param {strng} $name=false    - specific name of font-size which should be called
-//                                 If specified, only 1 specified class will be outputed
-// @param {bool=true|number} $line-height
-//                               - should `line-height` rhythm calculation be applied or no.
-//                                 Set to number in pixels to define custom
-//                                 `line-height`.
+// Gets value from specified or predefined map and build class
+// with font sizes based on specified in that map name and value
+//
+// @param {string} $type          - Name of group in specified map
+// @param {string} $name          - Name of particular font size in specified map
+// @param {bool|px} $line-height=true
+//                                - Should `line-height` rhythm calculation be applied or no.
+//                                  Set to number in pixels to define custom `line-height`.
 // @param {boolean|'include'} $element-selector=false
-//                               - whether selector shouid be outputed as class, as
-//                                 general selector (like `h1`, without dot) or as both.
-//                                 `include` parameter will include both
-// @param {string} $prefix=null  - should class name be prefixed or no.
-//                                 Plain class names won't be prefixed independantly from
-//                                 that parameter
-// @param {string} $postfix=null  - should class name have postfix or no.
-//                                  Plain class names won't be prefixed independantly from
-//                                  that parameter
-// @param {map} $map=$font-sizes - should mixin search for font sizes in default, or specified map
-//                                 ```
-//                                     $example: (
-//                                       headings: (
-//                                         h1: 36px,
-//                                         h2: 30px,
-//                                       ),
-//                                       extra-headings: (
-//                                         giga: 96px,
-//                                       )
-//                                     );
-//                                 ```
+//                                - Whether selector shouid be outputed as class, as
+//                                  general selector (like `h1`, without dot) or as both (if set to `include`).
+// @param {string} $prefix=false  - Should class name be prefixed or no.
+//                                  Ignored if `$element-selector` set to `true`
+// @param {string} $postfix=false - Should to class name be added postfix or no.
+//                                  Ignored if `$element-selector` set to `true`
+// @param {map} $map=$ekzo-font-sizes
+//                                - Should mixin search for font sizes in default, or specified map
+//                                  ```
+//                                  $example: (
+//                                    headings: ( h1: 36px )
+//                                  );
+//                                  ```
 //
 // @example
 //
-//    @include ekzo-font-size-classes(fonts, $element-selector:false, $prefix:'text--') { border: 1px; };
-//      @include ekzo-font-size-classes(headings, h1);
-//
+//  @include ekzo-font-size-class(headings, h1) { border: 1px; };
 
-@mixin ekzo-font-size-classes($type, $name:false, $line-height:true, $element-selector:false, $prefix:'', $postfix:'', $map:$ekzo-font-sizes) {
+@mixin ekzo-font-size-class($type, $name, $line-height:true, $element-selector:false, $prefix:false, $postfix:false, $map:$ekzo-font-sizes) {
 
   $working-map: null;
   $class:       null;
 
+  @if not $prefix { $prefix: '' }
+  @if not $postfix { $postfix: '' }
+
   @if map-has-key($map, $type) {
     $working-map: map-get($map, $type);
   } @else {
-    @error 'No such `#{$type}` font type in specified map!';
+    @error '[ekzo-font-size-class]: no such `#{$type}` font type in specified map!';
   }
 
-  @if not $name {
-
-    @each $name, $value in $working-map {
-
-      @if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
-        @if $prefix != true and $prefix != null and $prefix != '' {
-          $prefix: str-replace($prefix, '--', '');
-        }
-      }
-
-      @if $element-selector == include {
-        $class: $name + ', .' + $prefix + $name + $postfix;
-      } @else if $element-selector {
-        $class: $name;
-      } @else {
-        $class: '.' + $prefix + $name + $postfix;
-      }
-
-      #{$class} {
-        @include ekzo-font-size($value, $line-height:$line-height);
-        @content
-      }
-
-    } //endeach
-
-  } @else if $name and $type and map-has-key($working-map, $name) {
+  @if map-has-key($working-map, $name) {
 
     $value: map-get($working-map, $name);
 
@@ -152,11 +121,11 @@
     }
 
     @if $element-selector == include {
-      $class: $name + ', .' + $prefix + $name + $postfix;
+      $class: '#{$name}, .#{$prefix}#{$name}#{$postfix}';
     } @else if $element-selector {
       $class: $name;
     } @else {
-      $class: '.' + $prefix + $name + $postfix;
+      $class: '.#{$prefix}#{$name}#{$postfix}';
     }
 
     #{$class} {
@@ -165,7 +134,57 @@
     }
 
   } @else {
-    @error 'No such `#{$name}` font name in specified map!';
+    @error '[ekzo-font-size-class]: no such `#{$name}` font name in specified map!';
+  }
+
+}
+
+// ---------------------------------------
+// Font-sizes classes
+// ---------------------------------------
+//
+// Iterate through specified or predefined map and build series of classes
+// with font sizes based on specified in that map names and values
+//
+// @param {string} $type          - Name of group in specified map
+// @param {bool|px} $line-height=true
+//                                - Should `line-height` rhythm calculation be applied or no.
+//                                  Set to number in pixels to define custom `line-height`.
+// @param {boolean|'include'} $element-selector=false
+//                                - Whether selector shouid be outputed as class, as
+//                                  general selector (like `h1`, without dot) or as both (if set to `include`).
+// @param {string} $prefix=false  - Should class name be prefixed or no.
+//                                  Ignored if `$element-selector` set to `true`
+// @param {string} $postfix=false - Should to class name be added postfix or no.
+//                                  Ignored if `$element-selector` set to `true`
+// @param {map} $map=$ekzo-font-sizes
+//                                - Should mixin search for font sizes in default, or specified map
+//                                  ```
+//                                  $example: (
+//                                    headings: ( h1: 36px )
+//                                  );
+//                                  ```
+//
+// @example
+//
+//  @include ekzo-font-size-classes(fonts, $element-selector:false, $prefix:'text--') { border: 1px; };
+
+@mixin ekzo-font-size-classes($type, $line-height:true, $element-selector:false, $prefix:'', $postfix:'', $map:$ekzo-font-sizes) {
+
+  $working-map: null;
+
+  @if map-has-key($map, $type) {
+    $working-map: map-get($map, $type);
+  } @else {
+    @error '[ekzo-font-size-classes]: no such `#{$type}` font type in specified map!';
+  }
+
+  @each $name, $value in $working-map {
+
+    @include ekzo-font-size-class($type, $name, $line-height, $element-selector, $prefix, $postfix, $map) {
+      @content
+    }
+
   }
 
 }
