@@ -9,3 +9,4 @@
 ### Changed
 - Renamed function `map-get-deep()` to `ekzo-get()`
 - Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
+- `ekzo-breakpoint()` now accepts 3 parameters: `breakpoint`, `path` and `map` (backward compatible)

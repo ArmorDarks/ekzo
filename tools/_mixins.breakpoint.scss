@@ -4,89 +4,52 @@
 // =======================================
 //
 // Advanced media query mixin.
-// Accepts sass map of predefined breakpoints which can be used
+// Accepts Sass map of predefined breakpoints which can be used
 // across whole project.
 //
 // It's not recommend to used media-query on it's own -
 // instead it's better keep list of all available media-queries
-// in project in single sass map. Due to that fact, that mixin
+// in project in single Sass map. Due to that fact, that mixin
 // doesn't accept custom queries in plain form.
 //
-// @param {string} $breakpoint - breakpoint name in Sass map of predefined breakpoints `$breakpoints`.
-//                               Example of entry:
-//                               `lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',`
-// @param (boolean|string|map) $custom-map=false
-//                             - in case `device` or `devices` mixin will look
-//                               for breakpoint in `$breakpoints--devices` map
-//                               In case of `true` mixin will look for breakpoint
-//                               in `$breakpoints--custom` map
-//                               In case of map or variable - mixin will look in specified
-//                               map or variable
+// @param {string}           $breakpoint              - breakpoint name in Sass map of predefined breakpoints.
+//                                                      Example of entry:
+//                                                      ```
+//                                                      lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',
+//                                                      ```
+// @param (string|list|null) $path='breakpoints'      - path to another map inside map (if needed)
+// @param (map)              $map='$ekzo-breakpoints' - map with breakpoints
 //
 // @throws Undefined breakpoint `#{$breakpoint}` in map of breakpoints!
 //
 // @example
 //
-//     .component {
-//       @include ekzo-breakpoint(palm){ border: 0px; }
-//       border: 2px;
-//     }
+//    .component {
+//      @include ekzo-breakpoint(palm, breakpoints){ border: 0px; }
+//      border: 2px;
+//    }
 //
 
-@mixin ekzo-breakpoint($breakpoint, $custom-map:false) {
+@mixin ekzo-breakpoint($breakpoint, $path: 'breakpoints', $map: $ekzo-breakpoints) {
 
-  $breakpoint-value: '';
-  $breakpoint-map:   '';
+  $breakpoint-value: null;
 
-  // use default breakpoints map
-  @if not $custom-map or $custom-map == breakpoint or $custom-map == breakpoints {
-
-    // assigning value from map of breakpoints in `$ekzo-breakpoints`
-    @each $key, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-      @if $key == $breakpoint { $breakpoint-value: $value; }
+  // assign value from a specified map following specified path
+  @each $key, $value in ekzo-get($map, $path) {
+    @if $key == $breakpoint {
+      $breakpoint-value: $value;
     }
+  }
 
-    $breakpoint-map: '$ekzo-breakpoints';
+  // check wether defined breakpoint exists in requested map
+  @if not $breakpoint-value {
+    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` at path `#{$path}` in specified map'
+  }
 
-  // use devices breakpoints map
-  } @else if $custom-map == type or $custom-map == types {
-
-    // assigning value from map of breakpoints in `$ekzo-devices-breakpoints`
-    @each $key, $value in ekzo-get($ekzo-breakpoints, types) {
-      @if $key == $breakpoint { $breakpoint-value: $value; }
-    }
-
-    $breakpoint-map: '$ekzo-devices-breakpoints';
-
-  // use custom breakpoints map
-  } @else if $custom-map or $custom-map == custom {
-
-    // assigning value from map of breakpoints in `$ekzo-custom-breakpoints`
-    @each $key, $value in ekzo-get($ekzo-breakpoints, custom) {
-      @if $key == $breakpoint { $breakpoint-value: $value; }
-    }
-
-    $breakpoint-map: '$ekzo-custom-breakpoints';
-
-  // use specified breakpoints map
-  } @else {
-
-    // assigning value from specified map
-    @each $key, $value in $custom-map {
-      @if $key == $breakpoint { $breakpoint-value: $value; }
-    }
-
-    $breakpoint-map: 'specified';
-
-  } // endif
-
-  // checking wether defined breakpoint exists in requested map
-  @if $breakpoint-value == '' {
-    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` in `#{$breakpoint-map}` map!'
-  } // endif
-
-  // Use `only` to hide media query from old browsers
-  // @details https://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
-  @media only #{$breakpoint-value} { @content; }
+  // @Note: Use `only` to hide media query from old browsers
+  //        Details: http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
+  @media only #{$breakpoint-value} {
+    @content;
+  }
 
 }

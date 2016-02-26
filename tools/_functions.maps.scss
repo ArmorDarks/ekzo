@@ -12,6 +12,7 @@
 // Given a map and a list of keys, find the value at the given key
 //
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
+// @todo Should support paths in `$keys...`. This required by `@mixin ekzo-breakpoint`
 
 @function ekzo-get($map, $keys...) {
 
