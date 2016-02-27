@@ -10,6 +10,7 @@
 ### Added
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
+- Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
 `$ekzo-objects-ns`, `$ekzo-components-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
 - Added `ekzo-font-size-class()` mixin for generation of single font-size class

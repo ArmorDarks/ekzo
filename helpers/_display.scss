@@ -21,6 +21,12 @@
 // Overflow
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}overflow--auto   { overflow: auto   !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}overflow-x--auto {
+    // display: block   !important;
+    min-height: .01% !important;
+    overflow-x: auto !important;
+}
+
 .#{$ekzo-ns}#{$ekzo-helpers-ns}overflow--hidden { overflow: hidden !important; }
 
 
@@ -52,12 +58,10 @@
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}muted { opacity: .5 !important; }
 
-
 // ----
 // Hide visually and from screen readers, but maintain layout
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}visibility--hidden { visibility: hidden; }
-
 
 // ----
 // Hide only visually, but have it available for screen readers
@@ -79,7 +83,6 @@
 
   border: 0;
 }
-
 
 // ----
 // Hide only text
