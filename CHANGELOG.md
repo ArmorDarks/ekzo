@@ -14,6 +14,7 @@
 - `ekzo-breakpoint()` now accepts 3 parameters: `breakpoint`, `path` and `map` (backward compatible)
 
 ### Changed
+- [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity
 - [BREAKING] Renamed function `map-get-deep()` to `ekzo-get()`
 - [BREAKING] Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
 - [BREAKING] `ekzo-breakpoint()` mixin now produces better class names. For example: `1/2@lap` instead of `lap-1/2`
