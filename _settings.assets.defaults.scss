@@ -17,23 +17,26 @@ $ekzo-fonts-path:        '#{$ekzo-assets-path}/fonts'   !default;
 // Background
 // ---------------------------------------
 
-$ekzo-bg:                $ekzo-bg-color  !default;
+$ekzo-bg:                $ekzo-bg-color !default;
 
 // ---------------------------------------
-// Icons and sprites
+// Icons
 // ---------------------------------------
 
 $ekzo-icons-prefix:      icon--          !default;
-$ekzo-sprites-prefix:    sprite--        !default;
+$ekzo-icon-font:         icons           !default;
+$ekzo-icon-font-version: 79220573        !default; // `false` to disable, number to enable
+$ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
 
-$ekzo-sprites-file:      'sprite.png'    !default;
+// ---------------------------------------
+// Sprites
+// ---------------------------------------
+//
+$ekzo-sprites-prefix:    sprite--     !default;
+$ekzo-sprites-file:      'sprite.png' !default;
 
 // ---------------------------------------
 // Fonts
 // ---------------------------------------
 
-$ekzo-use-svg-fonts:     false           !default;
-
-$ekzo-icon-font:         icons           !default;
-$ekzo-icon-font-version: 79220573        !default; // `false` to disable, number to enable
-$ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
+$ekzo-use-svg-fonts:     false !default;
