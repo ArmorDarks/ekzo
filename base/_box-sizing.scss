@@ -9,11 +9,10 @@
 //        So, instead of
 //
 //           .component {
-//             box-sizing: content-box;
-//
-//             *,
-//             *:before,
-//             *:after { box-sizing: content-box }
+
+//             &,
+//             &:before,
+//             &:after { box-sizing: content-box }
 //
 //           }
 //
