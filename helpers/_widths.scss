@@ -13,103 +13,36 @@
 // ---------------------------------------
 // Widths mixin
 // ---------------------------------------
+// @source https://github.com/inuitcss/tools.widths/blob/master/_tools.widths.scss
 //
+// @param {list}   $columns    - array of columns which should be generated
+// @param {string} $prefix=''  - namespace
 // @param {string} $postfix='' - namespace (used for breakpoins generation)
+//
+// @returns class. For example: `h-2/3@lap`
 
-@mixin ekzo-widths($postfix: '') {
+@mixin ekzo-widths($columns, $prefix:'', $postfix:'') {
 
-  // ----
-  // Whole
+  // Loop through the number of columns for each denominator of fractions.
+  @each $denominator in $columns {
 
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/1#{$postfix}']       { width: 100% !important; }
+    // If we’re trying to make wholes, just spit a 100% width utility out one time only.
+    @if ($denominator == 1) {
+      .#{$prefix}1\/1#{$postfix} { width: 100% !important; }
 
-  // ----
-  // Halves
+    } @else {
 
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/2#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/4#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/6#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}4/8#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}5/10#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}6/12#{$postfix}']      { width: 50% !important; }
+      // Begin creating a numberator for our fraction up until we hit the denominator.
+      @for $numerator from 1 to $denominator + 1 {
+        // Build a class in the format `.u-3/4`
+        .#{$prefix}#{$numerator}\/#{$denominator}#{$postfix} { width: ($numerator / $denominator) * 100% !important; }
+      }
 
-  // ----
-  // Thirds
+    }
 
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/3#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/6#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/9#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}4/12#{$postfix}']      { width: 33.3333333% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/3#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}4/6#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}6/9#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}8/12#{$postfix}']      { width: 66.6666666% !important; }
+  }
 
-  // ----
-  // Quarters
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/4#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/8#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/12#{$postfix}']      { width: 25% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/4#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}6/8#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}9/12#{$postfix}']      { width: 75% !important; }
-
-  // ----
-  // Fifths
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/5#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/10#{$postfix}']      { width: 20% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/5#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}4/10#{$postfix}']      { width: 40% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/5#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}6/10#{$postfix}']      { width: 60% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}4/5#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}8/10#{$postfix}']      { width: 80% !important; }
-
-  // ----
-  // Sixths
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/6#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/12#{$postfix}']      { width: 16.6666666% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}5/6#{$postfix}'],
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}10/12#{$postfix}']     { width: 83.3333333% !important; }
-
-  // ----
-  // Eighths
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/8#{$postfix}']       { width: 12.5% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/8#{$postfix}']       { width: 37.5% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}5/8#{$postfix}']       { width: 62.5% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}7/8#{$postfix}']       { width: 87.5% !important; }
-
-  // ----
-  // Ninths
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/9#{$postfix}']       { width: 11.1111111% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}2/9#{$postfix}']       { width: 22.2222222% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}4/9#{$postfix}']       { width: 44.4444444% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}5/9#{$postfix}']       { width: 55.5555555% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}7/9#{$postfix}']       { width: 77.7777777% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}8/9#{$postfix}']       { width: 88.8888888% !important; }
-
-  // ----
-  // Tenths
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/10#{$postfix}']      { width: 10% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}3/10#{$postfix}']      { width: 30% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}7/10#{$postfix}']      { width: 70% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}9/10#{$postfix}']      { width: 90% !important; }
-
-  // ----
-  // Twelfths
-
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}1/12#{$postfix}']      { width:  8.3333333% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}5/12#{$postfix}']      { width: 41.6666666% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}7/12#{$postfix}']      { width: 58.3333333% !important; }
-  [class~='#{$ekzo-ns}#{$ekzo-helpers-ns}11/12#{$postfix}']     { width: 91.6666666% !important; }
-
-} // widths()
+} // ekzo-widths()
 
 // ---------------------------------------
 // Call all widths
@@ -117,7 +50,8 @@
 
 @if $ekzo-enable-widths {
 
-  @include ekzo-widths();
+  @include ekzo-widths($columns: $ekzo-widths-columns,
+    $prefix: $ekzo-ns + $ekzo-helpers-ns);
 
 } // endif
 
@@ -129,7 +63,9 @@
 
   @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
     @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-widths($postfix: '\\@#{$breakpoint}');
+      @include ekzo-widths($columns: $ekzo-responsive-widths-columns,
+        $prefix: $ekzo-ns + $ekzo-helpers-ns,
+        $postfix: '\\@#{$breakpoint}');
     }
   }
 
