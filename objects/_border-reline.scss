@@ -10,14 +10,14 @@
 //
 // Useful for anchors with icons inside it
 
-.#{$ekzo-ns}border-reline {
+.#{$ekzo-ns}#{$ekzo-objects-ns}border-reline {
   border-bottom-width: 0;
 
-  &:hover .#{$ekzo-ns}border-reline__to { border-bottom-width: 0; }
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to { border-bottom-width: 0; }
 
 }
 
-  .#{$ekzo-ns}border-reline__to {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to {
     border-bottom-width: $ekzo-links-border-bottom-width;
     border-bottom-style: $ekzo-links-border-bottom-style;
   }
@@ -26,12 +26,12 @@
 // ----
 // Removes underline, but adds it to child span on hover
 
-.#{$ekzo-ns}border-reline--rev {
+.#{$ekzo-ns}#{$ekzo-objects-ns}border-reline--rev {
   border-bottom-width: 0;
 
-  .#{$ekzo-ns}border-reline__to { border-bottom-width: 0; }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to { border-bottom-width: 0; }
 
-  &:hover .#{$ekzo-ns}border-reline__to {
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to {
     border-bottom-width: $ekzo-links-border-bottom-width;
     border-bottom-style: $ekzo-links-border-bottom-style;
   }

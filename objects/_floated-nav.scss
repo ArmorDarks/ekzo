@@ -4,17 +4,17 @@
     $FLOATED-NAV
 \*------------------------------------*/
 
-.#{$ekzo-ns}floated-nav {
-  @extend %#{$ekzo-ns}list--flush;
-  @extend %#{$ekzo-ns}clear;
+.#{$ekzo-ns}#{$ekzo-objects-ns}floated-nav {
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}list--flush;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
 
   > li { float: left; }
 
 }
 
-.#{$ekzo-ns}floated-nav--rev {
-  @extend %#{$ekzo-ns}list--flush;
-  @extend %#{$ekzo-ns}clear;
+.#{$ekzo-ns}#{$ekzo-objects-ns}floated-nav--rev {
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}list--flush;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
 
   > li { float: right; }
 

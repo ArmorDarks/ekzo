@@ -9,7 +9,7 @@
  */
 
 a,
-.#{$ekzo-ns}link {
+.#{$ekzo-ns}#{$ekzo-generics-ns}link {
   color: $ekzo-links-color;
 
   @if $ekzo-links-underline {
@@ -67,7 +67,7 @@ a,
  * and make it completely like ordinary text
  */
 
-.#{$ekzo-ns}link--flush {
+.#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
   @if $ekzo-links-underline { text-decoration: none; }
 
   @if $ekzo-links-border-top-width    { border-top-width:    0; }
@@ -114,7 +114,7 @@ a,
  *
  */
 
-.#{$ekzo-ns}link--go:after { content: $ekzo-links--go-content; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}link--go:after { content: $ekzo-links--go-content; }
 
 
 /**
@@ -124,4 +124,4 @@ a,
  *
  */
 
-.#{$ekzo-ns}link--back:before { content: $ekzo-links--back-content; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}link--back:before { content: $ekzo-links--back-content; }

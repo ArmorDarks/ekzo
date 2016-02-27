@@ -3,7 +3,12 @@
 // ^SETTING.FRAMEWORK.DEFAULTS
 // =======================================
 
-$ekzo-ns:                    '' !default;
+$ekzo-ns:                    ''   !default;
+
+$ekzo-generics-ns:           'g-' !default;
+$ekzo-objects-ns:            'o-' !default;
+$ekzo-components-ns:         'c-' !default;
+$ekzo-helpers-ns:            'h-' !default;
 
 // Used for various framework calculations
 

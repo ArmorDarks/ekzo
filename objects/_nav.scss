@@ -21,8 +21,8 @@
  *
  */
 
-.#{$ekzo-ns}nav {
-  @extend %#{$ekzo-ns}list--flush;
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav {
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}list--flush;
 
   > li,
   > li > a { display: inline-block; }
@@ -38,14 +38,14 @@
  *
  */
 
-.#{$ekzo-ns}nav--stacked > li { display: list-item; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--stacked > li { display: list-item; }
 
 /**
  * Extends `.nav` and throws all links inside in block or inline mode
  */
 
-.#{$ekzo-ns}nav--block  > li > a { display: block; }
-.#{$ekzo-ns}nav--inline > li > a { display: inline; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--block  > li > a { display: block; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--inline > li > a { display: inline; }
 
 
 /**
@@ -56,9 +56,9 @@
  *
  */
 
-.#{$ekzo-ns}nav--padding-  > li > a { padding: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}nav--padding   > li > a { padding: $ekzo-spacing-unit; }
-.#{$ekzo-ns}nav--padding\+ > li > a { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding-  > li > a { padding: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding   > li > a { padding: $ekzo-spacing-unit; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding\+ > li > a { padding: $ekzo-spacing-unit--double; }
 
 
 /**
@@ -69,7 +69,7 @@
  *
  */
 
-.#{$ekzo-ns}nav--keywords {
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--keywords {
 
   li:after { content: '\002C' '\00A0'; }
 

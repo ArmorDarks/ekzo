@@ -16,7 +16,7 @@
  *
  */
 
-.#{$ekzo-ns}a-nav > a { display: inline-block; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}a-nav > a { display: inline-block; }
 
 
 /**
@@ -32,8 +32,8 @@
  *
  */
 
-.#{$ekzo-ns}a-stacked-nav {
-  @extend %#{$ekzo-ns}clear;
+.#{$ekzo-ns}#{$ekzo-objects-ns}a-stacked-nav {
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
 
   > a {
     float: left;

@@ -21,17 +21,17 @@
  *
  */
 
-.#{$ekzo-ns}media {
+.#{$ekzo-ns}#{$ekzo-objects-ns}media {
   // #note disabled experimentaly. It seems there is no need
   // in such property in most cases
   // Note that for obvious reasons element should always be
   // block or inline-block element.
   // display: block;
 
-  @extend %#{$ekzo-ns}clear;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
 }
 
-  .#{$ekzo-ns}media__image {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
     float: left;
 
     display: block;
@@ -39,7 +39,7 @@
     margin-right: $ekzo-spacing-unit;
   }
 
-  .#{$ekzo-ns}media__content {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__content {
     overflow: hidden;
 
     &,
@@ -49,9 +49,9 @@
 
 
 
-.#{$ekzo-ns}media--rev {
+.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
 
-  .#{$ekzo-ns}media__image {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
     float: right;
 
     margin-right: 0;
@@ -61,22 +61,22 @@
 }
 
 
-.#{$ekzo-ns}media--flush {
+.#{$ekzo-ns}#{$ekzo-objects-ns}media--flush {
 
-  .#{$ekzo-ns}media__image {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
     margin-right: 0;
     margin-left:  0;
   }
 
 }
 
-.#{$ekzo-ns}media\+ {
+.#{$ekzo-ns}#{$ekzo-objects-ns}media\+ {
 
-  .#{$ekzo-ns}media__image { margin-right: $ekzo-spacing-unit--double; }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image { margin-right: $ekzo-spacing-unit--double; }
 
-  &.#{$ekzo-ns}media--rev {
+  &.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
 
-    .#{$ekzo-ns}media__image {
+    .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
       margin-right: 0;
       margin-left:  $ekzo-spacing-unit--double;
     }

@@ -14,7 +14,7 @@
 // ----
 // Text
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + text--);
+@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + ekzo-helpers-ns + text--);
 
 // ----
 // Standard headings
@@ -22,14 +22,14 @@
 // When we define a heading we also define a corresponding class to go with it.
 // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns) { @extend %#{$ekzo-ns}headings-properties; }
+@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns) { @extend %#{$ekzo-ns}#{$ekzo-helpers-ns}headings-properties; }
 
 // ----
 // Extra headings
 //
 // A series of classes for setting massive type; for use in heroes, promos, etc.
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + text--) {
+@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + ekzo-helpers-ns + text--) {
 
   @if $ekzo-extra-headings-font-family { font-family: $ekzo-extra-headings-font-family; }
 
@@ -41,68 +41,68 @@
 // Font-sizes helpers
 // ---------------------------------------
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + font-size--, $line-height: false);
+@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + ekzo-helpers-ns + font-size--, $line-height: false);
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + font-size--, $line-height: false);
+@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + ekzo-helpers-ns + font-size--, $line-height: false);
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + font-size--, $line-height: false);
+@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + ekzo-helpers-ns + font-size--, $line-height: false);
 
 // @todo Add to font-sizes map
 
-.#{$ekzo-ns}font-size--em--       { font-size: .5em; }
-.#{$ekzo-ns}font-size--em-        { font-size: .75em; }
-.#{$ekzo-ns}font-size--em\+-      { font-size: 1.25em; }
-.#{$ekzo-ns}font-size--em\+--     { font-size: 1.5em; }
-.#{$ekzo-ns}font-size--em\+       { font-size: 2em; }
-.#{$ekzo-ns}font-size--em\+\+-    { font-size: 2.25em; }
-.#{$ekzo-ns}font-size--em\+\+--   { font-size: 2.5em; }
-.#{$ekzo-ns}font-size--em\+\+     { font-size: 3em; }
-.#{$ekzo-ns}font-size--em\+\+\+   { font-size: 4em; }
-.#{$ekzo-ns}font-size--em\+\+\+\+ { font-size: 5em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em--       { font-size: .5em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em-        { font-size: .75em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+-      { font-size: 1.25em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+--     { font-size: 1.5em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+       { font-size: 2em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+-    { font-size: 2.25em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+--   { font-size: 2.5em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+     { font-size: 3em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+\+   { font-size: 4em; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+\+\+ { font-size: 5em; }
 
 // ---------------------------------------
 // Line-height helpers
 // ---------------------------------------
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + line-height--, $line-height: only);
+@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + ekzo-helpers-ns + line-height--, $line-height: only);
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + line-height--, $line-height: only);
+@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + ekzo-helpers-ns + line-height--, $line-height: only);
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + line-height--, $line-height: only);
+@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + ekzo-helpers-ns + line-height--, $line-height: only);
 
 // ----
 // Take element out of typography rhythm
 // Should be applied on custom elements with unusual styling
 
-.#{$ekzo-ns}line-height--flush { line-height: 1 !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}line-height--flush { line-height: 1 !important; }
 
 // ---------------------------------------
 // Text styling
 // ---------------------------------------
 
-.#{$ekzo-ns}font-weight--light    { font-weight: 300  !important; }
-.#{$ekzo-ns}font-weight--normal   { font-weight: 400  !important; }
-.#{$ekzo-ns}font-weight--semibold { font-weight: 600  !important; }
-.#{$ekzo-ns}font-weight--bold     { font-weight: bold !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--light    { font-weight: 300  !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--normal   { font-weight: 400  !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--semibold { font-weight: 600  !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--bold     { font-weight: bold !important; }
 
-.#{$ekzo-ns}font-style--normal    { font-style: normal !important; }
-.#{$ekzo-ns}font-style--italic    { font-style: italic !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-style--normal    { font-style: normal !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-style--italic    { font-style: italic !important; }
 
-.#{$ekzo-ns}text--uppercase       { text-transform: uppercase !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--uppercase       { text-transform: uppercase !important; }
 
-.#{$ekzo-ns}text--nowrap          { white-space: nowrap; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }
 
 // ---------------------------------------
 // Underline styling
 // ---------------------------------------
 
-.#{$ekzo-ns}text--underline        { text-decoration: underline; }
-.#{$ekzo-ns}text--underline--flush { text-decoration: none; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline        { text-decoration: underline; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--flush { text-decoration: none; }
 
 // ----
 // Removes underline, but adds it on hover
 
-.#{$ekzo-ns}text--underline--rev {
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--rev {
   text-decoration: none;
 
   &:hover { text-decoration: underline; }
@@ -113,7 +113,7 @@
 // Underline with border styling
 // ---------------------------------------
 
-.#{$ekzo-ns}text--underline--border {
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--border {
   text-decoration: none;
 
   border-bottom-width: 1px;
@@ -122,7 +122,7 @@
 // ----
 // Removes underline, but adds it on hover
 
-.#{$ekzo-ns}text--underline--border--rev {
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--border--rev {
   text-decoration: none;
 
   border-bottom-width: 0;

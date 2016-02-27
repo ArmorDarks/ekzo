@@ -10,23 +10,23 @@
 //
 // Useful for anchors with icons inside it
 
-.#{$ekzo-ns}reline {
+.#{$ekzo-ns}#{$ekzo-objects-ns}reline {
   text-decoration: none;
 
-  &:hover .#{$ekzo-ns}reline__to { text-decoration: none; }
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: none; }
 }
 
-  .#{$ekzo-ns}reline__to { text-decoration: underline; }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
 
 // ----
 // Removes underline, but adds it to child span on hover
 
-.#{$ekzo-ns}reline--rev {
+.#{$ekzo-ns}#{$ekzo-objects-ns}reline--rev {
   text-decoration: none;
 
-  .#{$ekzo-ns}reline__to { text-decoration: none; }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: none; }
 
-  &:hover .#{$ekzo-ns}reline__to { text-decoration: underline; }
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
 }
 
 } // endif

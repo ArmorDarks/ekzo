@@ -16,32 +16,32 @@
 // Cursors
 // ---------------------------------------
 
-.#{$ekzo-ns}cursor--help    { cursor: help    !important; }
-.#{$ekzo-ns}cursor--arrow   { cursor: default !important; }
-.#{$ekzo-ns}cursor--pointer { cursor: pointer !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}cursor--help    { cursor: help    !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}cursor--arrow   { cursor: default !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}cursor--pointer { cursor: pointer !important; }
 
 // ---------------------------------------
 // Apply box-sizing models
 // ---------------------------------------
 
-.#{$ekzo-ns}box-sizing--border  { box-sizing: border-box  !important; }
-.#{$ekzo-ns}box-sizing--content { box-sizing: content-box !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}box-sizing--border  { box-sizing: border-box  !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}box-sizing--content { box-sizing: content-box !important; }
 
 // ---------------------------------------
 // Border
 // ---------------------------------------
 
-.#{$ekzo-ns}border--flush         { border: 0              !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border--flush         { border: 0              !important; }
 
-.#{$ekzo-ns}border-width--flush   { border-width: 0        !important; }
-.#{$ekzo-ns}border-style--flush   { border-style: none     !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-width--flush   { border-width: 0        !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-style--flush   { border-style: none     !important; }
 
-.#{$ekzo-ns}border-color--inherit { border-color: inherit  !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--inherit { border-color: inherit  !important; }
 
 // ---------------------------------------
 // Column count
 // ---------------------------------------
 
-.#{$ekzo-ns}column-count--flush { column-count: auto; }
-.#{$ekzo-ns}column-count--2     { column-count: 2; }
-.#{$ekzo-ns}column-count--3     { column-count: 3; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}column-count--flush { column-count: auto; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}column-count--2     { column-count: 2; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}column-count--3     { column-count: 3; }

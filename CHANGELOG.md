@@ -15,6 +15,7 @@
 
 ### Changed
 - [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity
+- [BREAKING] All classes by default namespaced by its type. For example: `o-grid` instead of `grid`
 - [BREAKING] Renamed function `map-get-deep()` to `ekzo-get()`
 - [BREAKING] Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
 - [BREAKING] `ekzo-breakpoint()` mixin now produces better class names. For example: `1/2@lap` instead of `lap-1/2`

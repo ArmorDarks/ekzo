@@ -17,7 +17,7 @@
 fieldset + fieldset { margin-top: $ekzo-spacing-unit--double; }
 
 
-.#{$ekzo-ns}text-input,
+.#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
 input,
 textarea,
 label {
@@ -28,7 +28,7 @@ label {
 }
 
 
-.#{$ekzo-ns}text-input,
+.#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
 input,
 textarea { background-color: $ekzo-forms-bg-color; }
 
@@ -46,13 +46,13 @@ textarea { background-color: $ekzo-forms-bg-color; }
  *
  */
 
-/*small*/.#{$ekzo-ns}extra-help {
+/*small*/.#{$ekzo-ns}#{$ekzo-generics-ns}extra-help {
   display: inline-block;
 
   visibility: hidden;
 
-  .#{$ekzo-ns}text-input:active + &,
-  .#{$ekzo-ns}text-input:focus + & { visibility: visible; }
+  .#{$ekzo-ns}#{$ekzo-generics-ns}text-input:active + &,
+  .#{$ekzo-ns}#{$ekzo-generics-ns}text-input:focus + & { visibility: visible; }
 
 }
 

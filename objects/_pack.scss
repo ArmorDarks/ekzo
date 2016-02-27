@@ -17,51 +17,51 @@
  * 2. Cause children to be automatically equally sized.
  */
 
-.#{$ekzo-ns}pack {
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack {
   display: table;
 
   width: 100%;  /* [1] */
 
   > li {
-    @extend %#{$ekzo-ns}pack__item;
+    @extend %#{$ekzo-ns}#{$ekzo-objects-ns}pack__item;
 
     > a { display: block; }
 
   }
 
-  > a { @extend %#{$ekzo-ns}pack__item; }
+  > a { @extend %#{$ekzo-ns}#{$ekzo-objects-ns}pack__item; }
 
 }
 
-.#{$ekzo-ns}pack__item,
-%#{$ekzo-ns}pack__item {
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack__item,
+%#{$ekzo-ns}#{$ekzo-objects-ns}pack__item {
   display: table-cell;
 
   padding: $ekzo-spacing-unit;
 }
 
-.#{$ekzo-ns}pack--fixed { table-layout: fixed; /* [2] */ }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--fixed { table-layout: fixed; /* [2] */ }
 
-.#{$ekzo-ns}pack--middle {}
-.#{$ekzo-ns}pack--bottom {}
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--middle {}
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--bottom {}
 
-.#{$ekzo-ns}pack--auto {}
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--auto {}
 
-.#{$ekzo-ns}pack- {
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack- {
 
   > li,
   > a { padding: $ekzo-spacing-unit--half; }
 
 }
 
-.#{$ekzo-ns}pack\+ {
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack\+ {
 
   > li,
   > a { padding: $ekzo-spacing-unit--double; }
 
 }
 
-.#{$ekzo-ns}pack--flush {
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--flush {
 
   > li,
   > a { padding: 0; }
@@ -72,9 +72,9 @@
 // .pack--sides\+      { > li, > a { padding-left: $ekzo-spacing-unit--double; padding-right: $ekzo-spacing-unit--double; } }
 // .pack--sides--flush { > li, > a { padding-left: 0; padding-right: 0; } }
 
-.#{$ekzo-ns}pack--border-spacing-       { border-spacing: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}pack--border-spacing        { border-spacing: $ekzo-spacing-unit; }
-.#{$ekzo-ns}pack--border-spacing\+      { border-spacing: $ekzo-spacing-unit--double; }
-.#{$ekzo-ns}pack--border-spacing--flush { border-spacing: 0; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing-       { border-spacing: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing        { border-spacing: $ekzo-spacing-unit; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing\+      { border-spacing: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing--flush { border-spacing: 0; }
 
 } // endif

@@ -38,7 +38,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
 
 
-.#{$ekzo-ns}btn {
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn {
   display: inline-block;       /* [1] */
 
   vertical-align: middle;      /* [2] */
@@ -119,7 +119,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  * Make the button inherit sizing from its parent.
  */
 
-.#{$ekzo-ns}btn--inherit {
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--inherit {
   vertical-align: baseline;
 
   font-family: inherit;
@@ -142,7 +142,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 @mixin ekzo-buttons-sizes($postfix: '') {
 
   // line-height = `$ekzo-line-height`
-  .#{$ekzo-ns}btn--#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--#{$postfix} {
     line-height: $ekzo-line-height;
 
     padding-top:     0;
@@ -152,14 +152,14 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   // line-height = 2
-  .#{$ekzo-ns}btn-#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn-#{$postfix} {
     padding-top:    ekzo-em($ekzo-spacing-unit--half / 3);
     padding-bottom: ekzo-em($ekzo-spacing-unit--half / 3);
     padding-right:  .8em;
     padding-left:   .8em;
   }
 
-  .#{$ekzo-ns}btn--reset#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--reset#{$postfix} {
     padding-top:    $btn-padding-top;
     padding-bottom: $btn-padding-bottom;
     padding-right:  1em;
@@ -167,7 +167,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   // line-height = 3
-  .#{$ekzo-ns}btn\+#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn\+#{$postfix} {
     padding-top:    ekzo-em($ekzo-spacing-unit * .84);
     padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
     padding-right:  1.5em;
@@ -175,7 +175,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   // line-height = 5
-  .#{$ekzo-ns}btn\+\+#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn\+\+#{$postfix} {
     padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
     padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
     padding-right:  2em;
@@ -185,17 +185,17 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   // ----
   // Wide version of button with unspecified line-height
 
-  .#{$ekzo-ns}btn--wide\+#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+#{$postfix} {
     padding-right: 2em;
     padding-left:  2em;
   }
 
-  .#{$ekzo-ns}btn--wide\+--#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+--#{$postfix} {
     padding-right: 1.5em;
     padding-left:  1.5em;
   }
 
-  .#{$ekzo-ns}btn--wide\+\+\+#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+\+\+#{$postfix} {
     padding-right: 4em;
     padding-left:  4em;
   }
@@ -205,7 +205,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   //
   // 1. Remove padding so that widths and paddings don't conflict.
 
-  .#{$ekzo-ns}btn--full#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--full#{$postfix} {
     width: 100%;
 
     padding-right: 0;            /* [1] */
@@ -215,7 +215,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   // ----
   // Button font-size modifiers based on map's values.
 
-  $ekzo-btn-prefix: $ekzo-ns + btn--;
+  $ekzo-btn-prefix: $ekzo-ns + ekzo-objects-ns + btn--;
 
   @include ekzo-font-size-classes(buttons, $prefix: $ekzo-btn-prefix, $postfix: $postfix, $line-height:false);
 
@@ -268,7 +268,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  * Positive actions; e.g. sign in, purchase, submit, etc.
  */
 
-.#{$ekzo-ns}btn--positive {
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--positive {
   background-color: $ekzo-btn--positive-bg-color;
 
   color: $ekzo-btn--positive-color;
@@ -279,7 +279,7 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  * Negative actions; e.g. close account, delete photo, remove friend, etc.
  */
 
-.#{$ekzo-ns}btn--negative {
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--negative {
   background-color: $ekzo-btn--negative-bg-color;
 
   color: $ekzo-btn--negative-color;
@@ -292,10 +292,10 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  * 1. Make the button look like normal cursor when hovered.
  */
 
-.#{$ekzo-ns}btn--disabled,
-.#{$ekzo-ns}btn--disabled:hover,
-.#{$ekzo-ns}btn--disabled:active,
-.#{$ekzo-ns}btn--disabled:focus {
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled,
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:hover,
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:active,
+.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:focus {
   background-color: $ekzo-btn--disabled-bg-color;
 
   color: $ekzo-btn--disabled-color;

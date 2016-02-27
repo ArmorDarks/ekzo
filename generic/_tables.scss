@@ -6,7 +6,7 @@
 
 table { width: 100%; }
 
-.#{$ekzo-ns}table--fixed { table-layout: fixed; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}table--fixed { table-layout: fixed; }
 
 // ---------------------------------------
 // Cell alignments
@@ -32,35 +32,35 @@ table { width: 100%; }
   // ----
   // Paddings
 
-  .#{$ekzo-ns}table--padding--#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding--#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--quarter; }
 
   }
 
-  .#{$ekzo-ns}table--padding-#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding-#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--half; }
 
   }
 
-  .#{$ekzo-ns}table--padding#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit; }
 
   }
 
-  .#{$ekzo-ns}table--padding\+#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding\+#{$postfix} {
 
     th,
     td { padding: $ekzo-spacing-unit--double; }
 
   }
 
-  .#{$ekzo-ns}table--padding--flush#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding--flush#{$postfix} {
 
     th,
     td { padding: 0; }

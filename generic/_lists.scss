@@ -25,8 +25,8 @@ ol {
  *
  */
 
-.#{$ekzo-ns}list--flush,
-%#{$ekzo-ns}list--flush {
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--flush,
+%#{$ekzo-ns}#{$ekzo-generics-ns}list--flush {
   list-style: none;
 
   margin-left:   0;
@@ -40,25 +40,25 @@ ol {
  * Applies margin between ul's elements
  */
 
-.#{$ekzo-ns}list--indent--     > li + li { margin-top: $ekzo-spacing-unit--quarter; }
-.#{$ekzo-ns}list--indent-      > li + li { margin-top: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}list--indent       > li + li { margin-top: $ekzo-spacing-unit; }
-.#{$ekzo-ns}list--indent\+     > li + li { margin-top: $ekzo-spacing-unit--double; }
-.#{$ekzo-ns}list--indent-flush > li + li { margin-top: 0; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent--     > li + li { margin-top: $ekzo-spacing-unit--quarter; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent-      > li + li { margin-top: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent       > li + li { margin-top: $ekzo-spacing-unit; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent\+     > li + li { margin-top: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent-flush > li + li { margin-top: 0; }
 
-.#{$ekzo-ns}list--margin-       > li { margin: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}list--margin\+      > li { margin: $ekzo-spacing-unit--double; }
-.#{$ekzo-ns}list--margin--flush > li { margin: 0; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin-       > li { margin: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin\+      > li { margin: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin--flush > li { margin: 0; }
 
-.#{$ekzo-ns}list--padding-       > li { padding: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}list--padding\+      > li { padding: $ekzo-spacing-unit--double; }
-.#{$ekzo-ns}list--padding--flush > li { padding: 0; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding-       > li { padding: $ekzo-spacing-unit--half; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding\+      > li { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding--flush > li { padding: 0; }
 
 
 // @todo With borders between elements
-.#{$ekzo-ns}list--keyline {}
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--keyline {}
 // @todo With borders inside
-.#{$ekzo-ns}list--matrix {}
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--matrix {}
 
 
 } // endif
