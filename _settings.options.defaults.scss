@@ -7,6 +7,10 @@
 // ELEMENTS AND ABSTRACTIONS
 // ---------------------------------------
 
+$ekzo-enable-forms:                    true  !default;
+$ekzo-enable-lists:                    true  !default;
+$ekzo-enable-tables:                   true  !default;
+
 $ekzo-enable-a-nav:                    true  !default;
 $ekzo-enable-arrows:                   true  !default;
 $ekzo-enable-border-reline:            true  !default;
@@ -15,20 +19,18 @@ $ekzo-enable-buttons:                  true  !default;
 $ekzo-enable-center-inner:             true  !default;
 $ekzo-enable-flag:                     true  !default;
 $ekzo-enable-floated-nav:              true  !default;
-$ekzo-enable-forms:                    true  !default;
 $ekzo-enable-grid:                     true  !default;
-$ekzo-enable-widths:                   true  !default;
 $ekzo-enable-iconic-list:              true  !default;
 $ekzo-enable-icons:                    true  !default;
 $ekzo-enable-island:                   true  !default;
-$ekzo-enable-lists:                    true  !default;
 $ekzo-enable-media:                    true  !default;
 $ekzo-enable-nav:                      true  !default;
 $ekzo-enable-pack:                     true  !default;
 $ekzo-enable-reline:                   true  !default;
 $ekzo-enable-sprites:                  true  !default;
-$ekzo-enable-tables:                   true  !default;
 $ekzo-enable-tooltips:                 true  !default;
+
+$ekzo-enable-widths:                   true  !default;
 
 // ---------------------------------------
 // Links options
