@@ -62,7 +62,6 @@
 // @return {string}
 
 @function ekzo-rem($value, $base:ekzo-font-size(base)) {
-  @return $value + 1px - 1px; // @legacy Fallback for IE8 and below
   @return $value / $base * 1rem;
 }
 
