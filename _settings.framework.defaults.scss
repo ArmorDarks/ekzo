@@ -3,6 +3,11 @@
 // ^SETTING.FRAMEWORK.DEFAULTS
 // =======================================
 
+// ---------------------------------------
+// Namespacing
+// ---------------------------------------
+// Used as prefix for every framework's class
+
 $ekzo-ns:                    ''   !default;
 
 $ekzo-generics-ns:           'g-' !default;
@@ -11,7 +16,9 @@ $ekzo-components-ns:         'c-' !default;
 $ekzo-scopes-ns:             's-' !default;
 $ekzo-helpers-ns:            'h-' !default;
 
-// Used for various framework calculations
+// ---------------------------------------
+// Spacing units
+// ---------------------------------------
 
 $ekzo-spacing-unit:          $ekzo-line-height      !default;
 
