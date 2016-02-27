@@ -11,6 +11,7 @@
 - `ekzo-font-size-class()` mixin for generation of single font-size class
 - Added functions and mixins names in error messages
 - Added `$ekzo-enable-widths` option for widths
+- Added `ekzo-rem()` function, which converts pxs into rems
 - `ekzo-font-size-classes()` mixin now accepts `$postfix` parameter
 - `ekzo-breakpoint()` now accepts 3 parameters: `breakpoint`, `path` and `map` (backward compatible)
 

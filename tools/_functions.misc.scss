@@ -3,7 +3,6 @@
 // ^FUNCTIONS.MISC
 // =======================================
 
-
 // ---------------------------------------
 // Convert Direction
 // ---------------------------------------
@@ -21,8 +20,6 @@
   @else if $direction == 'right'  { @return 'left'; }
 }
 
-
-
 // ---------------------------------------
 // To percent
 // ---------------------------------------
@@ -38,18 +35,14 @@
   @return $value / $total * 100%;
 }
 
-
-
 // ---------------------------------------
 // To em
 // ---------------------------------------
 //
 // Calculates ems based on provided values
 //
-// @param {number:px} $value                     - value which should be converted
-//                                                 into ems
-// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be
-//                                                 calculated em value
+// @param {number:px} $value                     - value which should be converted into ems
+// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be calculated em value
 //
 // @return {string}
 
@@ -57,7 +50,21 @@
   @return $value / $base * 1em;
 }
 
+// ---------------------------------------
+// To rem
+// ---------------------------------------
+//
+// Calculates rems based on provided values
+//
+// @param {number:px} $value                     - value which should be converted into rems
+// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be calculated rem value
+//
+// @return {string}
 
+@function ekzo-rem($value, $base:ekzo-font-size(base)) {
+  @return $value + 1px - 1px; // @legacy Fallback for IE8 and below
+  @return $value / $base * 1rem;
+}
 
 // ---------------------------------------
 // Tint & Shade
