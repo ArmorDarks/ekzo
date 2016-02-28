@@ -4,6 +4,7 @@
 ### Removed
 - [BREAKING] Dropped vendor-related mixins in favor of mandatory [Autoprefixer](https://github.com/postcss/autoprefixer): `ekzo-vendor()`, `ekzo-placeholder()` and `ekzo-keyframe()`
 - [BREAKING] Dropped mixin `ekzo-headings()`. It was never used.
+- Dropped `debug.scss` support. It shoudn't be part of Ekzo's core
 - Dropped `$ekzo-line-height-ratio` variable — there isn't much sense to keep it in settings by default, since can be easily calculated on demand. Were never used.
 - `ekzo-font-size-classes()` no longer accepts `$name` parameter. For generation of single font-size class should be used new mixin `ekzo-font-size-class()`
 
