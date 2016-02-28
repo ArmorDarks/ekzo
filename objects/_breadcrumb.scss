@@ -13,8 +13,10 @@
 @mixin breadcrumb__entry($delimiter) {
   content: $delimiter;
 
-  @if $ekzo-breadcrumb-delimiters-color and $ekzo-breadcrumb-delimiters-color != $ekzo-text-color {
-    color: $ekzo-breadcrumb-delimiters-color;
+  @include ekzo-theme() {
+    @if ekzo-theme(breadcrumb-delimiters-color) and ekzo-theme(breadcrumb-delimiters-color) != ekzo-theme(text-color) {
+      color: ekzo-theme(breadcrumb-delimiters-color);
+    }
   }
 
 }
@@ -38,8 +40,10 @@
 
   > li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
-  @if $ekzo-breadcrumb-links-color and $ekzo-breadcrumb-links-color != $ekzo-links-color {
-    > a { color: $ekzo-breadcrumb-links-color; }
+  @include ekzo-theme() {
+    @if ekzo-theme(breadcrumb-links-color) and ekzo-theme(breadcrumb-links-color) != ekzo-theme(links-color) {
+      > a { color: ekzo-theme(breadcrumb-links-color); }
+    }
   }
 
 }

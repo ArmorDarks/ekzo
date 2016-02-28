@@ -23,9 +23,9 @@ html {
 
   font-weight: $ekzo-font-weight; // 3
 
-  color: $ekzo-text-color; // 3
-
-  background: #{$ekzo-bg};
+  @include ekzo-theme() { color:            ekzo-theme(text-color); } // 3
+  @include ekzo-theme() { background-color: ekzo-theme(bg-color); }
+  @if $ekzo-bg          { background:       $ekzo-bg; }
 
   -moz-osx-font-smoothing: grayscale;   // 4
   -webkit-font-smoothing:  antialiased; // 4

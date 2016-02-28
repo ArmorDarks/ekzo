@@ -55,35 +55,35 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   padding-right: 1em;          /* [8] */
   padding-left:  1em;          /* [8] */
 
-  @if $ekzo-btn-color { color: $ekzo-btn-color; }
+  @include ekzo-theme() { @if ekzo-theme(btn-color)               { color: ekzo-theme(btn-color); } }
 
-  @if $ekzo-btn-bg-color { background-color: $ekzo-btn-bg-color; }
+  @include ekzo-theme() { @if ekzo-theme(btn-bg-color)            { background-color: ekzo-theme(btn-bg-color); } }
 
-  @if $ekzo-btn-radius { border-radius: $ekzo-btn-radius; }
+  @if $ekzo-btn-radius                                            { border-radius: $ekzo-btn-radius; }
 
-  @if $ekzo-btn-border-top-width    { border-top-width:    $ekzo-btn-border-top-width;}
-  @else                             { border-top-width:    0; }    // 6
-  @if $ekzo-btn-border-top-style    { border-top-style:    $ekzo-btn-border-top-style; }
-  @else                             { border-top-style:    none; } // 6
-  @if $ekzo-btn-border-top-color    { border-top-color:    $ekzo-btn-border-top-color; }
+  @if $ekzo-btn-border-top-width                                  { border-top-width:    $ekzo-btn-border-top-width;}
+  @else                                                           { border-top-width:    0; }    // 6
+  @if $ekzo-btn-border-top-style                                  { border-top-style:    $ekzo-btn-border-top-style; }
+  @else                                                           { border-top-style:    none; } // 6
+  @include ekzo-theme() { @if ekzo-theme(btn-border-top-color)    { border-top-color:    ekzo-theme(btn-border-top-color); } }
 
-  @if $ekzo-btn-border-right-width  { border-right-width:  $ekzo-btn-border-right-width; }
-  @else                             { border-right-width:  0; }    // 6
-  @if $ekzo-btn-border-right-style  { border-right-style:  $ekzo-btn-border-right-style; }
-  @else                             { border-right-style:  none; } // 6
-  @if $ekzo-btn-border-right-color  { border-right-color:  $ekzo-btn-border-right-color; }
+  @if $ekzo-btn-border-right-width                                { border-right-width:  $ekzo-btn-border-right-width; }
+  @else                                                           { border-right-width:  0; }    // 6
+  @if $ekzo-btn-border-right-style                                { border-right-style:  $ekzo-btn-border-right-style; }
+  @else                                                           { border-right-style:  none; } // 6
+  @include ekzo-theme() { @if ekzo-theme(btn-border-right-color)  { border-right-color:  ekzo-theme(btn-border-right-color); } }
 
-  @if $ekzo-btn-border-bottom-width { border-bottom-width: $ekzo-btn-border-bottom-width; }
-  @else                             { border-bottom-width: 0; }    // 6
-  @if $ekzo-btn-border-bottom-style { border-bottom-style: $ekzo-btn-border-bottom-style; }
-  @else                             { border-bottom-style: none; } // 6
-  @if $ekzo-btn-border-bottom-color { border-bottom-color: $ekzo-btn-border-bottom-color; }
+  @if $ekzo-btn-border-bottom-width                               { border-bottom-width: $ekzo-btn-border-bottom-width; }
+  @else                                                           { border-bottom-width: 0; }    // 6
+  @if $ekzo-btn-border-bottom-style                               { border-bottom-style: $ekzo-btn-border-bottom-style; }
+  @else                                                           { border-bottom-style: none; } // 6
+  @include ekzo-theme() { @if ekzo-theme(btn-border-bottom-color) { border-bottom-color: ekzo-theme(btn-border-bottom-color); } }
 
-  @if $ekzo-btn-border-left-width   { border-left-width:   $ekzo-btn-border-left-width; }
-  @else                             { border-left-width:   0; }    // 6
-  @if $ekzo-btn-border-left-style   { border-left-style:   $ekzo-btn-border-left-style; }
-  @else                             { border-left-style:   none; } // 6
-  @if $ekzo-btn-border-left-color   { border-left-color:   $ekzo-btn-border-left-color; }
+  @if $ekzo-btn-border-left-width                                 { border-left-width:   $ekzo-btn-border-left-width; }
+  @else                                                           { border-left-width:   0; }    // 6
+  @if $ekzo-btn-border-left-style                                 { border-left-style:   $ekzo-btn-border-left-style; }
+  @else                                                           { border-left-style:   none; } // 6
+  @include ekzo-theme() { @if ekzo-theme(btn-border-left-color)   { border-left-color:   ekzo-theme(btn-border-left-color); } }
 
   &,
   &:hover {
@@ -91,25 +91,25 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
   }
 
   &:hover {
-    @if $ekzo-btn-hover-color { color: $ekzo-btn-hover-color; }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-color)               { color:              ekzo-theme(btn-hover-color); } }
 
-    @if $ekzo-btn-hover-bg-color { background-color: $ekzo-btn-hover-bg-color; }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-bg-color)            { background-color:   ekzo-theme(btn-hover-bg-color); } }
 
-    @if $ekzo-btn-hover-border-top-width    { border-top-width:   $ekzo-btn-hover-border-top-width; }
-    @if $ekzo-btn-hover-border-top-style    { border-top-style:   $ekzo-btn-hover-border-top-style; }
-    @if $ekzo-btn-hover-border-top-color    { border-top-color:   $ekzo-btn-hover-border-top-color; }
+    @if $ekzo-btn-hover-border-top-width                                  { border-top-width:   $ekzo-btn-hover-border-top-width; }
+    @if $ekzo-btn-hover-border-top-style                                  { border-top-style:   $ekzo-btn-hover-border-top-style; }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-top-color)    { border-top-color:   ekzo-theme(btn-hover-border-top-color); } }
 
-    @if $ekzo-btn-hover-border-right-width  { border-right-width: $ekzo-btn-hover-border-right-width; }
-    @if $ekzo-btn-hover-border-right-style  { border-right-style: $ekzo-btn-hover-border-right-style; }
-    @if $ekzo-btn-hover-border-right-color  { border-right-color: $ekzo-btn-hover-border-right-color; }
+    @if $ekzo-btn-hover-border-right-width                                { border-right-width: $ekzo-btn-hover-border-right-width; }
+    @if $ekzo-btn-hover-border-right-style                                { border-right-style: $ekzo-btn-hover-border-right-style; }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-right-color)  { border-right-color: ekzo-theme(btn-hover-border-right-color); } }
 
-    @if $ekzo-btn-hover-border-bottom-width { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
-    @if $ekzo-btn-hover-border-bottom-style { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
-    @if $ekzo-btn-hover-border-bottom-color { border-bottom-color: $ekzo-btn-hover-border-bottom-color; }
+    @if $ekzo-btn-hover-border-bottom-width                               { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
+    @if $ekzo-btn-hover-border-bottom-style                               { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-bottom-color) { border-bottom-color: ekzo-theme(btn-hover-border-bottom-color); } }
 
-    @if $ekzo-btn-hover-border-left-width   { border-left-width:  $ekzo-btn-hover-border-left-width; }
-    @if $ekzo-btn-hover-border-left-style   { border-left-style:  $ekzo-btn-hover-border-left-style; }
-    @if $ekzo-btn-hover-border-left-color   { border-left-color:  $ekzo-btn-hover-border-left-color; }
+    @if $ekzo-btn-hover-border-left-width                                 { border-left-width:  $ekzo-btn-hover-border-left-width; }
+    @if $ekzo-btn-hover-border-left-style                                 { border-left-style:  $ekzo-btn-hover-border-left-style; }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-left-color)   { border-left-color:  ekzo-theme(btn-hover-border-left-color); } }
   }
 
 }
@@ -269,9 +269,8 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--positive {
-  background-color: $ekzo-btn--positive-bg-color;
-
-  color: $ekzo-btn--positive-color;
+  @include ekzo-theme() { background-color: ekzo-theme(btn--positive-bg-color); }
+  @include ekzo-theme() { color:            ekzo-theme(btn--positive-color); }
 }
 
 
@@ -280,9 +279,8 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--negative {
-  background-color: $ekzo-btn--negative-bg-color;
-
-  color: $ekzo-btn--negative-color;
+  @include ekzo-theme() { background-color: ekzo-theme(btn--negative-bg-color); }
+  @include ekzo-theme() { color:            ekzo-theme(btn--negative-color); }
 }
 
 
@@ -296,9 +294,8 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:hover,
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:active,
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:focus {
-  background-color: $ekzo-btn--disabled-bg-color;
-
-  color: $ekzo-btn--disabled-color;
+  @include ekzo-theme() { background-color: ekzo-theme(btn--disabled-bg-color); }
+  @include ekzo-theme() { color:            ekzo-theme(btn--disabled-color); }
 
   cursor: default;            /* [1] */
 }

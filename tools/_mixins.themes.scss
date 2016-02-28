@@ -1,0 +1,48 @@
+
+// =======================================
+// ^MIXINS.THEMES
+// =======================================
+
+// ---------------------------------------
+// Extend theme
+// ---------------------------------------
+
+@mixin ekzo-extend-themes($theme) {
+  $ekzo-themes: map-merge($ekzo-themes, $theme) !global;
+}
+
+// ---------------------------------------
+// Themify
+// ---------------------------------------
+// Write themified code without breaking modular project structure
+// Improved version of http://www.sitepoint.com/sass-theming-neverending-story/
+//
+// @example
+//  .foo {
+//    @include ekzo-theme() { background: ekzo-theme(bg-color); }
+//
+//    .bar {
+//      @include ekzo-theme() { background: ekzo-theme(text-color); }
+//      @include ekzo-theme() { color: black; }
+//    }
+//
+//  }
+
+@mixin ekzo-theme($prefix: $ekzo-ns + $ekzo-themes-ns, $postfix: '', $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+  @each $theme, $data in $ekzo-themes {
+    $ekzo-__theme: $data !global;
+
+    @if $enable-theming {
+      $class: $prefix + $theme + $postfix;
+
+      .#{$class} &,
+      &.#{$class} { @content; }
+
+    } @else {
+      @if $theme == $default-theme { @content; }
+    }
+
+    $ekzo-__theme: null !global;
+
+  }
+}

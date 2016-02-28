@@ -9,8 +9,7 @@
   font-family: $ekzo-forms-font-family;
   font-size:   $ekzo-forms-placeholder-font-size;
   font-style:  $ekzo-forms-placeholder-font-style;
-
-  color:       $ekzo-forms-placeholder-color;
+  @include ekzo-theme() { color: ekzo-theme(forms-placeholder-color); }
 }
 
 
@@ -23,14 +22,13 @@ textarea,
 label {
   font-family: $ekzo-forms-font-family;
   font-size:   $ekzo-forms-font-size;
-
-  color: $ekzo-forms-color;
+  @include ekzo-theme() { color: ekzo-theme(forms-color); }
 }
 
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
 input,
-textarea { background-color: $ekzo-forms-bg-color; }
+textarea { @include ekzo-theme() { background-color: ekzo-theme(forms-bg-color); } }
 
 
 /**

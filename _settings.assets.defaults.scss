@@ -17,7 +17,7 @@ $ekzo-fonts-path:        '#{$ekzo-assets-path}/fonts'   !default;
 // Background
 // ---------------------------------------
 
-$ekzo-bg:                $ekzo-bg-color !default;
+$ekzo-bg:                false !default;
 
 // ---------------------------------------
 // Icons
@@ -31,7 +31,7 @@ $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
 // ---------------------------------------
 // Sprites
 // ---------------------------------------
-//
+
 $ekzo-sprites-prefix:    sprite--     !default;
 $ekzo-sprites-file:      'sprite.png' !default;
 
