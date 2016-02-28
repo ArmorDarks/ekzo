@@ -8,6 +8,8 @@
 - `ekzo-font-size-classes()` no longer accepts `$name` parameter. For generation of single font-size class should be used new mixin `ekzo-font-size-class()`
 
 ### Added
+- Added option to set monospace font;
+- Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
