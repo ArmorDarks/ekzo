@@ -3,7 +3,7 @@
 // =======================================
 // *NORMALIZE
 // =======================================
-// Improved version of normalize.css
+// Improved version of normalize.css merged with resetting css
 // Head commit during last update: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1
 
 // ----
@@ -16,8 +16,45 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+// ----
+// Reset margins and paddings
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+figure,
+table,
+th,
+td,
+caption,
+hr,
+input,
+textarea,
+optgroup
+select,
+button,
+a,
+img {
+  margin:  0;
+  padding: 0;
+}
+
 // ---------------------------------------
-// HTML5 display definitions
+// Display definitions
 // ---------------------------------------
 
 // ----
@@ -48,7 +85,6 @@ canvas,
 progress,
 video {
   display: inline-block;    // 1
-
   vertical-align: baseline; // 2
 }
 
@@ -73,6 +109,25 @@ video,
 iframe { vertical-align: middle; }
 
 // ----
+// 1. Remove border when inside `a` element in IE 8/9.
+// 2. So that `alt` text is visually offset if images don't load.
+
+img {
+  border: 0;       // 1
+  outline: 0;
+  font-style: italic; // 2
+}
+
+// ----
+// Remove most spacing between table cells and border
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// ----
 // Address `[hidden]` styling not present in IE 8/9/10.
 // Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
 
@@ -92,6 +147,7 @@ a { background: transparent; }
 // ----
 // Improve readability when focused and also mouse hovered in all browsers.
 
+a,
 a:active,
 a:hover { outline: 0; }
 
@@ -213,6 +269,19 @@ samp {
 //
 // Known limitation: by default, Chrome and Safari on OS X allow very limited
 // styling of `select`, unless a `border` property is set.
+
+// ----
+// Remove outline
+
+input,
+textarea,
+select,
+button { outline: 0; }
+
+// ----
+// Remove default border from `fieldset` and `legend`.
+
+fieldset { border: 0; }
 
 // ----
 // 1. Correct color not being inherited.
