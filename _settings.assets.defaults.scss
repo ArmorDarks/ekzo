@@ -17,7 +17,7 @@ $ekzo-fonts-path:        '#{$ekzo-assets-path}/fonts'   !default;
 // Background
 // ---------------------------------------
 
-$ekzo-bg:                false !default;
+$ekzo-bg:                false !default; // `background` property on `html`
 
 // ---------------------------------------
 // Icons
