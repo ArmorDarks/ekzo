@@ -12,22 +12,11 @@
 //
 // @note We need to declare here imports too, since it's standalone file
 
-@import './tools/functions.maps';
-@import './tools/functions.misc';
-@import './tools/functions.themes';
-@import './tools/functions.typography';
-
 // ---------------------------------------
-// Mixins
+// Tools: functions and mixins
 // ---------------------------------------
 
-@import './tools/mixins.arrows';
-@import './tools/mixins.breakpoint';
-@import './tools/mixins.icons';
-@import './tools/mixins.misc';
-@import './tools/mixins.sprites';
-@import './tools/mixins.themes';
-@import './tools/mixins.typography';
+@import './tools/index';
 
 // ---------------------------------------
 // Default options, styles, colors etc
