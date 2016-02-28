@@ -32,8 +32,8 @@ $ekzo-font-sizes: (
 $ekzo-forms-font-size:              ekzo-font-size(h5, headings) !default;
 $ekzo-forms-placeholder-font-size:  $ekzo-forms-font-size        !default;
 
-$ekzo-code-font-size:               ekzo-font-size('-', text)      !default;
-$ekzo-kbd-font-size:                ekzo-font-size('-', text)      !default;
+$ekzo-code-font-size:               90% !default;
+$ekzo-kbd-font-size:                90% !default;
 
 // ---------------------------------------
 // Line heights
