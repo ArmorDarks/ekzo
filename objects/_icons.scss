@@ -26,7 +26,7 @@
  * Requires extension in stylesheet.
  */
 
-@include ekzo-font(
+@include ekzo-font-face(
   $font:    $ekzo-icon-font,
   $version: $ekzo-icon-font-version,
   $svg-id:  $ekzo-icon-font-svg-id

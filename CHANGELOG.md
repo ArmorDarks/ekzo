@@ -36,6 +36,7 @@
 - `$ekzo-bg` now expects everything normal for `background` property, except color, wich from now injected into `html` directly from `$ekzo-theme(base: ( bg-color: _value_ ) )`
 - Updated `normalize.scss`, dropped some older normalizations. Currently it's based on v3.0.3 (head commit: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1)
 - `reset.scss` is now part of `normalize.scss`
+- [BREAKING] renamed `ekzo-font()` mixin to `ekzo-font-face()`
 - [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity
 - [BREAKING] All classes by default namespaced by its type. For example: `o-grid` instead of `grid`
 - [BREAKING] Renamed function `map-get-deep()` to `ekzo-get()`

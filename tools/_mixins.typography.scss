@@ -204,10 +204,10 @@
 //
 // @example
 //
-//    @include ekzo-font(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
+//    @include ekzo-font-face(Helvetica LT Condensed, 1, HelveticaLTCondensed, bold, helvId );
 //
 
-@mixin ekzo-font($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg: $ekzo-use-svg-fonts, $svg-id:$file-name) {
+@mixin ekzo-font-face($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg: $ekzo-use-svg-fonts, $svg-id:$file-name) {
 
   @if $version { $version: '?#' + $version; } @else { $version: ''; }
 
