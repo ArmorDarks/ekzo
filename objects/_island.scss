@@ -23,15 +23,15 @@
 
   display: block;
 
-  padding: $ekzo-spacing-unit;
+  padding: ekzo-spacing(1);
 
   > :last-child,
   > :last-child { margin-bottom: 0; }
 
 }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}island-       { padding: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}#{$ekzo-objects-ns}island\+      { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}island-       { padding: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}island\+      { padding: ekzo-spacing(2); }
 .#{$ekzo-ns}#{$ekzo-objects-ns}island--flush { padding: 0; }
 
 } // endif

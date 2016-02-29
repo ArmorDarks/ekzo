@@ -36,7 +36,7 @@
 
     display: block;
 
-    margin-right: $ekzo-spacing-unit;
+    margin-right: ekzo-spacing(1);
   }
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}media__content {
@@ -55,7 +55,7 @@
     float: right;
 
     margin-right: 0;
-    margin-left:  $ekzo-spacing-unit;
+    margin-left:  ekzo-spacing(1);
   }
 
 }
@@ -72,13 +72,13 @@
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}media\+ {
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image { margin-right: $ekzo-spacing-unit--double; }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image { margin-right: ekzo-spacing(2); }
 
   &.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
 
     .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
       margin-right: 0;
-      margin-left:  $ekzo-spacing-unit--double;
+      margin-left:  ekzo-spacing(2);
     }
 
   }

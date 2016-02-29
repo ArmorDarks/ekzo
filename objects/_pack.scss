@@ -37,7 +37,7 @@
 %#{$ekzo-ns}#{$ekzo-objects-ns}pack__item {
   display: table-cell;
 
-  padding: $ekzo-spacing-unit;
+  padding: ekzo-spacing(1);
 }
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}pack--fixed { table-layout: fixed; /* [2] */ }
@@ -50,14 +50,14 @@
 .#{$ekzo-ns}#{$ekzo-objects-ns}pack- {
 
   > li,
-  > a { padding: $ekzo-spacing-unit--half; }
+  > a { padding: ekzo-spacing(.5); }
 
 }
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}pack\+ {
 
   > li,
-  > a { padding: $ekzo-spacing-unit--double; }
+  > a { padding: ekzo-spacing(2); }
 
 }
 
@@ -68,13 +68,13 @@
 
 }
 
-// .pack--sides-       { > li, > a { padding-left: $ekzo-spacing-unit--half;   padding-right: $ekzo-spacing-unit--half; } }
-// .pack--sides\+      { > li, > a { padding-left: $ekzo-spacing-unit--double; padding-right: $ekzo-spacing-unit--double; } }
+// .pack--sides-       { > li, > a { padding-left: ekzo-spacing(.5);   padding-right: ekzo-spacing(.5); } }
+// .pack--sides\+      { > li, > a { padding-left: ekzo-spacing(2); padding-right: ekzo-spacing(2); } }
 // .pack--sides--flush { > li, > a { padding-left: 0; padding-right: 0; } }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing-       { border-spacing: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing        { border-spacing: $ekzo-spacing-unit; }
-.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing\+      { border-spacing: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing-       { border-spacing: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing        { border-spacing: ekzo-spacing(1); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing\+      { border-spacing: ekzo-spacing(2); }
 .#{$ekzo-ns}#{$ekzo-objects-ns}pack--border-spacing--flush { border-spacing: 0; }
 
 } // endif

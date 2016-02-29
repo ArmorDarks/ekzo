@@ -29,15 +29,15 @@ img[height] { max-width: none; }
 .#{$ekzo-ns}#{$ekzo-generics-ns}image--right {
   float: right;
 
-  margin-bottom: $ekzo-spacing-unit--half;
-  margin-left:   $ekzo-spacing-unit;
+  margin-bottom: ekzo-spacing(.5);
+  margin-left:   ekzo-spacing(1);
 }
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}image--left {
   float: left;
 
-  margin-right:  $ekzo-spacing-unit;
-  margin-bottom: $ekzo-spacing-unit--half;
+  margin-right:  ekzo-spacing(1);
+  margin-bottom: ekzo-spacing(.5);
 }
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}image--center {
@@ -45,5 +45,5 @@ img[height] { max-width: none; }
 
   margin-right:  auto;
   margin-left:   auto;
-  margin-bottom: $ekzo-spacing-unit--half;
+  margin-bottom: ekzo-spacing(.5);
 }

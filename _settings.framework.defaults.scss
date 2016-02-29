@@ -22,9 +22,3 @@ $ekzo-helpers-ns:            'h-' !default;
 // ---------------------------------------
 
 $ekzo-spacing-unit:          $ekzo-line-height      !default;
-
-$ekzo-spacing-unit--quarter: $ekzo-spacing-unit / 4 !default;
-$ekzo-spacing-unit--half:    $ekzo-spacing-unit / 2 !default;
-$ekzo-spacing-unit--double:  $ekzo-spacing-unit * 2 !default;
-$ekzo-spacing-unit--triple:  $ekzo-spacing-unit * 3 !default;
-$ekzo-spacing-unit--quad:    $ekzo-spacing-unit * 3 !default;

@@ -56,9 +56,9 @@
  *
  */
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding-  > li > a { padding: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding   > li > a { padding: $ekzo-spacing-unit; }
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding\+ > li > a { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding-  > li > a { padding: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding   > li > a { padding: ekzo-spacing(1); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding\+ > li > a { padding: ekzo-spacing(2); }
 
 
 /**

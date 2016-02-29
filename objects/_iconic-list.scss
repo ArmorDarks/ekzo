@@ -30,7 +30,7 @@
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list {
-  padding-left: $ekzo-spacing-unit--double; // 1
+  padding-left: ekzo-spacing(2); // 1
 
   list-style-type: none;
 

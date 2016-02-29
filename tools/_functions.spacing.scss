@@ -1,0 +1,17 @@
+
+// =======================================
+// ^FUNCTIONS.SPACING
+// =======================================
+// Helper function, which inserts framework's spacing unit multiplied
+// by provided value. Intended for building of consistent typographical rhythm
+//
+// @param {number} $multiplier=1                     - Multiplier for spacing unit. Must be multiple of `.25`
+// @param {number} $spacing-unit=$ekzo-spacing-unit) - Base spacing unit
+//
+// @example
+//   padding: ekzo-spacing(2.5);
+
+@function ekzo-spacing($multiplier:1, $spacing-unit: $ekzo-spacing-unit) {
+  @if $multiplier % 0.25 != 0 { @warn '[ekzo-spacing]: multiplier value must be a multiple of `.25`'; }
+  @return $spacing-unit * $multiplier;
+}

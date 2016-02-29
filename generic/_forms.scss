@@ -13,7 +13,7 @@
 }
 
 
-fieldset + fieldset { margin-top: $ekzo-spacing-unit--double; }
+fieldset + fieldset { margin-top: ekzo-spacing(2); }
 
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}text-input,

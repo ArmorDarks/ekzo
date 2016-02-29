@@ -35,28 +35,28 @@ table { width: 100%; }
   .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding--#{$postfix} {
 
     th,
-    td { padding: $ekzo-spacing-unit--quarter; }
+    td { padding: ekzo-spacing(.25); }
 
   }
 
   .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding-#{$postfix} {
 
     th,
-    td { padding: $ekzo-spacing-unit--half; }
+    td { padding: ekzo-spacing(.5); }
 
   }
 
   .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding#{$postfix} {
 
     th,
-    td { padding: $ekzo-spacing-unit; }
+    td { padding: ekzo-spacing(1); }
 
   }
 
   .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding\+#{$postfix} {
 
     th,
-    td { padding: $ekzo-spacing-unit--double; }
+    td { padding: ekzo-spacing(2); }
 
   }
 

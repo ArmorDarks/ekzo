@@ -23,7 +23,7 @@ fieldset, figure,
 pre,
 .#{$ekzo-ns}#{$ekzo-generics-ns}media,
 .#{$ekzo-ns}#{$ekzo-generics-ns}flag,
-.#{$ekzo-ns}#{$ekzo-generics-ns}island { margin-bottom: $ekzo-spacing-unit; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}island { margin-bottom: ekzo-spacing(1); }
 
 
 
@@ -32,7 +32,7 @@ pre,
  * treatment regarding vertical rhythm.
  */
 
-hr { margin-bottom: $ekzo-spacing-unit - 2px; }
+hr { margin-bottom: ekzo-spacing(1) - 2px; }
 
 
 
@@ -43,4 +43,4 @@ hr { margin-bottom: $ekzo-spacing-unit - 2px; }
 
 ul,
 ol,
-dd { padding-left: $ekzo-spacing-unit--double; }
+dd { padding-left: ekzo-spacing(2); }

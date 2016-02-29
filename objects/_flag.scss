@@ -39,7 +39,7 @@
 
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}flag__image {
-    padding-right: $ekzo-spacing-unit; // Flag images have a space between them and the body of the object
+    padding-right: ekzo-spacing(1); // Flag images have a space between them and the body of the object
 
     > img {
       display: block;
@@ -81,7 +81,7 @@
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}flag__image {
     padding-right: 0;
-    padding-left:  $ekzo-spacing-unit;
+    padding-left:  ekzo-spacing(1);
   }
 
 }
@@ -97,13 +97,13 @@
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}flag\+ {
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}flag__image { padding-right: $ekzo-spacing-unit--double; }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}flag__image { padding-right: ekzo-spacing(2); }
 
   &.#{$ekzo-ns}#{$ekzo-objects-ns}flag--rev {
 
     .#{$ekzo-ns}#{$ekzo-objects-ns}flag__image {
       padding-right: 0;
-      padding-left:  $ekzo-spacing-unit--double;
+      padding-left:  ekzo-spacing(2);
     }
 
   }

@@ -1,6 +1,6 @@
 
-$btn-padding-top:    ekzo-em($ekzo-spacing-unit--half);
-$btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
+$btn-padding-top:    ekzo-em(ekzo-spacing(.5));
+$btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
 @if $ekzo-enable-buttons {
 
@@ -153,8 +153,8 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
   // line-height = 2
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn-#{$postfix} {
-    padding-top:    ekzo-em($ekzo-spacing-unit--half / 3);
-    padding-bottom: ekzo-em($ekzo-spacing-unit--half / 3);
+    padding-top:    ekzo-em(ekzo-spacing(.5) / 3);
+    padding-bottom: ekzo-em(ekzo-spacing(.5) / 3);
     padding-right:  .8em;
     padding-left:   .8em;
   }
@@ -168,16 +168,16 @@ $btn-padding-bottom: ekzo-em($ekzo-spacing-unit--half);
 
   // line-height = 3
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn\+#{$postfix} {
-    padding-top:    ekzo-em($ekzo-spacing-unit * .84);
-    padding-bottom: ekzo-em($ekzo-spacing-unit * .84);
+    padding-top:    ekzo-em(ekzo-spacing(1) * .84);
+    padding-bottom: ekzo-em(ekzo-spacing(1) * .84);
     padding-right:  1.5em;
     padding-left:   1.5em;
   }
 
   // line-height = 5
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn\+\+#{$postfix} {
-    padding-top:    ekzo-em($ekzo-spacing-unit * 1.17);
-    padding-bottom: ekzo-em($ekzo-spacing-unit * 1.17);
+    padding-top:    ekzo-em(ekzo-spacing(1) * 1.17);
+    padding-bottom: ekzo-em(ekzo-spacing(1) * 1.17);
     padding-right:  2em;
     padding-left:   2em;
   }

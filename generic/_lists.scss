@@ -40,18 +40,18 @@ ol {
  * Applies margin between ul's elements
  */
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent--     > li + li { margin-top: $ekzo-spacing-unit--quarter; }
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent-      > li + li { margin-top: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent       > li + li { margin-top: $ekzo-spacing-unit; }
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent\+     > li + li { margin-top: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent--     > li + li { margin-top: ekzo-spacing(.25); }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent-      > li + li { margin-top: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent       > li + li { margin-top: ekzo-spacing(1); }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--indent\+     > li + li { margin-top: ekzo-spacing(2); }
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--indent-flush > li + li { margin-top: 0; }
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin-       > li { margin: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin\+      > li { margin: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin-       > li { margin: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--margin\+      > li { margin: ekzo-spacing(2); }
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--margin--flush > li { margin: 0; }
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding-       > li { padding: $ekzo-spacing-unit--half; }
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding\+      > li { padding: $ekzo-spacing-unit--double; }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding-       > li { padding: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-generics-ns}list--padding\+      > li { padding: ekzo-spacing(2); }
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--padding--flush > li { padding: 0; }
 
 
