@@ -17,18 +17,21 @@ $ekzo-enable-responsive-widths:  true !default;
 // Breakpoints
 // ---------------------------------------
 
-$ekzo-lap:         481px  !default;
-$ekzo-desk:        1024px !default;
-$ekzo-desk-wide:   1200px !default;
+$ekzo-bp-phone:     480px  !default;
+$ekzo-bp-phone-ls:  600px  !default;
+$ekzo-bp-tablet:    720px  !default;
+$ekzo-bp-tablet-ls: 960px  !default;
+$ekzo-bp-lap:       1280px !default;
+$ekzo-bp-desk:      1600px !default;
 
 $ekzo-breakpoints: (
   breakpoints: (
-    palm:       'screen and (max-width: #{$ekzo-lap - 1px})',
-    lap:        'screen and (min-width: #{$ekzo-lap}) and (max-width: #{$ekzo-desk - 1px})',
-    lap-and-up: 'screen and (min-width: #{$ekzo-lap})',
-    portable:   'screen and (max-width: #{$ekzo-desk - 1px})',
-    desk:       'screen and (min-width: #{$ekzo-desk})',
-    desk-wide:  'screen and (min-width: #{$ekzo-desk-wide})'
+    phone:      'screen and (min-width: #{$ekzo-bp-phone})',
+    phone-ls:   'screen and (min-width: #{$ekzo-bp-phone-ls})',
+    tablet:     'screen and (min-width: #{$ekzo-bp-tablet})',
+    tablet-ls:  'screen and (min-width: #{$ekzo-bp-tablet-ls})',
+    lap:        'screen and (min-width: #{$ekzo-bp-lap})'
+    desk:       'screen and (min-width: #{$ekzo-bp-desk})'
   ),
   types: (
     retina:     'screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi)'
