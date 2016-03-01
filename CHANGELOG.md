@@ -31,6 +31,7 @@
 - Added functions and mixins names in error messages
 - Added `$ekzo-enable-widths` option for enabling/disabling widths
 - Added `ekzo-rem()` function, which converts pxs into rems
+- Added global map `$ekzo-z-indexes` and `ekzo-z-index(_z-index-name_)` function to get values from it
 - `ekzo-font-size-classes()` mixin now accepts `$postfix` parameter
 - `ekzo-breakpoint()` now accepts 3 parameters: `breakpoint`, `path` and `map` (backward compatible)
 

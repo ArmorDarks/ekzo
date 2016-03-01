@@ -1,0 +1,8 @@
+
+// =======================================
+// ^FUNCTIONS.Z-INDEX
+// =======================================
+
+@function ekzo-z-index($z-index-name, $map: $ekzo-z-indexes) {
+  @return ekzo-get($map, $z-index-name)
+}

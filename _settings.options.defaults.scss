@@ -43,6 +43,14 @@ $ekzo-widths-columns:                  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !
 $ekzo-responsive-widths-columns:       $ekzo-widths-columns                    !default;
 
 // ---------------------------------------
+// Z-indexes
+// ---------------------------------------
+
+$ekzo-z-indexes: (
+  modal: 100000
+) !default;
+
+// ---------------------------------------
 // Links options
 // ---------------------------------------
 
@@ -104,7 +112,7 @@ $ekzo-links--go-content:                  '\00A0' '\00BB'                 !defau
 $ekzo-links--back-content:                '\00AB' '\00A0'                 !default;
 
 // ---------------------------------------
-// BORDER-BOX
+// Border-box
 // ---------------------------------------
 
-$ekzo-global-border-box:               false !default;
+$ekzo-global-border-box: false !default;
