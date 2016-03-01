@@ -69,7 +69,7 @@ $ekzo-themes: () !default;
     // ---------------------------------------
     // @param {string|false} - false to disable, color value to enable
 
-    btn-color:                       ekzo-color(white),
+    btn-color:                       ekzo-color(green-white),
     btn-bg-color:                    $ekzo-base-brand-color,
     btn-hover-color:                 false,
     btn-hover-bg-color:              ekzo-tint($ekzo-base-brand-color, 10),
