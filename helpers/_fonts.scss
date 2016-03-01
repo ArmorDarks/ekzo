@@ -10,8 +10,11 @@
 @if $ekzo-enable-font-families-helpers {
 
   @each $group, $font-family in $ekzo-font-families {
-    @if not $font-family { $font-family: null }
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}font-family--#{$group} { font-family: $font-family; }
+    @if $font-family {
+
+      .#{$ekzo-ns}#{$ekzo-helpers-ns}font-family--#{$group} { font-family: $font-family; }
+
+    }
   }
 
 }
