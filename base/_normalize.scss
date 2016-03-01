@@ -3,7 +3,7 @@
 // =======================================
 // *NORMALIZE
 // =======================================
-// Improved version of normalize.css merged with resetting css
+// Improved version of normalize.css merged with resetting css and some ideas from sanitize.css
 // Head commit during last update: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1
 
 // ----
@@ -56,6 +56,30 @@ img {
 // ---------------------------------------
 // Display definitions
 // ---------------------------------------
+
+// Universal inheritance
+// @experimental
+
+* {
+  font-size:  inherit;
+  line-height: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align:  inherit;
+}
+
+// Specify default border style of all elements
+// @experimental
+
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0;
+}
 
 // ----
 // Correct `block` display not defined for any HTML5 element in IE 8/9.
