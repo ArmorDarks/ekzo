@@ -22,6 +22,7 @@
 - Added pregenerated automatically all `$ekzo-colors` and colors from `ekzo-themes __theme name__` and options to enable/disable it
 - Added functions `ekzo-font-family()` and `ekzo-ui-font-family` to quickly get values from font-families maps
 - Added automatic generation of helpers based on provided font-families and options to enable/disable them
+- Added `$ekzo-list-style-type` option to set default list style
 - Added option to set monospace font;
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
