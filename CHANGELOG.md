@@ -17,6 +17,9 @@
 - Added option `$ekzo-enable-responsive-helpers-for-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
 - Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-enable-responsive-helpers-for-breakpoints`
 - Added `ekzo-temp()` function and global variable `$ekzo__temp` which allows to pass value from mixins into `@content`. See `ekzo-each-breakpoint()` for example. Hacky.
+- Added `$ekzo-colors` which upholds whole color pallete of website
+- Added `ekzo-color()` function to quickly get value from `$ekzo-colors`
+- Added pregenerated automatically all `$ekzo-colors` and colors from `ekzo-themes __theme name__` and options to enable/disable it
 - Added option to set monospace font;
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths

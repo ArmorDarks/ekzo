@@ -3,11 +3,19 @@
 // ^FUNCTIONS.THEMES
 // =======================================
 
-$ekzo-__theme: null;
+// ---------------------------------------
+// Get color from pallete
+// ---------------------------------------
+
+@function ekzo-color($color-name, $map: $ekzo-colors) {
+  @return ekzo-get($map, $color-name)
+}
 
 // ---------------------------------------
 // Themify
 // ---------------------------------------
+
+$ekzo-__theme: null;
 
 @function ekzo-theme($color-name, $temp-theme: $ekzo-__theme) {
   @if not map-has-key($temp-theme, $color-name) { @error "[ekzo-theme]: no such theme key: #{$color-name}"; }
