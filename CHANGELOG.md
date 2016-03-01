@@ -26,6 +26,8 @@
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
+- Added `ekzo-strip-units()` function which allows to remove units from the value
+- Added `ekzo-units()` function which allows to swap units or add them to the value
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
 `$ekzo-objects-ns`, `$ekzo-components-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`

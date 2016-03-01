@@ -41,7 +41,7 @@
   }
 
   // ensure that we're working with pixels
-  $size: $size + 1px - 1px;
+  $size: ekzo-units($size, px);
 
   font-size: $size;
 
@@ -49,7 +49,7 @@
   @if type-of($line-height) == number {
 
     // ensure that we're working with pixels
-    $line-height: $line-height + 1px - 1px;
+    $line-height: ekzo-units($line-height, px);
 
     line-height: ceil($size / $line-height) * ($line-height / $size);
 
