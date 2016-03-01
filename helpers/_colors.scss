@@ -7,7 +7,7 @@
 // Color pallete
 // ---------------------------------------
 
-@if $ekzo-enable-colors {
+@if $ekzo-enable-colors-helpers {
   @each $color, $value in $ekzo-colors {
     .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color} { color: $value; }
   }
@@ -17,7 +17,7 @@
 // UI colors
 // ---------------------------------------
 
-@if $ekzo-enable-ui-colors {
+@if $ekzo-enable-ui-colors-helpers {
 
   @each $theme, $value in $ekzo-themes {
     @each $color, $value in ekzo-get($ekzo-themes, $theme) {
