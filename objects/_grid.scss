@@ -158,10 +158,8 @@
 
 @if $ekzo-enable-grid and $ekzo-enable-responsive-grid {
 
-  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-    @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-grid-types($postfix: '\\@#{$breakpoint}');
-    }
-  }
+  @include ekzo-each-breakpoint() {
+    @include ekzo-grid-types($postfix: ekzo-temp());
+  };
 
 } // endif

@@ -14,6 +14,9 @@
   * Add theme-related styling to any class with mixin and function `.foo { @include ekzo-theme() { color: ekzo-theme(text-color); } }`.
   * Switch on and off theming globaly with `$ekzo-enable-theming` option without deleting theme includes from classes
   For details about how it works and how to use head to `ekzo-theme()` mixin description.
+- Added option `$ekzo-enable-responsive-helpers-for-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
+- Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-enable-responsive-helpers-for-breakpoints`
+- Added `ekzo-temp()` function and global variable `$ekzo__temp` which allows to pass value from mixins into `@content`. See `ekzo-each-breakpoint()` for example. Hacky.
 - Added option to set monospace font;
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
@@ -37,6 +40,7 @@
 - Updated `normalize.scss`, dropped some older normalizations. Currently it's based on v3.0.3 (head commit: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1)
 - `reset.scss` is now part of `normalize.scss`
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
+- [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-enable-responsive-helpers-for-breakpoints` to disable generation of helper classes for certain breakpoints.
 - [BREAKING] replaced `$ekzo-spacing-unit` variable and its variations with `ekzo-spacing()` (`ekzo-spacing(.25)`, `ekzo-spacing(2)`, etc.) function
 - [BREAKING] renamed `ekzo-font()` mixin to `ekzo-font-face()`
 - [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity

@@ -252,11 +252,9 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
 @if $ekzo-enable-responsive-buttons {
 
-  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-    @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-buttons-sizes($postfix: '\\@#{$breakpoint}');
-    }
-  }
+  @include ekzo-each-breakpoint() {
+    @include ekzo-buttons-sizes($postfix: ekzo-temp());
+  };
 
 } // endif
 

@@ -2,7 +2,10 @@
 // =======================================
 // ^MIXINS.BREAKPOINT
 // =======================================
-//
+
+// ---------------------------------------
+// Breakpoint
+// ---------------------------------------
 // Advanced media query mixin.
 // Accepts Sass map of predefined breakpoints which can be used
 // across whole project.
@@ -17,39 +20,48 @@
 //                                                      ```
 //                                                      lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',
 //                                                      ```
-// @param (string|list|null) $path='breakpoints'      - path to another map inside map (if needed)
 // @param (map)              $map='$ekzo-breakpoints' - map with breakpoints
 //
-// @throws Undefined breakpoint `#{$breakpoint}` in map of breakpoints!
+// @throws '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` at path `#{$path}` in specified map'
 //
 // @example
 //
 //    .component {
-//      @include ekzo-breakpoint(palm, breakpoints){ border: 0px; }
+//      @include ekzo-breakpoint(lap){ border: 0px; }
 //      border: 2px;
 //    }
 //
 
-@mixin ekzo-breakpoint($breakpoint, $path: 'breakpoints', $map: $ekzo-breakpoints) {
+@mixin ekzo-breakpoint($breakpoint, $map: $ekzo-breakpoints) {
 
-  $breakpoint-value: null;
-
-  // assign value from a specified map following specified path
-  @each $key, $value in ekzo-get($map, $path) {
-    @if $key == $breakpoint {
-      $breakpoint-value: $value;
-    }
-  }
+  $query: ekzo-get($map, $breakpoint);
 
   // check wether defined breakpoint exists in requested map
-  @if not $breakpoint-value {
+  @if not $query {
     @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` at path `#{$path}` in specified map'
   }
 
   // @Note: Use `only` to hide media query from old browsers
   //        Details: http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
-  @media only #{$breakpoint-value} {
-    @content;
-  }
+  @media only #{$query} { @content; }
 
+}
+
+// ---------------------------------------
+// Include for each breakpoint
+// ---------------------------------------
+
+@mixin ekzo-each-breakpoint() {
+  @each $breakpoint, $query in $ekzo-breakpoints {
+
+    // check is current breakpoint in lest of available for auto generation of helper classes
+    @if index($ekzo-enable-responsive-helpers-for-breakpoints, $breakpoint) != null {
+      @include ekzo-breakpoint($breakpoint) {
+        $ekzo-__temp: '\\@#{$breakpoint}' !global;
+        @content
+        $ekzo-__temp: null !global;
+      }
+    }
+
+  }
 }

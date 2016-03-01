@@ -146,10 +146,8 @@
 
 @if $ekzo-enable-responsive-spacing {
 
-  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-    @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-spacings($postfix: '\\@#{$breakpoint}');
-    }
-  }
+  @include ekzo-each-breakpoint() {
+    @include ekzo-spacings($postfix: ekzo-temp());
+  };
 
 } // endif

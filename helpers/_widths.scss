@@ -61,12 +61,10 @@
 
 @if $ekzo-enable-widths and $ekzo-enable-responsive-widths {
 
-  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-    @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-widths($columns: $ekzo-responsive-widths-columns,
-        $prefix: $ekzo-ns + $ekzo-helpers-ns,
-        $postfix: '\\@#{$breakpoint}');
-    }
-  }
+  @include ekzo-each-breakpoint() {
+    @include ekzo-widths($columns: $ekzo-responsive-widths-columns,
+      $prefix: $ekzo-ns + $ekzo-helpers-ns,
+      $postfix: ekzo-temp());
+  };
 
 } // endif

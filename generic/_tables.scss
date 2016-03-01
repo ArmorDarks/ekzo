@@ -85,10 +85,8 @@ table { width: 100%; }
 
 @if $ekzo-enable-tables and $ekzo-enable-responsive-tables {
 
-  @each $breakpoint, $value in ekzo-get($ekzo-breakpoints, breakpoints) {
-    @include ekzo-breakpoint($breakpoint) {
-      @include ekzo-table-spacing($postfix: '\\@#{$breakpoint}');
-    }
-  }
+  @include ekzo-each-breakpoint() {
+    @include ekzo-table-spacing($postfix: ekzo-temp());
+  };
 
 } // endif
