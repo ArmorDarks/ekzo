@@ -1,0 +1,81 @@
+
+// =======================================
+// ^FUNCTIONS.UNITS
+// =======================================
+
+// ---------------------------------------
+// Strip units
+// ---------------------------------------
+// Strip units from `$value`
+//
+// @param {Number} $value - Value from which should be removed units
+//
+// @return {number} - Number without units
+
+@function ekzo-strip-units($value) { @return $value / ($value * 0 + 1); }
+
+// ---------------------------------------
+// Change units
+// ---------------------------------------
+// Add `$unit` to `$value`
+//
+// @param {Number} $value - Value to add unit to
+// @param {String} $unit - String representation of the unit
+//
+// @return {number} - `$value` expressed in `$unit`
+// @source https://github.com/eduardoboucas/include-media/blob/master/dist/_include-media.scss
+// @example
+//   padding: ekzo-units(25px, em)
+
+@function ekzo-units($value, $unit) {
+  $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
+
+  @if not index(map-keys($units), $unit) { @error '[ekzo-unit] invalid unit `#{$unit}`' }
+
+  @return ekzo-strip-units($value) * ekzo-get($units, $unit);
+}
+
+// ---------------------------------------
+// To percent
+// ---------------------------------------
+//
+// Calculates percentage based on provided values
+//
+// @param {number:px} $value - value which should be converted into percent
+// @param {number:px} $total - value according to which should be calculated percentage
+//
+// @return {number}
+
+@function ekzo-percent($value, $total) {
+  @return $value / $total * 100%;
+}
+
+// ---------------------------------------
+// To em
+// ---------------------------------------
+//
+// Calculates ems based on provided values
+//
+// @param {number:px} $value                     - value which should be converted into ems
+// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be calculated em value
+//
+// @return {number}
+
+@function ekzo-em($value, $base:ekzo-font-size(base)) {
+  @return ekzo-units($value / $base, em);
+}
+
+// ---------------------------------------
+// To rem
+// ---------------------------------------
+//
+// Calculates rems based on provided values
+//
+// @param {number:px} $value                     - value which should be converted into rems
+// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be calculated rem value
+//
+// @return {number}
+
+@function ekzo-rem($value, $base:ekzo-font-size(base)) {
+  @return ekzo-units($value / $base, rem);
+}
