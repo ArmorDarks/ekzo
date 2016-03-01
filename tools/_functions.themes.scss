@@ -8,6 +8,7 @@
 // ---------------------------------------
 
 @function ekzo-color($color-name, $map: $ekzo-colors) {
+  @if not map-has-key($map, $color-name) { @error "[ekzo-color]: no such color key: #{$color-name}"; }
   @return ekzo-get($map, $color-name)
 }
 
