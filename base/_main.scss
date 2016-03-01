@@ -16,7 +16,7 @@ html {
 
   overflow-y: scroll; // 2
 
-  font-family: $ekzo-font-family; // 3
+  font-family: ekzo-ui-font-family(text); // 3
 
   font-size:   ekzo-font-size(base);
   line-height: $ekzo-line-height;

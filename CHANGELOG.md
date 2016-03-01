@@ -20,6 +20,8 @@
 - Added `$ekzo-colors` which upholds whole color pallete of website
 - Added `ekzo-color()` function to quickly get value from `$ekzo-colors`
 - Added pregenerated automatically all `$ekzo-colors` and colors from `ekzo-themes __theme name__` and options to enable/disable it
+- Added functions `ekzo-font-family()` and `ekzo-ui-font-family` to quickly get values from font-families maps
+- Added automatic generation of helpers based on provided font-families and options to enable/disable them
 - Added option to set monospace font;
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
@@ -43,6 +45,7 @@
 - `$ekzo-bg` now expects everything normal for `background` property, except color, wich from now injected into `html` directly from `$ekzo-theme(base: ( bg-color: _value_ ) )`
 - Updated `normalize.scss`, dropped some older normalizations. Currently it's based on v3.0.3 (head commit: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1)
 - `reset.scss` is now part of `normalize.scss`
+- [BREAKING] сhanged font-families representation from variables to maps
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-enable-responsive-helpers-for-breakpoints` to disable generation of helper classes for certain breakpoints.
 - [BREAKING] replaced `$ekzo-spacing-unit` variable and its variations with `ekzo-spacing()` (`ekzo-spacing(.25)`, `ekzo-spacing(2)`, etc.) function

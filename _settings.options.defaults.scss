@@ -38,6 +38,8 @@ $ekzo-enable-tooltips:                 true  !default;
 
 $ekzo-enable-colors:                   true  !default;
 $ekzo-enable-ui-colors:                true  !default;
+$ekzo-enable-font-families-helpers:    true  !default;
+$ekzo-enable-ui-font-families-helpers: true  !default;
 $ekzo-enable-widths:                   true  !default;
 $ekzo-widths-columns:                  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
 $ekzo-responsive-widths-columns:       $ekzo-widths-columns                    !default;

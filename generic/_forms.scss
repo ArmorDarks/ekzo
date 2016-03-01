@@ -6,7 +6,7 @@
 
 
 ::placeholder {
-  font-family: $ekzo-forms-font-family;
+  font-family: ekzo-ui-font-family(forms);
   font-size:   $ekzo-forms-placeholder-font-size;
   font-style:  $ekzo-forms-placeholder-font-style;
   @include ekzo-theme() { color: ekzo-theme(forms-placeholder-color); }
@@ -20,7 +20,7 @@ fieldset + fieldset { margin-top: ekzo-spacing(2); }
 input,
 textarea,
 label {
-  font-family: $ekzo-forms-font-family;
+  font-family: ekzo-ui-font-family(forms);
   font-size:   $ekzo-forms-font-size;
   @include ekzo-theme() { color: ekzo-theme(forms-color); }
 }

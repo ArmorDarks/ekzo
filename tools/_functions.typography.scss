@@ -3,7 +3,6 @@
 // ^FUNCTIONS.TYPOGRAPHY
 // =======================================
 
-
 // ---------------------------------------
 // Output font size
 // ---------------------------------------
@@ -40,4 +39,22 @@
 
   @return $value
 
+}
+
+// ---------------------------------------
+// Get font-family
+// ---------------------------------------
+
+@function ekzo-font-family($font-family-name, $map: $ekzo-font-families) {
+  @if not map-has-key($map, $font-family-name) { @error "[ekzo-font-family]: no such color key: #{$font-family-name}"; }
+  @return unquote(ekzo-get($map, $font-family-name))
+}
+
+// ---------------------------------------
+// Get element font-family
+// ---------------------------------------
+
+@function ekzo-ui-font-family($font-family-name, $map: $ekzo-ui-font-families) {
+  @if not map-has-key($map, $font-family-name) { @error "[ekzo-ui-font-family]: no such color key: #{$font-family-name}"; }
+  @return ekzo-get($map, $font-family-name)
 }
