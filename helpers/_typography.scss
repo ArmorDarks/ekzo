@@ -4,74 +4,96 @@
 // ^HELPERS.TYPOGRAPHY
 // =======================================
 
-// ---------------------------------------
-// Complex text helpers
-// ---------------------------------------
-//
-// Including font-sizes, line-heights
-// For headings also included font-weight, font style and colors (if enabled in settings)
+@mixin ekzo-typography-helpers($prefix: '', $postfix: '') {
 
-// ----
-// Text
+  // ---------------------------------------
+  // Complex text helpers
+  // ---------------------------------------
+  // Including font-sizes, line-heights
+  // For headings also included font-weight, font style and colors (if enabled in settings)
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + $ekzo-helpers-ns + text--);
+  // ----
+  // Text
 
-// ----
-// Standard headings
-//
-// When we define a heading we also define a corresponding class to go with it.
-// This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
+  @include ekzo-font-size-classes(text, $prefix: $prefix + text--, $postfix: $postfix);
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns) { @extend %#{$ekzo-ns}#{$ekzo-helpers-ns}headings-properties; }
+  // ----
+  // Standard headings
+  //
+  // When we define a heading we also define a corresponding class to go with it.
+  // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
-// ----
-// Extra headings
-//
-// A series of classes for setting massive type; for use in heroes, promos, etc.
+  @include ekzo-font-size-classes(headings, $prefix: $prefix, $postfix: $postfix) { @extend %#{$ekzo-ns}#{$ekzo-helpers-ns}headings-properties; }
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + text--) {
-  @if ekzo-ui-font-family(extra-headings)                      { font-family: ekzo-ui-font-family(extra-headings); }
-  @include ekzo-theme() { @if ekzo-theme(extra-headings-color) { color: ekzo-theme(extra-headings-color); } }
+  // ----
+  // Extra headings
+  //
+  // A series of classes for setting massive type; for use in heroes, promos, etc.
+
+  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + text--, $postfix: $postfix) {
+    @if ekzo-ui-font-family(extra-headings)                      { font-family: ekzo-ui-font-family(extra-headings); }
+    @include ekzo-theme() { @if ekzo-theme(extra-headings-color) { color: ekzo-theme(extra-headings-color); } }
+  }
+
+  // ---------------------------------------
+  // Font-sizes helpers
+  // ---------------------------------------
+  // Only font-size property, without line-heights
+
+  @include ekzo-font-size-classes(text, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
+  @include ekzo-font-size-classes(headings, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
+  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
+
+  // @todo Add to font-sizes map
+
+  .#{$prefix}font-size--em--#{$postfix}       { font-size: .5em; }
+  .#{$prefix}font-size--em-#{$postfix}        { font-size: .75em; }
+  .#{$prefix}font-size--em\+-#{$postfix}      { font-size: 1.25em; }
+  .#{$prefix}font-size--em\+--#{$postfix}     { font-size: 1.5em; }
+  .#{$prefix}font-size--em\+#{$postfix}       { font-size: 2em; }
+  .#{$prefix}font-size--em\+\+-#{$postfix}    { font-size: 2.25em; }
+  .#{$prefix}font-size--em\+\+--#{$postfix}   { font-size: 2.5em; }
+  .#{$prefix}font-size--em\+\+#{$postfix}     { font-size: 3em; }
+  .#{$prefix}font-size--em\+\+\+#{$postfix}   { font-size: 4em; }
+  .#{$prefix}font-size--em\+\+\+\+#{$postfix} { font-size: 5em; }
+
+  // ---------------------------------------
+  // Line-height helpers
+  // ---------------------------------------
+
+  @include ekzo-font-size-classes(text, $prefix: $prefix + line-height--, $postfix: $postfix, $line-height: only);
+  @include ekzo-font-size-classes(headings, $prefix: $prefix + line-height--, $postfix: $postfix, $line-height: only);
+  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + line-height--, $postfix: $postfix, $line-height: only);
+
+  // ----
+  // Take element out of typography rhythm
+  // Should be applied on custom elements with unusual styling
+
+  .#{$prefix}line-height--flush#{$postfix} { line-height: 1 !important; }
+
 }
 
 // ---------------------------------------
-// Font-sizes helpers
+// Call all positioning helpers
 // ---------------------------------------
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + $ekzo-helpers-ns + font-size--, $line-height: false);
+@if $ekzo-enable-typography-helpers {
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + font-size--, $line-height: false);
+  @include ekzo-typography-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + font-size--, $line-height: false);
-
-// @todo Add to font-sizes map
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em--       { font-size: .5em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em-        { font-size: .75em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+-      { font-size: 1.25em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+--     { font-size: 1.5em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+       { font-size: 2em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+-    { font-size: 2.25em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+--   { font-size: 2.5em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+     { font-size: 3em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+\+   { font-size: 4em; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-size--em\+\+\+\+ { font-size: 5em; }
+} // endif
 
 // ---------------------------------------
-// Line-height helpers
+// Responsive positioning helpers
 // ---------------------------------------
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + $ekzo-helpers-ns + line-height--, $line-height: only);
+@if $ekzo-enable-typography-helpers and $ekzo-enable-responsive-typography-helpers {
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + line-height--, $line-height: only);
+  @include ekzo-each-breakpoint() {
+    @include ekzo-typography-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+  };
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + line-height--, $line-height: only);
-
-// ----
-// Take element out of typography rhythm
-// Should be applied on custom elements with unusual styling
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}line-height--flush { line-height: 1 !important; }
+} // endif
 
 // ---------------------------------------
 // Text styling
