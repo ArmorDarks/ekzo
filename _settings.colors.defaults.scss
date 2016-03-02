@@ -12,8 +12,7 @@ $ekzo-colors: (
 
 $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
 
-$ekzo-themes: () !default;
-@include ekzo-extend-themes((
+$ekzo-themes: (
   base: (
 
     brand:                     $ekzo-base-brand-color,
@@ -116,5 +115,6 @@ $ekzo-themes: () !default;
     // ---------------------------------------
 
     bg:                        ekzo-color(shuttle-gray)
+
   )
-));
+) !default;
