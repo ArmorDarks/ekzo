@@ -15,16 +15,16 @@
 // ---------------------------------------
 // @source https://github.com/inuitcss/tools.widths/blob/master/_tools.widths.scss
 //
-// @param {list}   $columns    - array of columns which should be generated
+// @param {list}   $fractions  - array of columns which should be generated
 // @param {string} $prefix=''  - namespace
 // @param {string} $postfix='' - namespace (used for breakpoins generation)
 //
 // @returns class. For example: `h-2/3@lap`
 
-@mixin ekzo-widths-helpers($columns, $prefix:'', $postfix:'') {
+@mixin ekzo-widths-helpers($fractions, $prefix:'', $postfix:'') {
 
   // Loop through the number of columns for each denominator of fractions.
-  @each $denominator in $columns {
+  @each $denominator in $fractions {
 
     // If we’re trying to make wholes, just spit a 100% width utility out one time only.
     @if ($denominator == 1) {
@@ -50,7 +50,7 @@
 
 @if $ekzo-enable-widths-helpers {
 
-  @include ekzo-widths-helpers($columns: $ekzo-widths-helpers-columns,
+  @include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions,
     $prefix: $ekzo-ns + $ekzo-helpers-ns);
 
 } // endif
@@ -62,7 +62,7 @@
 @if $ekzo-enable-widths-helpers and $ekzo-enable-responsive-widths-helpers {
 
   @include ekzo-each-breakpoint() {
-    @include ekzo-widths-helpers($columns: $ekzo-responsive-widths-helpers-columns,
+    @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
       $prefix: $ekzo-ns + $ekzo-helpers-ns,
       $postfix: ekzo-temp());
   };

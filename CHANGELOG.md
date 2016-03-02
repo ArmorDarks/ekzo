@@ -28,7 +28,7 @@
 - Added `$ekzo-list-style-type` option to set default list style
 - Added option to set monospace font;
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
-- Added options `$ekzo-widths-columns` and `$ekzo-responsive-widths-columns` to control generated widths
+- Added options `$ekzo-widths-fractions` and `$ekzo-responsive-widths-fractions` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
 - Added `ekzo-strip-units()` function which allows to remove units from the value
 - Added `ekzo-units()` function which allows to swap units or add them to the value

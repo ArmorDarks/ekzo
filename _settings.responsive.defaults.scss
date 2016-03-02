@@ -18,7 +18,7 @@ $ekzo-enable-responsive-spacing-helpers:      true !default;
 $ekzo-enable-responsive-typography-helpers:   true !default;
 $ekzo-enable-responsive-widths-helpers:       true !default;
 
-$ekzo-responsive-widths-helpers-columns:      $ekzo-widths-helpers-columns !default;
+$ekzo-responsive-widths-helpers-fractions:    $ekzo-widths-helpers-fractions !default;
 
 $ekzo-enable-responsive-helpers-for-breakpoints: (
   phone, phone-ls, tablet, tablet-ls, lap, desk
