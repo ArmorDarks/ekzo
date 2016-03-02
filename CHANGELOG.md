@@ -53,6 +53,7 @@
 - Updated `normalize.scss`, dropped some older normalizations. Currently it's based on v3.0.3 (head commit: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1)
 - `reset.scss` is now part of `normalize.scss`
 - `$ekzo-global-border-box` is enabled by default
+- [BREAKING] proper widths and spacing helpers mixins and options names
 - [BREAKING] сhanged font-families representation from variables to maps
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-enable-responsive-helpers-for-breakpoints` to disable generation of helper classes for certain breakpoints.

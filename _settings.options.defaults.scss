@@ -13,39 +13,40 @@ $ekzo-enable-theming:                  true  !default;
 // ELEMENTS AND ABSTRACTIONS
 // ---------------------------------------
 
-$ekzo-enable-forms:                    true  !default;
-$ekzo-enable-lists:                    true  !default;
-$ekzo-enable-tables:                   true  !default;
+$ekzo-enable-forms:                      true  !default;
+$ekzo-enable-lists:                      true  !default;
+$ekzo-enable-tables:                     true  !default;
 
-$ekzo-enable-a-nav:                    true  !default;
-$ekzo-enable-arrows:                   true  !default;
-$ekzo-enable-border-reline:            true  !default;
-$ekzo-enable-breadcrumb:               true  !default;
-$ekzo-enable-buttons:                  true  !default;
-$ekzo-enable-center-inner:             true  !default;
-$ekzo-enable-flag:                     true  !default;
-$ekzo-enable-floated-nav:              true  !default;
-$ekzo-enable-grid:                     true  !default;
-$ekzo-enable-iconic-list:              true  !default;
-$ekzo-enable-icons:                    true  !default;
-$ekzo-enable-island:                   true  !default;
-$ekzo-enable-media:                    true  !default;
-$ekzo-enable-nav:                      true  !default;
-$ekzo-enable-pack:                     true  !default;
-$ekzo-enable-reline:                   true  !default;
-$ekzo-enable-sprites:                  true  !default;
-$ekzo-enable-tooltips:                 true  !default;
+$ekzo-enable-a-nav:                      true  !default;
+$ekzo-enable-arrows:                     true  !default;
+$ekzo-enable-border-reline:              true  !default;
+$ekzo-enable-breadcrumb:                 true  !default;
+$ekzo-enable-buttons:                    true  !default;
+$ekzo-enable-center-inner:               true  !default;
+$ekzo-enable-flag:                       true  !default;
+$ekzo-enable-floated-nav:                true  !default;
+$ekzo-enable-grid:                       true  !default;
+$ekzo-enable-iconic-list:                true  !default;
+$ekzo-enable-icons:                      true  !default;
+$ekzo-enable-island:                     true  !default;
+$ekzo-enable-media:                      true  !default;
+$ekzo-enable-nav:                        true  !default;
+$ekzo-enable-pack:                       true  !default;
+$ekzo-enable-reline:                     true  !default;
+$ekzo-enable-sprites:                    true  !default;
+$ekzo-enable-tooltips:                   true  !default;
 
-$ekzo-enable-typography-helpers:       true  !default;
-$ekzo-enable-positioning-helpers:      true  !default;
-$ekzo-enable-display-helpers:          true  !default;
-$ekzo-enable-colors-helpers:           true  !default;
-$ekzo-enable-ui-colors-helpers:        true  !default;
-$ekzo-enable-font-families-helpers:    true  !default;
-$ekzo-enable-ui-font-families-helpers: true  !default;
-$ekzo-enable-widths:                   true  !default;
-$ekzo-widths-columns:                  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
-$ekzo-responsive-widths-columns:       $ekzo-widths-columns                    !default;
+$ekzo-enable-colors-helpers:             true  !default;
+$ekzo-enable-display-helpers:            true  !default;
+$ekzo-enable-font-families-helpers:      true  !default;
+$ekzo-enable-positioning-helpers:        true  !default;
+$ekzo-enable-typography-helpers:         true  !default;
+$ekzo-enable-ui-colors-helpers:          true  !default;
+$ekzo-enable-ui-font-families-helpers:   true  !default;
+$ekzo-enable-widths-helpers:             true  !default;
+
+$ekzo-widths-helpers-columns:            (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+$ekzo-responsive-widths-helpers-columns: $ekzo-widths-helpers-columns            !default;
 
 // ---------------------------------------
 // Z-indexes

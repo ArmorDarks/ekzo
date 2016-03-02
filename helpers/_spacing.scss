@@ -10,7 +10,7 @@
 //
 // @param {string} $postfix='' - namespace (used for breakpoins generation)
 
-@mixin ekzo-spacings($prefix: '', $postfix: '') {
+@mixin ekzo-spacing-helpers($prefix: '', $postfix: '') {
 
   // ---------------------------------------
   // Margins
@@ -132,22 +132,22 @@
   .#{$prefix}padding-ends--flush#{$postfix}   { padding-top:    0 !important; padding-bottom: 0 !important; }
   .#{$prefix}padding-sides--flush#{$postfix}  { padding-right:  0 !important; padding-left:   0 !important; }
 
-} // widths()
+} // ekzo-spacing-helpers()
 
 // ---------------------------------------
 // Call all spacing helpers
 // ---------------------------------------
 
-@include ekzo-spacings($prefix: $ekzo-ns + $ekzo-helpers-ns);
+@include ekzo-spacing-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
 
 // ---------------------------------------
 // Responsive spacing helpers
 // ---------------------------------------
 
-@if $ekzo-enable-responsive-spacing {
+@if $ekzo-enable-responsive-spacing-helpers {
 
   @include ekzo-each-breakpoint() {
-    @include ekzo-spacings($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+    @include ekzo-spacing-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
 } // endif

@@ -21,7 +21,7 @@
 //
 // @returns class. For example: `h-2/3@lap`
 
-@mixin ekzo-widths($columns, $prefix:'', $postfix:'') {
+@mixin ekzo-widths-helpers($columns, $prefix:'', $postfix:'') {
 
   // Loop through the number of columns for each denominator of fractions.
   @each $denominator in $columns {
@@ -42,15 +42,15 @@
 
   }
 
-} // ekzo-widths()
+} // ekzo-widths-helpers()
 
 // ---------------------------------------
 // Call all widths
 // ---------------------------------------
 
-@if $ekzo-enable-widths {
+@if $ekzo-enable-widths-helpers {
 
-  @include ekzo-widths($columns: $ekzo-widths-columns,
+  @include ekzo-widths-helpers($columns: $ekzo-widths-helpers-columns,
     $prefix: $ekzo-ns + $ekzo-helpers-ns);
 
 } // endif
@@ -59,10 +59,10 @@
 // Responsive widths
 // ---------------------------------------
 
-@if $ekzo-enable-widths and $ekzo-enable-responsive-widths {
+@if $ekzo-enable-widths-helpers and $ekzo-enable-responsive-widths-helpers {
 
   @include ekzo-each-breakpoint() {
-    @include ekzo-widths($columns: $ekzo-responsive-widths-columns,
+    @include ekzo-widths-helpers($columns: $ekzo-responsive-widths-helpers-columns,
       $prefix: $ekzo-ns + $ekzo-helpers-ns,
       $postfix: ekzo-temp());
   };
