@@ -83,9 +83,9 @@ table { width: 100%; }
 // Call responsive tables modifiers mixin
 // ---------------------------------------
 
-@if $ekzo-enable-tables and $ekzo-enable-responsive-tables {
+@if $ekzo-enable-tables {
 
-  @include ekzo-each-breakpoint() {
+  @include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-tables) {
     @include ekzo-table-spacing($postfix: ekzo-temp());
   };
 

@@ -56,9 +56,9 @@
 // Responsive positioning helpers
 // ---------------------------------------
 
-@if $ekzo-enable-positioning-helpers and $ekzo-enable-responsive-positioning-helpers {
+@if $ekzo-enable-positioning-helpers {
 
-  @include ekzo-each-breakpoint() {
+  @include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-positioning-helpers) {
     @include ekzo-positioning-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 

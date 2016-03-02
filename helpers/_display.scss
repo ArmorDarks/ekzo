@@ -106,9 +106,9 @@
 // Responsive display helpers
 // ---------------------------------------
 
-@if $ekzo-enable-display-helpers and $ekzo-enable-responsive-display-helpers {
+@if $ekzo-enable-display-helpers {
 
-  @include ekzo-each-breakpoint() {
+  @include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-display-helpers) {
     @include ekzo-display-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 

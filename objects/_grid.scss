@@ -156,9 +156,9 @@
 // Call responsive grid modifiers mixin
 // ---------------------------------------
 
-@if $ekzo-enable-grid and $ekzo-enable-responsive-grid {
+@if $ekzo-enable-grid {
 
-  @include ekzo-each-breakpoint() {
+  @include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-grid) {
     @include ekzo-grid-types($postfix: ekzo-temp());
   };
 

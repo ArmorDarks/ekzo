@@ -144,10 +144,6 @@
 // Responsive spacing helpers
 // ---------------------------------------
 
-@if $ekzo-enable-responsive-spacing-helpers {
-
-  @include ekzo-each-breakpoint() {
-    @include ekzo-spacing-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
-  };
-
-} // endif
+@include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-spacing-helpers) {
+  @include ekzo-spacing-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+};
