@@ -17,8 +17,8 @@
 - Added `$ekzo-colors` which upholds whole color pallete of website
 - Added `ekzo-color()` function to quickly get value from `$ekzo-colors`
 - Added pregenerated automatically all `$ekzo-colors` and colors from `ekzo-themes __theme name__` and options to enable/disable it
-- Added option `$ekzo-enable-responsive-helpers-for-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
-- Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-enable-responsive-helpers-for-breakpoints`
+- Added option `$ekzo-responsive-helpers-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
+- Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-responsive-helpers-breakpoints`
 - Added `ekzo-temp()` function and global variable `$ekzo__temp` which allows to pass value from mixins into `@content`. See `ekzo-each-breakpoint()` for example. Hacky.
 - Added responsive display helpers and options to switch them on or off.
 - Added responsive positioning helpers and options to switch them on or off.
@@ -56,7 +56,8 @@
 - [BREAKING] proper widths and spacing helpers mixins and options names
 - [BREAKING] сhanged font-families representation from variables to maps
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
-- [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-enable-responsive-helpers-for-breakpoints` to disable generation of helper classes for certain breakpoints.
+- [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-responsive-helpers-breakpoints` to disable generation of helper classes for certain breakpoints.
+- [BREAKING] each responsive helpers enabling/disabling option now accepts list of breakpoints for which responsive helpers should be generated. This allow to precisely select for which helpers which breakpoints should be generated. They also renamed from like `$ekzo-enable-responsive-display-helpers` to `ekzo-responsive-display-helpers-breakpoints` to better represent their nature. All options by default set to `$ekzo-responsive-helpers-breakpoints` value
 - [BREAKING] replaced `$ekzo-spacing-unit` variable and its variations with `ekzo-spacing()` (`ekzo-spacing(.25)`, `ekzo-spacing(2)`, etc.) function
 - [BREAKING] renamed `ekzo-font()` mixin to `ekzo-font-face()`
 - [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity
