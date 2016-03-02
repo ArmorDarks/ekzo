@@ -4,41 +4,62 @@
 // ^HELPERS.POSITIONING
 // =======================================
 
+@mixin ekzo-positioning-helpers($prefix:'', $postfix:'') {
+
+  // ---------------------------------------
+  // Position
+  // ---------------------------------------
+  //
+  // Set position to `relative` or `absolute`
+  // Useful in case you need to put in it absolutely-positioned container
+  // or to move it around
+
+  .#{$prefix}position--relative#{$postfix} { position: relative; }
+  .#{$prefix}position--absolute#{$postfix} { position: absolute; }
+
+  // ---------------------------------------
+  // Floats
+  // ---------------------------------------
+
+  .#{$prefix}float--right#{$postfix}   { float: right !important; }
+  .#{$prefix}float--left#{$postfix}    { float: left  !important; }
+  .#{$prefix}float--flush#{$postfix}   { float: none  !important; }
+
+  // ---------------------------------------
+  // Alignments
+  // ---------------------------------------
+  //
+  // 1. @legacy Forcing flex alignment for grids, which have been written before flex-based implementation
+
+  .#{$prefix}align--left#{$postfix}          { text-align: left    !important; justify-content: flex-start    !important; } // 1
+  .#{$prefix}align--right#{$postfix}         { text-align: right   !important; justify-content: flex-end      !important; } // 1
+  .#{$prefix}align--center#{$postfix}        { text-align: center  !important; justify-content: center        !important; } // 1
+  .#{$prefix}align--justify#{$postfix}       { text-align: justify !important; justify-content: space-between !important; } // 1
+
+  .#{$prefix}align--top#{$postfix}           { vertical-align: top    !important; align-items: flex-start !important; } // 1
+  .#{$prefix}align--middle#{$postfix}        { vertical-align: middle !important; align-items: center     !important; } // 1
+  .#{$prefix}align--bottom#{$postfix}        { vertical-align: bottom !important; align-items: flex-end   !important; } // 1
+
+}
 
 // ---------------------------------------
-// Position
-// ---------------------------------------
-//
-// Set position to `relative` or `absolute`
-// Useful in case you need to put in it absolutely-positioned container
-// or to move it around
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}position--relative { position: relative; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}position--absolute { position: absolute; }
-
-
-
-// ---------------------------------------
-// Floats
+// Call all positioning helpers
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}float--right   { float: right !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}float--left    { float: left  !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}float--flush   { float: none  !important; }
+@if $ekzo-enable-positioning-helpers {
 
+  @include ekzo-positioning-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
 
+} // endif
 
 // ---------------------------------------
-// Alignments
+// Responsive positioning helpers
 // ---------------------------------------
-//
-// 1. @legacy Forcing flex alignment for grids, which have been written before flex-based implementation
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--left          { text-align: left    !important; justify-content: flex-start    !important; } // 1
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--right         { text-align: right   !important; justify-content: flex-end      !important; } // 1
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--center        { text-align: center  !important; justify-content: center        !important; } // 1
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--justify       { text-align: justify !important; justify-content: space-between !important; } // 1
+@if $ekzo-enable-positioning-helpers and $ekzo-enable-responsive-positioning-helpers {
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--top           { vertical-align: top    !important; align-items: flex-start !important; } // 1
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--middle        { vertical-align: middle !important; align-items: center     !important; } // 1
-.#{$ekzo-ns}#{$ekzo-helpers-ns}align--bottom        { vertical-align: bottom !important; align-items: flex-end   !important; } // 1
+  @include ekzo-each-breakpoint() {
+    @include ekzo-positioning-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+  };
+
+} // endif

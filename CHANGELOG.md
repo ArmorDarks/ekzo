@@ -21,6 +21,7 @@
 - Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-enable-responsive-helpers-for-breakpoints`
 - Added `ekzo-temp()` function and global variable `$ekzo__temp` which allows to pass value from mixins into `@content`. See `ekzo-each-breakpoint()` for example. Hacky.
 - Added responsive display helpers and options to switch them on or off.
+- Added responsive positioning helpers and options to switch them on or off.
 - Added functions `ekzo-font-family()` and `ekzo-ui-font-family` to quickly get values from font-families maps
 - Added automatic generation of helpers based on provided font-families and options to enable/disable them
 - Added `$ekzo-list-style-type` option to set default list style

@@ -7,12 +7,13 @@
 // Responsiveness
 // ---------------------------------------
 
-$ekzo-enable-responsive-buttons:          true !default;
-$ekzo-enable-responsive-grid:             true !default;
-$ekzo-enable-responsive-spacing:          true !default;
-$ekzo-enable-responsive-tables:           true !default;
-$ekzo-enable-responsive-widths:           true !default;
-$ekzo-enable-responsive-display-helpers:  true !default;
+$ekzo-enable-responsive-buttons:              true !default;
+$ekzo-enable-responsive-grid:                 true !default;
+$ekzo-enable-responsive-spacing:              true !default;
+$ekzo-enable-responsive-tables:               true !default;
+$ekzo-enable-responsive-widths:               true !default;
+$ekzo-enable-responsive-display-helpers:      true !default;
+$ekzo-enable-responsive-positioning-helpers:  true !default;
 
 $ekzo-enable-responsive-helpers-for-breakpoints: (
   phone, phone-ls, tablet, tablet-ls, lap, desk
