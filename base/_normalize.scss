@@ -183,12 +183,18 @@ a:hover { outline: 0; }
 // Address inconsistent styling of `abbr[title]`.
 // 1. Correct styling in Firefox 39 and Opera 12.
 // 2. Correct missing styling in Chrome, Edge, IE, Opera, and Safari.
+// @note Commented out rules doesn't work normal, because even modern browsers do not support text-decoration styles yet
 
 
 abbr[title] {
-  border-bottom: none; // 1
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+
+  text-decoration: none;
+
+  // border-bottom: none; // 1
+  // text-decoration: underline; // 2
+  // text-decoration: underline dotted; // 2
 }
 
 // ----
