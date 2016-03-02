@@ -36,6 +36,7 @@
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
 `$ekzo-objects-ns`, `$ekzo-components-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
+- Added quite handy `.h-font-weight--bolder` helper class
 - Added `ekzo-font-size-class()` mixin for generation of single font-size class
 - Added functions and mixins names in error messages
 - Added `$ekzo-enable-widths` option for enabling/disabling widths
