@@ -1,0 +1,26 @@
+
+// =======================================
+// ^MIXINS.SIZE-MODIFIERS
+// =======================================
+
+@mixin ekzo-size-modifiers($class-name, $spacings, $prefix: '', $postfix: '', $incrementor-symbol: '\\+', $decrementor-symbol: '-') {
+  @each $spacing in $spacings{
+    $modifier: '';
+    $fraction: $spacing - floor($spacing);
+
+    @if      $fraction == 0   { $symbolsCount: 0; }
+    @else if $fraction == .25 { $symbolsCount: 3; }
+    @else if $fraction == .5  { $symbolsCount: 2; }
+    @else if $fraction == .75 { $symbolsCount: 1; }
+    @else                     { @error '[ekzo-size-modifiers]: value should be multiply of `.25' }
+
+    @if $spacing > 1       { @for $i from 1 to $spacing { $modifier: '#{$modifier}#{$incrementor-symbol}'; } }
+    @if $symbolsCount != 0 { @for $i from 1 through $symbolsCount { $modifier: '#{$modifier}#{$decrementor-symbol}'; } }
+
+    .#{$prefix}#{$class-name}#{$modifier}#{$postfix} {
+      $ekzo-__temp: ekzo-spacing($spacing) !global;
+      @content
+      $ekzo-__temp: null !global;
+    }
+  }
+}

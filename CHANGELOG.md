@@ -30,6 +30,7 @@
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
 - Added options `$ekzo-widths-fractions` and `$ekzo-responsive-widths-fractions` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
+- Added `ekzo-size-modifiers()` mixin with quite strange name (should think about better one) wich will output classes based on common in Ekzo size modifiers name conventions (like `margin++-`) by accepting base class name and list of spacings, which should be applied
 - Added `ekzo-strip-units()` function which allows to remove units from the value
 - Added `ekzo-units()` function which allows to swap units or add them to the value
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
@@ -53,6 +54,7 @@
 - Updated `normalize.scss`, dropped some older normalizations. Currently it's based on v3.0.3 (head commit: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1)
 - `reset.scss` is now part of `normalize.scss`
 - `$ekzo-global-border-box` is enabled by default
+- [BREAKING] spacing helpers now outputed automatically based on provided in `$ekzo-margin-helpers-spacings`, `$ekzo-bleed-helpers-spacings` and `$ekzo-padding-helpers-spacings` lists of spacings
 - [BREAKING] proper widths and spacing helpers mixins and options names
 - [BREAKING] сhanged font-families representation from variables to maps
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.

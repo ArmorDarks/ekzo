@@ -5,145 +5,102 @@
 // =======================================
 
 // ---------------------------------------
-// Spacing mixin
+// Margins
 // ---------------------------------------
-//
-// @param {string} $postfix='' - namespace (used for breakpoins generation)
 
-@mixin ekzo-spacing-helpers($prefix: '', $postfix: '') {
+// ----
+// Add/remove margins
 
-  // ---------------------------------------
-  // Margins
-  // ---------------------------------------
+@mixin ekzo-margin-helpers($spacings: (), $prefix: '', $postfix: '') {
+  .#{$prefix}margin--center#{$postfix}                                                         { margin-left:   auto !important; margin-right: auto !important; }
 
-  // ----
-  // Add/remove margins
+  @include ekzo-size-modifiers('margin',        $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin:        ekzo-temp() !important; }
+  @include ekzo-size-modifiers('margin-top',    $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-top:    ekzo-temp() !important; }
+  @include ekzo-size-modifiers('margin-right',  $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-right:  ekzo-temp() !important; }
+  @include ekzo-size-modifiers('margin-bottom', $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-bottom: ekzo-temp() !important; }
+  @include ekzo-size-modifiers('margin-left',   $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-left:   ekzo-temp() !important; }
+  @include ekzo-size-modifiers('margin-ends',   $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-top:    ekzo-temp() !important; margin-bottom: ekzo-temp() !important; }
+  @include ekzo-size-modifiers('margin-sides',  $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-right:  ekzo-temp() !important; margin-left:   ekzo-temp() !important; }
 
-  .#{$prefix}margin--center#{$postfix}        { margin-left:   auto !important; margin-right: auto !important; }
+  .#{$prefix}margin--flush#{$postfix}                                                          { margin:        0 !important; }
+  .#{$prefix}margin-top--flush#{$postfix}                                                      { margin-top:    0 !important; }
+  .#{$prefix}margin-right--flush#{$postfix}                                                    { margin-right:  0 !important; }
+  .#{$prefix}margin-bottom--flush#{$postfix}                                                   { margin-bottom: 0 !important; }
+  .#{$prefix}margin-left--flush#{$postfix}                                                     { margin-left:   0 !important; }
+  .#{$prefix}margin-ends--flush#{$postfix}                                                     { margin-top:    0 !important; margin-bottom: 0 !important; }
+  .#{$prefix}margin-sides--flush#{$postfix}                                                    { margin-right:  0 !important; margin-left:   0 !important; }
+} // ekzo-spacing-helpers()
 
-  .#{$prefix}margin- #{$postfix}              { margin:        ekzo-spacing(.5) !important; }
-  .#{$prefix}margin-top-#{$postfix}           { margin-top:    ekzo-spacing(.5) !important; }
-  .#{$prefix}margin-right-#{$postfix}         { margin-right:  ekzo-spacing(.5) !important; }
-  .#{$prefix}margin-bottom-#{$postfix}        { margin-bottom: ekzo-spacing(.5) !important; }
-  .#{$prefix}margin-left-#{$postfix}          { margin-left:   ekzo-spacing(.5) !important; }
-  .#{$prefix}margin-ends-#{$postfix}          { margin-top:    ekzo-spacing(.5) !important; margin-bottom: ekzo-spacing(.5) !important; }
-  .#{$prefix}margin-sides-#{$postfix}         { margin-right:  ekzo-spacing(.5) !important; margin-left:   ekzo-spacing(.5) !important; }
+// ----
+// Negative margins
 
-  .#{$prefix}margin#{$postfix}                { margin:        ekzo-spacing(1) !important; }
-  .#{$prefix}margin-top#{$postfix}            { margin-top:    ekzo-spacing(1) !important; }
-  .#{$prefix}margin-right#{$postfix}          { margin-right:  ekzo-spacing(1) !important; }
-  .#{$prefix}margin-bottom#{$postfix}         { margin-bottom: ekzo-spacing(1) !important; }
-  .#{$prefix}margin-left#{$postfix}           { margin-left:   ekzo-spacing(1) !important; }
-  .#{$prefix}margin-ends#{$postfix}           { margin-top:    ekzo-spacing(1) !important; margin-bottom: ekzo-spacing(1) !important; }
-  .#{$prefix}margin-sides#{$postfix}          { margin-right:  ekzo-spacing(1) !important; margin-left:   ekzo-spacing(1) !important; }
-
-  .#{$prefix}margin\+-#{$postfix}             { margin:        ekzo-spacing(1.5) !important; }
-  .#{$prefix}margin-top\+-#{$postfix}         { margin-top:    ekzo-spacing(1.5) !important; }
-  .#{$prefix}margin-right\+-#{$postfix}       { margin-right:  ekzo-spacing(1.5) !important; }
-  .#{$prefix}margin-bottom\+-#{$postfix}      { margin-bottom: ekzo-spacing(1.5) !important; }
-  .#{$prefix}margin-left\+-#{$postfix}        { margin-left:   ekzo-spacing(1.5) !important; }
-  .#{$prefix}margin-ends\+-#{$postfix}        { margin-top:    ekzo-spacing(1.5) !important; margin-bottom: ekzo-spacing(1.5) !important; }
-  .#{$prefix}margin-sides\+-#{$postfix}       { margin-right:  ekzo-spacing(1.5) !important; margin-left:   ekzo-spacing(1.5) !important; }
-
-  .#{$prefix}margin\+#{$postfix}              { margin:        ekzo-spacing(2) !important; }
-  .#{$prefix}margin-top\+#{$postfix}          { margin-top:    ekzo-spacing(2) !important; }
-  .#{$prefix}margin-right\+#{$postfix}        { margin-right:  ekzo-spacing(2) !important; }
-  .#{$prefix}margin-bottom\+#{$postfix}       { margin-bottom: ekzo-spacing(2) !important; }
-  .#{$prefix}margin-left\+#{$postfix}         { margin-left:   ekzo-spacing(2) !important; }
-  .#{$prefix}margin-ends\+#{$postfix}         { margin-top:    ekzo-spacing(2) !important; margin-bottom: ekzo-spacing(2) !important; }
-  .#{$prefix}margin-sides\+#{$postfix}        { margin-right:  ekzo-spacing(2) !important; margin-left:   ekzo-spacing(2) !important; }
-
-  .#{$prefix}margin\+\+#{$postfix}            { margin:        ekzo-spacing(3) !important; }
-  .#{$prefix}margin-top\+\+#{$postfix}        { margin-top:    ekzo-spacing(3) !important; }
-  .#{$prefix}margin-right\+\+#{$postfix}      { margin-right:  ekzo-spacing(3) !important; }
-  .#{$prefix}margin-bottom\+\+#{$postfix}     { margin-bottom: ekzo-spacing(3) !important; }
-  .#{$prefix}margin-left\+\+#{$postfix}       { margin-left:   ekzo-spacing(3) !important; }
-  .#{$prefix}margin-ends\+\+#{$postfix}       { margin-top:    ekzo-spacing(3) !important; margin-bottom: ekzo-spacing(3) !important; }
-  .#{$prefix}margin-sides\+\+#{$postfix}      { margin-right:  ekzo-spacing(3) !important; margin-left:   ekzo-spacing(3) !important; }
-
-  .#{$prefix}margin--flush#{$postfix}         { margin:        0 !important; }
-  .#{$prefix}margin-top--flush#{$postfix}     { margin-top:    0 !important; }
-  .#{$prefix}margin-right--flush#{$postfix}   { margin-right:  0 !important; }
-  .#{$prefix}margin-bottom--flush#{$postfix}  { margin-bottom: 0 !important; }
-  .#{$prefix}margin-left--flush#{$postfix}    { margin-left:   0 !important; }
-  .#{$prefix}margin-ends--flush#{$postfix}    { margin-top:    0 !important; margin-bottom: 0 !important; }
-  .#{$prefix}margin-sides--flush#{$postfix}   { margin-right:  0 !important; margin-left:   0 !important; }
-
-  // ----
-  // Negative margins
-
-  .#{$prefix}bleed-#{$postfix}                { margin:        - ekzo-spacing(.5) !important; }
-  .#{$prefix}bleed-top-#{$postfix}            { margin-top:    - ekzo-spacing(.5) !important; }
-  .#{$prefix}bleed-right-#{$postfix}          { margin-right:  - ekzo-spacing(.5) !important; }
-  .#{$prefix}bleed-bottom-#{$postfix}         { margin-bottom: - ekzo-spacing(.5) !important; }
-  .#{$prefix}bleed-left-#{$postfix}           { margin-left:   - ekzo-spacing(.5) !important; }
-  .#{$prefix}bleed-ends-#{$postfix}           { margin-top:    - ekzo-spacing(.5) !important; margin-bottom: - ekzo-spacing(.5) !important; }
-  .#{$prefix}bleed-sides-#{$postfix}          { margin-right:  - ekzo-spacing(.5) !important; margin-left:   - ekzo-spacing(.5) !important; }
-
-  .#{$prefix}bleed#{$postfix}                 { margin:        - ekzo-spacing(1) !important; }
-  .#{$prefix}bleed-top#{$postfix}             { margin-top:    - ekzo-spacing(1) !important; }
-  .#{$prefix}bleed-right#{$postfix}           { margin-right:  - ekzo-spacing(1) !important; }
-  .#{$prefix}bleed-bottom#{$postfix}          { margin-bottom: - ekzo-spacing(1) !important; }
-  .#{$prefix}bleed-left#{$postfix}            { margin-left:   - ekzo-spacing(1) !important; }
-  .#{$prefix}bleed-ends#{$postfix}            { margin-top:    - ekzo-spacing(1) !important; margin-bottom: - ekzo-spacing(1) !important; }
-  .#{$prefix}bleed-sides#{$postfix}           { margin-right:  - ekzo-spacing(1) !important; margin-left:   - ekzo-spacing(1) !important; }
-
-  .#{$prefix}bleed\+#{$postfix}               { margin:        - ekzo-spacing(2) !important; }
-  .#{$prefix}bleed-top\+#{$postfix}           { margin-top:    - ekzo-spacing(2) !important; }
-  .#{$prefix}bleed-right\+#{$postfix}         { margin-right:  - ekzo-spacing(2) !important; }
-  .#{$prefix}bleed-bottom\+#{$postfix}        { margin-bottom: - ekzo-spacing(2) !important; }
-  .#{$prefix}bleed-left\+#{$postfix}          { margin-left:   - ekzo-spacing(2) !important; }
-  .#{$prefix}bleed-ends\+#{$postfix}          { margin-top:    - ekzo-spacing(2) !important; margin-bottom: - ekzo-spacing(2) !important; }
-  .#{$prefix}bleed-sides\+#{$postfix}         { margin-right:  - ekzo-spacing(2) !important; margin-left:   - ekzo-spacing(2) !important; }
-
-  // ---------------------------------------
-  // Paddings
-  // ---------------------------------------
-
-  .#{$prefix}padding-#{$postfix}              { padding:        ekzo-spacing(.5) !important; }
-  .#{$prefix}padding-top-#{$postfix}          { padding-top:    ekzo-spacing(.5) !important; }
-  .#{$prefix}padding-right-#{$postfix}        { padding-right:  ekzo-spacing(.5) !important; }
-  .#{$prefix}padding-bottom-#{$postfix}       { padding-bottom: ekzo-spacing(.5) !important; }
-  .#{$prefix}padding-left-#{$postfix}         { padding-left:   ekzo-spacing(.5) !important; }
-  .#{$prefix}padding-ends-#{$postfix}         { padding-top:    ekzo-spacing(.5) !important; padding-bottom: ekzo-spacing(.5) !important; }
-  .#{$prefix}padding-sides-#{$postfix}        { padding-right:  ekzo-spacing(.5) !important; padding-left:   ekzo-spacing(.5) !important; }
-
-  .#{$prefix}padding#{$postfix}               { padding:        ekzo-spacing(1) !important; }
-  .#{$prefix}padding-top#{$postfix}           { padding-top:    ekzo-spacing(1) !important; }
-  .#{$prefix}padding-right#{$postfix}         { padding-right:  ekzo-spacing(1) !important; }
-  .#{$prefix}padding-bottom#{$postfix}        { padding-bottom: ekzo-spacing(1) !important; }
-  .#{$prefix}padding-left#{$postfix}          { padding-left:   ekzo-spacing(1) !important; }
-  .#{$prefix}padding-ends#{$postfix}          { padding-top:    ekzo-spacing(1) !important; padding-bottom: ekzo-spacing(1) !important; }
-  .#{$prefix}padding-sides#{$postfix}         { padding-right:  ekzo-spacing(1) !important; padding-left:   ekzo-spacing(1) !important; }
-
-  .#{$prefix}padding\+#{$postfix}             { padding:        ekzo-spacing(2) !important; }
-  .#{$prefix}padding-top\+#{$postfix}         { padding-top:    ekzo-spacing(2) !important; }
-  .#{$prefix}padding-right\+#{$postfix}       { padding-right:  ekzo-spacing(2) !important; }
-  .#{$prefix}padding-bottom\+#{$postfix}      { padding-bottom: ekzo-spacing(2) !important; }
-  .#{$prefix}padding-left\+#{$postfix}        { padding-left:   ekzo-spacing(2) !important; }
-  .#{$prefix}padding-ends\+#{$postfix}        { padding-top:    ekzo-spacing(2) !important; padding-bottom: ekzo-spacing(2) !important; }
-  .#{$prefix}padding-sides\+#{$postfix}       { padding-right:  ekzo-spacing(2) !important; padding-left:   ekzo-spacing(2) !important; }
-
-  .#{$prefix}padding--flush#{$postfix}        { padding:        0 !important; }
-  .#{$prefix}padding-top--flush#{$postfix}    { padding-top:    0 !important; }
-  .#{$prefix}padding-right--flush#{$postfix}  { padding-right:  0 !important; }
-  .#{$prefix}padding-bottom--flush#{$postfix} { padding-bottom: 0 !important; }
-  .#{$prefix}padding-left--flush#{$postfix}   { padding-left:   0 !important; }
-  .#{$prefix}padding-ends--flush#{$postfix}   { padding-top:    0 !important; padding-bottom: 0 !important; }
-  .#{$prefix}padding-sides--flush#{$postfix}  { padding-right:  0 !important; padding-left:   0 !important; }
-
+@mixin ekzo-bleed-helpers($spacings: (), $prefix: '', $postfix: '') {
+  @include ekzo-size-modifiers('bleed',        $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin:        - ekzo-temp() !important; }
+  @include ekzo-size-modifiers('bleed-top',    $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-top:    - ekzo-temp() !important; }
+  @include ekzo-size-modifiers('bleed-right',  $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-right:  - ekzo-temp() !important; }
+  @include ekzo-size-modifiers('bleed-bottom', $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-bottom: - ekzo-temp() !important; }
+  @include ekzo-size-modifiers('bleed-left',   $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-left:   - ekzo-temp() !important; }
+  @include ekzo-size-modifiers('bleed-ends',   $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-top:    - ekzo-temp() !important; margin-bottom: - ekzo-temp() !important; }
+  @include ekzo-size-modifiers('bleed-sides',  $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { margin-right:  - ekzo-temp() !important; margin-left:   - ekzo-temp() !important; }
 } // ekzo-spacing-helpers()
 
 // ---------------------------------------
-// Call all spacing helpers
+// Paddings
 // ---------------------------------------
 
-@include ekzo-spacing-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
+@mixin ekzo-padding-helpers($spacings: (), $prefix: '', $postfix: '') {
+  @include ekzo-size-modifiers('padding',        $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding:        ekzo-temp() !important; }
+  @include ekzo-size-modifiers('padding-top',    $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding-top:    ekzo-temp() !important; }
+  @include ekzo-size-modifiers('padding-right',  $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding-right:  ekzo-temp() !important; }
+  @include ekzo-size-modifiers('padding-bottom', $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding-bottom: ekzo-temp() !important; }
+  @include ekzo-size-modifiers('padding-left',   $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding-left:   ekzo-temp() !important; }
+  @include ekzo-size-modifiers('padding-ends',   $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding-top:    ekzo-temp() !important; padding-bottom: ekzo-temp() !important; }
+  @include ekzo-size-modifiers('padding-sides',  $spacings: $spacings, $prefix: $prefix, $postfix: $postfix) { padding-right:  ekzo-temp() !important; padding-left:   ekzo-temp() !important; }
+
+  .#{$prefix}padding--flush#{$postfix}                                                          { padding:        0 !important; }
+  .#{$prefix}padding-top--flush#{$postfix}                                                      { padding-top:    0 !important; }
+  .#{$prefix}padding-right--flush#{$postfix}                                                    { padding-right:  0 !important; }
+  .#{$prefix}padding-bottom--flush#{$postfix}                                                   { padding-bottom: 0 !important; }
+  .#{$prefix}padding-left--flush#{$postfix}                                                     { padding-left:   0 !important; }
+  .#{$prefix}padding-ends--flush#{$postfix}                                                     { padding-top:    0 !important; padding-bottom: 0 !important; }
+  .#{$prefix}padding-sides--flush#{$postfix}                                                    { padding-right:  0 !important; padding-left:   0 !important; }
+} // ekzo-spacing-helpers()
 
 // ---------------------------------------
-// Responsive spacing helpers
+// Call margin helpers
 // ---------------------------------------
 
-@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-spacing-helpers-breakpoints) {
-  @include ekzo-spacing-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+@include ekzo-margin-helpers($spacings: $ekzo-margin-helpers-spacings, $prefix: $ekzo-ns + $ekzo-helpers-ns);
+
+// ----
+// Responsive
+
+@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-margin-helpers-breakpoints) {
+  @include ekzo-margin-helpers($spacings: $ekzo-margin-helpers-spacings, $prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+};
+
+// ---------------------------------------
+// Call bleed helpers
+// ---------------------------------------
+
+@include ekzo-bleed-helpers($spacings: $ekzo-bleed-helpers-spacings, $prefix: $ekzo-ns + $ekzo-helpers-ns);
+
+// ----
+// Responsive
+
+@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-bleed-helpers-breakpoints) {
+  @include ekzo-bleed-helpers($spacings: $ekzo-bleed-helpers-spacings, $prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+};
+
+// ---------------------------------------
+// Call padding helpers
+// ---------------------------------------
+
+@include ekzo-padding-helpers($spacings: $ekzo-padding-helpers-spacings, $prefix: $ekzo-ns + $ekzo-helpers-ns);
+
+// ----
+// Responsive
+
+@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-padding-helpers-breakpoints) {
+  @include ekzo-padding-helpers($spacings: $ekzo-padding-helpers-spacings, $prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
 };
