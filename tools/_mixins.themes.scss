@@ -19,10 +19,10 @@
 //
 // @example
 //  .foo {
-//    @include ekzo-theme() { background: ekzo-theme(bg-color); }
+//    @include ekzo-theme() { background: ekzo-theme(bg); }
 //
 //    .bar {
-//      @include ekzo-theme() { background: ekzo-theme(text-color); }
+//      @include ekzo-theme() { background: ekzo-theme(text); }
 //      @include ekzo-theme() { color: black; }
 //    }
 //

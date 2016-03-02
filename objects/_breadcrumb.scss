@@ -14,8 +14,8 @@
   content: $delimiter;
 
   @include ekzo-theme() {
-    @if ekzo-theme(breadcrumb-delimiters-color) and ekzo-theme(breadcrumb-delimiters-color) != ekzo-theme(text-color) {
-      color: ekzo-theme(breadcrumb-delimiters-color);
+    @if ekzo-theme(breadcrumb-delimiters) and ekzo-theme(breadcrumb-delimiters) != ekzo-theme(text) {
+      color: ekzo-theme(breadcrumb-delimiters);
     }
   }
 
@@ -41,8 +41,8 @@
   > li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
   @include ekzo-theme() {
-    @if ekzo-theme(breadcrumb-links-color) and ekzo-theme(breadcrumb-links-color) != ekzo-theme(links-color) {
-      > a { color: ekzo-theme(breadcrumb-links-color); }
+    @if ekzo-theme(breadcrumb-links) and ekzo-theme(breadcrumb-links) != ekzo-theme(links) {
+      > a { color: ekzo-theme(breadcrumb-links); }
     }
   }
 

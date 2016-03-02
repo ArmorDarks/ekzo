@@ -9,7 +9,7 @@
   font-family: ekzo-ui-font-family(forms);
   font-size:   $ekzo-forms-placeholder-font-size;
   font-style:  $ekzo-forms-placeholder-font-style;
-  @include ekzo-theme() { color: ekzo-theme(forms-placeholder-color); }
+  @include ekzo-theme() { color: ekzo-theme(forms-placeholder); }
 }
 
 
@@ -22,13 +22,13 @@ textarea,
 label {
   font-family: ekzo-ui-font-family(forms);
   font-size:   $ekzo-forms-font-size;
-  @include ekzo-theme() { color: ekzo-theme(forms-color); }
+  @include ekzo-theme() { color: ekzo-theme(forms); }
 }
 
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
 input,
-textarea { @include ekzo-theme() { background-color: ekzo-theme(forms-bg-color); } }
+textarea { @include ekzo-theme() { background-color: ekzo-theme(forms-bg); } }
 
 
 /**

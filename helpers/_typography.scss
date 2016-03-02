@@ -32,7 +32,7 @@
 
   @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + text--, $postfix: $postfix) {
     @if ekzo-ui-font-family(extra-headings)                      { font-family: ekzo-ui-font-family(extra-headings); }
-    @include ekzo-theme() { @if ekzo-theme(extra-headings-color) { color: ekzo-theme(extra-headings-color); } }
+    @include ekzo-theme() { @if ekzo-theme(extra-headings) { color: ekzo-theme(extra-headings); } }
   }
 
   // ---------------------------------------

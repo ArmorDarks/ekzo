@@ -11,7 +11,7 @@
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.
   * Add new themes or redefine old ones with `ekzo-extend-themes((red: (text-color: red)))`.
-  * Add theme-related styling to any class with mixin and function `.foo { @include ekzo-theme() { color: ekzo-theme(text-color); } }`.
+  * Add theme-related styling to any class with mixin and function `.foo { @include ekzo-theme() { color: ekzo-theme(text); } }`.
   * Switch on and off theming globaly with `$ekzo-enable-theming` option without deleting theme includes from classes
   For details about how it works and how to use head to `ekzo-theme()` mixin description.
 - Added `$ekzo-colors` which upholds whole color pallete of website

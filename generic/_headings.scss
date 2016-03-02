@@ -6,7 +6,7 @@
 %#{$ekzo-ns}#{$ekzo-generics-ns}headings-properties {
   font-weight: $ekzo-headings-font-weight;
   @if ekzo-ui-font-family(headings)                      { font-family: ekzo-ui-font-family(headings); }
-  @include ekzo-theme() { @if ekzo-theme(headings-color) { color: ekzo-theme(headings-color); } }
+  @include ekzo-theme() { @if ekzo-theme(headings) { color: ekzo-theme(headings); } }
 }
 
 // ---------------------------------------

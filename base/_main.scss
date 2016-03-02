@@ -23,8 +23,8 @@ html {
 
   font-weight: $ekzo-font-weight; // 3
 
-  @include ekzo-theme() { color:            ekzo-theme(text-color); } // 3
-  @include ekzo-theme() { background-color: ekzo-theme(bg-color); }
+  @include ekzo-theme() { color:            ekzo-theme(text); } // 3
+  @include ekzo-theme() { background-color: ekzo-theme(bg); }
   @if $ekzo-bg          { background:       $ekzo-bg; }
 
   -moz-osx-font-smoothing: grayscale;   // 4

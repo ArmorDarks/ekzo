@@ -55,9 +55,9 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
   padding-right: 1em;          /* [8] */
   padding-left:  1em;          /* [8] */
 
-  @include ekzo-theme() { @if ekzo-theme(btn-color)               { color: ekzo-theme(btn-color); } }
+  @include ekzo-theme() { @if ekzo-theme(btn)               { color: ekzo-theme(btn); } }
 
-  @include ekzo-theme() { @if ekzo-theme(btn-bg-color)            { background-color: ekzo-theme(btn-bg-color); } }
+  @include ekzo-theme() { @if ekzo-theme(btn-bg)            { background-color: ekzo-theme(btn-bg); } }
 
   @if $ekzo-btn-radius                                            { border-radius: $ekzo-btn-radius; }
 
@@ -65,25 +65,25 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
   @else                                                           { border-top-width:    0; }    // 6
   @if $ekzo-btn-border-top-style                                  { border-top-style:    $ekzo-btn-border-top-style; }
   @else                                                           { border-top-style:    none; } // 6
-  @include ekzo-theme() { @if ekzo-theme(btn-border-top-color)    { border-top-color:    ekzo-theme(btn-border-top-color); } }
+  @include ekzo-theme() { @if ekzo-theme(btn-border-top)    { border-top-color:    ekzo-theme(btn-border-top); } }
 
   @if $ekzo-btn-border-right-width                                { border-right-width:  $ekzo-btn-border-right-width; }
   @else                                                           { border-right-width:  0; }    // 6
   @if $ekzo-btn-border-right-style                                { border-right-style:  $ekzo-btn-border-right-style; }
   @else                                                           { border-right-style:  none; } // 6
-  @include ekzo-theme() { @if ekzo-theme(btn-border-right-color)  { border-right-color:  ekzo-theme(btn-border-right-color); } }
+  @include ekzo-theme() { @if ekzo-theme(btn-border-right)  { border-right-color:  ekzo-theme(btn-border-right); } }
 
   @if $ekzo-btn-border-bottom-width                               { border-bottom-width: $ekzo-btn-border-bottom-width; }
   @else                                                           { border-bottom-width: 0; }    // 6
   @if $ekzo-btn-border-bottom-style                               { border-bottom-style: $ekzo-btn-border-bottom-style; }
   @else                                                           { border-bottom-style: none; } // 6
-  @include ekzo-theme() { @if ekzo-theme(btn-border-bottom-color) { border-bottom-color: ekzo-theme(btn-border-bottom-color); } }
+  @include ekzo-theme() { @if ekzo-theme(btn-border-bottom) { border-bottom-color: ekzo-theme(btn-border-bottom); } }
 
   @if $ekzo-btn-border-left-width                                 { border-left-width:   $ekzo-btn-border-left-width; }
   @else                                                           { border-left-width:   0; }    // 6
   @if $ekzo-btn-border-left-style                                 { border-left-style:   $ekzo-btn-border-left-style; }
   @else                                                           { border-left-style:   none; } // 6
-  @include ekzo-theme() { @if ekzo-theme(btn-border-left-color)   { border-left-color:   ekzo-theme(btn-border-left-color); } }
+  @include ekzo-theme() { @if ekzo-theme(btn-border-left)   { border-left-color:   ekzo-theme(btn-border-left); } }
 
   &,
   &:hover {
@@ -91,25 +91,25 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
   }
 
   &:hover {
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-color)               { color:              ekzo-theme(btn-hover-color); } }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover)               { color:              ekzo-theme(btn-hover); } }
 
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-bg-color)            { background-color:   ekzo-theme(btn-hover-bg-color); } }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-bg)            { background-color:   ekzo-theme(btn-hover-bg); } }
 
     @if $ekzo-btn-hover-border-top-width                                  { border-top-width:   $ekzo-btn-hover-border-top-width; }
     @if $ekzo-btn-hover-border-top-style                                  { border-top-style:   $ekzo-btn-hover-border-top-style; }
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-top-color)    { border-top-color:   ekzo-theme(btn-hover-border-top-color); } }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-top)    { border-top-color:   ekzo-theme(btn-hover-border-top); } }
 
     @if $ekzo-btn-hover-border-right-width                                { border-right-width: $ekzo-btn-hover-border-right-width; }
     @if $ekzo-btn-hover-border-right-style                                { border-right-style: $ekzo-btn-hover-border-right-style; }
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-right-color)  { border-right-color: ekzo-theme(btn-hover-border-right-color); } }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-right)  { border-right-color: ekzo-theme(btn-hover-border-right); } }
 
     @if $ekzo-btn-hover-border-bottom-width                               { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
     @if $ekzo-btn-hover-border-bottom-style                               { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-bottom-color) { border-bottom-color: ekzo-theme(btn-hover-border-bottom-color); } }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-bottom) { border-bottom-color: ekzo-theme(btn-hover-border-bottom); } }
 
     @if $ekzo-btn-hover-border-left-width                                 { border-left-width:  $ekzo-btn-hover-border-left-width; }
     @if $ekzo-btn-hover-border-left-style                                 { border-left-style:  $ekzo-btn-hover-border-left-style; }
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-left-color)   { border-left-color:  ekzo-theme(btn-hover-border-left-color); } }
+    @include ekzo-theme() { @if ekzo-theme(btn-hover-border-left)   { border-left-color:  ekzo-theme(btn-hover-border-left); } }
   }
 
 }
@@ -263,8 +263,8 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--positive {
-  @include ekzo-theme() { background-color: ekzo-theme(btn--positive-bg-color); }
-  @include ekzo-theme() { color:            ekzo-theme(btn--positive-color); }
+  @include ekzo-theme() { background-color: ekzo-theme(btn--positive-bg); }
+  @include ekzo-theme() { color:            ekzo-theme(btn--positive); }
 }
 
 
@@ -273,8 +273,8 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--negative {
-  @include ekzo-theme() { background-color: ekzo-theme(btn--negative-bg-color); }
-  @include ekzo-theme() { color:            ekzo-theme(btn--negative-color); }
+  @include ekzo-theme() { background-color: ekzo-theme(btn--negative-bg); }
+  @include ekzo-theme() { color:            ekzo-theme(btn--negative); }
 }
 
 
@@ -288,8 +288,8 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:hover,
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:active,
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:focus {
-  @include ekzo-theme() { background-color: ekzo-theme(btn--disabled-bg-color); }
-  @include ekzo-theme() { color:            ekzo-theme(btn--disabled-color); }
+  @include ekzo-theme() { background-color: ekzo-theme(btn--disabled-bg); }
+  @include ekzo-theme() { color:            ekzo-theme(btn--disabled); }
 
   cursor: default;            /* [1] */
 }
