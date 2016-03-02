@@ -10,7 +10,7 @@ $ekzo-colors: (
   shuttle-gray:  #566270
 ) !default;
 
-$ekzo-base-brand-color:  ekzo-color(dull-lavender);
+$ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
 
 $ekzo-themes: () !default;
 @include ekzo-extend-themes((
