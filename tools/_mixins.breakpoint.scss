@@ -51,7 +51,7 @@
 // Include for each breakpoint
 // ---------------------------------------
 
-@mixin ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-helpers-for-breakpoints) {
+@mixin ekzo-each-breakpoint($enable-for: $ekzo-responsive-helpers-breakpoints) {
   @each $breakpoint, $query in $ekzo-breakpoints {
 
     // check is current breakpoint in lest of available for auto generation of helper classes

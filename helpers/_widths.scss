@@ -61,7 +61,7 @@
 
 @if $ekzo-enable-widths-helpers {
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-widths-helpers) {
+  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-widths-helpers-breakpoints) {
     @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
       $prefix: $ekzo-ns + $ekzo-helpers-ns,
       $postfix: ekzo-temp());

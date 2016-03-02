@@ -158,7 +158,7 @@
 
 @if $ekzo-enable-grid {
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-grid) {
+  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-grid-breakpoints) {
     @include ekzo-grid-types($postfix: ekzo-temp());
   };
 

@@ -250,7 +250,7 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 //
 // @demo: jsfiddle.net/inuitcss/WS4Ge
 
-@include ekzo-each-breakpoint($enable-for: $ekzo-enable-responsive-buttons) {
+@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-buttons-breakpoints) {
   @include ekzo-buttons-sizes($postfix: ekzo-temp());
 };
 

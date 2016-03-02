@@ -7,7 +7,7 @@
 // Responsiveness
 // ---------------------------------------
 
-$ekzo-enable-responsive-helpers-for-breakpoints: (
+$ekzo-responsive-helpers-breakpoints: (
   phone,
   phone-ls,
   tablet,
@@ -16,18 +16,18 @@ $ekzo-enable-responsive-helpers-for-breakpoints: (
   desk
 ) !default;
 
-$ekzo-enable-responsive-tables:               $ekzo-enable-responsive-helpers-for-breakpoints !default;
+$ekzo-responsive-tables-breakpoints:               $ekzo-responsive-helpers-breakpoints !default;
 
-$ekzo-enable-responsive-buttons:              $ekzo-enable-responsive-helpers-for-breakpoints !default;
-$ekzo-enable-responsive-grid:                 $ekzo-enable-responsive-helpers-for-breakpoints !default;
+$ekzo-responsive-buttons-breakpoints:              $ekzo-responsive-helpers-breakpoints !default;
+$ekzo-responsive-grid-breakpoints:                 $ekzo-responsive-helpers-breakpoints !default;
 
-$ekzo-enable-responsive-display-helpers:      $ekzo-enable-responsive-helpers-for-breakpoints !default;
-$ekzo-enable-responsive-positioning-helpers:  $ekzo-enable-responsive-helpers-for-breakpoints !default;
-$ekzo-enable-responsive-spacing-helpers:      $ekzo-enable-responsive-helpers-for-breakpoints !default;
-$ekzo-enable-responsive-typography-helpers:   $ekzo-enable-responsive-helpers-for-breakpoints !default;
-$ekzo-enable-responsive-widths-helpers:       $ekzo-enable-responsive-helpers-for-breakpoints !default;
+$ekzo-responsive-display-helpers-breakpoints:      $ekzo-responsive-helpers-breakpoints !default;
+$ekzo-responsive-positioning-helpers-breakpoints:  $ekzo-responsive-helpers-breakpoints !default;
+$ekzo-responsive-spacing-helpers-breakpoints:      $ekzo-responsive-helpers-breakpoints !default;
+$ekzo-responsive-typography-helpers-breakpoints:   $ekzo-responsive-helpers-breakpoints !default;
+$ekzo-responsive-widths-helpers-breakpoints:       $ekzo-responsive-helpers-breakpoints !default;
 
-$ekzo-responsive-widths-helpers-fractions:    $ekzo-widths-helpers-fractions !default;
+$ekzo-responsive-widths-helpers-fractions:         $ekzo-widths-helpers-fractions !default;
 
 // ---------------------------------------
 // Breakpoints
