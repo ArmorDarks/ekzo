@@ -14,7 +14,7 @@
 // ----
 // Text
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + ekzo-helpers-ns + text--);
+@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + $ekzo-helpers-ns + text--);
 
 // ----
 // Standard headings
@@ -29,7 +29,7 @@
 //
 // A series of classes for setting massive type; for use in heroes, promos, etc.
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + ekzo-helpers-ns + text--) {
+@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + text--) {
   @if ekzo-ui-font-family(extra-headings)                      { font-family: ekzo-ui-font-family(extra-headings); }
   @include ekzo-theme() { @if ekzo-theme(extra-headings-color) { color: ekzo-theme(extra-headings-color); } }
 }
@@ -38,11 +38,11 @@
 // Font-sizes helpers
 // ---------------------------------------
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + ekzo-helpers-ns + font-size--, $line-height: false);
+@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + $ekzo-helpers-ns + font-size--, $line-height: false);
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + ekzo-helpers-ns + font-size--, $line-height: false);
+@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + font-size--, $line-height: false);
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + ekzo-helpers-ns + font-size--, $line-height: false);
+@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + font-size--, $line-height: false);
 
 // @todo Add to font-sizes map
 
@@ -61,11 +61,11 @@
 // Line-height helpers
 // ---------------------------------------
 
-@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + ekzo-helpers-ns + line-height--, $line-height: only);
+@include ekzo-font-size-classes(text, $prefix: $ekzo-ns + $ekzo-helpers-ns + line-height--, $line-height: only);
 
-@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + ekzo-helpers-ns + line-height--, $line-height: only);
+@include ekzo-font-size-classes(headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + line-height--, $line-height: only);
 
-@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + ekzo-helpers-ns + line-height--, $line-height: only);
+@include ekzo-font-size-classes(extra-headings, $prefix: $ekzo-ns + $ekzo-helpers-ns + line-height--, $line-height: only);
 
 // ----
 // Take element out of typography rhythm
