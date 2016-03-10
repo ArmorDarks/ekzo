@@ -56,7 +56,10 @@
 - `reset.scss` is now part of `normalize.scss`
 - `$ekzo-global-border-box` is enabled by default
 - Rearrenged settings, part of options moved to `misc` settings
+- [BREAKING] extra-headings now have separate class name `h-extra-heading{modifier}` instead of being `h-text+`, `h-text++` and `h-text+++`
+- [BREAKING] extra-headings not starts from `base`, instead of `+`. This means that `h-extra-heading+`, `h-extra-heading++` and `h-extra-heading+++` replaced with `h-extra-heading`, `h-extra-heading+`, `h-extra-heading++`
 - [BREAKING] spacing helpers now outputed automatically based on provided in `$ekzo-margin-helpers-spacings`, `$ekzo-bleed-helpers-spacings` and `$ekzo-padding-helpers-spacings` lists of spacings
+- Improved `h-text--hidden` helper
 - [BREAKING] proper widths and spacing helpers mixins and options names
 - [BREAKING] сhanged font-families representation from variables to maps
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
