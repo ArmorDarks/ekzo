@@ -12,6 +12,10 @@ $ekzo-colors: (
 
 $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
 
+// Extend themes via `ekzo-extend-theme` mixin
+// @example
+//   @include ekzo-extend-themes(( flat: ( brand: red ) ));
+
 $ekzo-themes: (
   base: (
 
