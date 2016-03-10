@@ -99,6 +99,9 @@
 // Text styling
 // ---------------------------------------
 
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--inherit  { font-weight: inherit  !important; }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--lighter  { font-weight: lighter  !important; }
 .#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--light    { font-weight: 300  !important; }
 .#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--normal   { font-weight: 400  !important; }
 .#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--semibold { font-weight: 600  !important; }
@@ -109,6 +112,8 @@
 .#{$ekzo-ns}#{$ekzo-helpers-ns}font-style--italic    { font-style: italic !important; }
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--uppercase       { text-transform: uppercase !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--lowercase       { text-transform: lowercase !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--capitalize      { text-transform: capitalize !important; }
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }
 

@@ -28,6 +28,7 @@
 - Added `$ekzo-list-style-type` option to set default list style
 - Added option to set monospace font;
 - Added generic styling for `code`, `pre`, `samp` and `kbd`. Also, added options for their font-sizes and font-families
+- Added `font-weight--inherit`, `font-weight--lighter`, `text--lowercase` and `text-capitalize` helpers
 - Added options `$ekzo-widths-fractions` and `$ekzo-responsive-widths-fractions` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
 - Added `ekzo-size-modifiers()` mixin with quite strange name (should think about better one) wich will output classes based on common in Ekzo size modifiers name conventions (like `margin++-`) by accepting base class name and list of spacings, which should be applied
