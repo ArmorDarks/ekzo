@@ -30,8 +30,8 @@
   //
   // A series of classes for setting massive type; for use in heroes, promos, etc.
 
-  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + text--, $postfix: $postfix) {
-    @if ekzo-ui-font-family(extra-headings)                      { font-family: ekzo-ui-font-family(extra-headings); }
+  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + extra-h--, $postfix: $postfix) {
+    @if ekzo-ui-font-family(extra-headings)                { font-family: ekzo-ui-font-family(extra-headings); }
     @include ekzo-theme() { @if ekzo-theme(extra-headings) { color: ekzo-theme(extra-headings); } }
   }
 
