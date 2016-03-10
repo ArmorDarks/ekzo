@@ -86,8 +86,9 @@
   // Hide only text
 
   .#{$prefix}text--hidden#{$postfix} {
-    text-indent: -9999px;
-    text-align:  left;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
 }
