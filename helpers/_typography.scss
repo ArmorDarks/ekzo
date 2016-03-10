@@ -42,7 +42,7 @@
 
   @include ekzo-font-size-classes(text, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
   @include ekzo-font-size-classes(headings, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
-  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
+  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + font-size-- + extra-h--, $postfix: $postfix, $line-height: false);
 
   // @todo Add to font-sizes map
 
@@ -63,7 +63,7 @@
 
   @include ekzo-font-size-classes(text, $prefix: $prefix + line-height--, $postfix: $postfix, $line-height: only);
   @include ekzo-font-size-classes(headings, $prefix: $prefix + line-height--, $postfix: $postfix, $line-height: only);
-  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + line-height--, $postfix: $postfix, $line-height: only);
+  @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + line-height-- + extra-h--, $postfix: $postfix, $line-height: only);
 
   // ----
   // Take element out of typography rhythm
