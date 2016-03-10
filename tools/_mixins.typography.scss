@@ -109,9 +109,13 @@
 
     $value: map-get($working-map, $name);
 
-    @if str-index($name, \+) == 1 or str-index($name, '-') == 1 {
+    @if str-index($name, \+) == 1 or str-index($name, '-') == 1 or str-index($name, 'base') {
       @if $prefix != true and $prefix != null and $prefix != '' {
-        $prefix: str-replace($prefix, '--', '');
+        // @todo This is very crude way to fix bug. Works solely on assumption that all prefixes
+        //       carrying `--` in the end (expecting modificator)
+        $prefix: str-slice($prefix, 0, str-length($prefix) - 2);
+        // $prefix: str-replace($prefix, '--', '');
+        @if $name == 'base' { $name: '' }
       }
     }
 
