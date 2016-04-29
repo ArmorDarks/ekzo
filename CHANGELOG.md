@@ -36,7 +36,7 @@
 - Added `ekzo-units()` function which allows to swap units or add them to the value
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
-`$ekzo-objects-ns`, `$ekzo-components-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
+`$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
 - Added quite handy `.h-font-weight--bolder` helper class
 - Added `ekzo-font-size-class()` mixin for generation of single font-size class
 - Added functions and mixins names in error messages
