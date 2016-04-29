@@ -143,8 +143,6 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
   // line-height = `$ekzo-line-height`
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn--#{$postfix} {
-    line-height: $ekzo-line-height;
-
     padding-top:     0;
     padding-bottom:  0;
     padding-right:  .6em;
