@@ -43,6 +43,7 @@
 - Added `$ekzo-enable-widths` option for enabling/disabling widths
 - Added `ekzo-rem()` function, which converts pxs into rems
 - Added global map `$ekzo-z-indexes` and `ekzo-z-index(_z-index-name_)` function to get values from it
+- Added `ekzo-line-height()` mixin for generating vertical rhythm based line-heights
 - `ekzo-font-size-classes()` mixin now accepts `$postfix` parameter
 - `ekzo-breakpoint()` now accepts 3 parameters: `breakpoint`, `path` and `map` (backward compatible)
 - Added experimental universal inheritance from satinize.css
@@ -73,3 +74,4 @@
 - [BREAKING] Renamed function `map-get-deep()` to `ekzo-get()`
 - [BREAKING] Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
 - [BREAKING] `ekzo-breakpoint()` mixin now produces better class names. For example: `1/2@lap` instead of `lap-1/2`
+- [BREAKING] Refactored `ekzo-font-size()` mixin. It now accepts `$font-size` instead of `$size` as firt parameter. Returned missing `only` possible value for `$line-height`. It also now can accept any units for `$font-size`, but they should always match `$line-heigt` units.
