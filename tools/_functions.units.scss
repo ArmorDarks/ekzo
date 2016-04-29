@@ -83,11 +83,17 @@
 
 @function ekzo-percent($value, $total) {
 
+  @if not unitless($value) and not unitless($total) {
+    // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+    // We can't calculate incompatible units.
+    $value: ekzo-units($value, unit($total));
+  }
+
   $value-units: unit($value);
   $total-units: unit($total);
 
   @if $value-units != $total-units {
-    @error '[ekzo-line-heigt] unit types of `$value` and `$total` should match. You specified `' + $value-units + '` and `' + $total-units + '`.'
+    @error '[ekzo-percent] unit types of `$value` and `$total` should match. You specified `' + $value-units + '` and `' + $total-units + '`.'
   }
 
   @return $value / $total * 100%;
@@ -105,6 +111,12 @@
 // @return {number}
 
 @function ekzo-em($value, $base:ekzo-font-size(base)) {
+
+  @if not unitless($value) and not unitless($base) {
+    // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+    // We can't calculate incompatible units.
+    $value: ekzo-units($value, unit($base));
+  }
 
   $value-units: unit($value);
   $base-units: unit($base);
@@ -128,6 +140,12 @@
 // @return {number}
 
 @function ekzo-rem($value, $base:ekzo-font-size(base)) {
+
+  @if not unitless($value) and not unitless($base) {
+    // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+    // We can't calculate incompatible units.
+    $value: ekzo-units($value, unit($base));
+  }
 
   $value-units: unit($value);
   $base-units: unit($base);

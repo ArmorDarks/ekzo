@@ -33,7 +33,7 @@
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
 - Added `ekzo-size-modifiers()` mixin with quite strange name (should think about better one) wich will output classes based on common in Ekzo size modifiers name conventions (like `margin++-`) by accepting base class name and list of spacings, which should be applied
 - Added `ekzo-strip-units()` function which allows to remove units from the value
-- Added `ekzo-units()` function which allows to swap units or add them to the value. Relies on Sass math to prevent conversion of incompatible units.
+- Added `ekzo-units()` function which allows to convert units. Relies on Sass math to prevent conversion of incompatible units.
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
 `$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
@@ -75,4 +75,4 @@
 - [BREAKING] Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
 - [BREAKING] `ekzo-breakpoint()` mixin now produces better class names. For example: `1/2@lap` instead of `lap-1/2`
 - [BREAKING] Refactored `ekzo-font-size()` mixin. It now accepts `$font-size` instead of `$size` as firt parameter. Returned missing `only` possible value for `$line-height`. It also now can accept any units for `$font-size`, but they should always match `$line-heigt` units.
-- [BREAKING] Similarly to other similar new calculating function, `ekzo-percent()` function now accepts only values with same units (or both unitless).
+- [BREAKING] Similarly to new `ekzo-rem()` function, `ekzo-percent()`  and `ekzo-em()` functions now accepts only values with same units (or both unitless). It will try to convert values with Sass math intelligently, though. If you've converted somewhere impossible to convert units, you will receive an Error now.
