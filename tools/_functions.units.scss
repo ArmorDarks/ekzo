@@ -82,6 +82,14 @@
 // @return {number}
 
 @function ekzo-percent($value, $total) {
+
+  $value-units: unit($value);
+  $total-units: unit($total);
+
+  @if $value-units != $total-units {
+    @error '[ekzo-line-heigt] unit types of `$value` and `$total` should match. You specified `' + $value-units + '` and `' + $total-units + '`.'
+  }
+
   @return $value / $total * 100%;
 }
 
@@ -97,6 +105,14 @@
 // @return {number}
 
 @function ekzo-em($value, $base:ekzo-font-size(base)) {
+
+  $value-units: unit($value);
+  $base-units: unit($base);
+
+  @if $value-units != $base-units {
+    @error '[ekzo-em] unit types of `$value` and `$base` should match. You specified `' + $value-units + '` and `' + $base-units + '`.'
+  }
+
   @return ekzo-units($value / $base, em);
 }
 
@@ -112,5 +128,13 @@
 // @return {number}
 
 @function ekzo-rem($value, $base:ekzo-font-size(base)) {
+
+  $value-units: unit($value);
+  $base-units: unit($base);
+
+  @if $value-units != $base-units {
+    @error '[ekzo-rem] unit types of `$value` and `$base` should match. You specified `' + $value-units + '` and `' + $base-units + '`.'
+  }
+
   @return ekzo-units($value / $base, rem);
 }

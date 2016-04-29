@@ -75,3 +75,4 @@
 - [BREAKING] Renamed function `ekzo-convert-direction()` to `ekzo-flip-direction()`
 - [BREAKING] `ekzo-breakpoint()` mixin now produces better class names. For example: `1/2@lap` instead of `lap-1/2`
 - [BREAKING] Refactored `ekzo-font-size()` mixin. It now accepts `$font-size` instead of `$size` as firt parameter. Returned missing `only` possible value for `$line-height`. It also now can accept any units for `$font-size`, but they should always match `$line-heigt` units.
+- [BREAKING] Similarly to other similar new calculating function, `ekzo-percent()` function now accepts only values with same units (or both unitless).
