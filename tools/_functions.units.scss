@@ -6,7 +6,7 @@
 // ---------------------------------------
 // Strip units
 // ---------------------------------------
-// Strip units from `$value`
+// Strip units from `$value`. Do not use it. Ever. Seriously. You don't want to use it.
 //
 // @param {Number} $value - Value from which should be removed units
 //
@@ -15,34 +15,69 @@
 @function ekzo-strip-units($value) { @return $value / ($value * 0 + 1); }
 
 // ---------------------------------------
-// Change units
+// Convert units
 // ---------------------------------------
-// Add `$unit` to `$value`
+// Intelligently converts one units to other types. Doesn't convert incompitable unit types,
+// like `px` to `rems`.
+// Use specific mixins if you want to convert some possible-to-be compitable units
+// based on base line-height, like `ekzo-rem()` for pxs to rems, or px to ems
 //
 // @param {Number} $value - Value to add unit to
-// @param {String} $unit - String representation of the unit
+// @param {String} $unit - String representation of desired unit
 //
 // @return {number} - `$value` expressed in `$unit`
+//
+// @throw Error if `$unit` does not exist or if units are incompatible.
+//
 // @source https://github.com/eduardoboucas/include-media/blob/master/dist/_include-media.scss
+// @source http://www.sitepoint.com/understanding-sass-units/
+//
 // @example
 //   padding: ekzo-units(25px, em)
 
 @function ekzo-units($value, $unit) {
-  $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
+  $units: (
+    'px': 0px,
+    'cm': 0cm,
+    'mm': 0mm,
+    '%': 0%,
+    'pc': 0pc,
+    'ch': 0ch,
+    'in': 0in,
+    'em': 0em,
+    'rem': 0rem,
+    'pt': 0pt,
+    'ex': 0ex,
+    'vw': 0vw,
+    'vh': 0vh,
+    'vmin': 0vmin,
+    'vmax': 0vmax,
+    'deg': 0deg,
+    'turn': 0turn,
+    'rad': 0rad,
+    'grad': 0grad,
+    's': 0s,
+    'ms': 0ms,
+    'Hz': 0Hz,
+    'kHz': 0kHz,
+    'dppx': 0dppx,
+    'dpcm': 0dpcm,
+    'dpi': 0dpi,
+  );
 
-  @if not index(map-keys($units), $unit) { @error '[ekzo-unit] invalid unit `#{$unit}`' }
+  @if not map-has-key($units, $unit) { @error '[ekzo-unit] invalid unit `#{$unit}`' }
 
-  @return ekzo-strip-units($value) * ekzo-get($units, $unit);
+  @return ekzo-get($units, $unit) + $value;
 }
 
 // ---------------------------------------
-// To percent
+// Calculate percent
 // ---------------------------------------
 //
 // Calculates percentage based on provided values
 //
-// @param {number:px} $value - value which should be converted into percent
-// @param {number:px} $total - value according to which should be calculated percentage
+// @param {number} $value - value which should be converted into percent
+// @param {number} $total - value according to which should be calculated percentage
 //
 // @return {number}
 
@@ -51,7 +86,7 @@
 }
 
 // ---------------------------------------
-// To em
+// Calculate em
 // ---------------------------------------
 //
 // Calculates ems based on provided values
@@ -66,7 +101,7 @@
 }
 
 // ---------------------------------------
-// To rem
+// Calculate rem
 // ---------------------------------------
 //
 // Calculates rems based on provided values

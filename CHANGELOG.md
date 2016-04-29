@@ -33,7 +33,7 @@
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
 - Added `ekzo-size-modifiers()` mixin with quite strange name (should think about better one) wich will output classes based on common in Ekzo size modifiers name conventions (like `margin++-`) by accepting base class name and list of spacings, which should be applied
 - Added `ekzo-strip-units()` function which allows to remove units from the value
-- Added `ekzo-units()` function which allows to swap units or add them to the value
+- Added `ekzo-units()` function which allows to swap units or add them to the value. Relies on Sass math to prevent conversion of incompatible units.
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
 `$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
