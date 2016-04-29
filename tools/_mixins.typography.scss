@@ -21,8 +21,11 @@
 
 @mixin ekzo-line-height($font-size, $base-line-height: $ekzo-line-height, $as-ratio:true) {
 
-  @if unit($font-size) != unit($base-line-height) {
-    @error '[ekzo-line-heigt] unit types of `$font-size` and `$line-heigth` should match (`px` by default)'
+  $font-size-units: unit($font-size);
+  $base-line-height-units: unit($base-line-height);
+
+  @if $font-size-units != $base-line-height-units {
+    @error '[ekzo-line-height] unit types of `$font-size` and `$base-line-height` should match. You specified `' + $font-size-units + '` and `' + $base-line-height-units + '`.'
   }
 
   $calculated-line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
