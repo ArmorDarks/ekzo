@@ -3,6 +3,21 @@
 // ^TEXT
 // =======================================
 
+// ---------------------------------------
+// Generic paragraph style
+// ---------------------------------------
+
 p {
   @include ekzo-theme() { color: ekzo-theme(text); }
 }
+
+// ---------------------------------------
+// Text select style
+// ---------------------------------------
+// @todo Chained version disabled for now, otherwise it won't work in most browsers at all
+
+::selection {
+  @include ekzo-theme($also-chain: false) { @if ekzo-theme(selection)    { color:            ekzo-theme(selection); } }
+  @include ekzo-theme($also-chain: false) { @if ekzo-theme(selection-bg) { background-color: ekzo-theme(selection-bg); } }
+}
+

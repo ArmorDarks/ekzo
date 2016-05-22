@@ -60,6 +60,13 @@ $ekzo-themes: (
     extra-headings:            false,
 
     // ---------------------------------------
+    // Selection
+    // ---------------------------------------
+
+    selection:                 false, // false to disable, color value to enable
+    selection-bg:              false, // false to disable, color value to enable
+
+    // ---------------------------------------
     // Forms
     // ---------------------------------------
 
