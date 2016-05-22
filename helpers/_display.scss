@@ -21,14 +21,20 @@
   // ----
   // Overflow
 
-  .#{$prefix}overflow--auto#{$postfix}   { overflow: auto   !important; }
-  .#{$prefix}overflow-x--auto#{$postfix} {
-      // display: block   !important;
-      min-height: .01% !important;
-      overflow-x: auto !important;
-  }
+  .#{$prefix}overflow--visible#{$postfix}   { overflow: visible   !important; }
+  .#{$prefix}overflow--hidden#{$postfix}    { overflow: hidden    !important; }
+  .#{$prefix}overflow--scroll#{$postfix}    { overflow: scroll    !important; }
+  .#{$prefix}overflow--auto#{$postfix}      { overflow: auto      !important; }
 
-  .#{$prefix}overflow--hidden#{$postfix} { overflow: hidden !important; }
+  .#{$prefix}overflow-x--visible#{$postfix} { overflow-x: visible !important; }
+  .#{$prefix}overflow-x--hidden#{$postfix}  { overflow-x: hidden  !important; }
+  .#{$prefix}overflow-x--scroll#{$postfix}  { overflow-x: scroll  !important; }
+  .#{$prefix}overflow-x--auto#{$postfix}    { overflow-x: auto    !important; min-height: .01% !important; }
+
+  .#{$prefix}overflow-y--visible#{$postfix} { overflow-y: visible !important; }
+  .#{$prefix}overflow-y--hidden#{$postfix}  { overflow-y: hidden  !important; }
+  .#{$prefix}overflow-y--scroll#{$postfix}  { overflow-y: scroll  !important; }
+  .#{$prefix}overflow-y--auto#{$postfix}    { overflow-y: auto    !important; }
 
   // ----
   // Display as table

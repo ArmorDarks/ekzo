@@ -35,6 +35,7 @@
 - Added `ekzo-strip-units()` function which allows to remove units from the value
 - Added `ekzo-units()` function which allows to convert units. Relies on Sass math to prevent conversion of incompatible units.
 - Added `.h-overflow-x--auto` helper, which can make tables friendlier to small screens
+- Added all overflow styles as helpers
 - Added options to control namespacing for class types: `$ekzo-generics-ns`, 
 `$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`
 - Added quite handy `.h-font-weight--bolder` helper class
