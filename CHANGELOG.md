@@ -19,7 +19,7 @@
 - Added pregenerated automatically all `$ekzo-colors` and colors from `ekzo-themes __theme name__` and options to enable/disable it
 - Added option `$ekzo-responsive-helpers-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
 - Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-responsive-helpers-breakpoints`
-- Added `ekzo-temp()` function and global variable `$ekzo__temp` which allows to pass value from mixins into `@content`. See `ekzo-each-breakpoint()` for example. Hacky.
+- Added `ekzo-set-temp()` mixin which allows to pass values from mixins into `@content`, `ekzo-temp()` function to retrive value and `ekzo-purge-temp()` mixin to clear temp. See `ekzo-each-breakpoint()` for example. Hacky.
 - Added responsive display helpers and options to switch them on or off.
 - Added responsive positioning helpers and options to switch them on or off.
 - Added responsive typography helpers and options to switch them on or off.
