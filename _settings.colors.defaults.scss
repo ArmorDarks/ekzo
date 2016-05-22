@@ -7,7 +7,7 @@ $ekzo-colors: (
   dull-lavender: #a593e0,
   green-white:   #e0e3da,
   ivory:         #fffff3,
-  shuttle-gray:  #566270
+  outer-space:  #313840
 ) !default;
 
 $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
@@ -63,9 +63,9 @@ $ekzo-themes: (
     // Forms
     // ---------------------------------------
 
-    forms:                     ekzo-color(shuttle-gray),
-    forms-placeholder:         ekzo-tint(ekzo-color(shuttle-gray), 30),
-    forms-bg:                  ekzo-tint(ekzo-color(shuttle-gray), 70),
+    forms:                     ekzo-color(outer-space),
+    forms-placeholder:         ekzo-tint(ekzo-color(outer-space), 30),
+    forms-bg:                  transparent,
 
     // ---------------------------------------
     // Buttons
@@ -118,7 +118,7 @@ $ekzo-themes: (
     // Backgrounds
     // ---------------------------------------
 
-    bg:                        ekzo-color(shuttle-gray)
+    bg:                        ekzo-color(outer-space)
 
   )
 ) !default;
