@@ -16,10 +16,6 @@
 // Themify
 // ---------------------------------------
 
-$ekzo-__theme: null;
-
-@function ekzo-theme($color-name, $temp-theme: $ekzo-__theme) {
-  @if not map-has-key($temp-theme, $color-name) { @error "[ekzo-theme]: no such theme key: #{$color-name}"; }
-
-  @return map-get($temp-theme, $color-name);
+@function ekzo-theme($color-name) {
+  @return ekzo-temp($color-name);
 }

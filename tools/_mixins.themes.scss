@@ -32,7 +32,7 @@
 
   @each $theme, $data in $ekzo-themes {
 
-    $ekzo-__theme: $data !global;
+    @include ekzo-set-temp($data);
 
     $class: $prefix + $theme + $postfix;
 
@@ -45,7 +45,7 @@
       @if $theme == $default-theme { @content; }
     }
 
-    $ekzo-__theme: null !global;
+    @include ekzo-purge-temp();
 
   }
 
