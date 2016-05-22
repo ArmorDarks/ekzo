@@ -28,16 +28,19 @@
 //
 //  }
 
-@mixin ekzo-theme($prefix: $ekzo-ns + $ekzo-themes-ns, $postfix: '', $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+@mixin ekzo-theme($prefix: $ekzo-ns + $ekzo-themes-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+
   @each $theme, $data in $ekzo-themes {
+
     $ekzo-__theme: $data !global;
 
-    @if $enable-theming {
-      $class: $prefix + $theme + $postfix;
+    $class: $prefix + $theme + $postfix;
 
+    @if $enable-theming and $also-chain {
       .#{$class} &,
       &.#{$class} { @content; }
-
+    } @else if $enable-theming {
+      .#{$class} & { @content; }
     } @else {
       @if $theme == $default-theme { @content; }
     }
@@ -45,4 +48,5 @@
     $ekzo-__theme: null !global;
 
   }
+
 }
