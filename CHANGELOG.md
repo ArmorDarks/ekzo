@@ -63,6 +63,7 @@
 - [BREAKING] spacing helpers now outputed automatically based on provided in `$ekzo-margin-helpers-spacings`, `$ekzo-bleed-helpers-spacings` and `$ekzo-padding-helpers-spacings` lists of spacings
 - Improved `h-text--hidden` helper
 - [BREAKING] proper widths and spacing helpers mixins and options names
+- [BREAKING] prefixed animation vars with `ekzo-`
 - [BREAKING] сhanged font-families representation from variables to maps
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-responsive-helpers-breakpoints` to disable generation of helper classes for certain breakpoints.
