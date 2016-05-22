@@ -20,19 +20,19 @@ a,
 
   @if $ekzo-links-border-top-width                                  { border-top-width:    $ekzo-links-border-top-width; }
   @if $ekzo-links-border-top-style                                  { border-top-style:    $ekzo-links-border-top-style; }
-  @include ekzo-theme() { @if ekzo-theme(links-border-top)    { border-top-color:    ekzo-theme(links-border-top); } }
+  @include ekzo-theme() { @if ekzo-theme(links-border-top)          { border-top-color:    ekzo-theme(links-border-top); } }
 
   @if $ekzo-links-border-right-width                                { border-right-width:  $ekzo-links-border-right-width; }
   @if $ekzo-links-border-right-style                                { border-right-style:  $ekzo-links-border-right-style; }
-  @include ekzo-theme() { @if ekzo-theme(links-border-right)  { border-right-color:  ekzo-theme(links-border-right); } }
+  @include ekzo-theme() { @if ekzo-theme(links-border-right)        { border-right-color:  ekzo-theme(links-border-right); } }
 
   @if $ekzo-links-border-bottom-width                               { border-bottom-width: $ekzo-links-border-bottom-width; }
   @if $ekzo-links-border-bottom-style                               { border-bottom-style: $ekzo-links-border-bottom-style; }
-  @include ekzo-theme() { @if ekzo-theme(links-border-bottom) { border-bottom-color: ekzo-theme(links-border-bottom); } }
+  @include ekzo-theme() { @if ekzo-theme(links-border-bottom)       { border-bottom-color: ekzo-theme(links-border-bottom); } }
 
   @if $ekzo-links-border-left-width                                 { border-left-width:   $ekzo-links-border-left-width; }
   @if $ekzo-links-border-left-style                                 { border-left-style:   $ekzo-links-border-left-style; }
-  @include ekzo-theme() { @if ekzo-theme(links-border-left)   { border-left-color:   ekzo-theme(links-border-left); } }
+  @include ekzo-theme() { @if ekzo-theme(links-border-left)         { border-left-color:   ekzo-theme(links-border-left); } }
 
   &:hover {
     @include ekzo-theme() { @if ekzo-theme(links-hover) { color: ekzo-theme(links-hover); } }
