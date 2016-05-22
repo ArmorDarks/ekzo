@@ -4,12 +4,13 @@
     $FORMS
 \*------------------------------------*/
 
+// @todo Chained selector disabled here, otherwise declaration will be completely ignored by some browsers
 
 ::placeholder {
   font-family: ekzo-ui-font-family(forms);
   font-size:   $ekzo-forms-placeholder-font-size;
   font-style:  $ekzo-forms-placeholder-font-style;
-  @include ekzo-theme() { color: ekzo-theme(forms-placeholder); }
+  @include ekzo-theme($also-chain:false) { color: ekzo-theme(forms-placeholder); }
 }
 
 
