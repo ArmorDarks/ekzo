@@ -23,7 +23,7 @@
   // When we define a heading we also define a corresponding class to go with it.
   // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
-  @include ekzo-font-size-classes(headings, $prefix: $prefix, $postfix: $postfix) { @extend %#{$ekzo-ns}#{$ekzo-helpers-ns}headings-properties; }
+  @include ekzo-font-size-classes(headings, $prefix: $prefix, $postfix: $postfix) { @extend %#{$ekzo-ns}#{$ekzo-generics-ns}headings-properties; }
 
   // ----
   // Extra headings
@@ -48,10 +48,10 @@
 
   .#{$prefix}font-size--em--#{$postfix}       { font-size: .5em; }
   .#{$prefix}font-size--em-#{$postfix}        { font-size: .75em; }
-  .#{$prefix}font-size--em\+-#{$postfix}      { font-size: 1.25em; }
+  .#{$prefix}font-size--em\+---#{$postfix}    { font-size: 1.25em; }
   .#{$prefix}font-size--em\+--#{$postfix}     { font-size: 1.5em; }
   .#{$prefix}font-size--em\+#{$postfix}       { font-size: 2em; }
-  .#{$prefix}font-size--em\+\+-#{$postfix}    { font-size: 2.25em; }
+  .#{$prefix}font-size--em\+\+---#{$postfix}  { font-size: 2.25em; }
   .#{$prefix}font-size--em\+\+--#{$postfix}   { font-size: 2.5em; }
   .#{$prefix}font-size--em\+\+#{$postfix}     { font-size: 3em; }
   .#{$prefix}font-size--em\+\+\+#{$postfix}   { font-size: 4em; }
