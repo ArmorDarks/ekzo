@@ -1,0 +1,18 @@
+// scss-lint:disable ImportantRule
+
+// =======================================
+// ^HELPERS.TYPOGRAPHY.FONT-STACKS
+// =======================================
+// @source https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/library/_font-stacks.scss
+// @source http://www.cssfontstack.com/
+
+$ekzo-helvetica-font-stack:     ("Helvetica Neue", "Helvetica", "Arial", sans-serif);
+$ekzo-lucida-grande-font-stack: ("Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif);
+$ekzo-verdana-font-stack:       ("Verdana", "Geneva", sans-serif);
+$ekzo-system-font-stack:        (-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif);
+$ekzo-garamond-font-stack:      ("Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif);
+$ekzo-georgia-font-stack:       ("Georgia", "Times", "Times New Roman", serif);
+$ekzo-hoefler-text-font-stack:  ("Hoefler Text", "Baskerville Old Face", "Garamond", "Times New Roman", serif);
+$ekzo-consolas-font-stack:      ("Consolas", "monaco", monospace);
+$ekzo-courier-new-font-stack:   ("Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace);
+$ekzo-monaco-font-stack:        ("monaco", "Consolas", "Lucida Console", monospace);
