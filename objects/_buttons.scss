@@ -59,30 +59,22 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
   @include ekzo-theme() { @if ekzo-theme(btn-bg)            { background-color: ekzo-theme(btn-bg); } }
 
-  @if $ekzo-btn-radius                                            { border-radius: $ekzo-btn-radius; }
+  @if $ekzo-btn-radius                                      { border-radius: $ekzo-btn-radius; }
 
-  @if $ekzo-btn-border-top-width                                  { border-top-width:    $ekzo-btn-border-top-width;}
-  @else                                                           { border-top-width:    0; }    // 6
-  @if $ekzo-btn-border-top-style                                  { border-top-style:    $ekzo-btn-border-top-style; }
-  @else                                                           { border-top-style:    none; } // 6
+  @if $ekzo-btn-border-top-width                            { border-top-width:    $ekzo-btn-border-top-width;}
+  @if $ekzo-btn-border-top-style                            { border-top-style:    $ekzo-btn-border-top-style; }
   @include ekzo-theme() { @if ekzo-theme(btn-border-top)    { border-top-color:    ekzo-theme(btn-border-top); } }
 
-  @if $ekzo-btn-border-right-width                                { border-right-width:  $ekzo-btn-border-right-width; }
-  @else                                                           { border-right-width:  0; }    // 6
-  @if $ekzo-btn-border-right-style                                { border-right-style:  $ekzo-btn-border-right-style; }
-  @else                                                           { border-right-style:  none; } // 6
+  @if $ekzo-btn-border-right-width                          { border-right-width:  $ekzo-btn-border-right-width; }
+  @if $ekzo-btn-border-right-style                          { border-right-style:  $ekzo-btn-border-right-style; }
   @include ekzo-theme() { @if ekzo-theme(btn-border-right)  { border-right-color:  ekzo-theme(btn-border-right); } }
 
-  @if $ekzo-btn-border-bottom-width                               { border-bottom-width: $ekzo-btn-border-bottom-width; }
-  @else                                                           { border-bottom-width: 0; }    // 6
-  @if $ekzo-btn-border-bottom-style                               { border-bottom-style: $ekzo-btn-border-bottom-style; }
-  @else                                                           { border-bottom-style: none; } // 6
+  @if $ekzo-btn-border-bottom-width                         { border-bottom-width: $ekzo-btn-border-bottom-width; }
+  @if $ekzo-btn-border-bottom-style                         { border-bottom-style: $ekzo-btn-border-bottom-style; }
   @include ekzo-theme() { @if ekzo-theme(btn-border-bottom) { border-bottom-color: ekzo-theme(btn-border-bottom); } }
 
-  @if $ekzo-btn-border-left-width                                 { border-left-width:   $ekzo-btn-border-left-width; }
-  @else                                                           { border-left-width:   0; }    // 6
-  @if $ekzo-btn-border-left-style                                 { border-left-style:   $ekzo-btn-border-left-style; }
-  @else                                                           { border-left-style:   none; } // 6
+  @if $ekzo-btn-border-left-width                           { border-left-width:   $ekzo-btn-border-left-width; }
+  @if $ekzo-btn-border-left-style                           { border-left-style:   $ekzo-btn-border-left-style; }
   @include ekzo-theme() { @if ekzo-theme(btn-border-left)   { border-left-color:   ekzo-theme(btn-border-left); } }
 
   &,
@@ -95,20 +87,20 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
     @include ekzo-theme() { @if ekzo-theme(btn-hover-bg)            { background-color:   ekzo-theme(btn-hover-bg); } }
 
-    @if $ekzo-btn-hover-border-top-width                                  { border-top-width:   $ekzo-btn-hover-border-top-width; }
-    @if $ekzo-btn-hover-border-top-style                                  { border-top-style:   $ekzo-btn-hover-border-top-style; }
+    @if $ekzo-btn-hover-border-top-width                            { border-top-width:   $ekzo-btn-hover-border-top-width; }
+    @if $ekzo-btn-hover-border-top-style                            { border-top-style:   $ekzo-btn-hover-border-top-style; }
     @include ekzo-theme() { @if ekzo-theme(btn-hover-border-top)    { border-top-color:   ekzo-theme(btn-hover-border-top); } }
 
-    @if $ekzo-btn-hover-border-right-width                                { border-right-width: $ekzo-btn-hover-border-right-width; }
-    @if $ekzo-btn-hover-border-right-style                                { border-right-style: $ekzo-btn-hover-border-right-style; }
+    @if $ekzo-btn-hover-border-right-width                          { border-right-width: $ekzo-btn-hover-border-right-width; }
+    @if $ekzo-btn-hover-border-right-style                          { border-right-style: $ekzo-btn-hover-border-right-style; }
     @include ekzo-theme() { @if ekzo-theme(btn-hover-border-right)  { border-right-color: ekzo-theme(btn-hover-border-right); } }
 
-    @if $ekzo-btn-hover-border-bottom-width                               { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
-    @if $ekzo-btn-hover-border-bottom-style                               { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
+    @if $ekzo-btn-hover-border-bottom-width                         { border-bottom-width: $ekzo-btn-hover-border-bottom-width; }
+    @if $ekzo-btn-hover-border-bottom-style                         { border-bottom-style: $ekzo-btn-hover-border-bottom-style; }
     @include ekzo-theme() { @if ekzo-theme(btn-hover-border-bottom) { border-bottom-color: ekzo-theme(btn-hover-border-bottom); } }
 
-    @if $ekzo-btn-hover-border-left-width                                 { border-left-width:  $ekzo-btn-hover-border-left-width; }
-    @if $ekzo-btn-hover-border-left-style                                 { border-left-style:  $ekzo-btn-hover-border-left-style; }
+    @if $ekzo-btn-hover-border-left-width                           { border-left-width:  $ekzo-btn-hover-border-left-width; }
+    @if $ekzo-btn-hover-border-left-style                           { border-left-style:  $ekzo-btn-hover-border-left-style; }
     @include ekzo-theme() { @if ekzo-theme(btn-hover-border-left)   { border-left-color:  ekzo-theme(btn-hover-border-left); } }
   }
 

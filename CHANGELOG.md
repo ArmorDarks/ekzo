@@ -83,3 +83,4 @@
 - [BREAKING] Refactored `ekzo-font-size()` mixin. It now accepts `$font-size` instead of `$size` as firt parameter. Returned missing `only` possible value for `$line-height`. It also now can accept any units for `$font-size`, but they should always match `$line-heigt` units.
 - [BREAKING] Similarly to new `ekzo-rem()` function, `ekzo-percent()`  and `ekzo-em()` functions now accepts only values with same units (or both unitless). It will try to convert values with Sass math intelligently, though. If you've converted somewhere impossible to convert units, you will receive an Error now.
 - [BREAKING] Forced immutability via `!important` declaration of positional helpers like `.position--relative` which were by accident mutable before
+- [BREAKING] Simplified behavior of `.btn` borders — they will no longer for no reason enforce `0` and `none` for width and style in case of `false`
