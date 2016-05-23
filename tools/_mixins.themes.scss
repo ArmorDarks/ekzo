@@ -56,7 +56,7 @@
 
   @each $theme, $data in $ekzo-themes {
 
-    @include ekzo-set-temp($data);
+    @include ekzo-set-temp(theme, $data);
 
     $class: $prefix + $theme + $postfix;
 

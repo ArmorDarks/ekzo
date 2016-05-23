@@ -17,5 +17,6 @@
 // ---------------------------------------
 
 @function ekzo-theme($color-name) {
-  @return ekzo-temp($color-name);
+  $tempTheme: ekzo-temp(theme);
+  @return ekzo-get($tempTheme, $color-name);
 }
