@@ -14,19 +14,16 @@ $ekzo-__temp: null !global;
 // ---------------------------------------
 
 @mixin ekzo-set-temp($key, $value:false) {
+  @if not $ekzo-__temp {
+    $ekzo-__temp: () !global;
+  }
 
   @if $value {
-
     $result: ( $key: $value );
-
-    @if not $ekzo-__temp {
-      $ekzo-__temp: () !global;
-    }
-
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
-
   } @else {
-    $ekzo-__temp: $key !global;
+    $result: ( __value: $value );
+    $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
   }
 
 }
@@ -43,7 +40,7 @@ $ekzo-__temp: null !global;
       @error "[ekzo-temp]: temp variable does not hold any value";
     }
 
-    @return $ekzo-__temp;
+    @return ekzo-get($ekzo-__temp, __value);
 
   } @else {
 
