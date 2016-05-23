@@ -1,3 +1,14 @@
+@mixin breadcrumb__entry($delimiter) {
+  content: $delimiter;
+
+  @include ekzo-theme() {
+    @if ekzo-theme(breadcrumb-delimiters) and ekzo-theme(breadcrumb-delimiters) != ekzo-theme(text) {
+      color: ekzo-theme(breadcrumb-delimiters);
+    }
+  }
+
+}
+
 @if $ekzo-enable-breadcrumb {
 
 // =======================================
@@ -10,16 +21,6 @@
 // @param  {string} $delimiter Delimiter for elements
 // @return {properties} Properties for elements
 
-@mixin breadcrumb__entry($delimiter) {
-  content: $delimiter;
-
-  @include ekzo-theme() {
-    @if ekzo-theme(breadcrumb-delimiters) and ekzo-theme(breadcrumb-delimiters) != ekzo-theme(text) {
-      color: ekzo-theme(breadcrumb-delimiters);
-    }
-  }
-
-}
 
 // ----
 // Breadcrumb styling to apply to lists
@@ -50,7 +51,9 @@
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry + .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry + .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry:before {
+    @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content);
+  }
 
 // ----
 // Same breadcrumb, but with heading as last item
