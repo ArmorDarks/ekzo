@@ -18,9 +18,9 @@
     @if $symbolsCount != 0 { @for $i from 1 through $symbolsCount { $modifier: '#{$modifier}#{$decrementor-symbol}'; } }
 
     .#{$prefix}#{$class-name}#{$modifier}#{$postfix} {
-      $ekzo-__temp: ekzo-spacing($spacing) !global;
+      @include ekzo-set-temp(ekzo-spacing($spacing));
       @content
-      $ekzo-__temp: null !global;
+      @include ekzo-purge-temp();
     }
   }
 }
