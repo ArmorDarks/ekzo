@@ -22,7 +22,7 @@
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}nav {
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}list--flush;
+  @extend %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush;
 
   > li,
   > li > a { display: inline-block; }
