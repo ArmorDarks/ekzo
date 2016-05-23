@@ -29,7 +29,72 @@ label {
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
 input,
-textarea { @include ekzo-theme() { background-color: ekzo-theme(forms-bg); } }
+textarea {
+  @if $ekzo-forms-radius                                      { border-radius: $ekzo-forms-radius; }
+
+  @if $ekzo-forms-border-top-width                            { border-top-width:    $ekzo-forms-border-top-width;}
+  @if $ekzo-forms-border-top-style                            { border-top-style:    $ekzo-forms-border-top-style; }
+  @include ekzo-theme() { @if ekzo-theme(forms-border-top)    { border-top-color:    ekzo-theme(forms-border-top); } }
+
+  @if $ekzo-forms-border-right-width                          { border-right-width:  $ekzo-forms-border-right-width; }
+  @if $ekzo-forms-border-right-style                          { border-right-style:  $ekzo-forms-border-right-style; }
+  @include ekzo-theme() { @if ekzo-theme(forms-border-right)  { border-right-color:  ekzo-theme(forms-border-right); } }
+
+  @if $ekzo-forms-border-bottom-width                         { border-bottom-width: $ekzo-forms-border-bottom-width; }
+  @if $ekzo-forms-border-bottom-style                         { border-bottom-style: $ekzo-forms-border-bottom-style; }
+  @include ekzo-theme() { @if ekzo-theme(forms-border-bottom) { border-bottom-color: ekzo-theme(forms-border-bottom); } }
+
+  @if $ekzo-forms-border-left-width                           { border-left-width:   $ekzo-forms-border-left-width; }
+  @if $ekzo-forms-border-left-style                           { border-left-style:   $ekzo-forms-border-left-style; }
+  @include ekzo-theme() { @if ekzo-theme(forms-border-left)   { border-left-color:   ekzo-theme(forms-border-left); } }
+
+  @include ekzo-theme() { background-color: ekzo-theme(forms-bg); }
+
+  &:hover {
+    @include ekzo-theme() { @if ekzo-theme(forms-hover)               { color:              ekzo-theme(forms-hover); } }
+
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-bg)            { background-color:   ekzo-theme(forms-hover-bg); } }
+
+    @if $ekzo-forms-hover-border-top-width                            { border-top-width:   $ekzo-forms-hover-border-top-width; }
+    @if $ekzo-forms-hover-border-top-style                            { border-top-style:   $ekzo-forms-hover-border-top-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-top)    { border-top-color:   ekzo-theme(forms-hover-border-top); } }
+
+    @if $ekzo-forms-hover-border-right-width                          { border-right-width: $ekzo-forms-hover-border-right-width; }
+    @if $ekzo-forms-hover-border-right-style                          { border-right-style: $ekzo-forms-hover-border-right-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-right)  { border-right-color: ekzo-theme(forms-hover-border-right); } }
+
+    @if $ekzo-forms-hover-border-bottom-width                         { border-bottom-width: $ekzo-forms-hover-border-bottom-width; }
+    @if $ekzo-forms-hover-border-bottom-style                         { border-bottom-style: $ekzo-forms-hover-border-bottom-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-bottom) { border-bottom-color: ekzo-theme(forms-hover-border-bottom); } }
+
+    @if $ekzo-forms-hover-border-left-width                           { border-left-width:  $ekzo-forms-hover-border-left-width; }
+    @if $ekzo-forms-hover-border-left-style                           { border-left-style:  $ekzo-forms-hover-border-left-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-left)   { border-left-color:  ekzo-theme(forms-hover-border-left); } }
+  }
+
+  &:focus {
+    @include ekzo-theme() { @if ekzo-theme(forms-hover)               { color:              ekzo-theme(forms-hover); } }
+
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-bg)            { background-color:   ekzo-theme(forms-hover-bg); } }
+
+    @if $ekzo-forms-hover-border-top-width                            { border-top-width:   $ekzo-forms-hover-border-top-width; }
+    @if $ekzo-forms-hover-border-top-style                            { border-top-style:   $ekzo-forms-hover-border-top-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-top)    { border-top-color:   ekzo-theme(forms-hover-border-top); } }
+
+    @if $ekzo-forms-hover-border-right-width                          { border-right-width: $ekzo-forms-hover-border-right-width; }
+    @if $ekzo-forms-hover-border-right-style                          { border-right-style: $ekzo-forms-hover-border-right-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-right)  { border-right-color: ekzo-theme(forms-hover-border-right); } }
+
+    @if $ekzo-forms-hover-border-bottom-width                         { border-bottom-width: $ekzo-forms-hover-border-bottom-width; }
+    @if $ekzo-forms-hover-border-bottom-style                         { border-bottom-style: $ekzo-forms-hover-border-bottom-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-bottom) { border-bottom-color: ekzo-theme(forms-hover-border-bottom); } }
+
+    @if $ekzo-forms-hover-border-left-width                           { border-left-width:  $ekzo-forms-hover-border-left-width; }
+    @if $ekzo-forms-hover-border-left-style                           { border-left-style:  $ekzo-forms-hover-border-left-style; }
+    @include ekzo-theme() { @if ekzo-theme(forms-hover-border-left)   { border-left-color:  ekzo-theme(forms-hover-border-left); } }
+  }
+
+}
 
 
 /**

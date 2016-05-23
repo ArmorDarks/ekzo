@@ -72,6 +72,21 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   forms-placeholder:         ekzo-tint(ekzo-color(outer-space), 20),
   forms-bg:                  ekzo-color(outer-space),
 
+  forms-border-top:          ekzo-tint(ekzo-color(outer-space), 20),
+  forms-border-right:        ekzo-tint(ekzo-color(outer-space), 20),
+  forms-border-bottom:       ekzo-tint(ekzo-color(outer-space), 20),
+  forms-border-left:         ekzo-tint(ekzo-color(outer-space), 20),
+
+  forms-hover-border-top:    ekzo-tint(ekzo-color(outer-space), 40),
+  forms-hover-border-right:  ekzo-tint(ekzo-color(outer-space), 40),
+  forms-hover-border-bottom: ekzo-tint(ekzo-color(outer-space), 40),
+  forms-hover-border-left:   ekzo-tint(ekzo-color(outer-space), 40),
+
+  forms-focus-border-top:    ekzo-tint(ekzo-color(outer-space), 40),
+  forms-focus-border-right:  ekzo-tint(ekzo-color(outer-space), 40),
+  forms-focus-border-bottom: ekzo-tint(ekzo-color(outer-space), 40),
+  forms-focus-border-left:   ekzo-tint(ekzo-color(outer-space), 40),
+
   // ---------------------------------------
   // Buttons
   // ---------------------------------------
