@@ -14,118 +14,114 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
 
 // Extend themes via `ekzo-extend-theme` mixin
 // @example
-//   @include ekzo-extend-themes(( flat: ( brand: red ) ));
+//   @include ekzo-extend-themes(flat, ( brand: red ) );
 
-$ekzo-themes: (
-  base: (
+@include ekzo-extend-themes(base, (
+  brand:                     $ekzo-base-brand-color,
 
-    brand:                     $ekzo-base-brand-color,
+  // ---------------------------------------
+  // Text
+  // ---------------------------------------
 
-    // ---------------------------------------
-    // Text
-    // ---------------------------------------
+  text:                      ekzo-color(green-white),
 
-    text:                      ekzo-color(green-white),
+  // ---------------------------------------
+  // Links
+  // ---------------------------------------
 
-    // ---------------------------------------
-    // Links
-    // ---------------------------------------
+  links:                     $ekzo-base-brand-color,
+  links-hover:               ekzo-tint($ekzo-base-brand-color, 20), // false to disable, color value to enable
 
-    links:                     $ekzo-base-brand-color,
-    links-hover:               ekzo-tint($ekzo-base-brand-color, 20), // false to disable, color value to enable
+  // ----
+  // Links borders
+  //
+  // @param {string|false} - false to disable, color value to enable
+  //
+  // You have to enable width or style in `settings.options` too!
 
-    // ----
-    // Links borders
-    //
-    // @param {string|false} - false to disable, color value to enable
-    //
-    // You have to enable width or style in `settings.options` too!
+  links-border-top:          false,
+  links-border-right:        false,
+  links-border-bottom:       false,
+  links-border-left:         false,
 
-    links-border-top:          false,
-    links-border-right:        false,
-    links-border-bottom:       false,
-    links-border-left:         false,
+  links-hover-border-top:    false,
+  links-hover-border-right:  false,
+  links-hover-border-bottom: false,
+  links-hover-border-left:   false,
 
-    links-hover-border-top:    false,
-    links-hover-border-right:  false,
-    links-hover-border-bottom: false,
-    links-hover-border-left:   false,
+  // ---------------------------------------
+  // Headings
+  // ---------------------------------------
+  // @param {string|false} - false to disable, color value to enable
 
-    // ---------------------------------------
-    // Headings
-    // ---------------------------------------
-    // @param {string|false} - false to disable, color value to enable
+  headings:                  false,
+  extra-headings:            false,
 
-    headings:                  false,
-    extra-headings:            false,
+  // ---------------------------------------
+  // Selection
+  // ---------------------------------------
 
-    // ---------------------------------------
-    // Selection
-    // ---------------------------------------
+  selection:                 false, // false to disable, color value to enable
+  selection-bg:              false, // false to disable, color value to enable
 
-    selection:                 false, // false to disable, color value to enable
-    selection-bg:              false, // false to disable, color value to enable
+  // ---------------------------------------
+  // Forms
+  // ---------------------------------------
 
-    // ---------------------------------------
-    // Forms
-    // ---------------------------------------
+  forms:                     ekzo-color(green-white),
+  forms-placeholder:         ekzo-tint(ekzo-color(outer-space), 20),
+  forms-bg:                  ekzo-color(outer-space),
 
-    forms:                     ekzo-color(green-white),
-    forms-placeholder:         ekzo-tint(ekzo-color(outer-space), 20),
-    forms-bg:                  ekzo-color(outer-space),
+  // ---------------------------------------
+  // Buttons
+  // ---------------------------------------
+  // @param {string|false} - false to disable, color value to enable
 
-    // ---------------------------------------
-    // Buttons
-    // ---------------------------------------
-    // @param {string|false} - false to disable, color value to enable
+  btn:                       ekzo-color(green-white),
+  btn-bg:                    $ekzo-base-brand-color,
+  btn-hover:                 false,
+  btn-hover-bg:              ekzo-tint($ekzo-base-brand-color, 10),
 
-    btn:                       ekzo-color(green-white),
-    btn-bg:                    $ekzo-base-brand-color,
-    btn-hover:                 false,
-    btn-hover-bg:              ekzo-tint($ekzo-base-brand-color, 10),
+  // ----
+  // Buttons borders
+  //
+  // @param {string|false} - false to disable, color value to enable
+  //
+  // @note You have to enable width or style in `settings.options` too!
 
-    // ----
-    // Buttons borders
-    //
-    // @param {string|false} - false to disable, color value to enable
-    //
-    // @note You have to enable width or style in `settings.options` too!
+  btn-border-top:            false,
+  btn-border-right:          false,
+  btn-border-bottom:         false,
+  btn-border-left:           false,
 
-    btn-border-top:            false,
-    btn-border-right:          false,
-    btn-border-bottom:         false,
-    btn-border-left:           false,
+  btn-hover-border-top:      false,
+  btn-hover-border-right:    false,
+  btn-hover-border-bottom:   false,
+  btn-hover-border-left:     false,
 
-    btn-hover-border-top:      false,
-    btn-hover-border-right:    false,
-    btn-hover-border-bottom:   false,
-    btn-hover-border-left:     false,
+  // ----
+  // Buttons states
 
-    // ----
-    // Buttons states
+  btn--positive:             #7ef76a,
+  btn--positive-bg:          #1fa205,
 
-    btn--positive:             #7ef76a,
-    btn--positive-bg:          #1fa205,
+  btn--negative:             #f87,
+  btn--negative-bg:          #a20b05,
 
-    btn--negative:             #f87,
-    btn--negative-bg:          #a20b05,
+  btn--disabled:             #464646,
+  btn--disabled-bg:          #d3d3d3,
 
-    btn--disabled:             #464646,
-    btn--disabled-bg:          #d3d3d3,
+  // ---------------------------------------
+  // Breadcrumb
+  // ---------------------------------------
+  // @param {string|false} - false to disable, color value to enable
 
-    // ---------------------------------------
-    // Breadcrumb
-    // ---------------------------------------
-    // @param {string|false} - false to disable, color value to enable
+  breadcrumb-links:          ekzo-color(green-white),
+  breadcrumb-delimiters:     ekzo-tint(ekzo-color(green-white), 50),
 
-    breadcrumb-links:          ekzo-color(green-white),
-    breadcrumb-delimiters:     ekzo-tint(ekzo-color(green-white), 50),
+  // ---------------------------------------
+  // Backgrounds
+  // ---------------------------------------
 
-    // ---------------------------------------
-    // Backgrounds
-    // ---------------------------------------
-
-    bg:                        ekzo-color(outer-space)
-
-  )
-) !default;
+  bg:                        ekzo-color(outer-space)
+), $default: true);

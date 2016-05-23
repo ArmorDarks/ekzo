@@ -7,8 +7,32 @@
 // Extend theme
 // ---------------------------------------
 
-@mixin ekzo-extend-themes($theme) {
-  $ekzo-themes: map-merge($ekzo-themes, $theme) !global;
+@mixin ekzo-extend-themes($theme-name, $theme, $default: false) {
+
+  $ekzo-themes: () !default;
+
+  @if type-of($theme) != 'map' {
+    @error '[ekzo-extend-themes] `$theme` value type should be `map`, not `#{type-of($theme)}`';
+  }
+
+  @if not map-has-key($ekzo-themes, $theme-name) {
+    $new-theme: ($theme-name: $theme);
+    $ekzo-themes: map-merge($ekzo-themes, $new-theme) !global;
+  }
+
+  @if map-has-key($ekzo-themes, $theme-name) {
+    $existing-theme: map-get($ekzo-themes, $theme-name);
+
+    @if $default {
+      $merged-theme: map-merge($theme, $existing-theme);
+    } @else {
+      $merged-theme: map-merge($existing-theme, $theme);
+    }
+
+    $merged-theme: ($theme-name: $merged-theme);
+    $ekzo-themes: map-merge($ekzo-themes, $merged-theme) !global;
+  }
+
 }
 
 // ---------------------------------------
