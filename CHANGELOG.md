@@ -75,7 +75,6 @@
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-responsive-helpers-breakpoints` to disable generation of helper classes for certain breakpoints.
 - [BREAKING] each responsive helpers enabling/disabling option now accepts list of breakpoints for which responsive helpers should be generated. This allow to precisely select for which helpers which breakpoints should be generated. They also renamed from like `$ekzo-enable-responsive-display-helpers` to `ekzo-responsive-display-helpers-breakpoints` to better represent their nature. All options by default set to `$ekzo-responsive-helpers-breakpoints` value
-- `.o-reline__to` will from now set not only `:hover`, but also `:focus` and `:active`
 - [BREAKING] replaced `$ekzo-spacing-unit` variable and its variations with `ekzo-spacing()` (`ekzo-spacing(.25)`, `ekzo-spacing(2)`, etc.) function
 - [BREAKING] renamed `ekzo-font()` mixin to `ekzo-font-face()`
 - [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity
@@ -87,6 +86,7 @@
 - [BREAKING] Similarly to new `ekzo-rem()` function, `ekzo-percent()`  and `ekzo-em()` functions now accepts only values with same units (or both unitless). It will try to convert values with Sass math intelligently, though. If you've converted somewhere impossible to convert units, you will receive an Error now.
 - [BREAKING] Forced immutability via `!important` declaration of positional helpers like `.position--relative` which were by accident mutable before
 - [BREAKING] Simplified behavior of `.btn` borders — they will no longer for no reason enforce `0` and `none` for width and style in case of `false`
+- `.o-reline__to` will from now set not only `:hover`, but also `:focus` and `:active` because of accessibility reasons
 - `.o-border-reline` _(renamed to to `.o-reline-border-bottom`)_ refactored, it will try to inherit as much as possible values and no logner relies on `$ekzo-links-border-bottom-width` and `$ekzo-links-border-bottom-style` variables. Some older styles might be affected, though
 - [BREAKING] renamed `.o-border-reline` to `.o-reline-border-bottom`
 - `.h-text--underline--rev` now applies styles not only to `:hover`, but also `:focus` and `:active` because of accessibility reasons
