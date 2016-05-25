@@ -67,43 +67,35 @@ a,
  * and make it completely like ordinary text
  */
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
-  @if $ekzo-links-underline { text-decoration: none; }
+ .#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
+   text-decoration: inherit;
 
-  @if $ekzo-links-border-top-width    { border-top-width:    0; }
-  @if $ekzo-links-border-top-style    { border-top-style:    none; }
+   @include ekzo-theme() { color: inherit; };
 
-  @if $ekzo-links-border-right-width  { border-right-width:  0; }
-  @if $ekzo-links-border-right-style  { border-right-style:  none; }
+   border: inherit;
+   outline: inherit;
 
-  @if $ekzo-links-border-bottom-width { border-bottom-width: 0; }
-  @if $ekzo-links-border-bottom-style { border-bottom-style: none; }
+   box-shadow: inherit;
 
-  @if $ekzo-links-border-left-width   { border-left-width:   0; }
-  @if $ekzo-links-border-left-style   { border-left-style:   none; }
+   @include ekzo-theme() { background: inherit; };
 
-  color: inherit;
+   &:hover,
+   &:active,
+   &:focus {
+     text-decoration: inherit;
 
-  &:hover {
-    @if $ekzo-links-underline { text-decoration: none; }
+     @include ekzo-theme() { color: inherit; };
 
-    @include ekzo-theme() { @if ekzo-theme(links-hover) { color: ekzo-theme(text); } }
+     border: inherit;
+     outline: inherit;
 
-    @if $ekzo-links-hover-border-top-width    { border-top-width:    0; }
-    @if $ekzo-links-hover-border-top-style    { border-top-style:    none; }
+     box-shadow: inherit;
 
-    @if $ekzo-links-hover-border-right-width  { border-right-width:  0; }
-    @if $ekzo-links-hover-border-right-style  { border-right-style:  none; }
+     @include ekzo-theme() { background: inherit; };
 
-    @if $ekzo-links-hover-border-bottom-width { border-bottom-width: 0; }
-    @if $ekzo-links-hover-border-bottom-style { border-bottom-style: none; }
+   }
 
-    @if $ekzo-links-hover-border-left-width   { border-left-width:   0; }
-    @if $ekzo-links-hover-border-left-style   { border-left-style:   none; }
-
-  }
-
-}
+ }
 
 
 

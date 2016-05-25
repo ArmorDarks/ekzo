@@ -94,3 +94,4 @@
 - [BREAKING] renamed `.h-text--underline--border` and `.h-text--underline--border--rev` to more generic `.h-border-bottom` and `.h-border-bottom--rev`, added `:focus` and `:active` states because of accessibility reasons
 - [BREAKING] inputs styles from now won't apply to `label`
 - [BREAKING] renamed `.g-text-input` to more obvious `.g-input`
+- `.g-link--flush` from now does not rely on border variables and instead resets and inherits as much as possible to make link similar to outer text. Shouldn't affect older designs. It will also reset `:hover`, `:focus` and `:active` states
