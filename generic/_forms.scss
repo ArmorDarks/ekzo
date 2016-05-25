@@ -19,17 +19,11 @@ fieldset + fieldset { margin-top: ekzo-spacing(2); }
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
 input,
-textarea,
-label {
-  font-family: ekzo-ui-font-family(forms);
-  font-size:   $ekzo-forms-font-size;
-  @include ekzo-theme() { color: ekzo-theme(forms); }
-}
-
-
-.#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
-input,
 textarea {
+  font-size:   $ekzo-forms-font-size;
+  font-family: ekzo-ui-font-family(forms);
+  @include ekzo-theme() { color: ekzo-theme(forms); }
+
   @include ekzo-theme() { background-color: ekzo-theme(forms-bg); }
 }
 
