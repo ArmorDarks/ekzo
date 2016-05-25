@@ -55,13 +55,15 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
   padding-right: 1em;          /* [8] */
   padding-left:  1em;          /* [8] */
 
-  @include ekzo-theme() { @if ekzo-theme(btn)               { color: ekzo-theme(btn); } }
+  @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; }
 
-  @include ekzo-theme() { @if ekzo-theme(btn-bg)            { background-color: ekzo-theme(btn-bg); } }
+  @include ekzo-theme() { @if ekzo-theme(btn)    { color: ekzo-theme(btn); } }
+
+  @include ekzo-theme() { @if ekzo-theme(btn-bg) { background-color: ekzo-theme(btn-bg); } }
 
   &,
   &:hover {
-    @if $ekzo-btn-unline { text-decoration: none; } /* [9] */
+    @if $ekzo-btn-hover-text-decoration { text-decoration: $ekzo-btn-hover-text-decoration; } /* [9] */
   }
 
 }
