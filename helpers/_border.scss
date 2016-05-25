@@ -1,0 +1,33 @@
+// =======================================
+// ^HELPERS.BORDERS
+// =======================================
+// @note I think it's better to leave those styles without `!important`, otherwise it will affect
+//       hover styles
+//       `&:hover` with `border-bottom-width: inherit !important;` doesn't work well to, since it
+//       probably will enforce inherit in places, where we didn't expect it
+//
+// @note Border style will be inherited from parent, which is by default `solid` for all elements,
+//       if not overridden
+//
+// @note For color will be used `currentColor` of element, if not overridden
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom {
+  text-decoration: none; // Remove underline in case of placement on link
+  border-bottom-width: 1px;
+}
+
+// ----
+// Removes underline, but adds it on hover
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom--rev {
+  text-decoration: none; // Remove underline in case of placement on link
+  border-bottom-width: 0;
+
+  &:hover,
+  &:focus,
+  &:active { border-bottom-width: 1px; }
+
+}
+
+// @note `!important` here doesn't work well too, since it enforcing too much inheritance
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border--inherit { border: inherit; }

@@ -135,25 +135,3 @@
   &:active { text-decoration: underline; }
 
 }
-
-// ---------------------------------------
-// Underline with border styling
-// ---------------------------------------
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--border {
-  text-decoration: none;
-
-  border-bottom-width: 1px;
-}
-
-// ----
-// Removes underline, but adds it on hover
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--border--rev {
-  text-decoration: none;
-
-  border-bottom-width: 0;
-
-  &:hover { border-bottom-width: 1px; }
-
-}
