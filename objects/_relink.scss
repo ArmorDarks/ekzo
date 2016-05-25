@@ -1,0 +1,46 @@
+// =======================================
+// ^BORDER-RELINE
+// =======================================
+// @note This one will interact only with base link styles. If you have different styles
+//       from base link styles, it's good idea to add them to `.#{$ekzo-ns}#{$ekzo-generics-ns}link`
+//       If you wish to have few relinks, just use `ekzo-relink()` mixin with your parameters
+
+@mixin ekzo-relink($relink-class, $relink-rev-class, $link-class, $link-flush-class: '.#{$ekzo-ns}#{$ekzo-generics-ns}link--flush') {
+
+  // ----
+  // Removes link style from element, but re-adding it back to
+  // specified `.o-relink__to`
+
+  #{$relink-class} { @extend #{$link-flush-class}; }
+
+    #{$relink-class}__to { @extend #{$link-class}; }
+
+  // ----
+  // Removes link style from element, and re-adding it back to
+  // specified `.o-relink__to` on hover or focus
+  //
+  // @note Unforunately, despite it would be more logical, it can't serve as modificator
+  //       of `.relink` due to conflicts of `.relink__to` @extends
+
+  #{$relink-rev-class} {
+    @extend #{$link-flush-class};
+
+    #{$relink-rev-class}__to { @extend #{$link-flush-class}; }
+
+    &:hover #{$relink-rev-class}__to,
+    &:focus #{$relink-rev-class}__to,
+    &:active #{$relink-rev-class}__to { @extend #{$link-class}; }
+
+  }
+
+}
+
+@if $ekzo-enable-relink {
+
+  @include ekzo-relink(
+    $relink-class:     '.#{$ekzo-ns}#{$ekzo-objects-ns}relink',
+    $relink-rev-class: '.#{$ekzo-ns}#{$ekzo-objects-ns}relink-rev',
+    $link-class:       '.#{$ekzo-ns}#{$ekzo-generics-ns}link'
+  );
+
+} // endif
