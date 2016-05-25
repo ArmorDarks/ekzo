@@ -66,23 +66,6 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   btn-hover-bg:              ekzo-tint($ekzo-base-brand-color, 10),
 
   // ----
-  // Buttons borders
-  //
-  // @param {string|false} - false to disable, color value to enable
-  //
-  // @note You have to enable width or style in `settings.options` too!
-
-  btn-border-top:            false,
-  btn-border-right:          false,
-  btn-border-bottom:         false,
-  btn-border-left:           false,
-
-  btn-hover-border-top:      false,
-  btn-hover-border-right:    false,
-  btn-hover-border-bottom:   false,
-  btn-hover-border-left:     false,
-
-  // ----
   // Buttons states
 
   btn--positive:             #7ef76a,
