@@ -64,12 +64,6 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
     @if $ekzo-btn-unline { text-decoration: none; } /* [9] */
   }
 
-  &:hover {
-    @include ekzo-theme() { @if ekzo-theme(btn-hover)               { color:              ekzo-theme(btn-hover); } }
-
-    @include ekzo-theme() { @if ekzo-theme(btn-hover-bg)            { background-color:   ekzo-theme(btn-hover-bg); } }
-  }
-
 }
 
 
