@@ -3,37 +3,50 @@
 // =======================================
 // ^BORDER-RELINE
 // =======================================
+// @note Those classes will try to inherit border-related properties as smart, as possible.
+//       Still, inheritance of border-width isn't what can be done easily, so it assumes that
+//       you're using default `1px`.
+//       If need in more thick variations will arise, we'll consider adding of additional modifiers
 
 // ----
-// Removes underline from element, but adds it
-// to child span
-//
-// Useful for anchors with icons inside it
+// Moves border underline from element to specified `.o-border-reline__to`
+// Useful for anchors with icons inside
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline {
   border-bottom-width: 0;
 
-  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to { border-bottom-width: 0; }
+  // Prevent overriding of specified default hover/active/focus widths by `.o-border-reline__to`
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to,
+  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to,
+  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to { border-bottom-width: inherit; }
 
 }
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to {
-    border-bottom-width: $ekzo-links-border-bottom-width;
-    border-bottom-style: $ekzo-links-border-bottom-style;
+    border-bottom-width: 1px;
+    border-bottom-style: inherit;
+
+    // We need to carry occasion paddings too, since they can be used to position border underline
+    padding: inherit;
   }
 
 
 // ----
-// Removes underline, but adds it to child span on hover
+// Moves border underline from element to specified `.o-border-reline__to`
+// and shows it only upon hover
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline--rev {
   border-bottom-width: 0;
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to { border-bottom-width: 0; }
 
-  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to {
-    border-bottom-width: $ekzo-links-border-bottom-width;
-    border-bottom-style: $ekzo-links-border-bottom-style;
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to,
+  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to,
+  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}border-reline__to {
+    border-bottom-width: 1px;
+    border-bottom-style: inherit;
+
+    padding: inherit;
   }
 }
 
