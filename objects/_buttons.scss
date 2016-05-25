@@ -209,26 +209,6 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 \*------------------------------------*/
 
 /**
- * Positive actions; e.g. sign in, purchase, submit, etc.
- */
-
-.#{$ekzo-ns}#{$ekzo-objects-ns}btn--positive {
-  @include ekzo-theme() { background-color: ekzo-theme(btn--positive-bg); }
-  @include ekzo-theme() { color:            ekzo-theme(btn--positive); }
-}
-
-
-/**
- * Negative actions; e.g. close account, delete photo, remove friend, etc.
- */
-
-.#{$ekzo-ns}#{$ekzo-objects-ns}btn--negative {
-  @include ekzo-theme() { background-color: ekzo-theme(btn--negative-bg); }
-  @include ekzo-theme() { color:            ekzo-theme(btn--negative); }
-}
-
-
-/**
  * Inactive, disabled buttons.
  *
  * 1. Make the button look like normal cursor when hovered.

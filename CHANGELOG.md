@@ -11,6 +11,7 @@
 - [BREAKING] dropped ability to predefine border styles for links with ekzo variables. Define those styles manually instead.
 - [BREAKING] dropped ability to predefine border styles for buttons with ekzo variables. Define those styles manually instead.
 - [BREAKING] dropped ability to predefine `:hover` colors for buttons with ekzo variables. Define those styles manually instead.
+- [BREAKING] dropped predefined positive and negative buttons. Too opinionated.
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.
