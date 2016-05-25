@@ -32,23 +32,6 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   links:                     $ekzo-base-brand-color,
   links-hover:               ekzo-tint($ekzo-base-brand-color, 20), // false to disable, color value to enable
 
-  // ----
-  // Links borders
-  //
-  // @param {string|false} - false to disable, color value to enable
-  //
-  // You have to enable width or style in `settings.options` too!
-
-  links-border-top:          false,
-  links-border-right:        false,
-  links-border-bottom:       false,
-  links-border-left:         false,
-
-  links-hover-border-top:    false,
-  links-hover-border-right:  false,
-  links-hover-border-bottom: false,
-  links-hover-border-left:   false,
-
   // ---------------------------------------
   // Headings
   // ---------------------------------------
