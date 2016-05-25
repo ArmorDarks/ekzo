@@ -89,3 +89,4 @@
 - [BREAKING] Simplified behavior of `.btn` borders — they will no longer for no reason enforce `0` and `none` for width and style in case of `false`
 - `.o-border-reline` _(renamed to to `.o-reline-border-bottom`)_ refactored, it will try to inherit as much as possible values and no logner relies on `$ekzo-links-border-bottom-width` and `$ekzo-links-border-bottom-style` variables. Some older styles might be affected, though
 - [BREAKING] renamed `.o-border-reline` to `.o-reline-border-bottom`
+- `.h-text--underline--rev` now applies styles not only to `:hover`, but also `:focus` and `:active` because of accessibility reasons
