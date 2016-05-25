@@ -12,16 +12,13 @@ a,
 .#{$ekzo-ns}#{$ekzo-generics-ns}link {
   @include ekzo-theme() { color: ekzo-theme(links); }
 
-  @if $ekzo-links-underline {
-    text-decoration: underline;
-  } @else {
-    text-decoration: none;
-  }
+  @if $ekzo-links-text-decoration { text-decoration: $ekzo-links-text-decoration; }
 
-  &:hover {
+  &:hover,
+  &:focus {
     @include ekzo-theme() { @if ekzo-theme(links-hover) { color: ekzo-theme(links-hover); } }
 
-    @if $ekzo-links-hover-unline { text-decoration: none; }
+    @if $ekzo-links-hover-text-decoration { text-decoration: $ekzo-links-hover-text-decoration; }
   }
 
 }
@@ -34,35 +31,35 @@ a,
  * and make it completely like ordinary text
  */
 
- .#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
-   text-decoration: inherit;
+.#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
+  text-decoration: inherit;
 
-   @include ekzo-theme() { color: inherit; };
+  @include ekzo-theme() { color: inherit; };
 
-   border: inherit;
-   outline: inherit;
+  border: inherit;
+  outline: inherit;
 
-   box-shadow: inherit;
+  box-shadow: inherit;
 
-   @include ekzo-theme() { background: inherit; };
+  @include ekzo-theme() { background: inherit; };
 
-   &:hover,
-   &:active,
-   &:focus {
-     text-decoration: inherit;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: inherit;
 
-     @include ekzo-theme() { color: inherit; };
+    @include ekzo-theme() { color: inherit; };
 
-     border: inherit;
-     outline: inherit;
+    border: inherit;
+    outline: inherit;
 
-     box-shadow: inherit;
+    box-shadow: inherit;
 
-     @include ekzo-theme() { background: inherit; };
+    @include ekzo-theme() { background: inherit; };
 
-   }
+  }
 
- }
+}
 
 
 

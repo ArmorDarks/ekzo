@@ -99,3 +99,4 @@
 - [BREAKING] inputs styles from now won't apply to `label`
 - [BREAKING] renamed `.g-text-input` to more obvious `.g-input`
 - `.g-link--flush` from now does not rely on border variables and instead resets and inherits as much as possible to make link similar to outer text. Shouldn't affect older designs. It will also reset `:hover`, `:focus` and `:active` states
+- [BREAKING] replaced `$ekzo-links-underline` and `$ekzo-links-hover-unline` with `$ekzo-links-text-decoration` and `$ekzo-links-hover-text-decoration` which acs as much intelligent way to set default link underlines

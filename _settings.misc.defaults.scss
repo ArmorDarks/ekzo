@@ -22,8 +22,8 @@ $ekzo-z-indexes: (
 // Links styling
 // ---------------------------------------
 
-$ekzo-links-underline:                 true  !default; // false to force-unline
-$ekzo-links-hover-unline:              true  !default;
+$ekzo-links-text-decoration:       underline !default;
+$ekzo-links-hover-text-decoration: none      !default;
 
 // ---------------------------------------
 // Buttons styling
