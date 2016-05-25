@@ -10,14 +10,11 @@ $ekzo-colors: (
   outer-space:  #313840
 ) !default;
 
-$ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
-
 // Extend themes via `ekzo-extend-theme` mixin
 // @example
 //   @include ekzo-extend-themes(flat, ( brand: red ) );
 
 @include ekzo-extend-themes(base, (
-  brand:                     $ekzo-base-brand-color,
 
   // ---------------------------------------
   // Text
@@ -28,9 +25,10 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   // ---------------------------------------
   // Links
   // ---------------------------------------
+  // @param {string|false} - false to disable, color value to enable
 
-  links:                     $ekzo-base-brand-color,
-  links-hover:               ekzo-tint($ekzo-base-brand-color, 20), // false to disable, color value to enable
+  links:                     ekzo-color(dull-lavender),
+  links-hover:               ekzo-tint(ekzo-color(dull-lavender), 20),
 
   // ---------------------------------------
   // Headings
@@ -43,9 +41,10 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   // ---------------------------------------
   // Selection
   // ---------------------------------------
+  // @param {string|false} - false to disable, color value to enable
 
-  selection:                 false, // false to disable, color value to enable
-  selection-bg:              false, // false to disable, color value to enable
+  selection:                 false,
+  selection-bg:              false,
 
   // ---------------------------------------
   // Forms
@@ -61,7 +60,7 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   // @param {string|false} - false to disable, color value to enable
 
   btn:                       ekzo-color(green-white),
-  btn-bg:                    $ekzo-base-brand-color,
+  btn-bg:                    ekzo-color(dull-lavender),
 
   // ----
   // Buttons states
@@ -88,4 +87,5 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   // ---------------------------------------
 
   bg:                        ekzo-color(outer-space)
+
 ), $default: true);
