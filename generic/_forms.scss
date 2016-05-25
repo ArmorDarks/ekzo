@@ -17,7 +17,7 @@
 fieldset + fieldset { margin-top: ekzo-spacing(2); }
 
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}text-input,
+.#{$ekzo-ns}#{$ekzo-generics-ns}input,
 input,
 textarea {
   font-size:   $ekzo-forms-font-size;
@@ -46,8 +46,8 @@ textarea {
 
   visibility: hidden;
 
-  .#{$ekzo-ns}#{$ekzo-generics-ns}text-input:active + &,
-  .#{$ekzo-ns}#{$ekzo-generics-ns}text-input:focus + & { visibility: visible; }
+  .#{$ekzo-ns}#{$ekzo-generics-ns}input:active + &,
+  .#{$ekzo-ns}#{$ekzo-generics-ns}input:focus + & { visibility: visible; }
 
 }
 

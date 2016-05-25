@@ -93,3 +93,4 @@
 - `.h-text--underline--rev` now applies styles not only to `:hover`, but also `:focus` and `:active` because of accessibility reasons
 - [BREAKING] renamed `.h-text--underline--border` and `.h-text--underline--border--rev` to more generic `.h-border-bottom` and `.h-border-bottom--rev`, added `:focus` and `:active` states because of accessibility reasons
 - [BREAKING] inputs styles from now won't apply to `label`
+- [BREAKING] renamed `.g-text-input` to more obvious `.g-input`
