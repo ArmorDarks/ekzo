@@ -1,0 +1,55 @@
+@if $ekzo-enable-reline-border {
+
+// =======================================
+// ^RELINE-BORDER
+// =======================================
+// @note Those classes will try to inherit border-related properties as smart, as possible.
+//       Still, inheritance of border-width isn't what can be done easily, so it assumes that
+//       you're using default `1px`.
+//       If need in more thick variations will arise, we'll consider adding of additional modifiers
+//       For now we have only reline for border-bottom, since that one most often used on links,
+//       but in case of need we will consider adding more modifiers.
+
+// ----
+// Moves border underline from element to specified `.o-reline-border-bottom__to`
+// Useful for anchors with icons inside
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom {
+  border-bottom-width: 0;
+
+  // Prevent overriding of specified default hover/active/focus widths by `.o-reline-border-bottom__to`
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to { border-bottom-width: inherit; }
+
+}
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to {
+    border-bottom-width: 1px;
+    border-bottom-style: inherit;
+
+    // We need to carry occasion paddings too, since they can be used to position border underline
+    padding: inherit;
+  }
+
+
+// ----
+// Moves border underline from element to specified `.o-reline-border-bottom__to`
+// and shows it only upon hover
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom--rev {
+  border-bottom-width: 0;
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to { border-bottom-width: 0; }
+
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to {
+    border-bottom-width: 1px;
+    border-bottom-style: inherit;
+
+    padding: inherit;
+  }
+}
+
+} // endif
