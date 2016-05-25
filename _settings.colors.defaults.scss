@@ -127,6 +127,12 @@ $ekzo-base-brand-color:  ekzo-color(dull-lavender) !default;
   btn--disabled-bg:          #d3d3d3,
 
   // ---------------------------------------
+  // Horizontal line
+  // ---------------------------------------
+
+  hr:                       ekzo-tint(ekzo-color(outer-space), 10),
+
+  // ---------------------------------------
   // Breadcrumb
   // ---------------------------------------
   // @param {string|false} - false to disable, color value to enable
