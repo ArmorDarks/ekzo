@@ -7,6 +7,7 @@
 - Dropped `debug.scss` support. It shoudn't be part of Ekzo's core
 - Dropped `$ekzo-line-height-ratio` variable — there isn't much sense to keep it in settings by default, since can be easily calculated on demand. Were never used.
 - `ekzo-font-size-classes()` no longer accepts `$name` parameter. For generation of single font-size class should be used new mixin `ekzo-font-size-class()`
+- Due to introduction of theming support, all colors-realated variables dropped in favor of new map. See changes below for details.
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.
