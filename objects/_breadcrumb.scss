@@ -1,3 +1,13 @@
+// =======================================
+// ^BREADCRUMB
+// =======================================
+
+// ----
+// Predefine mixing for breadcrumb's elements
+//
+// @param  {string} $delimiter Delimiter for elements
+// @return {properties} Properties for elements
+
 @mixin breadcrumb__entry($delimiter) {
   content: $delimiter;
 
@@ -10,17 +20,6 @@
 }
 
 @if $ekzo-enable-breadcrumb {
-
-// =======================================
-// ^BREADCRUMB
-// =======================================
-
-// ----
-// Predefine mixing for breadcrumb's elements
-//
-// @param  {string} $delimiter Delimiter for elements
-// @return {properties} Properties for elements
-
 
 // ----
 // Breadcrumb styling to apply to lists
