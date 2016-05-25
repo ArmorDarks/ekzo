@@ -13,7 +13,9 @@
 .#{$ekzo-ns}#{$ekzo-objects-ns}reline {
   text-decoration: none;
 
-  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: none; }
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to,
+  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to,
+  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: none; }
 }
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
@@ -26,7 +28,9 @@
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: none; }
 
-  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
+  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to,
+  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to,
+  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
 }
 
 } // endif

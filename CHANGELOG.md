@@ -74,6 +74,7 @@
 - [BREAKING] improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [BREAKING] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-responsive-helpers-breakpoints` to disable generation of helper classes for certain breakpoints.
 - [BREAKING] each responsive helpers enabling/disabling option now accepts list of breakpoints for which responsive helpers should be generated. This allow to precisely select for which helpers which breakpoints should be generated. They also renamed from like `$ekzo-enable-responsive-display-helpers` to `ekzo-responsive-display-helpers-breakpoints` to better represent their nature. All options by default set to `$ekzo-responsive-helpers-breakpoints` value
+- `.o-reline__to` will from now set not only `:hover`, but also `:focus` and `:active`
 - [BREAKING] replaced `$ekzo-spacing-unit` variable and its variations with `ekzo-spacing()` (`ekzo-spacing(.25)`, `ekzo-spacing(2)`, etc.) function
 - [BREAKING] renamed `ekzo-font()` mixin to `ekzo-font-face()`
 - [BREAKING] Renamed `_framework.scss` to `_index.scss` for better clarity
