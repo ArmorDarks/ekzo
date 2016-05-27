@@ -13,12 +13,12 @@ $ekzo-__temp: null !global;
 // Set
 // ---------------------------------------
 
-@mixin ekzo-set-temp($key, $value:false) {
+@mixin ekzo-set-temp($key, $value:null) {
   @if not $ekzo-__temp {
     $ekzo-__temp: () !global;
   }
 
-  @if $value {
+  @if $value != null {
     $result: ( $key: $value );
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
   } @else {
