@@ -48,8 +48,10 @@
 //    @include ekzo-theme() { background: ekzo-theme(bg); }
 //
 //    .bar {
-//      @include ekzo-theme() { background: ekzo-theme(text); }
-//      @include ekzo-theme() { color: black; }
+//      @include ekzo-theme() {
+//        color: black;
+//        background: ekzo-theme(text);
+//      }
 //    }
 //
 //  }

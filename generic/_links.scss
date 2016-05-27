@@ -34,28 +34,30 @@ a,
 .#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
   text-decoration: inherit;
 
-  @include ekzo-theme() { color: inherit; };
+  @include ekzo-theme() {
+    color: inherit;
+    background: inherit;
+  };
 
   border: inherit;
   @if $ekzo-disable-links-outline { outline: inherit; }
 
   box-shadow: inherit;
 
-  @include ekzo-theme() { background: inherit; };
-
   &:hover,
   &:active,
   &:focus {
     text-decoration: inherit;
 
-    @include ekzo-theme() { color: inherit; };
+    @include ekzo-theme() {
+      color: inherit;
+      background: inherit;
+    };
 
     border: inherit;
     @if $ekzo-disable-links-outline { outline: inherit; }
 
     box-shadow: inherit;
-
-    @include ekzo-theme() { background: inherit; };
 
   }
 

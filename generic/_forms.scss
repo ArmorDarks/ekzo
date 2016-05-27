@@ -22,9 +22,10 @@ input,
 textarea {
   font-size:   $ekzo-forms-font-size;
   font-family: ekzo-ui-font-family(forms);
-  @include ekzo-theme() { color: ekzo-theme(forms); }
-
-  @include ekzo-theme() { background-color: ekzo-theme(forms-bg); }
+  @include ekzo-theme() {
+    color: ekzo-theme(forms);
+    background-color: ekzo-theme(forms-bg);
+  }
 }
 
 
