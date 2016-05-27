@@ -14,7 +14,7 @@ $ekzo-__temp: null !global;
 // ---------------------------------------
 
 @mixin ekzo-set-temp($key, $value:null) {
-  @if not $ekzo-__temp {
+  @if $ekzo-__temp == null {
     $ekzo-__temp: () !global;
   }
 
