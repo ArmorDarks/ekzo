@@ -37,7 +37,7 @@ a,
   @include ekzo-theme() { color: inherit; };
 
   border: inherit;
-  outline: inherit;
+  @if $ekzo-disable-links-outline { outline: inherit; }
 
   box-shadow: inherit;
 
@@ -51,7 +51,7 @@ a,
     @include ekzo-theme() { color: inherit; };
 
     border: inherit;
-    outline: inherit;
+    @if $ekzo-disable-links-outline { outline: inherit; }
 
     box-shadow: inherit;
 

@@ -173,7 +173,7 @@ a { background: transparent; }
 
 a,
 a:active,
-a:hover { outline: 0; }
+a:hover { @if $ekzo-disable-links-outline { outline: 0; } }
 
 // ---------------------------------------
 // Text-level semantics
@@ -311,7 +311,7 @@ samp {
 input,
 textarea,
 select,
-button { outline: 0; }
+button { @if $ekzo-disable-forms-outline { outline: 0; } }
 
 // ----
 // Remove default border from `fieldset` and `legend`.

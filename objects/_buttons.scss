@@ -59,6 +59,8 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
   border-width: 0; // 9
 
+  @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
+
   @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; } // 10
 
   @include ekzo-theme() { @if ekzo-theme(btn)    { color: ekzo-theme(btn); } }

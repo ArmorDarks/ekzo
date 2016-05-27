@@ -59,6 +59,17 @@ $ekzo-enable-theming: true !default;
 $ekzo-global-border-box: true !default;
 
 // ---------------------------------------
+// A11y
+// ---------------------------------------
+// @note Please, disable it only if your links and forms have prominent `:focus` style,
+//       otherwise people with limited capabilities and keyboard-only won't be able
+//       to use your website at all
+
+$ekzo-disable-links-outline: false !default;
+$ekzo-disable-forms-outline: false !default;
+$ekzo-disable-btn-outline:   false !default;
+
+// ---------------------------------------
 // Fonts
 // ---------------------------------------
 
