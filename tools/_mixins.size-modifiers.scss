@@ -3,8 +3,8 @@
 // ^MIXINS.SIZE-MODIFIERS
 // =======================================
 
-@mixin ekzo-size-modifiers($class-name, $spacings, $prefix: '', $postfix: '', $incrementor-symbol: '\\+', $decrementor-symbol: '-') {
-  @each $spacing in $spacings{
+@mixin ekzo-size-modifiers($class-name, $sizes, $prefix: '', $postfix: '', $incrementor-symbol: '\\+', $decrementor-symbol: '-') {
+  @each $spacing in $sizes{
     $modifier: '';
     $fraction: $spacing - floor($spacing);
 
