@@ -22,7 +22,7 @@ $ekzo-__temp: null !global;
     $result: ( $key: $value );
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
   } @else {
-    $result: ( __value: $value );
+    $result: ( __value: $key );
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
   }
 
