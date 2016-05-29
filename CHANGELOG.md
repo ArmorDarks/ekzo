@@ -113,7 +113,7 @@
 - [BREAKING] renamed `.h-text--underline--border` and `.h-text--underline--border--rev` to more generic `.h-border-bottom` and `.h-border-bottom--rev`, added `:focus` and `:active` states because of accessibility reasons
 - [BREAKING] inputs styles from now won't apply to `label`
 - [BREAKING] renamed `.g-text-input` to more obvious `.g-input`
-- `.g-link--flush` from now does not rely on border variables and instead resets and inherits as much as possible to make link similar to outer text. Shouldn't affect older designs. It will also reset `:hover`, `:focus` and `:active` states
+- [BREAKING] `.g-link--flush` from now does not rely on border variables and instead inherits as much as possible to make link similar to outer text. It will also inherit `:hover`, `:focus` and `:active` states. To reflect better its new nature, renamed to `g-link--inherit`
 - [BREAKING] replaced `$ekzo-links-underline` and `$ekzo-links-hover-unline` with `$ekzo-links-text-decoration` and `$ekzo-links-hover-text-decoration` which acs as much intelligent way to set default link underlines
 - [BREAKING] replaced `$ekzo-btn-unline` with `$ekzo-btn-text-decoration`, added missing `$ekzo-btn-hover-text-decoration`. They now works same as similar links-related variables
 - [BREAKING] from now outlines by default are enabled for a11y reasons

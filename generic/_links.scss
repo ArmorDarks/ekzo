@@ -31,7 +31,7 @@ a,
  * and make it completely like ordinary text
  */
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}link--flush {
+.#{$ekzo-ns}#{$ekzo-generics-ns}link--inherit {
   text-decoration: inherit;
 
   @include ekzo-theme() {
