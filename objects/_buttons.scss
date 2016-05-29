@@ -213,24 +213,4 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
   @include ekzo-buttons-sizes($postfix: ekzo-temp());
 };
 
-/*------------------------------------*\
-  $FUNCTIONS
-\*------------------------------------*/
-
-/**
- * Inactive, disabled buttons.
- *
- * 1. Make the button look like normal cursor when hovered.
- */
-
-.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled,
-.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:hover,
-.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:active,
-.#{$ekzo-ns}#{$ekzo-objects-ns}btn--disabled:focus {
-  @include ekzo-theme() { background-color: ekzo-theme(btn--disabled-bg); }
-  @include ekzo-theme() { color:            ekzo-theme(btn--disabled); }
-
-  cursor: default;            /* [1] */
-}
-
 } // endif
