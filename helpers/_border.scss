@@ -11,6 +11,11 @@
 //
 // @note For color will be used `currentColor` of element, if not overridden
 
+// @note We setting only `border-width`, because that class works on assumption, that
+//       all elements by default inherit at least `solid` style, as defined in `normilize.scss`
+//       `border-color`, by default, will be inherited from element's `color`
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border { border-width: 1px; }
+
 .#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom {
   text-decoration: none; // Remove underline in case of placement on link
   border-bottom-width: 1px;
