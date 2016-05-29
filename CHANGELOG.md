@@ -21,7 +21,20 @@
   For details about how it works and how to use head to `ekzo-theme()` mixin description.
 - Added `$ekzo-colors` which upholds whole color pallete of website
 - Added `ekzo-color()` function to quickly get value from `$ekzo-colors`
-- Added pregenerated automatically all `$ekzo-colors` and colors from `ekzo-themes __theme name__` and options to enable/disable it
+- Added automatic generation of colors classes based on `$ekzo-colors` and `$ekzo-themes`, as well as options to enable/disable it. By default you will get for each color from those maps (plus inherit and transparent colors) following classes:
+  * `h-color--{{ colorName }}` for `color` property
+  * `h-bg-color--{{ colorName }}` for `background-color`
+  * `h-border-color--{{ colorName }}` for `border-color`
+  * `h-fill--{{ colorName }}` for `fill`
+  * `h-stroke--{{ colorName }}` for `stroke`
+  
+  This will also produce `:hover` + `:focus` classes:
+  
+  * `h-color:h--{{ colorName }}` for `color`
+  * `h-bg-color:h--{{ colorName }}` for `background-color`
+  * `h-border-color:h--{{ colorName }}` for `border-color`
+  * `h-fill:h--{{ colorName }}` for `fill`
+  * `h-stroke:h--{{ colorName }}` for `stroke`
 - Added option `$ekzo-responsive-helpers-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
 - Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-responsive-helpers-breakpoints`
 - Added `ekzo-set-temp()` mixin which allows to pass values from mixins into `@content`, `ekzo-temp()` function to retrive value and `ekzo-purge-temp()` mixin to clear temp. See `ekzo-each-breakpoint()` for example. Hacky.

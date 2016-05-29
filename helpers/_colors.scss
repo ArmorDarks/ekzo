@@ -4,18 +4,73 @@
 // =======================================
 
 // ---------------------------------------
+// Inherits
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}color--inherit           { color: inherit !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}color\:h--inherit        { &:hover, &:focus { color: inherit !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--inherit        { background-color: inherit !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color\:h--inherit     { &:hover, &:focus { background-color: inherit !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--inherit    { border-color: inherit !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color\:h--inherit { &:hover, &:focus { border-color: inherit !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--inherit            { fill: inherit !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}fill\:h--inherit         { &:hover, &:focus { fill: inherit !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--inherit          { stroke: inherit !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke\:h--inherit       { &:hover, &:focus { stroke: inherit !important; } }
+
+// ---------------------------------------
+// Transparent
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}color--transparent           { color: transparent !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}color\:h--transparent        { &:hover, &:focus { color: transparent !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--transparent        { background-color: transparent !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color\:h--transparent     { &:hover, &:focus { background-color: transparent !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--transparent    { border-color: transparent !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color\:h--transparent { &:hover, &:focus { border-color: transparent !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--transparent            { fill: transparent !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}fill\:h--transparent         { &:hover, &:focus { fill: transparent !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--transparent          { stroke: transparent !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke\:h--transparent       { &:hover, &:focus { stroke: transparent !important; } }
+
+// ---------------------------------------
 // Color pallete
 // ---------------------------------------
 
 @if $ekzo-enable-colors-helpers {
   @each $color, $value in $ekzo-colors {
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color} { color: $value; }
+
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color}           { color: $value !important; }
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}color\:h--#{$color}        { &:hover, &:focus { color: $value !important; } }
+
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--#{$color}        { background-color: $value !important; }
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color\:h--#{$color}     { &:hover, &:focus { background-color: $value !important; } }
+
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--#{$color}    { border-color: $value !important; }
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color\:h--#{$color} { &:hover, &:focus { border-color: $value !important; } }
+
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}fill--#{$color}            { fill: $value !important; }
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}fill\:h--#{$color}         { &:hover, &:focus { fill: $value !important; } }
+
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--#{$color}          { stroke: $value !important; }
+    .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke\:h--#{$color}       { &:hover, &:focus { stroke: $value !important; } }
+
   }
 }
 
 // ---------------------------------------
 // UI colors
 // ---------------------------------------
+// @todo Usage of mixin `ekzo-theme` seems to be a bit slow here. Consider replacement with plain
+//       interpolated class names
 
 @if $ekzo-enable-ui-colors-helpers {
 
@@ -23,9 +78,20 @@
     @each $color, $value in ekzo-get($ekzo-themes, $theme) {
       @if $value {
 
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color} {
-          @include ekzo-theme() { color: ekzo-theme($color); }
-        }
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color}           { @include ekzo-theme() { color: $value !important; } }
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}color\:h--#{$color}        { @include ekzo-theme() { &:hover, &:focus { color: $value !important; } } }
+
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--#{$color}        { @include ekzo-theme() { background-color: $value !important; } }
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color\:h--#{$color}     { @include ekzo-theme() { &:hover, &:focus { background-color: $value !important; } } }
+
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--#{$color}    { @include ekzo-theme() { border-color: $value !important; } }
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color\:h--#{$color} { @include ekzo-theme() { &:hover, &:focus { border-color: $value !important; } } }
+
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}fill--#{$color}            { @include ekzo-theme() { fill: $value !important; } }
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}fill\:h--#{$color}         { @include ekzo-theme() { &:hover, &:focus { fill: $value !important; } } }
+
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--#{$color}          { @include ekzo-theme() { stroke: $value !important; } }
+        .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke\:h--#{$color}       { @include ekzo-theme() { &:hover, &:focus { stroke: $value !important; } } }
 
       }
     }
