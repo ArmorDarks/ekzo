@@ -1,0 +1,132 @@
+// scss-lint:disable ImportantRule
+
+// =======================================
+// ^HELPERS.FLEXBOX
+// =======================================
+
+@mixin ekzo-flex-helpers($prefix:'', $postfix:'') {
+
+  // ---------------------------------------
+  // flex container helpers
+  // ---------------------------------------
+
+  .#{$prefix}display--flex#{$postfix}        { display: flex; }
+  .#{$prefix}display--inline-flex#{$postfix} { display: inline-flex; }
+
+  // -----
+  // Inline flex
+
+  .#{$prefix}flex--inline#{$postfix} { display: inline-flex; }
+
+  // -----
+  // Items stacking
+
+  .#{$prefix}flex--row#{$postfix}          { flex-direction: row; } // default for flex
+  .#{$prefix}flex--row--rev#{$postfix}     { flex-direction: row-reverse; }
+  .#{$prefix}flex--column#{$postfix}      { flex-direction: column; }
+  .#{$prefix}flex--column--rev#{$postfix} { flex-direction: column-reverse; }
+
+  // -----
+  // Items wrapping
+
+  .#{$prefix}flex--wrap#{$postfix}      { flex-wrap: wrap; }         // declared default in `.o-flex`
+  .#{$prefix}flex--wrap--rev#{$postfix} { flex-wrap: wrap-reverse; }
+  .#{$prefix}flex--nowrap#{$postfix}    { flex-wrap: nowrap; }       // default for flex
+
+  // -----
+  // Main axis aligment
+
+  .#{$prefix}flex-x--start#{$postfix}   { justify-content: flex-start; }    // default for flex
+  .#{$prefix}flex-x--center#{$postfix}  { justify-content: center; }
+  .#{$prefix}flex-x--end#{$postfix}     { justify-content: flex-end; }
+  .#{$prefix}flex-x--between#{$postfix} { justify-content: space-between; } // = justify
+  .#{$prefix}flex-x--around#{$postfix}  { justify-content: space-around; }  // ~ justify, but with spacing around
+
+  // -----
+  // Cross axis aligment
+
+  .#{$prefix}flex-y--stretch#{$postfix}  { align-items: stretch; }    // default for flex, 100% height of container
+  .#{$prefix}flex-y--top#{$postfix}      { align-items: flex-start; }     // !!!! set to this as default?
+  .#{$prefix}flex-y--center#{$postfix}   { align-items: center; }
+  .#{$prefix}flex-y--end#{$postfix}      { align-items: flex-end; }
+  .#{$prefix}flex-y--baseline#{$postfix} { align-items: baseline; }   // aligns by text baseline
+
+  // -----
+  // Cross axis aligment of rows
+
+  .#{$prefix}flex-rows--stretch#{$postfix} { align-content: stretch; } // default for flex, 100% height of container
+  .#{$prefix}flex-rows--start#{$postfix}   { align-content: flex-start; }
+  .#{$prefix}flex-rows--center#{$postfix}  { align-content: center; }
+  .#{$prefix}flex-rows--end#{$postfix}     { align-content: flex-end; }
+  .#{$prefix}flex-rows--between#{$postfix} { align-content: space-between; }
+  .#{$prefix}flex-rows--around#{$postfix}  { align-content: space-around; }
+
+  // ---------------------------------------
+  // flex items helpers
+  // ---------------------------------------
+
+  // -----
+  // Flex of individual item
+  // Should item occupy free space or no
+
+  .#{$prefix}flex__item-grow--flush#{$postfix}   { flex-grow: 0; } // default for flex
+  .#{$prefix}flex__item-grow#{$postfix}          { flex-grow: 1; } // if set flex-item will occupy all flex-container space
+  .#{$prefix}flex__item-grow#{$postfix}\+        { flex-grow: 2; }
+
+  // Should item shrink when there is no free space
+
+  .#{$prefix}flex__item-shrink--flush#{$postfix} { flex-shrink: 0; } // default for flex in IE10
+  .#{$prefix}flex__item-shrink#{$postfix}        { flex-shrink: 1; } // default for flex
+  .#{$prefix}flex__item-shrink#{$postfix}\+      { flex-shrink: 2; }
+
+  // Base width of individual item
+  // {0|auto|px|rem|em|%|...}
+
+  .#{$prefix}flex__item-basis--auto#{$postfix}   { flex-basis: auto; } // default for flex, = inline-block behaviour
+
+  .#{$prefix}flex__item-flex--auto#{$postfix}         { flex: 1 1 auto; }
+  .#{$prefix}flex__item-flex--flush#{$postfix}        { flex: none }
+
+  // -----
+  // Order of individual item
+
+  .#{$prefix}order--first#{$postfix} { order: -10000; }
+  .#{$prefix}order--1#{$postfix}     { order: 1 }
+  .#{$prefix}order--2#{$postfix}     { order: 2 }
+  .#{$prefix}order--3#{$postfix}     { order: 3 }
+  .#{$prefix}order--last#{$postfix}  { order:  10000; }
+  .#{$prefix}order--flush#{$postfix} { order:  0; } // default for flex
+
+  // -----
+  // Cross axis aligment of individual item
+
+  .#{$prefix}flex__item--auto#{$postfix}     { align-self: auto; } // default for flex
+  .#{$prefix}flex__item--stretch#{$postfix}  { align-self: stretch; }
+  .#{$prefix}flex__item--start#{$postfix}    { align-self: flex-start; }
+  .#{$prefix}flex__item--end#{$postfix}      { align-self: flex-end; }
+  .#{$prefix}flex__item--center#{$postfix}   { align-self: center; }
+  .#{$prefix}flex__item--baseline#{$postfix} { align-self: baseline; }
+
+}
+
+// ---------------------------------------
+// Call all flex helpers
+// ---------------------------------------
+
+@if $ekzo-enable-flex-helpers {
+
+  @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
+
+} // endif
+
+// ---------------------------------------
+// Responsive flex helpers
+// ---------------------------------------
+
+@if $ekzo-enable-flex-helpers {
+
+  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-flex-helpers-breakpoints) {
+    @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+  };
+
+} // endif
