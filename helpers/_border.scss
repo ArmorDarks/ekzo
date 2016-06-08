@@ -14,18 +14,16 @@
 // @note We setting only `border-width`, because that class works on assumption, that
 //       all elements by default inherit at least `solid` style, as defined in `normilize.scss`
 //       `border-color`, by default, will be inherited from element's `color`
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border { border-width: 1px; }
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom {
-  text-decoration: none; // Remove underline in case of placement on link
-  border-bottom-width: 1px;
-}
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border        { border-width: 1px; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-top    { border-top-width: 1px; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-right  { border-right-width: 1px; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom { border-bottom-width: 1px; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-left   { border-left-width: 1px; }
 
 // ----
 // Removes underline, but adds it on hover
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom--rev {
-  text-decoration: none; // Remove underline in case of placement on link
   border-bottom-width: 0;
 
   &:hover,
@@ -36,3 +34,9 @@
 
 // @note `!important` here doesn't work well too, since it enforcing too much inheritance
 .#{$ekzo-ns}#{$ekzo-helpers-ns}border--inherit { border: inherit; }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border--flush        { border:        none; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-top--flush    { border-top:    none; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-right--flush  { border-right:  none; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom--flush { border-bottom: none; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-left--flush   { border-left:   none; }

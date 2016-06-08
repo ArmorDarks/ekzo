@@ -77,7 +77,8 @@
 - Added ability to predefine default color for `hr`
 - Added `border-width: 0` to `.o-btn` to prevent appearing of borders on buttons in case of defined borders on `a`. Override in your own styles if needed.
 - Added a11y-related ability to disable outlines on links, buttons and forms. Enabled by default
-- Added `.h-border` which sets `border-width` to `1px`. Only one class for now, other will be added in future in case of need.
+- Added `.h-border`, `.h-border-top`, `.h-border-left`, `.h-border-right` and `.h-border-bottom` which sets `border-width` to `1px`
+- Added `.h-border--flush`, `.h-border-top--flush`, `.h-border-left--flush`, `.h-border-right--flush` and `.h-border-bottom--flush` which sets `border-width` to `0px`
 - Added `h-align--baseline` helper which sets `vertical-align: baseline`
 - Added `h-font-size--inherit` helper which forces inheritance of `font-size`
 - Added predefined `h-text-truncate` which will force truncation of texts if it's longer than one line
