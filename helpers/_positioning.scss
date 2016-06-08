@@ -49,6 +49,7 @@
   .#{$prefix}align--top#{$postfix}           { vertical-align: top    !important; align-items: flex-start !important; } // 1
   .#{$prefix}align--middle#{$postfix}        { vertical-align: middle !important; align-items: center     !important; } // 1
   .#{$prefix}align--bottom#{$postfix}        { vertical-align: bottom !important; align-items: flex-end   !important; } // 1
+  .#{$prefix}align--baseline#{$postfix}      { vertical-align: baseline !important; }
 
 }
 
