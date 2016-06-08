@@ -57,6 +57,8 @@
   .#{$prefix}font-size--em\+\+\+#{$postfix}   { font-size: 4em; }
   .#{$prefix}font-size--em\+\+\+\+#{$postfix} { font-size: 5em; }
 
+  .#{$prefix}font-size--inherit#{$postfix}    { font-size: inherit; }
+
   // ---------------------------------------
   // Line-height helpers
   // ---------------------------------------
