@@ -124,3 +124,4 @@
 - [BREAKING] replaced `$ekzo-links-underline` and `$ekzo-links-hover-unline` with `$ekzo-links-text-decoration` and `$ekzo-links-hover-text-decoration` which acs as much intelligent way to set default link underlines
 - [BREAKING] replaced `$ekzo-btn-unline` with `$ekzo-btn-text-decoration`, added missing `$ekzo-btn-hover-text-decoration`. They now works same as similar links-related variables
 - [BREAKING] from now outlines by default are enabled for a11y reasons
+- [BREAKING] replaced `.h-muted` helper by set of `.h-opacity--{{value}}` and `.h-opacity:h--{{value}}` helpers
