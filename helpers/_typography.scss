@@ -118,6 +118,7 @@
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--caps            { text-transform: capitalize !important; }
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--break-word      { word-wrap:   break-word; }
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--truncate        { @include ekzo-truncate(100%); }
 
