@@ -52,7 +52,6 @@
 - Added `h-text--caps` helper
 - Added options `$ekzo-widths-fractions` and `$ekzo-responsive-widths-fractions` to control generated widths
 - Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
-- Added `ekzo-size-modifiers()` mixin with quite strange name (should think about better one) wich will output classes based on common in Ekzo size modifiers name conventions (like `margin++-`) by accepting base class name and list of spacings, which should be applied
 - Added `ekzo-strip-units()` function which allows to remove units from the value
 - Added `ekzo-units()` function which allows to convert units. Relies on Sass math to prevent conversion of incompatible units.
 - Added more positional helpers, including ability to quickly set `top: 0` with `.position--top`, or cover relative parent with `top: 0; right: 0; bottom: 0; left: 0;` via simple `.position--cover`
