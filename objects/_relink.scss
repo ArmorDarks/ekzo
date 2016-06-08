@@ -5,7 +5,7 @@
 //       from base link styles, it's good idea to add them to `.#{$ekzo-ns}#{$ekzo-generics-ns}link`
 //       If you wish to have few relinks, just use `ekzo-relink()` mixin with your parameters
 
-@mixin ekzo-relink($relink-class, $relink-rev-class, $link-class, $link-flush-class: '.#{$ekzo-ns}#{$ekzo-generics-ns}link--flush') {
+@mixin ekzo-relink($relink-class, $relink-rev-class, $link-class, $link-flush-class: '.#{$ekzo-ns}#{$ekzo-generics-ns}link--inherit') {
 
   // ----
   // Removes link style from element, but re-adding it back to
