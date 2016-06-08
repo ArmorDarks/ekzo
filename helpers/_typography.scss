@@ -119,6 +119,8 @@
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }
 
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--truncate        { @include ekzo-truncate(100%); }
+
 // ---------------------------------------
 // Underline styling
 // ---------------------------------------
