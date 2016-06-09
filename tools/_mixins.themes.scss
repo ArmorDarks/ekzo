@@ -10,6 +10,7 @@
 @mixin ekzo-extend-themes($theme-name, $theme, $default: false) {
 
   $ekzo-themes: () !default;
+  $new-theme:   ();
 
   @if type-of($theme) != 'map' {
     @error '[ekzo-extend-themes] `$theme` value type should be `map`, not `#{type-of($theme)}`';
@@ -17,23 +18,19 @@
 
   @if not map-has-key($ekzo-themes, $theme-name) {
     $new-theme: ($theme-name: $theme);
-    $ekzo-themes: map-merge($ekzo-themes, $new-theme) !global;
-  }
-
-  @if map-has-key($ekzo-themes, $theme-name) {
+  } @else {
     $existing-theme: map-get($ekzo-themes, $theme-name);
 
-    $merged-theme: ();
-
     @if $default {
-      $merged-theme: map-merge($theme, $existing-theme);
+      $new-theme: map-merge($theme, $existing-theme);
     } @else {
-      $merged-theme: map-merge($existing-theme, $theme);
+      $new-theme: map-merge($existing-theme, $theme);
     }
 
-    $merged-theme: ($theme-name: $merged-theme);
-    $ekzo-themes: map-merge($ekzo-themes, $merged-theme) !global;
+    $new-theme: ($theme-name: $new-theme);
   }
+
+  $ekzo-themes: map-merge($ekzo-themes, $new-theme) !global;
 
 }
 
