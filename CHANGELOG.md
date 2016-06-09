@@ -12,6 +12,7 @@
 - [BREAKING] dropped ability to predefine border styles for buttons with ekzo variables. Define those styles manually instead.
 - [BREAKING] dropped ability to predefine `:hover` colors for buttons with ekzo variables. Define those styles manually instead.
 - [BREAKING] dropped predefined colors for positive, negative and disabled buttons. Too opinionated for foundation.
+- [BREAKING] dropped `ekzo-font-size-class()` and `ekzo-font-size-classes()` mixins, since they were way too overengineered and excessive. Use simpler and more clear `@each` instead.
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.
