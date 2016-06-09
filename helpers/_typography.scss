@@ -115,6 +115,11 @@
 
   .#{$prefix}line-height--flush#{$postfix} { line-height: 1 !important; }
 
+  .#{$prefix}text--tracked#{$postfix}        { letter-spacing:  .16em; }
+  .#{$prefix}text--tracked--#{$postfix}      { letter-spacing: -.05em; }
+  .#{$prefix}text--tracked\+#{$postfix}      { letter-spacing:  .32em; }
+  .#{$prefix}text--tracked--flush#{$postfix} { letter-spacing:  0; }
+
 }
 
 // ---------------------------------------
