@@ -94,8 +94,8 @@
   .#{$prefix}order--1#{$postfix}     { order: 1 }
   .#{$prefix}order--2#{$postfix}     { order: 2 }
   .#{$prefix}order--3#{$postfix}     { order: 3 }
-  .#{$prefix}order--last#{$postfix}  { order:  10000; }
-  .#{$prefix}order--flush#{$postfix} { order:  0; } // default for flex
+  .#{$prefix}order--last#{$postfix}  { order: 10000; }
+  .#{$prefix}order--flush#{$postfix} { order: 0; } // default for flex
 
   // -----
   // Cross axis aligment of individual item
