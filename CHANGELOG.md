@@ -84,7 +84,7 @@
 - Added predefined `h-text-truncate` which will force truncation of texts if it's longer than one line
 - Added `h-text--break-word` which allows to force line wrapping of too long words
 - Added large set of flex-related helpers
-- Added ability to generate `h-font-size--em*` helpers based on `$ekzo-font-sizes.ems` map
+- Added ability to generate `h-font-size--em*` and `text--em*` helpers based on `$ekzo-font-sizes.ems` map
 - Added `.o-show-grid` object which prints base vertical rhythm guides based on `ekzo-spacing(1)`
 - `ekzo-font-size()` mixin now can accept `ems` as `$font-size` parameter even with `px` base line-height. It will try to generate line-height ratios properly
 

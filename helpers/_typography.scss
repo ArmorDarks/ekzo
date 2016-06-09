@@ -23,6 +23,19 @@
   }
 
   // ----
+  // ems
+  // @todo So far I'm not sure is it good idea to generate line-height for dynamic
+  //       elements like ems. However, seems that it properly scales and
+  //       at least tries to maintain close to ideal line-height proportion
+  //       even after stacking few times
+
+  @each $variant, $value in ekzo-get($ekzo-font-sizes, ems) {
+    .#{$prefix}text--em#{$variant}#{$postfix} {
+      @include ekzo-font-size($value);
+    }
+  }
+
+  // ----
   // Standard headings
   //
   // When we define a heading we also define a corresponding class to go with it.
@@ -80,6 +93,8 @@
   // ---------------------------------------
   // Line-height helpers
   // ---------------------------------------
+  // @todo Those seems to be very specific, and I'm really not sure that we ever
+  //       would need those. Let's see will we use them in future or no
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, text) {
     @if $variant == 'base' { $variant: '' }
