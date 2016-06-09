@@ -25,9 +25,9 @@ $ekzo-font-sizes: (
   ),
 
   extra-headings: (
-    \+\+: 96px, // = .extra-h\+\+\+, .font-size\+\+\+, .line-height\+\+\+
-    \+:   72px, // = .extra-h\+\+,   .font-size\+\+,   .line-height\+\+
-    base:   44px, // = .extra-h\+,     .font-size\+,     .line-height\+
+    \+\+: 96px, // = .extra-h\+\+, .font-size\+\+, .line-height\+\+
+    \+:   72px, // = .extra-h\+,   .font-size\+,   .line-height\+
+    '':   44px, // = .extra-h,     .font-size,     .line-height
   ),
 
   ems: (
