@@ -44,18 +44,9 @@
   @include ekzo-font-size-classes(headings, $prefix: $prefix + font-size--, $postfix: $postfix, $line-height: false);
   @include ekzo-font-size-classes(extra-headings, $prefix: $prefix + font-size-- + extra-h--, $postfix: $postfix, $line-height: false);
 
-  // @todo Add to font-sizes map
-
-  .#{$prefix}font-size--em--#{$postfix}       { font-size: .5em; }
-  .#{$prefix}font-size--em-#{$postfix}        { font-size: .75em; }
-  .#{$prefix}font-size--em\+---#{$postfix}    { font-size: 1.25em; }
-  .#{$prefix}font-size--em\+--#{$postfix}     { font-size: 1.5em; }
-  .#{$prefix}font-size--em\+#{$postfix}       { font-size: 2em; }
-  .#{$prefix}font-size--em\+\+---#{$postfix}  { font-size: 2.25em; }
-  .#{$prefix}font-size--em\+\+--#{$postfix}   { font-size: 2.5em; }
-  .#{$prefix}font-size--em\+\+#{$postfix}     { font-size: 3em; }
-  .#{$prefix}font-size--em\+\+\+#{$postfix}   { font-size: 4em; }
-  .#{$prefix}font-size--em\+\+\+\+#{$postfix} { font-size: 5em; }
+  @each $variant, $value in ekzo-get($ekzo-font-sizes, ems) {
+    .#{$prefix}font-size--em#{$variant}#{$postfix} { font-size: $value; }
+  }
 
   .#{$prefix}font-size--inherit#{$postfix}    { font-size: inherit; }
 
