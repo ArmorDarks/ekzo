@@ -46,15 +46,15 @@
 // On contrary to `ekzo-font-size()` function, that mixin embending `font-size` and
 // caluclated `line-height` into class within which it was called
 //
-// @param {number|string} $font-size           - Desired `font-size` or font-size name,
-//                                               specified in default Ekzo font-sizes map
-//                                               or specified one
-// @param {string} $type=text                  - Group's name of font-size in default or specified map.
-//                                               Should be specified only if `$size` set to string
-// @param {bool|only|number} $line-height=true - Should `line-height` rhythm calculation be applied or no.
-//                                               Set to number to define custom `line-height`.
-//                                               Set to `only` to output only `line-height`
-// @param {map} $map=$ekzo-font-sizes          - In which map mixin should look for `font-size` value
+// @param {number|string} $font-size  - Desired `font-size` or font-size name,
+//                                      specified in default Ekzo font-sizes map
+//                                      or specified one
+// @param {string} $type=text         - Group's name of font-size in default or specified map.
+//                                      Should be specified only if `$size` set to string
+// @param {bool|only|number} $line-height=$ekzo-line-height
+//                                    - Should `line-height` rhythm calculation be applied or no.
+//                                      Set to number to define custom `line-height`.
+// @param {map} $map=$ekzo-font-sizes - In which map mixin should look for `font-size` value
 //
 // @example
 //
@@ -62,17 +62,16 @@
 //    .heading { @include ekzo-font-size(h1, headings); }
 //    .heading { @include ekzo-font-size(big, my-group, $map:$my-custom-sizes); }
 
-@mixin ekzo-font-size($font-size, $type:text, $line-height:true, $map:$ekzo-font-sizes) {
+@mixin ekzo-font-size($font-size, $type:text, $line-height:$ekzo-line-height, $map:$ekzo-font-sizes) {
 
   @if type-of($font-size) == string {
     $font-size: ekzo-font-size($font-size, $type, $map);
   }
 
-  // Use base Ekzo line-height if set to `true`
-  @if $line-height == true or $line-height == only { $line-height: $ekzo-line-height; }
-
-  @if $line-height not only { font-size: $font-size; }
-  @if $line-height          { @include ekzo-line-height($font-size: $font-size, $base-line-height: $line-height); }
+  font-size: $font-size;
+  @if $line-height {
+    @include ekzo-line-height($font-size: $font-size, $base-line-height: $line-height);
+  }
 
 }
 

@@ -129,3 +129,4 @@
 - [BREAKING] from now outlines by default are enabled for a11y reasons
 - [BREAKING] replaced `.h-muted` helper by set of `.h-opacity--{{value}}` and `.h-opacity:h--{{value}}` helpers
 - Typography helpers no longer using `ekzo-font-size-classes()` mixin and relies on simple `@each`
+- Refactored `ekzo-font-size()` mixin
