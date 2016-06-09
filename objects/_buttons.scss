@@ -174,9 +174,9 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
   // ----
   // Button font-size modifiers based on map's values.
 
-  $ekzo-btn-prefix: $ekzo-ns + ekzo-objects-ns + btn--;
-
-  @include ekzo-font-size-classes(buttons, $prefix: $ekzo-btn-prefix, $postfix: $postfix, $line-height:false);
+  @each $variant, $value in ekzo-get($ekzo-font-sizes, buttons) {
+    .#{$ekzo-ns}#{$ekzo-objects-ns}btn#{$variant}#{$postfix} { font-size: $value; }
+  }
 
 } // ekzo-buttons-sizes()
 
