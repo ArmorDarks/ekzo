@@ -24,6 +24,14 @@
   $font-size-units: unit($font-size);
   $base-line-height-units: unit($base-line-height);
 
+  // @todo This might be not brightes idea, but it allows to accept ems with px-based base line-height
+  //       Think about better implementation
+  // @todo We can also do same for rems
+  @if $font-size-units == 'em' and $base-line-height-units == 'px' {
+    $font-size: ekzo-strip-units($font-size) * ekzo-font-size(base);
+    $font-size-units: unit($font-size);
+  }
+
   @if $font-size-units != $base-line-height-units {
     @error '[ekzo-line-height] unit types of `$font-size` and `$base-line-height` should match. You specified `' + $font-size-units + '` and `' + $base-line-height-units + '`.'
   }
