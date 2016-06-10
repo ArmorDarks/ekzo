@@ -23,7 +23,11 @@
 // ----
 // Removes underline, but adds it on hover
 
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border\:h        { &:hover, &:focus  { border-width: 1px; } }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-top\:h    { &:hover, &:focus  { border-top-width: 1px; } }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-right\:h  { &:hover, &:focus  { border-right-width: 1px; } }
 .#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom\:h { &:hover, &:focus  { border-bottom-width: 1px; } }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-left\:h   { &:hover, &:focus  { border-left-width: 1px; } }
 
 // @note `!important` here doesn't work well too, since it enforcing too much inheritance
 .#{$ekzo-ns}#{$ekzo-helpers-ns}border--inherit { border: inherit; }
