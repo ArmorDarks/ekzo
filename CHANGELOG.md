@@ -14,6 +14,7 @@
 - [BREAKING] dropped predefined colors for positive, negative and disabled buttons. Too opinionated for foundation.
 - [BREAKING] dropped `ekzo-font-size-class()` and `ekzo-font-size-classes()` mixins, since they were way too overengineered and excessive. Use simpler and more clear `@each` instead.
 - Dropped not needed anymore `str-replace()` function. Use external snippet it you need it.
+- Dropped `.o-btn--reset`. You should architecture your styles in the way that you need to reset something back to it's initial values
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.

@@ -1,7 +1,4 @@
 
-$btn-padding-top:    ekzo-em(ekzo-spacing(.5));
-$btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
-
 @if $ekzo-enable-buttons {
 
 // =======================================
@@ -20,7 +17,6 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 //     as padding, to keep consistent spacing.
 //  9. Prevent appearing of borders in case `a` has defined border. Override in your
 //     own styles if needed.
-//  10. Don't allow buttons to have underlines; it kinda ruins the illusion.
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn {
   display: inline-block;       // 1
@@ -31,17 +27,16 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
   margin: 0;                   // 6
 
-  padding-top:    $btn-padding-top;    // 7
-  padding-bottom: $btn-padding-bottom; // 7
-
-  padding-right: 1em;          // 8
-  padding-left:  1em;          // 8
+  padding-top:    ekzo-em(ekzo-spacing(.5)); // 7
+  padding-bottom: ekzo-em(ekzo-spacing(.5)); // 7
+  padding-right:  1em;                       // 8
+  padding-left:   1em;                       // 8
 
   border-width: 0; // 9
 
   @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
 
-  @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; } // 10
+  @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; }
 
   @include ekzo-theme() {
     @if ekzo-theme(btn)    { color: ekzo-theme(btn); }
@@ -93,13 +88,6 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
     padding-bottom: ekzo-em(ekzo-spacing(.5) / 3);
     padding-right:  .8em;
     padding-left:   .8em;
-  }
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--reset#{$postfix} {
-    padding-top:    $btn-padding-top;
-    padding-bottom: $btn-padding-bottom;
-    padding-right:  1em;
-    padding-left:   1em;
   }
 
   // line-height = 3
