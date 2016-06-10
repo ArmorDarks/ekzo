@@ -39,63 +39,89 @@
 // 2. Used display model `inline-block` yeilds unwanted whitespaces
 //    which we have to removed with quite cruel method
 
-.#{$ekzo-ns}grid { letter-spacing: -.31em; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}grid { letter-spacing: -.31em; }
 
-  .#{$ekzo-ns}grid__item {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item {
+    vertical-align: top;
     display: inline-block; // 1
     letter-spacing: normal; // 2
   }
 
 // ---------------------------------------
-// Grid modifiers hacks
+// Flex aligment hacks
 // ---------------------------------------
-//
-// @legacy
+// When used with `.o-grid`, try to mimic flex
+// behavior as close as possible
 
-@mixin ekzo-grid-types($postfix: '') {
+@mixin ekzo-flex-helpers($prefix:'', $postfix:'') {
 
-  // ----
-  // Grid items aligment
+  // -----
+  // Main axis aligment
 
-  .#{$ekzo-ns}grid--center#{$postfix} {
-    text-align: center;
+  .#{$prefix}flex--nowrap#{$postfix}    {
+    display: table;
 
-    > .#{$ekzo-ns}grid__item { text-align: left; }
-
-  }
-
-  .#{$ekzo-ns}grid--middle#{$postfix} {
-
-    > .#{$ekzo-ns}grid__item { vertical-align: middle; }
+    > { display: table-cell }
 
   }
 
-  .#{$ekzo-ns}grid--bottom#{$postfix} {
+  .#{$prefix}flex-x--start#{$postfix} { text-align: left !important; }
 
-    > .#{$ekzo-ns}grid__item { vertical-align: bottom; }
+  .#{$prefix}flex-x--center#{$postfix} {
+    text-align: center !important;
+
+    > { text-align: left; }
 
   }
+
+  .#{$prefix}flex-x--end#{$postfix} {
+    text-align: right !important;
+
+    > { text-align: left; }
+
+  }
+
+  .#{$prefix}flex-x--between#{$postfix},
+  .#{$prefix}flex-x--around#{$postfix} {
+    text-align: justify !important;
+
+    > { text-align: left; }
+
+  }
+
+  // -----
+  // Cross axis aligment
+
+  .#{$prefix}flex-y--top#{$postfix}      { > { vertical-align: top      !important; } }
+  .#{$prefix}flex-y--center#{$postfix}   { > { vertical-align: middle   !important; } }
+  .#{$prefix}flex-y--end#{$postfix}      { > { vertical-align: bottom   !important; } }
+  .#{$prefix}flex-y--baseline#{$postfix} { > { vertical-align: baseline !important; } }
+
+  .#{$prefix}flex__item--start#{$postfix}    { vertical-align: top      !important; }
+  .#{$prefix}flex__item--center#{$postfix}   { vertical-align: middle   !important; }
+  .#{$prefix}flex__item--end#{$postfix}      { vertical-align: bottom   !important; }
+  .#{$prefix}flex__item--baseline#{$postfix} { vertical-align: baseline !important; }
 
 }
 
 // ---------------------------------------
-// Call grid modifiers mixin
+// Call all flex helpers
 // ---------------------------------------
 
-@if $ekzo-enable-grid {
+@if $ekzo-enable-flex-helpers {
 
-  @include ekzo-grid-types();
+  @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
 
 } // endif
 
 // ---------------------------------------
-// Call responsive grid modifiers mixin
+// Responsive flex helpers
 // ---------------------------------------
 
-@if $ekzo-enable-grid {
+@if $ekzo-enable-flex-helpers {
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-grid-breakpoints) {
-    @include ekzo-grid-types($postfix: ekzo-temp());
+  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-flex-helpers-breakpoints) {
+    @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
 } // endif
