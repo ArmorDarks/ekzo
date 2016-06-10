@@ -47,30 +47,3 @@
 // @return {color}
 
 @function ekzo-shade($color, $percent) { @return mix(#000, $color, $percent); }
-
-// -----
-// String replace
-//
-// Replace `$search` with `$replace` in `$string`
-//
-// @source http://sassmeister.com/gist/1b4f2da5527830088e4d?
-//
-// @param {string} $string  - string, in which to search
-// @param {string} $search  - string to search
-// @param {string} $replace - new value
-//
-// @return {string} - with replaced value
-
-@function str-replace($string, $search, $replace: '') {
-  @if type-of($string) != string or type-of($search) != string or type-of($replace) != string {
-    @error "[str-replace]: one of the arguments isn't a string.";
-  }
-
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
