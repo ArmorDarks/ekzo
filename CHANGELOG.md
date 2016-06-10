@@ -124,7 +124,8 @@
 - `.o-border-reline` _(renamed to to `.o-reline-border-bottom`)_ refactored, it will try to inherit as much as possible values and no logner relies on `$ekzo-links-border-bottom-width` and `$ekzo-links-border-bottom-style` variables. Some older styles might be affected, though
 - [BREAKING] renamed `.o-border-reline` to `.o-reline-border-bottom`
 - [BREAKING] refactored `.h-text--underline--rev` into `.h-text--underline:h` which now is single responsible for adding of undernline on `:hover` and `:focus`. It no longer removes `underline`, use `.h-text--underline--flush` for it. It also now applies styles not only to `:hover`, but also `:focus` and `:active` because of accessibility reasons
-- [BREAKING] renamed `.h-text--underline--border` and `.h-text--underline--border--rev` to more generic `.h-border-bottom` and `.h-border-bottom--rev`, added `:focus` and `:active` states because of accessibility reasons
+- [BREAKING] refactored `.h-text--underline--border` to more generic `.h-border-bottom`
+- [BREAKING] refactored `.h-text--underline--border--rev` into `.h-border-bottom:h` which from now resposible only for adding bottom border on hover, added `:focus` and `:active` states because of accessibility reasons
 - [BREAKING] inputs styles from now won't apply to `label`
 - [BREAKING] renamed `.g-text-input` to more obvious `.g-input`
 - [BREAKING] `.g-link--flush` from now does not rely on border variables and instead inherits as much as possible to make link similar to outer text. It will also inherit `:hover`, `:focus` and `:active` states. To reflect better its new nature, renamed to `g-link--inherit`
