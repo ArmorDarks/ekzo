@@ -15,6 +15,10 @@
 - [BREAKING] dropped `ekzo-font-size-class()` and `ekzo-font-size-classes()` mixins, since they were way too overengineered and excessive. Use simpler and more clear `@each` instead.
 - Dropped not needed anymore `str-replace()` function. Use external snippet it you need it.
 - Dropped `.o-btn--reset`. You should architecture your styles in the way that you need to reset something back to it's initial values
+- [BREAKING] Dropped `.o-grid--floated`, since it no longer needed with flex grid
+- [BREAKING] Dropped `.o-grid--flag`. Use `.h-flex-y--center` instead
+- [BREAKING] Dropped `.o-grid--center`, `.o-grid--middle` and `.o-grid--bottom`. Use `.h-flex-x--center`, `.h-flex-y--center` and `.h-flex-y--end` instead.
+- [BREAKING] Dropped `.o-grid--auto`. There were no use in it.
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.
@@ -145,3 +149,5 @@
 - [BREAKING] renamed `.o-btn--wide\+`, `.o-btn--wide\+--`, `.o-btn--wide\+\+\+` to  `.o-btn--wide`, `.o-btn--wide--`, `.o-btn--wide\+\+`
 - Fixed wrongly applied hover text-decoration to `&` in `.o-btn`
 - Fixed not applied hover text-decoration to `:focus` in `.o-btn`
+- `.o-grid__item` no longer sets `vertical-align: top`, because it doesn't work with flex anyway. That rule moved to IE8-9 related declaration
+- [BREAKING] Renamed `.o-grid-` to `.o-grid--`
