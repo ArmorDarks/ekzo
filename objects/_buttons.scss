@@ -74,7 +74,6 @@
 
 @mixin ekzo-buttons-sizes($postfix: '') {
 
-  // line-height = `$ekzo-line-height`
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn--#{$postfix} {
     padding-top:     0;
     padding-bottom:  0;
@@ -82,7 +81,6 @@
     padding-left:   .6em;
   }
 
-  // line-height = 2
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn-#{$postfix} {
     padding-top:    ekzo-em(ekzo-spacing(.5) / 3);
     padding-bottom: ekzo-em(ekzo-spacing(.5) / 3);
@@ -90,7 +88,6 @@
     padding-left:   .8em;
   }
 
-  // line-height = 3
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn\+#{$postfix} {
     padding-top:    ekzo-em(ekzo-spacing(1) * .84);
     padding-bottom: ekzo-em(ekzo-spacing(1) * .84);
@@ -98,7 +95,6 @@
     padding-left:   1.5em;
   }
 
-  // line-height = 5
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn\+\+#{$postfix} {
     padding-top:    ekzo-em(ekzo-spacing(1) * 1.17);
     padding-bottom: ekzo-em(ekzo-spacing(1) * 1.17);
@@ -109,17 +105,17 @@
   // ----
   // Wide version of button with unspecified line-height
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+#{$postfix} {
-    padding-right: 2em;
-    padding-left:  2em;
-  }
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+--#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide--#{$postfix} {
     padding-right: 1.5em;
     padding-left:  1.5em;
   }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+\+\+#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide#{$postfix} {
+    padding-right: 2em;
+    padding-left:  2em;
+  }
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}btn--wide\+\+#{$postfix} {
     padding-right: 4em;
     padding-left:  4em;
   }

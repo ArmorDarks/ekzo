@@ -142,3 +142,4 @@
 - [BREAKING] moved `.h-clear` to objects and renamed to `.o-clearfix` to avoid confusion with natural float clears
 - Fixed not inherited `padding` and `vertical-align` at `.o-btn--inherit`
 - Fixed removal of paddings at `o-btn--full`, enforced `border-box` model on it to prevent conflict between paddings and width
+- [BREAKING] renamed `.o-btn--wide\+`, `.o-btn--wide\+--`, `.o-btn--wide\+\+\+` to  `.o-btn--wide`, `.o-btn--wide--`, `.o-btn--wide\+\+`
