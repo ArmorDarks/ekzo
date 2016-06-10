@@ -59,7 +59,7 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 // Make the button inherit sizing from its parent.
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--inherit {
-  vertical-align: baseline;
+  vertical-align: inherit;
 
   font-family: inherit;
   font-size:   inherit;
