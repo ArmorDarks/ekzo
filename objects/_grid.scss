@@ -52,7 +52,7 @@
 // For places, where inline-block-based grid simply doesn't cut
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}grid--floated {
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
 
   display: block; // forcing block model to avoid wrong width of floated elements inside flexbox
 

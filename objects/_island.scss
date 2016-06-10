@@ -19,7 +19,7 @@
  */
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}island {
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
 
   display: block;
 

@@ -28,7 +28,7 @@
   // block or inline-block element.
   // display: block;
 
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
 }
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {

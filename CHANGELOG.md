@@ -138,3 +138,4 @@
 - Refactored `ekzo-font-size()` mixin
 - [BREAKING] renamed `h-cursor--arrow` to `h-cursor--default`
 - From now framework will internally extend only via silent classes to avoid bloat
+- [BREAKING] moved `.h-clear` to objects and renamed to `.o-clearfix` to avoid confusion with natural float clears

@@ -6,7 +6,7 @@
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}floated-nav {
   @extend %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush;
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
 
   > li { float: left; }
 
@@ -14,7 +14,7 @@
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}floated-nav--rev {
   @extend %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush;
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clear;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
 
   > li { float: right; }
 

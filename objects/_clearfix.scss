@@ -5,13 +5,13 @@
 //
 // Provides an easy way to contain floats without adding additional markup.
 //
-// Extend `%clear` clearfix silent class to avoid the `%clear` class appearing over
+// Extend `%clearfix` clearfix silent class to avoid the `%clearfix` class appearing over
 // and over in your markup and css bloat.
 //
 // @source css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 
-%#{$ekzo-ns}#{$ekzo-objects-ns}clear,
-.#{$ekzo-ns}#{$ekzo-objects-ns}clear {
+%#{$ekzo-ns}#{$ekzo-objects-ns}clearfix,
+.#{$ekzo-ns}#{$ekzo-objects-ns}clearfix {
 
   &:after {
     display: table;
