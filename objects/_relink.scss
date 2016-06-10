@@ -2,7 +2,7 @@
 // ^BORDER-RELINE
 // =======================================
 // @note This one will interact only with base link styles. If you have different styles
-//       from base link styles, it's good idea to add them to `.#{$ekzo-ns}#{$ekzo-generics-ns}link`
+//       from base link styles, it's good idea to add them to `%#{$ekzo-ns}#{$ekzo-generics-ns}link`
 //       If you wish to have few relinks, just use `ekzo-relink()` mixin with your parameters
 
 @mixin ekzo-relink($relink-class, $relink-rev-class, $link-class, $link-flush-class: '.#{$ekzo-ns}#{$ekzo-generics-ns}link--inherit') {
@@ -38,7 +38,7 @@
   @include ekzo-relink(
     $relink-class:     '.#{$ekzo-ns}#{$ekzo-objects-ns}relink',
     $relink-rev-class: '.#{$ekzo-ns}#{$ekzo-objects-ns}relink-rev',
-    $link-class:       '.#{$ekzo-ns}#{$ekzo-generics-ns}link'
+    $link-class:       '%#{$ekzo-ns}#{$ekzo-generics-ns}link'
   );
 
 } // endif

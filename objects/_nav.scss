@@ -21,7 +21,8 @@
  *
  */
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav {
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav,
+%#{$ekzo-ns}#{$ekzo-objects-ns}nav {
   @extend %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush;
 
   > li,

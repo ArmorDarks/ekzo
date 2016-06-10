@@ -36,7 +36,7 @@
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb {
 
-  @extend .#{$ekzo-ns}#{$ekzo-objects-ns}nav;
+  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}nav;
 
   > li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 

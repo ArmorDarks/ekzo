@@ -38,13 +38,14 @@
     position: relative;
 
     > .#{$ekzo-ns}#{$ekzo-objects-ns}icon,                  // 2
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}sprite { @extend .#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon; }
+    > .#{$ekzo-ns}#{$ekzo-objects-ns}sprite { @extend %#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon; }
 
   }
 
 }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon,
+  %#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon {
     position: absolute;
 
     width: 1.5em;

@@ -137,3 +137,4 @@
 - Typography helpers no longer using `ekzo-font-size-classes()` mixin and relies on simple `@each`
 - Refactored `ekzo-font-size()` mixin
 - [BREAKING] renamed `h-cursor--arrow` to `h-cursor--default`
+- From now framework will internally extend only via silent classes to avoid bloat
