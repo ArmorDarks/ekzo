@@ -4,58 +4,40 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
 @if $ekzo-enable-buttons {
 
-/*------------------------------------*\
-  $BUTTONS
-\*------------------------------------*/
-
-// @todo Improve and update docs
-
-/**
- * Basic buttons styling.
- *
- * Mainly based on Beautons by Harry Roberts (csswizardry.com/beautons)
- */
-
-
-/*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-
-/**
- * Base button styles.
- *
- * 1. Allow us to better style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 5. Force all elements using beautons to appear clickable.
- * 6. Normalise box model styles.
- * 7. Using paddings instead of line-height to allow multi-line buttons
- * 8. If the button's text is 1em with default 1.5 line-height, and the button
-      is 3 * font-size tall, then there is .75em of space above and below
-      that text. We therefore apply 1em of space to the left and right,
-      as padding, to keep consistent spacing.
- * 9. Prevent appearing of borders in case `a` has defined border. Override in your
- *    own styles if needed.
- * 10. Don't allow buttons to have underlines; it kinda ruins the illusion.
- */
-
-
+// =======================================
+// ^BUTTONS
+// =======================================
+//  Base button styles.
+//
+//  1. Allow us to better style box model properties.
+//  2. Line different sized buttons up a little nicer.
+//  5. Force all elements using beautons to appear clickable.
+//  6. Normalise box model styles.
+//  7. Using paddings instead of line-height to allow multi-line buttons
+//  8. If the button's text is 1em with default 1.5 line-height, and the button
+//     is 3 * font-size tall, then there is .75em of space above and below
+//     that text. We therefore apply 1em of space to the left and right,
+//     as padding, to keep consistent spacing.
+//  9. Prevent appearing of borders in case `a` has defined border. Override in your
+//     own styles if needed.
+//  10. Don't allow buttons to have underlines; it kinda ruins the illusion.
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn {
-  display: inline-block;       /* [1] */
+  display: inline-block;       // 1
 
-  vertical-align: middle;      /* [2] */
+  vertical-align: middle;      // 2
 
-  // white-space: nowrap;      /* [3] */ // should be applied manually if needed with `.text--nowrap`
+  // white-space: nowrap;      // 3 // should be applied manually if needed with `.text--nowrap`
 
-  cursor: pointer;             /* [5] */
+  cursor: pointer;             // 5
 
-  margin: 0;                   /* [6] */
+  margin: 0;                   // 6
 
-  padding-top:    $btn-padding-top;    /* [7] */
-  padding-bottom: $btn-padding-bottom; /* [7] */
+  padding-top:    $btn-padding-top;    // 7
+  padding-bottom: $btn-padding-bottom; // 7
 
-  padding-right: 1em;          /* [8] */
-  padding-left:  1em;          /* [8] */
+  padding-right: 1em;          // 8
+  padding-left:  1em;          // 8
 
   border-width: 0; // 9
 
@@ -70,15 +52,13 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
   &,
   &:hover {
-    @if $ekzo-btn-hover-text-decoration { text-decoration: $ekzo-btn-hover-text-decoration; } /* [10] */
+    @if $ekzo-btn-hover-text-decoration { text-decoration: $ekzo-btn-hover-text-decoration; } // 10
   }
 
 }
 
-
-/**
- * Make the button inherit sizing from its parent.
- */
+// ----
+// Make the button inherit sizing from its parent.
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}btn--inherit {
   vertical-align: baseline;
