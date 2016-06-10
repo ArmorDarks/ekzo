@@ -143,3 +143,5 @@
 - Fixed not inherited `padding` and `vertical-align` at `.o-btn--inherit`
 - Fixed removal of paddings at `o-btn--full`, enforced `border-box` model on it to prevent conflict between paddings and width
 - [BREAKING] renamed `.o-btn--wide\+`, `.o-btn--wide\+--`, `.o-btn--wide\+\+\+` to  `.o-btn--wide`, `.o-btn--wide--`, `.o-btn--wide\+\+`
+- Fixed wrongly applied hover text-decoration to `&` in `.o-btn`
+- Fixed not applied hover text-decoration to `:focus` in `.o-btn`
