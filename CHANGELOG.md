@@ -123,7 +123,7 @@
 - `.o-reline__to` will from now set not only `:hover`, but also `:focus` and `:active` because of accessibility reasons
 - `.o-border-reline` _(renamed to to `.o-reline-border-bottom`)_ refactored, it will try to inherit as much as possible values and no logner relies on `$ekzo-links-border-bottom-width` and `$ekzo-links-border-bottom-style` variables. Some older styles might be affected, though
 - [BREAKING] renamed `.o-border-reline` to `.o-reline-border-bottom`
-- `.h-text--underline--rev` now applies styles not only to `:hover`, but also `:focus` and `:active` because of accessibility reasons
+- [BREAKING] refactored `.h-text--underline--rev` into `.h-text--underline:h` which now is single responsible for adding of undernline on `:hover` and `:focus`. It no longer removes `underline`, use `.h-text--underline--flush` for it. It also now applies styles not only to `:hover`, but also `:focus` and `:active` because of accessibility reasons
 - [BREAKING] renamed `.h-text--underline--border` and `.h-text--underline--border--rev` to more generic `.h-border-bottom` and `.h-border-bottom--rev`, added `:focus` and `:active` states because of accessibility reasons
 - [BREAKING] inputs styles from now won't apply to `label`
 - [BREAKING] renamed `.g-text-input` to more obvious `.g-input`

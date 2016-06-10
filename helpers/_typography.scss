@@ -174,16 +174,5 @@
 // ---------------------------------------
 
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline        { text-decoration: underline; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline\:h     { &:hover, &:focus { text-decoration: underline; } }
 .#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--flush { text-decoration: none; }
-
-// ----
-// Removes underline, but adds it on hover
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--rev {
-  text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active { text-decoration: underline; }
-
-}
