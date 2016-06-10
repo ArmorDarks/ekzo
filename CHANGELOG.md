@@ -133,3 +133,4 @@
 - [BREAKING] replaced `.h-muted` helper by set of `.h-opacity--{{value}}` and `.h-opacity--{{value}}:h` helpers
 - Typography helpers no longer using `ekzo-font-size-classes()` mixin and relies on simple `@each`
 - Refactored `ekzo-font-size()` mixin
+- [BREAKING] renamed `h-cursor--arrow` to `h-cursor--default`
