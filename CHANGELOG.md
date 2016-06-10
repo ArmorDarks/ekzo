@@ -149,5 +149,6 @@
 - [BREAKING] renamed `.o-btn--wide\+`, `.o-btn--wide\+--`, `.o-btn--wide\+\+\+` to  `.o-btn--wide`, `.o-btn--wide--`, `.o-btn--wide\+\+`
 - Fixed wrongly applied hover text-decoration to `&` in `.o-btn`
 - Fixed not applied hover text-decoration to `:focus` in `.o-btn`
+- `.h-align--*` helpers no longer setting flex aligment. Use new `.h-flex--*` helpers for this
 - `.o-grid__item` no longer sets `vertical-align: top`, because it doesn't work with flex anyway. That rule moved to IE8-9 related declaration
 - [BREAKING] Renamed `.o-grid-` to `.o-grid--`
