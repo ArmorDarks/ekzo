@@ -21,8 +21,8 @@
   // -----
   // Items stacking
 
-  .#{$prefix}flex--row#{$postfix}          { flex-direction: row; } // default for flex
-  .#{$prefix}flex--row--rev#{$postfix}     { flex-direction: row-reverse; }
+  .#{$prefix}flex--row#{$postfix}         { flex-direction: row; } // default for flex
+  .#{$prefix}flex--row--rev#{$postfix}    { flex-direction: row-reverse; }
   .#{$prefix}flex--column#{$postfix}      { flex-direction: column; }
   .#{$prefix}flex--column--rev#{$postfix} { flex-direction: column-reverse; }
 
