@@ -73,18 +73,18 @@
   .#{$prefix}opacity--5#{$postfix}       { opacity: .05  !important; }
   .#{$prefix}opacity--2\.5#{$postfix}    { opacity: .025 !important; }
 
-  .#{$prefix}opacity\:h--100#{$postfix}  { &:hover, &:focus { opacity: 1    !important; } }
-  .#{$prefix}opacity\:h--90#{$postfix}   { &:hover, &:focus { opacity: .9   !important; } }
-  .#{$prefix}opacity\:h--80#{$postfix}   { &:hover, &:focus { opacity: .8   !important; } }
-  .#{$prefix}opacity\:h--70#{$postfix}   { &:hover, &:focus { opacity: .7   !important; } }
-  .#{$prefix}opacity\:h--60#{$postfix}   { &:hover, &:focus { opacity: .6   !important; } }
-  .#{$prefix}opacity\:h--50#{$postfix}   { &:hover, &:focus { opacity: .5   !important; } }
-  .#{$prefix}opacity\:h--40#{$postfix}   { &:hover, &:focus { opacity: .4   !important; } }
-  .#{$prefix}opacity\:h--30#{$postfix}   { &:hover, &:focus { opacity: .3   !important; } }
-  .#{$prefix}opacity\:h--20#{$postfix}   { &:hover, &:focus { opacity: .2   !important; } }
-  .#{$prefix}opacity\:h--10#{$postfix}   { &:hover, &:focus { opacity: .1   !important; } }
-  .#{$prefix}opacity\:h--5#{$postfix}    { &:hover, &:focus { opacity: .05  !important; } }
-  .#{$prefix}opacity\:h--2\.5#{$postfix} { &:hover, &:focus { opacity: .025 !important; } }
+  .#{$prefix}opacity--100\:h#{$postfix}  { &:hover, &:focus { opacity: 1    !important; } }
+  .#{$prefix}opacity--90\:h#{$postfix}   { &:hover, &:focus { opacity: .9   !important; } }
+  .#{$prefix}opacity--80\:h#{$postfix}   { &:hover, &:focus { opacity: .8   !important; } }
+  .#{$prefix}opacity--70\:h#{$postfix}   { &:hover, &:focus { opacity: .7   !important; } }
+  .#{$prefix}opacity--60\:h#{$postfix}   { &:hover, &:focus { opacity: .6   !important; } }
+  .#{$prefix}opacity--50\:h#{$postfix}   { &:hover, &:focus { opacity: .5   !important; } }
+  .#{$prefix}opacity--40\:h#{$postfix}   { &:hover, &:focus { opacity: .4   !important; } }
+  .#{$prefix}opacity--30\:h#{$postfix}   { &:hover, &:focus { opacity: .3   !important; } }
+  .#{$prefix}opacity--20\:h#{$postfix}   { &:hover, &:focus { opacity: .2   !important; } }
+  .#{$prefix}opacity--10\:h#{$postfix}   { &:hover, &:focus { opacity: .1   !important; } }
+  .#{$prefix}opacity--5\:h#{$postfix}    { &:hover, &:focus { opacity: .05  !important; } }
+  .#{$prefix}opacity--2\.5\:h#{$postfix} { &:hover, &:focus { opacity: .025 !important; } }
 
   // ----
   // Hide visually and from screen readers, but maintain layout

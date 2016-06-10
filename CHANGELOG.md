@@ -31,11 +31,11 @@
   
   This will also produce `:hover` + `:focus` classes:
   
-  * `h-color:h--{{ colorName }}` for `color`
-  * `h-bg-color:h--{{ colorName }}` for `background-color`
-  * `h-border-color:h--{{ colorName }}` for `border-color`
-  * `h-fill:h--{{ colorName }}` for `fill`
-  * `h-stroke:h--{{ colorName }}` for `stroke`
+  * `h-color--{{ colorName }}:h` for `color`
+  * `h-bg-color--{{ colorName }}:h` for `background-color`
+  * `h-border-color--{{ colorName }}:h` for `border-color`
+  * `h-fill--{{ colorName }}:h` for `fill`
+  * `h-stroke--{{ colorName }}:h` for `stroke`
 - Added option `$ekzo-responsive-helpers-breakpoints` which allows to list breakpoints for which will be automatically generated helper classes
 - Added mixin `ekzo-each-breakpoint()` for fast inclusion of certain classes for each breakpoint, listed in `$ekzo-responsive-helpers-breakpoints`
 - Added `ekzo-set-temp()` mixin which allows to pass values from mixins into `@content`, `ekzo-temp()` function to retrive value and `ekzo-purge-temp()` mixin to clear temp. See `ekzo-each-breakpoint()` for example. Hacky.
@@ -130,6 +130,6 @@
 - [BREAKING] replaced `$ekzo-links-underline` and `$ekzo-links-hover-unline` with `$ekzo-links-text-decoration` and `$ekzo-links-hover-text-decoration` which acs as much intelligent way to set default link underlines
 - [BREAKING] replaced `$ekzo-btn-unline` with `$ekzo-btn-text-decoration`, added missing `$ekzo-btn-hover-text-decoration`. They now works same as similar links-related variables
 - [BREAKING] from now outlines by default are enabled for a11y reasons
-- [BREAKING] replaced `.h-muted` helper by set of `.h-opacity--{{value}}` and `.h-opacity:h--{{value}}` helpers
+- [BREAKING] replaced `.h-muted` helper by set of `.h-opacity--{{value}}` and `.h-opacity--{{value}}:h` helpers
 - Typography helpers no longer using `ekzo-font-size-classes()` mixin and relies on simple `@each`
 - Refactored `ekzo-font-size()` mixin
