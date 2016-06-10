@@ -28,17 +28,6 @@
 .#{$ekzo-ns}#{$ekzo-helpers-ns}box-sizing--content { box-sizing: content-box !important; }
 
 // ---------------------------------------
-// Border
-// ---------------------------------------
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border--flush         { border: 0              !important; }
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-width--flush   { border-width: 0        !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-style--flush   { border-style: none     !important; }
-
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--inherit { border-color: inherit  !important; }
-
-// ---------------------------------------
 // Column count
 // ---------------------------------------
 
