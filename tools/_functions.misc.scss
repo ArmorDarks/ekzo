@@ -74,15 +74,3 @@
 
   @return $string;
 }
-
-
-@function ezko-match-units($function-name, $value1, $value2) {
-
-  $value1-units: unit($value1);
-  $value2-units: unit($value2);
-
-  @if $value1-units != $value2-units {
-    @error '[' + $function-name + '] unit types should match. You specified ' + $value1-units + ' and ' + $value2-units + '.'
-  }
-
-}
