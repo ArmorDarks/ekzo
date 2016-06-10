@@ -160,14 +160,11 @@ $btn-padding-bottom: ekzo-em(ekzo-spacing(.5));
 
   // ----
   // Fill the entirety of their container.
-  //
-  // 1. Remove padding so that widths and paddings don't conflict.
+  // 1. Prevent conflict of width and paddings
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}btn--full#{$postfix} {
     width: 100%;
-
-    padding-right: 0;            /* [1] */
-    padding-left:  0;            /* [1] */
+    box-sizing: border-box; // 1
   }
 
   // ----
