@@ -414,7 +414,8 @@ input[type='submit'] { -webkit-appearance: button; } // 2
 // Re-set default cursor for disabled elements.
 
 button[disabled],
-html input[disabled] { cursor: default; }
+html input[disabled],
+a.is-disabled { cursor: default; }
 
 // ----
 // Improve usability and consistency of cursor style between image-type `input` and others.
