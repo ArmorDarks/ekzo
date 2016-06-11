@@ -28,7 +28,7 @@
   For details about how it works and how to use head to `ekzo-theme()` mixin description.
 - Added `$ekzo-colors` which upholds whole color pallete of website
 - Added `ekzo-color()` function to quickly get value from `$ekzo-colors`
-- Added automatic generation of colors classes based on `$ekzo-colors` and `$ekzo-themes`, as well as options to enable/disable it. By default you will get for each color from those maps (plus inherit and transparent colors) following classes:
+- Added automatic generation of colors classes based on `$ekzo-colors` and `$ekzo-themes`, as well as options to enable/disable it. By default you will get for each color from those maps (plus `inherit`, `transparent` and `currentColor` colors) following classes:
   * `h-color--{{ colorName }}` for `color` property
   * `h-bg-color--{{ colorName }}` for `background-color`
   * `h-border-color--{{ colorName }}` for `border-color`

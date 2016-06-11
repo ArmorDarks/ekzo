@@ -42,6 +42,25 @@
 .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--transparent\:h       { &:hover, &:focus { stroke: transparent !important; } }
 
 // ---------------------------------------
+// CurrentColor
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}color--current           { color: CurrentColor !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}color--current\:h        { &:hover, &:focus { color: CurrentColor !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--current        { background-color: CurrentColor !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--current\:h     { &:hover, &:focus { background-color: CurrentColor !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--current    { border-color: CurrentColor !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--current\:h { &:hover, &:focus { border-color: CurrentColor !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--current            { fill: CurrentColor !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--current\:h         { &:hover, &:focus { fill: CurrentColor !important; } }
+
+.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--current          { stroke: CurrentColor !important; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--current\:h       { &:hover, &:focus { stroke: CurrentColor !important; } }
+
+// ---------------------------------------
 // Color pallete
 // ---------------------------------------
 
