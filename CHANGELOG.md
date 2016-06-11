@@ -19,6 +19,7 @@
 - [BREAKING] Dropped `.o-grid--flag`. Use `.h-flex-y--center` instead
 - [BREAKING] Dropped `.o-grid--center`, `.o-grid--middle` and `.o-grid--bottom`. Use `.h-flex-x--center`, `.h-flex-y--center` and `.h-flex-y--end` instead.
 - [BREAKING] Dropped `.o-grid--auto`. There were no use in it.
+- [BREAKING] Dropped support of `.o-flag`, since `.o-media` from now uses flexbox model and its items can be aligned vertically seamlessly with `.h-flex-y--*`. You still can emulate `.o-flag` behaviour with `.h-table` and `.h-table__cell` helpers if you really need to have your items aligned vertically even in older browsers, but in most of other cases it's acceptable graceful degradation. Farewell, dear friend. You served us well, but it's time to give a place for more modern approaches.
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.
