@@ -154,3 +154,5 @@
 - `.h-align--*` helpers no longer setting flex aligment. Use new `.h-flex--*` helpers for this
 - `.o-grid__item` no longer sets `vertical-align: top`, because it doesn't work with flex anyway. That rule moved to IE8-9 related declaration
 - [BREAKING] Renamed `.o-grid-` to `.o-grid--`
+- Refactored `.o-media` to use flexbox. It will fallback to floats based version on IE8/9, but since floats can't be aligned vertically, they will always align to top
+- [BREAKING] renamed `.o-media__image` to `.o-media__aside` to represent its purpose better

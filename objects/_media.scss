@@ -1,69 +1,46 @@
 @if $ekzo-enable-media {
 
-/*------------------------------------*\
-    $MEDIA
-\*------------------------------------*/
-
-// @todo Reorder, add mixin, improve docs
-
-/**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- * E.g.:
- *
-    <div class="media">
-      <img class="media__image" src=https://placekitten.com/200/300 alt="">
-      <p class="media__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
- *
- * Demo: jsfiddle.net/inuitcss/cf4Qs
- *
- */
+// =======================================
+// ^MEDIA
+// =======================================
+// Place any image- and text-like content side-by-side, as per:
+// stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+//
+// On IE8/9 will fallback to regular float-based `media` object, with similar visual output
+// However, some flexbox features, like vertical aligment, in IE8/9 will fallback to top value
+//
+// @example
+//
+//  <div class='o-media'>
+//    <img class='o-media__aside' src='' alt='>
+//    <p class='o-media__content'>Lorem</p>
+//  </div>
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}media {
-  // #note disabled experimentaly. It seems there is no need
-  // in such property in most cases
-  // Note that for obvious reasons element should always be
-  // block or inline-block element.
-  // display: block;
-
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
+  display: flex;
+  align-items: flex-start;
 }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
-    float: left;
-
-    display: block;
-
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside {
+    flex: 0 0 auto;
     margin-right: ekzo-spacing(1);
   }
 
   .#{$ekzo-ns}#{$ekzo-objects-ns}media__content {
-    overflow: hidden;
+    flex: 1 1 auto;
 
     &,
     > :last-child { margin-bottom: 0; }
 
   }
 
-
-
-.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
-    float: right;
-
-    margin-right: 0;
-    margin-left:  ekzo-spacing(1);
-  }
-
-}
-
+// ---------------------------------------
+// Spacing variations
+// ---------------------------------------
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}media--flush {
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside {
     margin-right: 0;
     margin-left:  0;
   }
@@ -72,15 +49,30 @@
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}media\+ {
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__image { margin-right: ekzo-spacing(2); }
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside { margin-right: ekzo-spacing(2); }
 
   &.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
 
-    .#{$ekzo-ns}#{$ekzo-objects-ns}media__image {
+    .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside {
       margin-right: 0;
       margin-left:  ekzo-spacing(2);
     }
 
+  }
+
+}
+
+// ---------------------------------------
+// Reversed version
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside {
+    order: 1;
+
+    margin-right: 0;
+    margin-left:  ekzo-spacing(1);
   }
 
 }

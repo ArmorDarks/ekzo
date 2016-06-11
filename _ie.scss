@@ -30,6 +30,12 @@
 @import 'settings.responsive.defaults';
 
 // ---------------------------------------
+// Objects
+// ---------------------------------------
+
+@import './objects/clearfix';
+
+// ---------------------------------------
 // Grid legacy hacks
 // ---------------------------------------
 //
@@ -125,3 +131,30 @@
   };
 
 } // endif
+
+// =======================================
+// ^MEDIA
+// =======================================
+// Fallback to float-based media object, since IE8-9 doesn't support flexbox
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}media { @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix; }
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside {
+    float: left;
+    display: block;
+  }
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__content {
+    display: block;
+    overflow: hidden;
+  }
+
+// ---------------------------------------
+// Reversed version
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
+
+  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside { float: right }
+
+}
