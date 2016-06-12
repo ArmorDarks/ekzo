@@ -1,0 +1,31 @@
+@if $ekzo-enable-extra-help {
+
+// =======================================
+// ^EXTRA-HELP
+// =======================================
+// Extra help text displayed after a field when that field is in focus or on hover, e.g.:
+//
+// @example
+//
+//  <input type='text'>
+//  <small class='o-extra-help'>.edu emails only</small>
+//
+// In fact, it will work on anything that is focusable, like button, etc.
+//
+// We leave the help text in the document flow and merely set it to
+// `visibility:hidden;`. This means that it won't interfere with anything once
+// it reappears.
+//
+// Original idea by Harry Roberts (http://csswizardry.com)
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}extra-help {
+  display: inline-block;
+
+  visibility: hidden;
+
+  *:hover + &,
+  *:focus + & { visibility: visible; }
+
+}
+
+} // endif

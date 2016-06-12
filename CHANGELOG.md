@@ -163,3 +163,4 @@
 - [BREAKING] renamed `.o-media__image` to `.o-media__aside` to represent its purpose better
 - Refactored `.o-nav` to use flexbox model. This mostly doesn't affect layout on newer browsers, except that there will be no white-space between childs. Use new `.o-nav--space` to emulate old white-space if you need it. New `.o-nav` also now includes functionality of old `.o-a-nav`, `.o-floated-nav` and `.o-pack`
 - `o-nav--keywords` will now set delimeters on direct child anchors too, so that you can use it not on `ul`, but plain plain list of anchors
+- [BREAKING] moved `.g-extra-help` to `.o-extra-help`, since it seems to be more standalone object. By default it will also work on ':hover' too.
