@@ -158,3 +158,51 @@
   .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside { float: right }
 
 }
+
+@if $ekzo-enable-nav {
+
+// =======================================
+// ^NAV
+// =======================================
+
+// ----
+// Extends `.nav` and throws the list into vertical mode, e.g.:
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--stacked {
+
+  > a {
+    float: left;
+    clear: both;
+  }
+
+  > li { display: list-item; }
+
+}
+
+// ---------------------------------------
+// Packed nav
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--pack {
+  display: table;
+  width: 100%; // Fill all available space.
+
+  > li,
+  > a,
+  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { display: table-cell; }
+
+}
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--fixed-pack {
+  display: table;
+  table-layout: fixed;
+
+  width: 100%; // Fill all available space.
+
+  > li,
+  > a,
+  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { display: table-cell; }
+
+}
+
+} // endif

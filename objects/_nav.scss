@@ -1,80 +1,119 @@
 @if $ekzo-enable-nav {
 
-/*------------------------------------*\
-    $NAV
-\*------------------------------------*/
-
-
-/**
- * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- * e.g.:
- *
-    <ul class=nav>
-      <li><a href=#>Home</a></li>
-      <li><a href=#>About</a></li>
-      <li><a href=#>Portfolio</a></li>
-      <li><a href=#>Contact</a></li>
-    </ul>
- *
- * Demo: jsfiddle.net/inuitcss/Vnph4
- *
- */
+// =======================================
+// ^NAV
+// =======================================
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}nav,
 %#{$ekzo-ns}#{$ekzo-objects-ns}nav {
   @extend %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush;
 
+  display: flex;
+  flex-wrap: wrap;
+
+  > a, // for cases when you stack only anchors, without list
   > li,
-  > li > a { display: inline-block; }
+  > li > a { display: inline-block; } // This also partially serves as IE8 and IE9 fallback
 
 }
 
+// ----
+// Extends `.o-nav` and throws the list into vertical mode, e.g.:
 
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
-    <ul class="nav nav--stacked">
-      ...
- *
- */
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--stacked {
+  flex-direction: column;
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--stacked > li { display: list-item; }
+  > a { align-self: flex-start; } // for cases when you stack only anchors, without list
 
-/**
- * Extends `.nav` and throws all links inside in block or inline mode
- */
+}
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--block  > li > a { display: block; }
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--inline > li > a { display: inline; }
+// ----
+// Imitate white-space between regular `inline-block`s
 
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--space {
 
-/**
- * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
- *
-    <ul class="nav block">
-      ...
- *
- */
+  > a, // for cases when you stack only anchors, without list
+  > li { margin-right: .26em }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding-  > li > a { padding: ekzo-spacing(.5); }
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding   > li > a { padding: ekzo-spacing(1); }
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding\+ > li > a { padding: ekzo-spacing(2); }
+}
 
+// ---------------------------------------
+// Display
+// ---------------------------------------
+// Extends `.o-nav` and throws all links inside in block or inline mode
 
-/**
- * Make a list of keywords. Extends `.nav`, e.g.:
- *
-    <ul class="nav keywords>
-      ...
- *
- */
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--block  {
+
+  > a,
+  > li,
+  > li > a { display: block; }
+
+}
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--inline  {
+
+  > a,
+  > li,
+  > li > a { display: inline; }
+
+}
+
+// ---------------------------------------
+// Sizes
+// ---------------------------------------
+// Give nav links a big, blocky hit area. Extends `.nav`
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding-- {
+
+  > a,
+  > li > a { padding: ekzo-spacing(.5); }
+
+}
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding {
+
+  > a,
+  > li > a { padding: ekzo-spacing(1); }
+
+}
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--padding\+ {
+
+  > a,
+  > li > a { padding: ekzo-spacing(2); }
+
+}
+
+// ---------------------------------------
+// Packed nav
+// ---------------------------------------
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--pack {
+
+  > li,
+  > a,
+  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { flex-grow: 1; } // flex 1 1 auto?
+
+}
+
+.#{$ekzo-ns}#{$ekzo-objects-ns}nav--fixed-pack {
+
+  > li,
+  > a,
+  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { flex: 1; } // flex 1 1 0% ?
+
+}
+
+// ---------------------------------------
+// Keywords
+// ---------------------------------------
+// Make a list of keywords. Extends `.nav`, e.g.:
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}nav--keywords {
 
-  li:after { content: '\002C' '\00A0'; }
+  > li:after, > a:after { content: '\002C' '\00A0'; }
 
-  li:last-child:after { display: none; }
+  > li:last-child:after, a:last-child:after { display: none; }
 
 }
 
