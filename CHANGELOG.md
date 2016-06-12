@@ -167,3 +167,4 @@
 - [BREAKING] moved `.g-extra-help` to `.o-extra-help`, since it seems to be more standalone object. By default it will also work on ':hover' too.
 - [BREAKING] use `0` as modifier instead of `--flush` when we not "flushing", but actually setting value to `0`. In other words, instead `h-margin--flush` should be used `h-margin0`, etc. This concerns lists, tables, some typography helpers, spacing helpers, `o-media`, `o-grid`, `o-island`.
 - `0` helpers for `margin`, `bleed` and `padding` from now generated based on relevant maps too, so you can disabled it in case you don't need it. By default it's included, so it won't break anything
+- [BREAKING] renamed `.h-margin--center` to `.h-margin-sides--auto`
