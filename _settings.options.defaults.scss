@@ -55,7 +55,8 @@ $ekzo-margin-helpers-variations: (
 $ekzo-bleed-helpers-variations: (
   '--': - ekzo-spacing(.5),
   '':   - ekzo-spacing(1),
-  \+:   - ekzo-spacing(2)
+  \+:   - ekzo-spacing(2),
+  \+\+: - ekzo-spacing(3),
 ) !default;
 
 $ekzo-padding-helpers-variations: (
