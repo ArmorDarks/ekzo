@@ -13,7 +13,9 @@
 
 @mixin ekzo-margin-helpers($variations, $prefix: '', $postfix: '') {
 
-  .#{$prefix}margin--center#{$postfix}               { margin-left:   auto !important; margin-right: auto !important; }
+  .#{$prefix}margin-right--auto#{$postfix} { margin-right:  auto !important; }
+  .#{$prefix}margin-left--auto#{$postfix}  { margin-left:   auto !important; }
+  .#{$prefix}margin--center#{$postfix}     { margin-right:  auto !important; margin-left: auto !important; }
 
   @each $variation, $value in $variations {
     .#{$prefix}margin#{$variation}#{$postfix}        { margin:        $value !important; }
