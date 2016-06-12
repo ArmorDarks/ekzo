@@ -1,30 +1,14 @@
 @if $ekzo-enable-icons {
 
-/*------------------------------------*\
-    $ICONS and $SPRITES
-\*------------------------------------*/
-
-/**
- * Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
- * a background image e.g.:
- *
-   <a class="sprite  sprite--question-mark">More info&hellip;</a>
- *
- * or
- *
-   <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
- *
- * Requires extension in stylesheet.
- */
-
-/**
- * Giving an element a class of `.icon` will throw it into 'icon' mode and will
- * not add a background, but should be used for icon fonts, e.g.:
- *
-   <a href=#><i class="icon icon--star"></i> View your favourites</a>
- *
- * Requires extension in stylesheet.
- */
+// =======================================
+// ^ICON
+// =======================================
+// Giving an element a class of `.icon` will throw it into 'icon' mode and will
+// apply icon font
+//
+// <a href=#><i class="icon icon--star"></i> View your favourites</a>
+//
+// Requires extension in stylesheet.
 
 @include ekzo-font-face(
   $font:    $ekzo-icon-font,
@@ -37,15 +21,15 @@
 
   display: inline-block;
 
-  /* reset line-height */
+  // reset line-height
   line-height: 1;
 
-  /* So icons added using `.icon` sit in the centre of the element */
+  // So icons added using `.icon` sit in the centre of the element
   text-align: center;
 
   font-family: '#{$ekzo-icon-font}';
 
-  /* So using `.icon` on certain elements doesn't make a visual difference */
+  // So using `.icon` on certain elements doesn't make a visual difference
   font-style:  normal;
   font-weight: normal;
 
@@ -53,21 +37,19 @@
 
 }
 
-
-
-/**
- * Make width equal to height of icon
- * Useful for lists and menus
- */
+// ---------------------------------------
+// Fixed width
+// ---------------------------------------
+// Make width equal to height of icon
+// Useful for lists and menus
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}icon--fixed { width: 1em; }
 
-
-
-/**
- * Apply on icon or sprite if simple margin with space isn't enough
- * or where space is unusable
- */
+// ---------------------------------------
+// Spacing
+// ---------------------------------------
+// Apply on icon or sprite if simple margin with space isn't enough
+// or where space is unusable
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}icon--left  { margin-right: .36em; }
 .#{$ekzo-ns}#{$ekzo-objects-ns}icon--right { margin-left:  .36em; }

@@ -1,22 +1,16 @@
 @if $ekzo-enable-island {
 
-/*------------------------------------*\
-    $ISLAND
-\*------------------------------------*/
-
-// @todo Improve docs
-
-/**
- * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
- * E.g.:
- *
-    <div class=island>
-        I am boxed off.
-    </div>
- *
- * Demo: jsfiddle.net/inuitcss/u8pV3
- *
- */
+// =======================================
+// ^ISLAND
+// =======================================
+// Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
+// E.g.:
+//
+//  <div class=island>
+//      I am boxed off.
+//  </div>
+//
+// Demo: jsfiddle.net/inuitcss/u8pV3
 
 .#{$ekzo-ns}#{$ekzo-objects-ns}island {
   @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
