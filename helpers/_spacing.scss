@@ -25,6 +25,31 @@
     .#{$prefix}margin-left#{$variation}#{$postfix}   { margin-left:   $value !important; }
     .#{$prefix}margin-ends#{$variation}#{$postfix}   { margin-top:    $value !important; margin-bottom: $value !important; }
     .#{$prefix}margin-sides#{$variation}#{$postfix}  { margin-right:  $value !important; margin-left:   $value !important; }
+
+    .#{$prefix}anchors-margin#{$variation}#{$postfix}        { > a, > li > a { margin:        $value !important; } }
+    .#{$prefix}anchors-margin-top#{$variation}#{$postfix}    { > a, > li > a { margin-top:    $value !important; } }
+    .#{$prefix}anchors-margin-right#{$variation}#{$postfix}  { > a, > li > a { margin-right:  $value !important; } }
+    .#{$prefix}anchors-margin-bottom#{$variation}#{$postfix} { > a, > li > a { margin-bottom: $value !important; } }
+    .#{$prefix}anchors-margin-left#{$variation}#{$postfix}   { > a, > li > a { margin-left:   $value !important; } }
+    .#{$prefix}anchors-margin-ends#{$variation}#{$postfix}   { > a, > li > a { margin-top:    $value !important; margin-bottom: $value !important; } }
+    .#{$prefix}anchors-margin-sides#{$variation}#{$postfix}  { > a, > li > a { margin-right:  $value !important; margin-left:   $value !important; } }
+
+    .#{$prefix}childs-margin#{$variation}#{$postfix}        > * { margin:        $value !important; }
+    .#{$prefix}childs-margin-top#{$variation}#{$postfix}    > * { margin-top:    $value !important; }
+    .#{$prefix}childs-margin-right#{$variation}#{$postfix}  > * { margin-right:  $value !important; }
+    .#{$prefix}childs-margin-bottom#{$variation}#{$postfix} > * { margin-bottom: $value !important; }
+    .#{$prefix}childs-margin-left#{$variation}#{$postfix}   > * { margin-left:   $value !important; }
+    .#{$prefix}childs-margin-ends#{$variation}#{$postfix}   > * { margin-top:    $value !important; margin-bottom: $value !important; }
+    .#{$prefix}childs-margin-sides#{$variation}#{$postfix}  > * { margin-right:  $value !important; margin-left:   $value !important; }
+
+    .#{$prefix}childs-space#{$variation}#{$postfix} > * + * { margin-top: $value !important; }
+
+    .#{$prefix}childs-displace#{$variation}#{$postfix} {
+      margin-left: -$value !important;
+
+      > * { padding-left: $value !important; }
+
+    }
   }
 } // ekzo-spacing-helpers()
 
@@ -56,6 +81,30 @@
     .#{$prefix}padding-left#{$variation}#{$postfix}   { padding-left:   $value !important; }
     .#{$prefix}padding-ends#{$variation}#{$postfix}   { padding-top:    $value !important; padding-bottom: $value !important; }
     .#{$prefix}padding-sides#{$variation}#{$postfix}  { padding-right:  $value !important; padding-left:   $value !important; }
+
+    .#{$prefix}anchors-padding#{$variation}#{$postfix}        { > a, > li > a { padding:        $value !important; } }
+    .#{$prefix}anchors-padding-top#{$variation}#{$postfix}    { > a, > li > a { padding-top:    $value !important; } }
+    .#{$prefix}anchors-padding-right#{$variation}#{$postfix}  { > a, > li > a { padding-right:  $value !important; } }
+    .#{$prefix}anchors-padding-bottom#{$variation}#{$postfix} { > a, > li > a { padding-bottom: $value !important; } }
+    .#{$prefix}anchors-padding-left#{$variation}#{$postfix}   { > a, > li > a { padding-left:   $value !important; } }
+    .#{$prefix}anchors-padding-ends#{$variation}#{$postfix}   { > a, > li > a { padding-top:    $value !important; padding-bottom: $value !important; } }
+    .#{$prefix}anchors-padding-sides#{$variation}#{$postfix}  { > a, > li > a { padding-right:  $value !important; padding-left:   $value !important; } }
+
+    .#{$prefix}childs-padding#{$variation}#{$postfix}        > * { padding:        $value !important; }
+    .#{$prefix}childs-padding-top#{$variation}#{$postfix}    > * { padding-top:    $value !important; }
+    .#{$prefix}childs-padding-right#{$variation}#{$postfix}  > * { padding-right:  $value !important; }
+    .#{$prefix}childs-padding-bottom#{$variation}#{$postfix} > * { padding-bottom: $value !important; }
+    .#{$prefix}childs-padding-left#{$variation}#{$postfix}   > * { padding-left:   $value !important; }
+    .#{$prefix}childs-padding-ends#{$variation}#{$postfix}   > * { padding-top:    $value !important; padding-bottom: $value !important; }
+    .#{$prefix}childs-padding-sides#{$variation}#{$postfix}  > * { padding-right:  $value !important; padding-left:   $value !important; }
+
+    .#{$prefix}cells-padding#{$variation}#{$postfix}        { th, td { padding:        $value !important; } }
+    .#{$prefix}cells-padding-top#{$variation}#{$postfix}    { th, td { padding-top:    $value !important; } }
+    .#{$prefix}cells-padding-right#{$variation}#{$postfix}  { th, td { padding-right:  $value !important; } }
+    .#{$prefix}cells-padding-bottom#{$variation}#{$postfix} { th, td { padding-bottom: $value !important; } }
+    .#{$prefix}cells-padding-left#{$variation}#{$postfix}   { th, td { padding-left:   $value !important; } }
+    .#{$prefix}cells-padding-ends#{$variation}#{$postfix}   { th, td { padding-top:    $value !important; padding-bottom: $value !important; } }
+    .#{$prefix}cells-padding-sides#{$variation}#{$postfix}  { th, td { padding-right:  $value !important; padding-left:   $value !important; } }
   }
 } // ekzo-spacing-helpers()
 
