@@ -34,65 +34,12 @@
     padding-left: ekzo-spacing(1); // 1
   }
 
-} // endif
-
 // ---------------------------------------
-// Grid modifiers
+// Spacing
 // ---------------------------------------
 
-@mixin ekzo-grid-types($postfix: '') {
-
-  // ----
-  // Grid gutter sizes
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid--#{$postfix} {
-    margin-left: - ekzo-spacing(.5);
-
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item { padding-left: ekzo-spacing(.5); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid\+#{$postfix} {
-    margin-left: - ekzo-spacing(2);
-
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item { padding-left: ekzo-spacing(2); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid\+\+#{$postfix} {
-    margin-left: - ekzo-spacing(3);
-
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item { padding-left: ekzo-spacing(3); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid0#{$postfix} {
-    margin-left: 0;
-
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item { padding-left: 0; }
-
-  }
-
-}
-
-// ---------------------------------------
-// Call grid modifiers mixin
-// ---------------------------------------
-
-@if $ekzo-enable-grid {
-
-  @include ekzo-grid-types();
-
-} // endif
-
-// ---------------------------------------
-// Call responsive grid modifiers mixin
-// ---------------------------------------
-
-@if $ekzo-enable-grid {
-
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-grid-breakpoints) {
-    @include ekzo-grid-types($postfix: ekzo-temp());
-  };
+// Use `.h-childs-displace*` to add centered margin between `.o-grid__item`s
+// Use `.h-childs-margin*` to add margin to all child `.o-grid__item`
+// Use `.h-childs-padding*` to add padding to all child `.o-grid__item`
 
 } // endif

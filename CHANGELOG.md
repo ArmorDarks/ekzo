@@ -23,6 +23,15 @@
 - [BREAKING] removed `.o-a-nav`. Its functionality merged into `.o-nav`
 - [BREAKING] removed `.o-floated-nav`. With new flexbox `.o-nav` it no longer needed
 - [BREAKING] removed `.o-pack`. Its functionality merged into `.o-nav--pack` and `.o-nav--fixed-pack`. In IE8 and IE9 new modifiers will fallback to old behaviour of `.o-pack` for compitability reasons.
+- [BREAKING] many size and spacing modifiers for objects and generics has been removed in favor of new more universal classes:
+  * `.o-grid*` size modifiers has been removed, use new `.h-childs-displace*`
+  * `.o-island` size modifiers has been removed, use `h-padding*` or `h-margin*`
+  * `.o-nav--padding` size modifiers has been removed, use new `h-anchors-padding*` or `h-anchors-margin*`
+  * `.g-table--padding` size modifiers has been moved to helpers and renamed to `.h-cell-padding*`
+  * `.g-list--indent` has been removed, use new `h-childs-spacing*`
+  * `.g-list--margin` has been removed, use new `h-childs-margin*`
+  * `.g-list--padding` has been removed, use new `h-childs-padding*`
+  * default margin between two `fieldset` has been removed, use new `h-childs-spacing*`
 
 ### Added
 - Added theming support wich allows to save modular project structure. With default settings place `t-base` class on any element you want to get default styling.

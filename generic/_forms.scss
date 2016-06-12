@@ -31,10 +31,4 @@ textarea {
   @include ekzo-theme($also-chain:false) { color: ekzo-theme(forms-placeholder); }
 }
 
-// ---------------------------------------
-// Fieldset
-// ---------------------------------------
-
-fieldset + fieldset { margin-top: ekzo-spacing(2); }
-
 } // endif

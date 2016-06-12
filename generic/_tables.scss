@@ -20,73 +20,10 @@ table { width: 100%; }
 
 [rowspan='1'] { vertical-align: top; }
 
-
-} // endif
-
 // ---------------------------------------
-// Table modifiers mixin
+// Spacing
 // ---------------------------------------
 
-@mixin ekzo-table-spacing($postfix: '') {
-
-  // ----
-  // Paddings
-
-  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding--#{$postfix} {
-
-    th,
-    td { padding: ekzo-spacing(.25); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding-#{$postfix} {
-
-    th,
-    td { padding: ekzo-spacing(.5); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding#{$postfix} {
-
-    th,
-    td { padding: ekzo-spacing(1); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding\+#{$postfix} {
-
-    th,
-    td { padding: ekzo-spacing(2); }
-
-  }
-
-  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding0#{$postfix} {
-
-    th,
-    td { padding: 0; }
-
-  }
-
-} // table-spacing()
-
-// ---------------------------------------
-// Call tables modifiers mixin
-// ---------------------------------------
-
-@if $ekzo-enable-tables {
-
-  @include ekzo-table-spacing();
-
-} // endif
-
-// ---------------------------------------
-// Call responsive tables modifiers mixin
-// ---------------------------------------
-
-@if $ekzo-enable-tables {
-
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-tables-breakpoints) {
-    @include ekzo-table-spacing($postfix: ekzo-temp());
-  };
+// Use `.h-cells-padding*` to add padding to all child `th` and `td`
 
 } // endif
