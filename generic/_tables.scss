@@ -60,7 +60,7 @@ table { width: 100%; }
 
   }
 
-  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding--flush#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-generics-ns}table--padding0#{$postfix} {
 
     th,
     td { padding: 0; }

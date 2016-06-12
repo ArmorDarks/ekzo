@@ -24,8 +24,8 @@
 
 }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}island-       { padding: ekzo-spacing(.5); }
-.#{$ekzo-ns}#{$ekzo-objects-ns}island\+      { padding: ekzo-spacing(2); }
-.#{$ekzo-ns}#{$ekzo-objects-ns}island--flush { padding: 0; }
+.#{$ekzo-ns}#{$ekzo-objects-ns}island-  { padding: ekzo-spacing(.5); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}island\+ { padding: ekzo-spacing(2); }
+.#{$ekzo-ns}#{$ekzo-objects-ns}island0  { padding: 0; }
 
 } // endif

@@ -66,7 +66,7 @@
 
   }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid--flush#{$postfix} {
+  .#{$ekzo-ns}#{$ekzo-objects-ns}grid0#{$postfix} {
     margin-left: 0;
 
     > .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item { padding-left: 0; }

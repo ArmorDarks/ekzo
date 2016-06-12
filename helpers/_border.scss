@@ -32,8 +32,8 @@
 // @note `!important` here doesn't work well too, since it enforcing too much inheritance
 .#{$ekzo-ns}#{$ekzo-helpers-ns}border--inherit { border: inherit; }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border--flush        { border-width:        0; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-top--flush    { border-width-top:    0; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-right--flush  { border-width-right:  0; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom--flush { border-width-bottom: 0; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-left--flush   { border-width-left:   0; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border0        { border-width:        0; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-top0    { border-width-top:    0; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-right0  { border-width-right:  0; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-bottom0 { border-width-bottom: 0; }
+.#{$ekzo-ns}#{$ekzo-helpers-ns}border-left0   { border-width-left:   0; }

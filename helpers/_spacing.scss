@@ -25,13 +25,13 @@
     .#{$prefix}margin-sides#{$variation}#{$postfix}  { margin-right:  $value !important; margin-left:   $value !important; }
   }
 
-  .#{$prefix}margin--flush#{$postfix}                { margin:        0 !important; }
-  .#{$prefix}margin-top--flush#{$postfix}            { margin-top:    0 !important; }
-  .#{$prefix}margin-right--flush#{$postfix}          { margin-right:  0 !important; }
-  .#{$prefix}margin-bottom--flush#{$postfix}         { margin-bottom: 0 !important; }
-  .#{$prefix}margin-left--flush#{$postfix}           { margin-left:   0 !important; }
-  .#{$prefix}margin-ends--flush#{$postfix}           { margin-top:    0 !important; margin-bottom: 0 !important; }
-  .#{$prefix}margin-sides--flush#{$postfix}          { margin-right:  0 !important; margin-left:   0 !important; }
+  .#{$prefix}margin0#{$postfix}                { margin:        0 !important; }
+  .#{$prefix}margin-top0#{$postfix}            { margin-top:    0 !important; }
+  .#{$prefix}margin-right0#{$postfix}          { margin-right:  0 !important; }
+  .#{$prefix}margin-bottom0#{$postfix}         { margin-bottom: 0 !important; }
+  .#{$prefix}margin-left0#{$postfix}           { margin-left:   0 !important; }
+  .#{$prefix}margin-ends0#{$postfix}           { margin-top:    0 !important; margin-bottom: 0 !important; }
+  .#{$prefix}margin-sides0#{$postfix}          { margin-right:  0 !important; margin-left:   0 !important; }
 
 } // ekzo-spacing-helpers()
 
@@ -65,13 +65,13 @@
     .#{$prefix}padding-sides#{$variation}#{$postfix}  { padding-right:  $value !important; padding-left:   $value !important; }
   }
 
-  .#{$prefix}padding--flush#{$postfix}                { padding:        0 !important; }
-  .#{$prefix}padding-top--flush#{$postfix}            { padding-top:    0 !important; }
-  .#{$prefix}padding-right--flush#{$postfix}          { padding-right:  0 !important; }
-  .#{$prefix}padding-bottom--flush#{$postfix}         { padding-bottom: 0 !important; }
-  .#{$prefix}padding-left--flush#{$postfix}           { padding-left:   0 !important; }
-  .#{$prefix}padding-ends--flush#{$postfix}           { padding-top:    0 !important; padding-bottom: 0 !important; }
-  .#{$prefix}padding-sides--flush#{$postfix}          { padding-right:  0 !important; padding-left:   0 !important; }
+  .#{$prefix}padding0#{$postfix}                { padding:        0 !important; }
+  .#{$prefix}padding-top0#{$postfix}            { padding-top:    0 !important; }
+  .#{$prefix}padding-right0#{$postfix}          { padding-right:  0 !important; }
+  .#{$prefix}padding-bottom0#{$postfix}         { padding-bottom: 0 !important; }
+  .#{$prefix}padding-left0#{$postfix}           { padding-left:   0 !important; }
+  .#{$prefix}padding-ends0#{$postfix}           { padding-top:    0 !important; padding-bottom: 0 !important; }
+  .#{$prefix}padding-sides0#{$postfix}          { padding-right:  0 !important; padding-left:   0 !important; }
 } // ekzo-spacing-helpers()
 
 // ---------------------------------------

@@ -88,7 +88,7 @@
 - Added `border-width: 0` to `.o-btn` to prevent appearing of borders on buttons in case of defined borders on `a`. Override in your own styles if needed.
 - Added a11y-related ability to disable outlines on links, buttons and forms. Enabled by default
 - Added `.h-border`, `.h-border-top`, `.h-border-left`, `.h-border-right` and `.h-border-bottom` which sets `border-width` to `1px`
-- Added `.h-border--flush`, `.h-border-top--flush`, `.h-border-left--flush`, `.h-border-right--flush` and `.h-border-bottom--flush` which sets `border-width` to `0px`
+- Added `.h-border0`, `.h-border-top0`, `.h-border-left0`, `.h-border-right0` and `.h-border-bottom0` which sets `border-width` to `0px`
 - Added `h-align--baseline` helper which sets `vertical-align: baseline`
 - Added `h-font-size--inherit` helper which forces inheritance of `font-size`
 - Added predefined `h-text-truncate` which will force truncation of texts if it's longer than one line
@@ -164,3 +164,4 @@
 - Refactored `.o-nav` to use flexbox model. This mostly doesn't affect layout on newer browsers, except that there will be no white-space between childs. Use new `.o-nav--space` to emulate old white-space if you need it. New `.o-nav` also now includes functionality of old `.o-a-nav`, `.o-floated-nav` and `.o-pack`
 - `o-nav--keywords` will now set delimeters on direct child anchors too, so that you can use it not on `ul`, but plain plain list of anchors
 - [BREAKING] moved `.g-extra-help` to `.o-extra-help`, since it seems to be more standalone object. By default it will also work on ':hover' too.
+- [BREAKING] use `0` as modifier instead of `--flush` when we not "flushing", but actually setting value to `0`. In other words, instead `h-margin--flush` should be used `h-margin0`, etc. This concerns lists, tables, some typography helpers, spacing helpers, `o-media`, `o-grid`, `o-island`.
