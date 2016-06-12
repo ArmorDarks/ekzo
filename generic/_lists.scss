@@ -1,13 +1,12 @@
 @if $ekzo-enable-lists {
 
-/*------------------------------------*\
-    $LISTS
-\*------------------------------------*/
+// =======================================
+// ^LISTS
+// =======================================
 
-
-/**
- * Lists defaults margins
- */
+// ---------------------------------------
+// Default lists styling
+// ---------------------------------------
 
 ul,
 ol {
@@ -15,16 +14,17 @@ ol {
   // margin-left already defined in shared
 }
 
-
-/**
- * Flush default styling and margins from list:
- *
-    <ul class="list--flush">
-      <li>Foo</li>
-      <li>Bar</li>
-    </ul>
- *
- */
+// ---------------------------------------
+// Unstyle list
+// ---------------------------------------
+// Flush default styling and margins from list:
+//
+// @example
+//
+//  <ul class="g-list--flush">
+//    <li>Foo</li>
+//    <li>Bar</li>
+//  </ul>
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--flush,
 %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush {
@@ -35,11 +35,10 @@ ol {
   margin-bottom: 0;
 }
 
-
-
-/**
- * Applies margin between ul's elements
- */
+// ---------------------------------------
+// Spacing
+// ---------------------------------------
+// Applies margin between ul's elements
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--indent--     > li + li { margin-top: ekzo-spacing(.25); }
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--indent-      > li + li { margin-top: ekzo-spacing(.5); }
@@ -55,11 +54,13 @@ ol {
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--padding\+      > li { padding: ekzo-spacing(2); }
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--padding--flush > li { padding: 0; }
 
+// ---------------------------------------
+// Variations
+// ---------------------------------------
 
 // @todo With borders between elements
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--keyline {}
 // @todo With borders inside
 .#{$ekzo-ns}#{$ekzo-generics-ns}list--matrix {}
-
 
 } // endif

@@ -1,12 +1,11 @@
 
-/*------------------------------------*\
-    $LINKS
-\*------------------------------------*/
+// =======================================
+// ^LINKS
+// =======================================
 
-
-/**
- * Default link styling
- */
+// ---------------------------------------
+// Default link styling
+// ---------------------------------------
 
 a,
 .#{$ekzo-ns}#{$ekzo-generics-ns}link,
@@ -24,13 +23,11 @@ a,
 
 }
 
-
-
-/**
- * Makes link looks like ordinary text
- * Add .cursor-arrow to remove "pointer" cursor
- * and make it completely like ordinary text
- */
+// ---------------------------------------
+// Unstyle link
+// ---------------------------------------
+// Makes link looks like ordinary text.
+// Add .cursor-arrow to remove "pointer" cursor and make it completely like ordinary text
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}link--inherit,
 %#{$ekzo-ns}#{$ekzo-generics-ns}link--inherit {
@@ -65,23 +62,14 @@ a,
 
 }
 
+// ---------------------------------------
+// Variations
+// ---------------------------------------
 
+// ----
+// Add a right or left-angled quote to links that imply movement, e.g.:
+//
+// @example <a href=# class="link--go">Read more</a>
 
-/**
- * Add a right-angled quote to links that imply movement, e.g.:
- *
-    <a href=# class="link--go">Read more</a>
- *
- */
-
-.#{$ekzo-ns}#{$ekzo-generics-ns}link--go:after { content: $ekzo-links--go-content; }
-
-
-/**
- * Add a left-angled quote to links that imply backwards movement, e.g.:
- *
-    <a href=# class="link--back">Go back</a>
- *
- */
-
+.#{$ekzo-ns}#{$ekzo-generics-ns}link--go:after    { content: $ekzo-links--go-content; }
 .#{$ekzo-ns}#{$ekzo-generics-ns}link--back:before { content: $ekzo-links--back-content; }

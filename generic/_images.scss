@@ -1,30 +1,25 @@
 // scss-lint:disable QualifyingElement
 
-/*------------------------------------*\
-  $IMAGES
-\*------------------------------------*/
+// =======================================
+// ^IMAGES
+// =======================================
 
-/**
- * Fluid images for responsive purposes.
- */
+// ---------------------------------------
+// Fluid images
+// ---------------------------------------
 
 img { max-width: 100%; }
 
-
-
-/**
- * If a `width` and/or `height` attribute have been explicitly defined, let’s
- * not make the image fluid.
- */
+// ----
+// If a `width` and/or `height` attribute have been explicitly defined, let’s
+// not make the image fluid.
 
 img[width],
 img[height] { max-width: none; }
 
-
-
-/**
- * Image placement variations.
- */
+// ---------------------------------------
+// Image placement
+// ---------------------------------------
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}image--right {
   float: right;

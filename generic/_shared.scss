@@ -1,19 +1,15 @@
 // scss-lint:disable SingleLinePerSelector
 
-/*------------------------------------*\
-  $SHARED
-\*------------------------------------*/
-
-/**
- * Where `margin-bottom` is concerned, this value will be the same as the
- * base line-height. This allows us to keep a consistent vertical rhythm.
- * As per: csswizardry.com/2012/06/single-direction-margin-declarations
- */
+// =======================================
+// ^SHARED
+// =======================================
+// Allows us to keep a consistent rhythm.
+// As per: csswizardry.com/2012/06/single-direction-margin-declarations
 
 
-/**
- * Base elements
- */
+// ---------------------------------------
+// Base vertical rhythm
+// ---------------------------------------
 
 h1, h2, h3, h4, h5, h6, hgroup,
 ul, ol, dl,
@@ -25,21 +21,15 @@ pre,
 .#{$ekzo-ns}#{$ekzo-generics-ns}flag,
 .#{$ekzo-ns}#{$ekzo-generics-ns}island { margin-bottom: ekzo-spacing(1); }
 
-
-
-/**
- * `hr` elements only take up a few pixels, so we need to give them special
- * treatment regarding vertical rhythm.
- */
+// ----
+// `hr` elements only take up a few pixels, so we need to give them special
+// treatment regarding vertical rhythm.
 
 hr { margin-bottom: ekzo-spacing(1) - 2px; }
 
-
-
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once, here.
- */
+// ---------------------------------------
+// Lists
+// ---------------------------------------
 
 ul,
 ol,
