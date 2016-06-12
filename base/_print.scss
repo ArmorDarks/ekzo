@@ -1,8 +1,8 @@
 // scss-lint:disable QualifyingElement, ImportantRule
 
-/*------------------------------------*\
-  $PRINT
-\*------------------------------------*/
+// =======================================
+// ^PRINT
+// =======================================
 
 @media print {
 
@@ -26,8 +26,7 @@
 
   abbr[title]:after { content: ' (' attr(title) ')'; }
 
-  /* Don't show links for images, or javascript/internal links */
-
+  // Don't show links for images, or javascript/internal links
   a[href^='javascript:']:after,
   a[href^='#']:after { content: ''; }
 
