@@ -1,21 +1,12 @@
 @if $ekzo-enable-forms {
 
-/*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
+// =======================================
+// ^FORMS
+// =======================================
 
-// @todo Chained selector disabled here, otherwise declaration will be completely ignored by some browsers
-
-::placeholder {
-  font-family: ekzo-ui-font-family(forms);
-  font-size:   $ekzo-forms-placeholder-font-size;
-  font-style:  $ekzo-forms-placeholder-font-style;
-  @include ekzo-theme($also-chain:false) { color: ekzo-theme(forms-placeholder); }
-}
-
-
-fieldset + fieldset { margin-top: ekzo-spacing(2); }
-
+// ---------------------------------------
+// Default input
+// ---------------------------------------
 
 .#{$ekzo-ns}#{$ekzo-generics-ns}input,
 input,
@@ -27,5 +18,23 @@ textarea {
     background-color: ekzo-theme(forms-bg);
   }
 }
+
+// ---------------------------------------
+// Default placeholder
+// ---------------------------------------
+// @todo Chained selector disabled here, otherwise declaration will be completely ignored by some browsers
+
+::placeholder {
+  font-family: ekzo-ui-font-family(forms);
+  font-size:   $ekzo-forms-placeholder-font-size;
+  font-style:  $ekzo-forms-placeholder-font-style;
+  @include ekzo-theme($also-chain:false) { color: ekzo-theme(forms-placeholder); }
+}
+
+// ---------------------------------------
+// Fieldset
+// ---------------------------------------
+
+fieldset + fieldset { margin-top: ekzo-spacing(2); }
 
 } // endif
