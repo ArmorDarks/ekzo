@@ -48,7 +48,8 @@
   // Note: don't use floated position on table-cells
   //        'cause they won't behave like table-cells
 
-  .#{$prefix}table#{$postfix} { display: table !important; }
+  .#{$prefix}table#{$postfix}        { display: table !important; }
+  .#{$prefix}table--fixed#{$postfix} { table-layout: fixed; }
 
     .#{$prefix}table__row#{$postfix}  { display: table-row  !important; }
     .#{$prefix}table__cell#{$postfix} { display: table-cell !important; }
