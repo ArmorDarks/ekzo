@@ -1,8 +1,8 @@
 {
   "name": "Ekzo.sass",
-  "version": "2.0.0-alpha",
+  "version": "2.0.0-beta",
   "description": "Sass framework for rapid and painless development",
-  "homepage": "https://github.com/ArmorDarks/ekzo.sass/tree/feature/2.0.0-alpha",
+  "homepage": "https://github.com/ArmorDarks/ekzo.sass",
   "author": "Serj Lavrin (https://github.com/ArmorDarks)",
   "main": "_index.scss",
   "repository": {
