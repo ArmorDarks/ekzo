@@ -210,17 +210,11 @@ dfn { font-style: italic; }
 
 // ----
 // Address inconsistent styling of b and strong.
-// 1. Correct duplicate application of `bolder` in Safari 6.0.2.
-// 2. Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+.
+// 1. Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+.
 
 b,
 strong {
-  font-weight: inherit; // 1
-}
-
-b,
-strong {
-  font-weight: bolder; // 2
+  font-weight: bolder; // 1
 }
 
 // ----
