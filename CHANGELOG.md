@@ -136,7 +136,7 @@
 - [breaking] Due to introduction of theming support, all variables in `settings.colors.defaults.scss` from now represented as map of values wich should be wrapped into `ekzo-extend-themes()` mixin
 - All Ekzo's classes updated to support theming out of box
 - `$ekzo-bg` now expects everything normal for `background` property, except color, wich from now injected into `html` directly from `$ekzo-theme(base: ( bg-color: {{value}} ) )`
-- Updated `normalize.scss`, dropped some older normalizations. Currently it's based on v3.0.3 (head commit: https://github.com/necolas/normalize.css/commit/f41ef9b4918759dabc35599e014aaf3cfae3d8a1)
+- Updated `normalize.scss`, dropped some older normalizations (head commit: https://github.com/necolas/normalize.css/commit/02af1fdfaf71f589ea689d4b957eb3bb1294a228)
 - `reset.scss` is now part of `normalize.scss`
 - [breaking] `$ekzo-global-border-box` is enabled by default
 - Rearrenged settings, part of options moved to `misc` settings
