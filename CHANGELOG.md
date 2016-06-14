@@ -138,6 +138,8 @@
 - `$ekzo-bg` now expects everything normal for `background` property, except color, wich from now injected into `html` directly from `$ekzo-theme(base: ( bg-color: {{value}} ) )`
 - Updated `normalize.scss`, dropped some older normalizations (head commit: https://github.com/necolas/normalize.css/commit/02af1fdfaf71f589ea689d4b957eb3bb1294a228)
 - `reset.scss` is now part of `normalize.scss`
+- Cursors of regular and disabled buttons are no longer normalized and now behaves naturally. Change this behavior in your own stylesheets, if you need.
+- `.o-btn` no longer applies `cursor: pointer`. Apply it manually, whenever needed on purpose.
 - [breaking] `$ekzo-global-border-box` is enabled by default
 - Rearrenged settings, part of options moved to `misc` settings
 - [breaking] Extra-headings now have standalone class name `.h-extra-h{modifier}` instead of being `.h-text+`, `.h-text++` and `.h-text+++`

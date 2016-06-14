@@ -8,14 +8,8 @@
 //
 //  1. Allow us to better style box model properties.
 //  2. Line different sized buttons up a little nicer.
-//  5. Force all elements using beautons to appear clickable.
-//  6. Normalise box model styles.
-//  7. Using paddings instead of line-height to allow multi-line buttons
-//  8. If the button's text is 1em with default 1.5 line-height, and the button
-//     is 3 * font-size tall, then there is .75em of space above and below
-//     that text. We therefore apply 1em of space to the left and right,
-//     as padding, to keep consistent spacing.
-//  9. Prevent appearing of borders in case `a` has defined border. Override in your
+//  3. Normalise box model styles.
+//  4. Prevent appearing of borders in case `a` has defined border. Override in your
 //     own styles if needed.
 
 .#{$ekzo-objects-ns}btn {
@@ -23,16 +17,14 @@
 
   vertical-align: middle;      // 2
 
-  cursor: pointer;             // 5
+  margin: 0;                   // 3
 
-  margin: 0;                   // 6
+  padding-top:    ekzo-em(ekzo-spacing(.5));
+  padding-bottom: ekzo-em(ekzo-spacing(.5));
+  padding-right:  1em;
+  padding-left:   1em;
 
-  padding-top:    ekzo-em(ekzo-spacing(.5)); // 7
-  padding-bottom: ekzo-em(ekzo-spacing(.5)); // 7
-  padding-right:  1em;                       // 8
-  padding-left:   1em;                       // 8
-
-  border-width: 0; // 9
+  border-width: 0; // 4
 
   @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
 
