@@ -137,8 +137,8 @@ iframe { vertical-align: middle; }
 // 2. So that `alt` text is visually offset if images don't load.
 
 img {
-  border: 0;       // 1
-  outline: 0;
+  border-width: 0;       // 1
+  outline-width: 0;
   font-style: italic; // 2
 }
 
@@ -146,7 +146,7 @@ img {
 // Remove most spacing between table cells and border
 
 table {
-  border: 0;
+  border-width: 0;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -173,7 +173,7 @@ a { background: transparent; }
 
 a,
 a:active,
-a:hover { @if $ekzo-disable-links-outline { outline: 0; } }
+a:hover { @if $ekzo-disable-links-outline { outline-width: 0; } }
 
 // ---------------------------------------
 // Text-level semantics
@@ -221,7 +221,7 @@ strong {
 // Address styling not present in IE 8/9.
 
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000;
 }
 
@@ -305,12 +305,12 @@ samp {
 input,
 textarea,
 select,
-button { @if $ekzo-disable-forms-outline { outline: 0; } }
+button { @if $ekzo-disable-forms-outline { outline-width: 0; } }
 
 // ----
 // Remove default border from `fieldset` and `legend`.
 
-fieldset { border: 0; }
+fieldset { border-width: 0; }
 
 // ----
 // 1. Correct color not being inherited.
