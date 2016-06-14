@@ -14,7 +14,7 @@
 // 1. Positioning gutter in the center
 // 2. For usage of the grid on lists
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}grid {
+.#{$ekzo-objects-ns}grid {
   display:    flex;
   flex-wrap:  wrap;
   list-style: none;                   // 2
@@ -29,7 +29,7 @@
 
 }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item {
+  .#{$ekzo-objects-ns}grid__item {
     box-sizing: border-box;
     padding-left: ekzo-spacing(1); // 1
   }

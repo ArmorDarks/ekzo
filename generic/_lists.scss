@@ -26,8 +26,8 @@ ol {
 //    <li>Bar</li>
 //  </ul>
 
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--flush,
-%#{$ekzo-ns}#{$ekzo-generics-ns}list--flush {
+.#{$ekzo-generics-ns}list--flush,
+%#{$ekzo-generics-ns}list--flush {
   list-style: none;
 
   margin-left:   0;
@@ -48,8 +48,8 @@ ol {
 // ---------------------------------------
 
 // @todo With borders between elements
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--keyline {}
+.#{$ekzo-generics-ns}list--keyline {}
 // @todo With borders inside
-.#{$ekzo-ns}#{$ekzo-generics-ns}list--matrix {}
+.#{$ekzo-generics-ns}list--matrix {}
 
 } // endif

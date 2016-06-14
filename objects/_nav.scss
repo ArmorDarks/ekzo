@@ -4,9 +4,9 @@
 // ^NAV
 // =======================================
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav,
-%#{$ekzo-ns}#{$ekzo-objects-ns}nav {
-  @extend %#{$ekzo-ns}#{$ekzo-generics-ns}list--flush;
+.#{$ekzo-objects-ns}nav,
+%#{$ekzo-objects-ns}nav {
+  @extend %#{$ekzo-generics-ns}list--flush;
 
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
 // ---------------------------------------
 // Extends `.o-nav` and throws the list into vertical mode
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--stacked {
+.#{$ekzo-objects-ns}nav--stacked {
   flex-direction: column;
 
   > a { align-self: flex-start; } // for cases when you stack only anchors, without list
@@ -34,7 +34,7 @@
 // ---------------------------------------
 // Extends `.o-nav` and throws all links inside in block or inline mode
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--block  {
+.#{$ekzo-objects-ns}nav--block  {
 
   > a,
   > li,
@@ -42,7 +42,7 @@
 
 }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--inline  {
+.#{$ekzo-objects-ns}nav--inline  {
 
   > a,
   > li,
@@ -62,7 +62,7 @@
 // ----
 // Imitate white-space between regular `inline-block`s
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--space {
+.#{$ekzo-objects-ns}nav--space {
 
   > a, // for cases when you stack only anchors, without list
   > li { margin-right: .26em }
@@ -73,19 +73,19 @@
 // Packed nav
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--pack {
+.#{$ekzo-objects-ns}nav--pack {
 
   > li,
   > a,
-  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { flex-grow: 1; } // flex 1 1 auto?
+  > .#{$ekzo-objects-ns}nav__item { flex-grow: 1; } // flex 1 1 auto?
 
 }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--fixed-pack {
+.#{$ekzo-objects-ns}nav--fixed-pack {
 
   > li,
   > a,
-  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { flex: 1; } // flex 1 1 0% ?
+  > .#{$ekzo-objects-ns}nav__item { flex: 1; } // flex 1 1 0% ?
 
 }
 
@@ -94,7 +94,7 @@
 // ---------------------------------------
 // Make a list of keywords. Extends `.nav`, e.g.:
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--keywords {
+.#{$ekzo-objects-ns}nav--keywords {
 
   > li:after, > a:after { content: '\002C' '\00A0'; }
 

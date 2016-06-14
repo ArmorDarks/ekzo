@@ -14,17 +14,17 @@
 // Moves border underline from element to specified `.o-reline-border-bottom__to`
 // Useful for anchors with icons inside
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom {
+.#{$ekzo-objects-ns}reline-border-bottom {
   border-bottom-width: 0;
 
   // Prevent overriding of specified default hover/active/focus widths by `.o-reline-border-bottom__to`
-  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
-  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
-  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to { border-bottom-width: inherit; }
+  &:hover .#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:focus .#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:active .#{$ekzo-objects-ns}reline-border-bottom__to { border-bottom-width: inherit; }
 
 }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to {
+  .#{$ekzo-objects-ns}reline-border-bottom__to {
     border-bottom-width: 1px;
     border-bottom-style: inherit;
 
@@ -36,14 +36,14 @@
 // Moves border underline from element to specified `.o-reline-border-bottom__to`
 // and shows it only upon hover
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom--rev {
+.#{$ekzo-objects-ns}reline-border-bottom--rev {
   border-bottom-width: 0;
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to { border-bottom-width: 0; }
+  .#{$ekzo-objects-ns}reline-border-bottom__to { border-bottom-width: 0; }
 
-  &:hover .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
-  &:focus .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to,
-  &:active .#{$ekzo-ns}#{$ekzo-objects-ns}reline-border-bottom__to {
+  &:hover .#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:focus .#{$ekzo-objects-ns}reline-border-bottom__to,
+  &:active .#{$ekzo-objects-ns}reline-border-bottom__to {
     border-bottom-width: 1px;
     border-bottom-style: inherit;
 

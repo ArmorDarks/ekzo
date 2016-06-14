@@ -43,7 +43,7 @@
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, headings) {
     .#{$prefix}#{$variant}#{$postfix} {
-      @extend %#{$ekzo-ns}#{$ekzo-generics-ns}headings-properties;
+      @extend %#{$ekzo-generics-ns}headings-properties;
 
       @include ekzo-font-size($value);
     }
@@ -128,7 +128,7 @@
 
 @if $ekzo-enable-typography-helpers {
 
-  @include ekzo-typography-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
+  @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns);
 
 } // endif
 
@@ -139,7 +139,7 @@
 @if $ekzo-enable-typography-helpers {
 
   @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-typography-helpers-breakpoints) {
-    @include ekzo-typography-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+    @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
 } // endif
@@ -148,31 +148,31 @@
 // Text styling
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--inherit  { font-weight: inherit  !important; }
+.#{$ekzo-helpers-ns}font-weight--inherit  { font-weight: inherit  !important; }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--lighter  { font-weight: lighter  !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--light    { font-weight: 300  !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--normal   { font-weight: 400  !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--semibold { font-weight: 600  !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--bold     { font-weight: bold !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-weight--bolder   { font-weight: bolder !important; }
+.#{$ekzo-helpers-ns}font-weight--lighter  { font-weight: lighter  !important; }
+.#{$ekzo-helpers-ns}font-weight--light    { font-weight: 300  !important; }
+.#{$ekzo-helpers-ns}font-weight--normal   { font-weight: 400  !important; }
+.#{$ekzo-helpers-ns}font-weight--semibold { font-weight: 600  !important; }
+.#{$ekzo-helpers-ns}font-weight--bold     { font-weight: bold !important; }
+.#{$ekzo-helpers-ns}font-weight--bolder   { font-weight: bolder !important; }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-style--normal    { font-style: normal !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}font-style--italic    { font-style: italic !important; }
+.#{$ekzo-helpers-ns}font-style--normal    { font-style: normal !important; }
+.#{$ekzo-helpers-ns}font-style--italic    { font-style: italic !important; }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--uppercase       { text-transform: uppercase !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--lowercase       { text-transform: lowercase !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--caps            { text-transform: capitalize !important; }
+.#{$ekzo-helpers-ns}text--uppercase       { text-transform: uppercase !important; }
+.#{$ekzo-helpers-ns}text--lowercase       { text-transform: lowercase !important; }
+.#{$ekzo-helpers-ns}text--caps            { text-transform: capitalize !important; }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--break-word      { word-wrap:   break-word; }
+.#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }
+.#{$ekzo-helpers-ns}text--break-word      { word-wrap:   break-word; }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--truncate        { @include ekzo-truncate(100%); }
+.#{$ekzo-helpers-ns}text--truncate        { @include ekzo-truncate(100%); }
 
 // ---------------------------------------
 // Underline styling
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline        { text-decoration: underline; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline\:h     { &:hover, &:focus { text-decoration: underline; } }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}text--underline--flush { text-decoration: none; }
+.#{$ekzo-helpers-ns}text--underline        { text-decoration: underline; }
+.#{$ekzo-helpers-ns}text--underline\:h     { &:hover, &:focus { text-decoration: underline; } }
+.#{$ekzo-helpers-ns}text--underline--flush { text-decoration: none; }

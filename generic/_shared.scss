@@ -17,9 +17,9 @@ blockquote, p, address,
 table,
 fieldset, figure,
 pre,
-.#{$ekzo-ns}#{$ekzo-generics-ns}media,
-.#{$ekzo-ns}#{$ekzo-generics-ns}flag,
-.#{$ekzo-ns}#{$ekzo-generics-ns}island { margin-bottom: ekzo-spacing(1); }
+.#{$ekzo-generics-ns}media,
+.#{$ekzo-generics-ns}flag,
+.#{$ekzo-generics-ns}island { margin-bottom: ekzo-spacing(1); }
 
 // ----
 // `hr` elements only take up a few pixels, so we need to give them special

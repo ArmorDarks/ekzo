@@ -45,9 +45,9 @@
 // 2. Used display model `inline-block` yeilds unwanted whitespaces
 //    which we have to removed with quite cruel method
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}grid { letter-spacing: -.31em; }
+.#{$ekzo-objects-ns}grid { letter-spacing: -.31em; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}grid__item {
+  .#{$ekzo-objects-ns}grid__item {
     vertical-align: top;
     display: inline-block; // 1
     letter-spacing: normal; // 2
@@ -116,7 +116,7 @@
 
 @if $ekzo-enable-flex-helpers {
 
-  @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
+  @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns);
 
 } // endif
 
@@ -127,7 +127,7 @@
 @if $ekzo-enable-flex-helpers {
 
   @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-flex-helpers-breakpoints) {
-    @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+    @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
 } // endif
@@ -137,14 +137,14 @@
 // =======================================
 // Fallback to float-based media object, since IE8-9 doesn't support flexbox
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}media { @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix; }
+.#{$ekzo-objects-ns}media { @extend %#{$ekzo-objects-ns}clearfix; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside {
+  .#{$ekzo-objects-ns}media__aside {
     float: left;
     display: block;
   }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__content {
+  .#{$ekzo-objects-ns}media__content {
     display: block;
     overflow: hidden;
   }
@@ -153,9 +153,9 @@
 // Reversed version
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}media--rev {
+.#{$ekzo-objects-ns}media--rev {
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}media__aside { float: right }
+  .#{$ekzo-objects-ns}media__aside { float: right }
 
 }
 
@@ -168,7 +168,7 @@
 // ----
 // Extends `.nav` and throws the list into vertical mode, e.g.:
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--stacked {
+.#{$ekzo-objects-ns}nav--stacked {
 
   > a {
     float: left;
@@ -183,17 +183,17 @@
 // Packed nav
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--pack {
+.#{$ekzo-objects-ns}nav--pack {
   display: table;
   width: 100%; // Fill all available space.
 
   > li,
   > a,
-  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { display: table-cell; }
+  > .#{$ekzo-objects-ns}nav__item { display: table-cell; }
 
 }
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}nav--fixed-pack {
+.#{$ekzo-objects-ns}nav--fixed-pack {
   display: table;
   table-layout: fixed;
 
@@ -201,7 +201,7 @@
 
   > li,
   > a,
-  > .#{$ekzo-ns}#{$ekzo-objects-ns}nav__item { display: table-cell; }
+  > .#{$ekzo-objects-ns}nav__item { display: table-cell; }
 
 }
 

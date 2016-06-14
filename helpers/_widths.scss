@@ -51,7 +51,7 @@
 @if $ekzo-enable-widths-helpers {
 
   @include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions,
-    $prefix: $ekzo-ns + $ekzo-helpers-ns);
+    $prefix: $ekzo-helpers-ns);
 
 } // endif
 
@@ -63,7 +63,7 @@
 
   @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-widths-helpers-breakpoints) {
     @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
-      $prefix: $ekzo-ns + $ekzo-helpers-ns,
+      $prefix: $ekzo-helpers-ns,
       $postfix: ekzo-temp());
   };
 

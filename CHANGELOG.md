@@ -68,7 +68,6 @@
 - Added `$ekzo-list-style-type` option to set default list style
 - Added generic styling for `code`, `pre`, `samp` and `kbd` and settings for their font-sizes and font-families
 - Added options `$ekzo-widths-fractions` and `$ekzo-responsive-widths-fractions` to control generated widths
-- Added option `$ekzo-ns` which allows to set global namespace for class names. By default set to `''`
 - Added `ekzo-strip-units()` function which allows to remove units from the value
 - Added `ekzo-units()` function which allows to convert units. Relies on Sass math to prevent conversion of incompatible units.
 - Added `ekzo-rem()` function, which converts pxs into rems

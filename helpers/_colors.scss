@@ -7,58 +7,58 @@
 // Inherits
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}color--inherit           { color: inherit !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}color--inherit\:h        { &:hover, &:focus { color: inherit !important; } }
+.#{$ekzo-helpers-ns}color--inherit           { color: inherit !important; }
+.#{$ekzo-helpers-ns}color--inherit\:h        { &:hover, &:focus { color: inherit !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--inherit        { background-color: inherit !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--inherit\:h     { &:hover, &:focus { background-color: inherit !important; } }
+.#{$ekzo-helpers-ns}bg-color--inherit        { background-color: inherit !important; }
+.#{$ekzo-helpers-ns}bg-color--inherit\:h     { &:hover, &:focus { background-color: inherit !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--inherit    { border-color: inherit !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--inherit\:h { &:hover, &:focus { border-color: inherit !important; } }
+.#{$ekzo-helpers-ns}border-color--inherit    { border-color: inherit !important; }
+.#{$ekzo-helpers-ns}border-color--inherit\:h { &:hover, &:focus { border-color: inherit !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--inherit            { fill: inherit !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--inherit\:h         { &:hover, &:focus { fill: inherit !important; } }
+.#{$ekzo-helpers-ns}fill--inherit            { fill: inherit !important; }
+.#{$ekzo-helpers-ns}fill--inherit\:h         { &:hover, &:focus { fill: inherit !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--inherit          { stroke: inherit !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--inherit\:h       { &:hover, &:focus { stroke: inherit !important; } }
+.#{$ekzo-helpers-ns}stroke--inherit          { stroke: inherit !important; }
+.#{$ekzo-helpers-ns}stroke--inherit\:h       { &:hover, &:focus { stroke: inherit !important; } }
 
 // ---------------------------------------
 // Transparent
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}color--transparent           { color: transparent !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}color--transparent\:h        { &:hover, &:focus { color: transparent !important; } }
+.#{$ekzo-helpers-ns}color--transparent           { color: transparent !important; }
+.#{$ekzo-helpers-ns}color--transparent\:h        { &:hover, &:focus { color: transparent !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--transparent        { background-color: transparent !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--transparent\:h     { &:hover, &:focus { background-color: transparent !important; } }
+.#{$ekzo-helpers-ns}bg-color--transparent        { background-color: transparent !important; }
+.#{$ekzo-helpers-ns}bg-color--transparent\:h     { &:hover, &:focus { background-color: transparent !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--transparent    { border-color: transparent !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--transparent\:h { &:hover, &:focus { border-color: transparent !important; } }
+.#{$ekzo-helpers-ns}border-color--transparent    { border-color: transparent !important; }
+.#{$ekzo-helpers-ns}border-color--transparent\:h { &:hover, &:focus { border-color: transparent !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--transparent            { fill: transparent !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--transparent\:h         { &:hover, &:focus { fill: transparent !important; } }
+.#{$ekzo-helpers-ns}fill--transparent            { fill: transparent !important; }
+.#{$ekzo-helpers-ns}fill--transparent\:h         { &:hover, &:focus { fill: transparent !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--transparent          { stroke: transparent !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--transparent\:h       { &:hover, &:focus { stroke: transparent !important; } }
+.#{$ekzo-helpers-ns}stroke--transparent          { stroke: transparent !important; }
+.#{$ekzo-helpers-ns}stroke--transparent\:h       { &:hover, &:focus { stroke: transparent !important; } }
 
 // ---------------------------------------
 // CurrentColor
 // ---------------------------------------
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}color--current           { color: CurrentColor !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}color--current\:h        { &:hover, &:focus { color: CurrentColor !important; } }
+.#{$ekzo-helpers-ns}color--current           { color: CurrentColor !important; }
+.#{$ekzo-helpers-ns}color--current\:h        { &:hover, &:focus { color: CurrentColor !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--current        { background-color: CurrentColor !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--current\:h     { &:hover, &:focus { background-color: CurrentColor !important; } }
+.#{$ekzo-helpers-ns}bg-color--current        { background-color: CurrentColor !important; }
+.#{$ekzo-helpers-ns}bg-color--current\:h     { &:hover, &:focus { background-color: CurrentColor !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--current    { border-color: CurrentColor !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--current\:h { &:hover, &:focus { border-color: CurrentColor !important; } }
+.#{$ekzo-helpers-ns}border-color--current    { border-color: CurrentColor !important; }
+.#{$ekzo-helpers-ns}border-color--current\:h { &:hover, &:focus { border-color: CurrentColor !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--current            { fill: CurrentColor !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}fill--current\:h         { &:hover, &:focus { fill: CurrentColor !important; } }
+.#{$ekzo-helpers-ns}fill--current            { fill: CurrentColor !important; }
+.#{$ekzo-helpers-ns}fill--current\:h         { &:hover, &:focus { fill: CurrentColor !important; } }
 
-.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--current          { stroke: CurrentColor !important; }
-.#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--current\:h       { &:hover, &:focus { stroke: CurrentColor !important; } }
+.#{$ekzo-helpers-ns}stroke--current          { stroke: CurrentColor !important; }
+.#{$ekzo-helpers-ns}stroke--current\:h       { &:hover, &:focus { stroke: CurrentColor !important; } }
 
 // ---------------------------------------
 // Color pallete
@@ -67,20 +67,20 @@
 @if $ekzo-enable-colors-helpers {
   @each $color, $value in $ekzo-colors {
 
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color}           { color: $value !important; }
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color}\:h        { &:hover, &:focus { color: $value !important; } }
+    .#{$ekzo-helpers-ns}color--#{$color}           { color: $value !important; }
+    .#{$ekzo-helpers-ns}color--#{$color}\:h        { &:hover, &:focus { color: $value !important; } }
 
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--#{$color}        { background-color: $value !important; }
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--#{$color}\:h     { &:hover, &:focus { background-color: $value !important; } }
+    .#{$ekzo-helpers-ns}bg-color--#{$color}        { background-color: $value !important; }
+    .#{$ekzo-helpers-ns}bg-color--#{$color}\:h     { &:hover, &:focus { background-color: $value !important; } }
 
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--#{$color}    { border-color: $value !important; }
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--#{$color}\:h { &:hover, &:focus { border-color: $value !important; } }
+    .#{$ekzo-helpers-ns}border-color--#{$color}    { border-color: $value !important; }
+    .#{$ekzo-helpers-ns}border-color--#{$color}\:h { &:hover, &:focus { border-color: $value !important; } }
 
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}fill--#{$color}            { fill: $value !important; }
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}fill--#{$color}\:h         { &:hover, &:focus { fill: $value !important; } }
+    .#{$ekzo-helpers-ns}fill--#{$color}            { fill: $value !important; }
+    .#{$ekzo-helpers-ns}fill--#{$color}\:h         { &:hover, &:focus { fill: $value !important; } }
 
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--#{$color}          { stroke: $value !important; }
-    .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--#{$color}\:h       { &:hover, &:focus { stroke: $value !important; } }
+    .#{$ekzo-helpers-ns}stroke--#{$color}          { stroke: $value !important; }
+    .#{$ekzo-helpers-ns}stroke--#{$color}\:h       { &:hover, &:focus { stroke: $value !important; } }
 
   }
 }
@@ -97,20 +97,20 @@
     @each $color, $value in ekzo-get($ekzo-themes, $theme) {
       @if $value {
 
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color}           { @include ekzo-theme() { color: $value !important; } }
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}color--#{$color}\:h        { @include ekzo-theme() { &:hover, &:focus { color: $value !important; } } }
+        .#{$ekzo-helpers-ns}color--#{$color}           { @include ekzo-theme() { color: $value !important; } }
+        .#{$ekzo-helpers-ns}color--#{$color}\:h        { @include ekzo-theme() { &:hover, &:focus { color: $value !important; } } }
 
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--#{$color}        { @include ekzo-theme() { background-color: $value !important; } }
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}bg-color--#{$color}\:h     { @include ekzo-theme() { &:hover, &:focus { background-color: $value !important; } } }
+        .#{$ekzo-helpers-ns}bg-color--#{$color}        { @include ekzo-theme() { background-color: $value !important; } }
+        .#{$ekzo-helpers-ns}bg-color--#{$color}\:h     { @include ekzo-theme() { &:hover, &:focus { background-color: $value !important; } } }
 
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--#{$color}    { @include ekzo-theme() { border-color: $value !important; } }
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}border-color--#{$color}\:h { @include ekzo-theme() { &:hover, &:focus { border-color: $value !important; } } }
+        .#{$ekzo-helpers-ns}border-color--#{$color}    { @include ekzo-theme() { border-color: $value !important; } }
+        .#{$ekzo-helpers-ns}border-color--#{$color}\:h { @include ekzo-theme() { &:hover, &:focus { border-color: $value !important; } } }
 
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}fill--#{$color}            { @include ekzo-theme() { fill: $value !important; } }
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}fill--#{$color}\:h         { @include ekzo-theme() { &:hover, &:focus { fill: $value !important; } } }
+        .#{$ekzo-helpers-ns}fill--#{$color}            { @include ekzo-theme() { fill: $value !important; } }
+        .#{$ekzo-helpers-ns}fill--#{$color}\:h         { @include ekzo-theme() { &:hover, &:focus { fill: $value !important; } } }
 
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--#{$color}          { @include ekzo-theme() { stroke: $value !important; } }
-        .#{$ekzo-ns}#{$ekzo-helpers-ns}stroke--#{$color}\:h       { @include ekzo-theme() { &:hover, &:focus { stroke: $value !important; } } }
+        .#{$ekzo-helpers-ns}stroke--#{$color}          { @include ekzo-theme() { stroke: $value !important; } }
+        .#{$ekzo-helpers-ns}stroke--#{$color}\:h       { @include ekzo-theme() { &:hover, &:focus { stroke: $value !important; } } }
 
       }
     }

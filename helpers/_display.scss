@@ -130,7 +130,7 @@
 
 @if $ekzo-enable-display-helpers {
 
-  @include ekzo-display-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
+  @include ekzo-display-helpers($prefix: $ekzo-helpers-ns);
 
 } // endif
 
@@ -141,7 +141,7 @@
 @if $ekzo-enable-display-helpers {
 
   @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-display-helpers-breakpoints) {
-    @include ekzo-display-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+    @include ekzo-display-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
 } // endif

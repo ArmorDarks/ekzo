@@ -12,8 +12,8 @@
 //
 // Demo: jsfiddle.net/inuitcss/u8pV3
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}island {
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}clearfix;
+.#{$ekzo-objects-ns}island {
+  @extend %#{$ekzo-objects-ns}clearfix;
 
   display: block;
 

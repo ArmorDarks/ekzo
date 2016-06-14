@@ -53,7 +53,7 @@
 //
 //  }
 
-@mixin ekzo-theme($prefix: $ekzo-ns + $ekzo-themes-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+@mixin ekzo-theme($prefix: $ekzo-themes-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
 
   @each $theme, $data in $ekzo-themes {
 

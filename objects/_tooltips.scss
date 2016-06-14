@@ -59,7 +59,7 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
   @each $position in top, bottom, left, right {
 
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--#{$position}:before {
+    &.#{$ekzo-objects-ns}tooltip--#{$position}:before {
       border-#{$position}-color: $color;
     }
 
@@ -204,34 +204,34 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--sharp:after { border-radius: 0; }
+  .#{$ekzo-objects-ns}tooltip--sharp:after { border-radius: 0; }
 
 
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--always {
+  .#{$ekzo-objects-ns}tooltip--always {
     &:after,
     &:before {
       opacity: 1;
       visibility: visible;
     }
 
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--top:after,
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--top:before {
+    &.#{$ekzo-objects-ns}tooltip--top:after,
+    &.#{$ekzo-objects-ns}tooltip--top:before {
       transform: translateY($ekzo-transition-distance * -1);
     }
 
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--bottom:after,
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--bottom:before {
+    &.#{$ekzo-objects-ns}tooltip--bottom:after,
+    &.#{$ekzo-objects-ns}tooltip--bottom:before {
       transform: translateY($ekzo-transition-distance * 1);
     }
 
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--left:after,
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--left:before {
+    &.#{$ekzo-objects-ns}tooltip--left:after,
+    &.#{$ekzo-objects-ns}tooltip--left:before {
       transform: translateX($ekzo-transition-distance * -1);
     }
 
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--right:after,
-    &.#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--right:before {
+    &.#{$ekzo-objects-ns}tooltip--right:after,
+    &.#{$ekzo-objects-ns}tooltip--right:before {
       transform: translateX($ekzo-transition-distance * 1);
     }
   }
@@ -242,17 +242,17 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
    * set default color for tooltip arrows
    */
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--top:before { border-top-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-objects-ns}tooltip--top:before { border-top-color: $ekzo-tooltip-bg-color; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--bottom:before { border-bottom-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-objects-ns}tooltip--bottom:before { border-bottom-color: $ekzo-tooltip-bg-color; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--left:before { border-left-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-objects-ns}tooltip--left:before { border-left-color: $ekzo-tooltip-bg-color; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--right:before { border-right-color: $ekzo-tooltip-bg-color; }
+  .#{$ekzo-objects-ns}tooltip--right:before { border-right-color: $ekzo-tooltip-bg-color; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--error   { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error); }
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
+  .#{$ekzo-objects-ns}tooltip--error   { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error); }
+  .#{$ekzo-objects-ns}tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
+  .#{$ekzo-objects-ns}tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
 
 
 
@@ -267,18 +267,18 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
  */
 
   /* top tooltip */
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--top { @include ekzo-tooltip-position('bottom'); }
+  .#{$ekzo-objects-ns}tooltip--top { @include ekzo-tooltip-position('bottom'); }
 
   /* bottom tooltip */
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--bottom { @include ekzo-tooltip-position('top'); }
+  .#{$ekzo-objects-ns}tooltip--bottom { @include ekzo-tooltip-position('top'); }
 
   /* right tooltip */
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--right { @include ekzo-tooltip-position('left'); }
+  .#{$ekzo-objects-ns}tooltip--right { @include ekzo-tooltip-position('left'); }
 
   /* left tooltip */
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}tooltip--left { @include ekzo-tooltip-position('right'); }
+  .#{$ekzo-objects-ns}tooltip--left { @include ekzo-tooltip-position('right'); }
 
 } // endif

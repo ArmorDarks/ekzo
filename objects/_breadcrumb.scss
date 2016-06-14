@@ -34,9 +34,9 @@
 //     </li>
 //   </ul>
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb {
+.#{$ekzo-objects-ns}breadcrumb {
 
-  @extend %#{$ekzo-ns}#{$ekzo-objects-ns}nav;
+  @extend %#{$ekzo-objects-ns}nav;
 
   > li + li:before { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content); }
 
@@ -48,9 +48,9 @@
 
 }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
+  .#{$ekzo-objects-ns}breadcrumb__root { font-weight: $ekzo-breadcrumb-root-font-weight; }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry + .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry:before {
+  .#{$ekzo-objects-ns}breadcrumb__entry + .#{$ekzo-objects-ns}breadcrumb__entry:before {
     @include breadcrumb__entry($delimiter: $ekzo-breadcrumb-delimiters-content);
   }
 
@@ -66,12 +66,12 @@
 //   </ul>
 //   <h1>Section/h1>
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb--rev {
+.#{$ekzo-objects-ns}breadcrumb--rev {
 
-  > .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry + .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry:before,
+  > .#{$ekzo-objects-ns}breadcrumb__entry + .#{$ekzo-objects-ns}breadcrumb__entry:before,
   > li + li:before { content: none; }
 
-  > .#{$ekzo-ns}#{$ekzo-objects-ns}breadcrumb__entry:after,
+  > .#{$ekzo-objects-ns}breadcrumb__entry:after,
   > li:after { @include breadcrumb__entry($delimiter: $ekzo-breadcrumb--rev-delimiters-content); }
 
 }

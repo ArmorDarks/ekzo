@@ -115,7 +115,7 @@
 
 @if $ekzo-enable-flex-helpers {
 
-  @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns);
+  @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns);
 
 } // endif
 
@@ -126,7 +126,7 @@
 @if $ekzo-enable-flex-helpers {
 
   @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-flex-helpers-breakpoints) {
-    @include ekzo-flex-helpers($prefix: $ekzo-ns + $ekzo-helpers-ns, $postfix: ekzo-temp());
+    @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
 } // endif

@@ -24,7 +24,7 @@
 //     with default bullets
 //  2. Assume that first icons in list are bullets
 
-.#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list {
+.#{$ekzo-objects-ns}iconic-list {
   padding-left: ekzo-spacing(2); // 1
 
   list-style-type: none;
@@ -32,15 +32,15 @@
   li {
     position: relative;
 
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}icon, // 2
-    > .#{$ekzo-ns}#{$ekzo-objects-ns}sprite { @extend %#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon; }
+    > .#{$ekzo-objects-ns}icon, // 2
+    > .#{$ekzo-objects-ns}sprite { @extend %#{$ekzo-objects-ns}iconic-list__icon; }
 
   }
 
 }
 
-  .#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon,
-  %#{$ekzo-ns}#{$ekzo-objects-ns}iconic-list__icon {
+  .#{$ekzo-objects-ns}iconic-list__icon,
+  %#{$ekzo-objects-ns}iconic-list__icon {
     position: absolute;
 
     width: 1.5em;
