@@ -1,0 +1,77 @@
+// =======================================
+// ^BREADCRUMBS
+// =======================================
+
+// ----
+// Predefine mixing for breadcrumbs's elements
+//
+// @param  {string} $delimiter Delimiter for elements
+// @return {properties} Properties for elements
+
+@mixin breadcrumbs__item($delimiter) {
+  content: $delimiter;
+
+  @include ekzo-theme() {
+    @if ekzo-theme(breadcrumbs-delimiters) and ekzo-theme(breadcrumbs-delimiters) != ekzo-theme(text) {
+      color: ekzo-theme(breadcrumbs-delimiters);
+    }
+  }
+
+}
+
+@if $ekzo-enable-breadcrumbs {
+
+// ----
+// Breadcrumbs styling to apply to lists
+//
+// @example
+//   <ul class="breadcrumbs">
+//     <li class="breadcrumbs__item breadcrumbs__root">
+//       <a class="breadcrumbs__link" href="#">Home</a>
+//     </li>
+//     <li class="breadcrumbs__item">
+//       <a class="breadcrumbs__link" href="#">Section</a>
+//     </li>
+//   </ul>
+
+.#{$ekzo-objects-ns}breadcrumbs {
+
+  @extend %#{$ekzo-objects-ns}nav;
+
+  > li + li:before { @include breadcrumbs__item($delimiter: $ekzo-breadcrumbs-delimiters-content); }
+
+  @include ekzo-theme() {
+    @if ekzo-theme(breadcrumbs-links) and ekzo-theme(breadcrumbs-links) != ekzo-theme(links) {
+      > a { color: ekzo-theme(breadcrumbs-links); }
+    }
+  }
+
+}
+
+  .#{$ekzo-objects-ns}breadcrumbs__item + .#{$ekzo-objects-ns}breadcrumbs__item:before {
+    @include breadcrumbs__item($delimiter: $ekzo-breadcrumbs-delimiters-content);
+  }
+
+// ----
+// Same breadcrumbs, but with heading as last item
+//
+// @extends .breadcrumbs
+// @example
+//   <ul class="breadcrumbs breadcrumbs--rev">
+//     <li class="breadcrumbs__item breadcrumbs__root">
+//       <a class="breadcrumbs__link" href="#">Home</a>
+//     </li>
+//   </ul>
+//   <h1>Section/h1>
+
+.#{$ekzo-objects-ns}breadcrumbs--rev {
+
+  > .#{$ekzo-objects-ns}breadcrumbs__item + .#{$ekzo-objects-ns}breadcrumbs__item:before,
+  > li + li:before { content: none; }
+
+  > .#{$ekzo-objects-ns}breadcrumbs__item:after,
+  > li:after { @include breadcrumbs__item($delimiter: $ekzo-breadcrumbs--rev-delimiters-content); }
+
+}
+
+} // endif
