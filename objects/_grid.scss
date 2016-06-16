@@ -11,28 +11,23 @@
 // ---------------------------------------
 // Extend with flex helpers `h-flex--*` to align items and do some other nice stuff
 //
-// 1. Positioning gutter in the center
-// 2. For usage of the grid on lists
+// 1. For usage of the grid on lists
 
 .#{$ekzo-objects-ns}grid {
   display:    flex;
   flex-wrap:  wrap;
-  list-style: none;                   // 2
+  list-style: none;                   // 1
 
-  padding-left:  0;                   // 2
+  padding-left:  0;                   // 1
 
-  margin-bottom: 0;                   // 2
-  margin-left:   - ekzo-spacing(1); // 1
+  margin-bottom: 0;                   // 1
 
   // Very infrequently occurring grid wrappers as children of grid wrappers.
   & > & { margin-left: 0; }
 
 }
 
-  .#{$ekzo-objects-ns}grid__item {
-    box-sizing: border-box;
-    padding-left: ekzo-spacing(1); // 1
-  }
+  .#{$ekzo-objects-ns}grid__item { box-sizing: border-box; }
 
 // ---------------------------------------
 // Spacing

@@ -179,14 +179,14 @@
 - [breaking] Renamed `.o-btn--wide\+`, `.o-btn--wide\+--`, `.o-btn--wide\+\+\+` to  `.o-btn--wide`, `.o-btn--wide--`, `.o-btn--wide\+\+`.
 - `.h-align--*` helpers no longer setting flex aligment. Use new `.h-flex--*` helpers for this.
 - `.o-grid__item` no longer sets `vertical-align: top`, because it doesn't work with flex anyway. That rule moved to IE8 and IE9 related declarations.
-- [breaking] Renamed `.o-grid-` to `.o-grid--`.
+- [breaking] `.o-grid` no longer applies margin between grid items by default. Use `h-childs-displace*`
 - Refactored `.o-media` to use flexbox. It will fallback to floats based version on IE8/9, but since floats can't be aligned vertically, they will always align to top.
 - [breaking] Renamed `.o-media__image` to `.o-media__aside` to represent its purpose better.
 - Refactored `.o-nav` to use flexbox model. This mostly doesn't affect layout on newer browsers, except that there will be no white-space between childs. Use new `.o-nav--space` to emulate old white-space if you need it. New `.o-nav` also includes functionality of depreciated from now `.o-a-nav`, `.o-floated-nav` and `.o-pack`.
 - `.o-nav--keywords` will now set delimeters on direct child anchors too, so that you can use it not on `ul`, but plain list of anchors.
 - [breaking] Moved `.g-extra-help` to objects and renamed to `.o-extra-help`.
 - [breaking] `.o-extra-help` will also work on ':hover' too.
-- [breaking] Use `0` as modifier instead of `--flush` when we not "flushing", but actually setting value to `0`. In other words, instead `.h-margin--flush` should be used `.h-margin0`, etc. This concerns lists, tables, some typography helpers, spacing helpers, `.o-media`, `.o-grid`, `.o-island`.
+- [breaking] Use `0` as modifier instead of `--flush` when we not "flushing", but actually setting value to `0`. In other words, instead `.h-margin--flush` should be used `.h-margin0`, etc. This concerns lists, tables and helpers.
 - `0` helpers for `margin`, `bleed` and `padding` from now generated based on relevant maps too, so you can disabled it in case you don't need it. By default it's included, so it won't break anything.
 - [breaking] Renamed `.h-margin--center` to `.h-margin-sides--auto`.
 - [breaking] Moved `.g-table--fixed` to helpers, where it should belong, and renamed to `.h-table--fixed`.
