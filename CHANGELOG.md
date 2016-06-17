@@ -59,7 +59,7 @@
   * `.h-fill--{{ colorName }}:h` for `fill`;
   * `.h-stroke--{{ colorName }}:h` for `stroke`;
   
-  And it will produce same clases for `inherit`, `transparent` and `currentColor` colors.
+  And it will produce same classes for `inherit`, `transparent` and `currentColor` colors.
 
 - Added set of options `$ekzo-responsive-{{class-name}}-breakpoints` which allows to list breakpoints for which should be generated responsive helper classes.
 - Added mixin `ekzo-each-breakpoint()` which includes mixins with specified parameters for each specified breakpoint. Mostly used by Ekzo internally.
