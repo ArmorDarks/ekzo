@@ -27,7 +27,7 @@ html {
 
   font-family: ekzo-ui-font-family(text); // 3
 
-  font-size:   ekzo-font-size(base);
+  font-size:   $ekzo-font-size;
   line-height: $ekzo-line-height;
 
   font-weight: $ekzo-font-weight; // 3
