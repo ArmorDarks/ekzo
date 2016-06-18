@@ -157,7 +157,8 @@
 - [breaking] Improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [breaking] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-responsive-helpers-breakpoints` to disable generation of helper classes for certain breakpoints.
 - [breaking] Each responsive helpers enabling/disabling option now accepts list of breakpoints for which responsive helpers should be generated. This allow to precisely select for which helpers which breakpoints should be generated. They also renamed from like `$ekzo-enable-responsive-display-helpers` to `ekzo-responsive-display-helpers-breakpoints` to better represent their nature. All options by default set to `$ekzo-responsive-helpers-breakpoints` value.
-- [breaking] Replaced `$ekzo-spacing-unit*` variable and its variations with `ekzo-space()` (`ekzo-space(.25)`, `ekzo-space(2)`, etc.) function.
+- [breaking] Renamed `$ekzo-spacing-unit` into `$ekzo-space`.
+- [breaking] Replaced `$ekzo-space*` variations with `ekzo-space()` (`ekzo-space(.25)`, `ekzo-space(2)`, etc.) function.
 - [breaking] Renamed `ekzo-font()` mixin to `ekzo-font-face()`.
 - [breaking] Renamed `_framework.scss` to `_index.scss`.
 - [breaking] All classes by default namespaced by its type. For example: `.o-grid` instead of `.grid`.

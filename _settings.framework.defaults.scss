@@ -8,14 +8,14 @@
 // ---------------------------------------
 // Used as prefix for every framework's class
 
-$ekzo-generics-ns:           'g-' !default;
-$ekzo-objects-ns:            'o-' !default;
-$ekzo-themes-ns:             't-' !default;
-$ekzo-scopes-ns:             's-' !default;
-$ekzo-helpers-ns:            'h-' !default;
+$ekzo-generics-ns: 'g-' !default;
+$ekzo-objects-ns:  'o-' !default;
+$ekzo-themes-ns:   't-' !default;
+$ekzo-scopes-ns:   's-' !default;
+$ekzo-helpers-ns:  'h-' !default;
 
 // ---------------------------------------
 // Spacing units
 // ---------------------------------------
 
-$ekzo-spacing-unit:          $ekzo-line-height !default;
+$ekzo-space: $ekzo-line-height !default;
