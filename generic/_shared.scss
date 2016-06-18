@@ -25,7 +25,7 @@ pre,
 // `hr` elements only take up a few pixels, so we need to give them special
 // treatment regarding vertical rhythm.
 
-hr { margin-bottom: ekzo-spacing(1) - 2px; }
+hr { margin-bottom: ekzo-spacing(1) - ekzo-units(2px, unit(ekzo-spacing())); }
 
 // ---------------------------------------
 // Lists
