@@ -2,7 +2,16 @@
 // =======================================
 // ^MAIN
 // =======================================
-//
+
+// ---------------------------------------
+// Root
+// ---------------------------------------
+
+:root {}
+
+// ---------------------------------------
+// HTML
+// ---------------------------------------
 // 1. Ensure the page always fills at least the entire height of the viewport.
 // 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
 //    navigating between pages that do/do not have enough content to produce
@@ -32,5 +41,9 @@ html {
   -moz-osx-font-smoothing: grayscale;   // 4
   -webkit-font-smoothing:  antialiased; // 4
 }
+
+// ---------------------------------------
+// Body
+// ---------------------------------------
 
 body {}

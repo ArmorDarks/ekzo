@@ -195,3 +195,4 @@
 - [breaking] Renamed `.h-margin--center` to `.h-margin-sides--auto`.
 - [breaking] Moved `.g-table--fixed` to helpers, where it should belong, and renamed to `.h-table--fixed`.
 - [breaking] Renamed oddly named `.o-breadcrumb__entry` to more common `.o-breadcrumb__item`.
+- Renamed `_main.scss` into `_root.scss`.
