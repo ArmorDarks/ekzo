@@ -71,5 +71,12 @@ a,
 //
 // @example <a href=# class="link--go">Read more</a>
 
+// Fix wrong aligment on some elements
+.#{$ekzo-generics-ns}link--go:after,
+.#{$ekzo-generics-ns}link--back:before {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 .#{$ekzo-generics-ns}link--go:after    { content: $ekzo-links--go-content; }
 .#{$ekzo-generics-ns}link--back:before { content: $ekzo-links--back-content; }
