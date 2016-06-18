@@ -71,7 +71,8 @@
 - Added options `$ekzo-widths-fractions` and `$ekzo-responsive-widths-fractions` to control generated widths.
 - Added `ekzo-strip-units()` function which allows to remove units from the value.
 - Added `ekzo-units()` function which allows to convert units. Relies on Sass math to prevent conversion of incompatible units.
-- Added `ekzo-rem()` function, which converts pxs into rems.
+- Added `ekzo-rem()` function, which converts value into rems.
+- Added `ekzo-зч()` function, which converts value into pxs.
 - Added settings for styling `::selection`.
 - Added settings to control namespacing for class types: `$ekzo-generics-ns`, `$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`.
 - Added functions and mixins names in error messages.

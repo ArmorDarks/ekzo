@@ -22,8 +22,9 @@
 // Use specific mixins if you want to convert some possible-to-be compitable units
 // based on base line-height, like `ekzo-rem()` for pxs to rems, or px to ems
 //
-// @param {Number} $value - Value to add unit to
-// @param {String} $unit - String representation of desired unit
+// @param {Number} $value                - Value to add unit to
+// @param {String} $unit                 - String representation of desired unit
+// @param {Number} $base=$ekzo-font-size - Base font size, used for rems and ems
 //
 // @return {number} - `$value` expressed in `$unit`
 //
@@ -35,7 +36,7 @@
 // @example
 //   padding: ekzo-units(25px, em)
 
-@function ekzo-units($value, $unit) {
+@function ekzo-units($value, $unit, $base: $ekzo-font-size) {
   $units: (
     'px': 0px,
     'cm': 0cm,
@@ -67,6 +68,22 @@
 
   @if not map-has-key($units, $unit) { @error '[ekzo-unit] invalid unit `#{$unit}`' }
 
+  @if unit($value) == 'em' and $unit == 'px' {
+    @return ekzo-px($value, $base);
+  }
+
+  @if unit($value) == 'rem' and $unit == 'px' {
+    @return ekzo-px($value, $base);
+  }
+
+  @if unit($value) == 'em' and $unit == 'rem' {
+    @return ekzo-rem($value, $base);
+  }
+
+  @if unit($value) == 'px' and $unit == 'rem' {
+    @return ekzo-rem($value, $base);
+  }
+
   @return ekzo-get($units, $unit) + $value;
 }
 
@@ -83,17 +100,14 @@
 
 @function ekzo-percent($value, $total) {
 
+  // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+  // We can't calculate incompatible units.
   @if not unitless($value) and not unitless($total) {
-    // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
-    // We can't calculate incompatible units.
     $value: ekzo-units($value, unit($total));
   }
 
-  $value-units: unit($value);
-  $total-units: unit($total);
-
-  @if $value-units != $total-units {
-    @error '[ekzo-percent] unit types of `$value` and `$total` should match. You specified `' + $value-units + '` and `' + $total-units + '`.'
+  @if unit($value) != unit($total) {
+    @error '[ekzo-percent] unit types of `$value` and `$total` should match. You specified `' + unit($value) + '` and `' + unit($total) + '`.'
   }
 
   @return $value / $total * 100%;
@@ -105,24 +119,25 @@
 //
 // Calculates ems based on provided values
 //
-// @param {number:px} $value                     - value which should be converted into ems
-// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be calculated em value
+// @param {number:px} $value                - value which should be converted into ems
+// @param {number:px} $base=$ekzo-font-size - base value according to which should be calculated em value
 //
 // @return {number}
 
-@function ekzo-em($value, $base:ekzo-font-size(base)) {
+@function ekzo-em($value, $base:$ekzo-font-size) {
 
+  @if unit($value) == 'rem' and unit($base) == 'px' {
+    $value: ekzo-px($value, $base);
+  }
+
+  // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+  // We can't calculate incompatible units.
   @if not unitless($value) and not unitless($base) {
-    // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
-    // We can't calculate incompatible units.
     $value: ekzo-units($value, unit($base));
   }
 
-  $value-units: unit($value);
-  $base-units: unit($base);
-
-  @if $value-units != $base-units {
-    @error '[ekzo-em] unit types of `$value` and `$base` should match. You specified `' + $value-units + '` and `' + $base-units + '`.'
+  @if unit($value) != unit($base) {
+    @error '[ekzo-em] unit types of `$value` and `$base` should match. You specified `' + unit($value) + '` and `' + unit($base) + '`.'
   }
 
   @return ekzo-units($value / $base, em);
@@ -134,25 +149,61 @@
 //
 // Calculates rems based on provided values
 //
-// @param {number:px} $value                     - value which should be converted into rems
-// @param {number:px} $base=ekzo-font-size(base) - base value according to which should be calculated rem value
+// @param {number:px} $value                - value which should be converted into rems
+// @param {number:px} $base=$ekzo-font-size - base value according to which should be calculated rem value
 //
 // @return {number}
 
-@function ekzo-rem($value, $base:ekzo-font-size(base)) {
+@function ekzo-rem($value, $base:$ekzo-font-size) {
 
+  @if unit($value) == 'em' and unit($base) == 'px' {
+    $value: ekzo-px($value, $base);
+  }
+
+  @if unit($value) == 'em' and unit($base) == 'rem' {
+    $value: ekzo-strip-units($value) + 0rem;
+  }
+
+  // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+  // We can't calculate incompatible units.
   @if not unitless($value) and not unitless($base) {
-    // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
-    // We can't calculate incompatible units.
     $value: ekzo-units($value, unit($base));
   }
 
-  $value-units: unit($value);
-  $base-units: unit($base);
-
-  @if $value-units != $base-units {
-    @error '[ekzo-rem] unit types of `$value` and `$base` should match. You specified `' + $value-units + '` and `' + $base-units + '`.'
+  @if unit($value) != unit($base) {
+    @error '[ekzo-rem] unit types of `$value` and `$base` should match. You specified `' + unit($value) + '` and `' + unit($base) + '`.'
   }
 
   @return ekzo-units($value / $base, rem);
+}
+
+// ---------------------------------------
+// Calculate pxs
+// ---------------------------------------
+//
+// Calculates px based on provided values
+//
+// @param {number:px} $value                - value which should be converted into pxs
+// @param {number:px} $base=$ekzo-font-size - base value according to which should be calculated rem value
+//
+// @return {number}
+
+@function ekzo-px($value, $base:$ekzo-font-size) {
+
+  @if (unit($value) == 'em' and unit($base) == 'px') or
+      (unit($value) == 'rem' and unit($base) == 'px') {
+    $value: ekzo-strip-units($value) * $base;
+  }
+
+  // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
+  // We can't calculate incompatible units.
+  @if not unitless($value) and not unitless($base) {
+    $value: ekzo-units($value, unit($base));
+  }
+
+  @if unit($value) != unit($base) {
+    @error '[ekzo-px] unit types of `$value` and `$base` should match. You specified `' + unit($value) + '` and `' + unit($base) + '`.'
+  }
+
+  @return ekzo-units($value, px);
 }
