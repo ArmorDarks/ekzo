@@ -123,6 +123,7 @@
 - Added IE8 and IE9 fallbacks for `.o-nav--stacked`, `.o-nav--pack` and `.o-nav--fixed-pack`. This will yeild at least somehow visually close layout even on older browsers.
 
 ### Fixed
+- Now whole framework, functions and mixins should propely work when values for font sizes, base line height and base spacing unit provided in `rem`s.
 - Inputs styles from now won't apply to `label`.
 - Fixed not inherited `padding` and `vertical-align` in `.o-btn--inherit`.
 - Fixed removal of paddings in `.o-btn--full`, enforced `border-box` model on it to prevent conflict between paddings and width.
