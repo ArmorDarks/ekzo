@@ -17,7 +17,7 @@
 @import './tools/index';
 
 // ---------------------------------------
-// Default options, styles, colors etc
+// Default settings
 // ---------------------------------------
 
 @import 'settings.typography.defaults';
@@ -29,7 +29,7 @@
 @import 'settings.responsive.defaults';
 
 // ---------------------------------------
-// Base styles
+// Base
 // ---------------------------------------
 
 @import './base/normalize';
@@ -38,7 +38,7 @@
 @import './base/main';
 
 // ---------------------------------------
-// Generic. Mostly unclassed HTML elements
+// Generic
 // ---------------------------------------
 
 @import './generic/shared';
@@ -55,23 +55,7 @@
 @import './generic/text';
 
 // ---------------------------------------
-// Helpers
-// ---------------------------------------
-
-@import './helpers/animations';
-@import './helpers/border';
-@import './helpers/colors';
-@import './helpers/display';
-@import './helpers/flex';
-@import './helpers/misc';
-@import './helpers/positioning';
-@import './helpers/spacing';
-@import './helpers/typography.font-families';
-@import './helpers/typography';
-@import './helpers/widths';
-
-// ---------------------------------------
-// Objects and abstractions
+// Objects
 // ---------------------------------------
 
 @import './objects/arrows';
@@ -92,3 +76,19 @@
 @import './objects/show-grid';
 @import './objects/sprites';
 @import './objects/tooltips';
+
+// ---------------------------------------
+// Helpers
+// ---------------------------------------
+
+@import './helpers/animations';
+@import './helpers/border';
+@import './helpers/colors';
+@import './helpers/display';
+@import './helpers/flex';
+@import './helpers/misc';
+@import './helpers/positioning';
+@import './helpers/spacing';
+@import './helpers/typography.font-families';
+@import './helpers/typography';
+@import './helpers/widths';
