@@ -11,6 +11,7 @@
 //
 //  @param {number} $font-size                          - `font-size` of text
 //  @param {number} $base-line-height=$ekzo-line-height - base `line-height` for proper vertical rhythm
+//  @param {number} $base-font-size=$ekzo-font-size     - base `font-size` for conversions from ems and rems to pxs
 //  @param {bool}   $as-ratio=true                      - Represent result as unitless line-height, or as hard value
 //
 //  @return Calculated `line-height` ratio
@@ -19,21 +20,12 @@
 //
 //  @source `line-height` calculation by twitter.com/redclov3r/status/250301539321798657
 
-@mixin ekzo-line-height($font-size, $base-line-height: $ekzo-line-height, $as-ratio:true) {
+@mixin ekzo-line-height($font-size, $base-line-height: $ekzo-line-height, $base-font-size: $ekzo-font-size, $as-ratio:true) {
 
-  $font-size-units: unit($font-size);
-  $base-line-height-units: unit($base-line-height);
+  $font-size: ekzo-units($font-size, unit($base-line-height), $base-font-size);
 
-  // @todo This might be not brightes idea, but it allows to accept ems with px-based base line-height
-  //       Think about better implementation
-  // @todo We can also do same for rems
-  @if $font-size-units == 'em' and $base-line-height-units == 'px' {
-    $font-size: ekzo-strip-units($font-size) * ekzo-font-size(base);
-    $font-size-units: unit($font-size);
-  }
-
-  @if $font-size-units != $base-line-height-units {
-    @error '[ekzo-line-height] unit types of `$font-size` and `$base-line-height` should match. You specified `' + $font-size-units + '` and `' + $base-line-height-units + '`.'
+  @if unit($font-size) != unit($base-line-height) {
+    @error '[ekzo-line-height] unit types of `$font-size` and `$base-line-height` should match. You specified `' + unit($font-size) + '` and `' + unit($base-line-height) + '`.'
   }
 
   $calculated-line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
