@@ -13,9 +13,12 @@
 
 @mixin ekzo-margin-helpers($variations, $prefix: '', $postfix: '') {
 
-  .#{$prefix}margin-right--auto#{$postfix} { margin-right:  auto !important; }
-  .#{$prefix}margin-left--auto#{$postfix}  { margin-left:   auto !important; }
-  .#{$prefix}margin-sides--auto#{$postfix} { margin-right:  auto !important; margin-left: auto !important; }
+  .#{$prefix}margin--auto#{$postfix}        { margin:        auto !important; }
+  .#{$prefix}margin-top--auto#{$postfix}    { margin-top:    auto !important; }
+  .#{$prefix}margin-right--auto#{$postfix}  { margin-right:  auto !important; }
+  .#{$prefix}margin-bottom--auto#{$postfix} { margin-bottom: auto !important; }
+  .#{$prefix}margin-left--auto#{$postfix}   { margin-left:   auto !important; }
+  .#{$prefix}margin-sides--auto#{$postfix}  { margin-right:  auto !important; margin-left: auto !important; }
 
   @each $variation, $value in $variations {
     .#{$prefix}margin#{$variation}#{$postfix}        { margin:        $value !important; }

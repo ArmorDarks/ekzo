@@ -109,7 +109,7 @@
   * `.h-anchors-padding*` and `.h-anchors-margin*` sets padding/margin on list of anchors, including direct childs of `li`;
   * `.h-childs-padding*` and `.h-childs-margin*` sets padding/margin on all childs;
   * `.h-cell-padding*` sets padding on all `th` and `td` of table.
-- Added `.h-margin-left--auto` and `.h-margin-right--auto` helpers for settings margin to `auto`. Useful for flexbox.
+- Added more `.h-margin*--auto` helpers for settings margin to `auto`. Useful for flexbox.
 - Added generation of `.h-font-size--em*` and `.h-text--em*` helpers based on `$ekzo-font-sizes.ems` map.
 - Added predefined variables with typography font stacks.
 - Added `.o-relink`, `.o-relink__to`, `.o-relink-rev`, `.o-relink-rev__to` (and reusable `ekzo-relink()` mixin, which produces it), which allows to reposition link style to any child element of anchor. Note: `-rev` with single dash isn't typo, since due to technical reason it isn't modificator, but standalone object.
