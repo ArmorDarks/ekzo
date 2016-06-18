@@ -105,7 +105,7 @@
 - Added large set of flex-related helpers.
 - Added new universal helpers for setting margin and padding on childs, which will be generated in addition to already existing standard margin and padding helpers based on maps. Those new helpers provides patterns and functionality, which before has been available only for some specific objects in form of their modifiers, like `.o-grid+` for `.o-grid`. Now you can apply those whenever you want. This also allowed us to drop a lot of often repeating size modifiers on almost all objects and generics. So far has been added:
   * `.h-childs-displace*` allows to set horizontal margin between childs. Margin will be always _in the middle_, between elements;
-  * `.h-childs-spacing*` sets vertical margin between all childs, except last one;
+  * `.h-childs-space*` sets vertical margin between all childs, except last one;
   * `.h-anchors-padding*` and `.h-anchors-margin*` sets padding/margin on list of anchors, including direct childs of `li`;
   * `.h-childs-padding*` and `.h-childs-margin*` sets padding/margin on all childs;
   * `.h-cell-padding*` sets padding on all `th` and `td` of table.

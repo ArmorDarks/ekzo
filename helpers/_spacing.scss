@@ -42,7 +42,9 @@
     .#{$prefix}childs-margin-ends#{$variation}#{$postfix}   > * { margin-top:    $value !important; margin-bottom: $value !important; }
     .#{$prefix}childs-margin-sides#{$variation}#{$postfix}  > * { margin-right:  $value !important; margin-left:   $value !important; }
 
-    .#{$prefix}childs-space#{$variation}#{$postfix} > * + * { margin-top: $value !important; }
+    .#{$prefix}childs-space-top#{$variation}#{$postfix}   > * + * { margin-top:   $value !important; }
+    .#{$prefix}childs-space-left#{$variation}#{$postfix}  > * + * { margin-left:  $value !important; }
+    .#{$prefix}childs-space-right#{$variation}#{$postfix} > * + * { margin-right: $value !important; }
 
     .#{$prefix}childs-displace#{$variation}#{$postfix} {
       margin-left: -$value !important;
