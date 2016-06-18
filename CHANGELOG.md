@@ -117,7 +117,7 @@
 - Added ability to predefine default color for `hr`.
 - Added a11y-related ability to disable outlines on links, buttons and forms on focus. Outlines enabled by default.
 - Added `border-width: 0` to `.o-btn` to prevent appearing of borders on buttons in case of defined borders on `a`. Override in your own styles if needed.
-- Added `.o-show-grid` object which prints base vertical rhythm guides based on `ekzo-spacing(1)`.
+- Added `.o-show-grid` object which prints base vertical rhythm guides based on `ekzo-space(1)`.
 - `ekzo-font-size()` mixin now can accept `ems` as `$font-size` parameter even with `px` base line-height. It will try to generate line-height ratios properly.
 - Added IE8 and IE9 hacks for flex helpers which can be mimicked. When used in conjuration with `.o-grid` they will provide at least something close to flex layout. Their possibilities isn't that wide, though.
 - Added IE8 and IE9 fallbacks for `.o-nav--stacked`, `.o-nav--pack` and `.o-nav--fixed-pack`. This will yeild at least somehow visually close layout even on older browsers.
@@ -157,7 +157,7 @@
 - [breaking] Improved and renamed default breakpoints in `$ekzo-breakpoints`. Default values optimized for mobile-first approach.
 - [breaking] `$ekzo-breakpoints` now represented as flat map. Change option `$ekzo-responsive-helpers-breakpoints` to disable generation of helper classes for certain breakpoints.
 - [breaking] Each responsive helpers enabling/disabling option now accepts list of breakpoints for which responsive helpers should be generated. This allow to precisely select for which helpers which breakpoints should be generated. They also renamed from like `$ekzo-enable-responsive-display-helpers` to `ekzo-responsive-display-helpers-breakpoints` to better represent their nature. All options by default set to `$ekzo-responsive-helpers-breakpoints` value.
-- [breaking] Replaced `$ekzo-spacing-unit*` variable and its variations with `ekzo-spacing()` (`ekzo-spacing(.25)`, `ekzo-spacing(2)`, etc.) function.
+- [breaking] Replaced `$ekzo-spacing-unit*` variable and its variations with `ekzo-space()` (`ekzo-space(.25)`, `ekzo-space(2)`, etc.) function.
 - [breaking] Renamed `ekzo-font()` mixin to `ekzo-font-face()`.
 - [breaking] Renamed `_framework.scss` to `_index.scss`.
 - [breaking] All classes by default namespaced by its type. For example: `.o-grid` instead of `.grid`.

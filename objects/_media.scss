@@ -23,7 +23,7 @@
 
   .#{$ekzo-objects-ns}media__aside {
     flex: 0 0 auto;
-    margin-right: ekzo-spacing(1);
+    margin-right: ekzo-space(1);
   }
 
   .#{$ekzo-objects-ns}media__content {
@@ -49,13 +49,13 @@
 
 .#{$ekzo-objects-ns}media\+ {
 
-  .#{$ekzo-objects-ns}media__aside { margin-right: ekzo-spacing(2); }
+  .#{$ekzo-objects-ns}media__aside { margin-right: ekzo-space(2); }
 
   &.#{$ekzo-objects-ns}media--rev {
 
     .#{$ekzo-objects-ns}media__aside {
       margin-right: 0;
-      margin-left:  ekzo-spacing(2);
+      margin-left:  ekzo-space(2);
     }
 
   }
@@ -74,7 +74,7 @@
     order: 1;
 
     margin-right: 0;
-    margin-left:  ekzo-spacing(1);
+    margin-left:  ekzo-space(1);
   }
 
 }

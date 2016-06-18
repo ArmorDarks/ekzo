@@ -19,13 +19,13 @@ fieldset, figure,
 pre,
 .#{$ekzo-generics-ns}media,
 .#{$ekzo-generics-ns}flag,
-.#{$ekzo-generics-ns}island { margin-bottom: ekzo-spacing(1); }
+.#{$ekzo-generics-ns}island { margin-bottom: ekzo-space(1); }
 
 // ----
 // `hr` elements only take up a few pixels, so we need to give them special
 // treatment regarding vertical rhythm.
 
-hr { margin-bottom: ekzo-spacing(1) - ekzo-units(2px, unit(ekzo-spacing())); }
+hr { margin-bottom: ekzo-space(1) - ekzo-units(2px, unit(ekzo-space())); }
 
 // ---------------------------------------
 // Lists
@@ -33,4 +33,4 @@ hr { margin-bottom: ekzo-spacing(1) - ekzo-units(2px, unit(ekzo-spacing())); }
 
 ul,
 ol,
-dd { padding-left: ekzo-spacing(2); }
+dd { padding-left: ekzo-space(2); }

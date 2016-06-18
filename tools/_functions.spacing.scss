@@ -9,9 +9,9 @@
 // @param {number} $spacing-unit=$ekzo-spacing-unit) - Base spacing unit
 //
 // @example
-//   padding: ekzo-spacing(2.5);
+//   padding: ekzo-space(2.5);
 
-@function ekzo-spacing($multiplier:1, $spacing-unit: $ekzo-spacing-unit) {
+@function ekzo-space($multiplier:1, $spacing-unit: $ekzo-spacing-unit) {
   @if $multiplier % 0.25 != 0 { @warn '[ekzo-spacing]: multiplier value must be a multiple of `.25`'; }
   @return $spacing-unit * $multiplier;
 }

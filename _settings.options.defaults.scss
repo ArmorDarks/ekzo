@@ -44,25 +44,25 @@ $ekzo-enable-ui-font-families-helpers:   true  !default;
 $ekzo-enable-widths-helpers:             true  !default;
 
 $ekzo-margin-helpers-variations: (
-  '--':     ekzo-spacing(.5),
-  '':       ekzo-spacing(1),
-  \+--:     ekzo-spacing(1.5),
-  \+:       ekzo-spacing(2),
-  \+\+:     ekzo-spacing(3),
+  '--':     ekzo-space(.5),
+  '':       ekzo-space(1),
+  \+--:     ekzo-space(1.5),
+  \+:       ekzo-space(2),
+  \+\+:     ekzo-space(3),
   '0':      0
 ) !default;
 
 $ekzo-bleed-helpers-variations: (
-  '--': - ekzo-spacing(.5),
-  '':   - ekzo-spacing(1),
-  \+:   - ekzo-spacing(2),
-  \+\+: - ekzo-spacing(3),
+  '--': - ekzo-space(.5),
+  '':   - ekzo-space(1),
+  \+:   - ekzo-space(2),
+  \+\+: - ekzo-space(3),
 ) !default;
 
 $ekzo-padding-helpers-variations: (
-  '--': ekzo-spacing(.5),
-  '':   ekzo-spacing(1),
-  \+:   ekzo-spacing(2),
+  '--': ekzo-space(.5),
+  '':   ekzo-space(1),
+  \+:   ekzo-space(2),
   '0':  0
 ) !default;
 

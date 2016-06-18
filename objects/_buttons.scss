@@ -19,8 +19,8 @@
 
   margin: 0;                   // 3
 
-  padding-top:    ekzo-em(ekzo-spacing(.5));
-  padding-bottom: ekzo-em(ekzo-spacing(.5));
+  padding-top:    ekzo-em(ekzo-space(.5));
+  padding-bottom: ekzo-em(ekzo-space(.5));
   padding-right:  1em;
   padding-left:   1em;
 
@@ -72,22 +72,22 @@
   }
 
   .#{$ekzo-objects-ns}btn-#{$postfix} {
-    padding-top:    ekzo-em(ekzo-spacing(.5) / 3);
-    padding-bottom: ekzo-em(ekzo-spacing(.5) / 3);
+    padding-top:    ekzo-em(ekzo-space(.5) / 3);
+    padding-bottom: ekzo-em(ekzo-space(.5) / 3);
     padding-right:  .8em;
     padding-left:   .8em;
   }
 
   .#{$ekzo-objects-ns}btn\+#{$postfix} {
-    padding-top:    ekzo-em(ekzo-spacing(1) * .84);
-    padding-bottom: ekzo-em(ekzo-spacing(1) * .84);
+    padding-top:    ekzo-em(ekzo-space(1) * .84);
+    padding-bottom: ekzo-em(ekzo-space(1) * .84);
     padding-right:  1.5em;
     padding-left:   1.5em;
   }
 
   .#{$ekzo-objects-ns}btn\+\+#{$postfix} {
-    padding-top:    ekzo-em(ekzo-spacing(1) * 1.17);
-    padding-bottom: ekzo-em(ekzo-spacing(1) * 1.17);
+    padding-top:    ekzo-em(ekzo-space(1) * 1.17);
+    padding-bottom: ekzo-em(ekzo-space(1) * 1.17);
     padding-right:  2em;
     padding-left:   2em;
   }
