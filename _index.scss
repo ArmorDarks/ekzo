@@ -44,28 +44,28 @@
 @import './generic/shared';
 
 @import './generic/code';
-@import './generic/forms';
+@import './generic/form';
 @import './generic/headings';
 @import './generic/hr';
-@import './generic/images';
+@import './generic/img';
 @import './generic/kbd';
-@import './generic/links';
-@import './generic/lists';
-@import './generic/tables';
+@import './generic/link';
+@import './generic/list';
+@import './generic/table';
 @import './generic/text';
 
 // ---------------------------------------
 // Objects
 // ---------------------------------------
 
-@import './objects/arrows';
+@import './objects/arrow';
 @import './objects/breadcrumb';
-@import './objects/buttons';
+@import './objects/btn';
 @import './objects/center-inner';
 @import './objects/clearfix';
 @import './objects/extra-help';
 @import './objects/grid';
-@import './objects/icons';
+@import './objects/icon';
 @import './objects/iconic-list';
 @import './objects/island';
 @import './objects/media';
@@ -74,8 +74,8 @@
 @import './objects/reline';
 @import './objects/relink';
 @import './objects/show-grid';
-@import './objects/sprites';
-@import './objects/tooltips';
+@import './objects/sprite';
+@import './objects/tooltip';
 
 // ---------------------------------------
 // Helpers

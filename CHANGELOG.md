@@ -201,3 +201,4 @@
 - Renamed `_main.scss` into `_root.scss`.
 - [breaking] Base font-size now declared on standalone `$ekzo-font-size` variable.
 - [breaking] Display helpers no longer using `display--` prefix.
+- Most part of generics and objects filenames has been changed to represent properly content of partials. For example, `btn.scss` for `.o-btn` instead of `buttons.scss`, or `link.scss` for `.g-link` instead of `links.scss`.
