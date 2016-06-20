@@ -77,7 +77,7 @@
 
   > li,
   > a,
-  > .#{$ekzo-objects-ns}nav__item { flex-grow: 1; } // flex 1 1 auto?
+  > .#{$ekzo-objects-ns}nav__item { flex: 1 1 auto; }
 
 }
 
@@ -85,7 +85,7 @@
 
   > li,
   > a,
-  > .#{$ekzo-objects-ns}nav__item { flex: 1; } // flex 1 1 0% ?
+  > .#{$ekzo-objects-ns}nav__item { flex: 1 1 0%; }
 
 }
 
