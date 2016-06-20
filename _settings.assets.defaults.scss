@@ -23,7 +23,7 @@ $ekzo-bg:                false !default; // `background` property on `html`
 // Icons
 // ---------------------------------------
 
-$ekzo-icons-prefix:      icon--          !default;
+$ekzo-icons-prefix:      Icon--          !default;
 $ekzo-icon-font:         icons           !default;
 $ekzo-icon-font-version: 79220573        !default; // `false` to disable, number to enable
 $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
@@ -32,5 +32,5 @@ $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
 // Sprites
 // ---------------------------------------
 
-$ekzo-sprites-prefix:    sprite--     !default;
+$ekzo-sprites-prefix:    Sprite--     !default;
 $ekzo-sprites-file:      'sprite.png' !default;
