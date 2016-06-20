@@ -79,7 +79,7 @@
 - Added `$ekzo-enable-widths-helpers` option for enabling/disabling widths.
 - Added `$ekzo-z-indexes` map and `ekzo-z-index({{z-index-name}})` function to get values from it.
 - Added `ekzo-line-height()` mixin for generating vertical rhythm based line-heights. Previously it was available only as part of `ekzo-font-size()` mixin.
-- `ekzo-breakpoint()` now accepts 3 parameters: `$breakpoint`, `$path` and `$map` (backward compatible).
+- `ekzo-breakpoint()` now accepts 2 parameters: `$breakpoint` and `$breakpoints` (backward compatible).
 - Added experimental universal inheritance from satinize.css.
 - Added responsive display helpers and options to switch them on or off.
 - Added responsive positioning helpers and options to switch them on or off.

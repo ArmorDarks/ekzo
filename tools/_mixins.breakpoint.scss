@@ -15,14 +15,14 @@
 // in project in single Sass map. Due to that fact, that mixin
 // doesn't accept custom queries in plain form.
 //
-// @param {string}           $breakpoint              - breakpoint name in Sass map of predefined breakpoints.
-//                                                      Example of entry:
-//                                                      ```
-//                                                      lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',
-//                                                      ```
-// @param (map)              $map='$ekzo-breakpoints' - map with breakpoints
+// @param {string} $breakpoint                      Breakpoint name in map of predefined breakpoints.
+//                                                            Example of entry:
+//                                                            ```
+//                                                            lap: '(min-width: #{$lap}) and (max-width: #{$desk - 1px})',
+//                                                            ```
+// @param (map)    $breakpoints='$ekzo-breakpoints' Map with breakpoints
 //
-// @throws '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` at path `#{$path}` in specified map'
+// @throws Error in case of undefined in `$breakpoints` `$breakpoint`
 //
 // @example
 //
@@ -32,13 +32,13 @@
 //    }
 //
 
-@mixin ekzo-breakpoint($breakpoint, $map: $ekzo-breakpoints) {
+@mixin ekzo-breakpoint($breakpoint, $breakpoints: $ekzo-breakpoints) {
 
-  $query: ekzo-get($map, $breakpoint);
+  $query: ekzo-get($breakpoints, $breakpoint);
 
   // check wether defined breakpoint exists in requested map
   @if not $query {
-    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` at path `#{$path}` in specified map'
+    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` in specified map'
   }
 
   // @Note: Use `only` to hide media query from old browsers
@@ -51,10 +51,10 @@
 // Include for each breakpoint
 // ---------------------------------------
 
-@mixin ekzo-each-breakpoint($enable-for: $ekzo-responsive-helpers-breakpoints) {
-  @each $breakpoint, $query in $ekzo-breakpoints {
+@mixin ekzo-each-breakpoint($enable-for: $ekzo-responsive-helpers-breakpoints, $breakpoints: $ekzo-breakpoints) {
+  @each $breakpoint, $query in $breakpoints {
 
-    // check is current breakpoint in lest of available for auto generation of helper classes
+    // check is current breakpoint in the list of allowed for generation responsive classes
     @if index($enable-for, $breakpoint) != null {
       @include ekzo-breakpoint($breakpoint) {
         @include ekzo-set-temp('\\@#{$breakpoint}');
