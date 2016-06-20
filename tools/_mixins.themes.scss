@@ -51,11 +51,13 @@
 //      }
 //    }
 //
+//    .themeSpecificOverride { @include ekzo-theme('flat') { color: red; } }
+//
 //  }
 
-@mixin ekzo-theme($prefix: $ekzo-themes-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+@mixin ekzo-theme($themes: $ekzo-themes, $prefix: $ekzo-themes-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
 
-  @each $theme, $data in $ekzo-themes {
+  @each $theme, $data in $themes {
 
     @include ekzo-set-temp(theme, $data);
 
