@@ -69,23 +69,24 @@
   // Flex of individual item
   // Should item occupy free space or no
 
-  .#{$prefix}flex__item-grow0#{$postfix}  { flex-grow: 0 !important; } // default for flex
-  .#{$prefix}flex__item-grow#{$postfix}   { flex-grow: 1 !important; } // if set flex-item will occupy all flex-container space
-  .#{$prefix}flex__item-grow#{$postfix}\+ { flex-grow: 2 !important; }
+  .#{$prefix}flex__item--grow0#{$postfix}  { flex-grow: 0 !important; } // default for flex
+  .#{$prefix}flex__item--grow#{$postfix}   { flex-grow: 1 !important; } // if set flex-item will occupy all flex-container space
+  .#{$prefix}flex__item--grow#{$postfix}\+ { flex-grow: 2 !important; }
 
   // Should item shrink when there is no free space
 
-  .#{$prefix}flex__item-shrink0#{$postfix}  { flex-shrink: 0 !important; } // default for flex in IE10
-  .#{$prefix}flex__item-shrink#{$postfix}   { flex-shrink: 1 !important; } // default for flex
-  .#{$prefix}flex__item-shrink#{$postfix}\+ { flex-shrink: 2 !important; }
+  .#{$prefix}flex__item--shrink0#{$postfix}  { flex-shrink: 0 !important; } // default for flex in IE10
+  .#{$prefix}flex__item--shrink#{$postfix}   { flex-shrink: 1 !important; } // default for flex
+  .#{$prefix}flex__item--shrink#{$postfix}\+ { flex-shrink: 2 !important; }
 
   // Base width of individual item
   // {0|auto|px|rem|em|%|...}
 
-  .#{$prefix}flex__item-basis--auto#{$postfix} { flex-basis: auto !important; } // default for flex, = inline-block behaviour
+  .#{$prefix}flex__item--basis--auto#{$postfix} { flex-basis: auto !important; } // default for flex, = inline-block behaviour
 
-  .#{$prefix}flex__item-flex--auto#{$postfix}  { flex: 1 1 auto !important; }
-  .#{$prefix}flex__item-flex0#{$postfix}       { flex: none     !important; }
+  .#{$prefix}flex__item--flex--auto#{$postfix}  { flex: 1 1 auto !important; }
+  .#{$prefix}flex__item--flex#{$postfix}        { flex: 1 1 0% !important; }
+  .#{$prefix}flex__item--flex0#{$postfix}       { flex: none   !important; }
 
   // -----
   // Order of individual item
