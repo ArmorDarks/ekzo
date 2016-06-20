@@ -10,13 +10,8 @@
   // flex container helpers
   // ---------------------------------------
 
-  .#{$prefix}display--flex#{$postfix}        { display: flex        !important; }
-  .#{$prefix}display--inline-flex#{$postfix} { display: inline-flex !important; }
-
-  // -----
-  // Inline flex
-
-  .#{$prefix}flex--inline#{$postfix} { display: inline-flex !important; }
+  .#{$prefix}flex#{$postfix}        { display: flex        !important; }
+  .#{$prefix}inline-flex#{$postfix} { display: inline-flex !important; }
 
   // -----
   // Items stacking

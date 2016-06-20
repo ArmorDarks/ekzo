@@ -200,3 +200,4 @@
 - [breaking] Renamed oddly named `.o-breadcrumb__entry` to more common `.o-breadcrumb__item`.
 - Renamed `_main.scss` into `_root.scss`.
 - [breaking] Base font-size now declared on standalone `$ekzo-font-size` variable.
+- [breaking] Display helpers no longer using `display--` prefix.

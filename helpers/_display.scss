@@ -13,10 +13,10 @@
   // ----
   // Display styling
 
-  .#{$prefix}display--inline#{$postfix}       { display: inline       !important; }
-  .#{$prefix}display--inline-block#{$postfix} { display: inline-block !important; }
-  .#{$prefix}display--block#{$postfix}        { display: block        !important; }
-  .#{$prefix}display--none#{$postfix}         { display: none         !important; }
+  .#{$prefix}inline#{$postfix}       { display: inline       !important; }
+  .#{$prefix}inline-block#{$postfix} { display: inline-block !important; }
+  .#{$prefix}block#{$postfix}        { display: block        !important; }
+  .#{$prefix}none#{$postfix}         { display: none         !important; }
 
   // ----
   // Overflow
