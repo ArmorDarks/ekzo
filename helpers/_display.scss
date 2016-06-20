@@ -128,7 +128,7 @@
 
 @if $ekzo-enable-display-helpers {
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-display-helpers-breakpoints) {
+  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints) {
     @include ekzo-display-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 

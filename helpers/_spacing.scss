@@ -122,7 +122,7 @@
 // ----
 // Responsive
 
-@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-margin-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-margin-helpers-breakpoints) {
   @include ekzo-margin-helpers($variations: $ekzo-margin-helpers-variations, $prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
 };
 
@@ -135,7 +135,7 @@
 // ----
 // Responsive
 
-@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-bleed-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-bleed-helpers-breakpoints) {
   @include ekzo-bleed-helpers($variations: $ekzo-bleed-helpers-variations, $prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
 };
 
@@ -148,6 +148,6 @@
 // ----
 // Responsive
 
-@include ekzo-each-breakpoint($enable-for: $ekzo-responsive-padding-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-padding-helpers-breakpoints) {
   @include ekzo-padding-helpers($variations: $ekzo-padding-helpers-variations, $prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
 };

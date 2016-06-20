@@ -141,7 +141,7 @@
   // Responsive buttons modifiers
   // ---------------------------------------
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-buttons-breakpoints) {
+  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-buttons-breakpoints) {
     @include ekzo-buttons-sizes($postfix: ekzo-temp());
   };
 

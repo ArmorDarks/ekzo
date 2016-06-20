@@ -62,8 +62,8 @@
   And it will produce same classes for `inherit`, `transparent` and `currentColor` colors.
 
 - Added set of options `$ekzo-responsive-{{class-name}}-breakpoints` which allows to list breakpoints for which should be generated responsive helper classes.
-- Added mixin `ekzo-each-breakpoint()` which includes mixins with specified parameters for each specified breakpoint. Mostly used by Ekzo internally.
-- Added `ekzo-set-temp()` mixin which allows to pass values from mixins into `@content`, `ekzo-temp()` function to retrive value and `ekzo-purge-temp()` mixin to clear temp. See `ekzo-each-breakpoint()` for example. Hacky.
+- Added mixin `ekzo-for-each-breakpoint()` which includes mixins with specified parameters for each specified breakpoint. Mostly used by Ekzo internally.
+- Added `ekzo-set-temp()` mixin which allows to pass values from mixins into `@content`, `ekzo-temp()` function to retrive value and `ekzo-purge-temp()` mixin to clear temp. See `ekzo-for-each-breakpoint()` for example. Hacky.
 - Added functions `ekzo-font-family()` and `ekzo-ui-font-family()` to quickly get values from font-families maps.
 - Added option to set monospace font.
 - Added `$ekzo-list-style-type` option to set default list style.

@@ -138,7 +138,7 @@
 
 @if $ekzo-enable-typography-helpers {
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-typography-helpers-breakpoints) {
+  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
     @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 

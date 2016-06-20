@@ -67,7 +67,7 @@
 
 @if $ekzo-enable-positioning-helpers {
 
-  @include ekzo-each-breakpoint($enable-for: $ekzo-responsive-positioning-helpers-breakpoints) {
+  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-positioning-helpers-breakpoints) {
     @include ekzo-positioning-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   };
 
