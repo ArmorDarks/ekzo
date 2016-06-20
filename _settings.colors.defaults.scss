@@ -18,6 +18,12 @@ $ekzo-colors: (
 @include ekzo-extend-themes(base, (
 
   // ---------------------------------------
+  // Background
+  // ---------------------------------------
+
+  bg:                    ekzo-color(outer-space),
+
+  // ---------------------------------------
   // Text
   // ---------------------------------------
 
@@ -26,7 +32,7 @@ $ekzo-colors: (
   // ---------------------------------------
   // Links
   // ---------------------------------------
-  // @param {string|false} - false to disable, color value to enable
+  // @param {string|false} False to disable, color value to enable
 
   links:                  ekzo-color(dull-lavender),
   links-hover:            ekzo-tint(ekzo-color(dull-lavender), 20),
@@ -34,7 +40,7 @@ $ekzo-colors: (
   // ---------------------------------------
   // Headings
   // ---------------------------------------
-  // @param {string|false} - false to disable, color value to enable
+  // @param {string|false} False to disable, color value to enable
 
   headings:               false,
   extra-headings:         false,
@@ -42,7 +48,7 @@ $ekzo-colors: (
   // ---------------------------------------
   // Selection
   // ---------------------------------------
-  // @param {string|false} - false to disable, color value to enable
+  // @param {string|false} False to disable, color value to enable
 
   selection:              false,
   selection-bg:           false,
@@ -56,31 +62,25 @@ $ekzo-colors: (
   forms-bg:               ekzo-color(outer-space),
 
   // ---------------------------------------
+  // Horizontal line
+  // ---------------------------------------
+
+  hr:                     ekzo-tint(ekzo-color(outer-space), 10),
+
+  // ---------------------------------------
   // Buttons
   // ---------------------------------------
-  // @param {string|false} - false to disable, color value to enable
+  // @param {string|false} False to disable, color value to enable
 
   btn:                    ekzo-color(green-white),
   btn-bg:                 ekzo-color(dull-lavender),
 
   // ---------------------------------------
-  // Horizontal line
-  // ---------------------------------------
-
-  hr:                    ekzo-tint(ekzo-color(outer-space), 10),
-
-  // ---------------------------------------
   // Breadcrumb
   // ---------------------------------------
-  // @param {string|false} - false to disable, color value to enable
+  // @param {string|false} False to disable, color value to enable
 
   breadcrumb-links:      ekzo-color(green-white),
   breadcrumb-delimiters: ekzo-tint(ekzo-color(green-white), 50),
-
-  // ---------------------------------------
-  // Backgrounds
-  // ---------------------------------------
-
-  bg:                    ekzo-color(outer-space)
 
 ), $default: true);
