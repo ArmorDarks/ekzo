@@ -7,27 +7,27 @@
 // Extend theme
 // ---------------------------------------
 
-@mixin ekzo-extend-themes($theme-name, $theme, $default: false) {
+@mixin ekzo-extend-themes($theme, $theme-data, $default: false) {
 
   $ekzo-themes: () !default;
   $new-theme:   ();
 
-  @if type-of($theme) != 'map' {
-    @error '[ekzo-extend-themes] `$theme` value type should be `map`, not `#{type-of($theme)}`';
+  @if type-of($theme-data) != 'map' {
+    @error '[ekzo-extend-themes] `$theme-data` value type should be `map`, not `#{type-of($theme-data)}`';
   }
 
-  @if not map-has-key($ekzo-themes, $theme-name) {
-    $new-theme: ($theme-name: $theme);
+  @if not map-has-key($ekzo-themes, $theme) {
+    $new-theme: ($theme: $theme-data);
   } @else {
-    $existing-theme: map-get($ekzo-themes, $theme-name);
+    $existing-theme: map-get($ekzo-themes, $theme);
 
     @if $default {
-      $new-theme: map-merge($theme, $existing-theme);
+      $new-theme: map-merge($theme-data, $existing-theme);
     } @else {
-      $new-theme: map-merge($existing-theme, $theme);
+      $new-theme: map-merge($existing-theme, $theme-data);
     }
 
-    $new-theme: ($theme-name: $new-theme);
+    $new-theme: ($theme: $new-theme);
   }
 
   $ekzo-themes: map-merge($ekzo-themes, $new-theme) !global;
