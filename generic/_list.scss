@@ -8,11 +8,7 @@
 // Default lists styling
 // ---------------------------------------
 
-ul,
-ol {
-  list-style-type: $ekzo-list-style-type
-  // margin-left already defined in shared
-}
+ul { list-style-type: $ekzo-list-style-type }
 
 // ---------------------------------------
 // Unstyle list
@@ -42,14 +38,5 @@ ol {
 // Use `.h-childs-spacing*` to add vertical indentation between `li`
 // Use `.h-childs-margin*` to add margin to all child `li`
 // Use `.h-childs-padding*` to add padding to all child `li`
-
-// ---------------------------------------
-// Variations
-// ---------------------------------------
-
-// @todo With borders between elements
-.#{$ekzo-generics-ns}list--keyline {}
-// @todo With borders inside
-.#{$ekzo-generics-ns}list--matrix {}
 
 } // endif
