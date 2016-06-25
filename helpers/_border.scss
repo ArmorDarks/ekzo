@@ -33,7 +33,7 @@
 .#{$ekzo-helpers-ns}border--inherit { border: inherit; }
 
 .#{$ekzo-helpers-ns}border0        { border-width:        0; }
-.#{$ekzo-helpers-ns}border-top0    { border-width-top:    0; }
-.#{$ekzo-helpers-ns}border-right0  { border-width-right:  0; }
-.#{$ekzo-helpers-ns}border-bottom0 { border-width-bottom: 0; }
-.#{$ekzo-helpers-ns}border-left0   { border-width-left:   0; }
+.#{$ekzo-helpers-ns}border-top0    { border-top-width:    0; }
+.#{$ekzo-helpers-ns}border-right0  { border-right-width:  0; }
+.#{$ekzo-helpers-ns}border-bottom0 { border-bottom-width: 0; }
+.#{$ekzo-helpers-ns}border-left0   { border-left-width:   0; }
