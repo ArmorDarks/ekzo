@@ -4,20 +4,30 @@
 // =======================================
 // This is very tricky and, so far, the only way to make content of defined variables
 // inside of mixins available for `@content`
-//
-// @todo Improve docs
 
 $ekzo-__temp: null !global;
 
 // ---------------------------------------
 // Set
 // ---------------------------------------
+// Set data to global temp variable, which will be
+// available everywhere.
+// If second argument provided, mixin will consider
+// first argument to be a key of the map, and will
+// merge value with already existing (if any) map in
+// global temp variable under that key. Allows to pass
+// effectively multiple values to `@content`
+// @param  {*} $key        Value to be set or key of the map, under which
+//                         should be set value
+// @param  {*} $value:null Optional value, which should be set under first
+//                         argument as a key of the map
 
 @mixin ekzo-set-temp($key, $value:null) {
   @if $ekzo-__temp == null {
     $ekzo-__temp: () !global;
   }
 
+  // allow $value to be anything, even `false`, but `null`
   @if $value != null {
     $result: ( $key: $value );
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
@@ -31,6 +41,13 @@ $ekzo-__temp: null !global;
 // ---------------------------------------
 // Read
 // ---------------------------------------
+// Returns current content of global temp variable.
+// If argument provided, will try to fetch value from
+// that key of map inside global temp variable
+// @param  {*} $key:false Optional argument, which forces function
+//                        to look value under that key
+// @return {*}            Content of global temp variable or it's map
+//                        under specified key
 
 @function ekzo-temp($key:false) {
 
@@ -60,6 +77,7 @@ $ekzo-__temp: null !global;
 // ---------------------------------------
 // Purge
 // ---------------------------------------
+// Resets global temp variable to initial state
 
 @mixin ekzo-purge-temp() {
   $ekzo-__temp: null !global;
