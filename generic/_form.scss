@@ -12,7 +12,7 @@
 input,
 textarea,
 select {
-  font-size:   $ekzo-forms-font-size;
+  @include ekzo-font-size($ekzo-forms-font-size);
   font-family: ekzo-ui-font-family(forms);
   @include ekzo-theme() {
     color: ekzo-theme(forms);
