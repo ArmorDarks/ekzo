@@ -10,7 +10,8 @@
 
 .#{$ekzo-generics-ns}input,
 input,
-textarea {
+textarea,
+select {
   font-size:   $ekzo-forms-font-size;
   font-family: ekzo-ui-font-family(forms);
   @include ekzo-theme() {
