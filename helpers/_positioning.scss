@@ -15,17 +15,17 @@
   .#{$prefix}position--static#{$postfix}      { position: static   !important; }
   .#{$prefix}position--fixed#{$postfix}       { position: fixed    !important; }
 
-  .#{$prefix}position--top#{postfix}          { top:    0 !important; }
-  .#{$prefix}position--right#{postfix}        { right:  0 !important; }
-  .#{$prefix}position--bottom#{postfix}       { bottom: 0 !important; }
-  .#{$prefix}position--left#{postfix}         { left:   0 !important; }
+  .#{$prefix}position--top#{$postfix}          { top:    0 !important; }
+  .#{$prefix}position--right#{$postfix}        { right:  0 !important; }
+  .#{$prefix}position--bottom#{$postfix}       { bottom: 0 !important; }
+  .#{$prefix}position--left#{$postfix}         { left:   0 !important; }
 
-  .#{$prefix}position--top--auto#{postfix}    { top:    auto !important; }
-  .#{$prefix}position--right--auto#{postfix}  { right:  auto !important; }
-  .#{$prefix}position--bottom--auto#{postfix} { bottom: auto !important; }
-  .#{$prefix}position--left--auto#{postfix}   { left:   auto !important; }
+  .#{$prefix}position--top--auto#{$postfix}    { top:    auto !important; }
+  .#{$prefix}position--right--auto#{$postfix}  { right:  auto !important; }
+  .#{$prefix}position--bottom--auto#{$postfix} { bottom: auto !important; }
+  .#{$prefix}position--left--auto#{$postfix}   { left:   auto !important; }
 
-  .#{$prefix}position--cover#{postfix}        { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
+  .#{$prefix}position--cover#{$postfix}        { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
 
   // ---------------------------------------
   // Floats
