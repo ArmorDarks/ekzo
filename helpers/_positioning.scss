@@ -10,10 +10,10 @@
   // Position
   // ---------------------------------------
 
-  .#{$prefix}position--relative#{$postfix}    { position: relative !important; }
-  .#{$prefix}position--absolute#{$postfix}    { position: absolute !important; }
-  .#{$prefix}position--static#{$postfix}      { position: static   !important; }
-  .#{$prefix}position--fixed#{$postfix}       { position: fixed    !important; }
+  .#{$prefix}relative#{$postfix}              { position: relative !important; }
+  .#{$prefix}absolute#{$postfix}              { position: absolute !important; }
+  .#{$prefix}static#{$postfix}                { position: static   !important; }
+  .#{$prefix}fixed#{$postfix}                 { position: fixed    !important; }
 
   .#{$prefix}position--top#{$postfix}          { top:    0 !important; }
   .#{$prefix}position--right#{$postfix}        { right:  0 !important; }

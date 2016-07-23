@@ -129,7 +129,7 @@
 - Fixed removal of paddings in `.o-btn--full`, enforced `border-box` model on it to prevent conflict between paddings and width.
 - Fixed wrongly applied hover text-decoration to `&` in `.o-btn`.
 - Fixed not applied hover text-decoration to `:focus` in `.o-btn`.
-- [breaking] Forced immutability via `!important` declaration of positional helpers like `.position--relative` which were by accident mutable before.
+- [breaking] Forced immutability via `!important` declaration of positional helpers like `.h-relative` which has been by accident mutable before.
 - [breaking] Fixed wrongly named `.o-breadcrumb`, renamed to `.o-breadcrumb`.
 - [breaking] Fixed wrongly named `.o-breadcrumb` related variables. Now they all end on `s`.
 - Fixed not aligned properly `.g-link--go` and `.g-link--back`.
@@ -204,4 +204,5 @@
 - Renamed `_main.scss` into `_root.scss`.
 - [breaking] Base font-size now declared on standalone `$ekzo-font-size` variable.
 - [breaking] Display helpers no longer using `display--` prefix.
+- [breaking] Position helpers no longer using `position--` prefix.
 - Most part of generics and objects filenames has been changed to represent properly content of partials. For example, `btn.scss` for `.o-btn` instead of `buttons.scss`, or `link.scss` for `.g-link` instead of `links.scss`.
