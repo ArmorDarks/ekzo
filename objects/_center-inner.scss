@@ -1,19 +1,19 @@
 @if $ekzo-enable-center-inner {
 
-// =======================================
-// ^CENTER-INNER
-// =======================================
+  // =======================================
+  // ^CENTER-INNER
+  // =======================================
 
-.#{$ekzo-objects-ns}center-inner {
-  text-align: center;
+  .#{$ekzo-objects-ns}center-inner {
+    text-align: center;
 
-  > * {
-    display: inline-block;
+    > * {
+      display: inline-block;
 
-    text-align: left;
+      text-align: left;
+
+    }
 
   }
-
-}
 
 } // endif

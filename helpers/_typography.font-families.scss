@@ -3,14 +3,13 @@
 // ^HELPERS.TYPOGRAHY.FONT-FAMILIES
 // =======================================
 
-.font-family--inherit {  font-family: inherit !important; }
+.font-family--inherit { font-family: inherit !important; }
 
 // ---------------------------------------
 // All fonts-families
 // ---------------------------------------
 
 @if $ekzo-enable-font-families-helpers {
-
   @each $group, $font-family in $ekzo-font-families {
     @if $font-family {
 
@@ -18,7 +17,6 @@
 
     }
   }
-
 }
 
 // ---------------------------------------
@@ -26,13 +24,11 @@
 // ---------------------------------------
 
 @if $ekzo-enable-ui-font-families-helpers {
+  @each $group, $font-family in $ekzo-ui-font-families {
+    @if $font-family {
 
-    @each $group, $font-family in $ekzo-ui-font-families {
-      @if $font-family {
+      .#{$ekzo-helpers-ns}font-family--#{$group} { font-family: $font-family; }
 
-        .#{$ekzo-helpers-ns}font-family--#{$group} { font-family: $font-family; }
-
-      }
     }
-
+  }
 }

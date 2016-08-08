@@ -1,8 +1,7 @@
 
-/*------------------------------------*\
-    $TOOLTIPS
-\*------------------------------------*/
-
+// =======================================
+// ^TOOLTIPS
+// =======================================
 
 /**
  * Pure css tooltips
@@ -14,8 +13,6 @@
     </span>
  *
  */
-
-
 
 /**
 * Tooltip variables
@@ -49,14 +46,11 @@ $ekzo-tooltip-bg-color-info: hsl(200, 50%, 45%) !default;
 // Success color
 $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
-
-
 /**
 * Mixin to generate different color style tooltips
 */
 
 @mixin ekzo-tooltip-bg-color($color) {
-
   @each $position in top, bottom, left, right {
 
     &.#{$ekzo-objects-ns}tooltip--#{$position}:before {
@@ -68,10 +62,7 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
   &:after {
     background-color: $color;
   }
-
 }
-
-
 
 /**
 * Mixin to set margin on tooltip using translate transform
@@ -90,7 +81,6 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
   }
 
   &:after {
-
     @if $position == 'top' or $position == 'bottom' {
       // bring back the tooltip by some offset so that arrow doesn't stick at end
       margin-left: -1 * 3 * $ekzo-tooltip-arrow-size;
@@ -100,7 +90,6 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
       // bring back to center
       margin-bottom: -1 * floor($ekzo-tooltip-height / 2);
     }
-
   }
 
   &:before,
@@ -124,25 +113,25 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
     @if $position == 'top' {
       transform: translateY($ekzo-transition-distance * 1);
     }
+
     @if $position == 'bottom' {
       transform: translateY($ekzo-transition-distance * -1);
     }
+
     @if $position == 'left' {
       transform: translateX($ekzo-transition-distance * 1);
     }
+
     @if $position == 'right' {
       transform: translateX($ekzo-transition-distance * -1);
     }
-
   }
 
 }
 
-
 @if $ekzo-enable-tooltips {
 
   [data-tooltip] {
-
     position: relative;
 
     &:before,
@@ -202,13 +191,10 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
   }
 
-
-
   .#{$ekzo-objects-ns}tooltip--sharp:after { border-radius: 0; }
 
-
-
   .#{$ekzo-objects-ns}tooltip--always {
+
     &:after,
     &:before {
       opacity: 1;
@@ -234,9 +220,8 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
     &.#{$ekzo-objects-ns}tooltip--right:before {
       transform: translateX($ekzo-transition-distance * 1);
     }
+
   }
-
-
 
   /**
    * set default color for tooltip arrows
@@ -254,31 +239,26 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
   .#{$ekzo-objects-ns}tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
   .#{$ekzo-objects-ns}tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
 
-
-
-/**
- * Defines the positoning logic for the tooltips.
- *
- * Classes added:
- *    1) tooltip--top
- *    2) tooltip--bottom
- *    3) tooltip--left
- *    4) tooltip--right
- */
+  /**
+   * Defines the positoning logic for the tooltips.
+   *
+   * Classes added:
+   *    1) tooltip--top
+   *    2) tooltip--bottom
+   *    3) tooltip--left
+   *    4) tooltip--right
+   */
 
   /* top tooltip */
   .#{$ekzo-objects-ns}tooltip--top { @include ekzo-tooltip-position('bottom'); }
 
   /* bottom tooltip */
-
   .#{$ekzo-objects-ns}tooltip--bottom { @include ekzo-tooltip-position('top'); }
 
   /* right tooltip */
-
   .#{$ekzo-objects-ns}tooltip--right { @include ekzo-tooltip-position('left'); }
 
   /* left tooltip */
-
   .#{$ekzo-objects-ns}tooltip--left { @include ekzo-tooltip-position('right'); }
 
 } // endif

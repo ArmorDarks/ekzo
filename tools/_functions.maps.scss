@@ -15,7 +15,6 @@
 // @todo Should support paths in `$keys...`. This required by `@mixin ekzo-breakpoint`
 
 @function ekzo-get($map, $keys...) {
-
   @if length($keys) == 1 {
     $keys: nth($keys, 1);
   }
@@ -25,9 +24,7 @@
   $get: map-get($map, nth($keys, 1));
 
   @if $length > 1 {
-
     @for $i from 2 through $length {
-
       @if $get != null and type-of($get) == 'map' {
         $warn: $warn + "->#{nth($keys, $i)}";
         $get: map-get($get, nth($keys, $i));
@@ -35,13 +32,12 @@
         @if $get == null {
           @return ekzo-get-warning($warn, $get, nth($keys, $i));
         }
-
-      } @else {
-        @return ekzo-get-warning($warn, $get, nth($keys, $i));
       }
 
+      @else {
+        @return ekzo-get-warning($warn, $get, nth($keys, $i));
+      }
     }
-
   }
 
   @return $get;
@@ -56,14 +52,14 @@
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
 
 @function ekzo-get-warning($warn, $get, $key) {
-
   @if $get == null {
     @warn "[ekzo-get]: map has no value for key search `#{$warn}`";
 
-  } @else if type-of($get) != 'map' {
+  }
+
+  @else if type-of($get) != 'map' {
     @warn "[ekzo-get]: non-map value found for key search `#{$warn}`, can't search for key `#{$key}`";
   }
 
   @return null;
-
 }

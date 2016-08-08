@@ -8,7 +8,6 @@
 // ---------------------------------------
 
 @mixin ekzo-extend-themes($theme, $theme-data, $default: false) {
-
   $ekzo-themes: () !default;
   $new-theme:   ();
 
@@ -18,12 +17,16 @@
 
   @if not map-has-key($ekzo-themes, $theme) {
     $new-theme: ($theme: $theme-data);
-  } @else {
+  }
+
+  @else {
     $existing-theme: map-get($ekzo-themes, $theme);
 
     @if $default {
       $new-theme: map-merge($theme-data, $existing-theme);
-    } @else {
+    }
+
+    @else {
       $new-theme: map-merge($existing-theme, $theme-data);
     }
 
@@ -31,7 +34,6 @@
   }
 
   $ekzo-themes: map-merge($ekzo-themes, $new-theme) !global;
-
 }
 
 // ---------------------------------------
@@ -56,24 +58,27 @@
 //  }
 
 @mixin ekzo-theme($themes: $ekzo-themes, $prefix: $ekzo-themes-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
-
   @each $theme, $data in $themes {
-
     @include ekzo-set-temp(theme, $data);
 
     $class: $prefix + $theme + $postfix;
 
     @if $enable-theming and $also-chain {
+
       .#{$class} &,
       &.#{$class} { @content; }
-    } @else if $enable-theming {
-      .#{$class} & { @content; }
-    } @else {
-      @if $theme == $default-theme { @content; }
+
     }
+
+    @else if $enable-theming {
+
+      .#{$class} & { @content; }
+
+    }
+
+    @else if $theme == $default-theme { @content; }
 
     @include ekzo-purge-temp();
 
   }
-
 }

@@ -33,18 +33,16 @@
 //
 
 @mixin ekzo-breakpoint($breakpoint, $breakpoints: $ekzo-breakpoints) {
-
   $query: ekzo-get($breakpoints, $breakpoint);
 
   // check wether defined breakpoint exists in requested map
   @if not $query {
-    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` in specified map'
+    @error '[ekzo-breakpoint]: undefined breakpoint `#{$breakpoint}` in specified map';
   }
 
   // @Note: Use `only` to hide media query from old browsers
   //        Details: http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
   @media only #{$query} { @content; }
-
 }
 
 // ---------------------------------------
@@ -59,7 +57,7 @@
       @include ekzo-breakpoint($breakpoint) {
         @include ekzo-set-temp('\\@#{$breakpoint}');
 
-        @content
+        @content;
 
         @include ekzo-purge-temp();
       }

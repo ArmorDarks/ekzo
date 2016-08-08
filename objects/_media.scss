@@ -1,82 +1,82 @@
 @if $ekzo-enable-media {
 
-// =======================================
-// ^MEDIA
-// =======================================
-// Place any image- and text-like content side-by-side, as per:
-// stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-//
-// On IE8/9 will fallback to regular float-based `media` object, with similar visual output
-// However, some flexbox features, like vertical aligment, in IE8/9 will fallback to top value
-//
-// @example
-//
-//  <div class='o-media'>
-//    <img class='o-media__aside' src='' alt='>
-//    <p class='o-media__content'>Lorem</p>
-//  </div>
+  // =======================================
+  // ^MEDIA
+  // =======================================
+  // Place any image- and text-like content side-by-side, as per:
+  // stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+  //
+  // On IE8/9 will fallback to regular float-based `media` object, with similar visual output
+  // However, some flexbox features, like vertical aligment, in IE8/9 will fallback to top value
+  //
+  // @example
+  //
+  //  <div class='o-media'>
+  //    <img class='o-media__aside' src='' alt='>
+  //    <p class='o-media__content'>Lorem</p>
+  //  </div>
 
-.#{$ekzo-objects-ns}media {
-  display: flex;
-  align-items: flex-start;
-}
-
-  .#{$ekzo-objects-ns}media__aside {
-    flex: 0 0 auto;
-    margin-right: ekzo-space(1);
+  .#{$ekzo-objects-ns}media {
+    display: flex;
+    align-items: flex-start;
   }
 
-  .#{$ekzo-objects-ns}media__content {
-    flex: 1 1 auto;
+    .#{$ekzo-objects-ns}media__aside {
+      flex: 0 0 auto;
+      margin-right: ekzo-space(1);
+    }
 
-    &,
-    > :last-child { margin-bottom: 0; }
+    .#{$ekzo-objects-ns}media__content {
+      flex: 1 1 auto;
 
-  }
+      &,
+      > :last-child { margin-bottom: 0; }
 
-// ---------------------------------------
-// Spacing variations
-// ---------------------------------------
+    }
 
-.#{$ekzo-objects-ns}media0 {
+  // ---------------------------------------
+  // Spacing variations
+  // ---------------------------------------
 
-  .#{$ekzo-objects-ns}media__aside {
-    margin-right: 0;
-    margin-left:  0;
-  }
-
-}
-
-.#{$ekzo-objects-ns}media\+ {
-
-  .#{$ekzo-objects-ns}media__aside { margin-right: ekzo-space(2); }
-
-  &.#{$ekzo-objects-ns}media--rev {
+  .#{$ekzo-objects-ns}media0 {
 
     .#{$ekzo-objects-ns}media__aside {
       margin-right: 0;
-      margin-left:  ekzo-space(2);
+      margin-left:  0;
     }
 
   }
 
-}
+  .#{$ekzo-objects-ns}media\+ {
 
-// You can also use `.h-childs-displace*` to add centered margin between `.o-media__aside` and `.o-medio__content`
+    .#{$ekzo-objects-ns}media__aside { margin-right: ekzo-space(2); }
 
-// ---------------------------------------
-// Reversed version
-// ---------------------------------------
+    &.#{$ekzo-objects-ns}media--rev {
 
-.#{$ekzo-objects-ns}media--rev {
+      .#{$ekzo-objects-ns}media__aside {
+        margin-right: 0;
+        margin-left:  ekzo-space(2);
+      }
 
-  .#{$ekzo-objects-ns}media__aside {
-    order: 1;
+    }
 
-    margin-right: 0;
-    margin-left:  ekzo-space(1);
   }
 
-}
+  // You can also use `.h-childs-displace*` to add centered margin between `.o-media__aside` and `.o-medio__content`
+
+  // ---------------------------------------
+  // Reversed version
+  // ---------------------------------------
+
+  .#{$ekzo-objects-ns}media--rev {
+
+    .#{$ekzo-objects-ns}media__aside {
+      order: 1;
+
+      margin-right: 0;
+      margin-left:  ekzo-space(1);
+    }
+
+  }
 
 } // endif

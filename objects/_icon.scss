@@ -1,57 +1,57 @@
 @if $ekzo-enable-icons {
 
-// =======================================
-// ^ICON
-// =======================================
-// Giving an element a class of `.icon` will throw it into 'icon' mode and will
-// apply icon font
-//
-// <a href=#><i class="icon icon--star"></i> View your favourites</a>
-//
-// Requires extension in stylesheet.
+  // =======================================
+  // ^ICON
+  // =======================================
+  // Giving an element a class of `.icon` will throw it into 'icon' mode and will
+  // apply icon font
+  //
+  // <a href=#><i class="icon icon--star"></i> View your favourites</a>
+  //
+  // Requires extension in stylesheet.
 
-@include ekzo-font-face(
-  $font:    $ekzo-icon-font,
-  $version: $ekzo-icon-font-version,
-  $svg-id:  $ekzo-icon-font-svg-id
-);
+  @include ekzo-font-face(
+    $font:    $ekzo-icon-font,
+    $version: $ekzo-icon-font-version,
+    $svg-id:  $ekzo-icon-font-svg-id
+  );
 
-.#{$ekzo-objects-ns}icon {
-  position: relative;
+  .#{$ekzo-objects-ns}icon {
+    position: relative;
 
-  display: inline-block;
+    display: inline-block;
 
-  // reset line-height
-  line-height: 1;
+    // reset line-height
+    line-height: 1;
 
-  // So icons added using `.icon` sit in the centre of the element
-  text-align: center;
+    // So icons added using `.icon` sit in the centre of the element
+    text-align: center;
 
-  font-family: '#{$ekzo-icon-font}';
+    font-family: '#{$ekzo-icon-font}';
 
-  // So using `.icon` on certain elements doesn't make a visual difference
-  font-style:  normal;
-  font-weight: normal;
+    // So using `.icon` on certain elements doesn't make a visual difference
+    font-style:  normal;
+    font-weight: normal;
 
-  &:before { position: relative; }
+    &:before { position: relative; }
 
-}
+  }
 
-// ---------------------------------------
-// Fixed width
-// ---------------------------------------
-// Make width equal to height of icon
-// Useful for lists and menus
+  // ---------------------------------------
+  // Fixed width
+  // ---------------------------------------
+  // Make width equal to height of icon
+  // Useful for lists and menus
 
-.#{$ekzo-objects-ns}icon--fixed { width: 1em; }
+  .#{$ekzo-objects-ns}icon--fixed { width: 1em; }
 
-// ---------------------------------------
-// Spacing
-// ---------------------------------------
-// Apply on icon or sprite if simple margin with space isn't enough
-// or where space is unusable
+  // ---------------------------------------
+  // Spacing
+  // ---------------------------------------
+  // Apply on icon or sprite if simple margin with space isn't enough
+  // or where space is unusable
 
-.#{$ekzo-objects-ns}icon--left  { margin-right: .36em; }
-.#{$ekzo-objects-ns}icon--right { margin-left:  .36em; }
+  .#{$ekzo-objects-ns}icon--left  { margin-right: .36em; }
+  .#{$ekzo-objects-ns}icon--right { margin-left:  .36em; }
 
 } // endif

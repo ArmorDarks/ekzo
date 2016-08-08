@@ -31,11 +31,12 @@ $ekzo-__temp: null !global;
   @if $value != null {
     $result: ( $key: $value );
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
-  } @else {
+  }
+
+  @else {
     $result: ( __value: $key );
     $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
   }
-
 }
 
 // ---------------------------------------
@@ -50,17 +51,15 @@ $ekzo-__temp: null !global;
 //                        under specified key
 
 @function ekzo-temp($key:false) {
-
   @if not $key {
-
     @if type-of($ekzo-__temp) == 'null' {
       @error "[ekzo-temp]: temp variable does not hold any value";
     }
 
     @return ekzo-get($ekzo-__temp, __value);
+  }
 
-  } @else {
-
+  @else {
     @if type-of($ekzo-__temp) != 'map' {
       @error "[ekzo-temp]: you're requesting key `#{$key}` from #{type-of($ekzo-__temp)}, NOT a map";
     }
@@ -79,6 +78,4 @@ $ekzo-__temp: null !global;
 // ---------------------------------------
 // Resets global temp variable to initial state
 
-@mixin ekzo-purge-temp() {
-  $ekzo-__temp: null !global;
-}
+@mixin ekzo-purge-temp() { $ekzo-__temp: null !global; }

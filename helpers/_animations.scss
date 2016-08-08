@@ -1,4 +1,4 @@
-// scss-lint:disable SpaceBetweenParens, SpaceAfterComma, TrailingZero, UnnecessaryMantissa
+// stylelint-disable function-parentheses-space-inside, number-no-trailing-zeros, function-comma-space-after
 
 // =======================================
 // ^ANIMATIONS Transition Timings
@@ -10,7 +10,6 @@
 //       https://jqueryui.com/resources/demos/effect/easing.html
 //
 // @source https://github.com/jaukia/easie
-
 
 // ---------------------------------------
 // EASE IN
@@ -25,7 +24,6 @@ $ekzo-ease-in-expo:      cubic-bezier( .950,  .050,  .795,  .035) !default;
 $ekzo-ease-in-circ:      cubic-bezier( .600,  .040,  .980,  .335) !default;
 $ekzo-ease-in-back:      cubic-bezier( .600, -.280,  .735,  .045) !default;
 
-
 // ---------------------------------------
 // EASE OUT
 // ---------------------------------------
@@ -38,7 +36,6 @@ $ekzo-ease-out-sine:     cubic-bezier( .390,  .575,  .565,  1.000) !default;
 $ekzo-ease-out-expo:     cubic-bezier( .190, 1.000,  .220,  1.000) !default;
 $ekzo-ease-out-circ:     cubic-bezier( .075,  .820,  .165,  1.000) !default;
 $ekzo-ease-out-back:     cubic-bezier( .175,  .885,  .320,  1.275) !default;
-
 
 // ---------------------------------------
 // EASE IN OUT

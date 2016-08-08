@@ -21,11 +21,10 @@
 //  @source `line-height` calculation by twitter.com/redclov3r/status/250301539321798657
 
 @mixin ekzo-line-height($font-size, $base-line-height: $ekzo-line-height, $base-font-size: $ekzo-font-size, $as-ratio:true) {
-
   $font-size: ekzo-units($font-size, unit($base-line-height), $base-font-size);
 
   @if unit($font-size) != unit($base-line-height) {
-    @error '[ekzo-line-height] unit types of `$font-size` and `$base-line-height` should match. You specified `' + unit($font-size) + '` and `' + unit($base-line-height) + '`.'
+    @error '[ekzo-line-height] unit types of `$font-size` and `$base-line-height` should match. You specified `' + unit($font-size) + '` and `' + unit($base-line-height) + '`.';
   }
 
   $calculated-line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
@@ -35,7 +34,6 @@
   }
 
   line-height: $calculated-line-height;
-
 }
 
 // ---------------------------------------
@@ -63,16 +61,11 @@
 //    .heading { @include ekzo-font-size(big, my-group, $map:$my-custom-sizes); }
 
 @mixin ekzo-font-size($font-size, $type:text, $line-height:$ekzo-line-height, $map:$ekzo-font-sizes) {
+  font-size: if(type-of($font-size) == string, ekzo-font-size($font-size, $type, $map), $font-size);
 
-  @if type-of($font-size) == string {
-    $font-size: ekzo-font-size($font-size, $type, $map);
-  }
-
-  font-size: $font-size;
   @if $line-height {
     @include ekzo-line-height($font-size: $font-size, $base-line-height: $line-height);
   }
-
 }
 
 // ---------------------------------------
@@ -99,20 +92,19 @@
 //
 
 @mixin ekzo-font-face($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg: $ekzo-use-svg-fonts, $svg-id:$file-name) {
-
-  @if $version { $version: '?#' + $version; } @else { $version: ''; }
+  $version: if($version, '?#' + $version, '');
 
   @font-face {
     font-family: $font;
 
     src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version);
-    src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version + '#iefix')                           format('embedded-opentype'),
-         url($ekzo-fonts-path + '/' + $file-name + '.woff' + $version)                                      format('woff'),
-         url($ekzo-fonts-path + '/' + $file-name + '.ttf'  + $version)                                      format('truetype')
-         #{if($svg, ', url(' + $ekzo-fonts-path + '/' + $file-name + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
+    src:
+      url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version + '#iefix')                           format('embedded-opentype'),
+      url($ekzo-fonts-path + '/' + $file-name + '.woff' + $version)                                      format('woff'),
+      url($ekzo-fonts-path + '/' + $file-name + '.ttf'  + $version)                                      format('truetype')
+      #{if($svg, ', url(' + $ekzo-fonts-path + '/' + $file-name + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
 
     font-weight: $weight;
     font-style:  $style;
   }
-
 }

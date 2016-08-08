@@ -16,10 +16,12 @@
   // Text
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, text) {
-    @if $variant == 'base' { $variant: '' }
+    @if $variant == 'base' { $variant: ''; }
+
     .#{$prefix}text#{$variant}#{$postfix} {
       @include ekzo-font-size($value);
     }
+
   }
 
   // ----
@@ -30,9 +32,11 @@
   //       even after stacking few times
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, ems) {
+
     .#{$prefix}text--em#{$variant}#{$postfix} {
       @include ekzo-font-size($value);
     }
+
   }
 
   // ----
@@ -42,11 +46,13 @@
   // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, headings) {
+
     .#{$prefix}#{$variant}#{$postfix} {
       @extend %#{$ekzo-generics-ns}headings-properties;
 
       @include ekzo-font-size($value);
     }
+
   }
 
   // ----
@@ -55,12 +61,15 @@
   // A series of classes for setting massive type; for use in heroes, promos, etc.
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, extra-headings) {
+
     .#{$prefix}extra-h#{$variant}#{$postfix} {
       @include ekzo-theme() { @if ekzo-theme(extra-headings) { color: ekzo-theme(extra-headings); } }
 
       @include ekzo-font-size($value);
+
       @if ekzo-ui-font-family(extra-headings) { font-family: ekzo-ui-font-family(extra-headings); }
     }
+
   }
 
   // ---------------------------------------
@@ -69,23 +78,31 @@
   // Only font-size property, without line-heights
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, text) {
-    @if $variant == 'base' { $variant: '' }
+    @if $variant == 'base' { $variant: ''; }
+
     .#{$prefix}font-size#{$variant}#{$postfix} { font-size: $value; }
+
   }
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, headings) {
+
     .#{$prefix}font-size--#{$variant}#{$postfix} { font-size: $value; }
+
   }
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, extra-headings) {
+
     .#{$prefix}font-size--extra-h#{$variant}#{$postfix} { font-size: $value; }
+
   }
 
   // ----
   // em font-sizes
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, ems) {
+
     .#{$prefix}font-size--em#{$variant}#{$postfix} { font-size: $value; }
+
   }
 
   .#{$prefix}font-size--inherit#{$postfix} { font-size: inherit; }
@@ -97,16 +114,22 @@
   //       would need those. Let's see will we use them in future or no
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, text) {
-    @if $variant == 'base' { $variant: '' }
+    @if $variant == 'base' { $variant: ''; }
+
     .#{$prefix}line-height#{$variant}#{$postfix} { @include ekzo-line-height($value); }
+
   }
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, headings) {
+
     .#{$prefix}line-height--#{$variant}#{$postfix} { @include ekzo-line-height($value); }
+
   }
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, extra-headings) {
+
     .#{$prefix}line-height--extra-h#{$variant}#{$postfix} { @include ekzo-line-height($value); }
+
   }
 
   // ----
@@ -122,26 +145,20 @@
 
 }
 
-// ---------------------------------------
-// Call all positioning helpers
-// ---------------------------------------
-
 @if $ekzo-enable-typography-helpers {
+  // ---------------------------------------
+  // Call all positioning helpers
+  // ---------------------------------------
 
   @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns);
 
-} // endif
-
-// ---------------------------------------
-// Responsive positioning helpers
-// ---------------------------------------
-
-@if $ekzo-enable-typography-helpers {
+  // ---------------------------------------
+  // Responsive positioning helpers
+  // ---------------------------------------
 
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
     @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
-  };
-
+  }
 } // endif
 
 // ---------------------------------------
@@ -172,6 +189,7 @@
 // ---------------------------------------
 // Underline styling
 // ---------------------------------------
+// stylelint-disable selector-list-comma-newline-after
 
 .#{$ekzo-helpers-ns}text--underline        { text-decoration: underline; }
 .#{$ekzo-helpers-ns}text--underline\:h     { &:hover, &:focus { text-decoration: underline; } }

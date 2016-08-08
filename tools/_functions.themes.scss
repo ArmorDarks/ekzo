@@ -8,8 +8,11 @@
 // ---------------------------------------
 
 @function ekzo-color($color-name, $map: $ekzo-colors) {
-  @if not map-has-key($map, $color-name) { @error "[ekzo-color]: no such color key: #{$color-name}"; }
-  @return ekzo-get($map, $color-name)
+  @if not map-has-key($map, $color-name) {
+    @error "[ekzo-color]: no such color key: #{$color-name}";
+  }
+
+  @return ekzo-get($map, $color-name);
 }
 
 // ---------------------------------------
@@ -18,5 +21,6 @@
 
 @function ekzo-theme($color-name) {
   $tempTheme: ekzo-temp(theme);
+
   @return ekzo-get($tempTheme, $color-name);
 }

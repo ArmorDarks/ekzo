@@ -1,35 +1,35 @@
 @if $ekzo-enable-forms {
 
-// =======================================
-// ^FORMS
-// =======================================
+  // =======================================
+  // ^FORMS
+  // =======================================
 
-// ---------------------------------------
-// Default input
-// ---------------------------------------
+  // ---------------------------------------
+  // Default input
+  // ---------------------------------------
 
-.#{$ekzo-generics-ns}input,
-input,
-textarea,
-select {
-  @include ekzo-font-size($ekzo-forms-font-size);
-  font-family: ekzo-ui-font-family(forms);
-  @include ekzo-theme() {
-    color: ekzo-theme(forms);
-    background-color: ekzo-theme(forms-bg);
+  .#{$ekzo-generics-ns}input,
+  input,
+  textarea,
+  select {
+    @include ekzo-font-size($ekzo-forms-font-size);
+    @include ekzo-theme() {
+      color: ekzo-theme(forms);
+      background-color: ekzo-theme(forms-bg);
+    }
+    font-family: ekzo-ui-font-family(forms);
   }
-}
 
-// ---------------------------------------
-// Default placeholder
-// ---------------------------------------
-// @todo Chained selector disabled here, otherwise declaration will be completely ignored by some browsers
+  // ---------------------------------------
+  // Default placeholder
+  // ---------------------------------------
+  // @todo Chained selector disabled here, otherwise declaration will be completely ignored by some browsers
 
-::placeholder {
-  font-family: ekzo-ui-font-family(forms);
-  font-size:   $ekzo-forms-placeholder-font-size;
-  font-style:  $ekzo-forms-placeholder-font-style;
-  @include ekzo-theme($also-chain:false) { color: ekzo-theme(forms-placeholder); }
-}
+  ::placeholder {
+    @include ekzo-theme($also-chain:false) { color: ekzo-theme(forms-placeholder); }
+    font-family: ekzo-ui-font-family(forms);
+    font-size:   $ekzo-forms-placeholder-font-size;
+    font-style:  $ekzo-forms-placeholder-font-style;
+  }
 
 } // endif

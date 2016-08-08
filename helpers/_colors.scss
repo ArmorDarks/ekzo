@@ -1,3 +1,4 @@
+// stylelint-disable selector-list-comma-newline-after
 
 // =======================================
 // ^HELPERS.COLORS
@@ -92,7 +93,6 @@
 //       interpolated class names
 
 @if $ekzo-enable-ui-colors-helpers {
-
   @each $theme, $value in $ekzo-themes {
     @each $color, $value in ekzo-get($ekzo-themes, $theme) {
       @if $value {
@@ -115,5 +115,4 @@
       }
     }
   }
-
 }

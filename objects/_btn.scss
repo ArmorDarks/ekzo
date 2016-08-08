@@ -1,6 +1,3 @@
-
-@if $ekzo-enable-buttons {
-
 // =======================================
 // ^BUTTONS
 // =======================================
@@ -12,47 +9,49 @@
 //  4. Prevent appearing of borders in case `a` has defined border. Override in your
 //     own styles if needed.
 
-.#{$ekzo-objects-ns}btn {
-  display: inline-block;       // 1
+@if $ekzo-enable-buttons {
 
-  vertical-align: middle;      // 2
+  .#{$ekzo-objects-ns}btn {
+    display: inline-block;       // 1
 
-  margin: 0;                   // 3
+    vertical-align: middle;      // 2
 
-  padding-top:    ekzo-em(ekzo-space(.5));
-  padding-bottom: ekzo-em(ekzo-space(.5));
-  padding-right:  1em;
-  padding-left:   1em;
+    margin: 0;                   // 3
 
-  border-width: 0; // 4
+    padding-top:    ekzo-em(ekzo-space(.5));
+    padding-bottom: ekzo-em(ekzo-space(.5));
+    padding-right:  1em;
+    padding-left:   1em;
 
-  @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
+    border-width: 0; // 4
 
-  @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; }
+    @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
 
-  @include ekzo-theme() {
-    @if ekzo-theme(btn)    { color: ekzo-theme(btn); }
-    @if ekzo-theme(btn-bg) { background-color: ekzo-theme(btn-bg); }
+    @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; }
+
+    @include ekzo-theme() {
+      @if ekzo-theme(btn)    { color: ekzo-theme(btn); }
+      @if ekzo-theme(btn-bg) { background-color: ekzo-theme(btn-bg); }
+    }
+
+    &:hover,
+    &:focus { @if $ekzo-btn-hover-text-decoration { text-decoration: $ekzo-btn-hover-text-decoration; } }
+
   }
 
-  &:hover,
-  &:focus { @if $ekzo-btn-hover-text-decoration { text-decoration: $ekzo-btn-hover-text-decoration; } }
+  // ----
+  // Make the button inherit sizing from its parent.
 
-}
+  .#{$ekzo-objects-ns}btn--inherit {
+    vertical-align: inherit;
 
-// ----
-// Make the button inherit sizing from its parent.
+    font-family: inherit;
+    font-size:   inherit;
 
-.#{$ekzo-objects-ns}btn--inherit {
-  vertical-align: inherit;
+    line-height: inherit;
 
-  font-family: inherit;
-  font-size:   inherit;
-
-  line-height: inherit;
-
-  padding: inherit
-}
+    padding: inherit;
+  }
 
 } // endif
 
@@ -128,7 +127,6 @@
 
 } // ekzo-buttons-sizes()
 
-
 @if $ekzo-enable-buttons {
 
   // ---------------------------------------
@@ -143,6 +141,6 @@
 
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-buttons-breakpoints) {
     @include ekzo-buttons-sizes($postfix: ekzo-temp());
-  };
+  }
 
 } // endif

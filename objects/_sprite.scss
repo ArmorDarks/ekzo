@@ -1,39 +1,39 @@
 @if $ekzo-enable-sprites {
 
-// =======================================
-// ^SPRITES
-// =======================================
-// Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
-// a background image e.g.:
-//
-// <a class="sprite  sprite--question-mark">More info&hellip;</a>
-//
-// or
-//
-// <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
-//
-// Requires extension in stylesheet.
+  // =======================================
+  // ^SPRITES
+  // =======================================
+  // Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
+  // a background image e.g.:
+  //
+  // <a class="sprite  sprite--question-mark">More info&hellip;</a>
+  //
+  // or
+  //
+  // <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
+  //
+  // Requires extension in stylesheet.
 
-.#{$ekzo-objects-ns}sprite {
-  position: relative;
+  .#{$ekzo-objects-ns}sprite {
+    position: relative;
 
-  display: inline-block;
+    display: inline-block;
 
-  vertical-align: middle;
+    vertical-align: middle;
 
-  // reset line-height
-  line-height: 1;
+    // reset line-height
+    line-height: 1;
 
-  background: url(#{$ekzo-sprites-path}/#{$ekzo-sprites-file}) no-repeat;
-}
+    background: url(#{$ekzo-sprites-path}/#{$ekzo-sprites-file}) no-repeat;
+  }
 
-// ---------------------------------------
-// Spacing
-// ---------------------------------------
-// Apply on icon or sprite if simple margin with space isn't enough
-// or where space is unusable
+  // ---------------------------------------
+  // Spacing
+  // ---------------------------------------
+  // Apply on icon or sprite if simple margin with space isn't enough
+  // or where space is unusable
 
-.#{$ekzo-objects-ns}sprite--left  { margin-right: .36em; }
-.#{$ekzo-objects-ns}sprite--right { margin-left:  .36em; }
+  .#{$ekzo-objects-ns}sprite--left  { margin-right: .36em; }
+  .#{$ekzo-objects-ns}sprite--right { margin-left:  .36em; }
 
 } // endif

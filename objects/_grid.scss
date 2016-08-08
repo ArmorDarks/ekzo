@@ -1,40 +1,40 @@
 @if $ekzo-enable-grid {
 
-// =======================================
-// ^GRIDS
-// =======================================
-//
-// Fluid and nestable grid system
+  // =======================================
+  // ^GRIDS
+  // =======================================
+  //
+  // Fluid and nestable grid system
 
-// ---------------------------------------
-// Grid
-// ---------------------------------------
-// Extend with flex helpers `h-flex--*` to align items and do some other nice stuff
-//
-// 1. For usage of the grid on lists
+  // ---------------------------------------
+  // Grid
+  // ---------------------------------------
+  // Extend with flex helpers `h-flex--*` to align items and do some other nice stuff
+  //
+  // 1. For usage of the grid on lists
 
-.#{$ekzo-objects-ns}grid {
-  display:    flex;
-  flex-wrap:  wrap;
-  list-style: none;                   // 1
+  .#{$ekzo-objects-ns}grid {
+    display:    flex;
+    flex-wrap:  wrap;
+    list-style: none;                   // 1
 
-  padding-left:  0;                   // 1
+    padding-left:  0;                   // 1
 
-  margin-bottom: 0;                   // 1
+    margin-bottom: 0;                   // 1
 
-  // Very infrequently occurring grid wrappers as children of grid wrappers.
-  & > & { margin-left: 0; }
+    // Very infrequently occurring grid wrappers as children of grid wrappers.
+    & > & { margin-left: 0; }
 
-}
+  }
 
-  .#{$ekzo-objects-ns}grid__item { box-sizing: border-box; }
+    .#{$ekzo-objects-ns}grid__item { box-sizing: border-box; }
 
-// ---------------------------------------
-// Spacing
-// ---------------------------------------
+  // ---------------------------------------
+  // Spacing
+  // ---------------------------------------
 
-// Use `.h-childs-displace*` to add centered margin between `.o-grid__item`s
-// Use `.h-childs-margin*` to add margin to all child `.o-grid__item`
-// Use `.h-childs-padding*` to add padding to all child `.o-grid__item`
+  // Use `.h-childs-displace*` to add centered margin between `.o-grid__item`s
+  // Use `.h-childs-margin*` to add margin to all child `.o-grid__item`
+  // Use `.h-childs-padding*` to add padding to all child `.o-grid__item`
 
 } // endif

@@ -4,6 +4,9 @@
 // =======================================
 
 @function ekzo-z-index($z-index-name, $map: $ekzo-z-indexes) {
-  @if not map-has-key($map, $z-index-name) { @error "[ekzo-z-index]: no such color key: #{$z-index-name}"; }
-  @return ekzo-get($map, $z-index-name)
+  @if not map-has-key($map, $z-index-name) {
+    @error "[ekzo-z-index]: no such color key: #{$z-index-name}";
+  }
+
+  @return ekzo-get($map, $z-index-name);
 }

@@ -1,4 +1,5 @@
 // scss-lint:disable ImportantRule
+// stylelint-disable declaration-block-single-line-max-declarations
 
 // =======================================
 // ^HELPERS.POSITIONING
@@ -51,24 +52,18 @@
 
 }
 
-// ---------------------------------------
-// Call all positioning helpers
-// ---------------------------------------
-
 @if $ekzo-enable-positioning-helpers {
+  // ---------------------------------------
+  // Call all positioning helpers
+  // ---------------------------------------
 
   @include ekzo-positioning-helpers($prefix: $ekzo-helpers-ns);
 
-} // endif
-
-// ---------------------------------------
-// Responsive positioning helpers
-// ---------------------------------------
-
-@if $ekzo-enable-positioning-helpers {
+  // ---------------------------------------
+  // Responsive positioning helpers
+  // ---------------------------------------
 
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-positioning-helpers-breakpoints) {
     @include ekzo-positioning-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
-  };
-
+  }
 } // endif

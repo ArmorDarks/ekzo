@@ -36,9 +36,10 @@ a,
   @include ekzo-theme() {
     color: inherit;
     background: inherit;
-  };
+  }
 
   border: inherit;
+
   @if $ekzo-disable-links-outline { outline: inherit; }
 
   box-shadow: inherit;
@@ -51,13 +52,13 @@ a,
     @include ekzo-theme() {
       color: inherit;
       background: inherit;
-    };
+    }
 
     border: inherit;
+
     @if $ekzo-disable-links-outline { outline: inherit; }
 
     box-shadow: inherit;
-
   }
 
 }

@@ -1,8 +1,7 @@
 
-/*------------------------------------*\
-  $MIXINS.ARROWS
-\*------------------------------------*/
-
+// =======================================
+// ^MIXINS.ARROWS
+// =======================================
 // @legacy This code is obsolete.
 //         It shouldn't be used any further until complete
 //         overhaul
@@ -44,9 +43,7 @@
  */
 
 @mixin ekzo-arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
-
   @if $arrow-edge == top {
-
     @extend %arrow--top;
 
     &:before {
@@ -68,11 +65,9 @@
     @if $arrow-location == right {
       @extend %arrow--right;
     }
-
   }
 
   @if $arrow-edge == right {
-
     @extend %arrow--far;
 
     &:before {
@@ -94,11 +89,9 @@
     @if $arrow-location == bottom {
       @extend %arrow--lower;
     }
-
   }
 
   @if $arrow-edge == bottom {
-
     @extend %arrow--bottom;
 
     &:before {
@@ -120,11 +113,9 @@
     @if $arrow-location == right {
       @extend %arrow--right;
     }
-
   }
 
   @if $arrow-edge == left {
-
     @extend %arrow--near;
 
     &:before {
@@ -146,7 +137,6 @@
     @if $arrow-location == bottom {
       @extend %arrow--lower;
     }
-
   }
 
 }

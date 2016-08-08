@@ -23,22 +23,25 @@
 //    .heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
 @function ekzo-font-size($name, $type:text, $map:$ekzo-font-sizes) {
-
   $value: null;
 
   @if map-has-key($map, $type) {
     $working-map: map-get($map, $type);
+
     @if map-has-key($working-map, $name) {
       $value: map-get($working-map, $name);
-    } @else {
+    }
+
+    @else {
       @error 'No such `#{$name}` font name in specified map!';
     }
-  } @else {
+  }
+
+  @else {
     @error 'No such `#{$type}` font type in specified map!';
   }
 
-  @return $value
-
+  @return $value;
 }
 
 // ---------------------------------------
@@ -46,8 +49,11 @@
 // ---------------------------------------
 
 @function ekzo-font-family($font-family-name, $map: $ekzo-font-families) {
-  @if not map-has-key($map, $font-family-name) { @error "[ekzo-font-family]: no such color key: #{$font-family-name}"; }
-  @return unquote(ekzo-get($map, $font-family-name))
+  @if not map-has-key($map, $font-family-name) {
+    @error "[ekzo-font-family]: no such color key: #{$font-family-name}";
+  }
+
+  @return unquote(ekzo-get($map, $font-family-name));
 }
 
 // ---------------------------------------
@@ -55,6 +61,9 @@
 // ---------------------------------------
 
 @function ekzo-ui-font-family($font-family-name, $map: $ekzo-ui-font-families) {
-  @if not map-has-key($map, $font-family-name) { @error "[ekzo-ui-font-family]: no such color key: #{$font-family-name}"; }
-  @return ekzo-get($map, $font-family-name)
+  @if not map-has-key($map, $font-family-name) {
+    @error "[ekzo-ui-font-family]: no such color key: #{$font-family-name}";
+  }
+
+  @return ekzo-get($map, $font-family-name);
 }

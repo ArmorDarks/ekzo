@@ -3,6 +3,4 @@
 // ^HR
 // =======================================
 
-hr {
-  @include ekzo-theme() { color: ekzo-theme(hr) };
-}
+hr { @include ekzo-theme() { color: ekzo-theme(hr); } }

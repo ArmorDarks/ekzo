@@ -9,7 +9,6 @@
 // ----
 // Prevent adjustments of font size after orientation changes in IE and iOS.
 
-
 html {
   -ms-text-size-adjust:     100%;
   -webkit-text-size-adjust: 100%;
@@ -64,8 +63,8 @@ img {
   line-height: inherit;
 }
 
-::before,
-::after {
+:before,
+:after {
   text-decoration: inherit;
   vertical-align:  inherit;
 }
@@ -74,8 +73,8 @@ img {
 // @experimental
 
 *,
-::before,
-::after {
+:before,
+:after {
   border-style: solid;
   border-width: 0;
 }
@@ -155,7 +154,6 @@ table {
 // Remove the gray background color from active links in IE 10.
 
 a { background-color: transparent; }
-
 
 // ----
 // Remove the outline on focused links when they are also active or hovered
@@ -320,7 +318,7 @@ fieldset { border-width: 0; }
 // Show the overflow in IE.
 // 1. Show the overflow in Edge.
 
-input,  // 1
+input, // 1
 button { overflow: visible; }
 
 // ----
@@ -336,7 +334,7 @@ button { text-transform: none; }
 // 2. Correct the inability to style clickable types in iOS and Safari.
 
 button,
-html [type='button'],      // 1
+html [type='button'], // 1
 [type='reset'],
 [type='submit'] { -webkit-appearance: button; } // 2
 
@@ -379,8 +377,8 @@ legend {
 // 2. Allow only vertical resizing of textareas
 
 textarea {
-  overflow: auto;      // 1
-  resize: vertical;    // 2
+  overflow: auto;   // 1
+  resize: vertical; // 2
 }
 
 // ----
@@ -402,8 +400,8 @@ textarea {
 
 [type='search'] {
   -webkit-appearance: textfield; // 1
-  box-sixing: border-box; // 2
-  outline-offset: -2px; // 3
+  box-sixing: border-box;        // 2
+  outline-offset: -2px;          // 3
 }
 
 // ----
@@ -411,7 +409,7 @@ textarea {
 
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: 0.54;
+  opacity: .54;
 }
 
 // ----
@@ -420,5 +418,5 @@ textarea {
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button; // 1
-  font: inherit; // 2
+  font: inherit;              // 2
 }

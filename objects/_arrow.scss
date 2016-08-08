@@ -1,173 +1,172 @@
 @if $ekzo-enable-arrows {
 
-/*------------------------------------*\
-  ARROWS
-\*------------------------------------*/
+  // =======================================
+  // ^ARROWS
+  // =======================================
 
-// @legacy This code is obsolete.
-//         It shouldn't be used any further until complete
-//         overhaul
+  // @legacy This code is obsolete.
+  //         It shouldn't be used any further until complete
+  //         overhaul
 
-/**
- * It is a common design treatment to give an element a triangular points-out
- * arrow, we typically build these with CSS. These following classes allow us to
- * generate these arbitrarily with a mixin, `@arrow()`.
- */
+  /**
+   * It is a common design treatment to give an element a triangular points-out
+   * arrow, we typically build these with CSS. These following classes allow us to
+   * generate these arbitrarily with a mixin, `@arrow()`.
+   */
 
-$ekzo-arrow-size:            ekzo-space(.5) !default;
-$ekzo-arrow-border:          1 !default;
-$ekzo-border:                $ekzo-arrow-size;
-$ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
+  $ekzo-arrow-size:            ekzo-space(.5) !default;
+  $ekzo-arrow-border:          1 !default;
+  $ekzo-border:                $ekzo-arrow-size;
+  $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
-/**
- * Forms the basis for any/all CSS arrows.
- */
+  /**
+   * Forms the basis for any/all CSS arrows.
+   */
 
-%#{$ekzo-objects-ns}arrow {
-  position: relative;
+  %#{$ekzo-objects-ns}arrow {
+    position: relative;
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    border-collapse: separate;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-collapse: separate;
+    }
+
+    &:before {
+      border: $ekzo-border solid transparent;
+    }
+
+    &:after {
+      border: $ekzo-arrow solid transparent;
+    }
+
   }
 
-  &:before {
-    border: $ekzo-border solid transparent;
+  /**
+   * Define individual edges so we can combine what we need, when we need.
+   */
+
+  %#{$ekzo-objects-ns}arrow--top {
+    @extend %#{$ekzo-objects-ns}arrow;
+
+    &:before,
+    &:after {
+      bottom: 100%;
+    }
+
   }
 
-  &:after {
-    border: $ekzo-arrow solid transparent;
+  %#{$ekzo-objects-ns}arrow--upper {
+    @extend %#{$ekzo-objects-ns}arrow;
+
+    &:before {
+      top: $ekzo-arrow;
+    }
+
+    &:after {
+      top: $ekzo-border;
+    }
+
   }
 
-}
+  %#{$ekzo-objects-ns}arrow--middle {
+    @extend %#{$ekzo-objects-ns}arrow;
 
+    &:before,
+    &:after {
+      top: 50%;
+      margin-top: -$ekzo-border;
+    }
 
-/**
- * Define individual edges so we can combine what we need, when we need.
- */
+    &:after {
+      margin-top: -$ekzo-arrow;
+    }
 
-%#{$ekzo-objects-ns}arrow--top {
-  @extend %#{$ekzo-objects-ns}arrow;
-
-  &:before,
-  &:after {
-    bottom: 100%;
   }
 
-}
+  %#{$ekzo-objects-ns}arrow--lower {
+    @extend %#{$ekzo-objects-ns}arrow;
 
-%#{$ekzo-objects-ns}arrow--upper {
-  @extend %#{$ekzo-objects-ns}arrow;
+    &:before {
+      bottom: $ekzo-arrow;
+    }
 
-  &:before {
-    top: $ekzo-arrow;
+    &:after {
+      bottom: $ekzo-border;
+    }
+
   }
 
-  &:after {
-    top: $ekzo-border;
+  %#{$ekzo-objects-ns}arrow--bottom {
+    @extend %#{$ekzo-objects-ns}arrow;
+
+    &:before,
+    &:after {
+      top: 100%;
+    }
+
   }
 
-}
+  %#{$ekzo-objects-ns}arrow--near {
+    @extend %#{$ekzo-objects-ns}arrow;
 
-%#{$ekzo-objects-ns}arrow--middle {
-  @extend %#{$ekzo-objects-ns}arrow;
+    &:before,
+    &:after {
+      right: 100%;
+    }
 
-  &:before,
-  &:after {
-    top: 50%;
-    margin-top: -$ekzo-border;
   }
 
-  &:after {
-    margin-top: -$ekzo-arrow;
+  %#{$ekzo-objects-ns}arrow--left {
+    @extend %#{$ekzo-objects-ns}arrow;
+
+    &:before {
+      left: $ekzo-arrow;
+    }
+
+    &:after {
+      left: $ekzo-border;
+    }
+
   }
 
-}
+  %#{$ekzo-objects-ns}arrow--center {
+    @extend %#{$ekzo-objects-ns}arrow;
 
-%#{$ekzo-objects-ns}arrow--lower {
-  @extend %#{$ekzo-objects-ns}arrow;
+    &:before,
+    &:after {
+      left: 50%;
+      margin-left: -$ekzo-border;
+    }
 
-  &:before {
-    bottom: $ekzo-arrow;
+    &:after {
+      margin-left: -$ekzo-arrow;
+    }
+
   }
 
-  &:after {
-    bottom: $ekzo-border;
+  %#{$ekzo-objects-ns}arrow--right {
+    @extend %#{$ekzo-objects-ns}arrow;
+
+    &:before {
+      right: $ekzo-arrow;
+    }
+
+    &:after {
+      right: $ekzo-border;
+    }
+
   }
 
-}
+  %#{$ekzo-objects-ns}arrow--far {
+    @extend %#{$ekzo-objects-ns}arrow;
 
-%#{$ekzo-objects-ns}arrow--bottom {
-  @extend %#{$ekzo-objects-ns}arrow;
+    &:before,
+    &:after {
+      left: 100%;
+    }
 
-  &:before,
-  &:after {
-    top: 100%;
   }
-
-}
-
-%#{$ekzo-objects-ns}arrow--near {
-  @extend %#{$ekzo-objects-ns}arrow;
-
-  &:before,
-  &:after {
-    right: 100%;
-  }
-
-}
-
-%#{$ekzo-objects-ns}arrow--left {
-  @extend %#{$ekzo-objects-ns}arrow;
-
-  &:before {
-    left: $ekzo-arrow;
-  }
-
-  &:after {
-    left: $ekzo-border;
-  }
-
-}
-
-%#{$ekzo-objects-ns}arrow--center {
-  @extend %#{$ekzo-objects-ns}arrow;
-
-  &:before,
-  &:after {
-    left: 50%;
-    margin-left: -$ekzo-border;
-  }
-
-  &:after {
-    margin-left: -$ekzo-arrow;
-  }
-
-}
-
-%#{$ekzo-objects-ns}arrow--right {
-  @extend %#{$ekzo-objects-ns}arrow;
-
-  &:before {
-    right: $ekzo-arrow;
-  }
-
-  &:after {
-    right: $ekzo-border;
-  }
-
-}
-
-%#{$ekzo-objects-ns}arrow--far {
-  @extend %#{$ekzo-objects-ns}arrow;
-
-  &:before,
-  &:after {
-    left: 100%;
-  }
-
-}
 
 } // endif
