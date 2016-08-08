@@ -1,28 +1,28 @@
-@if $ekzo-enable-iconic-list {
+// =======================================
+// ^ICONIC-LIST
+// =======================================
+// List with sprites or icons instead of bulletins.
+// Should be used in conjuration with icons or sprites:
+//
+//  <ul class="list--iconic">
+//    <li>
+//      <i class="icon icon--ok"></i>
+//      Item1
+//    </li>
+//    <li>
+//      <i class="sprite sprite--ok"></i>
+//      Item2
+//    </li>
+//  </ul>
+//
+//  Note: iconic list relays on `:first-child` selector, so it's important
+//       to keep bulletin-icons right after `<li>` tag.
+//
+//  1. Pusing list twice left to align it with default list
+//     with default bullets
+//  2. Assume that first icons in list are bullets
 
-  // =======================================
-  // ^ICONIC-LIST
-  // =======================================
-  // List with sprites or icons instead of bulletins.
-  // Should be used in conjuration with icons or sprites:
-  //
-  //  <ul class="list--iconic">
-  //    <li>
-  //      <i class="icon icon--ok"></i>
-  //      Item1
-  //    </li>
-  //    <li>
-  //      <i class="sprite sprite--ok"></i>
-  //      Item2
-  //    </li>
-  //  </ul>
-  //
-  //  Note: iconic list relays on `:first-child` selector, so it's important
-  //       to keep bulletin-icons right after `<li>` tag.
-  //
-  //  1. Pusing list twice left to align it with default list
-  //     with default bullets
-  //  2. Assume that first icons in list are bullets
+@if $ekzo-enable-iconic-list {
 
   .#{$ekzo-objects-ns}iconic-list {
     padding-left: ekzo-space(2); // 1

@@ -1,3 +1,4 @@
+// stylelint-disable selector-no-type
 
 // =======================================
 // ^TEXT
@@ -7,9 +8,7 @@
 // Generic paragraph style
 // ---------------------------------------
 
-p {
-  @include ekzo-theme() { color: ekzo-theme(text); }
-}
+p { @include ekzo-theme() { color: ekzo-theme(text); } }
 
 // ---------------------------------------
 // Text select style

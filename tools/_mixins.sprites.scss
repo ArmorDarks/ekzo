@@ -1,4 +1,3 @@
-
 // =======================================
 // ^MIXINS.SPRITES
 // =======================================
@@ -54,14 +53,13 @@
     $sprite: map-get($ekzo-sprites, $sprite);
   }
 
-  @else { @error "Unknown sprite `#{$sprite}` in `$ekzo-sprites`."; }
+  @else { @error 'Unknown sprite `#{$sprite}` in `$ekzo-sprites`.'; }
 
   @if map-has-key($sprite, $property) {
     @return map-get($sprite, $property);
   }
 
-  @else { @error "Unknown sprite property `#{$property}` in `$ekzo-sprites`."; }
-
+  @else { @error 'Unknown sprite property `#{$property}` in `$ekzo-sprites`.'; }
 }
 
 // ----

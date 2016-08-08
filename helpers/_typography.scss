@@ -1,4 +1,4 @@
-// scss-lint:disable ImportantRule
+// stylelint-disable declaration-no-important
 
 // =======================================
 // ^HELPERS.TYPOGRAPHY
@@ -146,6 +146,7 @@
 }
 
 @if $ekzo-enable-typography-helpers {
+
   // ---------------------------------------
   // Call all positioning helpers
   // ---------------------------------------
@@ -159,6 +160,7 @@
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
     @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   }
+
 } // endif
 
 // ---------------------------------------
@@ -168,17 +170,17 @@
 .#{$ekzo-helpers-ns}font-weight--inherit  { font-weight: inherit  !important; }
 
 .#{$ekzo-helpers-ns}font-weight--lighter  { font-weight: lighter  !important; }
-.#{$ekzo-helpers-ns}font-weight--light    { font-weight: 300  !important; }
-.#{$ekzo-helpers-ns}font-weight--normal   { font-weight: 400  !important; }
-.#{$ekzo-helpers-ns}font-weight--semibold { font-weight: 600  !important; }
-.#{$ekzo-helpers-ns}font-weight--bold     { font-weight: bold !important; }
-.#{$ekzo-helpers-ns}font-weight--bolder   { font-weight: bolder !important; }
+.#{$ekzo-helpers-ns}font-weight--light    { font-weight: 300      !important; }
+.#{$ekzo-helpers-ns}font-weight--normal   { font-weight: normal   !important; }
+.#{$ekzo-helpers-ns}font-weight--semibold { font-weight: 600      !important; }
+.#{$ekzo-helpers-ns}font-weight--bold     { font-weight: bold     !important; }
+.#{$ekzo-helpers-ns}font-weight--bolder   { font-weight: bolder   !important; }
 
 .#{$ekzo-helpers-ns}font-style--normal    { font-style: normal !important; }
 .#{$ekzo-helpers-ns}font-style--italic    { font-style: italic !important; }
 
-.#{$ekzo-helpers-ns}text--uppercase       { text-transform: uppercase !important; }
-.#{$ekzo-helpers-ns}text--lowercase       { text-transform: lowercase !important; }
+.#{$ekzo-helpers-ns}text--uppercase       { text-transform: uppercase  !important; }
+.#{$ekzo-helpers-ns}text--lowercase       { text-transform: lowercase  !important; }
 .#{$ekzo-helpers-ns}text--caps            { text-transform: capitalize !important; }
 
 .#{$ekzo-helpers-ns}text--nowrap          { white-space: nowrap; }

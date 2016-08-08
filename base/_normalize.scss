@@ -1,4 +1,4 @@
-// scss-lint:disable QualifyingElement
+// stylelint-disable selector-no-universal, selector-no-qualifying-type, selector-root-no-composition, selector-no-type, no-descending-specificity
 
 // =======================================
 // *NORMALIZE
@@ -9,10 +9,7 @@
 // ----
 // Prevent adjustments of font size after orientation changes in IE and iOS.
 
-html {
-  -ms-text-size-adjust:     100%;
-  -webkit-text-size-adjust: 100%;
-}
+html { text-size-adjust: 100%; }
 
 // ----
 // Reset margins and paddings
@@ -336,7 +333,7 @@ button { text-transform: none; }
 button,
 html [type='button'], // 1
 [type='reset'],
-[type='submit'] { -webkit-appearance: button; } // 2
+[type='submit'] { appearance: button; } // 2
 
 // ----
 // Inputs should inherift line-height from parent
@@ -350,9 +347,9 @@ input { line-height: inherit; }
 // Remove the inner border and padding in Firefox.
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-width: 0;
   padding: 0;
 }
@@ -384,14 +381,14 @@ textarea {
 // ----
 // 1. Add the correct box sizing in IE 10-.
 
-[type="checkbox"],
-[type="radio"] { box-sixing: border-box; } // 1
+[type='checkbox'],
+[type='radio'] { box-sizing: border-box; } // 1
 
 // ----
 // Correct the cursor style of increment and decrement buttons in Chrome.
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button { height: auto; }
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button { height: auto; }
 
 // ----
 // 1. Correct the odd appearance of search inputs in Chrome and Safari.
@@ -399,15 +396,15 @@ textarea {
 // 3. Correct the outline style in Safari.
 
 [type='search'] {
-  -webkit-appearance: textfield; // 1
-  box-sixing: border-box;        // 2
+  appearance: textfield; // 1
+  box-sizing: border-box;        // 2
   outline-offset: -2px;          // 3
 }
 
 // ----
 // Correct the text style of placeholders in Chrome, Edge, and Safari.
 
-::-webkit-input-placeholder {
+::placeholder {
   color: inherit;
   opacity: .54;
 }
@@ -417,6 +414,6 @@ textarea {
 // 2. Change font properties to `inherit` in Chrome and Safari.
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; // 1
+  appearance: button; // 1
   font: inherit;              // 2
 }

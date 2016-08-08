@@ -1,4 +1,4 @@
-// scss-lint:disable ImportantRule
+// stylelint-disable declaration-no-important
 
 // =======================================
 // ^HELPERS.FLEXBOX
@@ -106,6 +106,7 @@
 }
 
 @if $ekzo-enable-flex-helpers {
+
   // ---------------------------------------
   // Call all flex helpers
   // ---------------------------------------
@@ -119,4 +120,5 @@
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints) {
     @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   }
+
 } // endif

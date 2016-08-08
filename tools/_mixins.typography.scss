@@ -1,4 +1,3 @@
-
 // =======================================
 // ^MIXINS.TYPOGRAPHY
 // =======================================
@@ -93,16 +92,16 @@
 
 @mixin ekzo-font-face($font, $version:1, $file-name:$font, $weight:normal, $style:normal, $svg: $ekzo-use-svg-fonts, $svg-id:$file-name) {
   $version: if($version, '?#' + $version, '');
+  $font-path: $ekzo-fonts-path + '/' + $file-name;
 
   @font-face {
     font-family: $font;
 
-    src: url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version);
-    src:
-      url($ekzo-fonts-path + '/' + $file-name + '.eot'  + $version + '#iefix')                           format('embedded-opentype'),
-      url($ekzo-fonts-path + '/' + $file-name + '.woff' + $version)                                      format('woff'),
-      url($ekzo-fonts-path + '/' + $file-name + '.ttf'  + $version)                                      format('truetype')
-      #{if($svg, ', url(' + $ekzo-fonts-path + '/' + $file-name + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
+    src: url($font-path + '.eot' + $version);
+    src: url($font-path + '.eot' + $version + '#iefix') format('embedded-opentype'),
+         url($font-path + '.woff' + $version)           format('woff'),
+         url($font-path + '.ttf' + $version)            format('truetype')
+         #{if($svg, ', url(' + $font-path + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
 
     font-weight: $weight;
     font-style:  $style;

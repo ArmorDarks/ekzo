@@ -1,4 +1,3 @@
-
 // =======================================
 // ^FUNCTIONS.MAP
 // =======================================
@@ -19,14 +18,14 @@
     $keys: nth($keys, 1);
   }
 
-  $warn: "#{nth($keys, 1)}";
+  $warn: '#{nth($keys, 1)}';
   $length: length($keys);
   $get: map-get($map, nth($keys, 1));
 
   @if $length > 1 {
     @for $i from 2 through $length {
       @if $get != null and type-of($get) == 'map' {
-        $warn: $warn + "->#{nth($keys, $i)}";
+        $warn: $warn + '->#{nth($keys, $i)}';
         $get: map-get($get, nth($keys, $i));
 
         @if $get == null {
@@ -41,7 +40,6 @@
   }
 
   @return $get;
-
 }
 
 // ----
@@ -53,12 +51,11 @@
 
 @function ekzo-get-warning($warn, $get, $key) {
   @if $get == null {
-    @warn "[ekzo-get]: map has no value for key search `#{$warn}`";
-
+    @warn '[ekzo-get]: map has no value for key search `#{$warn}`';
   }
 
   @else if type-of($get) != 'map' {
-    @warn "[ekzo-get]: non-map value found for key search `#{$warn}`, can't search for key `#{$key}`";
+    @warn '[ekzo-get]: non-map value found for key search `#{$warn}`, can not search for key `#{$key}`';
   }
 
   @return null;

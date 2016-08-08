@@ -1,4 +1,4 @@
-// scss-lint:disable EmptyLineBetweenBlocks, ImportantRule
+// stylelint-disable declaration-no-important
 
 // =======================================
 // ^WIDTHS
@@ -47,6 +47,7 @@
 } // ekzo-widths-helpers()
 
 @if $ekzo-enable-widths-helpers {
+
   // ---------------------------------------
   // Call all widths
   // ---------------------------------------
@@ -63,4 +64,5 @@
       $prefix: $ekzo-helpers-ns,
       $postfix: ekzo-temp());
   }
+
 } // endif

@@ -1,8 +1,10 @@
-@if $ekzo-enable-center-inner {
+// stylelint-disable selector-no-universal
 
-  // =======================================
-  // ^CENTER-INNER
-  // =======================================
+// =======================================
+// ^CENTER-INNER
+// =======================================
+
+@if $ekzo-enable-center-inner {
 
   .#{$ekzo-objects-ns}center-inner {
     text-align: center;

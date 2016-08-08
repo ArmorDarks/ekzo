@@ -1,20 +1,20 @@
-@if $ekzo-enable-media {
+// =======================================
+// ^MEDIA
+// =======================================
+// Place any image- and text-like content side-by-side, as per:
+// stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+//
+// On IE8/9 will fallback to regular float-based `media` object, with similar visual output
+// However, some flexbox features, like vertical aligment, in IE8/9 will fallback to top value
+//
+// @example
+//
+//  <div class='o-media'>
+//    <img class='o-media__aside' src='' alt='>
+//    <p class='o-media__content'>Lorem</p>
+//  </div>
 
-  // =======================================
-  // ^MEDIA
-  // =======================================
-  // Place any image- and text-like content side-by-side, as per:
-  // stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-  //
-  // On IE8/9 will fallback to regular float-based `media` object, with similar visual output
-  // However, some flexbox features, like vertical aligment, in IE8/9 will fallback to top value
-  //
-  // @example
-  //
-  //  <div class='o-media'>
-  //    <img class='o-media__aside' src='' alt='>
-  //    <p class='o-media__content'>Lorem</p>
-  //  </div>
+@if $ekzo-enable-media {
 
   .#{$ekzo-objects-ns}media {
     display: flex;

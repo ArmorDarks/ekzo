@@ -1,4 +1,3 @@
-
 // =======================================
 // ^FUNCTIONS.TYPOGRAPHY
 // =======================================
@@ -50,7 +49,7 @@
 
 @function ekzo-font-family($font-family-name, $map: $ekzo-font-families) {
   @if not map-has-key($map, $font-family-name) {
-    @error "[ekzo-font-family]: no such color key: #{$font-family-name}";
+    @error '[ekzo-font-family]: no such color key: #{$font-family-name}';
   }
 
   @return unquote(ekzo-get($map, $font-family-name));
@@ -62,7 +61,7 @@
 
 @function ekzo-ui-font-family($font-family-name, $map: $ekzo-ui-font-families) {
   @if not map-has-key($map, $font-family-name) {
-    @error "[ekzo-ui-font-family]: no such color key: #{$font-family-name}";
+    @error '[ekzo-ui-font-family]: no such color key: #{$font-family-name}';
   }
 
   @return ekzo-get($map, $font-family-name);

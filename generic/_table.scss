@@ -1,27 +1,27 @@
-@if $ekzo-enable-tables {
+// stylelint-disable selector-no-type
 
 // =======================================
 // ^TABLES
 // =======================================
 
-table { width: 100%; }
+@if $ekzo-enable-tables {
 
-// ---------------------------------------
-// Cell alignments
-// ---------------------------------------
+  table { width: 100%; }
 
-[colspan]     { text-align: center; }
+  // ---------------------------------------
+  // Cell alignments
+  // ---------------------------------------
 
-[colspan='1'] { text-align: left; }
+  [colspan]     { text-align: center; }
+  [colspan='1'] { text-align: left; }
 
-[rowspan]     { vertical-align: middle; }
+  [rowspan]     { vertical-align: middle; }
+  [rowspan='1'] { vertical-align: top; }
 
-[rowspan='1'] { vertical-align: top; }
+  // ---------------------------------------
+  // Spacing
+  // ---------------------------------------
 
-// ---------------------------------------
-// Spacing
-// ---------------------------------------
-
-// Use `.h-cells-padding*` to add padding to all child `th` and `td`
+  // Use `.h-cells-padding*` to add padding to all child `th` and `td`
 
 } // endif

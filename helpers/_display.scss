@@ -1,5 +1,4 @@
-// scss-lint:disable ImportantRule
-// stylelint-disable selector-list-comma-newline-after, declaration-block-single-line-max-declarations
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after, declaration-block-single-line-max-declarations
 
 // =======================================
 // ^HELPERS.DISPLAY
@@ -114,6 +113,7 @@
 }
 
 @if $ekzo-enable-display-helpers {
+
   // ---------------------------------------
   // Call all display helpers
   // ---------------------------------------
@@ -127,4 +127,5 @@
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints) {
     @include ekzo-display-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
   }
+
 } // endif

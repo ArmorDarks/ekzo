@@ -1,14 +1,14 @@
-@if $ekzo-enable-reline-border {
+// =======================================
+// ^RELINE-BORDER
+// =======================================
+// @note Those classes will try to inherit border-related properties as smart, as possible.
+//       Still, inheritance of border-width isn't what can be done easily, so it assumes that
+//       you're using default `1px`.
+//       If need in more thick variations will arise, we'll consider adding of additional modifiers
+//       For now we have only reline for border-bottom, since that one most often used on links,
+//       but in case of need we will consider adding more modifiers.
 
-  // =======================================
-  // ^RELINE-BORDER
-  // =======================================
-  // @note Those classes will try to inherit border-related properties as smart, as possible.
-  //       Still, inheritance of border-width isn't what can be done easily, so it assumes that
-  //       you're using default `1px`.
-  //       If need in more thick variations will arise, we'll consider adding of additional modifiers
-  //       For now we have only reline for border-bottom, since that one most often used on links,
-  //       but in case of need we will consider adding more modifiers.
+@if $ekzo-enable-reline-border {
 
   // ----
   // Moves border underline from element to specified `.o-reline-border-bottom__to`

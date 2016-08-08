@@ -1,11 +1,14 @@
+// @todo Disabled due to issues with Sass placeholder: `Expected selector "%#{$ekzo-objects-ns}nav > li > a" to come before selector ".#{$ekzo-objects-ns}nav > a"`
+// stylelint-disable no-descending-specificity
+
+// =======================================
+// ^NAV
+// =======================================
+
 @if $ekzo-enable-nav {
 
-  // =======================================
-  // ^NAV
-  // =======================================
-
-  .#{$ekzo-objects-ns}nav,
-  %#{$ekzo-objects-ns}nav {
+  %#{$ekzo-objects-ns}nav,
+  .#{$ekzo-objects-ns}nav {
     @extend %#{$ekzo-generics-ns}list--flush;
 
     display: flex;

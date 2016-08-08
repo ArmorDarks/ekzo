@@ -1,11 +1,10 @@
-
 // =======================================
 // ^FUNCTIONS.TEMP
 // =======================================
 // This is very tricky and, so far, the only way to make content of defined variables
 // inside of mixins available for `@content`
 
-$ekzo-__temp: null !global;
+$ekzo-global-temp: null !global;
 
 // ---------------------------------------
 // Set
@@ -23,19 +22,19 @@ $ekzo-__temp: null !global;
 //                         argument as a key of the map
 
 @mixin ekzo-set-temp($key, $value:null) {
-  @if $ekzo-__temp == null {
-    $ekzo-__temp: () !global;
+  @if $ekzo-global-temp == null {
+    $ekzo-global-temp: () !global;
   }
 
   // allow $value to be anything, even `false`, but `null`
   @if $value != null {
     $result: ( $key: $value );
-    $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
+    $ekzo-global-temp: map-merge($ekzo-global-temp, $result) !global;
   }
 
   @else {
     $result: ( __value: $key );
-    $ekzo-__temp: map-merge($ekzo-__temp, $result) !global;
+    $ekzo-global-temp: map-merge($ekzo-global-temp, $result) !global;
   }
 }
 
@@ -52,25 +51,24 @@ $ekzo-__temp: null !global;
 
 @function ekzo-temp($key:false) {
   @if not $key {
-    @if type-of($ekzo-__temp) == 'null' {
-      @error "[ekzo-temp]: temp variable does not hold any value";
+    @if type-of($ekzo-global-temp) == 'null' {
+      @error '[ekzo-temp]: temp variable does not hold any value';
     }
 
-    @return ekzo-get($ekzo-__temp, __value);
+    @return ekzo-get($ekzo-global-temp, __value);
   }
 
   @else {
-    @if type-of($ekzo-__temp) != 'map' {
-      @error "[ekzo-temp]: you're requesting key `#{$key}` from #{type-of($ekzo-__temp)}, NOT a map";
+    @if type-of($ekzo-global-temp) != 'map' {
+      @error '[ekzo-temp]: can not get key `#{$key}` from #{type-of($ekzo-global-temp)}, NOT a map';
     }
 
-    @if not map-has-key($ekzo-__temp, $key) {
-      @error "[ekzo-temp]: no such key in temp variable: #{$key}";
+    @if not map-has-key($ekzo-global-temp, $key) {
+      @error '[ekzo-temp]: no such key in temp variable: #{$key}';
     }
 
-    @return ekzo-get($ekzo-__temp, $key);
+    @return ekzo-get($ekzo-global-temp, $key);
   }
-
 }
 
 // ---------------------------------------
@@ -78,4 +76,4 @@ $ekzo-__temp: null !global;
 // ---------------------------------------
 // Resets global temp variable to initial state
 
-@mixin ekzo-purge-temp() { $ekzo-__temp: null !global; }
+@mixin ekzo-purge-temp() { $ekzo-global-temp: null !global; }

@@ -1,18 +1,18 @@
-@if $ekzo-enable-sprites {
+// =======================================
+// ^SPRITES
+// =======================================
+// Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
+// a background image e.g.:
+//
+// <a class="sprite  sprite--question-mark">More info&hellip;</a>
+//
+// or
+//
+// <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
+//
+// Requires extension in stylesheet.
 
-  // =======================================
-  // ^SPRITES
-  // =======================================
-  // Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
-  // a background image e.g.:
-  //
-  // <a class="sprite  sprite--question-mark">More info&hellip;</a>
-  //
-  // or
-  //
-  // <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
-  //
-  // Requires extension in stylesheet.
+@if $ekzo-enable-sprites {
 
   .#{$ekzo-objects-ns}sprite {
     position: relative;

@@ -1,14 +1,14 @@
-@if $ekzo-enable-icons {
+// =======================================
+// ^ICON
+// =======================================
+// Giving an element a class of `.icon` will throw it into 'icon' mode and will
+// apply icon font
+//
+// <a href=#><i class="icon icon--star"></i> View your favourites</a>
+//
+// Requires extension in stylesheet.
 
-  // =======================================
-  // ^ICON
-  // =======================================
-  // Giving an element a class of `.icon` will throw it into 'icon' mode and will
-  // apply icon font
-  //
-  // <a href=#><i class="icon icon--star"></i> View your favourites</a>
-  //
-  // Requires extension in stylesheet.
+@if $ekzo-enable-icons {
 
   @include ekzo-font-face(
     $font:    $ekzo-icon-font,

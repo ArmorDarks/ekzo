@@ -1,4 +1,3 @@
-
 // =======================================
 // ^MIXINS.ICONS
 // =======================================
@@ -24,7 +23,6 @@
 
 @mixin ekzo-icons($map: $ekzo-icons, $prefix: $ekzo-icons-prefix) {
   @each $name, $param in $map {
-
     $prefixed-name: $prefix + $name;
 
     .#{$prefixed-name}:before { content: $param; }
