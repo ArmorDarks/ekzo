@@ -103,7 +103,8 @@
          url($font-path + '.ttf' + $version)            format('truetype')
          #{if($svg, ', url(' + $font-path + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
 
-    font-weight: $weight;
-    font-style:  $style;
+    font-weight:  $weight;
+    font-style:   $style;
+    font-display: swap;
   }
 }
