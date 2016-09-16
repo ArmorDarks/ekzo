@@ -122,6 +122,7 @@
 - Added IE8 and IE9 hacks for flex helpers which can be mimicked. When used in conjuration with `.o-grid` they will provide at least something close to flex layout. Their possibilities isn't that wide, though.
 - Added IE8 and IE9 fallbacks for `.o-nav--stacked`, `.o-nav--pack` and `.o-nav--fixed-pack`. This will yeild at least somehow visually close layout even on older browsers.
 - Added `font-display: swap` for `ekzo-font-face()` mixin to avoid blocking during fonts loading.
+- Added `.h-height-*` helpers for defining height.
 
 ### Fixed
 - Now whole framework, functions and mixins should propely work when values for font sizes, base line height and base spacing unit provided in `rem`s.

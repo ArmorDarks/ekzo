@@ -1,0 +1,29 @@
+// stylelint-disable declaration-no-important
+
+// =======================================
+// ^HELPERS.HEIGHT
+// =======================================
+
+@mixin ekzo-height-helpers($prefix:'', $postfix:'') {
+
+  .#{$prefix}height-1\/1#{$postfix} { height: 100% !important; }
+
+}
+
+@if $ekzo-enable-height-helpers {
+
+  // ---------------------------------------
+  // Call all flex helpers
+  // ---------------------------------------
+
+  @include ekzo-height-helpers($prefix: $ekzo-helpers-ns);
+
+  // ---------------------------------------
+  // Responsive flex helpers
+  // ---------------------------------------
+
+  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints) {
+    @include ekzo-height-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+  }
+
+} // endif
