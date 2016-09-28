@@ -5,12 +5,6 @@
 // =======================================
 
 // ---------------------------------------
-// Generic paragraph style
-// ---------------------------------------
-
-p { @include ekzo-theme() { color: ekzo-theme(text); } }
-
-// ---------------------------------------
 // Text select style
 // ---------------------------------------
 // @todo Chained version disabled for now, otherwise it won't work in most browsers at all
