@@ -68,7 +68,7 @@
   .#{$prefix}flex--nowrap#{$postfix}    {
     display: table;
 
-    > { display: table-cell; }
+    > * { display: table-cell; }
 
   }
 
@@ -77,14 +77,14 @@
   .#{$prefix}flex-x--center#{$postfix} {
     text-align: center !important;
 
-    > { text-align: left; }
+    > * { text-align: left; }
 
   }
 
   .#{$prefix}flex-x--end#{$postfix} {
     text-align: right !important;
 
-    > { text-align: left; }
+    > * { text-align: left; }
 
   }
 
@@ -92,17 +92,17 @@
   .#{$prefix}flex-x--around#{$postfix} {
     text-align: justify !important;
 
-    > { text-align: left; }
+    > * { text-align: left; }
 
   }
 
   // -----
   // Cross axis aligment
 
-  .#{$prefix}flex-y--top#{$postfix}      { > { vertical-align: top      !important; } }
-  .#{$prefix}flex-y--center#{$postfix}   { > { vertical-align: middle   !important; } }
-  .#{$prefix}flex-y--end#{$postfix}      { > { vertical-align: bottom   !important; } }
-  .#{$prefix}flex-y--baseline#{$postfix} { > { vertical-align: baseline !important; } }
+  .#{$prefix}flex-y--top#{$postfix}      { > * { vertical-align: top      !important; } }
+  .#{$prefix}flex-y--center#{$postfix}   { > * { vertical-align: middle   !important; } }
+  .#{$prefix}flex-y--end#{$postfix}      { > * { vertical-align: bottom   !important; } }
+  .#{$prefix}flex-y--baseline#{$postfix} { > * { vertical-align: baseline !important; } }
 
   .#{$prefix}flex__item--start#{$postfix}    { vertical-align: top      !important; }
   .#{$prefix}flex__item--center#{$postfix}   { vertical-align: middle   !important; }
