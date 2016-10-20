@@ -8,20 +8,16 @@
   //         It shouldn't be used any further until complete
   //         overhaul
 
-  /**
-   * It is a common design treatment to give an element a triangular points-out
-   * arrow, we typically build these with CSS. These following classes allow us to
-   * generate these arbitrarily with a mixin, `@arrow()`.
-   */
+  // It is a common design treatment to give an element a triangular points-out
+  // arrow, we typically build these with CSS. These following classes allow us to
+  // generate these arbitrarily with a mixin, `@arrow()`.
 
   $ekzo-arrow-size:            ekzo-space(.5) !default;
   $ekzo-arrow-border:          1 !default;
   $ekzo-border:                $ekzo-arrow-size;
   $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
-  /**
-   * Forms the basis for any/all CSS arrows.
-   */
+  // Forms the basis for any/all CSS arrows.
 
   %#{$ekzo-objects-ns}arrow {
     position: relative;
@@ -43,9 +39,7 @@
 
   }
 
-  /**
-   * Define individual edges so we can combine what we need, when we need.
-   */
+  // Define individual edges so we can combine what we need, when we need.
 
   %#{$ekzo-objects-ns}arrow--top {
     @extend %#{$ekzo-objects-ns}arrow;
