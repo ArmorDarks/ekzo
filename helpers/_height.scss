@@ -13,13 +13,13 @@
 @if $ekzo-enable-height-helpers {
 
   // ---------------------------------------
-  // Call all flex helpers
+  // Call all height helpers
   // ---------------------------------------
 
   @include ekzo-height-helpers($prefix: $ekzo-helpers-ns);
 
   // ---------------------------------------
-  // Responsive flex helpers
+  // Responsive height helpers
   // ---------------------------------------
 
   @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints) {

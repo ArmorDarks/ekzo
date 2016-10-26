@@ -11,13 +11,13 @@
 .#{$ekzo-o-ns}grid {
   display:    flex;
   flex-wrap:  wrap;
-  list-style: none;                   // 1
+  list-style: none; // 1
 
-  padding-left:  0;                   // 1
+  padding-left:  0; // 1
 
-  margin-bottom: 0;                   // 1
+  margin-bottom: 0; // 1
 
-  // Very infrequently occurring grid wrappers as children of grid wrappers.
+  // Very infrequently occurring grid wrappers as children of grid wrappers
   & > & { margin-left: 0; }
 
 }
