@@ -65,23 +65,21 @@
 // Color pallete
 // ---------------------------------------
 
-@if $ekzo-enable-colors-helpers {
-  @each $color, $value in $ekzo-colors {
+@each $color, $value in $ekzo-colors {
 
-    .#{$ekzo-h-ns}color--#{$color}           { color: $value !important; }
-    .#{$ekzo-h-ns}color--#{$color}\:h        { &:hover, &:focus { color: $value !important; } }
+  .#{$ekzo-h-ns}color--#{$color}           { color: $value !important; }
+  .#{$ekzo-h-ns}color--#{$color}\:h        { &:hover, &:focus { color: $value !important; } }
 
-    .#{$ekzo-h-ns}bg-color--#{$color}        { background-color: $value !important; }
-    .#{$ekzo-h-ns}bg-color--#{$color}\:h     { &:hover, &:focus { background-color: $value !important; } }
+  .#{$ekzo-h-ns}bg-color--#{$color}        { background-color: $value !important; }
+  .#{$ekzo-h-ns}bg-color--#{$color}\:h     { &:hover, &:focus { background-color: $value !important; } }
 
-    .#{$ekzo-h-ns}border-color--#{$color}    { border-color: $value !important; }
-    .#{$ekzo-h-ns}border-color--#{$color}\:h { &:hover, &:focus { border-color: $value !important; } }
+  .#{$ekzo-h-ns}border-color--#{$color}    { border-color: $value !important; }
+  .#{$ekzo-h-ns}border-color--#{$color}\:h { &:hover, &:focus { border-color: $value !important; } }
 
-    .#{$ekzo-h-ns}fill--#{$color}            { fill: $value !important; }
-    .#{$ekzo-h-ns}fill--#{$color}\:h         { &:hover, &:focus { fill: $value !important; } }
+  .#{$ekzo-h-ns}fill--#{$color}            { fill: $value !important; }
+  .#{$ekzo-h-ns}fill--#{$color}\:h         { &:hover, &:focus { fill: $value !important; } }
 
-    .#{$ekzo-h-ns}stroke--#{$color}          { stroke: $value !important; }
-    .#{$ekzo-h-ns}stroke--#{$color}\:h       { &:hover, &:focus { stroke: $value !important; } }
+  .#{$ekzo-h-ns}stroke--#{$color}          { stroke: $value !important; }
+  .#{$ekzo-h-ns}stroke--#{$color}\:h       { &:hover, &:focus { stroke: $value !important; } }
 
-  }
 }
