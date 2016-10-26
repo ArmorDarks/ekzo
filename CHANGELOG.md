@@ -180,11 +180,11 @@
 - `.o-reline__to` will from now set not only `:hover`, but also `:focus` and `:active` because of accessibility reasons.
 - Refactored `.o-border-reline`. It will try to inherit as much as possible values and no logner relies on `$ekzo-links-border-bottom-width` and `$ekzo-links-border-bottom-style` variables. Some older styles might be affected, though.
 - [breaking] Renamed `.o-border-reline` to `.o-reline-border-bottom`.
-- [breaking] Refactored `.h-text--underline--rev` into `.h-text--underline:h` which now is single responsible for adding of undernline on `:hover` and `:focus`. It no longer removes `underline`, use `.h-text--underline--flush` for it. It also now applies styles not only to `:hover`, but also on `:focus` and `:active` because of accessibility reasons.
+- [breaking] Refactored `.h-text--underline--rev` into `.h-text--underline:h` which now is single responsible for adding of undernline on `:hover` and `:focus`. It no longer removes `underline`, use `.h-text--underline0` for it. It also now applies styles not only to `:hover`, but also on `:focus` and `:active` because of accessibility reasons.
 - [breaking] Refactored `.h-text--underline--border` to more generic `.h-border-bottom`.
 - [breaking] Refactored `.h-text--underline--border--rev` into `.h-border-bottom:h` which from now resposible only for adding bottom border on ':hover'. Added `:focus` and `:active` states because of accessibility reasons.
 - [breaking] Renamed `.g-text-input` to more obvious `.g-input`.
-- [breaking] `.g-link--flush` from now does not rely on border variables and instead inherits as much as possible to make link similar to outer text. It will also inherit `:hover`, `:focus` and `:active` states. To reflect better its new nature, renamed to `.g-link--inherit`.
+- [breaking] `.g-link0` from now does not rely on border variables and instead inherits as much as possible to make link similar to outer text. It will also inherit `:hover`, `:focus` and `:active` states. To reflect better its new nature, renamed to `.g-link--inherit`.
 - [breaking] Replaced `$ekzo-links-underline` and `$ekzo-links-hover-unline` with `$ekzo-links-text-decoration` and `$ekzo-links-hover-text-decoration` which acts as much more obvious way to set default link underlines.
 - [breaking] Replaced `$ekzo-btn-unline` with `$ekzo-btn-text-decoration`, added missing `$ekzo-btn-hover-text-decoration`. They now works same as similar links-related variables.
 - [breaking] From now outlines on focus by default are enabled for a11y reasons.
@@ -206,7 +206,7 @@
 - `.o-nav--keywords` will now set delimeters on direct child anchors too, so that you can use it not on `ul`, but plain list of anchors.
 - [breaking] Moved `.g-extra-help` to objects and renamed to `.o-extra-help`.
 - [breaking] `.o-extra-help` will also work on ':hover' too.
-- [breaking] Use `0` as modifier instead of `--flush` when we not "flushing", but actually setting value to `0`. In other words, instead `.h-margin--flush` should be used `.h-margin0`, etc. This concerns lists, tables and helpers.
+- [breaking] Use `0` as modifier instead of `--flush`. For example, instead of `.h-margin0` should be used `.h-margin0`.
 - `0` helpers for `margin`, `bleed` and `padding` from now generated based on relevant maps too, so you can disabled it in case you don't need it. By default it's included, so it won't break anything.
 - [breaking] Renamed `.h-margin--center` to `.h-margin-sides--auto`.
 - [breaking] Moved `.g-table--fixed` to helpers, where it should belong, and renamed to `.h-table--fixed`.

@@ -7,7 +7,7 @@
 
 %#{$ekzo-o-ns}nav,
 .#{$ekzo-o-ns}nav {
-  @extend %#{$ekzo-g-ns}list--flush;
+  @extend %#{$ekzo-g-ns}list0;
 
   display: flex;
   flex-wrap: wrap;

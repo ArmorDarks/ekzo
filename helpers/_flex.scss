@@ -91,7 +91,7 @@
   .#{$prefix}order--2#{$postfix}     { order: 2      !important; }
   .#{$prefix}order--3#{$postfix}     { order: 3      !important; }
   .#{$prefix}order--last#{$postfix}  { order: 10000  !important; }
-  .#{$prefix}order--flush#{$postfix} { order: 0      !important; } // default for flex
+  .#{$prefix}order0#{$postfix}       { order: 0      !important; } // default for flex
 
   // -----
   // Cross axis aligment of individual item

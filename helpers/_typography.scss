@@ -136,7 +136,7 @@
   // Take element out of typography rhythm
   // Should be applied on custom elements with unusual styling
 
-  .#{$prefix}line-height--flush#{$postfix} { line-height: 1 !important; }
+  .#{$prefix}line-height0#{$postfix}    { line-height: 1 !important; }
 
   .#{$prefix}text--tracked#{$postfix}   { letter-spacing:  .16em; }
   .#{$prefix}text--tracked--#{$postfix} { letter-spacing: -.05em; }

@@ -17,13 +17,13 @@ ul { list-style-type: $ekzo-list-style-type; }
 //
 // @example
 //
-//  <ul class="g-list--flush">
+//  <ul class="g-list0">
 //    <li>Foo</li>
 //    <li>Bar</li>
 //  </ul>
 
-.#{$ekzo-g-ns}list--flush,
-%#{$ekzo-g-ns}list--flush {
+.#{$ekzo-g-ns}list0,
+%#{$ekzo-g-ns}list0 {
   list-style: none;
 
   margin-left:   0;

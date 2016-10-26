@@ -33,6 +33,6 @@
 // ---------------------------------------
 // stylelint-disable selector-list-comma-newline-after
 
-.#{$ekzo-h-ns}text--underline        { text-decoration: underline; }
-.#{$ekzo-h-ns}text--underline\:h     { &:hover, &:focus { text-decoration: underline; } }
-.#{$ekzo-h-ns}text--underline--flush { text-decoration: none; }
+.#{$ekzo-h-ns}text--underline    { text-decoration: underline; }
+.#{$ekzo-h-ns}text--underline\:h { &:hover, &:focus { text-decoration: underline; } }
+.#{$ekzo-h-ns}text--underline0   { text-decoration: none; }

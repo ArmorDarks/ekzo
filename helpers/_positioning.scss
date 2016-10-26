@@ -31,9 +31,9 @@
   // Floats
   // ---------------------------------------
 
-  .#{$prefix}float--right#{$postfix}   { float: right !important; }
-  .#{$prefix}float--left#{$postfix}    { float: left  !important; }
-  .#{$prefix}float--flush#{$postfix}   { float: none  !important; }
+  .#{$prefix}float--right#{$postfix} { float: right !important; }
+  .#{$prefix}float--left#{$postfix}  { float: left  !important; }
+  .#{$prefix}float0#{$postfix}       { float: none  !important; }
 
   // ---------------------------------------
   // Alignments
