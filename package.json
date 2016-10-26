@@ -4,7 +4,6 @@
   "description": "Sass framework for rapid and painless development",
   "homepage": "https://github.com/ArmorDarks/ekzo.sass",
   "author": "Serj Lavrin (https://github.com/ArmorDarks)",
-  "main": "_index.scss",
   "repository": {
     "type": "git",
     "url": "git://github.com/ArmorDarks/ekzo.sass.git"
