@@ -35,6 +35,7 @@
 - [breaking] Removed `.o-breadcrumb__root`. Define it in your own stylesheets.
 
 ### Added
+- Added license.
 - Added theming support:
   * Add new themes or redefine old ones with `ekzo-extend-themes(theme-name, (text-color: red))`;
   * Add theme-related styling to any class with new mixin `.foo { @include ekzo-theme() { color: ekzo-theme(text); } }`;
