@@ -215,3 +215,4 @@
 - [breaking] Display helpers no longer using `display--` prefix.
 - [breaking] Position helpers no longer using `position--` prefix.
 - Most part of generics and objects filenames has been changed to represent properly content of partials. For example, `btn.scss` for `.o-btn` instead of `buttons.scss`, or `link.scss` for `.g-link` instead of `links.scss`.
+- Make headings by default inherit font-weight styling, instead of enforcing some specific type.

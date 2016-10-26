@@ -99,7 +99,7 @@ $ekzo-ui-font-families: (
 
 $ekzo-font-weight:                  normal !default;
 
-$ekzo-headings-font-weight:         normal !default;
-$ekzo-extra-headings-font-weight:   normal !default;
+$ekzo-headings-font-weight:         inherit !default;
+$ekzo-extra-headings-font-weight:   inherit !default;
 
 $ekzo-forms-placeholder-font-style: italic !default;
