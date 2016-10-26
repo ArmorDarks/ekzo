@@ -146,13 +146,13 @@
 }
 
 // ---------------------------------------
-// Call all positioning helpers
+// Call all typography helpers
 // ---------------------------------------
 
 @include ekzo-typography-helpers($prefix: $ekzo-h-ns);
 
 // ---------------------------------------
-// Responsive positioning helpers
+// Responsive typography helpers
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
