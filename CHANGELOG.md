@@ -26,7 +26,6 @@
 - [breaking] Removed `.o-floated-nav`. With new flexbox `.o-nav` it no longer needed.
 - [breaking] Removed `.o-pack`. Its functionality merged into `.o-nav--pack` and `.o-nav--fixed-pack`. In IE8 and IE9 new modifiers will fallback to old behaviour of `.o-pack` for compitability reasons.
 - [breaking] Removed `.o-grid*` size modifiers, use new `.h-childs-displace*`.
-- [breaking] Removed `.o-island` size modifiers, use `.h-padding*` or `.h-margin*`.
 - [breaking] Removed `.o-nav--padding` size modifiers, use new `.h-anchors-padding*` o- -[breaking] anchors-margin*`.
 - [breaking] Removed `.g-table--padding` size modifiers, use new `.h-cell-padding*`.
 - [breaking] Removed `.g-list--indent`, use new `.h-childs-spacing*`.
