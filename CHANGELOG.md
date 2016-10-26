@@ -218,3 +218,4 @@
 - Most part of generics and objects filenames has been changed to represent properly content of partials. For example, `btn.scss` for `.o-btn` instead of `buttons.scss`, or `link.scss` for `.g-link` instead of `links.scss`.
 - Make headings by default inherit font-weight styling, instead of enforcing some specific type.
 - [breaking] Renamed `.h-text--uppercase` to `.h-text--caps`.
+- [breaking] Moved `.h-hide` and `.h-hide--text` to objects as `.o-hide` and `.o-hide-text`.

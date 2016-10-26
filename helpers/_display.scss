@@ -80,36 +80,6 @@
 
   .#{$prefix}visibility--hidden#{$postfix} { visibility: hidden; }
 
-  // ----
-  // Hide only visually, but have it available for screen readers
-  //
-  // @source h5bp.com/v
-
-  .#{$prefix}hide#{$postfix} {
-    position: absolute;
-
-    width:  1px;
-    height: 1px;
-
-    margin:  -1px;
-    padding:  0;
-
-    clip: rect(0 0 0 0);
-
-    overflow: hidden;
-
-    border: 0;
-  }
-
-  // ----
-  // Hide only text
-
-  .#{$prefix}text--hidden#{$postfix} {
-    text-indent: 101%;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
 }
 
 // ---------------------------------------

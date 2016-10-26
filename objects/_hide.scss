@@ -1,0 +1,51 @@
+// =======================================
+// ^HIDE
+// =======================================
+
+@mixin ekzo-hide($prefix:'', $postfix:'') {
+
+  // ----
+  // Hide only visually, but have it available for screen readers
+  //
+  // @source h5bp.com/v
+
+  .#{$prefix}hide#{$postfix} {
+    position: absolute;
+
+    width:  1px;
+    height: 1px;
+
+    margin:  -1px;
+    padding:  0;
+
+    clip: rect(0 0 0 0);
+
+    overflow: hidden;
+
+    border: 0;
+  }
+
+  // ----
+  // Hide only text
+
+  .#{$prefix}hide-text#{$postfix} {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+}
+
+// ---------------------------------------
+// Call all display helpers
+// ---------------------------------------
+
+@include ekzo-hide($prefix: $ekzo-o-ns);
+
+// ---------------------------------------
+// Responsive display helpers
+// ---------------------------------------
+
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-hide-breakpoints) {
+  @include ekzo-hide($prefix: $ekzo-o-ns, $postfix: ekzo-temp());
+}
