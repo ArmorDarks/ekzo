@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.0
 ### Removed
 - [breaking] Removed index `_framework.scss`. From now you should import needed parts directly in your project.
 - [breaking] Removed `$ekzo-enable-*` settings for objects, generics and helpers, since now it's possible to import only needed parts of Ekzo.
