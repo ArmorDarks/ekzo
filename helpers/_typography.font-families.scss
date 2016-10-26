@@ -19,17 +19,3 @@
     }
   }
 }
-
-// ---------------------------------------
-// UI fonts-families
-// ---------------------------------------
-
-@if $ekzo-enable-ui-font-families-helpers {
-  @each $group, $font-family in $ekzo-ui-font-families {
-    @if $font-family {
-
-      .#{$ekzo-helpers-ns}font-family--#{$group} { font-family: $font-family; }
-
-    }
-  }
-}

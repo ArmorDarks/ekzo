@@ -189,6 +189,8 @@
 - [breaking] From now outlines on focus by default are enabled for a11y reasons.
 - Typography helpers no longer using `ekzo-font-size-classes()` mixin and relies on simple `@each`.
 - [breaking] Split `_typography.scss` into `_typography.scss` and `_typography.misc.scss`
+- [breaking] Split `_typography.font-families.scss` into `_typography.font-families.scss` and `_typography.font-families.ui.scss`
+- [breaking] Split `_colors.scss` into `_colors.scss` and `_colors.ui.scss`
 - Refactored `ekzo-font-size()` mixin. Just internal optimizations.
 - [breaking] Renamed `.h-cursor--arrow` to `.h-cursor--default`.
 - From now framework will internally extend only via silent classes to avoid bloating of generated CSS.
