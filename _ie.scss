@@ -23,12 +23,12 @@
 // Default options, styles, colors etc
 // ---------------------------------------
 
-@import 'settings.typography.defaults';
-@import 'settings.framework.defaults';
-@import 'settings.colors.defaults';
-@import 'settings.assets.defaults';
-@import 'settings.options.defaults';
-@import 'settings.responsive.defaults';
+@import 'settings.defaults/typography';
+@import 'settings.defaults/framework';
+@import 'settings.defaults/themes';
+@import 'settings.defaults/assets';
+@import 'settings.defaults/options';
+@import 'settings.defaults/responsive';
 
 // ---------------------------------------
 // Objects
