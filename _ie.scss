@@ -111,23 +111,19 @@
 
 }
 
-@if $ekzo-enable-flex-helpers {
+// ---------------------------------------
+// Call all flex helpers
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Call all flex helpers
-  // ---------------------------------------
+@include ekzo-flex-helpers($prefix: $ekzo-helpers-ns);
 
-  @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns);
+// ---------------------------------------
+// Responsive flex helpers
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Responsive flex helpers
-  // ---------------------------------------
-
-  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints) {
-    @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
-  }
-
-} // endif
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints) {
+  @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+}
 
 // =======================================
 // ^MEDIA
@@ -155,8 +151,6 @@
   .#{$ekzo-objects-ns}media__aside { float: right; }
 
 }
-
-@if $ekzo-enable-nav {
 
 // =======================================
 // ^NAV
@@ -201,5 +195,3 @@
   > .#{$ekzo-objects-ns}nav__item { display: table-cell; }
 
 }
-
-} // endif

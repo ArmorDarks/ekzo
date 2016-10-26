@@ -112,20 +112,16 @@
 
 }
 
-@if $ekzo-enable-display-helpers {
+// ---------------------------------------
+// Call all display helpers
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Call all display helpers
-  // ---------------------------------------
+@include ekzo-display-helpers($prefix: $ekzo-helpers-ns);
 
-  @include ekzo-display-helpers($prefix: $ekzo-helpers-ns);
+// ---------------------------------------
+// Responsive display helpers
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Responsive display helpers
-  // ---------------------------------------
-
-  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints) {
-    @include ekzo-display-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
-  }
-
-} // endif
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints) {
+  @include ekzo-display-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+}

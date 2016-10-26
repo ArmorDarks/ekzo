@@ -4,18 +4,12 @@
 // ^CENTER-INNER
 // =======================================
 
-@if $ekzo-enable-center-inner {
+.#{$ekzo-objects-ns}center-inner {
+  text-align: center;
 
-  .#{$ekzo-objects-ns}center-inner {
-    text-align: center;
-
-    > * {
-      display: inline-block;
-
-      text-align: left;
-
-    }
-
+  > * {
+    display: inline-block;
+    text-align: left;
   }
 
-} // endif
+}

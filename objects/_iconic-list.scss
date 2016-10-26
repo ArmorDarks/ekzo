@@ -22,35 +22,31 @@
 //     with default bullets
 //  2. Assume that first icons in list are bullets
 
-@if $ekzo-enable-iconic-list {
+.#{$ekzo-objects-ns}iconic-list {
+  padding-left: ekzo-space(2); // 1
 
-  .#{$ekzo-objects-ns}iconic-list {
-    padding-left: ekzo-space(2); // 1
+  list-style-type: none;
 
-    list-style-type: none;
+  li {
+    position: relative;
 
-    li {
-      position: relative;
-
-      // 2
-      > .#{$ekzo-objects-ns}icon,
-      > .#{$ekzo-objects-ns}sprite { @extend %#{$ekzo-objects-ns}iconic-list__icon; }
-
-    }
+    // 2
+    > .#{$ekzo-objects-ns}icon,
+    > .#{$ekzo-objects-ns}sprite { @extend %#{$ekzo-objects-ns}iconic-list__icon; }
 
   }
 
-    .#{$ekzo-objects-ns}iconic-list__icon,
-    %#{$ekzo-objects-ns}iconic-list__icon {
-      position: absolute;
+}
 
-      width: 1.5em;
+  .#{$ekzo-objects-ns}iconic-list__icon,
+  %#{$ekzo-objects-ns}iconic-list__icon {
+    position: absolute;
 
-      text-align: center;
+    width: 1.5em;
 
-      line-height: inherit;
+    text-align: center;
 
-      margin-left: -2em;
-    }
+    line-height: inherit;
 
-} // endif
+    margin-left: -2em;
+  }

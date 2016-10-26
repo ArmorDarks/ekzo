@@ -1,36 +1,30 @@
 // =======================================
 // ^RELINE
 // =======================================
+// Removes underline from element, but adds it
+// to child span
+//
+// Useful for anchors with icons inside it
 
-@if $ekzo-enable-reline {
+.#{$ekzo-objects-ns}reline {
+  text-decoration: none;
 
-  // ----
-  // Removes underline from element, but adds it
-  // to child span
-  //
-  // Useful for anchors with icons inside it
+  &:hover .#{$ekzo-objects-ns}reline__to,
+  &:focus .#{$ekzo-objects-ns}reline__to,
+  &:active .#{$ekzo-objects-ns}reline__to { text-decoration: none; }
+}
 
-  .#{$ekzo-objects-ns}reline {
-    text-decoration: none;
+  .#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
 
-    &:hover .#{$ekzo-objects-ns}reline__to,
-    &:focus .#{$ekzo-objects-ns}reline__to,
-    &:active .#{$ekzo-objects-ns}reline__to { text-decoration: none; }
-  }
+// ----
+// Removes underline, but adds it to child span on hover
 
-    .#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
+.#{$ekzo-objects-ns}reline--rev {
+  text-decoration: none;
 
-  // ----
-  // Removes underline, but adds it to child span on hover
+  .#{$ekzo-objects-ns}reline__to { text-decoration: none; }
 
-  .#{$ekzo-objects-ns}reline--rev {
-    text-decoration: none;
-
-    .#{$ekzo-objects-ns}reline__to { text-decoration: none; }
-
-    &:hover .#{$ekzo-objects-ns}reline__to,
-    &:focus .#{$ekzo-objects-ns}reline__to,
-    &:active .#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
-  }
-
-} // endif
+  &:hover .#{$ekzo-objects-ns}reline__to,
+  &:focus .#{$ekzo-objects-ns}reline__to,
+  &:active .#{$ekzo-objects-ns}reline__to { text-decoration: underline; }
+}

@@ -3,6 +3,7 @@
 ## HEAD
 ### Removed
 - [breaking] Removed index `_framework.scss`. From now you should import needed parts directly in your project.
+- [breaking] Removed `$ekzo-enable-*` settings for objects, generics and helpers, since now it's possible to import only needed parts of Ekzo.
 - [breaking] Removed vendor-related mixins `ekzo-vendor()`, `ekzo-placeholder()` and `ekzo-keyframe()` in favor of mandatory [Autoprefixer](https://github.com/postcss/autoprefixer).
 - [breaking] Removed mixin `ekzo-headings()`. It was never used.
 - Removed `debug.scss` support. It shoudn't be part of Ekzo's core.
@@ -78,7 +79,6 @@
 - Added settings for styling `::selection`.
 - Added settings to control namespacing for class types: `$ekzo-generics-ns`, `$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`.
 - Added functions and mixins names in error messages.
-- Added `$ekzo-enable-widths-helpers` option for enabling/disabling widths.
 - Added `$ekzo-z-indexes` map and `ekzo-z-index({{z-index-name}})` function to get values from it.
 - Added `ekzo-line-height()` mixin for generating vertical rhythm based line-heights. Previously it was available only as part of `ekzo-font-size()` mixin.
 - `ekzo-breakpoint()` now accepts 2 parameters: `$breakpoint` and `$breakpoints` (backward compatible).

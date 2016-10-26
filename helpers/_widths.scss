@@ -46,23 +46,19 @@
 
 } // ekzo-widths-helpers()
 
-@if $ekzo-enable-widths-helpers {
+// ---------------------------------------
+// Call all widths
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Call all widths
-  // ---------------------------------------
+@include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions,
+  $prefix: $ekzo-helpers-ns);
 
-  @include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions,
-    $prefix: $ekzo-helpers-ns);
+// ---------------------------------------
+// Responsive widths
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Responsive widths
-  // ---------------------------------------
-
-  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-widths-helpers-breakpoints) {
-    @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
-      $prefix: $ekzo-helpers-ns,
-      $postfix: ekzo-temp());
-  }
-
-} // endif
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-widths-helpers-breakpoints) {
+  @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
+    $prefix: $ekzo-helpers-ns,
+    $postfix: ekzo-temp());
+}

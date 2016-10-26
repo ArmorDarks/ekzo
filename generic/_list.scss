@@ -4,41 +4,37 @@
 // ^LISTS
 // =======================================
 
-@if $ekzo-enable-lists {
+// ---------------------------------------
+// Default lists styling
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Default lists styling
-  // ---------------------------------------
+ul { list-style-type: $ekzo-list-style-type; }
 
-  ul { list-style-type: $ekzo-list-style-type; }
+// ---------------------------------------
+// Unstyle list
+// ---------------------------------------
+// Flush default styling and margins from list:
+//
+// @example
+//
+//  <ul class="g-list--flush">
+//    <li>Foo</li>
+//    <li>Bar</li>
+//  </ul>
 
-  // ---------------------------------------
-  // Unstyle list
-  // ---------------------------------------
-  // Flush default styling and margins from list:
-  //
-  // @example
-  //
-  //  <ul class="g-list--flush">
-  //    <li>Foo</li>
-  //    <li>Bar</li>
-  //  </ul>
+.#{$ekzo-generics-ns}list--flush,
+%#{$ekzo-generics-ns}list--flush {
+  list-style: none;
 
-  .#{$ekzo-generics-ns}list--flush,
-  %#{$ekzo-generics-ns}list--flush {
-    list-style: none;
+  margin-left:   0;
+  padding-left:  0;
+  margin-bottom: 0;
+}
 
-    margin-left:   0;
-    padding-left:  0;
-    margin-bottom: 0;
-  }
+// ---------------------------------------
+// Spacing
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Spacing
-  // ---------------------------------------
-
-  // Use `.h-childs-spacing*` to add vertical indentation between `li`
-  // Use `.h-childs-margin*` to add margin to all child `li`
-  // Use `.h-childs-padding*` to add padding to all child `li`
-
-} // endif
+// Use `.h-childs-spacing*` to add vertical indentation between `li`
+// Use `.h-childs-margin*` to add margin to all child `li`
+// Use `.h-childs-padding*` to add padding to all child `li`

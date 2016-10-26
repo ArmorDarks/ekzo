@@ -10,25 +10,21 @@
 //
 // Demo: jsfiddle.net/inuitcss/u8pV3
 
-@if $ekzo-enable-island {
+.#{$ekzo-objects-ns}island {
+  @extend %#{$ekzo-objects-ns}clearfix;
 
-  .#{$ekzo-objects-ns}island {
-    @extend %#{$ekzo-objects-ns}clearfix;
+  display: block;
 
-    display: block;
+  padding: ekzo-space(1);
 
-    padding: ekzo-space(1);
+  > :last-child,
+  > :last-child { margin-bottom: 0; }
 
-    > :last-child,
-    > :last-child { margin-bottom: 0; }
+}
 
-  }
+// ---------------------------------------
+// Spacing
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Spacing
-  // ---------------------------------------
-
-  // Use `.h-margin*` to add margin
-  // Use `.h-padding*` to add padding
-
-} // endif
+// Use `.h-margin*` to add margin
+// Use `.h-padding*` to add padding
