@@ -1,9 +1,7 @@
 Ekzo.sass framework
 ===================
 
-OOCSS-driven, layered, design-free, BEM-based, responsive and little, but mighty Sass framework for rapid and painless development.
-
-Inspired by [Inuit.css](https://github.com/csswizardry/inuit.css).
+Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty Sass framework for rapid and painless development.
 
 Requirements
 ------------
@@ -15,23 +13,18 @@ Requirements
 How to use
 ----------
 
-Ekzo.sass is modular framework, to make it work you need to import manually components which you'd like to use. They should be layered in following order:
+Ekzo.sass is modular framework, thus you need to import parts which you'd like to use explicitly in your stylesheet. Imports should be layered in following order:
 
-* Your predefined variables
+* Predefined variables
 * Tools (mixins and functions)
-* Your tools
-* Default settings or your settings
-* Base
-* Your base
-* Generic
-* Your generic
+* Settings
+* Base styles
+* Generics
 * Objects
-* Your objects
 * Your components
 * Helpers
-* Your helpers
 
-Order of components within layers is irrelevant, however, layers order is strict.
+Order of imports within layers is irrelevant, however, layers order is strict.
 
 You can refer to Kotsu's styles-file as an [example](https://github.com/LotusTM/Kotsu/tree/master/source/styles).
 
