@@ -8,7 +8,7 @@
 //
 // 1. For usage of the grid on lists
 
-.#{$ekzo-objects-ns}grid {
+.#{$ekzo-o-ns}grid {
   display:    flex;
   flex-wrap:  wrap;
   list-style: none;                   // 1
@@ -22,7 +22,7 @@
 
 }
 
-  .#{$ekzo-objects-ns}grid__item { box-sizing: border-box; }
+  .#{$ekzo-o-ns}grid__item { box-sizing: border-box; }
 
 // ---------------------------------------
 // Spacing

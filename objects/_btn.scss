@@ -9,7 +9,7 @@
 //  4. Prevent appearing of borders in case `a` has defined border. Override in your
 //     own styles if needed.
 
-.#{$ekzo-objects-ns}btn {
+.#{$ekzo-o-ns}btn {
   display: inline-block;       // 1
 
   vertical-align: middle;      // 2
@@ -40,7 +40,7 @@
 // ----
 // Make the button inherit sizing from its parent.
 
-.#{$ekzo-objects-ns}btn--inherit {
+.#{$ekzo-o-ns}btn--inherit {
   vertical-align: inherit;
 
   font-family: inherit;
@@ -59,28 +59,28 @@
 
 @mixin ekzo-buttons-sizes($postfix: '') {
 
-  .#{$ekzo-objects-ns}btn--#{$postfix} {
+  .#{$ekzo-o-ns}btn--#{$postfix} {
     padding-top:     0;
     padding-bottom:  0;
     padding-right:  .6em;
     padding-left:   .6em;
   }
 
-  .#{$ekzo-objects-ns}btn-#{$postfix} {
+  .#{$ekzo-o-ns}btn-#{$postfix} {
     padding-top:    ekzo-em(ekzo-space(.5) / 3);
     padding-bottom: ekzo-em(ekzo-space(.5) / 3);
     padding-right:  .8em;
     padding-left:   .8em;
   }
 
-  .#{$ekzo-objects-ns}btn\+#{$postfix} {
+  .#{$ekzo-o-ns}btn\+#{$postfix} {
     padding-top:    ekzo-em(ekzo-space(1) * .84);
     padding-bottom: ekzo-em(ekzo-space(1) * .84);
     padding-right:  1.5em;
     padding-left:   1.5em;
   }
 
-  .#{$ekzo-objects-ns}btn\+\+#{$postfix} {
+  .#{$ekzo-o-ns}btn\+\+#{$postfix} {
     padding-top:    ekzo-em(ekzo-space(1) * 1.17);
     padding-bottom: ekzo-em(ekzo-space(1) * 1.17);
     padding-right:  2em;
@@ -90,17 +90,17 @@
   // ----
   // Wide version of button with unspecified line-height
 
-  .#{$ekzo-objects-ns}btn--wide--#{$postfix} {
+  .#{$ekzo-o-ns}btn--wide--#{$postfix} {
     padding-right: 1.5em;
     padding-left:  1.5em;
   }
 
-  .#{$ekzo-objects-ns}btn--wide#{$postfix} {
+  .#{$ekzo-o-ns}btn--wide#{$postfix} {
     padding-right: 2em;
     padding-left:  2em;
   }
 
-  .#{$ekzo-objects-ns}btn--wide\+\+#{$postfix} {
+  .#{$ekzo-o-ns}btn--wide\+\+#{$postfix} {
     padding-right: 4em;
     padding-left:  4em;
   }
@@ -109,7 +109,7 @@
   // Fill the entirety of their container.
   // 1. Prevent conflict of width and paddings
 
-  .#{$ekzo-objects-ns}btn--full#{$postfix} {
+  .#{$ekzo-o-ns}btn--full#{$postfix} {
     width: 100%;
     box-sizing: border-box; // 1
   }
@@ -118,7 +118,7 @@
   // Button font-size modifiers based on map's values.
 
   @each $variant, $value in ekzo-get($ekzo-font-sizes, buttons) {
-    .#{$ekzo-objects-ns}btn#{$variant}#{$postfix} { font-size: $value; }
+    .#{$ekzo-o-ns}btn#{$variant}#{$postfix} { font-size: $value; }
   }
 
 } // ekzo-buttons-sizes()

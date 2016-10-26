@@ -21,21 +21,21 @@ img[height] { max-width: none; }
 // Image placement
 // ---------------------------------------
 
-.#{$ekzo-generics-ns}image--right {
+.#{$ekzo-g-ns}image--right {
   float: right;
 
   margin-bottom: ekzo-space(.5);
   margin-left:   ekzo-space(1);
 }
 
-.#{$ekzo-generics-ns}image--left {
+.#{$ekzo-g-ns}image--left {
   float: left;
 
   margin-right:  ekzo-space(1);
   margin-bottom: ekzo-space(.5);
 }
 
-.#{$ekzo-generics-ns}image--center {
+.#{$ekzo-g-ns}image--center {
   display: block;
 
   margin-right:  auto;

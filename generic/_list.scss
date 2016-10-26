@@ -22,8 +22,8 @@ ul { list-style-type: $ekzo-list-style-type; }
 //    <li>Bar</li>
 //  </ul>
 
-.#{$ekzo-generics-ns}list--flush,
-%#{$ekzo-generics-ns}list--flush {
+.#{$ekzo-g-ns}list--flush,
+%#{$ekzo-g-ns}list--flush {
   list-style: none;
 
   margin-left:   0;

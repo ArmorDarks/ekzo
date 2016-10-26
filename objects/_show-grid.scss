@@ -3,7 +3,7 @@
 // =======================================
 // @source https://github.com/jakegiltsoff/sassline/blob/master/assets/sass/modules/_show-grid.scss
 
-.#{$ekzo-objects-ns}show-grid {
+.#{$ekzo-o-ns}show-grid {
   background-image: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
   background-size: 100% ekzo-space(1);

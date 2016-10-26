@@ -2,10 +2,10 @@
 // ^RELINK
 // =======================================
 // @note This one will interact only with base link styles. If you have different styles
-//       from base link styles, it's good idea to add them to `%#{$ekzo-generics-ns}link`
+//       from base link styles, it's good idea to add them to `%#{$ekzo-g-ns}link`
 //       If you wish to have few relinks, just use `ekzo-relink()` mixin with your parameters
 
-@mixin ekzo-relink($relink-class, $relink-rev-class, $link-class, $link-flush-class: '.#{$ekzo-generics-ns}link--inherit') {
+@mixin ekzo-relink($relink-class, $relink-rev-class, $link-class, $link-flush-class: '.#{$ekzo-g-ns}link--inherit') {
 
   // ----
   // Removes link style from element, but re-adding it back to
@@ -34,7 +34,7 @@
 }
 
 @include ekzo-relink(
-  $relink-class:     '.#{$ekzo-objects-ns}relink',
-  $relink-rev-class: '.#{$ekzo-objects-ns}relink-rev',
-  $link-class:       '%#{$ekzo-generics-ns}link'
+  $relink-class:     '.#{$ekzo-o-ns}relink',
+  $relink-rev-class: '.#{$ekzo-o-ns}relink-rev',
+  $link-class:       '%#{$ekzo-g-ns}link'
 );

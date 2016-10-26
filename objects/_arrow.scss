@@ -17,7 +17,7 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 // Forms the basis for any/all CSS arrows.
 
-%#{$ekzo-objects-ns}arrow {
+%#{$ekzo-o-ns}arrow {
   position: relative;
 
   &:before,
@@ -39,8 +39,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 // Define individual edges so we can combine what we need, when we need.
 
-%#{$ekzo-objects-ns}arrow--top {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--top {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before,
   &:after {
@@ -49,8 +49,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--upper {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--upper {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before {
     top: $ekzo-arrow;
@@ -62,8 +62,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--middle {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--middle {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before,
   &:after {
@@ -77,8 +77,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--lower {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--lower {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before {
     bottom: $ekzo-arrow;
@@ -90,8 +90,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--bottom {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--bottom {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before,
   &:after {
@@ -100,8 +100,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--near {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--near {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before,
   &:after {
@@ -110,8 +110,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--left {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--left {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before {
     left: $ekzo-arrow;
@@ -123,8 +123,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--center {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--center {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before,
   &:after {
@@ -138,8 +138,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--right {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--right {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before {
     right: $ekzo-arrow;
@@ -151,8 +151,8 @@ $ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
 
 }
 
-%#{$ekzo-objects-ns}arrow--far {
-  @extend %#{$ekzo-objects-ns}arrow;
+%#{$ekzo-o-ns}arrow--far {
+  @extend %#{$ekzo-o-ns}arrow;
 
   &:before,
   &:after {

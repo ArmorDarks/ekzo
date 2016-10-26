@@ -116,12 +116,12 @@
 // Call all display helpers
 // ---------------------------------------
 
-@include ekzo-display-helpers($prefix: $ekzo-helpers-ns);
+@include ekzo-display-helpers($prefix: $ekzo-h-ns);
 
 // ---------------------------------------
 // Responsive display helpers
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints) {
-  @include ekzo-display-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+  @include ekzo-display-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
 }

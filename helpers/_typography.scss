@@ -48,7 +48,7 @@
   @each $variant, $value in ekzo-get($ekzo-font-sizes, headings) {
 
     .#{$prefix}#{$variant}#{$postfix} {
-      @extend %#{$ekzo-generics-ns}headings-properties;
+      @extend %#{$ekzo-g-ns}headings-properties;
 
       @include ekzo-font-size($value);
     }
@@ -149,12 +149,12 @@
 // Call all positioning helpers
 // ---------------------------------------
 
-@include ekzo-typography-helpers($prefix: $ekzo-helpers-ns);
+@include ekzo-typography-helpers($prefix: $ekzo-h-ns);
 
 // ---------------------------------------
 // Responsive positioning helpers
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
-  @include ekzo-typography-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+  @include ekzo-typography-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
 }

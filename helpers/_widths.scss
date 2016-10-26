@@ -51,7 +51,7 @@
 // ---------------------------------------
 
 @include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions,
-  $prefix: $ekzo-helpers-ns);
+  $prefix: $ekzo-h-ns);
 
 // ---------------------------------------
 // Responsive widths
@@ -59,6 +59,6 @@
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-widths-helpers-breakpoints) {
   @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
-    $prefix: $ekzo-helpers-ns,
+    $prefix: $ekzo-h-ns,
     $postfix: ekzo-temp());
 }

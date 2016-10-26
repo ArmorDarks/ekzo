@@ -12,7 +12,7 @@
 //
 // Requires extension in stylesheet.
 
-.#{$ekzo-objects-ns}sprite {
+.#{$ekzo-o-ns}sprite {
   position: relative;
 
   display: inline-block;
@@ -31,5 +31,5 @@
 // Apply on icon or sprite if simple margin with space isn't enough
 // or where space is unusable
 
-.#{$ekzo-objects-ns}sprite--left  { margin-right: .36em; }
-.#{$ekzo-objects-ns}sprite--right { margin-left:  .36em; }
+.#{$ekzo-o-ns}sprite--left  { margin-right: .36em; }
+.#{$ekzo-o-ns}sprite--right { margin-left:  .36em; }

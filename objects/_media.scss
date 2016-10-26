@@ -14,17 +14,17 @@
 //    <p class='o-media__content'>Lorem</p>
 //  </div>
 
-.#{$ekzo-objects-ns}media {
+.#{$ekzo-o-ns}media {
   display: flex;
   align-items: flex-start;
 }
 
-  .#{$ekzo-objects-ns}media__aside {
+  .#{$ekzo-o-ns}media__aside {
     flex: 0 0 auto;
     margin-right: ekzo-space(1);
   }
 
-  .#{$ekzo-objects-ns}media__content {
+  .#{$ekzo-o-ns}media__content {
     flex: 1 1 auto;
 
     &,
@@ -36,22 +36,22 @@
 // Spacing variations
 // ---------------------------------------
 
-.#{$ekzo-objects-ns}media0 {
+.#{$ekzo-o-ns}media0 {
 
-  .#{$ekzo-objects-ns}media__aside {
+  .#{$ekzo-o-ns}media__aside {
     margin-right: 0;
     margin-left:  0;
   }
 
 }
 
-.#{$ekzo-objects-ns}media\+ {
+.#{$ekzo-o-ns}media\+ {
 
-  .#{$ekzo-objects-ns}media__aside { margin-right: ekzo-space(2); }
+  .#{$ekzo-o-ns}media__aside { margin-right: ekzo-space(2); }
 
-  &.#{$ekzo-objects-ns}media--rev {
+  &.#{$ekzo-o-ns}media--rev {
 
-    .#{$ekzo-objects-ns}media__aside {
+    .#{$ekzo-o-ns}media__aside {
       margin-right: 0;
       margin-left:  ekzo-space(2);
     }
@@ -66,9 +66,9 @@
 // Reversed version
 // ---------------------------------------
 
-.#{$ekzo-objects-ns}media--rev {
+.#{$ekzo-o-ns}media--rev {
 
-  .#{$ekzo-objects-ns}media__aside {
+  .#{$ekzo-o-ns}media__aside {
     order: 1;
 
     margin-right: 0;

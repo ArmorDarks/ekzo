@@ -7,8 +7,8 @@
 // ---------------------------------------
 
 a,
-.#{$ekzo-generics-ns}link,
-%#{$ekzo-generics-ns}link {
+.#{$ekzo-g-ns}link,
+%#{$ekzo-g-ns}link {
   @include ekzo-theme() { color: ekzo-theme(links); }
 
   @if $ekzo-links-text-decoration { text-decoration: $ekzo-links-text-decoration; }
@@ -28,8 +28,8 @@ a,
 // Makes link looks like ordinary text.
 // Add .cursor-arrow to remove "pointer" cursor and make it completely like ordinary text
 
-.#{$ekzo-generics-ns}link--inherit,
-%#{$ekzo-generics-ns}link--inherit {
+.#{$ekzo-g-ns}link--inherit,
+%#{$ekzo-g-ns}link--inherit {
   text-decoration: inherit;
 
   @include ekzo-theme() {
@@ -72,11 +72,11 @@ a,
 // @example <a href=# class="link--go">Read more</a>
 
 // Fix wrong aligment on some elements
-.#{$ekzo-generics-ns}link--go:after,
-.#{$ekzo-generics-ns}link--back:before {
+.#{$ekzo-g-ns}link--go:after,
+.#{$ekzo-g-ns}link--back:before {
   display: inline-block;
   vertical-align: baseline;
 }
 
-.#{$ekzo-generics-ns}link--go:after    { content: $ekzo-links--go-content; }
-.#{$ekzo-generics-ns}link--back:before { content: $ekzo-links--back-content; }
+.#{$ekzo-g-ns}link--go:after    { content: $ekzo-links--go-content; }
+.#{$ekzo-g-ns}link--back:before { content: $ekzo-links--back-content; }

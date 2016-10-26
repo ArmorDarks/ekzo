@@ -13,20 +13,20 @@
     @each $color, $value in ekzo-get($ekzo-themes, $theme) {
       @if $value {
 
-        .#{$ekzo-helpers-ns}color--#{$color}           { @include ekzo-theme() { color: $value !important; } }
-        .#{$ekzo-helpers-ns}color--#{$color}\:h        { @include ekzo-theme() { &:hover, &:focus { color: $value !important; } } }
+        .#{$ekzo-h-ns}color--#{$color}           { @include ekzo-theme() { color: $value !important; } }
+        .#{$ekzo-h-ns}color--#{$color}\:h        { @include ekzo-theme() { &:hover, &:focus { color: $value !important; } } }
 
-        .#{$ekzo-helpers-ns}bg-color--#{$color}        { @include ekzo-theme() { background-color: $value !important; } }
-        .#{$ekzo-helpers-ns}bg-color--#{$color}\:h     { @include ekzo-theme() { &:hover, &:focus { background-color: $value !important; } } }
+        .#{$ekzo-h-ns}bg-color--#{$color}        { @include ekzo-theme() { background-color: $value !important; } }
+        .#{$ekzo-h-ns}bg-color--#{$color}\:h     { @include ekzo-theme() { &:hover, &:focus { background-color: $value !important; } } }
 
-        .#{$ekzo-helpers-ns}border-color--#{$color}    { @include ekzo-theme() { border-color: $value !important; } }
-        .#{$ekzo-helpers-ns}border-color--#{$color}\:h { @include ekzo-theme() { &:hover, &:focus { border-color: $value !important; } } }
+        .#{$ekzo-h-ns}border-color--#{$color}    { @include ekzo-theme() { border-color: $value !important; } }
+        .#{$ekzo-h-ns}border-color--#{$color}\:h { @include ekzo-theme() { &:hover, &:focus { border-color: $value !important; } } }
 
-        .#{$ekzo-helpers-ns}fill--#{$color}            { @include ekzo-theme() { fill: $value !important; } }
-        .#{$ekzo-helpers-ns}fill--#{$color}\:h         { @include ekzo-theme() { &:hover, &:focus { fill: $value !important; } } }
+        .#{$ekzo-h-ns}fill--#{$color}            { @include ekzo-theme() { fill: $value !important; } }
+        .#{$ekzo-h-ns}fill--#{$color}\:h         { @include ekzo-theme() { &:hover, &:focus { fill: $value !important; } } }
 
-        .#{$ekzo-helpers-ns}stroke--#{$color}          { @include ekzo-theme() { stroke: $value !important; } }
-        .#{$ekzo-helpers-ns}stroke--#{$color}\:h       { @include ekzo-theme() { &:hover, &:focus { stroke: $value !important; } } }
+        .#{$ekzo-h-ns}stroke--#{$color}          { @include ekzo-theme() { stroke: $value !important; } }
+        .#{$ekzo-h-ns}stroke--#{$color}\:h       { @include ekzo-theme() { &:hover, &:focus { stroke: $value !important; } } }
 
       }
     }

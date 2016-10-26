@@ -16,26 +16,26 @@
 // @note We setting only `border-width`, because that class works on assumption, that
 //       all elements by default inherit at least `solid` style, as defined in `normilize.scss`
 //       `border-color`, by default, will be inherited from element's `color`
-.#{$ekzo-helpers-ns}border        { border-width: 1px; }
-.#{$ekzo-helpers-ns}border-top    { border-top-width: 1px; }
-.#{$ekzo-helpers-ns}border-right  { border-right-width: 1px; }
-.#{$ekzo-helpers-ns}border-bottom { border-bottom-width: 1px; }
-.#{$ekzo-helpers-ns}border-left   { border-left-width: 1px; }
+.#{$ekzo-h-ns}border        { border-width: 1px; }
+.#{$ekzo-h-ns}border-top    { border-top-width: 1px; }
+.#{$ekzo-h-ns}border-right  { border-right-width: 1px; }
+.#{$ekzo-h-ns}border-bottom { border-bottom-width: 1px; }
+.#{$ekzo-h-ns}border-left   { border-left-width: 1px; }
 
 // ----
 // Removes underline, but adds it on hover
 
-.#{$ekzo-helpers-ns}border\:h        { &:hover, &:focus  { border-width: 1px; } }
-.#{$ekzo-helpers-ns}border-top\:h    { &:hover, &:focus  { border-top-width: 1px; } }
-.#{$ekzo-helpers-ns}border-right\:h  { &:hover, &:focus  { border-right-width: 1px; } }
-.#{$ekzo-helpers-ns}border-bottom\:h { &:hover, &:focus  { border-bottom-width: 1px; } }
-.#{$ekzo-helpers-ns}border-left\:h   { &:hover, &:focus  { border-left-width: 1px; } }
+.#{$ekzo-h-ns}border\:h        { &:hover, &:focus  { border-width: 1px; } }
+.#{$ekzo-h-ns}border-top\:h    { &:hover, &:focus  { border-top-width: 1px; } }
+.#{$ekzo-h-ns}border-right\:h  { &:hover, &:focus  { border-right-width: 1px; } }
+.#{$ekzo-h-ns}border-bottom\:h { &:hover, &:focus  { border-bottom-width: 1px; } }
+.#{$ekzo-h-ns}border-left\:h   { &:hover, &:focus  { border-left-width: 1px; } }
 
 // @note `!important` here doesn't work well too, since it enforcing too much inheritance
-.#{$ekzo-helpers-ns}border--inherit { border: inherit; }
+.#{$ekzo-h-ns}border--inherit { border: inherit; }
 
-.#{$ekzo-helpers-ns}border0        { border-width:        0; }
-.#{$ekzo-helpers-ns}border-top0    { border-top-width:    0; }
-.#{$ekzo-helpers-ns}border-right0  { border-right-width:  0; }
-.#{$ekzo-helpers-ns}border-bottom0 { border-bottom-width: 0; }
-.#{$ekzo-helpers-ns}border-left0   { border-left-width:   0; }
+.#{$ekzo-h-ns}border0        { border-width:        0; }
+.#{$ekzo-h-ns}border-top0    { border-top-width:    0; }
+.#{$ekzo-h-ns}border-right0  { border-right-width:  0; }
+.#{$ekzo-h-ns}border-bottom0 { border-bottom-width: 0; }
+.#{$ekzo-h-ns}border-left0   { border-left-width:   0; }

@@ -14,7 +14,7 @@
   $svg-id:  $ekzo-icon-font-svg-id
 );
 
-.#{$ekzo-objects-ns}icon {
+.#{$ekzo-o-ns}icon {
   position: relative;
 
   display: inline-block;
@@ -41,7 +41,7 @@
 // Make width equal to height of icon
 // Useful for lists and menus
 
-.#{$ekzo-objects-ns}icon--fixed { width: 1em; }
+.#{$ekzo-o-ns}icon--fixed { width: 1em; }
 
 // ---------------------------------------
 // Spacing
@@ -49,5 +49,5 @@
 // Apply on icon or sprite if simple margin with space isn't enough
 // or where space is unusable
 
-.#{$ekzo-objects-ns}icon--left  { margin-right: .36em; }
-.#{$ekzo-objects-ns}icon--right { margin-left:  .36em; }
+.#{$ekzo-o-ns}icon--left  { margin-right: .36em; }
+.#{$ekzo-o-ns}icon--right { margin-left:  .36em; }

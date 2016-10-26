@@ -109,12 +109,12 @@
 // Call all flex helpers
 // ---------------------------------------
 
-@include ekzo-flex-helpers($prefix: $ekzo-helpers-ns);
+@include ekzo-flex-helpers($prefix: $ekzo-h-ns);
 
 // ---------------------------------------
 // Responsive flex helpers
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints) {
-  @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+  @include ekzo-flex-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
 }

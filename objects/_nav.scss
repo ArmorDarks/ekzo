@@ -1,13 +1,13 @@
-// @todo Disabled due to issues with Sass placeholder: `Expected selector "%#{$ekzo-objects-ns}nav > li > a" to come before selector ".#{$ekzo-objects-ns}nav > a"`
+// @todo Disabled due to issues with Sass placeholder: `Expected selector "%#{$ekzo-o-ns}nav > li > a" to come before selector ".#{$ekzo-o-ns}nav > a"`
 // stylelint-disable no-descending-specificity
 
 // =======================================
 // ^NAV
 // =======================================
 
-%#{$ekzo-objects-ns}nav,
-.#{$ekzo-objects-ns}nav {
-  @extend %#{$ekzo-generics-ns}list--flush;
+%#{$ekzo-o-ns}nav,
+.#{$ekzo-o-ns}nav {
+  @extend %#{$ekzo-g-ns}list--flush;
 
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +23,7 @@
 // ---------------------------------------
 // Extends `.o-nav` and throws the list into vertical mode
 
-.#{$ekzo-objects-ns}nav--stacked {
+.#{$ekzo-o-ns}nav--stacked {
   flex-direction: column;
 
   > a { align-self: flex-start; } // for cases when you stack only anchors, without list
@@ -35,7 +35,7 @@
 // ---------------------------------------
 // Extends `.o-nav` and throws all links inside in block or inline mode
 
-.#{$ekzo-objects-ns}nav--block  {
+.#{$ekzo-o-ns}nav--block  {
 
   > a,
   > li,
@@ -43,7 +43,7 @@
 
 }
 
-.#{$ekzo-objects-ns}nav--inline  {
+.#{$ekzo-o-ns}nav--inline  {
 
   > a,
   > li,
@@ -63,7 +63,7 @@
 // ----
 // Imitate white-space between regular `inline-block`s
 
-.#{$ekzo-objects-ns}nav--space {
+.#{$ekzo-o-ns}nav--space {
 
   > a,
   > li { margin-right: .26em; }
@@ -74,19 +74,19 @@
 // Packed nav
 // ---------------------------------------
 
-.#{$ekzo-objects-ns}nav--pack {
+.#{$ekzo-o-ns}nav--pack {
 
   > a,
   > li,
-  > .#{$ekzo-objects-ns}nav__item { flex: 1 1 auto; }
+  > .#{$ekzo-o-ns}nav__item { flex: 1 1 auto; }
 
 }
 
-.#{$ekzo-objects-ns}nav--fixed-pack {
+.#{$ekzo-o-ns}nav--fixed-pack {
 
   > a,
   > li,
-  > .#{$ekzo-objects-ns}nav__item { flex: 1 1 0%; }
+  > .#{$ekzo-o-ns}nav__item { flex: 1 1 0%; }
 
 }
 
@@ -95,7 +95,7 @@
 // ---------------------------------------
 // Make a list of keywords. Extends `.nav`, e.g.:
 
-.#{$ekzo-objects-ns}nav--keywords {
+.#{$ekzo-o-ns}nav--keywords {
 
   > a:after,
   > li:after { content: '\002C' '\00A0'; }

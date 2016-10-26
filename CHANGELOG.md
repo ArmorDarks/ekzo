@@ -77,7 +77,7 @@
 - Added `ekzo-rem()` function, which converts value into rems.
 - Added `ekzo-зч()` function, which converts value into pxs.
 - Added settings for styling `::selection`.
-- Added settings to control namespacing for class types: `$ekzo-generics-ns`, `$ekzo-objects-ns`, `$ekzo-scopes-ns` and `$ekzo-helpers-ns`.
+- Added settings to control namespacing for class types: `$ekzo-g-ns`, `$ekzo-o-ns`, `$ekzo-s-ns` and `$ekzo-h-ns`.
 - Added functions and mixins names in error messages.
 - Added `$ekzo-z-indexes` map and `ekzo-z-index({{z-index-name}})` function to get values from it.
 - Added `ekzo-line-height()` mixin for generating vertical rhythm based line-heights. Previously it was available only as part of `ekzo-font-size()` mixin.

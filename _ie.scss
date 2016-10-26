@@ -46,9 +46,9 @@
 // 2. Used display model `inline-block` yeilds unwanted whitespaces
 //    which we have to removed with quite cruel method
 
-.#{$ekzo-objects-ns}grid { letter-spacing: -.31em; }
+.#{$ekzo-o-ns}grid { letter-spacing: -.31em; }
 
-  .#{$ekzo-objects-ns}grid__item {
+  .#{$ekzo-o-ns}grid__item {
     vertical-align: top;
     display: inline-block; // 1
     letter-spacing: normal; // 2
@@ -115,14 +115,14 @@
 // Call all flex helpers
 // ---------------------------------------
 
-@include ekzo-flex-helpers($prefix: $ekzo-helpers-ns);
+@include ekzo-flex-helpers($prefix: $ekzo-h-ns);
 
 // ---------------------------------------
 // Responsive flex helpers
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints) {
-  @include ekzo-flex-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
+  @include ekzo-flex-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
 }
 
 // =======================================
@@ -130,14 +130,14 @@
 // =======================================
 // Fallback to float-based media object, since IE8-9 doesn't support flexbox
 
-.#{$ekzo-objects-ns}media { @extend %#{$ekzo-objects-ns}clearfix; }
+.#{$ekzo-o-ns}media { @extend %#{$ekzo-o-ns}clearfix; }
 
-  .#{$ekzo-objects-ns}media__aside {
+  .#{$ekzo-o-ns}media__aside {
     float: left;
     display: block;
   }
 
-  .#{$ekzo-objects-ns}media__content {
+  .#{$ekzo-o-ns}media__content {
     display: block;
     overflow: hidden;
   }
@@ -146,9 +146,9 @@
 // Reversed version
 // ---------------------------------------
 
-.#{$ekzo-objects-ns}media--rev {
+.#{$ekzo-o-ns}media--rev {
 
-  .#{$ekzo-objects-ns}media__aside { float: right; }
+  .#{$ekzo-o-ns}media__aside { float: right; }
 
 }
 
@@ -159,7 +159,7 @@
 // ----
 // Extends `.nav` and throws the list into vertical mode, e.g.:
 
-.#{$ekzo-objects-ns}nav--stacked {
+.#{$ekzo-o-ns}nav--stacked {
 
   > a {
     float: left;
@@ -174,17 +174,17 @@
 // Packed nav
 // ---------------------------------------
 
-.#{$ekzo-objects-ns}nav--pack {
+.#{$ekzo-o-ns}nav--pack {
   display: table;
   width: 100%; // Fill all available space.
 
   > li,
   > a,
-  > .#{$ekzo-objects-ns}nav__item { display: table-cell; }
+  > .#{$ekzo-o-ns}nav__item { display: table-cell; }
 
 }
 
-.#{$ekzo-objects-ns}nav--fixed-pack {
+.#{$ekzo-o-ns}nav--fixed-pack {
   display: table;
   table-layout: fixed;
 
@@ -192,6 +192,6 @@
 
   > li,
   > a,
-  > .#{$ekzo-objects-ns}nav__item { display: table-cell; }
+  > .#{$ekzo-o-ns}nav__item { display: table-cell; }
 
 }
