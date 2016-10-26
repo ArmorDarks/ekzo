@@ -188,6 +188,7 @@
 - [breaking] Replaced `$ekzo-btn-unline` with `$ekzo-btn-text-decoration`, added missing `$ekzo-btn-hover-text-decoration`. They now works same as similar links-related variables.
 - [breaking] From now outlines on focus by default are enabled for a11y reasons.
 - Typography helpers no longer using `ekzo-font-size-classes()` mixin and relies on simple `@each`.
+- [breaking] Split `_typography.scss` into `_typography.scss` and `_typography.misc.scss`
 - Refactored `ekzo-font-size()` mixin. Just internal optimizations.
 - [breaking] Renamed `.h-cursor--arrow` to `.h-cursor--default`.
 - From now framework will internally extend only via silent classes to avoid bloating of generated CSS.
