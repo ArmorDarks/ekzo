@@ -1,15 +1,15 @@
 {
-  "name": "Ekzo.sass",
+  "name": "Ekzo",
   "version": "2.0.0-beta",
   "description": "Sass framework for rapid and painless development",
-  "homepage": "https://github.com/ArmorDarks/ekzo.sass",
+  "homepage": "https://github.com/ArmorDarks/ekzo",
   "author": "Serj Lavrin (https://github.com/ArmorDarks)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ArmorDarks/ekzo.sass.git"
+    "url": "git://github.com/ArmorDarks/ekzo.git"
   },
   "bugs": {
-    "url": "https://github.com//ArmorDarks/ekzo.sass/issues"
+    "url": "https://github.com//ArmorDarks/ekzo/issues"
   },
   "license": "Apache-2.0",
   "keywords": [

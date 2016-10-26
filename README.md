@@ -1,4 +1,4 @@
-Ekzo.sass framework
+Ekzo framework
 ===================
 
 Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty Sass framework for rapid and painless development.
@@ -13,7 +13,7 @@ Requirements
 How to use
 ----------
 
-Ekzo.sass is modular framework, thus you need to import parts which you'd like to use explicitly in your stylesheet. Imports should be layered in following order:
+Ekzo is modular framework, thus you need to import parts which you'd like to use explicitly in your stylesheet. Imports should be layered in following order:
 
 * Predefined variables
 * Tools (mixins and functions)
