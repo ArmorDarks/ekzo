@@ -94,8 +94,8 @@
 - Added `.h-font-weight--inherit` helper.
 - Added `.h-font-weight--lighter` helper.
 - Added `.h-font-weight--bolder` helper.
-- Added `.h-text--lowercase` helper.
-- Added `.h-text--caps` helper.
+- Added `.h-text--lower` helper.
+- Added `.h-text--capital` helper.
 - Added `.h-font-family--inherit`.
 - Added `.h-font-size--inherit` helper which forces inheritance of `font-size`.
 - Added `.h-align--baseline` helper which sets `vertical-align: baseline`.
@@ -217,3 +217,4 @@
 - [breaking] Position helpers no longer using `position--` prefix.
 - Most part of generics and objects filenames has been changed to represent properly content of partials. For example, `btn.scss` for `.o-btn` instead of `buttons.scss`, or `link.scss` for `.g-link` instead of `links.scss`.
 - Make headings by default inherit font-weight styling, instead of enforcing some specific type.
+- [breaking] Renamed `.h-text--uppercase` to `.h-text--caps`.
