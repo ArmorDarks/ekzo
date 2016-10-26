@@ -34,6 +34,7 @@
 - [breaking] Removed `.g-list--padding`, use new `.h-childs-padding*`.
 - [breaking] Removed default margin between two `fieldset`, use new `.h-childs-spacing*`.
 - [breaking] Removed `.o-breadcrumb__root`. Define it in your own stylesheets.
+- [breaking] Removed `.o-island`
 
 ### Added
 - Added license.
