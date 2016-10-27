@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Added
+- Added `.o-container` for making sticky footers easier.
+
 ## 2.0.0
 ### Removed
 - [breaking] Removed index `_framework.scss`. From now you should import needed parts directly in your project.
