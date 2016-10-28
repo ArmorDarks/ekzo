@@ -5,8 +5,25 @@
 ### Added
 - Added `.o-container` for making sticky footers easier.
 
+### Changed
+- [breaking] Renamed `.h-flex__item--grow*` helpers into `.h-flex-grow*`.
+- [breaking] Renamed `.h-flex__item--shrink*` helpers into `.h-flex-shrink*`.
+- [breaking] Renamed `.h-flex__item--basis*` helpers into `.h-flex-basis*`.
+- [breaking] Renamed aligning `.h-flex__item--flex*` helpers into `.h-flex-self--*`.
+- [breaking] Renamed `.h-flex__item--flex*` helpers into `.h-flex*`.
+- [breaking] Changed modifiers logic of freshly renamed `.h-flex*` helpers.
+
+  Now it fallows pattern `.h-flex{grow}{shrink}-{basis}`, where `grow` represented as typical Ezko increment in form of `+` or `0`, while `shrink` and `basis` are optional modifiers, represented in numerical form.
+
+  Few examples of currently valid helpers:
+  * `.h-flex+` for `flex: 1 0 auto`
+  * `.h-flex+1` for `flex: 1 1 auto`
+  * `.h-flex+1-0%` for `flex: 1 1 0%`
+  * `.h-flex0` for `flex: none`
+
 ### Fixed
 - Fixed not updated to 2.0.0 requirements height helpers file which resulted in errors during import.
+- Fixed wrongly positioned breakpoint `$postfix` in some flex helpers.
 
 ## 2.0.0
 ### Removed
