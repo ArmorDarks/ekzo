@@ -5,6 +5,9 @@
 ### Added
 - Added `.o-container` for making sticky footers easier.
 
+### Fixed
+- Fixed not updated to 2.0.0 requirements height helpers file which resulted in errors during import.
+
 ## 2.0.0
 ### Removed
 - [breaking] Removed index `_framework.scss`. From now you should import needed parts directly in your project.

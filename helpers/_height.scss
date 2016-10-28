@@ -10,20 +10,16 @@
 
 }
 
-@if $ekzo-enable-height-helpers {
+// ---------------------------------------
+// Call all height helpers
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Call all height helpers
-  // ---------------------------------------
+@include ekzo-height-helpers($prefix: $ekzo-h-ns);
 
-  @include ekzo-height-helpers($prefix: $ekzo-helpers-ns);
+// ---------------------------------------
+// Responsive height helpers
+// ---------------------------------------
 
-  // ---------------------------------------
-  // Responsive height helpers
-  // ---------------------------------------
-
-  @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints) {
-    @include ekzo-height-helpers($prefix: $ekzo-helpers-ns, $postfix: ekzo-temp());
-  }
-
-} // endif
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints) {
+  @include ekzo-height-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
+}
