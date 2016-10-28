@@ -9,7 +9,7 @@
 - [breaking] Renamed `.h-flex__item--grow*` helpers into `.h-flex-grow*`.
 - [breaking] Renamed `.h-flex__item--shrink*` helpers into `.h-flex-shrink*`.
 - [breaking] Renamed `.h-flex__item--basis*` helpers into `.h-flex-basis*`.
-- [breaking] Renamed aligning `.h-flex__item--flex*` helpers into `.h-flex-self--*`.
+- [breaking] Renamed aligning `.h-flex__item--*` helpers into `.h-flex-self--*`.
 - [breaking] Renamed `.h-flex__item--flex*` helpers into `.h-flex*`.
 - [breaking] Changed modifiers logic of freshly renamed `.h-flex*` helpers.
 
