@@ -1,7 +1,7 @@
 // =======================================
 // ^CONTAINER
 // =======================================
-// Display every direct child as flex item. This allows to set a footer
+// Display every direct descendants as flex item. This allows to set a footer
 // to always stick at bottom, even when there is no content on page.
 // Best used on `<body>`.
 //
@@ -17,10 +17,12 @@
   display: flex;
   flex-direction: column;
 
-  height: 100%;           // 1, 2
-
   @include ekzo-breakpoint(print) { display: block; } // 3
 }
 
-  .#{$ekzo-o-ns}container__flex  { flex: 1 0 auto; } // 4
-  .#{$ekzo-o-ns}container__fixed { flex: none; }     // 4
+// Use it only on root element, all direct descendants with `o-container o-containter__flex`
+// will expand without need to specify height
+.#{$ekzo-o-ns}container--max { height: 100%; }        // 1, 2
+
+  .#{$ekzo-o-ns}container__flex  { flex: 1 0 auto; }  // 4
+  .#{$ekzo-o-ns}container__fixed { flex: none; }      // 4
