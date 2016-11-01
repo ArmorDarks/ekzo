@@ -6,53 +6,11 @@
 // Improved version of normalize.css merged with resetting css and some ideas from sanitize.css
 // Head commit during last update: https://github.com/necolas/normalize.css/commit/4559de001bc15838c0314c713645086bdef64bc3
 
-// ----
-// Prevent adjustments of font size after orientation changes in
-// IE on Windows Phone and in iOS.
-
-html { text-size-adjust: 100%; }
-
-// ----
-// Reset margins and paddings
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-dl,
-dd,
-ol,
-ul,
-form,
-fieldset,
-legend,
-figure,
-table,
-th,
-td,
-caption,
-hr,
-input,
-textarea,
-optgroup,
-select,
-button,
-a,
-img {
-  margin:  0;
-  padding: 0;
-}
-
 // ---------------------------------------
-// Display definitions
+// Document
 // ---------------------------------------
 
+// ----
 // Universal inheritance
 // @experimental
 
@@ -78,66 +36,70 @@ img {
 }
 
 // ----
-// Add the correct display in IE 9-.
-// 1. Add the correct display in Edge, IE, and Firefox.
-// 2. Add the correct display in IE.
+// Prevent adjustments of font size after orientation changes in
+// IE on Windows Phone and in iOS.
+
+html { text-size-adjust: 100%; }
+
+// ---------------------------------------
+// Sections
+// ---------------------------------------
+
+// ----
+// Reset margins
+
+body { margin: 0; }
+
+// ----
+// Add the correct display in IE 9-
 
 article,
 aside,
-details, // 1
-figcaption,
-figure,
 footer,
 header,
-hgroup,
-main, // 2
-menu,
 nav,
 section { display: block; }
 
-// ----
-// Add the correct display in all browsers.
-
-summary { display: list-item; }
-
-// ----
-// Correct `inline-block` display not defined in IE 8/9.
-
-audio,
-canvas,
-progress,
-video { display: inline-block; }
+// ---------------------------------------
+// Grouping content
+// ---------------------------------------
 
 // ----
-// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+// Add the correct display in IE 9-
+// 1. Add the correct display in IE.
 
-progress { vertical-align: baseline; }
+figcaption,
+figure,
+main { display: block; } // 1
 
 // ----
-// Add the correct display in iOS 4-7.
+// 1. Add the correct box sizing in Firefox.
+// 2. Show the overflow in Edge and IE.
+// 3. Redefine removed border-width
 
-audio:not([controls]) {
-  display: none;
-  height: 0;
+hr {
+  @if not $ekzo-global-border-box { box-sizing: content-box; } // 1
+
+  height: 0; // 1
+
+  overflow: visible; // 2
+
+  border-width: 1px; // 3
 }
 
 // ----
-// Address `[hidden]` styling not present in IE 8/9/10.
-// Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+// 1. Correct the inheritance and scaling of font size in all browsers.
+// 2. Correct the odd `em` font sizing in all browsers.
 
-[hidden],
-template { display: none; }
+pre {
+  font-family: monospace, monospace; // 1
+  font-size: 1em;                    // 2
+}
 
 // ----
-// Remove the gap between images, videos, iframes, audio and canvas and the bottom of
-// their containers: h5bp.com/i/440
+// Contain overflow in all browsers.
 
-img,
-svg,
-audio,
-canvas,
-video,
-iframe { vertical-align: middle; }
+pre { overflow: auto; }
 
 // ----
 // Remove most spacing between table cells and border
@@ -149,7 +111,7 @@ table {
 }
 
 // ---------------------------------------
-// Links
+// Text-level semantics
 // ---------------------------------------
 
 // ----
@@ -163,13 +125,8 @@ a { background-color: transparent; }
 a:active,
 a:hover { @if $ekzo-disable-links-outline { outline-width: 0; } }
 
-// ---------------------------------------
-// Text-level semantics
-// ---------------------------------------
-
 // ----
-// 1. Remove the bottom border in Firefox 39-.
-// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 
 abbr[title] {
   border-bottom-width: 1px;
@@ -179,10 +136,27 @@ abbr[title] {
 }
 
 // ----
-// Give a help cursor to elements that give extra info on `:hover`.
+// Prevent the duplicate application of `bolder` by the next rule in Safari 6.
 
-abbr[title],
-dfn[title] { cursor: help; }
+b,
+strong { font-weight: inherit; }
+
+// ----
+// Add the correct font weight in Chrome, Edge, and Safari.
+
+b,
+strong { font-weight: bolder; }
+
+// ----
+// 1. Correct the inheritance and scaling of font size in all browsers.
+// 2. Correct the odd `em` font sizing in all browsers.
+
+code,
+kdb,
+samp {
+  font-family: monospace, monospace; // 1
+  font-size: 1em;                    // 2
+}
 
 // ----
 // Add the correct font style in Android 4.3-.
@@ -190,12 +164,10 @@ dfn[title] { cursor: help; }
 dfn { font-style: italic; }
 
 // ----
-// Add the correct font weight in Chrome, Edge, and Safari.
+// Give a help cursor to elements that give extra info on `:hover`.
 
-b,
-strong {
-  font-weight: bolder;
-}
+abbr[title],
+dfn[title] { cursor: help; }
 
 // ----
 // Add the correct background and color in IE 9-.
@@ -231,6 +203,20 @@ sub { bottom: -.25em; }
 // ---------------------------------------
 
 // ----
+// Add the correct display in IE 9-.
+
+audio,
+video { display: inline-block; }
+
+// ----
+// Add the correct display in iOS 4-7.
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+// ----
 // 1. Remove border when inside `a` element in IE 8/9.
 // 2. So that `alt` text is visually offset if images don't load.
 
@@ -245,42 +231,6 @@ img {
 svg:not(:root) { overflow: hidden; }
 
 // ---------------------------------------
-// Grouping content
-// ---------------------------------------
-
-// ----
-// 1. Correct the inheritance and scaling of font size in all browsers.
-// 2. Correct the odd `em` font sizing in all browsers.
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; // 1
-  font-size: 1em;                    // 2
-}
-
-// ----
-// Contain overflow in all browsers.
-
-pre { overflow: auto; }
-
-// ----
-// 1. Add the correct box sizing in Firefox.
-// 2. Show the overflow in Edge and IE.
-// 3. Redefine removed above width
-
-hr {
-  @if not $ekzo-global-border-box { box-sizing: content-box; } // 1
-
-  height: 0; // 1
-
-  overflow: visible; // 2
-
-  border-width: 1px; // 3
-}
-
-// ---------------------------------------
 // Forms
 // ---------------------------------------
 
@@ -288,6 +238,7 @@ hr {
 // 1. Correct color not being inherited.
 //    Known issue: affects color of disabled elements.
 // 2. Change the font styles in all browsers (opinionated).
+// 3. Remove the margin in Firefox and Safari.
 
 button,
 input,
@@ -296,6 +247,8 @@ select,
 textarea {
   color:  inherit; // 1
   font:   inherit; // 2
+
+  margin: 0        // 3
 }
 
 // ----
@@ -310,11 +263,6 @@ input,
 textarea,
 select,
 button { @if $ekzo-disable-forms-outline { outline-width: 0; } }
-
-// ----
-// Remove default border from `fieldset` and `legend`.
-
-fieldset { border-width: 0; }
 
 // ----
 // Show the overflow in IE.
@@ -341,14 +289,6 @@ html [type='button'], // 1
 [type='submit'] { appearance: button; } // 2
 
 // ----
-// Inputs should inherift line-height from parent
-//
-// @todo Check is it working properly
-// @ref https://github.com/necolas/normalize.css/issues/377
-
-input { line-height: inherit; }
-
-// ----
 // Remove the inner border and padding in Firefox.
 
 button::-moz-focus-inner,
@@ -358,6 +298,11 @@ button::-moz-focus-inner,
   border-width: 0;
   padding: 0;
 }
+
+// ----
+// Unstyle fieldset
+
+fieldset { border-width: 0; }
 
 // ----
 // 1. Correct the text wrapping in Edge and IE.
@@ -375,6 +320,15 @@ legend {
 }
 
 // ----
+// 1. Add the correct display in IE 9-.
+// 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+
+progress {
+  display: inline-block;    // 1
+  vertical-align: baseline; // 2
+}
+
+// ----
 // 1. Remove the default vertical scrollbar in IE.
 // 2. Allow only vertical resizing of textareas
 
@@ -385,9 +339,13 @@ textarea {
 
 // ----
 // 1. Add the correct box sizing in IE 10-.
+// 2. Remove the padding in IE 10-.
 
 [type='checkbox'],
-[type='radio'] { box-sizing: border-box; } // 1
+[type='radio'] {
+  box-sizing: border-box; // 1
+  padding: 0;
+}
 
 // ----
 // Correct the cursor style of increment and decrement buttons in Chrome.
@@ -397,13 +355,11 @@ textarea {
 
 // ----
 // 1. Correct the odd appearance of search inputs in Chrome and Safari.
-// 2. Address `box-sizing` set to `border-box` in Safari and Chrome, but not Firefox
 // 3. Correct the outline style in Safari.
 
 [type='search'] {
   appearance: textfield; // 1
-  box-sizing: border-box;        // 2
-  outline-offset: -2px;          // 3
+  outline-offset: -2px;  // 3
 }
 
 // ----
@@ -412,5 +368,44 @@ textarea {
 
 ::-webkit-file-upload-button {
   appearance: button; // 1
-  font: inherit;              // 2
+  font: inherit;      // 2
 }
+
+// ---------------------------------------
+// Interactive
+// ---------------------------------------
+
+// ----
+// Add the correct display in IE 9-.
+// 1. Add the correct display in Edge, IE, and Firefox.
+
+details, // 1
+menu { display: block; }
+
+// ----
+// Add the correct display in all browsers.
+
+summary { display: list-item; }
+
+// ---------------------------------------
+// Scripting
+// ---------------------------------------
+
+// ----
+// Add the correct display in IE 9-.
+
+canvas { display: inline-block; }
+
+// ----
+// Add the correct display in IE.
+
+template { display: none; }
+
+// ---------------------------------------
+// Hidden
+// ---------------------------------------
+
+// ----
+// Add the correct display in IE 10-.
+
+[hidden] { display: none; }
