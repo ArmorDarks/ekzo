@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.1.0
 
 ### Added
 - Added `.o-container` for making sticky footers easier.
