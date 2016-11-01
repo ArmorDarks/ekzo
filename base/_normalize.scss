@@ -1,4 +1,4 @@
-// stylelint-disable selector-no-universal, selector-no-qualifying-type, selector-root-no-composition, selector-no-type, no-descending-specificity
+// stylelint-disable selector-no-universal, selector-no-qualifying-type, selector-root-no-composition, selector-no-type
 
 // =======================================
 // *NORMALIZE
@@ -107,16 +107,13 @@ hr {
 // ----
 // 1. Correct the inheritance and scaling of font size in all browsers.
 // 2. Correct the odd `em` font sizing in all browsers.
+// 3. Contain overflow in all browsers.
 
 pre {
   font-family: monospace, monospace; // 1
   font-size: 1em;                    // 2
+  overflow: auto;                    // 3
 }
-
-// ----
-// Contain overflow in all browsers.
-
-pre { overflow: auto; }
 
 // ----
 // Remove most spacing between table cells and border
@@ -166,15 +163,17 @@ strong { font-weight: inherit; }
 // ----
 // Add the correct font weight in Chrome, Edge, and Safari.
 
+// stylelint-disable no-duplicate-selectors
 b,
 strong { font-weight: bolder; }
+// stylelint-enable no-duplicate-selectors
 
 // ----
 // 1. Correct the inheritance and scaling of font size in all browsers.
 // 2. Correct the odd `em` font sizing in all browsers.
 
 code,
-kdb,
+kbd,
 samp {
   font-family: monospace, monospace; // 1
   font-size: 1em;                    // 2
