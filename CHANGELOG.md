@@ -6,6 +6,7 @@
 - Added `.o-container` for making sticky footers easier.
 
 ### Changed
+- Updated normalize.scss to 5.0.0 (head commit: https://github.com/necolas/normalize.css/commit/4559de001bc15838c0314c713645086bdef64bc3).
 - [breaking] Renamed `.h-flex__item--grow*` helpers into `.h-flex-grow*`.
 - [breaking] Renamed `.h-flex__item--shrink*` helpers into `.h-flex-shrink*`.
 - [breaking] Renamed `.h-flex__item--basis*` helpers into `.h-flex-basis*`.
