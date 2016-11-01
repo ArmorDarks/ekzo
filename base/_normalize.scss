@@ -257,20 +257,16 @@ svg:not(:root) { overflow: hidden; }
 // ---------------------------------------
 
 // ----
-// 1. Correct color not being inherited.
-//    Known issue: affects color of disabled elements.
-// 2. Change the font styles in all browsers (opinionated).
-// 3. Remove the margin in Firefox and Safari.
+// 1. Inherit the font-family in all browsers (opinionated).
+// 2. Remove the margin in Firefox and Safari.
 
 button,
 input,
 optgroup,
 select,
 textarea {
-  color:  inherit; // 1
-  font:   inherit; // 2
-
-  margin: 0        // 3
+  font-family: inherit; // 1
+  margin: 0             // 2
 }
 
 // ----

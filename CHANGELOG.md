@@ -10,6 +10,8 @@
 - Reorganized `normalize.scss` to follow original's structure closer.
 - Dropped no longer actual rules from `normalize.scss`.
 - Apply `margin: 0` and `padding: 0` only on elements which needs margin reset in `normalize.scss`.
+- Inputs and buttons no longer inherit `color`.
+- Inputs and buttons no longer inherit all `font` properties, but only `font-family`.
 - [breaking] Renamed `.h-flex__item--grow*` helpers into `.h-flex-grow*`.
 - [breaking] Renamed `.h-flex__item--shrink*` helpers into `.h-flex-shrink*`.
 - [breaking] Renamed `.h-flex__item--basis*` helpers into `.h-flex-basis*`.
