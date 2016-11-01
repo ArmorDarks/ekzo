@@ -48,7 +48,13 @@ html { text-size-adjust: 100%; }
 // ----
 // Reset margins
 
-body { margin: 0; }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 0; }
 
 // ----
 // Add the correct display in IE 9-
@@ -68,9 +74,20 @@ section { display: block; }
 // Add the correct display in IE 9-
 // 1. Add the correct display in IE.
 
+blockquote,
 figcaption,
 figure,
 main { display: block; } // 1
+
+// Reset margins
+
+pre,
+ol,
+ul,
+dl,
+dd,
+figure,
+hr { margin: 0; }
 
 // ----
 // 1. Add the correct box sizing in Firefox.
@@ -113,6 +130,11 @@ table {
 // ---------------------------------------
 // Text-level semantics
 // ---------------------------------------
+
+// ----
+// Reset margins
+
+p { margin: 0; }
 
 // ----
 // Remove the gray background color from active links in IE 10.
@@ -302,7 +324,11 @@ button::-moz-focus-inner,
 // ----
 // Unstyle fieldset
 
-fieldset { border-width: 0; }
+fieldset {
+  border-width: 0;
+  margin:  0;
+  padding: 0;
+}
 
 // ----
 // 1. Correct the text wrapping in Edge and IE.
