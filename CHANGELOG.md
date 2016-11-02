@@ -2,6 +2,9 @@
 
 ## Head
 
+### Changed
+- [breaking] `.h-font-weight--light` now properly represents `200`, while old `300` value moved to new `.h-font-weight--semilight` helper.
+
 ### Fixed
 - Fixed not applied styles to delimiter of `.o-breadcrumb`.
 - Fixed not applied styles to anchors of `.o-breadcrumb`.
