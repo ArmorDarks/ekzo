@@ -11,7 +11,7 @@
 @mixin breadcrumb__item($delimiter) {
   content: $delimiter;
 
-  @include ekzo-theme() {
+  @include ekzo-theme($also-chain: false) {
     @if ekzo-theme(breadcrumb-delimiters) and ekzo-theme(breadcrumb-delimiters) != ekzo-theme(text) {
       color: ekzo-theme(breadcrumb-delimiters);
     }
@@ -39,7 +39,7 @@
 
   @include ekzo-theme() {
     @if ekzo-theme(breadcrumb-links) and ekzo-theme(breadcrumb-links) != ekzo-theme(links) {
-      > a { color: ekzo-theme(breadcrumb-links); }
+      > li > a { color: ekzo-theme(breadcrumb-links); }
     }
   }
 

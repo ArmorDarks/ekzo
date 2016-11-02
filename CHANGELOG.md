@@ -1,5 +1,11 @@
 # Changelog
 
+## Head
+
+### Fixed
+- Fixed not applied styles to delimiter of `.o-breadcrumb`.
+- Fixed not applied styles to anchors of `.o-breadcrumb`.
+
 ## 2.1.0
 
 ### Added
