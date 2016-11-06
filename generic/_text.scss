@@ -10,7 +10,9 @@
 // @todo Chained version disabled for now, otherwise it won't work in most browsers at all
 
 ::selection {
-  @include ekzo-theme($also-chain: false) { @if ekzo-theme(selection)    { color:            ekzo-theme(selection); } }
-  @include ekzo-theme($also-chain: false) { @if ekzo-theme(selection-bg) { background-color: ekzo-theme(selection-bg); } }
+  @include ekzo-theme($also-chain: false) {
+    @if ekzo-theme(selection)    { color: ekzo-theme(selection); }
+    @if ekzo-theme(selection-bg) { background-color: ekzo-theme(selection-bg); }
+  }
 }
 
