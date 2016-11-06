@@ -29,7 +29,7 @@
   }
 
   @if not $value {
-    @return null
+    @return null;
   }
 
   @return $value;

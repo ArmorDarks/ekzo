@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important, selector-list-comma-newline-after, max-nesting-depth
+// stylelint-disable declaration-no-important
 
 // =======================================
 // ^HELPERS.COLORS.UI
@@ -13,23 +13,23 @@
 
     .#{$ekzo-h-ns}color--#{$ui},
     .#{$ekzo-h-ns}color--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}color--#{$ui}\:h:focus, { @include ekzo-theme() { color: ekzo-theme($ui) !important; } }
+    .#{$ekzo-h-ns}color--#{$ui}\:h:focus { @include ekzo-theme() { color: ekzo-theme($ui) !important; } }
 
     .#{$ekzo-h-ns}bg-color--#{$ui},
     .#{$ekzo-h-ns}bg-color--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}bg-color--#{$ui}\:h:focus, { @include ekzo-theme() { bg-color: ekzo-theme($ui) !important; } }
+    .#{$ekzo-h-ns}bg-color--#{$ui}\:h:focus { @include ekzo-theme() { background-color: ekzo-theme($ui) !important; } }
 
     .#{$ekzo-h-ns}border-color--#{$ui},
     .#{$ekzo-h-ns}border-color--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}border-color--#{$ui}\:h:focus, { @include ekzo-theme() { border-color: ekzo-theme($ui) !important; } }
+    .#{$ekzo-h-ns}border-color--#{$ui}\:h:focus { @include ekzo-theme() { border-color: ekzo-theme($ui) !important; } }
 
     .#{$ekzo-h-ns}fill--#{$ui},
     .#{$ekzo-h-ns}fill--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}fill--#{$ui}\:h:focus, { @include ekzo-theme() { fill: ekzo-theme($ui) !important; } }
+    .#{$ekzo-h-ns}fill--#{$ui}\:h:focus { @include ekzo-theme() { fill: ekzo-theme($ui) !important; } }
 
     .#{$ekzo-h-ns}stroke--#{$ui},
     .#{$ekzo-h-ns}stroke--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}stroke--#{$ui}\:h:focus, { @include ekzo-theme() { stroke: ekzo-theme($ui) !important; } }
+    .#{$ekzo-h-ns}stroke--#{$ui}\:h:focus { @include ekzo-theme() { stroke: ekzo-theme($ui) !important; } }
 
   }
 }
