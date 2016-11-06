@@ -8,24 +8,24 @@
 // @todo Usage of mixin `ekzo-theme` seems to be a bit slow here. Consider replacement with plain
 //       interpolated class names
 
-@each $theme, $value in $ekzo-themes {
-  @each $color, $value in ekzo-get($ekzo-themes, $theme) {
-    @if $value {
+@each $theme-name, $theme in $ekzo-themes {
+  @each $ui, $color in $theme {
+    @if $color {
 
-      .#{$ekzo-h-ns}color--#{$color}           { @include ekzo-theme() { color: $value !important; } }
-      .#{$ekzo-h-ns}color--#{$color}\:h        { @include ekzo-theme() { &:hover, &:focus { color: $value !important; } } }
+      .#{$ekzo-h-ns}color--#{$ui}           { @include ekzo-theme() { color: $color !important; } }
+      .#{$ekzo-h-ns}color--#{$ui}\:h        { @include ekzo-theme() { &:hover, &:focus { color: $color !important; } } }
 
-      .#{$ekzo-h-ns}bg-color--#{$color}        { @include ekzo-theme() { background-color: $value !important; } }
-      .#{$ekzo-h-ns}bg-color--#{$color}\:h     { @include ekzo-theme() { &:hover, &:focus { background-color: $value !important; } } }
+      .#{$ekzo-h-ns}bg-color--#{$ui}        { @include ekzo-theme() { background-color: $color !important; } }
+      .#{$ekzo-h-ns}bg-color--#{$ui}\:h     { @include ekzo-theme() { &:hover, &:focus { background-color: $color !important; } } }
 
-      .#{$ekzo-h-ns}border-color--#{$color}    { @include ekzo-theme() { border-color: $value !important; } }
-      .#{$ekzo-h-ns}border-color--#{$color}\:h { @include ekzo-theme() { &:hover, &:focus { border-color: $value !important; } } }
+      .#{$ekzo-h-ns}border-color--#{$ui}    { @include ekzo-theme() { border-color: $color !important; } }
+      .#{$ekzo-h-ns}border-color--#{$ui}\:h { @include ekzo-theme() { &:hover, &:focus { border-color: $color !important; } } }
 
-      .#{$ekzo-h-ns}fill--#{$color}            { @include ekzo-theme() { fill: $value !important; } }
-      .#{$ekzo-h-ns}fill--#{$color}\:h         { @include ekzo-theme() { &:hover, &:focus { fill: $value !important; } } }
+      .#{$ekzo-h-ns}fill--#{$ui}            { @include ekzo-theme() { fill: $color !important; } }
+      .#{$ekzo-h-ns}fill--#{$ui}\:h         { @include ekzo-theme() { &:hover, &:focus { fill: $color !important; } } }
 
-      .#{$ekzo-h-ns}stroke--#{$color}          { @include ekzo-theme() { stroke: $value !important; } }
-      .#{$ekzo-h-ns}stroke--#{$color}\:h       { @include ekzo-theme() { &:hover, &:focus { stroke: $value !important; } } }
+      .#{$ekzo-h-ns}stroke--#{$ui}          { @include ekzo-theme() { stroke: $color !important; } }
+      .#{$ekzo-h-ns}stroke--#{$ui}\:h       { @include ekzo-theme() { &:hover, &:focus { stroke: $color !important; } } }
 
     }
   }
