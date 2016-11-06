@@ -16,6 +16,7 @@
 - Fixed not applied styles to delimiter of `.o-breadcrumb`.
 - Fixed not applied styles to anchors of `.o-breadcrumb`.
 - Improved `ekzo-theme()` function performance by refactoring code.
+- Fix `.h-font-family--inherit` not having `.h-*` prefix.
 
 ## 2.1.0
 
