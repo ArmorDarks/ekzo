@@ -4,6 +4,8 @@
 
 ### Changed
 - [breaking] `.h-font-weight--light` now properly represents `200`, while old `300` value moved to new `.h-font-weight--semilight` helper.
+- Helpers in `colors.ui.scss` now relies on `ekzo-theme()` function instead of `$color` from loop. This prevents from appearing unwanted color duplications in result stylesheet.
+- Grouped `ekzo-theme()` mixins calls to increase performance.
 
 ### Fixed
 - Fixed not applied styles to delimiter of `.o-breadcrumb`.
