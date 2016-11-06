@@ -32,7 +32,7 @@
 //
 
 @mixin ekzo-breakpoint($breakpoint, $breakpoints: $ekzo-breakpoints) {
-  $query: ekzo-get($breakpoints, $breakpoint);
+  $query: map-get($breakpoints, $breakpoint);
 
   // check wether defined breakpoint exists in requested map
   @if not $query {

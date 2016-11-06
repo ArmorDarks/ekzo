@@ -117,7 +117,7 @@
   // ----
   // Button font-size modifiers based on map's values.
 
-  @each $variant, $value in ekzo-get($ekzo-font-sizes, buttons) {
+  @each $variant, $value in map-get($ekzo-font-sizes, buttons) {
     .#{$ekzo-o-ns}btn#{$variant}#{$postfix} { font-size: $value; }
   }
 

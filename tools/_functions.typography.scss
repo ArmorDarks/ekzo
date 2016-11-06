@@ -48,11 +48,17 @@
 // ---------------------------------------
 
 @function ekzo-font-family($font-family-name, $map: $ekzo-font-families) {
-  @if not map-has-key($map, $font-family-name) {
-    @error '[ekzo-font-family]: no such color key: #{$font-family-name}';
+  $value: map-get($map, $font-family-name);
+
+  @if $value == false {
+    @return null
   }
 
-  @return unquote(ekzo-get($map, $font-family-name));
+  @if not $value {
+    @error '[ekzo-font-family]: no such key: #{$font-family-name}';
+  }
+
+  @return unquote($value);
 }
 
 // ---------------------------------------
@@ -60,9 +66,15 @@
 // ---------------------------------------
 
 @function ekzo-ui-font-family($font-family-name, $map: $ekzo-ui-font-families) {
-  @if not map-has-key($map, $font-family-name) {
-    @error '[ekzo-ui-font-family]: no such color key: #{$font-family-name}';
+  $value: map-get($map, $font-family-name);
+
+  @if $value == false {
+    @return null
   }
 
-  @return ekzo-get($map, $font-family-name);
+  @if not $value and $value != false {
+    @error '[ekzo-ui-font-family]: no such key: #{$font-family-name}';
+  }
+
+  @return unquote($value);
 }

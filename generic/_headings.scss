@@ -16,7 +16,7 @@
 // This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
 // heading hierarchy.
 
-@each $variant, $value in ekzo-get($ekzo-font-sizes, headings) {
+@each $variant, $value in map-get($ekzo-font-sizes, headings) {
 
   #{$variant} {
     @extend %#{$ekzo-g-ns}headings-properties;

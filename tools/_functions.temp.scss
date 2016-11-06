@@ -55,7 +55,7 @@ $ekzo-global-temp: null !global;
       @error '[ekzo-temp]: temp variable does not hold any value';
     }
 
-    @return ekzo-get($ekzo-global-temp, __value);
+    @return map-get($ekzo-global-temp, __value);
   }
 
   @else {
@@ -63,11 +63,13 @@ $ekzo-global-temp: null !global;
       @error '[ekzo-temp]: can not get key `#{$key}` from #{type-of($ekzo-global-temp)}, NOT a map';
     }
 
-    @if not map-has-key($ekzo-global-temp, $key) {
+    $value: map-get($ekzo-global-temp, $key);
+
+    @if not $value {
       @error '[ekzo-temp]: no such key in temp variable: #{$key}';
     }
 
-    @return ekzo-get($ekzo-global-temp, $key);
+    @return $value;
   }
 }
 

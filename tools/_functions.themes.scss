@@ -7,11 +7,13 @@
 // ---------------------------------------
 
 @function ekzo-color($color-name, $map: $ekzo-colors) {
-  @if not map-has-key($map, $color-name) {
+  $value: map-get($map, $color-name);
+
+  @if not $value {
     @error '[ekzo-color]: no such color key: #{$color-name}';
   }
 
-  @return ekzo-get($map, $color-name);
+  @return $value;
 }
 
 // ---------------------------------------
