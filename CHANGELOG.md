@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 2.2.0
 
 ### Added
 - Added `$ekzo-alert-on-missing-theme-color` option with default value `false`. Enable to receive errors in case of missing requested color in `ekzo-theme(missing-color)` function.
