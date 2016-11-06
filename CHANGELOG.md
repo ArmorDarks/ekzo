@@ -2,14 +2,20 @@
 
 ## Head
 
+### Added
+- Added `$ekzo-alert-on-missing-theme-color` option with default value `false`. Enable to receive errors in case of missing requested color in `ekzo-theme(missing-color)` function.
+
 ### Changed
 - [breaking] `.h-font-weight--light` now properly represents `200`, while old `300` value moved to new `.h-font-weight--semilight` helper.
 - Helpers in `colors.ui.scss` now relies on `ekzo-theme()` function instead of `$color` from loop. This prevents from appearing unwanted color duplications in result stylesheet.
 - Grouped `ekzo-theme()` mixins calls to increase performance.
+- By default Ekzo will no longer throw errors in case of missing color in `ekzo-theme(missing-color)` function.
+- By default `ekzo-theme()` function will return `null` in case of missing theme color, unless `$ekzo-alert-on-missing-theme-color` set to `true`. This allows to build more complex themes, in which not all properties from `base` theme are mandatory.
 
 ### Fixed
 - Fixed not applied styles to delimiter of `.o-breadcrumb`.
 - Fixed not applied styles to anchors of `.o-breadcrumb`.
+- Improved `ekzo-theme()` function performance by refactoring code.
 
 ## 2.1.0
 

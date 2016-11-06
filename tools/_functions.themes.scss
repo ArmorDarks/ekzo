@@ -18,12 +18,17 @@
 // Themify
 // ---------------------------------------
 
-@function ekzo-theme($color-name) {
+@function ekzo-theme($color-name, $alert-on-missing: $ekzo-alert-on-missing-theme-color) {
   $temp-theme: ekzo-temp(theme);
+  $value: map-get($temp-theme, $color-name);
 
-  @if not map-has-key($temp-theme, $color-name) {
+  @if $alert-on-missing and not $value {
     @error '[ekzo-theme]: no such UI key: #{$color-name}';
   }
 
-  @return ekzo-get($temp-theme, $color-name);
+  @if not $value {
+    @return null
+  }
+
+  @return $value;
 }
