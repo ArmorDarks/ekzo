@@ -62,15 +62,15 @@
 
     $class: $prefix + $theme + $postfix;
 
-    @if $theme == $default-theme {
+    @if not & {
 
-      @content;
+      .#{$class} { @content; }
 
     }
 
-    @else if not & {
+    @else if $theme == $default-theme {
 
-      .#{$class} { @content; }
+      @content;
 
     }
 
