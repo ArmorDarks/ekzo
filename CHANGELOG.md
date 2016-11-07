@@ -5,6 +5,7 @@
 ### Changed
 - From now `ekzo-theme()` mixin will work even if it's place at root with classes as its content. With properties only it will output all themes classes with those properties, and with classes inside it will prepend themes classes to specified classes.
 - For `base` theme `ekzo-theme()` from now on will put properties directly on specified class instead of prepending it with `.t-base` class. Using additional `.t-base` class didn't add any flexibility anyway, since due to CSS limitation it is impossible to call `.t-base` class in scope of any other theme.
+- Text and background color are no longer defined on `html` in scope of themes, but instead placed on newly added pure theme classes, like `.t-base` in `root.scss`. This also allows from now to extend those themes in your own files to any extent.
 
 ### Fixed
 - Improved performance of `colors.ui` helpers.

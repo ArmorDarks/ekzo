@@ -11,6 +11,15 @@
 :root {}
 
 // ---------------------------------------
+// Themes
+// ---------------------------------------
+
+@include ekzo-theme() {
+  color:            ekzo-theme(text);
+  background-color: ekzo-theme(bg);
+}
+
+// ---------------------------------------
 // HTML
 // ---------------------------------------
 // 1. Ensure the page always fills at least the entire height of the viewport.
@@ -32,11 +41,6 @@ html {
   line-height: $ekzo-line-height;
 
   font-weight: $ekzo-font-weight; // 3
-
-  @include ekzo-theme() {
-    color:            ekzo-theme(text); // 3
-    background-color: ekzo-theme(bg);
-  }
 
   @if $ekzo-bg { background: $ekzo-bg; }
 
