@@ -11,25 +11,31 @@
 @each $theme-name, $theme in $ekzo-themes {
   @each $ui, $color in $theme {
 
-    .#{$ekzo-h-ns}color--#{$ui},
-    .#{$ekzo-h-ns}color--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}color--#{$ui}\:h:focus { @include ekzo-theme() { color: ekzo-theme($ui) !important; } }
+    @include ekzo-theme() {
 
-    .#{$ekzo-h-ns}bg-color--#{$ui},
-    .#{$ekzo-h-ns}bg-color--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}bg-color--#{$ui}\:h:focus { @include ekzo-theme() { background-color: ekzo-theme($ui) !important; } }
+      $value: ekzo-theme($ui);
 
-    .#{$ekzo-h-ns}border-color--#{$ui},
-    .#{$ekzo-h-ns}border-color--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}border-color--#{$ui}\:h:focus { @include ekzo-theme() { border-color: ekzo-theme($ui) !important; } }
+      .#{$ekzo-h-ns}color--#{$ui},
+      .#{$ekzo-h-ns}color--#{$ui}\:h:hover,
+      .#{$ekzo-h-ns}color--#{$ui}\:h:focus { color: $value !important; }
 
-    .#{$ekzo-h-ns}fill--#{$ui},
-    .#{$ekzo-h-ns}fill--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}fill--#{$ui}\:h:focus { @include ekzo-theme() { fill: ekzo-theme($ui) !important; } }
+      .#{$ekzo-h-ns}bg-color--#{$ui},
+      .#{$ekzo-h-ns}bg-color--#{$ui}\:h:hover,
+      .#{$ekzo-h-ns}bg-color--#{$ui}\:h:focus { background-color: $value !important; }
 
-    .#{$ekzo-h-ns}stroke--#{$ui},
-    .#{$ekzo-h-ns}stroke--#{$ui}\:h:hover,
-    .#{$ekzo-h-ns}stroke--#{$ui}\:h:focus { @include ekzo-theme() { stroke: ekzo-theme($ui) !important; } }
+      .#{$ekzo-h-ns}border-color--#{$ui},
+      .#{$ekzo-h-ns}border-color--#{$ui}\:h:hover,
+      .#{$ekzo-h-ns}border-color--#{$ui}\:h:focus { border-color: $value !important; }
+
+      .#{$ekzo-h-ns}fill--#{$ui},
+      .#{$ekzo-h-ns}fill--#{$ui}\:h:hover,
+      .#{$ekzo-h-ns}fill--#{$ui}\:h:focus { fill: $value !important; }
+
+      .#{$ekzo-h-ns}stroke--#{$ui},
+      .#{$ekzo-h-ns}stroke--#{$ui}\:h:hover,
+      .#{$ekzo-h-ns}stroke--#{$ui}\:h:focus { stroke: $value !important; }
+
+    }
 
   }
 }
