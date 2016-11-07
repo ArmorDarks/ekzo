@@ -62,7 +62,13 @@
 
     $class: $prefix + $theme + $postfix;
 
-    @if not & {
+    @if $theme == $default-theme {
+
+      @content;
+
+    }
+
+    @else if not & {
 
       .#{$class} { @content; }
 
@@ -80,8 +86,6 @@
       .#{$class} & { @content; }
 
     }
-
-    @else if $theme == $default-theme { @content; }
 
     @include ekzo-purge-temp();
   }
