@@ -1,5 +1,10 @@
 # Changelog
 
+### HEAD
+
+### Changed
+- From now `ekzo-theme()` mixin will work even if it's place at root with classes as its content. With properties only it will output all themes classes with those properties, and with classes inside it will prepend themes classes to specified classes.
+
 ## 2.2.0
 
 ### Added
