@@ -165,7 +165,7 @@ strong { font-weight: inherit; }
 
 // stylelint-disable no-duplicate-selectors
 b,
-strong { font-weight: bolder; }
+strong { font-weight: $ekzo-bold-font-weight; }
 // stylelint-enable no-duplicate-selectors
 
 // ----

@@ -4,6 +4,7 @@
 
 ### Added
 - Added `.h-min0` helper which sets `min-width: 0`. Useful for flebox layouts, when content should collapse beyond it's content.
+- Added `$ekzo-bold-font-weight` option with default value `bolder`, which allows to control default font weight for `<b>` and `<strong>`. This helps to avoid issues with font faces, which can't handle all bold variations.
 
 ### Changed
 - From now `ekzo-theme()` mixin will work even if it's place at root with classes as its content. With properties only it will output all themes classes with those properties, and with classes inside it will prepend themes classes to specified classes.
