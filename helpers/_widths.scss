@@ -23,13 +23,14 @@
 
 @mixin ekzo-widths-helpers($fractions, $prefix:'', $postfix:'') {
 
+  .#{$prefix}min0#{$postfix} { min-width: 0 !important; }
+
   // Loop through the number of columns for each denominator of fractions.
   @each $denominator in $fractions {
 
     // If we’re trying to make wholes, just spit a 100% width utility out one time only.
     @if ($denominator == 1) {
       .#{$prefix}1\/1#{$postfix} { width: 100% !important; }
-
     }
 
     @else {
@@ -50,15 +51,16 @@
 // Call all widths
 // ---------------------------------------
 
-@include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions,
-  $prefix: $ekzo-h-ns);
+@include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions, $prefix: $ekzo-h-ns)
 
 // ---------------------------------------
 // Responsive widths
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-widths-helpers-breakpoints) {
-  @include ekzo-widths-helpers($fractions: $ekzo-responsive-widths-helpers-fractions,
+  @include ekzo-widths-helpers(
+    $fractions: $ekzo-responsive-widths-helpers-fractions,
     $prefix: $ekzo-h-ns,
-    $postfix: ekzo-temp());
+    $postfix: ekzo-temp()
+  )
 }
