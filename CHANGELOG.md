@@ -5,8 +5,12 @@
 ### Added
 - Added `.h-min0` helper which sets `min-width: 0`. Useful for flebox layouts, when content should collapse beyond it's content.
 - Added `$ekzo-bold-font-weight` option with default value `bolder`, which allows to control default font weight for `<b>` and `<strong>`. This helps to avoid issues with font faces, which can't handle all bold variations.
+- Added experimental `.o-panel__header`.
 
 ### Changed
+- [breaking] Renamed `.o-container` to more common occuring `.o-panel`.
+- [breaking] Renamed `.o-container__flex` to `.o-panel__body`.
+- [breaking] Renamed `.o-container__fixed` to `.o-panel__footer`.
 - From now `ekzo-theme()` mixin will work even if it's place at root with classes as its content. With properties only it will output all themes classes with those properties, and with classes inside it will prepend themes classes to specified classes.
 - For `base` theme `ekzo-theme()` from now on will put properties directly on specified class instead of prepending it with `.t-base` class. Using additional `.t-base` class didn't add any flexibility anyway, since due to CSS limitation it is impossible to call `.t-base` class in scope of any other theme.
 - Text and background color are no longer defined on `html` in scope of themes, but instead placed on newly added pure theme classes, like `.t-base` in `root.scss`. This also allows from now to extend those themes in your own files to any extent.
