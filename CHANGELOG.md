@@ -6,6 +6,7 @@
 - Added `.h-min0` helper which sets `min-width: 0`. Useful for flebox layouts, when content should collapse beyond it's content.
 - Added `$ekzo-bold-font-weight` option with default value `bolder`, which allows to control default font weight for `<b>` and `<strong>`. This helps to avoid issues with font faces, which can't handle all bold variations.
 - Added experimental `.o-panel__header`.
+- Added option `$ekzo-hr-height` with default value set to `0`, which allows to define default height of `<hr>` element.
 
 ### Changed
 - [breaking] Renamed `.o-container` to more common occuring `.o-panel`.
@@ -17,6 +18,7 @@
 
 ### Fixed
 - Fixed missing `$font-size` declaration in `ekzo-font-size()` function, which resulted in error if correct text size name from `$ekzo-font-sizes` had been passed as first argument.
+- Fixed doubled default height of `<hr>` element because of `border-width` property in `normilize.scss` instead of `border-bottom-width`.
 - Improved performance of `colors.ui` helpers.
 
 ## 2.2.0
