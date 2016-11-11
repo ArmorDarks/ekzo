@@ -7,7 +7,7 @@
 @mixin ekzo-flex-helpers($prefix:'', $postfix:'') {
 
   // ---------------------------------------
-  // flex container helpers
+  // Display helpers
   // ---------------------------------------
 
   .#{$prefix}flex#{$postfix}        { display: flex        !important; }
