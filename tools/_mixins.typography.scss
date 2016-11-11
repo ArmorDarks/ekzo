@@ -60,7 +60,9 @@
 //    .heading { @include ekzo-font-size(big, my-group, $map:$my-custom-sizes); }
 
 @mixin ekzo-font-size($font-size, $type:text, $line-height:$ekzo-line-height, $map:$ekzo-font-sizes) {
-  font-size: if(type-of($font-size) == string, ekzo-font-size($font-size, $type, $map), $font-size);
+  $font-size: if(type-of($font-size) == string, ekzo-font-size($font-size, $type, $map), $font-size);
+
+  font-size: $font-size;
 
   @if $line-height {
     @include ekzo-line-height($font-size: $font-size, $base-line-height: $line-height);

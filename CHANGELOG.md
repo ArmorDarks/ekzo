@@ -16,6 +16,7 @@
 - Text and background color are no longer defined on `html` in scope of themes, but instead placed on newly added pure theme classes, like `.t-base` in `root.scss`. This also allows from now to extend those themes in your own files to any extent.
 
 ### Fixed
+- Fixed missing `$font-size` declaration in `ekzo-font-size()` function, which resulted in error if correct text size name from `$ekzo-font-sizes` had been passed as first argument.
 - Improved performance of `colors.ui` helpers.
 
 ## 2.2.0
