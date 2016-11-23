@@ -1,0 +1,15 @@
+// stylelint-disable declaration-no-important
+
+// =======================================
+// ^HELPERS.Border-radius
+// =======================================
+
+@each $radius, $value in $ekzo-border-radius {
+
+  .#{$ekzo-h-ns}border-r#{$radius}              { border-radius: $value              !important; }
+  .#{$ekzo-h-ns}border-r-top-left#{$radius}     { border-top-left-radius: $value     !important; }
+  .#{$ekzo-h-ns}border-r-top-right#{$radius}    { border-top-right-radius: $value    !important; }
+  .#{$ekzo-h-ns}border-r-bottom-right#{$radius} { border-bottom-right-radius: $value !important; }
+  .#{$ekzo-h-ns}border-r-bottom-left#{$radius}  { border-bottom-left-radius: $value  !important; }
+
+}

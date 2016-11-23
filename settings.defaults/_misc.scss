@@ -1,3 +1,5 @@
+// stylelint-disable scss/operator-no-unspaced
+
 // =======================================
 // ^SETTING.OPTIONS.DEFAULTS
 // =======================================
@@ -15,6 +17,16 @@ $ekzo-z-indexes: (
   popup:     5000,
   base:      1,
   deepdive: -99999,
+) !default;
+
+// ---------------------------------------
+// Border radiuses
+// ---------------------------------------
+
+$ekzo-border-radius: (
+  0: 0,
+  '': 2px,
+  --circle: 50%,
 ) !default;
 
 // ---------------------------------------

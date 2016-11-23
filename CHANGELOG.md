@@ -9,6 +9,8 @@
 - Added option `$ekzo-hr-height` with default value set to `0`, which allows to define default height of `<hr>` element.
 - Added `.o-aspect-ratio` objects for `4:3`, `16:9` and `21:9` aspect ratios.
 - Added `.h-bg*` helpers for backgrounds with basic set of rules.
+- Added `.h-border-r*` helpers for border-radiuses, which generated based on new `$ekzo-border-radius` setting.
+- Added `ekzo-border-radius()` function to get value from `$ekzo-border-radius`.
 
 ### Changed
 - [breaking] Renamed `.o-container` to more common occuring `.o-panel`.
