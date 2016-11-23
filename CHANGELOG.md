@@ -8,6 +8,7 @@
 - Added experimental `.o-panel__header`.
 - Added option `$ekzo-hr-height` with default value set to `0`, which allows to define default height of `<hr>` element.
 - Added `.o-aspect-ratio` objects for `4:3`, `16:9` and `21:9` aspect ratios.
+- Added `.h-bg*` helpers for backgrounds with basic set of rules.
 
 ### Changed
 - [breaking] Renamed `.o-container` to more common occuring `.o-panel`.
