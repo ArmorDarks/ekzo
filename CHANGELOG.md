@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.3.0
 
 ### Added
 - Added `.h-min0` helper which sets `min-width: 0`. Useful for flebox layouts, when content should collapse beyond it's content.
