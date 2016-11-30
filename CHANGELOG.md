@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Added
+- Added missing `print` "breakpoint".
+
 ## 2.3.0
 
 ### Added
