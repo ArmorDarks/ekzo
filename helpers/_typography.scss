@@ -16,7 +16,6 @@
   // Text
 
   @each $variant, $value in map-get($ekzo-font-sizes, text) {
-    @if $variant == 'base' { $variant: ''; }
 
     .#{$prefix}text#{$variant}#{$postfix} {
       @include ekzo-font-size($value);
@@ -78,7 +77,6 @@
   // Only font-size property, without line-heights
 
   @each $variant, $value in map-get($ekzo-font-sizes, text) {
-    @if $variant == 'base' { $variant: ''; }
 
     .#{$prefix}font-size#{$variant}#{$postfix} { font-size: $value; }
 
@@ -114,7 +112,6 @@
   //       would need those. Let's see will we use them in future or no
 
   @each $variant, $value in map-get($ekzo-font-sizes, text) {
-    @if $variant == 'base' { $variant: ''; }
 
     .#{$prefix}line-height#{$variant}#{$postfix} { @include ekzo-line-height($value); }
 
