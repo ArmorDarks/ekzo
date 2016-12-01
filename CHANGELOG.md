@@ -5,6 +5,9 @@
 ### Added
 - Added missing `print` "breakpoint".
 
+### Fixed
+- Fixed linting errors.
+
 ## 2.3.0
 
 ### Added
