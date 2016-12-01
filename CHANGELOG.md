@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.3.1
 
 ### Added
 - Added missing `print` breakpoint.
