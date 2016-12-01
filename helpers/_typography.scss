@@ -7,40 +7,31 @@
 @mixin ekzo-typography-helpers($prefix: '', $postfix: '') {
 
   // ---------------------------------------
-  // Complex text helpers
-  // ---------------------------------------
-  // Including font-sizes, line-heights
-  // For headings also included font-weight, font style and colors (if enabled in settings)
-
-  // ----
   // Text
+  // ---------------------------------------
 
   @each $variant, $value in map-get($ekzo-font-sizes, text) {
 
-    .#{$prefix}text#{$variant}#{$postfix} {
-      @include ekzo-font-size($value);
-    }
+    .#{$prefix}text#{$variant}#{$postfix} { @include ekzo-font-size($value); }
+    .#{$prefix}font-size#{$variant}#{$postfix} { font-size: $value; }
+    .#{$prefix}line-height#{$variant}#{$postfix} { @include ekzo-line-height($value); }
 
   }
 
-  // ----
-  // ems
-  // @todo So far I'm not sure is it good idea to generate line-height for dynamic
-  //       elements like ems. However, seems that it properly scales and
-  //       at least tries to maintain close to ideal line-height proportion
-  //       even after stacking few times
+  // ---------------------------------------
+  // Ems
+  // ---------------------------------------
 
   @each $variant, $value in map-get($ekzo-font-sizes, ems) {
 
-    .#{$prefix}text--em#{$variant}#{$postfix} {
-      @include ekzo-font-size($value);
-    }
+    .#{$prefix}text--em#{$variant}#{$postfix} { @include ekzo-font-size($value); }
+    .#{$prefix}font-size--em#{$variant}#{$postfix} { font-size: $value; }
 
   }
 
-  // ----
-  // Standard headings
-  //
+  // ---------------------------------------
+  // Headings
+  // ---------------------------------------
   // When we define a heading we also define a corresponding class to go with it.
   // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
@@ -48,16 +39,17 @@
 
     .#{$prefix}#{$variant}#{$postfix} {
       @extend %#{$ekzo-g-ns}headings-properties;
-
       @include ekzo-font-size($value);
     }
 
+    .#{$prefix}font-size--#{$variant}#{$postfix} { font-size: $value; }
+    .#{$prefix}line-height--#{$variant}#{$postfix} { @include ekzo-line-height($value); }
+
   }
 
-  // ----
+  // ---------------------------------------
   // Extra headings
-  //
-  // A series of classes for setting massive type; for use in heroes, promos, etc.
+  // ---------------------------------------
 
   @each $variant, $value in map-get($ekzo-font-sizes, extra-headings) {
 
@@ -65,75 +57,24 @@
       @include ekzo-theme() { @if ekzo-theme(extra-headings) { color: ekzo-theme(extra-headings); } }
 
       @include ekzo-font-size($value);
-
       @if ekzo-ui-font-family(extra-headings) { font-family: ekzo-ui-font-family(extra-headings); }
     }
 
-  }
-
-  // ---------------------------------------
-  // Font-sizes helpers
-  // ---------------------------------------
-  // Only font-size property, without line-heights
-
-  @each $variant, $value in map-get($ekzo-font-sizes, text) {
-
-    .#{$prefix}font-size#{$variant}#{$postfix} { font-size: $value; }
-
-  }
-
-  @each $variant, $value in map-get($ekzo-font-sizes, headings) {
-
-    .#{$prefix}font-size--#{$variant}#{$postfix} { font-size: $value; }
-
-  }
-
-  @each $variant, $value in map-get($ekzo-font-sizes, extra-headings) {
-
     .#{$prefix}font-size--extra-h#{$variant}#{$postfix} { font-size: $value; }
-
-  }
-
-  // ----
-  // em font-sizes
-
-  @each $variant, $value in map-get($ekzo-font-sizes, ems) {
-
-    .#{$prefix}font-size--em#{$variant}#{$postfix} { font-size: $value; }
-
-  }
-
-  .#{$prefix}font-size--inherit#{$postfix} { font-size: inherit; }
-
-  // ---------------------------------------
-  // Line-height helpers
-  // ---------------------------------------
-  // @todo Those seems to be very specific, and I'm really not sure that we ever
-  //       would need those. Let's see will we use them in future or no
-
-  @each $variant, $value in map-get($ekzo-font-sizes, text) {
-
-    .#{$prefix}line-height#{$variant}#{$postfix} { @include ekzo-line-height($value); }
-
-  }
-
-  @each $variant, $value in map-get($ekzo-font-sizes, headings) {
-
-    .#{$prefix}line-height--#{$variant}#{$postfix} { @include ekzo-line-height($value); }
-
-  }
-
-  @each $variant, $value in map-get($ekzo-font-sizes, extra-headings) {
-
     .#{$prefix}line-height--extra-h#{$variant}#{$postfix} { @include ekzo-line-height($value); }
 
   }
 
-  // ----
-  // Take element out of typography rhythm
-  // Should be applied on custom elements with unusual styling
+  // ---------------------------------------
+  // Resets
+  // ---------------------------------------
 
-  .#{$prefix}line-height0#{$postfix}    { line-height: 1 !important; }
+  .#{$prefix}font-size--inherit#{$postfix} { font-size: inherit; }
+  .#{$prefix}line-height0#{$postfix}       { line-height: 1 !important; }
+
+  // ---------------------------------------
+  // Tracked
+  // ---------------------------------------
 
   .#{$prefix}text--tracked#{$postfix}   { letter-spacing:  .16em; }
   .#{$prefix}text--tracked--#{$postfix} { letter-spacing: -.05em; }

@@ -3,10 +3,11 @@
 ## HEAD
 
 ### Added
-- Added missing `print` "breakpoint".
+- Added missing `print` breakpoint.
 
 ### Fixed
-- Fixed linting errors.
+- Improved typography helpers performance by grouping relevant helpers in singe `@each` call.
+- Fixed lint errors.
 
 ## 2.3.0
 
