@@ -2,7 +2,7 @@
 // ^HEADINGS
 // =======================================
 
-%#{$ekzo-g-ns}headings-properties {
+@mixin ekzo-headings-properties() {
   @include ekzo-theme() { @if ekzo-theme(headings) { color: ekzo-theme(headings); } }
   @if ekzo-ui-font-family(headings) { font-family: ekzo-ui-font-family(headings); }
   font-weight: $ekzo-headings-font-weight;
@@ -19,7 +19,7 @@
 @each $variant, $value in map-get($ekzo-font-sizes, headings) {
 
   #{$variant} {
-    @extend %#{$ekzo-g-ns}headings-properties;
+    @include ekzo-headings-properties();
     @include ekzo-font-size($value);
   }
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Fixed
+- Fixed `@extend` directive, which had been wrongly extended inside `@media` directove.
+
 ## 2.3.1
 
 ### Added

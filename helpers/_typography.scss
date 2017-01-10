@@ -38,7 +38,7 @@
   @each $variant, $value in map-get($ekzo-font-sizes, headings) {
 
     .#{$prefix}#{$variant}#{$postfix} {
-      @extend %#{$ekzo-g-ns}headings-properties;
+      @include ekzo-headings-properties();
       @include ekzo-font-size($value);
     }
 
