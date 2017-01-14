@@ -62,6 +62,12 @@
 
   // -----
   // Flex of individual item
+
+  .#{$prefix}flex\+#{$postfix}      { flex: 1 0 auto !important; }
+  .#{$prefix}flex\+1#{$postfix}     { flex: 1 1 auto !important; }
+  .#{$prefix}flex\+1-0\%#{$postfix} { flex: 1 1 0% !important; }
+  .#{$prefix}flex0#{$postfix}       { flex: none   !important; }
+
   // Should item occupy free space or no
 
   .#{$prefix}flex-grow0#{$postfix}  { flex-grow: 0 !important; } // default for flex
@@ -78,11 +84,6 @@
   // {0|auto|px|rem|em|%|...}
 
   .#{$prefix}flex-basis--auto#{$postfix} { flex-basis: auto !important; } // default for flex, = inline-block behaviour
-
-  .#{$prefix}flex\+#{$postfix}      { flex: 1 0 auto !important; }
-  .#{$prefix}flex\+1#{$postfix}     { flex: 1 1 auto !important; }
-  .#{$prefix}flex\+1-0\%#{$postfix} { flex: 1 1 0% !important; }
-  .#{$prefix}flex0#{$postfix}       { flex: none   !important; }
 
   // -----
   // Order of individual item
