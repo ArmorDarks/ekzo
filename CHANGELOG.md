@@ -2,6 +2,9 @@
 
 ## HEAD
 
+### Added
+- Added `.h-flex-basis0` helper.
+
 ### Changed
 - More specific flex helpers now comes after more broad ones. This allows to adjust broad ones' setting on demand with specific helpers.
 

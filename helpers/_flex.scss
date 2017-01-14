@@ -84,6 +84,7 @@
   // {0|auto|px|rem|em|%|...}
 
   .#{$prefix}flex-basis--auto#{$postfix} { flex-basis: auto !important; } // default for flex, = inline-block behaviour
+  .#{$prefix}flex-basis0#{$postfix}      { flex-basis: 0 !important; } // default for flex, = inline-block behaviour
 
   // -----
   // Order of individual item
