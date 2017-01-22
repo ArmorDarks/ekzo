@@ -1,7 +1,9 @@
 // =======================================
 // ^BUTTONS
 // =======================================
-//  Base button styles.
+//  Base button styles. Extend those in your `.Btn` component.
+//  Note, that by default it doesn't provide any paddings,
+//  so you should apply those in your component.
 //
 //  1. Allow us to better style box model properties.
 //  2. Line different sized buttons up a little nicer.
@@ -10,18 +12,13 @@
 //     own styles if needed.
 
 .#{$ekzo-o-ns}btn {
-  display: inline-block;       // 1
+  display: inline-block;  // 1
 
-  vertical-align: middle;      // 2
+  vertical-align: middle; // 2
 
-  margin: 0;                   // 3
+  margin: 0;              // 3
 
-  padding-top:    ekzo-em(ekzo-space(.5));
-  padding-bottom: ekzo-em(ekzo-space(.5));
-  padding-right:  1em;
-  padding-left:   1em;
-
-  border-width: 0; // 4
+  border-width: 0;        // 4
 
   @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
 
@@ -57,53 +54,7 @@
 //
 // @param {string} $postfix='' - namespace (used for breakpoins generation)
 
-@mixin ekzo-buttons-sizes($postfix: '') {
-
-  .#{$ekzo-o-ns}btn--#{$postfix} {
-    padding-top:     0;
-    padding-bottom:  0;
-    padding-right:  .6em;
-    padding-left:   .6em;
-  }
-
-  .#{$ekzo-o-ns}btn-#{$postfix} {
-    padding-top:    ekzo-em(ekzo-space(.5) / 3);
-    padding-bottom: ekzo-em(ekzo-space(.5) / 3);
-    padding-right:  .8em;
-    padding-left:   .8em;
-  }
-
-  .#{$ekzo-o-ns}btn\+#{$postfix} {
-    padding-top:    ekzo-em(ekzo-space(1) * .84);
-    padding-bottom: ekzo-em(ekzo-space(1) * .84);
-    padding-right:  1.5em;
-    padding-left:   1.5em;
-  }
-
-  .#{$ekzo-o-ns}btn\+\+#{$postfix} {
-    padding-top:    ekzo-em(ekzo-space(1) * 1.17);
-    padding-bottom: ekzo-em(ekzo-space(1) * 1.17);
-    padding-right:  2em;
-    padding-left:   2em;
-  }
-
-  // ----
-  // Wide version of button with unspecified line-height
-
-  .#{$ekzo-o-ns}btn--wide--#{$postfix} {
-    padding-right: 1.5em;
-    padding-left:  1.5em;
-  }
-
-  .#{$ekzo-o-ns}btn--wide#{$postfix} {
-    padding-right: 2em;
-    padding-left:  2em;
-  }
-
-  .#{$ekzo-o-ns}btn--wide\+\+#{$postfix} {
-    padding-right: 4em;
-    padding-left:  4em;
-  }
+@mixin ekzo-buttons-variants($postfix: '') {
 
   // ----
   // Fill the entirety of their container.
@@ -121,18 +72,18 @@
     .#{$ekzo-o-ns}btn#{$variant}#{$postfix} { font-size: $value; }
   }
 
-} // ekzo-buttons-sizes()
+} // ekzo-buttons-variants()
 
 // ---------------------------------------
 // Call all buttons modifiers
 // ---------------------------------------
 
-@include ekzo-buttons-sizes();
+@include ekzo-buttons-variants();
 
 // ---------------------------------------
 // Responsive buttons modifiers
 // ---------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-buttons-breakpoints) {
-  @include ekzo-buttons-sizes($postfix: ekzo-temp());
+  @include ekzo-buttons-variants($postfix: ekzo-temp());
 }

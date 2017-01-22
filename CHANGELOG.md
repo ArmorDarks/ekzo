@@ -2,6 +2,9 @@
 
 ## HEAD
 
+### Removed
+- Removed `.o-btn` sizing variants, except `.o-btn--full` and font-size related sizings. They were way too opinionated as for an object. From now on you should define sizing variants in your own component, like `.Btn`.
+
 ### Added
 - Added `.h-flex-basis0` helper.
 
