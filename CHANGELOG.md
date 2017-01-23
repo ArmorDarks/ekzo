@@ -8,6 +8,7 @@
 - Removed `@if` declarations around properties, which can be disabled with `null`.
 
 ### Added
+- Added `.o-svg-icon` object for SVG icons. It will help to maintain relative width and height of icon properly even in IE browsers.
 - Added `.h-flex-basis0` helper.
 - Added `ekzo-line-height()` function to retrieve values from new `$ekzo-line-heights`.
 - Added `.h-line-height*` generated based on new map in  `$ekzo-line-heights`.

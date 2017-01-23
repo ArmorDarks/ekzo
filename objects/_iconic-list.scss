@@ -32,6 +32,7 @@
 
     // 2
     > .#{$ekzo-o-ns}icon,
+    > .#{$ekzo-o-ns}svg-icon,
     > .#{$ekzo-o-ns}sprite { @extend %#{$ekzo-o-ns}iconic-list__icon; }
 
   }
