@@ -12,7 +12,6 @@
   @each $ui, $color in $theme {
 
     @include ekzo-theme() {
-
       $value: ekzo-theme($ui);
 
       .#{$ekzo-h-ns}color--#{$ui},
