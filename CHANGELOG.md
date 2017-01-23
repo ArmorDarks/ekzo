@@ -12,6 +12,7 @@
 
 ### Changed
 - More specific flex helpers now comes after more broad ones. This allows to adjust broad ones' setting on demand with specific helpers.
+- In settings `false` for themes and some other variables replaced with `null`. It will effectively remove related properties from generated CSS without need to write additional `@if` declarations.
 
 ### Fixed
 - Fixed `@extend` directive, which had been wrongly extended inside `@media` directove.

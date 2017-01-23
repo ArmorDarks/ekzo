@@ -84,8 +84,8 @@ $ekzo-font-families: (
 $ekzo-ui-font-families: (
   text:           ekzo-font-family(base),
 
-  headings:       false, // false to disable, font name(s) to enable
-  extra-headings: false, // false to disable, font name(s) to enable
+  headings:       false,
+  extra-headings: false,
 
   forms:          inherit,
 

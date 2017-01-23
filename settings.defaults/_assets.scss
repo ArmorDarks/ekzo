@@ -16,7 +16,7 @@ $ekzo-fonts-path:        '#{$ekzo-assets-path}/fonts'   !default;
 // Background
 // ---------------------------------------
 
-$ekzo-bg:                false !default; // `background` property on `html`
+$ekzo-bg:                null !default; // `background` property on `html`
 
 // ---------------------------------------
 // Icons
@@ -24,7 +24,7 @@ $ekzo-bg:                false !default; // `background` property on `html`
 
 $ekzo-icons-prefix:      Icon--          !default;
 $ekzo-icon-font:         icons           !default;
-$ekzo-icon-font-version: 79220573        !default; // `false` to disable, number to enable
+$ekzo-icon-font-version: 79220573        !default;
 $ekzo-icon-font-svg-id:  $ekzo-icon-font !default;
 
 // ---------------------------------------
