@@ -66,6 +66,18 @@
   }
 
   // ---------------------------------------
+  // Line heights
+  // ---------------------------------------
+
+  @each $variant, $value in $ekzo-line-heights {
+
+    @if $variant != '' {
+      .#{$prefix}line-height#{$variant}#{$postfix} { line-height: $value; }
+    }
+
+  }
+
+  // ---------------------------------------
   // Resets
   // ---------------------------------------
 

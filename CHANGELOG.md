@@ -9,8 +9,11 @@
 
 ### Added
 - Added `.h-flex-basis0` helper.
+- Added `ekzo-line-height()` function to retrieve values from new `$ekzo-line-heights`.
+- Added `.h-line-height*` generated based on new map in  `$ekzo-line-heights`.
 
 ### Changed
+- `$ekzo-line-height` renamed to `$ekzo-line-heights` and now stores map of used line-heights in project. This allows to add specific line-heights to project while still keeping whole system under control.
 - More specific flex helpers now comes after more broad ones. This allows to adjust broad ones' setting on demand with specific helpers.
 - In settings `false` for themes and some other variables replaced with `null`. It will effectively remove related properties from generated CSS without need to write additional `@if` declarations.
 

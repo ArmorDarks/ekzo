@@ -17,4 +17,4 @@ $ekzo-h-ns: 'h-' !default;
 // Spacing units
 // ---------------------------------------
 
-$ekzo-space: $ekzo-line-height !default;
+$ekzo-space: ekzo-line-height('') !default;

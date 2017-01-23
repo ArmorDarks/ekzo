@@ -3,6 +3,24 @@
 // =======================================
 
 // ---------------------------------------
+// Get line-height
+// ---------------------------------------
+
+@function ekzo-line-height($line-height-name) {
+  $value: map-get($ekzo-line-heights, $line-height-name);
+
+  @if $value == false {
+    @return null;
+  }
+
+  @if not $value {
+    @error '[ekzo-lh]: no such line-height key: #{$line-height-name}';
+  }
+
+  @return $value;
+}
+
+// ---------------------------------------
 // Output font size
 // ---------------------------------------
 //

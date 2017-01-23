@@ -70,7 +70,9 @@ $ekzo-kbd-font-size:                90% !default;
 // Line heights
 // ---------------------------------------
 
-$ekzo-line-height:                  $ekzo-font-size * 1.5   !default;
+$ekzo-line-heights: (
+  '': $ekzo-font-size * 1.5,
+) !default;
 
 // ---------------------------------------
 // Font famylies
