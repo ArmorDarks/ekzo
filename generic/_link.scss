@@ -11,13 +11,13 @@ a,
 %#{$ekzo-g-ns}link {
   @include ekzo-theme() { color: ekzo-theme(links); }
 
-  @if $ekzo-links-text-decoration { text-decoration: $ekzo-links-text-decoration; }
+  text-decoration: $ekzo-links-text-decoration;
 
   &:hover,
   &:focus {
-    @include ekzo-theme() { @if ekzo-theme(links-hover) { color: ekzo-theme(links-hover); } }
+    @include ekzo-theme() { color: ekzo-theme(links-hover); }
 
-    @if $ekzo-links-hover-text-decoration { text-decoration: $ekzo-links-hover-text-decoration; }
+    text-decoration: $ekzo-links-hover-text-decoration;
   }
 
 }

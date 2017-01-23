@@ -11,8 +11,8 @@
 
 ::selection {
   @include ekzo-theme($also-chain: false) {
-    @if ekzo-theme(selection)    { color: ekzo-theme(selection); }
-    @if ekzo-theme(selection-bg) { background-color: ekzo-theme(selection-bg); }
+    color: ekzo-theme(selection);
+    background-color: ekzo-theme(selection-bg);
   }
 }
 

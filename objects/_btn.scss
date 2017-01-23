@@ -22,15 +22,15 @@
 
   @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
 
-  @if $ekzo-btn-text-decoration { text-decoration: $ekzo-btn-text-decoration; }
+  text-decoration: $ekzo-btn-text-decoration;
 
   @include ekzo-theme() {
-    @if ekzo-theme(btn)    { color: ekzo-theme(btn); }
-    @if ekzo-theme(btn-bg) { background-color: ekzo-theme(btn-bg); }
+    color: ekzo-theme(btn);
+    background-color: ekzo-theme(btn-bg);
   }
 
   &:hover,
-  &:focus { @if $ekzo-btn-hover-text-decoration { text-decoration: $ekzo-btn-hover-text-decoration; } }
+  &:focus { text-decoration: $ekzo-btn-hover-text-decoration; }
 
 }
 

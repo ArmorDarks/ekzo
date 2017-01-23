@@ -5,6 +5,7 @@
 ### Removed
 - Removed `.o-btn` sizing variants, except `.o-btn--full` and font-size related sizings. They were way too opinionated as for an object. From now on you should define sizing variants in your own component, like `.Btn`.
 - Removed from core `.o-icon--left`, `.o-icon--right`, `.o-sprite--left` and `.o-sprite--right` spacing objects. They should be defined in project-specific component, like `.Icon`.
+- Removed `@if` declarations around properties, which can be disabled with `null`.
 
 ### Added
 - Added `.h-flex-basis0` helper.
