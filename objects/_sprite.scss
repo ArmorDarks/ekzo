@@ -24,12 +24,3 @@
 
   background: url(#{$ekzo-sprites-path}/#{$ekzo-sprites-file}) no-repeat;
 }
-
-// ---------------------------------------
-// Spacing
-// ---------------------------------------
-// Apply on icon or sprite if simple margin with space isn't enough
-// or where space is unusable
-
-.#{$ekzo-o-ns}sprite--left  { margin-right: .36em; }
-.#{$ekzo-o-ns}sprite--right { margin-left:  .36em; }

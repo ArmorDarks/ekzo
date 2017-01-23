@@ -42,12 +42,3 @@
 // Useful for lists and menus
 
 .#{$ekzo-o-ns}icon--fixed { width: 1em; }
-
-// ---------------------------------------
-// Spacing
-// ---------------------------------------
-// Apply on icon or sprite if simple margin with space isn't enough
-// or where space is unusable
-
-.#{$ekzo-o-ns}icon--left  { margin-right: .36em; }
-.#{$ekzo-o-ns}icon--right { margin-left:  .36em; }
