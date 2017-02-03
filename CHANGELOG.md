@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.1
+
+### Fixed
+- Fixed typo in flex helper: `.h-flex-y--top` renamed to `.h-flex-y--start`.
+
 ## 2.4.0
 
 ### Removed

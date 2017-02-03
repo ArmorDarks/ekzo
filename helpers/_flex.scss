@@ -41,7 +41,7 @@
   // Cross axis aligment
 
   .#{$prefix}flex-y--stretch#{$postfix}  { align-items: stretch    !important; } // default for flex, 100% height of container
-  .#{$prefix}flex-y--top#{$postfix}      { align-items: flex-start !important; }
+  .#{$prefix}flex-y--start#{$postfix}    { align-items: flex-start !important; }
   .#{$prefix}flex-y--center#{$postfix}   { align-items: center     !important; }
   .#{$prefix}flex-y--end#{$postfix}      { align-items: flex-end   !important; }
   .#{$prefix}flex-y--baseline#{$postfix} { align-items: baseline   !important; } // aligns by text baseline
