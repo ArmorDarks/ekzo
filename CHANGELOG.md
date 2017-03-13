@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.4.2
+
+### Added
+- Added Ekzo logo in readme.
+- Add `functional` keywoard to `package.json`.
+
+### Changed
+- Updated readme.
+- Changed `package.json` description.
+
 ## 2.4.1
 
 ### Fixed
