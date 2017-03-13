@@ -14,7 +14,7 @@ npm install ekzo --save
 How to use
 ----------
 
-Import parts which you'd like to use explicitly in your stylesheet using following pattern:
+Import parts which you would like to use explicitly in your stylesheet:
 
 ```scss
 @import 'node_modules/ekzo/...';
@@ -22,26 +22,24 @@ Import parts which you'd like to use explicitly in your stylesheet using followi
 
 Imports should be layered in following order:
 
+* [Tools](https://github.com/ArmorDarks/ekzo/tree/master/tools)
 * Predefined variables
-* Tools (mixins and functions)
-* Settings
-* Base styles
-* Generics
-* Objects
-* Your components
-* Helpers
+* Settings (or [default settings](https://github.com/ArmorDarks/ekzo/tree/master/settings.defaults))
+* [Base styles](https://github.com/ArmorDarks/ekzo/tree/master/base)
+* [Generics](https://github.com/ArmorDarks/ekzo/tree/master/generic)
+* [Objects](https://github.com/ArmorDarks/ekzo/tree/master/objects)
+* Components
+* [Helpers](https://github.com/ArmorDarks/ekzo/tree/master/helpers)
 
-Order of imports within layers is irrelevant, however, layers order is strict.
-
-You can refer to Kotsu's styles-file as an [example](https://github.com/LotusTM/Kotsu/tree/master/source/styles).
+Refer to [Kotsu](https://github.com/LotusTM/Kotsu) `style.scss` as an [example](https://github.com/LotusTM/Kotsu/tree/master/source/styles).
 
 
 Requirements
 ------------
 
-[Sass](http://sass-lang.com/install) 3.4.2 or higher
+[Sass](http://sass-lang.com/install) 3.4.2 or higher.
 
-[Autoprefixer](https://github.com/postcss/autoprefixer) in conjuration with Grunt or Gulp highly advised
+[Autoprefixer](https://github.com/postcss/autoprefixer) is highly advised.
 
 
 Browsers support
