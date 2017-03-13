@@ -1,6 +1,3 @@
-Ekzo
-====
-
 ![Ekzo](https://cloud.githubusercontent.com/assets/4460311/23854875/16890190-07fc-11e7-862e-37f5a69b76a3.png)
 
 Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty Sass framework for rapid and painless development.
