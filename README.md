@@ -3,10 +3,24 @@
 Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty Sass framework for rapid and painless development.
 
 
+Installation
+------------
+
+```shell
+npm install ekzo --save
+```
+
+
 How to use
 ----------
 
-Ekzo is modular framework, thus you need to import parts which you'd like to use explicitly in your stylesheet. Imports should be layered in following order:
+Import parts which you'd like to use explicitly in your stylesheet using following pattern:
+
+```scss
+@import 'node_modules/ekzo/...';
+```
+
+Imports should be layered in following order:
 
 * Predefined variables
 * Tools (mixins and functions)
