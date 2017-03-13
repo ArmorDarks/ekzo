@@ -2,12 +2,6 @@
 
 Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty Sass framework for rapid and painless development.
 
-Requirements
-------------
-
-[Sass](http://sass-lang.com/install) 3.4.2 or higher
-
-[Autoprefixer](https://github.com/postcss/autoprefixer) in conjuration with Grunt or Gulp highly advised
 
 How to use
 ----------
@@ -27,6 +21,15 @@ Order of imports within layers is irrelevant, however, layers order is strict.
 
 You can refer to Kotsu's styles-file as an [example](https://github.com/LotusTM/Kotsu/tree/master/source/styles).
 
+
+Requirements
+------------
+
+[Sass](http://sass-lang.com/install) 3.4.2 or higher
+
+[Autoprefixer](https://github.com/postcss/autoprefixer) in conjuration with Grunt or Gulp highly advised
+
+
 Browsers support
 ----------------
 
@@ -43,6 +46,7 @@ Ekzo provides graceful regression for IE9 and below:
 In general, in IE8 and IE9 websites will be browsable and not fall to pieces completely, but due to layouts model differences user experience might be affected.
 
 To enable regression, include `_ie.scss` in stylesheet, which will be served only to IE9 and below browsers.
+
 
 Best used with
 --------------
