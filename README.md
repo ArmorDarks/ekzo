@@ -8,7 +8,7 @@
 ---
 
 <p align='center'>
-  <a href='https://www.npmjs.com/package/kotsu'>
+  <a href='https://www.npmjs.com/package/ekzo'>
     <img src='https://img.shields.io/npm/v/ekzo.svg' alt='NPM version' />
   </a>
 </p>
