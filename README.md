@@ -7,6 +7,12 @@
 
 ---
 
+<p align='center'>
+  <a href='https://www.npmjs.com/package/kotsu'>
+    <img src='https://img.shields.io/npm/v/ekzo.svg' alt='NPM version' />
+  </a>
+</p>
+
 Installation
 ------------
 
