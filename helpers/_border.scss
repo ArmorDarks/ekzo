@@ -1,8 +1,8 @@
 // stylelint-disable selector-list-comma-newline-after
 
-// =======================================
+// =============================================================================
 // ^HELPERS.BORDERS
-// =======================================
+// =============================================================================
 // @note I think it's better to leave those styles without `!important`, otherwise it will affect
 //       hover styles
 //       `&:hover` with `border-bottom-width: inherit !important;` doesn't work well to, since it

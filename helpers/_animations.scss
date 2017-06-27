@@ -1,8 +1,8 @@
 // stylelint-disable function-parentheses-space-inside, number-no-trailing-zeros, function-comma-space-after
 
-// =======================================
+// =============================================================================
 // ^ANIMATIONS Transition Timings
-// =======================================
+// =============================================================================
 //
 // CSS cubic-bezier timing functions. Timing functions courtesy of jquery.easie
 //
@@ -11,9 +11,9 @@
 //
 // @source https://github.com/jaukia/easie
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // EASE IN
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 $ekzo-ease-in-quad:      cubic-bezier( .550,  .085,  .680,  .530) !default;
 $ekzo-ease-in-cubic:     cubic-bezier( .550,  .055,  .675,  .190) !default;
@@ -24,9 +24,9 @@ $ekzo-ease-in-expo:      cubic-bezier( .950,  .050,  .795,  .035) !default;
 $ekzo-ease-in-circ:      cubic-bezier( .600,  .040,  .980,  .335) !default;
 $ekzo-ease-in-back:      cubic-bezier( .600, -.280,  .735,  .045) !default;
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // EASE OUT
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 $ekzo-ease-out-quad:     cubic-bezier( .250,  .460,  .450,   .940) !default;
 $ekzo-ease-out-cubic:    cubic-bezier( .215,  .610,  .355,  1.000) !default;
@@ -37,9 +37,9 @@ $ekzo-ease-out-expo:     cubic-bezier( .190, 1.000,  .220,  1.000) !default;
 $ekzo-ease-out-circ:     cubic-bezier( .075,  .820,  .165,  1.000) !default;
 $ekzo-ease-out-back:     cubic-bezier( .175,  .885,  .320,  1.275) !default;
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // EASE IN OUT
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 $ekzo-ease-in-out-quad:  cubic-bezier( .455,  .030,  .515,  .955) !default;
 $ekzo-ease-in-out-cubic: cubic-bezier( .645,  .045,  .355, 1.000) !default;

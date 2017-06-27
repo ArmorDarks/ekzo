@@ -1,14 +1,14 @@
 // stylelint-disable declaration-no-important, declaration-block-single-line-max-declarations
 
-// =======================================
+// =============================================================================
 // ^HELPERS.POSITIONING
-// =======================================
+// =============================================================================
 
 @mixin ekzo-positioning-helpers($prefix:'', $postfix:'') {
 
-  // ---------------------------------------
+  // -----------------------------------------------------------------------------
   // Position
-  // ---------------------------------------
+  // -----------------------------------------------------------------------------
 
   .#{$prefix}relative#{$postfix}        { position: relative !important; }
   .#{$prefix}absolute#{$postfix}        { position: absolute !important; }
@@ -27,17 +27,17 @@
 
   .#{$prefix}position--cover#{$postfix} { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
 
-  // ---------------------------------------
+  // -----------------------------------------------------------------------------
   // Floats
-  // ---------------------------------------
+  // -----------------------------------------------------------------------------
 
   .#{$prefix}float--right#{$postfix} { float: right !important; }
   .#{$prefix}float--left#{$postfix}  { float: left  !important; }
   .#{$prefix}float0#{$postfix}       { float: none  !important; }
 
-  // ---------------------------------------
+  // -----------------------------------------------------------------------------
   // Alignments
-  // ---------------------------------------
+  // -----------------------------------------------------------------------------
 
   .#{$prefix}align--left#{$postfix}          { text-align: left    !important; }
   .#{$prefix}align--right#{$postfix}         { text-align: right   !important; }
@@ -51,15 +51,15 @@
 
 }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Call all positioning helpers
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @include ekzo-positioning-helpers($prefix: $ekzo-h-ns);
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Responsive positioning helpers
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-positioning-helpers-breakpoints) {
   @include ekzo-positioning-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());

@@ -1,14 +1,14 @@
-// =======================================
+// =============================================================================
 // ^FUNCTIONS.TEMP
-// =======================================
+// =============================================================================
 // This is very tricky and, so far, the only way to make content of defined variables
 // inside of mixins available for `@content`
 
 $ekzo-global-temp: null !global;
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Set
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Set data to global temp variable, which will be
 // available everywhere.
 // If second argument provided, mixin will consider
@@ -38,9 +38,9 @@ $ekzo-global-temp: null !global;
   }
 }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Read
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Returns current content of global temp variable.
 // If argument provided, will try to fetch value from
 // that key of map inside global temp variable
@@ -73,9 +73,9 @@ $ekzo-global-temp: null !global;
   }
 }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Purge
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Resets global temp variable to initial state
 
 @mixin ekzo-purge-temp() { $ekzo-global-temp: null !global; }

@@ -1,12 +1,12 @@
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after, max-nesting-depth
 
-// =======================================
+// =============================================================================
 // ^HELPERS.COLORS
-// =======================================
+// =============================================================================
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Inherits
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 .#{$ekzo-h-ns}color--inherit           { color: inherit !important; }
 .#{$ekzo-h-ns}color--inherit\:h        { &:hover, &:focus { color: inherit !important; } }
@@ -23,9 +23,9 @@
 .#{$ekzo-h-ns}stroke--inherit          { stroke: inherit !important; }
 .#{$ekzo-h-ns}stroke--inherit\:h       { &:hover, &:focus { stroke: inherit !important; } }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Transparent
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 .#{$ekzo-h-ns}color--transparent           { color: transparent !important; }
 .#{$ekzo-h-ns}color--transparent\:h        { &:hover, &:focus { color: transparent !important; } }
@@ -42,9 +42,9 @@
 .#{$ekzo-h-ns}stroke--transparent          { stroke: transparent !important; }
 .#{$ekzo-h-ns}stroke--transparent\:h       { &:hover, &:focus { stroke: transparent !important; } }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // currentColor
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 .#{$ekzo-h-ns}color--current           { color: currentColor !important; }
 .#{$ekzo-h-ns}color--current\:h        { &:hover, &:focus { color: currentColor !important; } }
@@ -61,9 +61,9 @@
 .#{$ekzo-h-ns}stroke--current          { stroke: currentColor !important; }
 .#{$ekzo-h-ns}stroke--current\:h       { &:hover, &:focus { stroke: currentColor !important; } }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Color pallete
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @each $color, $value in $ekzo-colors {
 

@@ -1,8 +1,8 @@
 // stylelint-disable declaration-no-important
 
-// =======================================
+// =============================================================================
 // ^HELPERS.MISC
-// =======================================
+// =============================================================================
 //
 // A series of helper classes to use arbitrarily. Only use a helper class if an
 // element/component doesn't already have a class to which you could apply this
@@ -12,24 +12,24 @@
 // A lot of these classes carry `!important` as you will always want them to win
 // out over other selectors.
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Cursors
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 .#{$ekzo-h-ns}cursor--help    { cursor: help    !important; }
 .#{$ekzo-h-ns}cursor--default { cursor: default !important; }
 .#{$ekzo-h-ns}cursor--pointer { cursor: pointer !important; }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Apply box-sizing models
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 .#{$ekzo-h-ns}box-sizing--border  { box-sizing: border-box  !important; }
 .#{$ekzo-h-ns}box-sizing--content { box-sizing: content-box !important; }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Column count
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 .#{$ekzo-h-ns}column-count0   { column-count: auto; }
 .#{$ekzo-h-ns}column-count--2 { column-count: 2; }

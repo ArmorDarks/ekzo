@@ -1,12 +1,12 @@
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after, selector-combinator-space-before, declaration-block-single-line-max-declarations, selector-no-universal
 
-// =======================================
+// =============================================================================
 // ^HELPERS.SPACING
-// =======================================
+// =============================================================================
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Margins
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 // ----
 // Add/remove margins
@@ -73,9 +73,9 @@
   }
 } // ekzo-spacing-helpers()
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Paddings
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @mixin ekzo-padding-helpers($variations, $prefix: '', $postfix: '') {
   @each $variation, $value in $variations {
@@ -113,9 +113,9 @@
   }
 } // ekzo-spacing-helpers()
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Call margin helpers
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @include ekzo-margin-helpers($variations: $ekzo-margin-helpers-variations, $prefix: $ekzo-h-ns);
 
@@ -126,9 +126,9 @@
   @include ekzo-margin-helpers($variations: $ekzo-margin-helpers-variations, $prefix: $ekzo-h-ns, $postfix: ekzo-temp());
 }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Call bleed helpers
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @include ekzo-bleed-helpers($variations: $ekzo-bleed-helpers-variations, $prefix: $ekzo-h-ns);
 
@@ -139,9 +139,9 @@
   @include ekzo-bleed-helpers($variations: $ekzo-bleed-helpers-variations, $prefix: $ekzo-h-ns, $postfix: ekzo-temp());
 }
 
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 // Call padding helpers
-// ---------------------------------------
+// -----------------------------------------------------------------------------
 
 @include ekzo-padding-helpers($variations: $ekzo-padding-helpers-variations, $prefix: $ekzo-h-ns);
 
