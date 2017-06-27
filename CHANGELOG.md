@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.3
+
+### Changed
+- Comments headers extended to be always 80 chars long. This effectively marks recommended length for file content.
+
 ## 2.4.2
 
 ### Added
