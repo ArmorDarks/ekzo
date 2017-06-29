@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Changed
+- Updated `stylelint-disable` directives to work with Stylelint 7.12.0.
+
 ## 2.4.3
 
 ### Changed
