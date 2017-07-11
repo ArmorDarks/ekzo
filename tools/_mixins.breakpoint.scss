@@ -48,17 +48,23 @@
 // Include for each breakpoint
 // -----------------------------------------------------------------------------
 
-@mixin ekzo-for-each-breakpoint($matches: $ekzo-responsive-helpers-breakpoints, $breakpoints: $ekzo-breakpoints) {
+@mixin ekzo-for-each-breakpoint($matches: $ekzo-responsive-helpers-breakpoints, $include-self: false, $breakpoints: $ekzo-breakpoints) {
+  @include ekzo-set-temp('');
+
+  @if $include-self {
+    @content;
+  }
+
   @each $breakpoint, $query in $breakpoints {
-    // check is current breakpoint in the list of allowed for generation responsive classes
     @if index($matches, $breakpoint) != null {
 
       @include ekzo-breakpoint($breakpoint) {
         @include ekzo-set-temp('\\@#{$breakpoint}');
         @content;
-        @include ekzo-purge-temp();
       }
 
     }
   }
+
+  @include ekzo-purge-temp();
 }
