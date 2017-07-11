@@ -60,7 +60,7 @@
 // When used with `.o-grid`, try to mimic flex
 // behavior as close as possible
 
-@mixin ekzo-flex-helpers($prefix:'', $postfix:'') {
+@mixin ekzo-flex-helpers($prefix: $ekzo-h-ns, $postfix: '') {
 
   // -----
   // Main axis aligment
@@ -115,14 +115,14 @@
 // Call all flex helpers
 // -----------------------------------------------------------------------------
 
-@include ekzo-flex-helpers($prefix: $ekzo-h-ns);
+@include ekzo-flex-helpers();
 
 // -----------------------------------------------------------------------------
 // Responsive flex helpers
 // -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints) {
-  @include ekzo-flex-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
+  @include ekzo-flex-helpers($postfix: ekzo-temp());
 }
 
 // =============================================================================

@@ -7,6 +7,9 @@
 
    This is handy option to avoid few separate includes.
 
+### Changed
+- Mixins with `$prefix` will now always use by default Ekzo namespace variable by default, so that unneeded in most cases `$prefix` specification during mixins invocation can be completely avoided.
+
 ## 2.4.4
 
 ### Changed

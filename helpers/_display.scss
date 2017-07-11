@@ -4,7 +4,7 @@
 // ^HELPERS.DISPLAY
 // =============================================================================
 
-@mixin ekzo-display-helpers($prefix:'', $postfix:'') {
+@mixin ekzo-display-helpers($prefix: $ekzo-h-ns, $postfix: '') {
 
   // -----------------------------------------------------------------------------
   // Display
@@ -86,12 +86,12 @@
 // Call all display helpers
 // -----------------------------------------------------------------------------
 
-@include ekzo-display-helpers($prefix: $ekzo-h-ns);
+@include ekzo-display-helpers();
 
 // -----------------------------------------------------------------------------
 // Responsive display helpers
 // -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints) {
-  @include ekzo-display-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
+  @include ekzo-display-helpers($postfix: ekzo-temp());
 }

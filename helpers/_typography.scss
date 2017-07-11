@@ -4,7 +4,7 @@
 // ^HELPERS.TYPOGRAPHY
 // =============================================================================
 
-@mixin ekzo-typography-helpers($prefix: '', $postfix: '') {
+@mixin ekzo-typography-helpers($prefix: $ekzo-h-ns, $postfix: '') {
 
   // -----------------------------------------------------------------------------
   // Text
@@ -99,12 +99,12 @@
 // Call all typography helpers
 // -----------------------------------------------------------------------------
 
-@include ekzo-typography-helpers($prefix: $ekzo-h-ns);
+@include ekzo-typography-helpers();
 
 // -----------------------------------------------------------------------------
 // Responsive typography helpers
 // -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
-  @include ekzo-typography-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
+  @include ekzo-typography-helpers($postfix: ekzo-temp());
 }

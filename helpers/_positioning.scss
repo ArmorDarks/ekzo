@@ -4,7 +4,7 @@
 // ^HELPERS.POSITIONING
 // =============================================================================
 
-@mixin ekzo-positioning-helpers($prefix:'', $postfix:'') {
+@mixin ekzo-positioning-helpers($prefix: $ekzo-h-ns, $postfix: '') {
 
   // -----------------------------------------------------------------------------
   // Position
@@ -55,12 +55,12 @@
 // Call all positioning helpers
 // -----------------------------------------------------------------------------
 
-@include ekzo-positioning-helpers($prefix: $ekzo-h-ns);
+@include ekzo-positioning-helpers();
 
 // -----------------------------------------------------------------------------
 // Responsive positioning helpers
 // -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-positioning-helpers-breakpoints) {
-  @include ekzo-positioning-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
+  @include ekzo-positioning-helpers($postfix: ekzo-temp());
 }

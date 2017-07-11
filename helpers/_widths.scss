@@ -21,7 +21,7 @@
 //
 // @returns class. For example: `h-2/3@lap`
 
-@mixin ekzo-widths-helpers($fractions, $prefix:'', $postfix:'') {
+@mixin ekzo-widths-helpers($fractions, $prefix: $ekzo-h-ns, $postfix: '') {
 
   .#{$prefix}min0#{$postfix} { min-width: 0 !important; }
 
@@ -51,7 +51,7 @@
 // Call all widths
 // -----------------------------------------------------------------------------
 
-@include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions, $prefix: $ekzo-h-ns)
+@include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions)
 
 // -----------------------------------------------------------------------------
 // Responsive widths
@@ -60,7 +60,6 @@
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-widths-helpers-breakpoints) {
   @include ekzo-widths-helpers(
     $fractions: $ekzo-responsive-widths-helpers-fractions,
-    $prefix: $ekzo-h-ns,
     $postfix: ekzo-temp()
   );
 }

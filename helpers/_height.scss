@@ -4,7 +4,7 @@
 // ^HELPERS.HEIGHT
 // =============================================================================
 
-@mixin ekzo-height-helpers($prefix:'', $postfix:'') {
+@mixin ekzo-height-helpers($prefix: $ekzo-h-ns, $postfix: '') {
 
   .#{$prefix}height-1\/1#{$postfix} { height: 100% !important; }
 
@@ -14,12 +14,12 @@
 // Call all height helpers
 // -----------------------------------------------------------------------------
 
-@include ekzo-height-helpers($prefix: $ekzo-h-ns);
+@include ekzo-height-helpers();
 
 // -----------------------------------------------------------------------------
 // Responsive height helpers
 // -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints) {
-  @include ekzo-height-helpers($prefix: $ekzo-h-ns, $postfix: ekzo-temp());
+  @include ekzo-height-helpers($postfix: ekzo-temp());
 }

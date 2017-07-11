@@ -2,7 +2,7 @@
 // ^HIDE
 // =============================================================================
 
-@mixin ekzo-hide($prefix:'', $postfix:'') {
+@mixin ekzo-hide($prefix: $ekzo-o-ns, $postfix: '') {
 
   // ----
   // Hide only visually, but have it available for screen readers
@@ -40,12 +40,12 @@
 // Call all display helpers
 // -----------------------------------------------------------------------------
 
-@include ekzo-hide($prefix: $ekzo-o-ns);
+@include ekzo-hide();
 
 // -----------------------------------------------------------------------------
 // Responsive display helpers
 // -----------------------------------------------------------------------------
 
 @include ekzo-for-each-breakpoint($matches: $ekzo-responsive-hide-breakpoints) {
-  @include ekzo-hide($prefix: $ekzo-o-ns, $postfix: ekzo-temp());
+  @include ekzo-hide($postfix: ekzo-temp());
 }
