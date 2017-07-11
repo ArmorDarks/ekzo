@@ -37,15 +37,9 @@
 }
 
 // -----------------------------------------------------------------------------
-// Call all display helpers
+// Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-hide();
-
-// -----------------------------------------------------------------------------
-// Responsive display helpers
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-hide-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-hide-breakpoints, $include-self: true) {
   @include ekzo-hide($postfix: ekzo-temp());
 }

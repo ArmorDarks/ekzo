@@ -96,15 +96,9 @@
 }
 
 // -----------------------------------------------------------------------------
-// Call all typography helpers
+// Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-typography-helpers();
-
-// -----------------------------------------------------------------------------
-// Responsive typography helpers
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints, $include-self: true) {
   @include ekzo-typography-helpers($postfix: ekzo-temp());
 }

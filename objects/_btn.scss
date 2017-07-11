@@ -51,7 +51,6 @@
 // -----------------------------------------------------------------------------
 // Buttons sizes
 // -----------------------------------------------------------------------------
-//
 // @param {string} $postfix='' - namespace (used for breakpoins generation)
 
 @mixin ekzo-buttons-variants($postfix: '') {
@@ -75,15 +74,9 @@
 } // ekzo-buttons-variants()
 
 // -----------------------------------------------------------------------------
-// Call all buttons modifiers
+// Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-buttons-variants();
-
-// -----------------------------------------------------------------------------
-// Responsive buttons modifiers
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-buttons-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-buttons-breakpoints, $include-self: true) {
   @include ekzo-buttons-variants($postfix: ekzo-temp());
 }

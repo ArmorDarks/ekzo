@@ -52,15 +52,9 @@
 }
 
 // -----------------------------------------------------------------------------
-// Call all positioning helpers
+// Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-positioning-helpers();
-
-// -----------------------------------------------------------------------------
-// Responsive positioning helpers
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-positioning-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-positioning-helpers-breakpoints, $include-self: true) {
   @include ekzo-positioning-helpers($postfix: ekzo-temp());
 }

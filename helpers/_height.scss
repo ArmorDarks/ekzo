@@ -11,15 +11,9 @@
 }
 
 // -----------------------------------------------------------------------------
-// Call all height helpers
+// Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-height-helpers();
-
-// -----------------------------------------------------------------------------
-// Responsive height helpers
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-height-helpers-breakpoints, $include-self: true) {
   @include ekzo-height-helpers($postfix: ekzo-temp());
 }

@@ -114,40 +114,17 @@
 } // ekzo-spacing-helpers()
 
 // -----------------------------------------------------------------------------
-// Call margin helpers
+// Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-margin-helpers($variations: $ekzo-margin-helpers-variations);
-
-// ----
-// Responsive
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-margin-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-margin-helpers-breakpoints, $include-self: true) {
   @include ekzo-margin-helpers($variations: $ekzo-margin-helpers-variations, $postfix: ekzo-temp());
 }
 
-// -----------------------------------------------------------------------------
-// Call bleed helpers
-// -----------------------------------------------------------------------------
-
-@include ekzo-bleed-helpers($variations: $ekzo-bleed-helpers-variations);
-
-// ----
-// Responsive
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-bleed-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-bleed-helpers-breakpoints, $include-self: true) {
   @include ekzo-bleed-helpers($variations: $ekzo-bleed-helpers-variations, $postfix: ekzo-temp());
 }
 
-// -----------------------------------------------------------------------------
-// Call padding helpers
-// -----------------------------------------------------------------------------
-
-@include ekzo-padding-helpers($variations: $ekzo-padding-helpers-variations);
-
-// ----
-// Responsive
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-padding-helpers-breakpoints) {
+@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-padding-helpers-breakpoints, $include-self: true) {
   @include ekzo-padding-helpers($variations: $ekzo-padding-helpers-variations, $postfix: ekzo-temp());
 }
