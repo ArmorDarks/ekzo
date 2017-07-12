@@ -55,22 +55,21 @@ Requirements
 Browsers support
 ----------------
 
-Fully works in:
+|  IE | Edge | Chrome | Firefox | Safari | Opera | Opera Mobile | iOS Safari | Android |
+|-----|------|--------|---------|--------|-------|--------------|------------|---------|
+| 10+ | 12+  | 21+    | 28+     | 6.1+   | 12.1+ | 12.1+        | 7.1+       | 4.4+    |
 
-IE10+, Edge 12+, Chrome 21+, Firefox 28+, Safari 6.1+, Opera 12.1+, Opera Mobile 12.1+, iOS Safari 7.1+, Android 4.4+.
+[`_ie.scss`](https://github.com/ArmorDarks/ekzo/blob/master/_ie.scss) provides graceful regression for IE9 and below:
 
-Ekzo provides graceful regression for IE9 and below:
+* Grid, media and nav objects will fallback from `flexbox` to `inline-block`, `table` or `float`-based models.
+* Flexbox alignment helpers will fallback to `text-align` and `vertical-align` to imitate intended alignment on `inline-block`-based grid, media and nav objects.
+* `::placeholder` and `::selection` won't be styled nor displayed.
 
-* Grids, media and nav objects will fallback from `flexbox` model to `inline-block`, `table` or `float`-based models. While they will maintain proper flow of elements, alignment (especially vertical) will be drastically limited or differ from modern browsers.
-* Flexbox alignment helpers in IE9 and below will fallback to `text-align` (horizontal alignment) and `vertical-align` (vertical alignment). This means that alignment of element might be affected differently from modern browsers.
-* `::placeholder` and `::selection` won't be styled nor displayed
+All this will help to maintain intended flow and alignment of elements as closely as possible, but some features will be limited, especially vertical alignment.
 
-In general, in IE8 and IE9 websites will be browsable and not fall to pieces completely, but due to layouts model differences user experience might be affected.
-
-To enable regression, include `_ie.scss` in stylesheet, which will be served only to IE9 and below browsers.
-
+To use, include `_ie.scss` in stylesheet, which will be served only to IE9 and below with [IE conditional comments](https://en.wikipedia.org/wiki/Conditional_comment).
 
 Best used with
 --------------
 
-[Kotsu](https://github.com/LotusTM/Kotsu) — advanced Grunt-based web starter kit with Circle CI continuous deployment integration.
+[Kotsu](https://github.com/LotusTM/Kotsu) — Advanced Web Starter Kit & Static Website Generator with docker integration.
