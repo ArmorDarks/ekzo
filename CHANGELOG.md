@@ -1,6 +1,6 @@
 # Changelog
 
-### 2.5.0
+## 2.5.0
 
 ### Added
 - Added `$include-self` option with `false` as default value for `ekzo-for-each-breakpoint()` mixin. When set to `true` it will print content without any `@media` or `$postfix`.
