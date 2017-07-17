@@ -100,10 +100,11 @@
     font-family: $font;
 
     src: url('#{$font-path}.eot#{$version}');
-    src: url('#{$font-path}.eot#{$version}#iefix') format('embedded-opentype'),
-         url('#{$font-path}.woff#{$version}')      format('woff'),
-         url('#{$font-path}.ttf#{$version}')       format('truetype')
-         #{if($svg, ', url(' + $font-path + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
+    src:
+      url('#{$font-path}.eot#{$version}#iefix') format('embedded-opentype'),
+      url('#{$font-path}.woff#{$version}')      format('woff'),
+      url('#{$font-path}.ttf#{$version}')       format('truetype')
+      #{if($svg, ', url(' + $font-path + '.svg' + $version + '#' + $svg-id + ') format(\'svg\')', '')};
 
     font-weight:  $weight;
     font-style:   $style;
