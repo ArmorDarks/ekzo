@@ -60,6 +60,7 @@
 
       @include ekzo-breakpoint($breakpoint) {
         @include ekzo-set-temp('\\@#{$breakpoint}');
+
         @content;
       }
 

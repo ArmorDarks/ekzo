@@ -13,6 +13,7 @@
 
   @include ekzo-theme($also-chain: false) {
     $breadcrumb-delimiters: ekzo-theme(breadcrumb-delimiters);
+
     @if $breadcrumb-delimiters != ekzo-theme(text) {
       color: $breadcrumb-delimiters;
     }
@@ -40,6 +41,7 @@
 
   @include ekzo-theme() {
     $breadcrumb-links: ekzo-theme(breadcrumb-links);
+
     @if $breadcrumb-links != ekzo-theme(links) {
       > li > a { color: $breadcrumb-links; }
     }

@@ -112,6 +112,7 @@
     .#{$prefixed-name} {
       width: $width;
       height: $height;
+
       @content;
     }
     .#{$prefixed-name}#{$sufix-1} { background-position: sprite-map($name, offset-x) sprite-map($name, offset-y); }
@@ -132,6 +133,7 @@
     .#{$prefixed-name} {
       width: $width;
       height: $height;
+
       @content;
     }
     .#{$prefixed-name}#{$sufix-1} { background-position: sprite-map($name, offset-x) sprite-map($name, offset-y); }
