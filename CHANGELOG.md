@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.5.2
+
+### Changed
+- Update codestyle to follow new Kotsu Stylelint rules.
+
 ## 2.5.1
 
 ### Changed
