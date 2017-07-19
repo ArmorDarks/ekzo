@@ -57,13 +57,11 @@
 
   @each $breakpoint, $query in $breakpoints {
     @if index($matches, $breakpoint) != null {
-
       @include ekzo-breakpoint($breakpoint) {
         @include ekzo-set-temp('\\@#{$breakpoint}');
 
         @content;
       }
-
     }
   }
 

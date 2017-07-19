@@ -10,7 +10,6 @@
 
 @each $theme-name, $theme in $ekzo-themes {
   @each $ui, $color in $theme {
-
     @include ekzo-theme() {
       $value: ekzo-theme($ui);
 
@@ -35,6 +34,5 @@
       .#{$ekzo-h-ns}stroke--#{$ui}\:h:focus { stroke: $value !important; }
 
     }
-
   }
 }

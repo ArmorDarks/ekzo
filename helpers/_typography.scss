@@ -57,6 +57,7 @@
       @include ekzo-theme() { color: ekzo-theme(extra-headings); }
 
       @include ekzo-font-size($value);
+
       font-family: ekzo-ui-font-family(extra-headings);
     }
 
@@ -70,11 +71,11 @@
   // -----------------------------------------------------------------------------
 
   @each $variant, $value in $ekzo-line-heights {
-
     @if $variant != '' {
-      .#{$prefix}line-height#{$variant}#{$postfix} { line-height: $value; }
-    }
 
+      .#{$prefix}line-height#{$variant}#{$postfix} { line-height: $value; }
+
+    }
   }
 
   // -----------------------------------------------------------------------------
