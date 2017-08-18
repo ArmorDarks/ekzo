@@ -18,7 +18,7 @@
    This is handy option to avoid few separate includes.
 
 ### Changed
-- Mixins with `$prefix` will now always use by default Ekzo namespace variable by default, so that unneeded in most cases `$prefix` specification during mixins invocation can be completely avoided.
+- Mixins with `$prefix` now will always use Ekzo namespace variable by default, so that unneeded in most cases `$prefix` specification during mixins invocation can be completely avoided.
 - Merged standalone helpers and objects mixins calls with its responsive versions calls thanks to introduction of `$include-self` option for `ekzo-for-each-breakpoint()` mixin.
 
 ## 2.4.4
