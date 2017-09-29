@@ -11,7 +11,7 @@
 //
 // @return {number} - Number without units
 
-@function ekzo-strip-units($value) { @return $value / ($value * 0 + 1); }
+@function ekzo-strip-units ($value) { @return $value / ($value * 0 + 1); }
 
 // -----------------------------------------------------------------------------
 // Convert units
@@ -35,7 +35,7 @@
 // @example
 //   padding: ekzo-units(25px, em)
 
-@function ekzo-units($value, $unit, $base: $ekzo-font-size) {
+@function ekzo-units ($value, $unit, $base: $ekzo-font-size) {
   // stylelint-disable length-zero-no-unit
   $units: (
     'px': 0px,
@@ -99,7 +99,7 @@
 //
 // @return {number}
 
-@function ekzo-percent($value, $total) {
+@function ekzo-percent ($value, $total) {
   // Try to convert both units into same unit system. Otherwise Sass error will be thrown,
   // We can't calculate incompatible units.
   @if not unitless($value) and not unitless($total) {
@@ -124,7 +124,7 @@
 //
 // @return {number}
 
-@function ekzo-em($value, $base:$ekzo-font-size) {
+@function ekzo-em ($value, $base:$ekzo-font-size) {
   @if unit($value) == 'rem' and unit($base) == 'px' {
     $value: ekzo-px($value, $base);
   }
@@ -153,7 +153,7 @@
 //
 // @return {number}
 
-@function ekzo-rem($value, $base:$ekzo-font-size) {
+@function ekzo-rem ($value, $base:$ekzo-font-size) {
   @if unit($value) == 'em' and unit($base) == 'px' {
     $value: ekzo-px($value, $base);
   }
@@ -188,7 +188,7 @@
 //
 // @return {number}
 
-@function ekzo-px($value, $base:$ekzo-font-size) {
+@function ekzo-px ($value, $base:$ekzo-font-size) {
   @if (unit($value) == 'em' and unit($base) == 'px') or
     (unit($value) == 'rem' and unit($base) == 'px') {
     $value: ekzo-strip-units($value) * $base;

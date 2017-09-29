@@ -15,7 +15,7 @@
 //    @include ekzo-truncate(100%);
 //  }
 
-@mixin ekzo-truncate($truncation-boundary) {
+@mixin ekzo-truncate ($truncation-boundary) {
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -30,22 +30,22 @@
 //
 // Quick way to specify multiple border radii at once
 
-@mixin ekzo-border-top-radius($radius) {
+@mixin ekzo-border-top-radius ($radius) {
   border-top-left-radius:  $radius;
   border-top-right-radius: $radius;
 }
 
-@mixin ekzo-border-bottom-radius($radius) {
+@mixin ekzo-border-bottom-radius ($radius) {
   border-bottom-left-radius:  $radius;
   border-bottom-right-radius: $radius;
 }
 
-@mixin ekzo-border-left-radius($radius) {
+@mixin ekzo-border-left-radius ($radius) {
   border-top-left-radius:    $radius;
   border-bottom-left-radius: $radius;
 }
 
-@mixin ekzo-border-right-radius($radius) {
+@mixin ekzo-border-right-radius ($radius) {
   border-top-right-radius:    $radius;
   border-bottom-right-radius: $radius;
 }
@@ -66,7 +66,7 @@
 //    @include ekzo-aspect-ratio(16, 9);
 //  }
 
-@mixin ekzo-aspect-ratio($width, $height) {
+@mixin ekzo-aspect-ratio ($width, $height) {
   height: 0;
   width: 100%;
 

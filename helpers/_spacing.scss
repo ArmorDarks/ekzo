@@ -11,7 +11,7 @@
 // ----
 // Add/remove margins
 
-@mixin ekzo-margin-helpers($variations, $prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-margin-helpers ($variations, $prefix: $ekzo-h-ns, $postfix: '') {
 
   .#{$prefix}margin--auto#{$postfix}        { margin:        auto !important; }
   .#{$prefix}margin-top--auto#{$postfix}    { margin-top:    auto !important; }
@@ -61,7 +61,7 @@
 // ----
 // Negative margins
 
-@mixin ekzo-bleed-helpers($variations, $prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-bleed-helpers ($variations, $prefix: $ekzo-h-ns, $postfix: '') {
   @each $variation, $value in $variations {
     .#{$prefix}bleed#{$variation}#{$postfix}        { margin:        $value !important; }
     .#{$prefix}bleed-top#{$variation}#{$postfix}    { margin-top:    $value !important; }
@@ -77,7 +77,7 @@
 // Paddings
 // -----------------------------------------------------------------------------
 
-@mixin ekzo-padding-helpers($variations, $prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-padding-helpers ($variations, $prefix: $ekzo-h-ns, $postfix: '') {
   @each $variation, $value in $variations {
     .#{$prefix}padding#{$variation}#{$postfix}        { padding:        $value !important; }
     .#{$prefix}padding-top#{$variation}#{$postfix}    { padding-top:    $value !important; }

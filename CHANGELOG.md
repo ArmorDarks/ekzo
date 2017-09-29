@@ -1,5 +1,12 @@
 # Changelog
 
+## HEAD
+
+### Changed
+- Update codestyle to follow new Kotsu Stylelint rules.
+
+   Functions and mixins declarations now require space before `(arguments)`, to follow codestyle enforced by `standard` in JavaScript.
+
 ## 2.5.2
 
 ### Changed

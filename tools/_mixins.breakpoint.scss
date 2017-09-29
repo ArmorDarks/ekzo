@@ -31,7 +31,7 @@
 //    }
 //
 
-@mixin ekzo-breakpoint($breakpoint, $breakpoints: $ekzo-breakpoints) {
+@mixin ekzo-breakpoint ($breakpoint, $breakpoints: $ekzo-breakpoints) {
   $query: map-get($breakpoints, $breakpoint);
 
   // check wether defined breakpoint exists in requested map
@@ -48,7 +48,7 @@
 // Include for each breakpoint
 // -----------------------------------------------------------------------------
 
-@mixin ekzo-for-each-breakpoint($matches: $ekzo-responsive-helpers-breakpoints, $include-self: false, $breakpoints: $ekzo-breakpoints) {
+@mixin ekzo-for-each-breakpoint ($matches: $ekzo-responsive-helpers-breakpoints, $include-self: false, $breakpoints: $ekzo-breakpoints) {
   @include ekzo-set-temp('');
 
   @if $include-self {

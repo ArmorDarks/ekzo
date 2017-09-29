@@ -2,7 +2,7 @@
 // ^HIDE
 // =============================================================================
 
-@mixin ekzo-hide($prefix: $ekzo-o-ns, $postfix: '') {
+@mixin ekzo-hide ($prefix: $ekzo-o-ns, $postfix: '') {
 
   // ----
   // Hide only visually, but have it available for screen readers

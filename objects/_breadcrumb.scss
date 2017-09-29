@@ -8,7 +8,7 @@
 // @param  {string} $delimiter Delimiter for elements
 // @return {properties} Properties for elements
 
-@mixin breadcrumb__item($delimiter) {
+@mixin breadcrumb__item ($delimiter) {
   content: $delimiter;
 
   @include ekzo-theme($also-chain: false) {

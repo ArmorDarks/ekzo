@@ -21,7 +21,7 @@ $ekzo-global-temp: null !global;
 // @param  {*} $value:null Optional value, which should be set under first
 //                         argument as a key of the map
 
-@mixin ekzo-set-temp($key, $value:null) {
+@mixin ekzo-set-temp ($key, $value:null) {
   @if $ekzo-global-temp == null {
     $ekzo-global-temp: () !global;
   }
@@ -49,7 +49,7 @@ $ekzo-global-temp: null !global;
 // @return {*}            Content of global temp variable or it's map
 //                        under specified key
 
-@function ekzo-temp($key:false) {
+@function ekzo-temp ($key:false) {
   @if not $key {
     @if type-of($ekzo-global-temp) == 'null' {
       @error '[ekzo-temp]: temp variable does not hold any value';
@@ -78,4 +78,4 @@ $ekzo-global-temp: null !global;
 // -----------------------------------------------------------------------------
 // Resets global temp variable to initial state
 
-@mixin ekzo-purge-temp() { $ekzo-global-temp: null !global; }
+@mixin ekzo-purge-temp () { $ekzo-global-temp: null !global; }

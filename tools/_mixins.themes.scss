@@ -6,7 +6,7 @@
 // Extend theme
 // -----------------------------------------------------------------------------
 
-@mixin ekzo-extend-themes($theme, $theme-data, $default: false) {
+@mixin ekzo-extend-themes ($theme, $theme-data, $default: false) {
   $ekzo-themes: () !default;
   $new-theme:   ();
 
@@ -56,7 +56,7 @@
 //
 //  }
 
-@mixin ekzo-theme($themes: $ekzo-themes, $prefix: $ekzo-t-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+@mixin ekzo-theme ($themes: $ekzo-themes, $prefix: $ekzo-t-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
   @each $theme, $data in $themes {
     @include ekzo-set-temp(theme, $data);
 

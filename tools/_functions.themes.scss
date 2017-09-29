@@ -6,7 +6,7 @@
 // Get color from pallete
 // -----------------------------------------------------------------------------
 
-@function ekzo-color($color-name, $map: $ekzo-colors) {
+@function ekzo-color ($color-name, $map: $ekzo-colors) {
   $value: map-get($map, $color-name);
 
   @if not $value {
@@ -20,7 +20,7 @@
 // Themify
 // -----------------------------------------------------------------------------
 
-@function ekzo-theme($color-name, $alert-on-missing: $ekzo-alert-on-missing-theme-color) {
+@function ekzo-theme ($color-name, $alert-on-missing: $ekzo-alert-on-missing-theme-color) {
   $temp-theme: ekzo-temp(theme);
   $value: map-get($temp-theme, $color-name);
 

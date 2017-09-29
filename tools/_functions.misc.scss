@@ -11,7 +11,7 @@
 //
 // @return {string}
 
-@function ekzo-flip-direction($direction) {
+@function ekzo-flip-direction ($direction) {
   @if $direction == 'top'         { @return 'bottom'; }
 
   @else if $direction == 'bottom' { @return 'top'; }
@@ -31,7 +31,7 @@
 //
 // @return {color}
 
-@function ekzo-tint($color, $percent) { @return mix(#fff, $color, $percent); }
+@function ekzo-tint ($color, $percent) { @return mix(#fff, $color, $percent); }
 
 // -----------------------------------------------------------------------------
 // Shade
@@ -43,4 +43,4 @@
 //
 // @return {color}
 
-@function ekzo-shade($color, $percent) { @return mix(#000, $color, $percent); }
+@function ekzo-shade ($color, $percent) { @return mix(#000, $color, $percent); }

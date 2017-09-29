@@ -41,7 +41,7 @@
 //
 //
 
-@mixin ekzo-arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
+@mixin ekzo-arrow ($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
   @if $arrow-edge == top {
     @extend %arrow--top;
 

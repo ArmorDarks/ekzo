@@ -21,7 +21,7 @@
 //
 // @returns class. For example: `h-2/3@lap`
 
-@mixin ekzo-widths-helpers($fractions, $prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-widths-helpers ($fractions, $prefix: $ekzo-h-ns, $postfix: '') {
 
   .#{$prefix}min0#{$postfix} { min-width: 0 !important; }
 

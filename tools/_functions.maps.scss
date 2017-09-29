@@ -13,7 +13,7 @@
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
 // @todo Should support paths in `$keys...`. This required by `@mixin ekzo-breakpoint`
 
-@function ekzo-get($map, $keys...) {
+@function ekzo-get ($map, $keys...) {
   @if length($keys) == 1 {
     $keys: nth($keys, 1);
   }
@@ -49,7 +49,7 @@
 //
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
 
-@function ekzo-get-warning($warn, $get, $key) {
+@function ekzo-get-warning ($warn, $get, $key) {
   @if $get == null {
     @warn '[ekzo-get]: map has no value for key search `#{$warn}`';
   }

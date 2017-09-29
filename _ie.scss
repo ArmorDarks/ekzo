@@ -60,7 +60,7 @@
 // When used with `.o-grid`, try to mimic flex
 // behavior as close as possible
 
-@mixin ekzo-flex-helpers($prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-flex-helpers ($prefix: $ekzo-h-ns, $postfix: '') {
 
   // -----
   // Main axis aligment

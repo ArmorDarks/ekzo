@@ -2,7 +2,7 @@
 // ^HEADINGS
 // =============================================================================
 
-@mixin ekzo-headings-properties() {
+@mixin ekzo-headings-properties () {
   @include ekzo-theme() { color: ekzo-theme(headings); }
 
   font-family: ekzo-ui-font-family(headings);

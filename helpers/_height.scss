@@ -4,7 +4,7 @@
 // ^HELPERS.HEIGHT
 // =============================================================================
 
-@mixin ekzo-height-helpers($prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-height-helpers ($prefix: $ekzo-h-ns, $postfix: '') {
 
   .#{$prefix}height-1\/1#{$postfix} { height: 100% !important; }
 

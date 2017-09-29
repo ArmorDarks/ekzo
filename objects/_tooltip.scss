@@ -40,7 +40,7 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 // Mixin to generate different color style tooltips
 
-@mixin ekzo-tooltip-bg-color($color) {
+@mixin ekzo-tooltip-bg-color ($color) {
   @each $position in top, bottom, left, right {
 
     &.#{$ekzo-o-ns}tooltip--#{$position}:before {
@@ -56,7 +56,7 @@ $ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
 
 // Mixin to set margin on tooltip using translate transform
 
-@mixin ekzo-tooltip-position($position) {
+@mixin ekzo-tooltip-position ($position) {
 
   &:before {
     // get the arrow out
