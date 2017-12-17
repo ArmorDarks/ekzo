@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.6.0
 
 ### Added
 - Added `.h-font-weight--thin` helper.
