@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Changed
+- Renamed `.h-text--capital` to more obvious `.h-text--capitalize`.
+
 ## 2.5.3
 
 ### Changed

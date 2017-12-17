@@ -22,7 +22,7 @@
 
 .#{$ekzo-h-ns}text--caps             { text-transform: uppercase  !important; }
 .#{$ekzo-h-ns}text--lower            { text-transform: lowercase  !important; }
-.#{$ekzo-h-ns}text--capital          { text-transform: capitalize !important; }
+.#{$ekzo-h-ns}text--capitalize       { text-transform: capitalize !important; }
 
 .#{$ekzo-h-ns}text--nowrap           { white-space: nowrap; }
 .#{$ekzo-h-ns}text--break-word       { word-wrap:   break-word; }
