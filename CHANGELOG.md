@@ -2,6 +2,10 @@
 
 ## HEAD
 
+### Added
+- Added `.h-font-weight--thin` helper.
+- Added `.h-text--small-caps` helper.
+
 ### Changed
 - Renamed `.h-text--capital` to more obvious `.h-text--capitalize`.
 
