@@ -28,13 +28,13 @@ Import parts you would like to use, like:
 @import 'node_modules/ekzo/tools/index';
 
 // Must be declared in specific order
-@import 'node_modules/ekzo/settings.defaults/typography';
-@import 'node_modules/ekzo/settings.defaults/framework';
-@import 'node_modules/ekzo/settings.defaults/themes';
 @import 'node_modules/ekzo/settings.defaults/assets';
+@import 'node_modules/ekzo/settings.defaults/framework';
 @import 'node_modules/ekzo/settings.defaults/misc';
 @import 'node_modules/ekzo/settings.defaults/options';
 @import 'node_modules/ekzo/settings.defaults/responsive';
+@import 'node_modules/ekzo/settings.defaults/themes';
+@import 'node_modules/ekzo/settings.defaults/typography';
 
 @import 'node_modules/ekzo/base/normalize';
 

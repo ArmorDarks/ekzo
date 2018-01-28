@@ -1,5 +1,12 @@
 # Changelog
 
+## HEAD
+
+### Changed
+- Default settings files will now import other required settings if needed.
+
+   It means that now it is possible to import only required default settings, and with it will be pulled other needed default settings. Besides, it means that loading order within settings layer no longer matters.
+
 ## 2.6.0
 
 ### Added
