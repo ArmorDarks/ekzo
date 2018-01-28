@@ -7,6 +7,10 @@
 
    It means that now it is possible to import only required default settings, and with it will be pulled other needed default settings. Besides, it means that loading order within settings layer no longer matters.
 
+- Tools files will now import other tools, on which they depend.
+
+   Same as with updated default settings, it means that individual tools can be imported now without worrying of breaking something, and loading order within tools layer no longer important.
+
 ## 2.6.0
 
 ### Added
