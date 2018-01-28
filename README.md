@@ -2,7 +2,7 @@
 
 <div align='center'>
   <h3>Sass framework</h3>
-  <p>Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty</p>
+  <p>Functional, Atomic, OOCSS-driven, layered, design-free, BEM-based, responsive and mighty</p>
 </div>
 
 ---
@@ -13,21 +13,41 @@
   </a>
 </p>
 
-Installation
-------------
+How to use
+----------
+
+Install framework with NPM:
 
 ```shell
 npm install ekzo --save
 ```
 
-
-How to use
-----------
-
-Import parts which you would like to use explicitly in your stylesheet:
+Import parts you would like to use, like:
 
 ```scss
-@import 'node_modules/ekzo/...';
+@import 'node_modules/ekzo/tools/index';
+
+// Must be declared in specific order
+@import 'node_modules/ekzo/settings.defaults/typography';
+@import 'node_modules/ekzo/settings.defaults/framework';
+@import 'node_modules/ekzo/settings.defaults/themes';
+@import 'node_modules/ekzo/settings.defaults/assets';
+@import 'node_modules/ekzo/settings.defaults/misc';
+@import 'node_modules/ekzo/settings.defaults/options';
+@import 'node_modules/ekzo/settings.defaults/responsive';
+
+@import 'node_modules/ekzo/base/normalize';
+
+@import 'node_modules/ekzo/generic/shared';
+@import 'node_modules/ekzo/generic/headings';
+@import 'node_modules/ekzo/generic/text';
+
+@import 'node_modules/ekzo/objects/grid';
+
+@import 'node_modules/ekzo/helpers/flex';
+@import 'node_modules/ekzo/helpers/spacing';
+@import 'node_modules/ekzo/helpers/typography';
+@import 'node_modules/ekzo/helpers/widths';
 ```
 
 Imports should be layered in following order:
