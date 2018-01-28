@@ -27,7 +27,6 @@ Import parts you would like to use, like:
 ```scss
 @import 'node_modules/ekzo/tools/index';
 
-// Must be declared in specific order
 @import 'node_modules/ekzo/settings.defaults/assets';
 @import 'node_modules/ekzo/settings.defaults/framework';
 @import 'node_modules/ekzo/settings.defaults/misc';
