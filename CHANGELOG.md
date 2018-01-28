@@ -11,6 +11,9 @@
 
    Same as with updated default settings, it means that individual tools can be imported now without worrying of breaking something, and loading order within tools layer no longer important.
 
+### Removed
+ - Removed `$ekzo-images-path` and `$ekzo-ui-path` settings. They are useful, but not used by Ekzo directly, so shouldn't be part of default settings.
+
 ## 2.6.0
 
 ### Added
