@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.0
 
 ### Changed
 - Default settings files will now import other required settings if needed.
