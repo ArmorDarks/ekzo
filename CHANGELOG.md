@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Changed
+- Moved animations and font-stacks from `helpers` to `variables`.
+
 ## 2.7.0
 
 ### Changed
