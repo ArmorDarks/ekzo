@@ -1,16 +1,19 @@
 // =============================================================================
-// ^TEXT
+// Text
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Text select style
-// -----------------------------------------------------------------------------
-// @todo Chained version disabled for now, otherwise it won't work in most browsers at all
+@mixin exports () {
 
-::selection {
-  @include ekzo-theme($also-chain: false) {
-    color: ekzo-theme(selection);
-    background-color: ekzo-theme(selection-bg);
+  // -----------------------------------------------------------------------------
+  // Text select style
+  // -----------------------------------------------------------------------------
+  // @todo Chained version disabled for now, otherwise it won't work in most browsers at all
+
+  ::selection {
+    @include ekzo-theme($also-chain: false) {
+      color: ekzo-theme(selection);
+      background-color: ekzo-theme(selection-bg);
+    }
   }
-}
 
+}

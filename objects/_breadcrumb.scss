@@ -1,5 +1,5 @@
 // =============================================================================
-// ^BREADCRUMB
+// Breadcrumb
 // =============================================================================
 
 // ----
@@ -21,56 +21,64 @@
 
 }
 
-// ----
-// Breadcrumb styling to apply to lists
-//
-// @example
-//   <ul class="breadcrumb">
-//     <li class="breadcrumb__item breadcrumb__root">
-//       <a class="breadcrumb__link" href="#">Home</a>
-//     </li>
-//     <li class="breadcrumb__item">
-//       <a class="breadcrumb__link" href="#">Section</a>
-//     </li>
-//   </ul>
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $delimeter: $ekzo-breadcrumb-delimiters-content,
+  $delimeter--rev: $ekzo-breadcrumb--rev-delimiters-content
+) {
 
-.#{$ekzo-o-ns}breadcrumb {
-  @extend %#{$ekzo-o-ns}nav;
+  // ----
+  // Breadcrumb styling to apply to lists
+  //
+  // @example
+  //   <ul class="breadcrumb">
+  //     <li class="breadcrumb__item breadcrumb__root">
+  //       <a class="breadcrumb__link" href="#">Home</a>
+  //     </li>
+  //     <li class="breadcrumb__item">
+  //       <a class="breadcrumb__link" href="#">Section</a>
+  //     </li>
+  //   </ul>
 
-  > li + li:before { @include breadcrumb__item($delimiter: $ekzo-breadcrumb-delimiters-content); }
+  .#{$ns}breadcrumb {
+    @extend %#{$ns}nav;
 
-  @include ekzo-theme() {
-    $breadcrumb-links: ekzo-theme(breadcrumb-links);
+    > li + li:before { @include breadcrumb__item($delimeter); }
 
-    @if $breadcrumb-links != ekzo-theme(links) {
-      > li > a { color: $breadcrumb-links; }
+    @include ekzo-theme() {
+      $breadcrumb-links: ekzo-theme(breadcrumb-links);
+
+      @if $breadcrumb-links != ekzo-theme(links) {
+        > li > a { color: $breadcrumb-links; }
+      }
     }
+
   }
 
-}
+    .#{$ns}breadcrumb__item + .#{$ns}breadcrumb__item:before {
+      @include breadcrumb__item($delimeter);
+    }
 
-  .#{$ekzo-o-ns}breadcrumb__item + .#{$ekzo-o-ns}breadcrumb__item:before {
-    @include breadcrumb__item($delimiter: $ekzo-breadcrumb-delimiters-content);
+  // ----
+  // Same breadcrumb, but with heading as last item
+  //
+  // @extends .breadcrumb
+  // @example
+  //   <ul class="breadcrumb breadcrumb--rev">
+  //     <li class="breadcrumb__item breadcrumb__root">
+  //       <a class="breadcrumb__link" href="#">Home</a>
+  //     </li>
+  //   </ul>
+  //   <h1>Section/h1>
+
+  .#{$ns}breadcrumb--rev {
+
+    > .#{$ns}breadcrumb__item + .#{$ns}breadcrumb__item:before,
+    > li + li:before { content: none; }
+
+    > .#{$ns}breadcrumb__item:after,
+    > li:after { @include breadcrumb__item($delimeter--rev); }
+
   }
-
-// ----
-// Same breadcrumb, but with heading as last item
-//
-// @extends .breadcrumb
-// @example
-//   <ul class="breadcrumb breadcrumb--rev">
-//     <li class="breadcrumb__item breadcrumb__root">
-//       <a class="breadcrumb__link" href="#">Home</a>
-//     </li>
-//   </ul>
-//   <h1>Section/h1>
-
-.#{$ekzo-o-ns}breadcrumb--rev {
-
-  > .#{$ekzo-o-ns}breadcrumb__item + .#{$ekzo-o-ns}breadcrumb__item:before,
-  > li + li:before { content: none; }
-
-  > .#{$ekzo-o-ns}breadcrumb__item:after,
-  > li:after { @include breadcrumb__item($delimiter: $ekzo-breadcrumb--rev-delimiters-content); }
 
 }

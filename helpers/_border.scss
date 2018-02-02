@@ -1,7 +1,7 @@
 // stylelint-disable selector-list-comma-newline-after
 
 // =============================================================================
-// ^HELPERS.BORDERS
+// Border
 // =============================================================================
 // @note I think it's better to leave those styles without `!important`, otherwise it will affect
 //       hover styles
@@ -13,29 +13,33 @@
 //
 // @note For color will be used `currentColor` of element, if not overridden
 
-// @note We setting only `border-width`, because that class works on assumption, that
-//       all elements by default inherit at least `solid` style, as defined in `normilize.scss`
-//       `border-color`, by default, will be inherited from element's `color`
-.#{$ekzo-h-ns}border        { border-width: 1px; }
-.#{$ekzo-h-ns}border-top    { border-top-width: 1px; }
-.#{$ekzo-h-ns}border-right  { border-right-width: 1px; }
-.#{$ekzo-h-ns}border-bottom { border-bottom-width: 1px; }
-.#{$ekzo-h-ns}border-left   { border-left-width: 1px; }
+@mixin exports ($ns: $ekzo-h-ns) {
 
-// ----
-// Removes underline, but adds it on hover
+  // @note We setting only `border-width`, because that class works on assumption, that
+  //       all elements by default inherit at least `solid` style, as defined in `normilize.scss`
+  //       `border-color`, by default, will be inherited from element's `color`
+  .#{$ns}border        { border-width: 1px; }
+  .#{$ns}border-top    { border-top-width: 1px; }
+  .#{$ns}border-right  { border-right-width: 1px; }
+  .#{$ns}border-bottom { border-bottom-width: 1px; }
+  .#{$ns}border-left   { border-left-width: 1px; }
 
-.#{$ekzo-h-ns}border\:h        { &:hover, &:focus  { border-width: 1px; } }
-.#{$ekzo-h-ns}border-top\:h    { &:hover, &:focus  { border-top-width: 1px; } }
-.#{$ekzo-h-ns}border-right\:h  { &:hover, &:focus  { border-right-width: 1px; } }
-.#{$ekzo-h-ns}border-bottom\:h { &:hover, &:focus  { border-bottom-width: 1px; } }
-.#{$ekzo-h-ns}border-left\:h   { &:hover, &:focus  { border-left-width: 1px; } }
+  // ----
+  // Removes underline, but adds it on hover
 
-// @note `!important` here doesn't work well too, since it enforcing too much inheritance
-.#{$ekzo-h-ns}border--inherit { border: inherit; }
+  .#{$ns}border\:h        { &:hover, &:focus  { border-width: 1px; } }
+  .#{$ns}border-top\:h    { &:hover, &:focus  { border-top-width: 1px; } }
+  .#{$ns}border-right\:h  { &:hover, &:focus  { border-right-width: 1px; } }
+  .#{$ns}border-bottom\:h { &:hover, &:focus  { border-bottom-width: 1px; } }
+  .#{$ns}border-left\:h   { &:hover, &:focus  { border-left-width: 1px; } }
 
-.#{$ekzo-h-ns}border0        { border-width:        0; }
-.#{$ekzo-h-ns}border-top0    { border-top-width:    0; }
-.#{$ekzo-h-ns}border-right0  { border-right-width:  0; }
-.#{$ekzo-h-ns}border-bottom0 { border-bottom-width: 0; }
-.#{$ekzo-h-ns}border-left0   { border-left-width:   0; }
+  // @note `!important` here doesn't work well too, since it enforcing too much inheritance
+  .#{$ns}border--inherit { border: inherit; }
+
+  .#{$ns}border0        { border-width:        0; }
+  .#{$ns}border-top0    { border-top-width:    0; }
+  .#{$ns}border-right0  { border-right-width:  0; }
+  .#{$ns}border-bottom0 { border-bottom-width: 0; }
+  .#{$ns}border-left0   { border-left-width:   0; }
+
+}

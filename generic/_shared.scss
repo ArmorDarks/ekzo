@@ -1,33 +1,42 @@
 // stylelint-disable selector-list-comma-newline-after, selector-max-type
 
 // =============================================================================
-// ^SHARED
+// Shared
 // =============================================================================
 // Allows us to keep a consistent rhythm.
 // As per: csswizardry.com/2012/06/single-direction-margin-declarations
 
-// -----------------------------------------------------------------------------
-// Base vertical rhythm
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $margin-bottom: ekzo-space(1),
+  $hr-height: $ekzo-hr-height,
+  $lists-padding: ekzo-space(2),
+  $g-ns: $ekzo-g-ns
+) {
 
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre,
-.#{$ekzo-g-ns}media { margin-bottom: ekzo-space(1); }
+  // -----------------------------------------------------------------------------
+  // Base vertical rhythm
+  // -----------------------------------------------------------------------------
 
-// ----
-// `hr` elements only take up a few pixels, so we need to give them special
-// treatment regarding vertical rhythm.
+  h1, h2, h3, h4, h5, h6, hgroup,
+  ul, ol, dl,
+  blockquote, p, address,
+  table,
+  fieldset, figure,
+  pre,
+  .#{$g-ns}media { margin-bottom: $margin-bottom; }
 
-hr { margin-bottom: ekzo-space(1) - ekzo-units($ekzo-hr-height, unit(ekzo-space())); }
+  // ----
+  // `hr` elements only take up a few pixels, so we need to give them special
+  // treatment regarding vertical rhythm.
 
-// -----------------------------------------------------------------------------
-// Lists
-// -----------------------------------------------------------------------------
+  hr { margin-bottom: $margin-bottom - ekzo-units($hr-height, unit(ekzo-space())); }
 
-ul,
-ol,
-dd { padding-left: ekzo-space(2); }
+  // -----------------------------------------------------------------------------
+  // Lists
+  // -----------------------------------------------------------------------------
+
+  ul,
+  ol,
+  dd { padding-left: $lists-padding; }
+
+}

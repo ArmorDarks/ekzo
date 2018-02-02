@@ -2,105 +2,109 @@
 // stylelint-disable no-descending-specificity
 
 // =============================================================================
-// ^NAV
+// Nav
 // =============================================================================
 
-%#{$ekzo-o-ns}nav,
-.#{$ekzo-o-ns}nav {
-  @extend %#{$ekzo-g-ns}list0;
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  display: flex;
-  flex-wrap: wrap;
+  %#{$ns}nav,
+  .#{$ns}nav {
+    @extend %#{$ekzo-g-ns}list0;
 
-  > a,
-  > li,
-  > li > a { display: inline-block; } // This also partially serves as IE8 and IE9 fallback
+    display: flex;
+    flex-wrap: wrap;
 
-}
+    > a,
+    > li,
+    > li > a { display: inline-block; } // This also partially serves as IE8 and IE9 fallback
 
-// -----------------------------------------------------------------------------
-// Stacked
-// -----------------------------------------------------------------------------
-// Extends `.o-nav` and throws the list into vertical mode
+  }
 
-.#{$ekzo-o-ns}nav--stacked {
-  flex-direction: column;
+  // -----------------------------------------------------------------------------
+  // Stacked
+  // -----------------------------------------------------------------------------
+  // Extends `.o-nav` and throws the list into vertical mode
 
-  > a { align-self: flex-start; } // for cases when you stack only anchors, without list
+  .#{$ns}nav--stacked {
+    flex-direction: column;
 
-}
+    > a { align-self: flex-start; } // for cases when you stack only anchors, without list
 
-// -----------------------------------------------------------------------------
-// Display
-// -----------------------------------------------------------------------------
-// Extends `.o-nav` and throws all links inside in block or inline mode
+  }
 
-.#{$ekzo-o-ns}nav--block  {
+  // -----------------------------------------------------------------------------
+  // Display
+  // -----------------------------------------------------------------------------
+  // Extends `.o-nav` and throws all links inside in block or inline mode
 
-  > a,
-  > li,
-  > li > a { display: block; }
+  .#{$ns}nav--block  {
 
-}
+    > a,
+    > li,
+    > li > a { display: block; }
 
-.#{$ekzo-o-ns}nav--inline  {
+  }
 
-  > a,
-  > li,
-  > li > a { display: inline; }
+  .#{$ns}nav--inline  {
 
-}
+    > a,
+    > li,
+    > li > a { display: inline; }
 
-// -----------------------------------------------------------------------------
-// Spacing
-// -----------------------------------------------------------------------------
+  }
 
-// Use `.h-anchors-margin*` to add margin to all child `a`, including direct childs of `li`
-// Use `.h-anchors-padding*` to add padding to all child `a`, including direct childs of `li`
-// Use `.h-childs-margin*` to add margin to all child
-// Use `.h-childs-padding*` to add padding to all child
+  // -----------------------------------------------------------------------------
+  // Spacing
+  // -----------------------------------------------------------------------------
 
-// ----
-// Imitate white-space between regular `inline-block`s
+  // Use `.h-anchors-margin*` to add margin to all child `a`, including direct childs of `li`
+  // Use `.h-anchors-padding*` to add padding to all child `a`, including direct childs of `li`
+  // Use `.h-childs-margin*` to add margin to all child
+  // Use `.h-childs-padding*` to add padding to all child
 
-.#{$ekzo-o-ns}nav--space {
+  // ----
+  // Imitate white-space between regular `inline-block`s
 
-  > a,
-  > li { margin-right: .26em; }
+  .#{$ns}nav--space {
 
-}
+    > a,
+    > li { margin-right: .26em; }
 
-// -----------------------------------------------------------------------------
-// Packed nav
-// -----------------------------------------------------------------------------
+  }
 
-.#{$ekzo-o-ns}nav--pack {
+  // -----------------------------------------------------------------------------
+  // Packed nav
+  // -----------------------------------------------------------------------------
 
-  > a,
-  > li,
-  > .#{$ekzo-o-ns}nav__item { flex: 1 1 auto; }
+  .#{$ns}nav--pack {
 
-}
+    > a,
+    > li,
+    > .#{$ns}nav__item { flex: 1 1 auto; }
 
-.#{$ekzo-o-ns}nav--fixed-pack {
+  }
 
-  > a,
-  > li,
-  > .#{$ekzo-o-ns}nav__item { flex: 1 1 0%; }
+  .#{$ns}nav--fixed-pack {
 
-}
+    > a,
+    > li,
+    > .#{$ns}nav__item { flex: 1 1 0%; }
 
-// -----------------------------------------------------------------------------
-// Keywords
-// -----------------------------------------------------------------------------
-// Make a list of keywords. Extends `.nav`, e.g.:
+  }
 
-.#{$ekzo-o-ns}nav--keywords {
+  // -----------------------------------------------------------------------------
+  // Keywords
+  // -----------------------------------------------------------------------------
+  // Make a list of keywords. Extends `.nav`
 
-  > a:after,
-  > li:after { content: '\002C' '\00A0'; }
+  .#{$ns}nav--keywords {
 
-  > a:last-child:after,
-  > li:last-child:after { display: none; }
+    > a:after,
+    > li:after { content: '\002C' '\00A0'; }
+
+    > a:last-child:after,
+    > li:last-child:after { display: none; }
+
+  }
 
 }

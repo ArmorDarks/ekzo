@@ -36,156 +36,166 @@
 
 @import './objects/clearfix';
 
-// -----------------------------------------------------------------------------
-// Grid legacy hacks
-// -----------------------------------------------------------------------------
-//
-// @legacy
-//
-// 1. Serving non-flex grids for IE<10
-// 2. Used display model `inline-block` yeilds unwanted whitespaces
-//    which we have to removed with quite cruel method
+@include exports();
 
-.#{$ekzo-o-ns}grid { letter-spacing: -.31em; }
+@mixin exports (
+  $o-ns: $ekzo-o-ns,
+  $h-ns: $ekzo-h-ns,
+  $flex-helpers-breakpoints: $ekzo-responsive-flex-helpers-breakpoints
+) {
 
-  .#{$ekzo-o-ns}grid__item {
-    vertical-align: top;
-    display: inline-block; // 1
-    letter-spacing: normal; // 2
+  // -----------------------------------------------------------------------------
+  // Grid legacy hacks
+  // -----------------------------------------------------------------------------
+  //
+  // @legacy
+  //
+  // 1. Serving non-flex grids for IE<10
+  // 2. Used display model `inline-block` yeilds unwanted whitespaces
+  //    which we have to removed with quite cruel method
+
+  .#{$o-ns}grid { letter-spacing: -.31em; }
+
+    .#{$o-ns}grid__item {
+      vertical-align: top;
+      display: inline-block; // 1
+      letter-spacing: normal; // 2
+    }
+
+  // -----------------------------------------------------------------------------
+  // Flex aligment hacks
+  // -----------------------------------------------------------------------------
+  // When used with `.o-grid`, try to mimic flex
+  // behavior as close as possible
+
+  @mixin ekzo-flex-helpers ($prefix: $h-ns, $postfix: '') {
+
+    // -----
+    // Main axis aligment
+
+    .#{$prefix}flex--nowrap#{$postfix}    {
+      display: table;
+
+      > * { display: table-cell; }
+
+    }
+
+    .#{$prefix}flex-x--start#{$postfix} { text-align: left !important; }
+
+    .#{$prefix}flex-x--center#{$postfix} {
+      text-align: center !important;
+
+      > * { text-align: left; }
+
+    }
+
+    .#{$prefix}flex-x--end#{$postfix} {
+      text-align: right !important;
+
+      > * { text-align: left; }
+
+    }
+
+    .#{$prefix}flex-x--between#{$postfix},
+    .#{$prefix}flex-x--around#{$postfix} {
+      text-align: justify !important;
+
+      > * { text-align: left; }
+
+    }
+
+    // -----
+    // Cross axis aligment
+
+    .#{$prefix}flex-y--top#{$postfix}      { > * { vertical-align: top      !important; } }
+    .#{$prefix}flex-y--center#{$postfix}   { > * { vertical-align: middle   !important; } }
+    .#{$prefix}flex-y--end#{$postfix}      { > * { vertical-align: bottom   !important; } }
+    .#{$prefix}flex-y--baseline#{$postfix} { > * { vertical-align: baseline !important; } }
+
+    .#{$prefix}flex__item--start#{$postfix}    { vertical-align: top      !important; }
+    .#{$prefix}flex__item--center#{$postfix}   { vertical-align: middle   !important; }
+    .#{$prefix}flex__item--end#{$postfix}      { vertical-align: bottom   !important; }
+    .#{$prefix}flex__item--baseline#{$postfix} { vertical-align: baseline !important; }
+
   }
 
-// -----------------------------------------------------------------------------
-// Flex aligment hacks
-// -----------------------------------------------------------------------------
-// When used with `.o-grid`, try to mimic flex
-// behavior as close as possible
+  // -----------------------------------------------------------------------------
+  // Call
+  // -----------------------------------------------------------------------------
 
-@mixin ekzo-flex-helpers ($prefix: $ekzo-h-ns, $postfix: '') {
+  @include ekzo-for-each-breakpoint($matches: $flex-helpers-breakpoints, $include-self: true) {
+    @include ekzo-flex-helpers($postfix: ekzo-temp());
+  }
 
-  // -----
-  // Main axis aligment
+  // =============================================================================
+  // ^MEDIA
+  // =============================================================================
+  // Fallback to float-based media object, since IE8-9 doesn't support flexbox
 
-  .#{$prefix}flex--nowrap#{$postfix}    {
+  .#{$o-ns}media { @extend %#{$o-ns}clearfix; }
+
+    .#{$o-ns}media__aside {
+      float: left;
+      display: block;
+    }
+
+    .#{$o-ns}media__content {
+      display: block;
+      overflow: hidden;
+    }
+
+  // -----------------------------------------------------------------------------
+  // Reversed version
+  // -----------------------------------------------------------------------------
+
+  .#{$o-ns}media--rev {
+
+    .#{$o-ns}media__aside { float: right; }
+
+  }
+
+  // =============================================================================
+  // ^NAV
+  // =============================================================================
+
+  // ----
+  // Extends `.nav` and throws the list into vertical mode, e.g.:
+
+  .#{$o-ns}nav--stacked {
+
+    > a {
+      float: left;
+      clear: both;
+    }
+
+    > li { display: list-item; }
+
+  }
+
+  // -----------------------------------------------------------------------------
+  // Packed nav
+  // -----------------------------------------------------------------------------
+
+  .#{$o-ns}nav--pack {
     display: table;
+    width: 100%; // Fill all available space.
 
-    > * { display: table-cell; }
-
-  }
-
-  .#{$prefix}flex-x--start#{$postfix} { text-align: left !important; }
-
-  .#{$prefix}flex-x--center#{$postfix} {
-    text-align: center !important;
-
-    > * { text-align: left; }
+    > li,
+    > a,
+    > .#{$o-ns}nav__item { display: table-cell; }
 
   }
 
-  .#{$prefix}flex-x--end#{$postfix} {
-    text-align: right !important;
+  .#{$o-ns}nav--fixed-pack {
+    display: table;
+    table-layout: fixed;
 
-    > * { text-align: left; }
+    width: 100%; // Fill all available space.
 
-  }
-
-  .#{$prefix}flex-x--between#{$postfix},
-  .#{$prefix}flex-x--around#{$postfix} {
-    text-align: justify !important;
-
-    > * { text-align: left; }
+    > li,
+    > a,
+    > .#{$o-ns}nav__item { display: table-cell; }
 
   }
-
-  // -----
-  // Cross axis aligment
-
-  .#{$prefix}flex-y--top#{$postfix}      { > * { vertical-align: top      !important; } }
-  .#{$prefix}flex-y--center#{$postfix}   { > * { vertical-align: middle   !important; } }
-  .#{$prefix}flex-y--end#{$postfix}      { > * { vertical-align: bottom   !important; } }
-  .#{$prefix}flex-y--baseline#{$postfix} { > * { vertical-align: baseline !important; } }
-
-  .#{$prefix}flex__item--start#{$postfix}    { vertical-align: top      !important; }
-  .#{$prefix}flex__item--center#{$postfix}   { vertical-align: middle   !important; }
-  .#{$prefix}flex__item--end#{$postfix}      { vertical-align: bottom   !important; }
-  .#{$prefix}flex__item--baseline#{$postfix} { vertical-align: baseline !important; }
-
-}
-
-// -----------------------------------------------------------------------------
-// Call
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints, $include-self: true) {
-  @include ekzo-flex-helpers($postfix: ekzo-temp());
-}
-
-// =============================================================================
-// ^MEDIA
-// =============================================================================
-// Fallback to float-based media object, since IE8-9 doesn't support flexbox
-
-.#{$ekzo-o-ns}media { @extend %#{$ekzo-o-ns}clearfix; }
-
-  .#{$ekzo-o-ns}media__aside {
-    float: left;
-    display: block;
-  }
-
-  .#{$ekzo-o-ns}media__content {
-    display: block;
-    overflow: hidden;
-  }
-
-// -----------------------------------------------------------------------------
-// Reversed version
-// -----------------------------------------------------------------------------
-
-.#{$ekzo-o-ns}media--rev {
-
-  .#{$ekzo-o-ns}media__aside { float: right; }
-
-}
-
-// =============================================================================
-// ^NAV
-// =============================================================================
-
-// ----
-// Extends `.nav` and throws the list into vertical mode, e.g.:
-
-.#{$ekzo-o-ns}nav--stacked {
-
-  > a {
-    float: left;
-    clear: both;
-  }
-
-  > li { display: list-item; }
-
-}
-
-// -----------------------------------------------------------------------------
-// Packed nav
-// -----------------------------------------------------------------------------
-
-.#{$ekzo-o-ns}nav--pack {
-  display: table;
-  width: 100%; // Fill all available space.
-
-  > li,
-  > a,
-  > .#{$ekzo-o-ns}nav__item { display: table-cell; }
-
-}
-
-.#{$ekzo-o-ns}nav--fixed-pack {
-  display: table;
-  table-layout: fixed;
-
-  width: 100%; // Fill all available space.
-
-  > li,
-  > a,
-  > .#{$ekzo-o-ns}nav__item { display: table-cell; }
 
 }

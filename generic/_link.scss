@@ -1,51 +1,44 @@
 // =============================================================================
-// ^LINKS
+// Links
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Default link styling
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $ns: $ekzo-g-ns,
+  $text-decoration: $ekzo-links-text-decoration,
+  $hover-text-decoration: $ekzo-links-hover-text-decoration,
+  $links-outline: not $ekzo-disable-links-outline,
+  $go-content: $ekzo-links--go-content,
+  $back-content: $ekzo-links--back-content
+) {
 
-a,
-.#{$ekzo-g-ns}link,
-%#{$ekzo-g-ns}link {
-  @include ekzo-theme() { color: ekzo-theme(links); }
+  // -----------------------------------------------------------------------------
+  // Default link styling
+  // -----------------------------------------------------------------------------
 
-  text-decoration: $ekzo-links-text-decoration;
+  a,
+  .#{$ns}link,
+  %#{$ns}link {
+    @include ekzo-theme() { color: ekzo-theme(links); }
 
-  &:hover,
-  &:focus {
-    @include ekzo-theme() { color: ekzo-theme(links-hover); }
+    text-decoration: $text-decoration;
 
-    text-decoration: $ekzo-links-hover-text-decoration;
+    &:hover,
+    &:focus {
+      @include ekzo-theme() { color: ekzo-theme(links-hover); }
+
+      text-decoration: $hover-text-decoration;
+    }
+
   }
 
-}
+  // -----------------------------------------------------------------------------
+  // Unstyle link
+  // -----------------------------------------------------------------------------
+  // Makes link looks like ordinary text.
+  // Add .cursor-arrow to remove "pointer" cursor and make it completely like ordinary text
 
-// -----------------------------------------------------------------------------
-// Unstyle link
-// -----------------------------------------------------------------------------
-// Makes link looks like ordinary text.
-// Add .cursor-arrow to remove "pointer" cursor and make it completely like ordinary text
-
-.#{$ekzo-g-ns}link--inherit,
-%#{$ekzo-g-ns}link--inherit {
-  text-decoration: inherit;
-
-  @include ekzo-theme() {
-    color: inherit;
-    background: inherit;
-  }
-
-  border: inherit;
-
-  @if $ekzo-disable-links-outline { outline: inherit; }
-
-  box-shadow: inherit;
-
-  &:hover,
-  &:active,
-  &:focus {
+  .#{$ns}link--inherit,
+  %#{$ns}link--inherit {
     text-decoration: inherit;
 
     @include ekzo-theme() {
@@ -55,28 +48,46 @@ a,
 
     border: inherit;
 
-    @if $ekzo-disable-links-outline { outline: inherit; }
+    @if not $links-outline { outline: inherit; }
 
     box-shadow: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: inherit;
+
+      @include ekzo-theme() {
+        color: inherit;
+        background: inherit;
+      }
+
+      border: inherit;
+
+      @if not $links-outline { outline: inherit; }
+
+      box-shadow: inherit;
+    }
+
   }
 
+  // -----------------------------------------------------------------------------
+  // Variations
+  // -----------------------------------------------------------------------------
+
+  // ----
+  // Add a right or left-angled quote to links that imply movement, e.g.:
+  //
+  // @example <a href=# class="link--go">Read more</a>
+
+  // Fix wrong aligment on some elements
+  .#{$ns}link--go:after,
+  .#{$ns}link--back:before {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  .#{$ns}link--go:after    { content: $go-content; }
+  .#{$ns}link--back:before { content: $back-content; }
+
 }
-
-// -----------------------------------------------------------------------------
-// Variations
-// -----------------------------------------------------------------------------
-
-// ----
-// Add a right or left-angled quote to links that imply movement, e.g.:
-//
-// @example <a href=# class="link--go">Read more</a>
-
-// Fix wrong aligment on some elements
-.#{$ekzo-g-ns}link--go:after,
-.#{$ekzo-g-ns}link--back:before {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-.#{$ekzo-g-ns}link--go:after    { content: $ekzo-links--go-content; }
-.#{$ekzo-g-ns}link--back:before { content: $ekzo-links--back-content; }

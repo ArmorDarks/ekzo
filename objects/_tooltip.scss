@@ -1,7 +1,6 @@
 // =============================================================================
-// ^TOOLTIPS
+// Tooltip
 // =============================================================================
-
 // Pure css tooltips
 //  Apply anywhere following code to use:
 //
@@ -10,235 +9,219 @@
 //       Text
 //     </span>
 
-// Tooltip variables
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $font-size: 12px,
+  $arrow-size: 6px,
+  $transition-distance: 8px,
+  $bg-color: rgba(1, 13, 14, .68),
+  $bg-color--error: hsl(1, 40%, 50%),
+  $bg-color--info: hsl(200, 50%, 45%),
+  $bg-color--success: hsl(121, 32%, 40%)
+) {
+  // default tooltip height
+  // Tricky due to proper positioning issues
+  $tooltip-height: $font-size + 2 * 8px !default;
 
-$ekzo-tooltip-font-size: 12px !default;
+  // Mixin to generate different color style tooltips
 
-// default tooltip height
-// quite tricky due to proper positioning issues
-$ekzo-tooltip-height: $ekzo-tooltip-font-size + 2 * 8px !default;
+  @mixin ekzo-tooltip-bg-color ($color) {
+    @each $position in top, bottom, left, right {
 
-// border-width for tooltip arrow
-$ekzo-tooltip-arrow-size: 6px !default;
+      &.#{$ns}tooltip--#{$position}:before {
+        border-#{$position}-color: $color;
+      }
 
-// transition distance
-$ekzo-transition-distance: 8px !default;
+    }
 
-// Tooltip colors
+    &:after { background-color: $color; }
+  }
 
-// Default color
-$ekzo-tooltip-bg-color: rgba(1, 13, 14, .68) !default;
+  // Mixin to set margin on tooltip using translate transform
 
-// Error color
-$ekzo-tooltip-bg-color-error: hsl(1, 40%, 50%) !default;
+  @mixin ekzo-tooltip-position ($position) {
 
-// Info color
-$ekzo-tooltip-bg-color-info: hsl(200, 50%, 45%) !default;
+    &:before {
+      // get the arrow out
+      margin-#{$position}: -2 * $arrow-size;
 
-// Success color
-$ekzo-tooltip-bg-color-success: hsl(121, 32%, 40%) !default;
+      @if $position == 'left' or $position == 'right' {
+        // bring back to center
+        margin-bottom: -1 * $arrow-size;
+      }
+    }
 
-// Mixin to generate different color style tooltips
+    &:after {
+      @if $position == 'top' or $position == 'bottom' {
+        // bring back the tooltip by some offset so that arrow doesn't stick at end
+        margin-left: -1 * 3 * $arrow-size;
+      }
 
-@mixin ekzo-tooltip-bg-color ($color) {
-  @each $position in top, bottom, left, right {
+      @if $position == 'left' or $position == 'right' {
+        // bring back to center
+        margin-bottom: -1 * floor($tooltip-height / 2);
+      }
+    }
 
-    &.#{$ekzo-o-ns}tooltip--#{$position}:before {
-      border-#{$position}-color: $color;
+    &:before,
+    &:after {
+      #{$position}: 100%;
+
+      @if $position == 'top' or $position == 'bottom' {
+        left: 50%;
+      }
+
+      @if $position == 'left' or $position == 'right' {
+        bottom: 50%;
+      }
+
+    }
+
+    &:hover:before,
+    &:hover:after,
+    &:focus:before,
+    &:focus:after {
+      @if $position == 'top' {
+        transform: translateY($transition-distance * 1);
+      }
+
+      @if $position == 'bottom' {
+        transform: translateY($transition-distance * -1);
+      }
+
+      @if $position == 'left' {
+        transform: translateX($transition-distance * 1);
+      }
+
+      @if $position == 'right' {
+        transform: translateX($transition-distance * -1);
+      }
     }
 
   }
 
-  &:after {
-    background-color: $color;
+  [data-tooltip] {
+    position: relative;
+
+    &:before,
+    &:after {
+      // HACK: Trigger hardware accelerated rendering, otherwise transform was not
+      // working on a hidden element
+      transform: translate3d(0, 0, 0);
+
+      transition: .3s ease;
+
+      position: absolute;
+
+      // HACK: visibility is set to hidden because IE & Opera don't support
+      // pointer-events on HTML content yet because of which hovering a hidden tooltip
+      // shows the tooltip.
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1000000;
+    }
+
+    // tooltip arrow
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: transparent;
+      border: $arrow-size solid transparent;
+      // move z-index 1 up than :after so that it shows over box-shadow
+      z-index: 1000000 + 1;
+    }
+
+    // tooltip body
+
+    &:after {
+      content: attr(data-tooltip);
+      background: $bg-color;
+      color: #fff;
+      padding: .7em;
+      font-size: $font-size;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
+      border-radius: 4px;
+
+      font-weight: normal;
+
+      text-transform: none;
+    }
+
+    &:hover:before,
+    &:hover:after,
+    &:focus:before,
+    &:focus:after {
+      visibility: visible;
+      opacity: 1;
+    }
+
   }
+
+  .#{$ns}tooltip--sharp:after { border-radius: 0; }
+
+  .#{$ns}tooltip--always {
+
+    &:after,
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.#{$ns}tooltip--top:after,
+    &.#{$ns}tooltip--top:before {
+      transform: translateY($transition-distance * -1);
+    }
+
+    &.#{$ns}tooltip--bottom:after,
+    &.#{$ns}tooltip--bottom:before {
+      transform: translateY($transition-distance * 1);
+    }
+
+    &.#{$ns}tooltip--left:after,
+    &.#{$ns}tooltip--left:before {
+      transform: translateX($transition-distance * -1);
+    }
+
+    &.#{$ns}tooltip--right:after,
+    &.#{$ns}tooltip--right:before {
+      transform: translateX($transition-distance * 1);
+    }
+
+  }
+
+  .#{$ns}tooltip--error   { @include ekzo-tooltip-bg-color($bg-color--error); }
+  .#{$ns}tooltip--info    { @include ekzo-tooltip-bg-color($bg-color--info); }
+  .#{$ns}tooltip--success { @include ekzo-tooltip-bg-color($bg-color--success); }
+
+  .#{$ns}tooltip--top {
+    @include ekzo-tooltip-position('bottom');
+
+    &:before { border-top-color: $bg-color; }
+
+  }
+
+  .#{$ns}tooltip--bottom {
+    @include ekzo-tooltip-position('top');
+
+    &:before { border-bottom-color: $bg-color; }
+
+  }
+
+  .#{$ns}tooltip--right {
+    @include ekzo-tooltip-position('left');
+
+    &:before { border-right-color: $bg-color; }
+
+  }
+
+  .#{$ns}tooltip--left {
+    @include ekzo-tooltip-position('right');
+
+    &:before { border-left-color: $bg-color; }
+
+  }
+
 }
-
-// Mixin to set margin on tooltip using translate transform
-
-@mixin ekzo-tooltip-position ($position) {
-
-  &:before {
-    // get the arrow out
-    margin-#{$position}: -2 * $ekzo-tooltip-arrow-size;
-
-    @if $position == 'left' or $position == 'right' {
-      // bring back to center
-      margin-bottom: -1 * $ekzo-tooltip-arrow-size;
-    }
-  }
-
-  &:after {
-    @if $position == 'top' or $position == 'bottom' {
-      // bring back the tooltip by some offset so that arrow doesn't stick at end
-      margin-left: -1 * 3 * $ekzo-tooltip-arrow-size;
-    }
-
-    @if $position == 'left' or $position == 'right' {
-      // bring back to center
-      margin-bottom: -1 * floor($ekzo-tooltip-height / 2);
-    }
-  }
-
-  &:before,
-  &:after {
-    #{$position}: 100%;
-
-    @if $position == 'top' or $position == 'bottom' {
-      left: 50%;
-    }
-
-    @if $position == 'left' or $position == 'right' {
-      bottom: 50%;
-    }
-
-  }
-
-  &:hover:before,
-  &:hover:after,
-  &:focus:before,
-  &:focus:after {
-    @if $position == 'top' {
-      transform: translateY($ekzo-transition-distance * 1);
-    }
-
-    @if $position == 'bottom' {
-      transform: translateY($ekzo-transition-distance * -1);
-    }
-
-    @if $position == 'left' {
-      transform: translateX($ekzo-transition-distance * 1);
-    }
-
-    @if $position == 'right' {
-      transform: translateX($ekzo-transition-distance * -1);
-    }
-  }
-
-}
-
-[data-tooltip] {
-  position: relative;
-
-  &:before,
-  &:after {
-    // HACK: Trigger hardware accelerated rendering, otherwise transform was not
-    // working on a hidden element
-    transform: translate3d(0, 0, 0);
-
-    transition: .3s ease;
-
-    position: absolute;
-
-    // HACK: visibility is set to hidden because IE & Opera don't support
-    // pointer-events on HTML content yet because of which hovering a hidden tooltip
-    // shows the tooltip.
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1000000;
-  }
-
-  // tooltip arrow
-
-  &:before {
-    content: '';
-    position: absolute;
-    background: transparent;
-    border: $ekzo-tooltip-arrow-size solid transparent;
-    // move z-index 1 up than :after so that it shows over box-shadow
-    z-index: 1000000 + 1;
-  }
-
-  // tooltip body
-
-  &:after {
-    content: attr(data-tooltip);
-    background: $ekzo-tooltip-bg-color;
-    color: #fff;
-    padding: .7em;
-    font-size: $ekzo-tooltip-font-size;
-    line-height: 1;
-    white-space: nowrap;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
-    border-radius: 4px;
-
-    font-weight: normal;
-
-    text-transform: none;
-  }
-
-  &:hover:before,
-  &:hover:after,
-  &:focus:before,
-  &:focus:after {
-    visibility: visible;
-    opacity: 1;
-  }
-
-}
-
-.#{$ekzo-o-ns}tooltip--sharp:after { border-radius: 0; }
-
-.#{$ekzo-o-ns}tooltip--always {
-
-  &:after,
-  &:before {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  &.#{$ekzo-o-ns}tooltip--top:after,
-  &.#{$ekzo-o-ns}tooltip--top:before {
-    transform: translateY($ekzo-transition-distance * -1);
-  }
-
-  &.#{$ekzo-o-ns}tooltip--bottom:after,
-  &.#{$ekzo-o-ns}tooltip--bottom:before {
-    transform: translateY($ekzo-transition-distance * 1);
-  }
-
-  &.#{$ekzo-o-ns}tooltip--left:after,
-  &.#{$ekzo-o-ns}tooltip--left:before {
-    transform: translateX($ekzo-transition-distance * -1);
-  }
-
-  &.#{$ekzo-o-ns}tooltip--right:after,
-  &.#{$ekzo-o-ns}tooltip--right:before {
-    transform: translateX($ekzo-transition-distance * 1);
-  }
-
-}
-
-// set default color for tooltip arrows
-
-.#{$ekzo-o-ns}tooltip--top:before { border-top-color: $ekzo-tooltip-bg-color; }
-
-.#{$ekzo-o-ns}tooltip--bottom:before { border-bottom-color: $ekzo-tooltip-bg-color; }
-
-.#{$ekzo-o-ns}tooltip--left:before { border-left-color: $ekzo-tooltip-bg-color; }
-
-.#{$ekzo-o-ns}tooltip--right:before { border-right-color: $ekzo-tooltip-bg-color; }
-
-.#{$ekzo-o-ns}tooltip--error   { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-error); }
-.#{$ekzo-o-ns}tooltip--info    { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-info); }
-.#{$ekzo-o-ns}tooltip--success { @include ekzo-tooltip-bg-color($ekzo-tooltip-bg-color-success); }
-
-// Defines the positoning logic for the tooltips.
-//
-//  Classes added:
-//     1) tooltip--top
-//     2) tooltip--bottom
-//     3) tooltip--left
-//     4) tooltip--right
-
-// top tooltip
-.#{$ekzo-o-ns}tooltip--top { @include ekzo-tooltip-position('bottom'); }
-
-// bottom tooltip
-.#{$ekzo-o-ns}tooltip--bottom { @include ekzo-tooltip-position('top'); }
-
-// right tooltip
-.#{$ekzo-o-ns}tooltip--right { @include ekzo-tooltip-position('left'); }
-
-// left tooltip
-.#{$ekzo-o-ns}tooltip--left { @include ekzo-tooltip-position('right'); }

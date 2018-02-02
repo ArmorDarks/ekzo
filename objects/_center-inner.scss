@@ -1,15 +1,19 @@
 // stylelint-disable selector-max-universal
 
 // =============================================================================
-// ^CENTER-INNER
+// Center-inner
 // =============================================================================
 
-.#{$ekzo-o-ns}center-inner {
-  text-align: center;
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  > * {
-    display: inline-block;
-    text-align: left;
+  .#{$ns}center-inner {
+    text-align: center;
+
+    > * {
+      display: inline-block;
+      text-align: left;
+    }
+
   }
 
 }

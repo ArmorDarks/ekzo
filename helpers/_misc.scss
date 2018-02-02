@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.MISC
+// Misc
 // =============================================================================
 //
 // A series of helper classes to use arbitrarily. Only use a helper class if an
@@ -12,25 +12,29 @@
 // A lot of these classes carry `!important` as you will always want them to win
 // out over other selectors.
 
-// -----------------------------------------------------------------------------
-// Cursors
-// -----------------------------------------------------------------------------
+@mixin exports ($ns: $ekzo-h-ns) {
 
-.#{$ekzo-h-ns}cursor--help    { cursor: help    !important; }
-.#{$ekzo-h-ns}cursor--default { cursor: default !important; }
-.#{$ekzo-h-ns}cursor--pointer { cursor: pointer !important; }
+  // -----------------------------------------------------------------------------
+  // Cursors
+  // -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-// Apply box-sizing models
-// -----------------------------------------------------------------------------
+  .#{$ns}cursor--help    { cursor: help    !important; }
+  .#{$ns}cursor--default { cursor: default !important; }
+  .#{$ns}cursor--pointer { cursor: pointer !important; }
 
-.#{$ekzo-h-ns}box-sizing--border  { box-sizing: border-box  !important; }
-.#{$ekzo-h-ns}box-sizing--content { box-sizing: content-box !important; }
+  // -----------------------------------------------------------------------------
+  // Apply box-sizing models
+  // -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-// Column count
-// -----------------------------------------------------------------------------
+  .#{$ns}box-sizing--border  { box-sizing: border-box  !important; }
+  .#{$ns}box-sizing--content { box-sizing: content-box !important; }
 
-.#{$ekzo-h-ns}column-count0   { column-count: auto; }
-.#{$ekzo-h-ns}column-count--2 { column-count: 2; }
-.#{$ekzo-h-ns}column-count--3 { column-count: 3; }
+  // -----------------------------------------------------------------------------
+  // Column count
+  // -----------------------------------------------------------------------------
+
+  .#{$ns}column-count0   { column-count: auto; }
+  .#{$ns}column-count--2 { column-count: 2; }
+  .#{$ns}column-count--3 { column-count: 3; }
+
+}

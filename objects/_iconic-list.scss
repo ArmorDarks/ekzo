@@ -1,5 +1,5 @@
 // =============================================================================
-// ^ICONIC-LIST
+// Iconic-list
 // =============================================================================
 // List with sprites or icons instead of bulletins.
 // Should be used in conjuration with icons or sprites:
@@ -22,32 +22,39 @@
 //     with default bullets
 //  2. Assume that first icons in list are bullets
 
-.#{$ekzo-o-ns}iconic-list {
-  padding-left: ekzo-space(2); // 1
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $padding-left: ekzo-space(2)  // 1
+) {
 
-  list-style-type: none;
+  .#{$ns}iconic-list {
+    padding-left: $padding-left; // 1
 
-  li {
-    position: relative;
+    list-style-type: none;
 
-    // 2
-    > .#{$ekzo-o-ns}icon,
-    > .#{$ekzo-o-ns}svg-icon,
-    > .#{$ekzo-o-ns}sprite { @extend %#{$ekzo-o-ns}iconic-list__icon; }
+    li {
+      position: relative;
+
+      // 2
+      > .#{$ns}icon,
+      > .#{$ns}svg-icon,
+      > .#{$ns}sprite { @extend %#{$ns}iconic-list__icon; }
+
+    }
 
   }
+
+    .#{$ns}iconic-list__icon,
+    %#{$ns}iconic-list__icon {
+      position: absolute;
+
+      width: 1.5em;
+
+      text-align: center;
+
+      line-height: inherit;
+
+      margin-left: -2em;
+    }
 
 }
-
-  .#{$ekzo-o-ns}iconic-list__icon,
-  %#{$ekzo-o-ns}iconic-list__icon {
-    position: absolute;
-
-    width: 1.5em;
-
-    text-align: center;
-
-    line-height: inherit;
-
-    margin-left: -2em;
-  }

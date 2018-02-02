@@ -1,85 +1,92 @@
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after
 
 // =============================================================================
-// ^HELPERS.COLORS
+// Colors
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Inherits
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $colors: $ekzo-colors
+) {
 
-.#{$ekzo-h-ns}color--inherit           { color: inherit !important; }
-.#{$ekzo-h-ns}color--inherit\:h        { &:hover, &:focus { color: inherit !important; } }
+  // -----------------------------------------------------------------------------
+  // Inherits
+  // -----------------------------------------------------------------------------
 
-.#{$ekzo-h-ns}bg-color--inherit        { background-color: inherit !important; }
-.#{$ekzo-h-ns}bg-color--inherit\:h     { &:hover, &:focus { background-color: inherit !important; } }
+  .#{$ns}color--inherit           { color: inherit !important; }
+  .#{$ns}color--inherit\:h        { &:hover, &:focus { color: inherit !important; } }
 
-.#{$ekzo-h-ns}border-color--inherit    { border-color: inherit !important; }
-.#{$ekzo-h-ns}border-color--inherit\:h { &:hover, &:focus { border-color: inherit !important; } }
+  .#{$ns}bg-color--inherit        { background-color: inherit !important; }
+  .#{$ns}bg-color--inherit\:h     { &:hover, &:focus { background-color: inherit !important; } }
 
-.#{$ekzo-h-ns}fill--inherit            { fill: inherit !important; }
-.#{$ekzo-h-ns}fill--inherit\:h         { &:hover, &:focus { fill: inherit !important; } }
+  .#{$ns}border-color--inherit    { border-color: inherit !important; }
+  .#{$ns}border-color--inherit\:h { &:hover, &:focus { border-color: inherit !important; } }
 
-.#{$ekzo-h-ns}stroke--inherit          { stroke: inherit !important; }
-.#{$ekzo-h-ns}stroke--inherit\:h       { &:hover, &:focus { stroke: inherit !important; } }
+  .#{$ns}fill--inherit            { fill: inherit !important; }
+  .#{$ns}fill--inherit\:h         { &:hover, &:focus { fill: inherit !important; } }
 
-// -----------------------------------------------------------------------------
-// Transparent
-// -----------------------------------------------------------------------------
+  .#{$ns}stroke--inherit          { stroke: inherit !important; }
+  .#{$ns}stroke--inherit\:h       { &:hover, &:focus { stroke: inherit !important; } }
 
-.#{$ekzo-h-ns}color--transparent           { color: transparent !important; }
-.#{$ekzo-h-ns}color--transparent\:h        { &:hover, &:focus { color: transparent !important; } }
+  // -----------------------------------------------------------------------------
+  // Transparent
+  // -----------------------------------------------------------------------------
 
-.#{$ekzo-h-ns}bg-color--transparent        { background-color: transparent !important; }
-.#{$ekzo-h-ns}bg-color--transparent\:h     { &:hover, &:focus { background-color: transparent !important; } }
+  .#{$ns}color--transparent           { color: transparent !important; }
+  .#{$ns}color--transparent\:h        { &:hover, &:focus { color: transparent !important; } }
 
-.#{$ekzo-h-ns}border-color--transparent    { border-color: transparent !important; }
-.#{$ekzo-h-ns}border-color--transparent\:h { &:hover, &:focus { border-color: transparent !important; } }
+  .#{$ns}bg-color--transparent        { background-color: transparent !important; }
+  .#{$ns}bg-color--transparent\:h     { &:hover, &:focus { background-color: transparent !important; } }
 
-.#{$ekzo-h-ns}fill--transparent            { fill: transparent !important; }
-.#{$ekzo-h-ns}fill--transparent\:h         { &:hover, &:focus { fill: transparent !important; } }
+  .#{$ns}border-color--transparent    { border-color: transparent !important; }
+  .#{$ns}border-color--transparent\:h { &:hover, &:focus { border-color: transparent !important; } }
 
-.#{$ekzo-h-ns}stroke--transparent          { stroke: transparent !important; }
-.#{$ekzo-h-ns}stroke--transparent\:h       { &:hover, &:focus { stroke: transparent !important; } }
+  .#{$ns}fill--transparent            { fill: transparent !important; }
+  .#{$ns}fill--transparent\:h         { &:hover, &:focus { fill: transparent !important; } }
 
-// -----------------------------------------------------------------------------
-// currentColor
-// -----------------------------------------------------------------------------
+  .#{$ns}stroke--transparent          { stroke: transparent !important; }
+  .#{$ns}stroke--transparent\:h       { &:hover, &:focus { stroke: transparent !important; } }
 
-.#{$ekzo-h-ns}color--current           { color: currentColor !important; }
-.#{$ekzo-h-ns}color--current\:h        { &:hover, &:focus { color: currentColor !important; } }
+  // -----------------------------------------------------------------------------
+  // currentColor
+  // -----------------------------------------------------------------------------
 
-.#{$ekzo-h-ns}bg-color--current        { background-color: currentColor !important; }
-.#{$ekzo-h-ns}bg-color--current\:h     { &:hover, &:focus { background-color: currentColor !important; } }
+  .#{$ns}color--current           { color: currentColor !important; }
+  .#{$ns}color--current\:h        { &:hover, &:focus { color: currentColor !important; } }
 
-.#{$ekzo-h-ns}border-color--current    { border-color: currentColor !important; }
-.#{$ekzo-h-ns}border-color--current\:h { &:hover, &:focus { border-color: currentColor !important; } }
+  .#{$ns}bg-color--current        { background-color: currentColor !important; }
+  .#{$ns}bg-color--current\:h     { &:hover, &:focus { background-color: currentColor !important; } }
 
-.#{$ekzo-h-ns}fill--current            { fill: currentColor !important; }
-.#{$ekzo-h-ns}fill--current\:h         { &:hover, &:focus { fill: currentColor !important; } }
+  .#{$ns}border-color--current    { border-color: currentColor !important; }
+  .#{$ns}border-color--current\:h { &:hover, &:focus { border-color: currentColor !important; } }
 
-.#{$ekzo-h-ns}stroke--current          { stroke: currentColor !important; }
-.#{$ekzo-h-ns}stroke--current\:h       { &:hover, &:focus { stroke: currentColor !important; } }
+  .#{$ns}fill--current            { fill: currentColor !important; }
+  .#{$ns}fill--current\:h         { &:hover, &:focus { fill: currentColor !important; } }
 
-// -----------------------------------------------------------------------------
-// Color pallete
-// -----------------------------------------------------------------------------
+  .#{$ns}stroke--current          { stroke: currentColor !important; }
+  .#{$ns}stroke--current\:h       { &:hover, &:focus { stroke: currentColor !important; } }
 
-@each $color, $value in $ekzo-colors {
+  // -----------------------------------------------------------------------------
+  // Color pallete
+  // -----------------------------------------------------------------------------
 
-  .#{$ekzo-h-ns}color--#{$color}           { color: $value !important; }
-  .#{$ekzo-h-ns}color--#{$color}\:h        { &:hover, &:focus { color: $value !important; } }
+  @each $name, $color in $colors {
 
-  .#{$ekzo-h-ns}bg-color--#{$color}        { background-color: $value !important; }
-  .#{$ekzo-h-ns}bg-color--#{$color}\:h     { &:hover, &:focus { background-color: $value !important; } }
+    .#{$ns}color--#{$name}           { color: $color !important; }
+    .#{$ns}color--#{$name}\:h        { &:hover, &:focus { color: $color !important; } }
 
-  .#{$ekzo-h-ns}border-color--#{$color}    { border-color: $value !important; }
-  .#{$ekzo-h-ns}border-color--#{$color}\:h { &:hover, &:focus { border-color: $value !important; } }
+    .#{$ns}bg-color--#{$name}        { background-color: $color !important; }
+    .#{$ns}bg-color--#{$name}\:h     { &:hover, &:focus { background-color: $color !important; } }
 
-  .#{$ekzo-h-ns}fill--#{$color}            { fill: $value !important; }
-  .#{$ekzo-h-ns}fill--#{$color}\:h         { &:hover, &:focus { fill: $value !important; } }
+    .#{$ns}border-color--#{$name}    { border-color: $color !important; }
+    .#{$ns}border-color--#{$name}\:h { &:hover, &:focus { border-color: $color !important; } }
 
-  .#{$ekzo-h-ns}stroke--#{$color}          { stroke: $value !important; }
-  .#{$ekzo-h-ns}stroke--#{$color}\:h       { &:hover, &:focus { stroke: $value !important; } }
+    .#{$ns}fill--#{$name}            { fill: $color !important; }
+    .#{$ns}fill--#{$name}\:h         { &:hover, &:focus { fill: $color !important; } }
+
+    .#{$ns}stroke--#{$name}          { stroke: $color !important; }
+    .#{$ns}stroke--#{$name}\:h       { &:hover, &:focus { stroke: $color !important; } }
+
+  }
 
 }

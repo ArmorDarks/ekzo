@@ -1,22 +1,26 @@
 // =============================================================================
-// ^Aspect-ratio
+// Aspect-ratio
 // =============================================================================
 // Makes object responsive by making it take 100% and
 // forcing proper aspect ratio.
 // Use for iframes or other hard-to-scale objects
 
-.#{$ekzo-o-ns}aspect-ratio  { position: relative; }
+@mixin exports ($ns: $ekzo-o-ns) {
 
-.#{$ekzo-o-ns}aspect-ratio4\:3  { @include ekzo-aspect-ratio(4, 3); }
-.#{$ekzo-o-ns}aspect-ratio16\:9 { @include ekzo-aspect-ratio(16, 9); }
-.#{$ekzo-o-ns}aspect-ratio21\:9 { @include ekzo-aspect-ratio(21, 9); }
+  .#{$ns}aspect-ratio  { position: relative; }
 
-  .#{$ekzo-o-ns}aspect-ratio__content {
-    position: absolute;
+  .#{$ns}aspect-ratio4\:3  { @include ekzo-aspect-ratio(4, 3); }
+  .#{$ns}aspect-ratio16\:9 { @include ekzo-aspect-ratio(16, 9); }
+  .#{$ns}aspect-ratio21\:9 { @include ekzo-aspect-ratio(21, 9); }
 
-    width: 100%;
-    height: 100%;
+    .#{$ns}aspect-ratio__content {
+      position: absolute;
 
-    top: 0;
-    left: 0;
-  }
+      width: 100%;
+      height: 100%;
+
+      top: 0;
+      left: 0;
+    }
+
+}

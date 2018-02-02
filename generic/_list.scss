@@ -1,40 +1,47 @@
 // stylelint-disable selector-max-type
 
 // =============================================================================
-// ^LISTS
+// Lists
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Default lists styling
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $ns: $ekzo-g-ns,
+  $type: $ekzo-list-style-type
+) {
 
-ul { list-style-type: $ekzo-list-style-type; }
+  // -----------------------------------------------------------------------------
+  // Default lists styling
+  // -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-// Unstyle list
-// -----------------------------------------------------------------------------
-// Flush default styling and margins from list:
-//
-// @example
-//
-//  <ul class="g-list0">
-//    <li>Foo</li>
-//    <li>Bar</li>
-//  </ul>
+  ul { list-style-type: $type; }
 
-.#{$ekzo-g-ns}list0,
-%#{$ekzo-g-ns}list0 {
-  list-style: none;
+  // -----------------------------------------------------------------------------
+  // Unstyle list
+  // -----------------------------------------------------------------------------
+  // Flush default styling and margins from list:
+  //
+  // @example
+  //
+  //  <ul class="g-list0">
+  //    <li>Foo</li>
+  //    <li>Bar</li>
+  //  </ul>
 
-  margin-left:   0;
-  padding-left:  0;
-  margin-bottom: 0;
+  .#{$ns}list0,
+  %#{$ns}list0 {
+    list-style: none;
+
+    margin-left:   0;
+    padding-left:  0;
+    margin-bottom: 0;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Spacing
+  // -----------------------------------------------------------------------------
+
+  // Use `.h-childs-spacing*` to add vertical indentation between `li`
+  // Use `.h-childs-margin*` to add margin to all child `li`
+  // Use `.h-childs-padding*` to add padding to all child `li`
+
 }
-
-// -----------------------------------------------------------------------------
-// Spacing
-// -----------------------------------------------------------------------------
-
-// Use `.h-childs-spacing*` to add vertical indentation between `li`
-// Use `.h-childs-margin*` to add margin to all child `li`
-// Use `.h-childs-padding*` to add padding to all child `li`

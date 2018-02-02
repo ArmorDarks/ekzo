@@ -1,5 +1,5 @@
 // =============================================================================
-// ^MEDIA
+// Media
 // =============================================================================
 // Place any image- and text-like content side-by-side, as per:
 // stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
@@ -14,65 +14,73 @@
 //    <p class='o-media__content'>Lorem</p>
 //  </div>
 
-.#{$ekzo-o-ns}media {
-  display: flex;
-  align-items: flex-start;
-}
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $margin: ekzo-space(1),
+  $margin--plus: ekzo-space(2)
+) {
 
-  .#{$ekzo-o-ns}media__aside {
-    flex: 0 0 auto;
-    margin-right: ekzo-space(1);
+  .#{$ns}media {
+    display: flex;
+    align-items: flex-start;
   }
 
-  .#{$ekzo-o-ns}media__content {
-    flex: 1 1 auto;
+    .#{$ns}media__aside {
+      flex: 0 0 auto;
+      margin-right: $margin;
+    }
 
-    &,
-    > :last-child { margin-bottom: 0; }
+    .#{$ns}media__content {
+      flex: 1 1 auto;
 
-  }
+      &,
+      > :last-child { margin-bottom: 0; }
 
-// -----------------------------------------------------------------------------
-// Spacing variations
-// -----------------------------------------------------------------------------
+    }
 
-.#{$ekzo-o-ns}media0 {
+  // -----------------------------------------------------------------------------
+  // Spacing variations
+  // -----------------------------------------------------------------------------
 
-  .#{$ekzo-o-ns}media__aside {
-    margin-right: 0;
-    margin-left:  0;
-  }
+  .#{$ns}media0 {
 
-}
-
-.#{$ekzo-o-ns}media\+ {
-
-  .#{$ekzo-o-ns}media__aside { margin-right: ekzo-space(2); }
-
-  &.#{$ekzo-o-ns}media--rev {
-
-    .#{$ekzo-o-ns}media__aside {
+    .#{$ns}media__aside {
       margin-right: 0;
-      margin-left:  ekzo-space(2);
+      margin-left:  0;
     }
 
   }
 
-}
+  .#{$ns}media\+ {
 
-// You can also use `.h-childs-displace*` to add centered margin between `.o-media__aside` and `.o-medio__content`
+    .#{$ns}media__aside { margin-right: $margin--plus; }
 
-// -----------------------------------------------------------------------------
-// Reversed version
-// -----------------------------------------------------------------------------
+    &.#{$ns}media--rev {
 
-.#{$ekzo-o-ns}media--rev {
+      .#{$ns}media__aside {
+        margin-right: 0;
+        margin-left: $margin--plus;
+      }
 
-  .#{$ekzo-o-ns}media__aside {
-    order: 1;
+    }
 
-    margin-right: 0;
-    margin-left:  ekzo-space(1);
+  }
+
+  // You can also use `.h-childs-displace*` to add centered margin between `.o-media__aside` and `.o-medio__content`
+
+  // -----------------------------------------------------------------------------
+  // Reversed version
+  // -----------------------------------------------------------------------------
+
+  .#{$ns}media--rev {
+
+    .#{$ns}media__aside {
+      order: 1;
+
+      margin-right: 0;
+      margin-left: $margin;
+    }
+
   }
 
 }

@@ -1,44 +1,52 @@
 // stylelint-disable selector-no-qualifying-type, selector-max-type
 
 // =============================================================================
-// ^IMAGES
+// Images
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Fluid images
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $ns: $ekzo-g-ns,
+  $margin-bottom: ekzo-space(.5),
+  $margin-sides: ekzo-space(1)
+) {
 
-img { max-width: 100%; }
+  // -----------------------------------------------------------------------------
+  // Fluid images
+  // -----------------------------------------------------------------------------
 
-// ----
-// If a `width` and/or `height` attribute have been explicitly defined, let’s
-// not make the image fluid.
+  img { max-width: 100%; }
 
-img[width],
-img[height] { max-width: none; }
+  // ----
+  // If a `width` and/or `height` attribute have been explicitly defined, let’s
+  // not make the image fluid.
 
-// -----------------------------------------------------------------------------
-// Image placement
-// -----------------------------------------------------------------------------
+  img[width],
+  img[height] { max-width: none; }
 
-.#{$ekzo-g-ns}image--right {
-  float: right;
+  // -----------------------------------------------------------------------------
+  // Image placement
+  // -----------------------------------------------------------------------------
 
-  margin-bottom: ekzo-space(.5);
-  margin-left:   ekzo-space(1);
-}
+  .#{$ns}image--right {
+    float: right;
 
-.#{$ekzo-g-ns}image--left {
-  float: left;
+    margin-bottom: $margin-bottom;
+    margin-left: $margin-sides;
+  }
 
-  margin-right:  ekzo-space(1);
-  margin-bottom: ekzo-space(.5);
-}
+  .#{$ns}image--left {
+    float: left;
 
-.#{$ekzo-g-ns}image--center {
-  display: block;
+    margin-right: $margin-sides;
+    margin-bottom: $margin-bottom;
+  }
 
-  margin-right:  auto;
-  margin-left:   auto;
-  margin-bottom: ekzo-space(.5);
+  .#{$ns}image--center {
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: $margin-bottom;
+  }
+
 }

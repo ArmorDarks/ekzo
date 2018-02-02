@@ -1,12 +1,19 @@
 // stylelint-disable selector-max-type
 
 // =============================================================================
-// ^CODE
+// Code
 // =============================================================================
 
-code,
-pre,
-samp {
-  font-family: ekzo-ui-font-family(code);
-  font-size:   $ekzo-code-font-size;
+@mixin exports (
+  $font-family: ekzo-ui-font-family(code),
+  $font-size: $ekzo-code-font-size
+) {
+
+  code,
+  pre,
+  samp {
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+
 }

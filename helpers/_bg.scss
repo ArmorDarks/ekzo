@@ -1,21 +1,25 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.Bg
+// Bg
 // =============================================================================
 
-.#{$ekzo-h-ns}bg--fixed { background-attachment: fixed !important; }
+@mixin exports ($ns: $ekzo-h-ns) {
 
-.#{$ekzo-h-ns}bg--cover   { background-size: cover   !important; }
-.#{$ekzo-h-ns}bg--contain { background-size: contain !important; }
+  .#{$ns}bg--fixed   { background-attachment: fixed !important; }
 
-.#{$ekzo-h-ns}bg--center   { background-position:   center !important; }
-.#{$ekzo-h-ns}bg--right    { background-position-x: right  !important; }
-.#{$ekzo-h-ns}bg--left     { background-position-x: left   !important; }
-.#{$ekzo-h-ns}bg--top      { background-position-y: top    !important; }
-.#{$ekzo-h-ns}bg--bottom   { background-position-y: bottom !important; }
-.#{$ekzo-h-ns}bg--middle   { background-position-y: center !important; }
+  .#{$ns}bg--cover   { background-size: cover   !important; }
+  .#{$ns}bg--contain { background-size: contain !important; }
 
-.#{$ekzo-h-ns}bg--no-repeat { background-repeat: no-repeat !important; }
-.#{$ekzo-h-ns}bg--repeat-x  { background-repeat: repeat-x  !important; }
-.#{$ekzo-h-ns}bg--repeat-y  { background-repeat: repeat-y  !important; }
+  .#{$ns}bg--center   { background-position:   center !important; }
+  .#{$ns}bg--right    { background-position-x: right  !important; }
+  .#{$ns}bg--left     { background-position-x: left   !important; }
+  .#{$ns}bg--top      { background-position-y: top    !important; }
+  .#{$ns}bg--bottom   { background-position-y: bottom !important; }
+  .#{$ns}bg--middle   { background-position-y: center !important; }
+
+  .#{$ns}bg--no-repeat { background-repeat: no-repeat !important; }
+  .#{$ns}bg--repeat-x  { background-repeat: repeat-x  !important; }
+  .#{$ns}bg--repeat-y  { background-repeat: repeat-y  !important; }
+
+}

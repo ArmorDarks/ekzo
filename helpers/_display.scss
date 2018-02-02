@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after, declaration-block-single-line-max-declarations
 
 // =============================================================================
-// ^HELPERS.DISPLAY
+// Display
 // =============================================================================
 
 @mixin ekzo-display-helpers ($prefix: $ekzo-h-ns, $postfix: '') {
@@ -86,6 +86,14 @@
 // Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-display-helpers-breakpoints, $include-self: true) {
-  @include ekzo-display-helpers($postfix: ekzo-temp());
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $breakpoins: $ekzo-responsive-display-helpers-breakpoints
+) {
+  @include ekzo-for-each-breakpoint($matches: $breakpoins, $include-self: true) {
+    @include ekzo-display-helpers(
+      $prefix: $ns,
+      $postfix: ekzo-temp()
+    );
+  }
 }

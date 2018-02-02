@@ -1,5 +1,5 @@
 // =============================================================================
-// ^ICON
+// Icon
 // =============================================================================
 // Giving an element a class of `.icon` will throw it into 'icon' mode and will
 // apply icon font
@@ -8,37 +8,45 @@
 //
 // Requires extension in stylesheet.
 
-@include ekzo-font-face(
-  $font:    $ekzo-icon-font,
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $font: $ekzo-icon-font,
   $version: $ekzo-icon-font-version,
-  $svg-id:  $ekzo-icon-font-svg-id
-);
+  $svg-id: $ekzo-icon-font-svg-id
+) {
+  @include ekzo-font-face(
+    $font: $font,
+    $version: $version,
+    $svg-id: $svg-id
+  );
 
-.#{$ekzo-o-ns}icon {
-  position: relative;
+  .#{$ns}icon {
+    position: relative;
 
-  display: inline-block;
+    display: inline-block;
 
-  // reset line-height
-  line-height: 1;
+    // reset line-height
+    line-height: 1;
 
-  // So icons added using `.icon` sit in the centre of the element
-  text-align: center;
+    // So icons added using `.icon` sit in the centre of the element
+    text-align: center;
 
-  font-family: '#{$ekzo-icon-font}';
+    font-family: '#{$font}';
 
-  // So using `.icon` on certain elements doesn't make a visual difference
-  font-style:  normal;
-  font-weight: normal;
+    // So using `.icon` on certain elements doesn't make a visual difference
+    font-style:  normal;
+    font-weight: normal;
 
-  &:before { position: relative; }
+    &:before { position: relative; }
+
+  }
+
+  // -----------------------------------------------------------------------------
+  // Fixed width
+  // -----------------------------------------------------------------------------
+  // Make width equal to height of icon
+  // Useful for lists and menus
+
+  .#{$ns}icon--fixed { width: 1em; }
 
 }
-
-// -----------------------------------------------------------------------------
-// Fixed width
-// -----------------------------------------------------------------------------
-// Make width equal to height of icon
-// Useful for lists and menus
-
-.#{$ekzo-o-ns}icon--fixed { width: 1em; }

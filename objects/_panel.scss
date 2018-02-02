@@ -1,5 +1,5 @@
 // =============================================================================
-// ^Panel
+// Panel
 // =============================================================================
 // Stack content in column and make body expand to full height of parent (or page),
 // whilte footer of panel to stick to bottom of parent.
@@ -14,23 +14,27 @@
 //    letting these items shrink to smaller than their content's default
 //    minimum size. See http://bit.ly/1Mn35US for details.
 
-.#{$ekzo-o-ns}panel {
-  display: flex;
-  flex-direction: column;
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  @include ekzo-breakpoint(print) { display: block; } // 3
-}
+  .#{$ns}panel {
+    display: flex;
+    flex-direction: column;
 
-// Use it only on root element, all direct descendants with `o-panel o-panel__flex`
-// will expand without need to specify height
-.#{$ekzo-o-ns}panel--max { height: 100%; }        // 1, 2
-
-  .#{$ekzo-o-ns}panel__header {
-    display:         flex;
-    align-items:     center;
-    justify-content: space-between;
-    flex:            none;
+    @include ekzo-breakpoint(print) { display: block; } // 3
   }
 
-  .#{$ekzo-o-ns}panel__body   { flex: 1 0 auto; } // 4
-  .#{$ekzo-o-ns}panel__footer { flex: none; }     // 4
+  // Use it only on root element, all direct descendants with `o-panel o-panel__flex`
+  // will expand without need to specify height
+  .#{$ns}panel--max { height: 100%; } // 1, 2
+
+    .#{$ns}panel__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: none;
+    }
+
+    .#{$ns}panel__body { flex: 1 0 auto; } // 4
+    .#{$ns}panel__footer { flex: none; } // 4
+
+}

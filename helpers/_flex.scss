@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.FLEXBOX
+// Flexbox
 // =============================================================================
 
 @mixin ekzo-flex-helpers ($prefix: $ekzo-h-ns, $postfix: '') {
@@ -112,6 +112,14 @@
 // Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-flex-helpers-breakpoints, $include-self: true) {
-  @include ekzo-flex-helpers($postfix: ekzo-temp());
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $breakpoins: $ekzo-responsive-flex-helpers-breakpoints
+) {
+  @include ekzo-for-each-breakpoint($matches: $breakpoins, $include-self: true) {
+    @include ekzo-flex-helpers(
+      $prefix: $ns,
+      $postfix: ekzo-temp()
+    );
+  }
 }

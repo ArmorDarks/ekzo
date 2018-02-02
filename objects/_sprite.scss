@@ -1,5 +1,5 @@
 // =============================================================================
-// ^SPRITES
+// Sprite
 // =============================================================================
 // Giving an element a class of `.sprite` will throw it into 'sprite' mode and apply
 // a background image e.g.:
@@ -12,15 +12,22 @@
 //
 // Requires extension in stylesheet.
 
-.#{$ekzo-o-ns}sprite {
-  position: relative;
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $path: $ekzo-sprites-path + '/' + $ekzo-sprites-file
+) {
 
-  display: inline-block;
+  .#{$ns}sprite {
+    position: relative;
 
-  vertical-align: middle;
+    display: inline-block;
 
-  // reset line-height
-  line-height: 1;
+    vertical-align: middle;
 
-  background: url(#{$ekzo-sprites-path}/#{$ekzo-sprites-file}) no-repeat;
+    // reset line-height
+    line-height: 1;
+
+    background: url(#{$path}) no-repeat;
+  }
+
 }

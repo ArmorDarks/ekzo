@@ -1,12 +1,15 @@
 // =============================================================================
-// ^HEADINGS
+// Headings
 // =============================================================================
 
-@mixin ekzo-headings-properties () {
+@mixin ekzo-headings-properties (
+  $font-family: ekzo-ui-font-family(headings),
+  $font-weight: $ekzo-headings-font-weight
+) {
   @include ekzo-theme() { color: ekzo-theme(headings); }
 
-  font-family: ekzo-ui-font-family(headings);
-  font-weight: $ekzo-headings-font-weight;
+  font-family: $font-family;
+  font-weight: $font-weight;
 }
 
 // -----------------------------------------------------------------------------
@@ -17,11 +20,20 @@
 // This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
 // heading hierarchy.
 
-@each $variant, $value in map-get($ekzo-font-sizes, headings) {
+@mixin exports (
+  $font-sizes: map-get($ekzo-font-sizes, headings),
+  $font-family: ekzo-ui-font-family(headings),
+  $font-weight: $ekzo-headings-font-weight
+) {
+  @each $variant, $font-size in $font-sizes {
 
-  #{$variant} {
-    @include ekzo-headings-properties();
-    @include ekzo-font-size($value);
+    #{$variant} {
+      @include ekzo-headings-properties(
+        $font-family: $font-family,
+        $font-weight: $font-weight
+      );
+      @include ekzo-font-size($font-size);
+    }
+
   }
-
 }

@@ -1,7 +1,6 @@
 // =============================================================================
-// ^CLEARFIX
+// Clearfix
 // =============================================================================
-//
 // Provides an easy way to contain floats without adding additional markup.
 //
 // Extend `%clearfix` clearfix silent class to avoid the `%clearfix` class appearing over
@@ -9,15 +8,19 @@
 //
 // @source css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 
-%#{$ekzo-o-ns}clearfix,
-.#{$ekzo-o-ns}clearfix {
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  &:after {
-    display: table;
+  %#{$ns}clearfix,
+  .#{$ns}clearfix {
 
-    clear:   both;
+    &:after {
+      display: table;
 
-    content: '';
+      clear:   both;
+
+      content: '';
+    }
+
   }
 
 }

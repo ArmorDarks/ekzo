@@ -1,17 +1,18 @@
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after, selector-combinator-space-before, declaration-block-single-line-max-declarations, selector-max-universal
 
 // =============================================================================
-// ^HELPERS.SPACING
+// Spacing
 // =============================================================================
 
 // -----------------------------------------------------------------------------
 // Margins
 // -----------------------------------------------------------------------------
 
-// ----
-// Add/remove margins
-
-@mixin ekzo-margin-helpers ($variations, $prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-margin-helpers (
+  $variations: $ekzo-margin-helpers-variations,
+  $prefix: $ekzo-h-ns,
+  $postfix: ''
+) {
 
   .#{$prefix}margin--auto#{$postfix}        { margin:        auto !important; }
   .#{$prefix}margin-top--auto#{$postfix}    { margin-top:    auto !important; }
@@ -20,111 +21,142 @@
   .#{$prefix}margin-left--auto#{$postfix}   { margin-left:   auto !important; }
   .#{$prefix}margin-sides--auto#{$postfix}  { margin-right:  auto !important; margin-left: auto !important; }
 
-  @each $variation, $value in $variations {
-    .#{$prefix}margin#{$variation}#{$postfix}        { margin:        $value !important; }
-    .#{$prefix}margin-top#{$variation}#{$postfix}    { margin-top:    $value !important; }
-    .#{$prefix}margin-right#{$variation}#{$postfix}  { margin-right:  $value !important; }
-    .#{$prefix}margin-bottom#{$variation}#{$postfix} { margin-bottom: $value !important; }
-    .#{$prefix}margin-left#{$variation}#{$postfix}   { margin-left:   $value !important; }
-    .#{$prefix}margin-ends#{$variation}#{$postfix}   { margin-top:    $value !important; margin-bottom: $value !important; }
-    .#{$prefix}margin-sides#{$variation}#{$postfix}  { margin-right:  $value !important; margin-left:   $value !important; }
+  @each $variation, $margin in $variations {
+    .#{$prefix}margin#{$variation}#{$postfix}        { margin:        $margin !important; }
+    .#{$prefix}margin-top#{$variation}#{$postfix}    { margin-top:    $margin !important; }
+    .#{$prefix}margin-right#{$variation}#{$postfix}  { margin-right:  $margin !important; }
+    .#{$prefix}margin-bottom#{$variation}#{$postfix} { margin-bottom: $margin !important; }
+    .#{$prefix}margin-left#{$variation}#{$postfix}   { margin-left:   $margin !important; }
+    .#{$prefix}margin-ends#{$variation}#{$postfix}   { margin-top:    $margin !important; margin-bottom: $margin !important; }
+    .#{$prefix}margin-sides#{$variation}#{$postfix}  { margin-right:  $margin !important; margin-left:   $margin !important; }
 
-    .#{$prefix}anchors-margin#{$variation}#{$postfix}        { > a, > li > a { margin:        $value !important; } }
-    .#{$prefix}anchors-margin-top#{$variation}#{$postfix}    { > a, > li > a { margin-top:    $value !important; } }
-    .#{$prefix}anchors-margin-right#{$variation}#{$postfix}  { > a, > li > a { margin-right:  $value !important; } }
-    .#{$prefix}anchors-margin-bottom#{$variation}#{$postfix} { > a, > li > a { margin-bottom: $value !important; } }
-    .#{$prefix}anchors-margin-left#{$variation}#{$postfix}   { > a, > li > a { margin-left:   $value !important; } }
-    .#{$prefix}anchors-margin-ends#{$variation}#{$postfix}   { > a, > li > a { margin-top:    $value !important; margin-bottom: $value !important; } }
-    .#{$prefix}anchors-margin-sides#{$variation}#{$postfix}  { > a, > li > a { margin-right:  $value !important; margin-left:   $value !important; } }
+    .#{$prefix}anchors-margin#{$variation}#{$postfix}        { > a, > li > a { margin:        $margin !important; } }
+    .#{$prefix}anchors-margin-top#{$variation}#{$postfix}    { > a, > li > a { margin-top:    $margin !important; } }
+    .#{$prefix}anchors-margin-right#{$variation}#{$postfix}  { > a, > li > a { margin-right:  $margin !important; } }
+    .#{$prefix}anchors-margin-bottom#{$variation}#{$postfix} { > a, > li > a { margin-bottom: $margin !important; } }
+    .#{$prefix}anchors-margin-left#{$variation}#{$postfix}   { > a, > li > a { margin-left:   $margin !important; } }
+    .#{$prefix}anchors-margin-ends#{$variation}#{$postfix}   { > a, > li > a { margin-top:    $margin !important; margin-bottom: $margin !important; } }
+    .#{$prefix}anchors-margin-sides#{$variation}#{$postfix}  { > a, > li > a { margin-right:  $margin !important; margin-left:   $margin !important; } }
 
-    .#{$prefix}childs-margin#{$variation}#{$postfix}        > * { margin:        $value !important; }
-    .#{$prefix}childs-margin-top#{$variation}#{$postfix}    > * { margin-top:    $value !important; }
-    .#{$prefix}childs-margin-right#{$variation}#{$postfix}  > * { margin-right:  $value !important; }
-    .#{$prefix}childs-margin-bottom#{$variation}#{$postfix} > * { margin-bottom: $value !important; }
-    .#{$prefix}childs-margin-left#{$variation}#{$postfix}   > * { margin-left:   $value !important; }
-    .#{$prefix}childs-margin-ends#{$variation}#{$postfix}   > * { margin-top:    $value !important; margin-bottom: $value !important; }
-    .#{$prefix}childs-margin-sides#{$variation}#{$postfix}  > * { margin-right:  $value !important; margin-left:   $value !important; }
+    .#{$prefix}childs-margin#{$variation}#{$postfix}        > * { margin:        $margin !important; }
+    .#{$prefix}childs-margin-top#{$variation}#{$postfix}    > * { margin-top:    $margin !important; }
+    .#{$prefix}childs-margin-right#{$variation}#{$postfix}  > * { margin-right:  $margin !important; }
+    .#{$prefix}childs-margin-bottom#{$variation}#{$postfix} > * { margin-bottom: $margin !important; }
+    .#{$prefix}childs-margin-left#{$variation}#{$postfix}   > * { margin-left:   $margin !important; }
+    .#{$prefix}childs-margin-ends#{$variation}#{$postfix}   > * { margin-top:    $margin !important; margin-bottom: $margin !important; }
+    .#{$prefix}childs-margin-sides#{$variation}#{$postfix}  > * { margin-right:  $margin !important; margin-left:   $margin !important; }
 
-    .#{$prefix}childs-space-top#{$variation}#{$postfix}   > * + * { margin-top:   $value !important; }
-    .#{$prefix}childs-space-left#{$variation}#{$postfix}  > * + * { margin-left:  $value !important; }
-    .#{$prefix}childs-space-right#{$variation}#{$postfix} > * + * { margin-right: $value !important; }
+    .#{$prefix}childs-space-top#{$variation}#{$postfix}   > * + * { margin-top:   $margin !important; }
+    .#{$prefix}childs-space-left#{$variation}#{$postfix}  > * + * { margin-left:  $margin !important; }
+    .#{$prefix}childs-space-right#{$variation}#{$postfix} > * + * { margin-right: $margin !important; }
 
     .#{$prefix}childs-displace#{$variation}#{$postfix} {
-      margin-left: -$value !important;
+      margin-left: -$margin !important;
 
-      > * { padding-left: $value !important; }
+      > * { padding-left: $margin !important; }
 
     }
   }
-} // ekzo-spacing-helpers()
+}
 
-// ----
-// Negative margins
+// -----------------------------------------------------------------------------
+// Bleeding
+// -----------------------------------------------------------------------------
 
-@mixin ekzo-bleed-helpers ($variations, $prefix: $ekzo-h-ns, $postfix: '') {
-  @each $variation, $value in $variations {
-    .#{$prefix}bleed#{$variation}#{$postfix}        { margin:        $value !important; }
-    .#{$prefix}bleed-top#{$variation}#{$postfix}    { margin-top:    $value !important; }
-    .#{$prefix}bleed-right#{$variation}#{$postfix}  { margin-right:  $value !important; }
-    .#{$prefix}bleed-bottom#{$variation}#{$postfix} { margin-bottom: $value !important; }
-    .#{$prefix}bleed-left#{$variation}#{$postfix}   { margin-left:   $value !important; }
-    .#{$prefix}bleed-ends#{$variation}#{$postfix}   { margin-top:    $value !important; margin-bottom: $value !important; }
-    .#{$prefix}bleed-sides#{$variation}#{$postfix}  { margin-right:  $value !important; margin-left:   $value !important; }
+@mixin ekzo-bleed-helpers (
+  $variations: $ekzo-bleed-helpers-variations,
+  $prefix: $ekzo-h-ns,
+  $postfix: ''
+) {
+  @each $variation, $margin in $variations {
+    .#{$prefix}bleed#{$variation}#{$postfix}        { margin:        $margin !important; }
+    .#{$prefix}bleed-top#{$variation}#{$postfix}    { margin-top:    $margin !important; }
+    .#{$prefix}bleed-right#{$variation}#{$postfix}  { margin-right:  $margin !important; }
+    .#{$prefix}bleed-bottom#{$variation}#{$postfix} { margin-bottom: $margin !important; }
+    .#{$prefix}bleed-left#{$variation}#{$postfix}   { margin-left:   $margin !important; }
+    .#{$prefix}bleed-ends#{$variation}#{$postfix}   { margin-top:    $margin !important; margin-bottom: $margin !important; }
+    .#{$prefix}bleed-sides#{$variation}#{$postfix}  { margin-right:  $margin !important; margin-left:   $margin !important; }
   }
-} // ekzo-spacing-helpers()
+}
 
 // -----------------------------------------------------------------------------
 // Paddings
 // -----------------------------------------------------------------------------
 
-@mixin ekzo-padding-helpers ($variations, $prefix: $ekzo-h-ns, $postfix: '') {
-  @each $variation, $value in $variations {
-    .#{$prefix}padding#{$variation}#{$postfix}        { padding:        $value !important; }
-    .#{$prefix}padding-top#{$variation}#{$postfix}    { padding-top:    $value !important; }
-    .#{$prefix}padding-right#{$variation}#{$postfix}  { padding-right:  $value !important; }
-    .#{$prefix}padding-bottom#{$variation}#{$postfix} { padding-bottom: $value !important; }
-    .#{$prefix}padding-left#{$variation}#{$postfix}   { padding-left:   $value !important; }
-    .#{$prefix}padding-ends#{$variation}#{$postfix}   { padding-top:    $value !important; padding-bottom: $value !important; }
-    .#{$prefix}padding-sides#{$variation}#{$postfix}  { padding-right:  $value !important; padding-left:   $value !important; }
+@mixin ekzo-padding-helpers (
+  $variations: $ekzo-padding-helpers-variations,
+  $prefix: $ekzo-h-ns,
+  $postfix: ''
+) {
+  @each $variation, $padding in $variations {
+    .#{$prefix}padding#{$variation}#{$postfix}        { padding:        $padding !important; }
+    .#{$prefix}padding-top#{$variation}#{$postfix}    { padding-top:    $padding !important; }
+    .#{$prefix}padding-right#{$variation}#{$postfix}  { padding-right:  $padding !important; }
+    .#{$prefix}padding-bottom#{$variation}#{$postfix} { padding-bottom: $padding !important; }
+    .#{$prefix}padding-left#{$variation}#{$postfix}   { padding-left:   $padding !important; }
+    .#{$prefix}padding-ends#{$variation}#{$postfix}   { padding-top:    $padding !important; padding-bottom: $padding !important; }
+    .#{$prefix}padding-sides#{$variation}#{$postfix}  { padding-right:  $padding !important; padding-left:   $padding !important; }
 
-    .#{$prefix}anchors-padding#{$variation}#{$postfix}        { > a, > li > a { padding:        $value !important; } }
-    .#{$prefix}anchors-padding-top#{$variation}#{$postfix}    { > a, > li > a { padding-top:    $value !important; } }
-    .#{$prefix}anchors-padding-right#{$variation}#{$postfix}  { > a, > li > a { padding-right:  $value !important; } }
-    .#{$prefix}anchors-padding-bottom#{$variation}#{$postfix} { > a, > li > a { padding-bottom: $value !important; } }
-    .#{$prefix}anchors-padding-left#{$variation}#{$postfix}   { > a, > li > a { padding-left:   $value !important; } }
-    .#{$prefix}anchors-padding-ends#{$variation}#{$postfix}   { > a, > li > a { padding-top:    $value !important; padding-bottom: $value !important; } }
-    .#{$prefix}anchors-padding-sides#{$variation}#{$postfix}  { > a, > li > a { padding-right:  $value !important; padding-left:   $value !important; } }
+    .#{$prefix}anchors-padding#{$variation}#{$postfix}        { > a, > li > a { padding:        $padding !important; } }
+    .#{$prefix}anchors-padding-top#{$variation}#{$postfix}    { > a, > li > a { padding-top:    $padding !important; } }
+    .#{$prefix}anchors-padding-right#{$variation}#{$postfix}  { > a, > li > a { padding-right:  $padding !important; } }
+    .#{$prefix}anchors-padding-bottom#{$variation}#{$postfix} { > a, > li > a { padding-bottom: $padding !important; } }
+    .#{$prefix}anchors-padding-left#{$variation}#{$postfix}   { > a, > li > a { padding-left:   $padding !important; } }
+    .#{$prefix}anchors-padding-ends#{$variation}#{$postfix}   { > a, > li > a { padding-top:    $padding !important; padding-bottom: $padding !important; } }
+    .#{$prefix}anchors-padding-sides#{$variation}#{$postfix}  { > a, > li > a { padding-right:  $padding !important; padding-left:   $padding !important; } }
 
-    .#{$prefix}childs-padding#{$variation}#{$postfix}        > * { padding:        $value !important; }
-    .#{$prefix}childs-padding-top#{$variation}#{$postfix}    > * { padding-top:    $value !important; }
-    .#{$prefix}childs-padding-right#{$variation}#{$postfix}  > * { padding-right:  $value !important; }
-    .#{$prefix}childs-padding-bottom#{$variation}#{$postfix} > * { padding-bottom: $value !important; }
-    .#{$prefix}childs-padding-left#{$variation}#{$postfix}   > * { padding-left:   $value !important; }
-    .#{$prefix}childs-padding-ends#{$variation}#{$postfix}   > * { padding-top:    $value !important; padding-bottom: $value !important; }
-    .#{$prefix}childs-padding-sides#{$variation}#{$postfix}  > * { padding-right:  $value !important; padding-left:   $value !important; }
+    .#{$prefix}childs-padding#{$variation}#{$postfix}        > * { padding:        $padding !important; }
+    .#{$prefix}childs-padding-top#{$variation}#{$postfix}    > * { padding-top:    $padding !important; }
+    .#{$prefix}childs-padding-right#{$variation}#{$postfix}  > * { padding-right:  $padding !important; }
+    .#{$prefix}childs-padding-bottom#{$variation}#{$postfix} > * { padding-bottom: $padding !important; }
+    .#{$prefix}childs-padding-left#{$variation}#{$postfix}   > * { padding-left:   $padding !important; }
+    .#{$prefix}childs-padding-ends#{$variation}#{$postfix}   > * { padding-top:    $padding !important; padding-bottom: $padding !important; }
+    .#{$prefix}childs-padding-sides#{$variation}#{$postfix}  > * { padding-right:  $padding !important; padding-left:   $padding !important; }
 
-    .#{$prefix}cells-padding#{$variation}#{$postfix}        { th, td { padding:        $value !important; } }
-    .#{$prefix}cells-padding-top#{$variation}#{$postfix}    { th, td { padding-top:    $value !important; } }
-    .#{$prefix}cells-padding-right#{$variation}#{$postfix}  { th, td { padding-right:  $value !important; } }
-    .#{$prefix}cells-padding-bottom#{$variation}#{$postfix} { th, td { padding-bottom: $value !important; } }
-    .#{$prefix}cells-padding-left#{$variation}#{$postfix}   { th, td { padding-left:   $value !important; } }
-    .#{$prefix}cells-padding-ends#{$variation}#{$postfix}   { th, td { padding-top:    $value !important; padding-bottom: $value !important; } }
-    .#{$prefix}cells-padding-sides#{$variation}#{$postfix}  { th, td { padding-right:  $value !important; padding-left:   $value !important; } }
+    .#{$prefix}cells-padding#{$variation}#{$postfix}        { th, td { padding:        $padding !important; } }
+    .#{$prefix}cells-padding-top#{$variation}#{$postfix}    { th, td { padding-top:    $padding !important; } }
+    .#{$prefix}cells-padding-right#{$variation}#{$postfix}  { th, td { padding-right:  $padding !important; } }
+    .#{$prefix}cells-padding-bottom#{$variation}#{$postfix} { th, td { padding-bottom: $padding !important; } }
+    .#{$prefix}cells-padding-left#{$variation}#{$postfix}   { th, td { padding-left:   $padding !important; } }
+    .#{$prefix}cells-padding-ends#{$variation}#{$postfix}   { th, td { padding-top:    $padding !important; padding-bottom: $padding !important; } }
+    .#{$prefix}cells-padding-sides#{$variation}#{$postfix}  { th, td { padding-right:  $padding !important; padding-left:   $padding !important; } }
   }
-} // ekzo-spacing-helpers()
+}
 
 // -----------------------------------------------------------------------------
 // Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-margin-helpers-breakpoints, $include-self: true) {
-  @include ekzo-margin-helpers($variations: $ekzo-margin-helpers-variations, $postfix: ekzo-temp());
-}
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $margin-variations: $ekzo-margin-helpers-variations,
+  $bleed-variations: $ekzo-bleed-helpers-variations,
+  $padding-variations: $ekzo-padding-helpers-variations,
+  $margin-breakpoins: $ekzo-responsive-margin-helpers-breakpoints,
+  $bleed-breakpoins: $ekzo-responsive-bleed-helpers-breakpoints,
+  $padding-breakpoins: $ekzo-responsive-padding-helpers-breakpoints
+) {
+  @include ekzo-for-each-breakpoint($matches: $margin-breakpoins, $include-self: true) {
+    @include ekzo-margin-helpers(
+      $prefix: $ns,
+      $variations: $margin-variations,
+      $postfix: ekzo-temp()
+    );
+  }
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-bleed-helpers-breakpoints, $include-self: true) {
-  @include ekzo-bleed-helpers($variations: $ekzo-bleed-helpers-variations, $postfix: ekzo-temp());
-}
+  @include ekzo-for-each-breakpoint($matches: $bleed-breakpoins, $include-self: true) {
+    @include ekzo-bleed-helpers(
+      $prefix: $ns,
+      $variations: $bleed-variations,
+      $postfix: ekzo-temp()
+    );
+  }
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-padding-helpers-breakpoints, $include-self: true) {
-  @include ekzo-padding-helpers($variations: $ekzo-padding-helpers-variations, $postfix: ekzo-temp());
+  @include ekzo-for-each-breakpoint($matches: $padding-breakpoins, $include-self: true) {
+    @include ekzo-padding-helpers(
+      $prefix: $ns,
+      $variations: $padding-variations,
+      $postfix: ekzo-temp()
+    );
+  }
 }

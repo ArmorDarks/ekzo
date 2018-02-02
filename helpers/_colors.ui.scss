@@ -1,38 +1,43 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.COLORS.UI
+// Colors.ui
 // =============================================================================
 // UI colors
 //
 // @todo Usage of mixin `ekzo-theme` seems to be a bit slow here. Consider replacement with plain
 //       interpolated class names
 
-@each $theme-name, $theme in $ekzo-themes {
-  @each $ui, $color in $theme {
-    @include ekzo-theme() {
-      $value: ekzo-theme($ui);
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $themes: $ekzo-themes
+) {
+  @each $theme-name, $theme in $themes {
+    @each $name, $color in $theme {
+      @include ekzo-theme() {
+        $color: ekzo-theme($name);
 
-      .#{$ekzo-h-ns}color--#{$ui},
-      .#{$ekzo-h-ns}color--#{$ui}\:h:hover,
-      .#{$ekzo-h-ns}color--#{$ui}\:h:focus { color: $value !important; }
+        .#{$ns}color--#{$name},
+        .#{$ns}color--#{$name}\:h:hover,
+        .#{$ns}color--#{$name}\:h:focus { color: $color !important; }
 
-      .#{$ekzo-h-ns}bg-color--#{$ui},
-      .#{$ekzo-h-ns}bg-color--#{$ui}\:h:hover,
-      .#{$ekzo-h-ns}bg-color--#{$ui}\:h:focus { background-color: $value !important; }
+        .#{$ns}bg-color--#{$name},
+        .#{$ns}bg-color--#{$name}\:h:hover,
+        .#{$ns}bg-color--#{$name}\:h:focus { background-color: $color !important; }
 
-      .#{$ekzo-h-ns}border-color--#{$ui},
-      .#{$ekzo-h-ns}border-color--#{$ui}\:h:hover,
-      .#{$ekzo-h-ns}border-color--#{$ui}\:h:focus { border-color: $value !important; }
+        .#{$ns}border-color--#{$name},
+        .#{$ns}border-color--#{$name}\:h:hover,
+        .#{$ns}border-color--#{$name}\:h:focus { border-color: $color !important; }
 
-      .#{$ekzo-h-ns}fill--#{$ui},
-      .#{$ekzo-h-ns}fill--#{$ui}\:h:hover,
-      .#{$ekzo-h-ns}fill--#{$ui}\:h:focus { fill: $value !important; }
+        .#{$ns}fill--#{$name},
+        .#{$ns}fill--#{$name}\:h:hover,
+        .#{$ns}fill--#{$name}\:h:focus { fill: $color !important; }
 
-      .#{$ekzo-h-ns}stroke--#{$ui},
-      .#{$ekzo-h-ns}stroke--#{$ui}\:h:hover,
-      .#{$ekzo-h-ns}stroke--#{$ui}\:h:focus { stroke: $value !important; }
+        .#{$ns}stroke--#{$name},
+        .#{$ns}stroke--#{$name}\:h:hover,
+        .#{$ns}stroke--#{$name}\:h:focus { stroke: $color !important; }
 
+      }
     }
   }
 }

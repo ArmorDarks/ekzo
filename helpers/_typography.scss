@@ -1,16 +1,26 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.TYPOGRAPHY
+// Typography
 // =============================================================================
 
-@mixin ekzo-typography-helpers ($prefix: $ekzo-h-ns, $postfix: '') {
+@mixin ekzo-typography-helpers (
+  $prefix: $ekzo-h-ns,
+  $postfix: '',
+  $text-font-sizes: map-get($ekzo-font-sizes, text),
+  $ems-font-sizes: map-get($ekzo-font-sizes, ems),
+  $headings-font-sizes: map-get($ekzo-font-sizes, headings),
+  $extra-headings-font-sizes: map-get($ekzo-font-sizes, extra-headings),
+  $line-heights: $ekzo-line-heights,
+  $headings-font-family: ekzo-ui-font-family(headings),
+  $headings-font-weight: $ekzo-headings-font-weight
+) {
 
   // -----------------------------------------------------------------------------
   // Text
   // -----------------------------------------------------------------------------
 
-  @each $variant, $value in map-get($ekzo-font-sizes, text) {
+  @each $variant, $value in $text-font-sizes {
 
     .#{$prefix}text#{$variant}#{$postfix} { @include ekzo-font-size($value); }
     .#{$prefix}font-size#{$variant}#{$postfix} { font-size: $value; }
@@ -22,7 +32,7 @@
   // Ems
   // -----------------------------------------------------------------------------
 
-  @each $variant, $value in map-get($ekzo-font-sizes, ems) {
+  @each $variant, $value in $ems-font-sizes {
 
     .#{$prefix}text--em#{$variant}#{$postfix} { @include ekzo-font-size($value); }
     .#{$prefix}font-size--em#{$variant}#{$postfix} { font-size: $value; }
@@ -35,10 +45,13 @@
   // When we define a heading we also define a corresponding class to go with it.
   // This allows us to apply, say, `class="h3"` to any heading to receive a `h3`-like heading
 
-  @each $variant, $value in map-get($ekzo-font-sizes, headings) {
+  @each $variant, $value in $headings-font-sizes {
 
     .#{$prefix}#{$variant}#{$postfix} {
-      @include ekzo-headings-properties();
+      @include ekzo-headings-properties(
+        $font-family: $headings-font-family,
+        $font-weight: $headings-font-weight
+      );
       @include ekzo-font-size($value);
     }
 
@@ -51,10 +64,12 @@
   // Extra headings
   // -----------------------------------------------------------------------------
 
-  @each $variant, $value in map-get($ekzo-font-sizes, extra-headings) {
+  @each $variant, $value in $extra-headings-font-sizes {
 
     .#{$prefix}extra-h#{$variant}#{$postfix} {
-      @include ekzo-theme() { color: ekzo-theme(extra-headings); }
+      @include ekzo-theme() {
+        color: ekzo-theme(extra-headings);
+      }
 
       @include ekzo-font-size($value);
 
@@ -70,7 +85,7 @@
   // Line heights
   // -----------------------------------------------------------------------------
 
-  @each $variant, $value in $ekzo-line-heights {
+  @each $variant, $value in $line-heights {
     @if $variant != '' {
 
       .#{$prefix}line-height#{$variant}#{$postfix} { line-height: $value; }
@@ -100,6 +115,28 @@
 // Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-typography-helpers-breakpoints, $include-self: true) {
-  @include ekzo-typography-helpers($postfix: ekzo-temp());
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $text-font-sizes: map-get($ekzo-font-sizes, text),
+  $ems-font-sizes: map-get($ekzo-font-sizes, ems),
+  $headings-font-sizes: map-get($ekzo-font-sizes, headings),
+  $extra-headings-font-sizes: map-get($ekzo-font-sizes, extra-headings),
+  $line-heights: $ekzo-line-heights,
+  $headings-font-family: ekzo-ui-font-family(headings),
+  $headings-font-weight: $ekzo-headings-font-weight,
+  $breakpoins: $ekzo-responsive-typography-helpers-breakpoints
+) {
+  @include ekzo-for-each-breakpoint($matches: $breakpoins, $include-self: true) {
+    @include ekzo-typography-helpers(
+      $prefix: $ns,
+      $postfix: ekzo-temp(),
+      $text-font-sizes: $text-font-sizes,
+      $ems-font-sizes: $ems-font-sizes,
+      $headings-font-sizes: $headings-font-sizes,
+      $extra-headings-font-sizes: $extra-headings-font-sizes,
+      $line-heights: $line-heights,
+      $headings-font-family: $headings-font-family,
+      $headings-font-weight: $headings-font-weight
+    );
+  }
 }

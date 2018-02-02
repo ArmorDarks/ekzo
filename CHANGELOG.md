@@ -3,6 +3,32 @@
 ## HEAD
 
 ### Changed
+- All modules reworked to be mixins.
+
+   To include any module, that module should be imported first. It will provide a mixin, or a set of mixins, which should be invoked.
+
+   By default all modules provide `exports()` mixin, which includes most relevant CSS:
+
+   ```scss
+   @import 'node_modules/ekzo/objects/grid';
+
+   @include exports();
+   ```
+
+   Every module excepts a predefined set of options, which can be overridden to adjust generated code.
+
+   ```scss
+   @import 'node_modules/ekzo/objects/grid';
+
+   @include exports(
+    $ns: 'my-namespace-'
+   );
+   ```
+
+   Ekzo provides sane defaults for most options, but some might require predefined global variables. To learn which globals are required, check module options. If options are overridden during invocation, globals no longer required.
+
+   Such approach gives much better picture of variables usage and defines mixin as the only interface for specifying default variables for context of the module. This means, that using global variables inside modules no longer encouraged and instead they all should be passed through mixin arguments.
+
 - Moved animations and font-stacks from `helpers` to `variables`.
 
 ## 2.7.0

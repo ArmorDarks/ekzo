@@ -1,65 +1,26 @@
 // =============================================================================
-// ^BUTTONS
+// Button
 // =============================================================================
 //  Base button styles. Extend those in your `.Btn` component.
 //  Note, that by default it doesn't provide any paddings,
 //  so you should apply those in your component.
-//
-//  1. Allow us to better style box model properties.
-//  2. Line different sized buttons up a little nicer.
-//  3. Normalise box model styles.
-//  4. Prevent appearing of borders in case `a` has defined border. Override in your
-//     own styles if needed.
-
-.#{$ekzo-o-ns}btn {
-  display: inline-block;  // 1
-
-  vertical-align: middle; // 2
-
-  margin: 0;              // 3
-
-  border-width: 0;        // 4
-
-  @if $ekzo-disable-btn-outline and not $ekzo-disable-links-outline { outline: 0; }
-
-  text-decoration: $ekzo-btn-text-decoration;
-
-  @include ekzo-theme() {
-    color: ekzo-theme(btn);
-    background-color: ekzo-theme(btn-bg);
-  }
-
-  &:hover,
-  &:focus { text-decoration: $ekzo-btn-hover-text-decoration; }
-
-}
-
-// ----
-// Make the button inherit sizing from its parent.
-
-.#{$ekzo-o-ns}btn--inherit {
-  vertical-align: inherit;
-
-  font-family: inherit;
-  font-size:   inherit;
-
-  line-height: inherit;
-
-  padding: inherit;
-}
 
 // -----------------------------------------------------------------------------
 // Buttons sizes
 // -----------------------------------------------------------------------------
 // @param {string} $postfix='' - namespace (used for breakpoins generation)
 
-@mixin ekzo-buttons-variants ($postfix: '') {
+@mixin ekzo-buttons-variants (
+  $ns: $ekzo-o-ns,
+  $font-sizes: map-get($ekzo-font-sizes, buttons),
+  $postfix: ''
+) {
 
   // ----
   // Fill the entirety of their container.
   // 1. Prevent conflict of width and paddings
 
-  .#{$ekzo-o-ns}btn--full#{$postfix} {
+  .#{$ns}btn--full#{$postfix} {
     width: 100%;
     box-sizing: border-box; // 1
   }
@@ -67,16 +28,74 @@
   // ----
   // Button font-size modifiers based on map's values.
 
-  @each $variant, $value in map-get($ekzo-font-sizes, buttons) {
-    .#{$ekzo-o-ns}btn#{$variant}#{$postfix} { font-size: $value; }
+  @each $variant, $font-size in $font-sizes {
+    .#{$ns}btn#{$variant}#{$postfix} { font-size: $font-size; }
   }
 
-} // ekzo-buttons-variants()
+}
 
-// -----------------------------------------------------------------------------
-// Call
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $font-sizes: map-get($ekzo-font-sizes, buttons),
+  $btn-outline: not $ekzo-disable-btn-outline,
+  $text-decoration: $ekzo-btn-text-decoration,
+  $hover-text-decoration: $ekzo-btn-hover-text-decoration,
+  $breakpoints: $ekzo-responsive-buttons-breakpoints
+) {
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-buttons-breakpoints, $include-self: true) {
-  @include ekzo-buttons-variants($postfix: ekzo-temp());
+  //  1. Allow us to better style box model properties.
+  //  2. Line different sized buttons up a little nicer.
+  //  3. Normalise box model styles.
+  //  4. Prevent appearing of borders in case `a` has defined border. Override in your
+  //     own styles if needed.
+
+  .#{$ns}btn {
+    display: inline-block;  // 1
+
+    vertical-align: middle; // 2
+
+    margin: 0;              // 3
+
+    border-width: 0;        // 4
+
+    @if not $btn-outline { outline: 0; }
+
+    text-decoration: $text-decoration;
+
+    @include ekzo-theme() {
+      color: ekzo-theme(btn);
+      background-color: ekzo-theme(btn-bg);
+    }
+
+    &:hover,
+    &:focus { text-decoration: $hover-text-decoration; }
+
+  }
+
+  // ----
+  // Make the button inherit sizing from its parent.
+
+  .#{$ns}btn--inherit {
+    vertical-align: inherit;
+
+    font-family: inherit;
+    font-size:   inherit;
+
+    line-height: inherit;
+
+    padding: inherit;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Call
+  // -----------------------------------------------------------------------------
+
+  @include ekzo-for-each-breakpoint($matches: $breakpoints, $include-self: true) {
+    @include ekzo-buttons-variants(
+      $ns: $ns,
+      $font-sizes: $font-sizes,
+      $postfix: ekzo-temp()
+    );
+  }
+
 }

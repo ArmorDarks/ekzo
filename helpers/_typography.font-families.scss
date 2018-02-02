@@ -1,19 +1,25 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.TYPOGRAHY.FONT-FAMILIES
+// Typography.font-families
 // =============================================================================
 
-.#{$ekzo-h-ns}font-family--inherit { font-family: inherit !important; }
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $font-families: $ekzo-font-families
+) {
 
-// -----------------------------------------------------------------------------
-// All fonts-families
-// -----------------------------------------------------------------------------
+  .#{$ns}font-family--inherit { font-family: inherit !important; }
 
-@each $group, $font-family in $ekzo-font-families {
-  @if $font-family {
+  // -----------------------------------------------------------------------------
+  // All fonts-families
+  // -----------------------------------------------------------------------------
 
-    .#{$ekzo-h-ns}font-family--#{$group} { font-family: $font-family; }
+  @each $group, $font-family in $font-families {
+    @if $font-family {
 
+      .#{$ns}font-family--#{$group} { font-family: $font-family; }
+
+    }
   }
 }

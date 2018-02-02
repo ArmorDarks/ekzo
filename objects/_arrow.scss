@@ -1,5 +1,5 @@
 // =============================================================================
-// ^ARROWS
+// Arrow
 // =============================================================================
 
 // @legacy This code is obsolete.
@@ -10,153 +10,121 @@
 // arrow, we typically build these with CSS. These following classes allow us to
 // generate these arbitrarily with a mixin, `@arrow()`.
 
-$ekzo-arrow-size:            ekzo-space(.5) !default;
-$ekzo-arrow-border:          1 !default;
-$ekzo-border:                $ekzo-arrow-size;
-$ekzo-arrow:                 $ekzo-arrow-size - $ekzo-arrow-border;
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $arrow-size: ekzo-space(.5),
+  $arrow-border: 1
+) {
+  $border: $arrow-size;
+  $arrow: $arrow-size - $arrow-border;
 
-// Forms the basis for any/all CSS arrows.
+  // Forms the basis for any/all CSS arrows.
 
-%#{$ekzo-o-ns}arrow {
-  position: relative;
+  %#{$ns}arrow {
+    position: relative;
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    border-collapse: separate;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-collapse: separate;
+    }
+
+    &:before { border: $border solid transparent; }
+    &:after { border: $arrow solid transparent; }
+
   }
 
-  &:before {
-    border: $ekzo-border solid transparent;
+  // Define individual edges so we can combine what we need, when we need.
+
+  %#{$ns}arrow--top {
+    @extend %#{$ns}arrow;
+
+    &:before,
+    &:after { bottom: 100%; }
+
   }
 
-  &:after {
-    border: $ekzo-arrow solid transparent;
+  %#{$ns}arrow--upper {
+    @extend %#{$ns}arrow;
+
+    &:before { top: $arrow; }
+    &:after { top: $border; }
+
   }
 
-}
+  %#{$ns}arrow--middle {
+    @extend %#{$ns}arrow;
 
-// Define individual edges so we can combine what we need, when we need.
+    &:before,
+    &:after {
+      top: 50%;
+      margin-top: -$border;
+    }
 
-%#{$ekzo-o-ns}arrow--top {
-  @extend %#{$ekzo-o-ns}arrow;
+    &:after { margin-top: -$arrow; }
 
-  &:before,
-  &:after {
-    bottom: 100%;
   }
 
-}
+  %#{$ns}arrow--lower {
+    @extend %#{$ns}arrow;
 
-%#{$ekzo-o-ns}arrow--upper {
-  @extend %#{$ekzo-o-ns}arrow;
+    &:before { bottom: $arrow; }
+    &:after { bottom: $border; }
 
-  &:before {
-    top: $ekzo-arrow;
   }
 
-  &:after {
-    top: $ekzo-border;
+  %#{$ns}arrow--bottom {
+    @extend %#{$ns}arrow;
+
+    &:before,
+    &:after { top: 100%; }
+
   }
 
-}
+  %#{$ns}arrow--near {
+    @extend %#{$ns}arrow;
 
-%#{$ekzo-o-ns}arrow--middle {
-  @extend %#{$ekzo-o-ns}arrow;
+    &:before,
+    &:after { right: 100%; }
 
-  &:before,
-  &:after {
-    top: 50%;
-    margin-top: -$ekzo-border;
   }
 
-  &:after {
-    margin-top: -$ekzo-arrow;
+  %#{$ns}arrow--left {
+    @extend %#{$ns}arrow;
+
+    &:before { left: $arrow; }
+    &:after { left: $border; }
+
   }
 
-}
+  %#{$ns}arrow--center {
+    @extend %#{$ns}arrow;
 
-%#{$ekzo-o-ns}arrow--lower {
-  @extend %#{$ekzo-o-ns}arrow;
+    &:before,
+    &:after {
+      left: 50%;
+      margin-left: -$border;
+    }
 
-  &:before {
-    bottom: $ekzo-arrow;
+    &:after { margin-left: -$arrow; }
+
   }
 
-  &:after {
-    bottom: $ekzo-border;
+  %#{$ns}arrow--right {
+    @extend %#{$ns}arrow;
+
+    &:before { right: $arrow; }
+    &:after { right: $border; }
+
   }
 
-}
+  %#{$ns}arrow--far {
+    @extend %#{$ns}arrow;
 
-%#{$ekzo-o-ns}arrow--bottom {
-  @extend %#{$ekzo-o-ns}arrow;
+    &:before,
+    &:after { left: 100%; }
 
-  &:before,
-  &:after {
-    top: 100%;
-  }
-
-}
-
-%#{$ekzo-o-ns}arrow--near {
-  @extend %#{$ekzo-o-ns}arrow;
-
-  &:before,
-  &:after {
-    right: 100%;
-  }
-
-}
-
-%#{$ekzo-o-ns}arrow--left {
-  @extend %#{$ekzo-o-ns}arrow;
-
-  &:before {
-    left: $ekzo-arrow;
-  }
-
-  &:after {
-    left: $ekzo-border;
-  }
-
-}
-
-%#{$ekzo-o-ns}arrow--center {
-  @extend %#{$ekzo-o-ns}arrow;
-
-  &:before,
-  &:after {
-    left: 50%;
-    margin-left: -$ekzo-border;
-  }
-
-  &:after {
-    margin-left: -$ekzo-arrow;
-  }
-
-}
-
-%#{$ekzo-o-ns}arrow--right {
-  @extend %#{$ekzo-o-ns}arrow;
-
-  &:before {
-    right: $ekzo-arrow;
-  }
-
-  &:after {
-    right: $ekzo-border;
-  }
-
-}
-
-%#{$ekzo-o-ns}arrow--far {
-  @extend %#{$ekzo-o-ns}arrow;
-
-  &:before,
-  &:after {
-    left: 100%;
   }
 
 }

@@ -1,12 +1,17 @@
 // =============================================================================
-// ^HELPERS.TYPOGRAHY.FONT-FAMILIES.UI
+// Typography.font-families.ui
 // =============================================================================
 // UI fonts-families
 
-@each $group, $font-family in $ekzo-ui-font-families {
-  @if $font-family {
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $font-families: $ekzo-ui-font-families
+) {
+  @each $group, $font-family in $font-families {
+    @if $font-family {
 
-    .#{$ekzo-h-ns}font-family--#{$group} { font-family: $font-family; }
+      .#{$ns}font-family--#{$group} { font-family: $font-family; }
 
+    }
   }
 }

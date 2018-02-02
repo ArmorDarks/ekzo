@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^WIDTHS
+// Width
 // =============================================================================
 //
 // @todo Updated docs
@@ -51,15 +51,26 @@
 // Call all widths
 // -----------------------------------------------------------------------------
 
-@include ekzo-widths-helpers($fractions: $ekzo-widths-helpers-fractions)
-
-// -----------------------------------------------------------------------------
-// Responsive widths
-// -----------------------------------------------------------------------------
-
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-widths-helpers-breakpoints) {
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $fractions: $ekzo-widths-helpers-fractions,
+  $responsive-fractions: $ekzo-responsive-widths-helpers-fractions,
+  $breakpoins: $ekzo-responsive-widths-helpers-breakpoints
+) {
   @include ekzo-widths-helpers(
-    $fractions: $ekzo-responsive-widths-helpers-fractions,
-    $postfix: ekzo-temp()
-  );
+    $prefix: $ns,
+    $fractions: $fractions
+  )
+
+  // -----------------------------------------------------------------------------
+  // Responsive widths
+  // -----------------------------------------------------------------------------
+
+  @include ekzo-for-each-breakpoint($matches: $breakpoins) {
+    @include ekzo-widths-helpers(
+      $prefix: $ns,
+      $fractions: $responsive-fractions,
+      $postfix: ekzo-temp()
+    );
+  }
 }

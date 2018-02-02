@@ -1,12 +1,11 @@
 // =============================================================================
-// ^HIDE
+// Hide object
 // =============================================================================
 
 @mixin ekzo-hide ($prefix: $ekzo-o-ns, $postfix: '') {
 
   // ----
   // Hide only visually, but have it available for screen readers
-  //
   // @source h5bp.com/v
 
   .#{$prefix}hide#{$postfix} {
@@ -40,6 +39,14 @@
 // Call
 // -----------------------------------------------------------------------------
 
-@include ekzo-for-each-breakpoint($matches: $ekzo-responsive-hide-breakpoints, $include-self: true) {
-  @include ekzo-hide($postfix: ekzo-temp());
+@mixin exports (
+  $ns: $ekzo-o-ns,
+  $breakpoints: $ekzo-responsive-hide-breakpoints
+) {
+  @include ekzo-for-each-breakpoint($matches: $breakpoints, $include-self: true) {
+    @include ekzo-hide(
+      $prefix: $ns,
+      $postfix: ekzo-temp()
+    );
+  }
 }

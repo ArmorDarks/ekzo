@@ -1,5 +1,5 @@
 // =============================================================================
-// ^RELINE-BORDER
+// Reline-border
 // =============================================================================
 // @note Those classes will try to inherit border-related properties as smart, as possible.
 //       Still, inheritance of border-width isn't what can be done easily, so it assumes that
@@ -12,39 +12,43 @@
 // Moves border underline from element to specified `.o-reline-border-bottom__to`
 // Useful for anchors with icons inside
 
-.#{$ekzo-o-ns}reline-border-bottom {
-  border-bottom-width: 0;
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  // Prevent overriding of specified default hover/active/focus widths by `.o-reline-border-bottom__to`
-  &:hover .#{$ekzo-o-ns}reline-border-bottom__to,
-  &:focus .#{$ekzo-o-ns}reline-border-bottom__to,
-  &:active .#{$ekzo-o-ns}reline-border-bottom__to { border-bottom-width: inherit; }
+  .#{$ns}reline-border-bottom {
+    border-bottom-width: 0;
 
-}
+    // Prevent overriding of specified default hover/active/focus widths by `.o-reline-border-bottom__to`
+    &:hover .#{$ns}reline-border-bottom__to,
+    &:focus .#{$ns}reline-border-bottom__to,
+    &:active .#{$ns}reline-border-bottom__to { border-bottom-width: inherit; }
 
-  .#{$ekzo-o-ns}reline-border-bottom__to {
-    border-bottom-width: 1px;
-    border-bottom-style: inherit;
-
-    // We need to carry occasion paddings too, since they can be used to position border underline
-    padding: inherit;
   }
 
-// ----
-// Moves border underline from element to specified `.o-reline-border-bottom__to`
-// and shows it only upon hover
+    .#{$ns}reline-border-bottom__to {
+      border-bottom-width: 1px;
+      border-bottom-style: inherit;
 
-.#{$ekzo-o-ns}reline-border-bottom--rev {
-  border-bottom-width: 0;
+      // We need to carry occasion paddings too, since they can be used to position border underline
+      padding: inherit;
+    }
 
-  .#{$ekzo-o-ns}reline-border-bottom__to { border-bottom-width: 0; }
+  // ----
+  // Moves border underline from element to specified `.o-reline-border-bottom__to`
+  // and shows it only upon hover
 
-  &:hover .#{$ekzo-o-ns}reline-border-bottom__to,
-  &:focus .#{$ekzo-o-ns}reline-border-bottom__to,
-  &:active .#{$ekzo-o-ns}reline-border-bottom__to {
-    border-bottom-width: 1px;
-    border-bottom-style: inherit;
+  .#{$ns}reline-border-bottom--rev {
+    border-bottom-width: 0;
 
-    padding: inherit;
+    .#{$ns}reline-border-bottom__to { border-bottom-width: 0; }
+
+    &:hover .#{$ns}reline-border-bottom__to,
+    &:focus .#{$ns}reline-border-bottom__to,
+    &:active .#{$ns}reline-border-bottom__to {
+      border-bottom-width: 1px;
+      border-bottom-style: inherit;
+
+      padding: inherit;
+    }
   }
+
 }

@@ -1,5 +1,5 @@
 // =============================================================================
-// ^Svg-icon
+// Svg-icon
 // =============================================================================
 // This will force inlined svg icon maintain aspect ratio and behave like
 // svg icons in all other browsers, even in IE9+.
@@ -17,37 +17,41 @@
 //
 //   </i>
 
-.#{$ekzo-o-ns}svg-icon {
-  position: relative;
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  display: inline-block;
+  .#{$ns}svg-icon {
+    position: relative;
 
-  height: 1em; // take same hight as text
+    display: inline-block;
 
-  top: .1em; // simulate iconic font offset
+    height: 1em; // take same hight as text
+
+    top: .1em; // simulate iconic font offset
+  }
+
+    .#{$ns}svg-icon__canvas {
+      display: block;
+
+      height: 100%;
+
+      visibility: hidden;
+    }
+
+    .#{$ns}svg-icon__svg {
+      position: absolute;
+
+      left: 0;
+      top:  0;
+
+      width:  100%;
+      height: 100%;
+    }
+
+  // -----------------------------------------------------------------------------
+  // Fixed width
+  // -----------------------------------------------------------------------------
+  // Make width equal to height of icon. Useful for lists and menus
+
+  .#{$ns}svg-icon--fixed { width: 1em; }
+
 }
-
-  .#{$ekzo-o-ns}svg-icon__canvas {
-    display: block;
-
-    height: 100%;
-
-    visibility: hidden;
-  }
-
-  .#{$ekzo-o-ns}svg-icon__svg {
-    position: absolute;
-
-    left: 0;
-    top:  0;
-
-    width:  100%;
-    height: 100%;
-  }
-
-// -----------------------------------------------------------------------------
-// Fixed width
-// -----------------------------------------------------------------------------
-// Make width equal to height of icon. Useful for lists and menus
-
-.#{$ekzo-o-ns}svg-icon--fixed { width: 1em; }

@@ -1,15 +1,20 @@
 // stylelint-disable declaration-no-important
 
 // =============================================================================
-// ^HELPERS.Border-radius
+// Border-radius
 // =============================================================================
 
-@each $radius, $value in $ekzo-border-radius {
+@mixin exports (
+  $ns: $ekzo-h-ns,
+  $radiuses: $ekzo-border-radius
+) {
+  @each $variant, $radius in $radiuses {
 
-  .#{$ekzo-h-ns}border-r#{$radius}              { border-radius: $value              !important; }
-  .#{$ekzo-h-ns}border-r-top-left#{$radius}     { border-top-left-radius: $value     !important; }
-  .#{$ekzo-h-ns}border-r-top-right#{$radius}    { border-top-right-radius: $value    !important; }
-  .#{$ekzo-h-ns}border-r-bottom-right#{$radius} { border-bottom-right-radius: $value !important; }
-  .#{$ekzo-h-ns}border-r-bottom-left#{$radius}  { border-bottom-left-radius: $value  !important; }
+    .#{$ns}border-r#{$variant}              { border-radius: $radius !important; }
+    .#{$ns}border-r-top-left#{$variant}     { border-top-left-radius: $radius !important; }
+    .#{$ns}border-r-top-right#{$variant}    { border-top-right-radius: $radius !important; }
+    .#{$ns}border-r-bottom-right#{$variant} { border-bottom-right-radius: $radius !important; }
+    .#{$ns}border-r-bottom-left#{$variant}  { border-bottom-left-radius: $radius !important; }
 
+  }
 }

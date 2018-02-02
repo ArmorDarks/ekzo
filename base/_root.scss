@@ -1,55 +1,53 @@
 // stylelint-disable selector-max-type
 
 // =============================================================================
-// ^MAIN
+// Root
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Root
-// -----------------------------------------------------------------------------
+@mixin exports (
+  $font-family: ekzo-ui-font-family(text),
+  $font-size: $ekzo-font-size,
+  $line-height: ekzo-line-height(''),
+  $font-weight: $ekzo-font-weight,
+  $background: $ekzo-bg
+) {
 
-:root {}
+  // -----------------------------------------------------------------------------
+  // Themes
+  // -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-// Themes
-// -----------------------------------------------------------------------------
+  @include ekzo-theme() {
+    color: ekzo-theme(text);
+    background-color: ekzo-theme(bg);
+  }
 
-@include ekzo-theme() {
-  color:            ekzo-theme(text);
-  background-color: ekzo-theme(bg);
+  // -----------------------------------------------------------------------------
+  // HTML
+  // -----------------------------------------------------------------------------
+  // 1. Ensure the page always fills at least the entire height of the viewport.
+  // 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+  //    navigating between pages that do/do not have enough content to produce
+  //    scrollbars naturally.
+  // 3. Set the default font parameters for the entire project
+  // 4. Fonts on OSX will look more consistent with other systems that do not
+  //    render text using sub-pixel anti-aliasing.
+
+  html {
+    height: 100%; // 1
+
+    overflow-y: scroll; // 2
+
+    font-family: $font-family; // 3
+
+    font-size:   $font-size;
+    line-height: $line-height;
+
+    font-weight: $font-weight; // 3
+
+    background: $background;
+
+    -moz-osx-font-smoothing: grayscale;   // 4
+    -webkit-font-smoothing:  antialiased; // 4
+  }
+
 }
-
-// -----------------------------------------------------------------------------
-// HTML
-// -----------------------------------------------------------------------------
-// 1. Ensure the page always fills at least the entire height of the viewport.
-// 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
-//    navigating between pages that do/do not have enough content to produce
-//    scrollbars naturally.
-// 3. Set the default font parameters for the entire project
-// 4. Fonts on OSX will look more consistent with other systems that do not
-//    render text using sub-pixel anti-aliasing.
-
-html {
-  height: 100%; // 1
-
-  overflow-y: scroll; // 2
-
-  font-family: ekzo-ui-font-family(text); // 3
-
-  font-size:   $ekzo-font-size;
-  line-height: ekzo-line-height('');
-
-  font-weight: $ekzo-font-weight; // 3
-
-  background: $ekzo-bg;
-
-  -moz-osx-font-smoothing: grayscale;   // 4
-  -webkit-font-smoothing:  antialiased; // 4
-}
-
-// -----------------------------------------------------------------------------
-// Body
-// -----------------------------------------------------------------------------
-
-body {}

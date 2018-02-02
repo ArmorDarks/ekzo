@@ -1,7 +1,7 @@
 // stylelint-disable selector-max-universal
 
 // =============================================================================
-// ^EXTRA-HELP
+// Extra-help
 // =============================================================================
 // Extra help text displayed after a field when that field is in focus or on hover, e.g.:
 //
@@ -18,12 +18,16 @@
 //
 // Original idea by Harry Roberts (http://csswizardry.com)
 
-.#{$ekzo-o-ns}extra-help {
-  display: inline-block;
+@mixin exports ($ns: $ekzo-o-ns) {
 
-  visibility: hidden;
+  .#{$ns}extra-help {
+    display: inline-block;
 
-  *:hover + &,
-  *:focus + & { visibility: visible; }
+    visibility: hidden;
+
+    *:hover + &,
+    *:focus + & { visibility: visible; }
+
+  }
 
 }

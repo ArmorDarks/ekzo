@@ -1,7 +1,7 @@
 // stylelint-disable selector-max-universal, selector-max-type
 
 // =============================================================================
-// ^BOX-SIZING
+// Box-sizing
 // =============================================================================
 //
 // Set global `box-sizing` state to `border-box`
@@ -23,12 +23,15 @@
 //
 //        Details https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
-@if $ekzo-global-border-box {
+@mixin exports ($global-border-box: $ekzo-global-border-box) {
+  @if $global-border-box {
 
-  html { box-sizing: border-box; }
+    html { box-sizing: border-box; }
+
+  }
+
+  *,
+  *:before,
+  *:after { box-sizing: inherit; }
 
 }
-
-*,
-*:before,
-*:after { box-sizing: inherit; }
