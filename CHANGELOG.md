@@ -29,6 +29,7 @@
 
    Such approach gives much better picture of variables usage and defines mixin as the only interface for specifying default variables for context of the module. This means, that using global variables inside modules no longer encouraged and instead they all should be passed through mixin arguments.
 
+- Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`
 - Moved animations and font-stacks from `helpers` to `variables`.
 
 ## 2.7.0

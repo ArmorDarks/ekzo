@@ -49,6 +49,35 @@
 
   html { text-size-adjust: 100%; }
 
+  // Set global `box-sizing` state to `border-box`
+  //
+  // @note: Usage of `inherit` allows easier override of that parameter in components.
+  //        So, instead of
+  //
+  //           .component {
+  //
+  //             &,
+  //             &:before,
+  //             &:after { box-sizing: content-box }
+  //
+  //           }
+  //
+  //        to override we need to specify only
+  //
+  //           .component { box-sizing: content-box; }
+  //
+  //        Details https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+  @if $global-border-box {
+
+    html { box-sizing: border-box; }
+
+  }
+
+  *,
+  *:before,
+  *:after { box-sizing: inherit; }
+
   // -----------------------------------------------------------------------------
   // Sections
   // -----------------------------------------------------------------------------
