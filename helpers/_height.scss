@@ -16,7 +16,7 @@
 
 @mixin exports (
   $ns: $ekzo-h-ns,
-  $breakpoins: $ekzo-responsive-height-helpers-breakpoints
+  $breakpoins: $ekzo-responsive-helpers-breakpoints
 ) {
   @include ekzo-for-each-breakpoint($matches: $breakpoins, $include-self: true) {
     @include ekzo-height-helpers(

@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------------
 
 @mixin ekzo-margin-helpers (
-  $variations: $ekzo-margin-helpers-variations,
+  $variations,
   $prefix: $ekzo-h-ns,
   $postfix: ''
 ) {
@@ -64,7 +64,7 @@
 // -----------------------------------------------------------------------------
 
 @mixin ekzo-bleed-helpers (
-  $variations: $ekzo-bleed-helpers-variations,
+  $variations,
   $prefix: $ekzo-h-ns,
   $postfix: ''
 ) {
@@ -84,7 +84,7 @@
 // -----------------------------------------------------------------------------
 
 @mixin ekzo-padding-helpers (
-  $variations: $ekzo-padding-helpers-variations,
+  $variations,
   $prefix: $ekzo-h-ns,
   $postfix: ''
 ) {
@@ -129,12 +129,29 @@
 
 @mixin exports (
   $ns: $ekzo-h-ns,
-  $margin-variations: $ekzo-margin-helpers-variations,
-  $bleed-variations: $ekzo-bleed-helpers-variations,
-  $padding-variations: $ekzo-padding-helpers-variations,
-  $margin-breakpoins: $ekzo-responsive-margin-helpers-breakpoints,
-  $bleed-breakpoins: $ekzo-responsive-bleed-helpers-breakpoints,
-  $padding-breakpoins: $ekzo-responsive-padding-helpers-breakpoints
+  $margin-variations: (
+    '--': ekzo-space(.5),
+    '': ekzo-space(1),
+    \+--: ekzo-space(1.5),
+    \+: ekzo-space(2),
+    \+\+: ekzo-space(3),
+    '0': 0
+  ),
+  $bleed-variations: (
+    '--': - ekzo-space(.5),
+    '': - ekzo-space(1),
+    \+: - ekzo-space(2),
+    \+\+: - ekzo-space(3),
+  ),
+  $padding-variations: (
+    '--': ekzo-space(.5),
+    '': ekzo-space(1),
+    \+: ekzo-space(2),
+    '0': 0
+  ),
+  $margin-breakpoins: $ekzo-responsive-helpers-breakpoints,
+  $bleed-breakpoins: $ekzo-responsive-helpers-breakpoints,
+  $padding-breakpoins: $ekzo-responsive-helpers-breakpoints
 ) {
   @include ekzo-for-each-breakpoint($matches: $margin-breakpoins, $include-self: true) {
     @include ekzo-margin-helpers(

@@ -7,11 +7,11 @@
 // Head commit during last update: https://github.com/necolas/normalize.css/commit/4559de001bc15838c0314c713645086bdef64bc3
 
 @mixin exports (
-  $global-border-box: $ekzo-global-border-box,
+  $global-border-box: true,
   $hr-height: $ekzo-hr-height,
-  $links-outline: not $ekzo-disable-links-outline,
-  $forms-outline: not $ekzo-disable-forms-outline,
-  $bold-font-weight: $ekzo-bold-font-weight
+  $links-outline: true,
+  $forms-outline: true,
+  $bold-font-weight: bolder
 ) {
 
   // -----------------------------------------------------------------------------

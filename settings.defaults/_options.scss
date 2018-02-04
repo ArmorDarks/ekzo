@@ -1,37 +1,6 @@
-@import './framework';
-
 // =============================================================================
 // ^SETTING.OPTIONS.DEFAULTS
 // =============================================================================
-
-// -----------------------------------------------------------------------------
-// Varations
-// -----------------------------------------------------------------------------
-
-$ekzo-margin-helpers-variations: (
-  '--': ekzo-space(.5),
-  '': ekzo-space(1),
-  \+--: ekzo-space(1.5),
-  \+: ekzo-space(2),
-  \+\+: ekzo-space(3),
-  '0': 0
-) !default;
-
-$ekzo-bleed-helpers-variations: (
-  '--': - ekzo-space(.5),
-  '': - ekzo-space(1),
-  \+: - ekzo-space(2),
-  \+\+: - ekzo-space(3),
-) !default;
-
-$ekzo-padding-helpers-variations: (
-  '--': ekzo-space(.5),
-  '': ekzo-space(1),
-  \+: ekzo-space(2),
-  '0': 0
-) !default;
-
-$ekzo-widths-helpers-fractions: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
 
 // -----------------------------------------------------------------------------
 // Theming
@@ -39,20 +8,3 @@ $ekzo-widths-helpers-fractions: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default
 
 $ekzo-enable-theming:               true  !default;
 $ekzo-alert-on-missing-theme-color: false !default;
-
-// -----------------------------------------------------------------------------
-// Border-box
-// -----------------------------------------------------------------------------
-
-$ekzo-global-border-box: true !default;
-
-// -----------------------------------------------------------------------------
-// A11y
-// -----------------------------------------------------------------------------
-// @note Please, disable it only if your links and forms have prominent `:focus` style,
-//       otherwise people with limited capabilities and keyboard-only won't be able
-//       to use your website at all
-
-$ekzo-disable-links-outline: false !default;
-$ekzo-disable-forms-outline: false !default;
-$ekzo-disable-btn-outline:   false !default;

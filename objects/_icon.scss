@@ -10,10 +10,12 @@
 
 @mixin exports (
   $ns: $ekzo-o-ns,
-  $font: $ekzo-icon-font,
-  $version: $ekzo-icon-font-version,
-  $svg-id: $ekzo-icon-font-svg-id
+  $font: icons,
+  $version: false,
+  $svg-id: null
 ) {
+  $svg-id: $font !default;
+
   @include ekzo-font-face(
     $font: $font,
     $version: $version,

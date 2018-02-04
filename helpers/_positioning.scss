@@ -57,7 +57,7 @@
 
 @mixin exports (
   $ns: $ekzo-h-ns,
-  $breakpoins: $ekzo-responsive-positioning-helpers-breakpoints
+  $breakpoins: $ekzo-responsive-helpers-breakpoints
 ) {
   @include ekzo-for-each-breakpoint($matches: $breakpoins, $include-self: true) {
     @include ekzo-positioning-helpers(

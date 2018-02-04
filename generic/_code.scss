@@ -6,7 +6,7 @@
 
 @mixin exports (
   $font-family: ekzo-ui-font-family(code),
-  $font-size: $ekzo-code-font-size
+  $font-size: 90%
 ) {
 
   code,

@@ -4,11 +4,10 @@
 
 @mixin exports (
   $ns: $ekzo-g-ns,
-  $text-decoration: $ekzo-links-text-decoration,
-  $hover-text-decoration: $ekzo-links-hover-text-decoration,
-  $links-outline: not $ekzo-disable-links-outline,
-  $go-content: $ekzo-links--go-content,
-  $back-content: $ekzo-links--back-content
+  $text-decoration: underline,
+  $hover-text-decoration: none,
+  $go-content: '\00A0' '\00BB',
+  $back-content: '\00AB' '\00A0'
 ) {
 
   // -----------------------------------------------------------------------------
@@ -48,7 +47,7 @@
 
     border: inherit;
 
-    @if not $links-outline { outline: inherit; }
+    outline: inherit;
 
     box-shadow: inherit;
 
@@ -64,7 +63,7 @@
 
       border: inherit;
 
-      @if not $links-outline { outline: inherit; }
+      outline: inherit;
 
       box-shadow: inherit;
     }

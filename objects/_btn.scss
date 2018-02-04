@@ -37,10 +37,10 @@
 @mixin exports (
   $ns: $ekzo-o-ns,
   $font-sizes: map-get($ekzo-font-sizes, buttons),
-  $btn-outline: not $ekzo-disable-btn-outline,
-  $text-decoration: $ekzo-btn-text-decoration,
-  $hover-text-decoration: $ekzo-btn-hover-text-decoration,
-  $breakpoints: $ekzo-responsive-buttons-breakpoints
+  $btn-outline: true,
+  $text-decoration: none,
+  $hover-text-decoration: none,
+  $breakpoints: $ekzo-responsive-helpers-breakpoints
 ) {
 
   //  1. Allow us to better style box model properties.

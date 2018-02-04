@@ -8,8 +8,8 @@
   $font-family: ekzo-ui-font-family(text),
   $font-size: $ekzo-font-size,
   $line-height: ekzo-line-height(''),
-  $font-weight: $ekzo-font-weight,
-  $background: $ekzo-bg
+  $font-weight: normal,
+  $background: null
 ) {
 
   // -----------------------------------------------------------------------------
@@ -38,11 +38,9 @@
     overflow-y: scroll; // 2
 
     font-family: $font-family; // 3
-
     font-size:   $font-size;
-    line-height: $line-height;
-
     font-weight: $font-weight; // 3
+    line-height: $line-height;
 
     background: $background;
 

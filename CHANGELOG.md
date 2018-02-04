@@ -29,8 +29,92 @@
 
    Such approach gives much better picture of variables usage and defines mixin as the only interface for specifying default variables for context of the module. This means, that using global variables inside modules no longer encouraged and instead they all should be passed through mixin arguments.
 
-- Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`
+- Most part of global `$ekzo-*` settings has been moved to be predefined arguments of related Ekzo mixins.
+
+   That change touched only settings, which are rarely used multiple times across the project and related to very specific instances.
+
+   It gives much cleaner picture of what exactly each settings changes and allows Ekzo to avoid making assumptions and to not enforcing global settings  "just in case". If developer needs to reuse some settings values across the project, it's now up to him to create for it appropriate global variable and store setting there.
+
+   List of moved and thus removed settings can be seen in "Removed" section below.
+
+- Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`.
 - Moved animations and font-stacks from `helpers` to `variables`.
+
+### Removed
+- Removed following settings in favor of built-in exporting mixins arguments:
+
+   * `$ekzo-sprites-path: '#{$ekzo-assets-path}/sprites';`
+   * `$ekzo-bg: null;`
+   * `$ekzo-icon-font: icons;`
+   * `$ekzo-icon-font-version: 79220573;`
+   * `$ekzo-icon-font-svg-id: $ekzo-icon-font;`
+   * `$ekzo-sprites-file: 'sprite.png';`
+   * `$ekzo-links-text-decoration: underline;`
+   * `$ekzo-links-hover-text-decoration: none;`
+   * `$ekzo-bold-font-weight: bolder;`
+   * `$ekzo-btn-text-decoration: none;`
+   * `$ekzo-btn-hover-text-decoration: none;`
+   * `$ekzo-list-style-type: disc;`
+   * `$ekzo-breadcrumb-delimiters-content: '\00A0' '\2192' '\00A0' '\00A0';`
+   * `$ekzo-breadcrumb--rev-delimiters-content: '\00A0' '\2192' '\00A0' '\00A0';`
+   * `$ekzo-links--go-content: '\00A0' '\00BB';`
+   * `$ekzo-links--back-content: '\00AB' '\00A0';`
+   *
+     ```
+     $ekzo-margin-helpers-variations: (
+       '--': ekzo-space(.5),
+       '': ekzo-space(1),
+       \+--: ekzo-space(1.5),
+       \+: ekzo-space(2),
+       \+\+: ekzo-space(3),
+       '0': 0
+     );
+     ```
+
+   * 
+     ```
+     $ekzo-bleed-helpers-variations: (
+       '--': - ekzo-space(.5),
+       '': - ekzo-space(1),
+       \+: - ekzo-space(2),
+       \+\+: - ekzo-space(3),
+     );
+     ```
+
+   * 
+     ```
+     $ekzo-padding-helpers-variations: (
+       '--': ekzo-space(.5),
+       '': ekzo-space(1),
+       \+: ekzo-space(2),
+       '0': 0
+     );
+     ```
+
+   * `$ekzo-widths-helpers-fractions: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)`;
+   * `$ekzo-global-border-box: true !default`;
+   * `$ekzo-disable-links-outline: false !default`;
+   * `$ekzo-disable-forms-outline: false !default`;
+   * `$ekzo-disable-btn-outline: false !default`;
+   * `$ekzo-responsive-buttons-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-hide-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-display-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-flex-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-height-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-positioning-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-margin-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-bleed-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-padding-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-typography-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-widths-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints`;
+   * `$ekzo-responsive-widths-helpers-fractions: $ekzo-widths-helpers-fractions`;
+   * `$ekzo-forms-font-size: ekzo-font-size(h5, headings)`;
+   * `$ekzo-forms-placeholder-font-size: $ekzo-forms-font-size`;
+   * `$ekzo-code-font-size: 90%`;
+   * `$ekzo-kbd-font-size: 90%`;
+   * `$ekzo-font-weight: normal`;
+   * `$ekzo-extra-headings-font-weight: inherit`;
+   * `$ekzo-forms-placeholder-font-style: italic`;
 
 ## 2.7.0
 

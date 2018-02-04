@@ -53,10 +53,12 @@
 
 @mixin exports (
   $ns: $ekzo-h-ns,
-  $fractions: $ekzo-widths-helpers-fractions,
-  $responsive-fractions: $ekzo-responsive-widths-helpers-fractions,
-  $breakpoins: $ekzo-responsive-widths-helpers-breakpoints
+  $fractions: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
+  $responsive-fractions: null,
+  $breakpoins: $ekzo-responsive-helpers-breakpoints
 ) {
+  $responsive-fractions: $fractions !default;
+
   @include ekzo-widths-helpers(
     $prefix: $ns,
     $fractions: $fractions

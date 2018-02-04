@@ -13,8 +13,8 @@
 // Requires extension in stylesheet.
 
 @mixin exports (
-  $ns: $ekzo-o-ns,
-  $path: $ekzo-sprites-path + '/' + $ekzo-sprites-file
+  $path,
+  $ns: $ekzo-o-ns
 ) {
 
   .#{$ns}sprite {

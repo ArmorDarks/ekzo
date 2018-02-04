@@ -55,15 +55,6 @@ $ekzo-font-sizes: (
 
 ) !default;
 
-// ----
-// UI font sizes
-
-$ekzo-forms-font-size:              ekzo-font-size(h5, headings) !default;
-$ekzo-forms-placeholder-font-size:  $ekzo-forms-font-size        !default;
-
-$ekzo-code-font-size:               90% !default;
-$ekzo-kbd-font-size:                90% !default;
-
 // -----------------------------------------------------------------------------
 // Line heights
 // -----------------------------------------------------------------------------
@@ -97,9 +88,4 @@ $ekzo-ui-font-families: (
 // Font weights and styles
 // -----------------------------------------------------------------------------
 
-$ekzo-font-weight:                  normal !default;
-
-$ekzo-headings-font-weight:         inherit !default;
-$ekzo-extra-headings-font-weight:   inherit !default;
-
-$ekzo-forms-placeholder-font-style: italic !default;
+$ekzo-headings-font-weight: inherit !default;
