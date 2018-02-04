@@ -4,6 +4,7 @@
 
 ### Added
 - Added basic tests [#59](https://github.com/ArmorDarks/ekzo/issues/59)
+- Added Travis integration
 
 ### Changed
 - All modules reworked to be mixins.
