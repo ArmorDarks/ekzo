@@ -46,6 +46,7 @@
 - Moved definition of `margin-bottom` on `.o-media` from `generic/_shared.scss` to object's file.
 
 ### Removed
+- Removed `base/_box-sizing.scss`, since its content has been embeded into `base/_normalize.scss`.
 - Removed following settings in favor of built-in exporting mixins arguments:
 
    * `$ekzo-sprites-path: '#{$ekzo-assets-path}/sprites';`
