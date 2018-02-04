@@ -72,6 +72,7 @@
    * `$ekzo-btn-text-decoration: none;`
    * `$ekzo-btn-hover-text-decoration: none;`
    * `$ekzo-list-style-type: disc;`
+   * `$ekzo-hr-height: 1px;`
    * `$ekzo-breadcrumb-delimiters-content: '\00A0' '\2192' '\00A0' '\00A0';`
    * `$ekzo-breadcrumb--rev-delimiters-content: '\00A0' '\2192' '\00A0' '\00A0';`
    * `$ekzo-links--go-content: '\00A0' '\00BB';`

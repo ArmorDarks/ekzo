@@ -8,7 +8,7 @@
 
 @mixin exports (
   $global-border-box: true,
-  $hr-height: $ekzo-hr-height,
+  $hr-height: 1px,
   $links-outline: true,
   $forms-outline: true,
   $bold-font-weight: bolder
