@@ -9,8 +9,7 @@
 @mixin exports (
   $margin-bottom: ekzo-space(1),
   $hr-height: $ekzo-hr-height,
-  $lists-padding: ekzo-space(2),
-  $g-ns: $ekzo-g-ns
+  $lists-padding: ekzo-space(2)
 ) {
 
   // -----------------------------------------------------------------------------
@@ -22,8 +21,7 @@
   blockquote, p, address,
   table,
   fieldset, figure,
-  pre,
-  .#{$g-ns}media { margin-bottom: $margin-bottom; }
+  pre { margin-bottom: $margin-bottom; }
 
   // ----
   // `hr` elements only take up a few pixels, so we need to give them special

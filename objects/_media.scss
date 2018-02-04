@@ -16,6 +16,7 @@
 
 @mixin exports (
   $ns: $ekzo-o-ns,
+  $margin-bottom: ekzo-space(1),
   $margin: ekzo-space(1),
   $margin--plus: ekzo-space(2)
 ) {
@@ -23,6 +24,8 @@
   .#{$ns}media {
     display: flex;
     align-items: flex-start;
+
+    margin-bottom: $margin-bottom;
   }
 
     .#{$ns}media__aside {

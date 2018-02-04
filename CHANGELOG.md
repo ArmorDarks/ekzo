@@ -43,6 +43,7 @@
 
 - Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`.
 - Moved animations and font-stacks from `helpers` to `variables`.
+- Moved definition of `margin-bottom` on `.o-media` from `generic/_shared.scss` to object's file.
 
 ### Removed
 - Removed following settings in favor of built-in exporting mixins arguments:
