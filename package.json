@@ -21,9 +21,19 @@
     "atomic",
     "functional"
   ],
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "22.1.4",
+    "node-sass": "4.7.2",
+    "snazzy": "7.0.0",
+    "standard": "10.0.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard | snazzy",
+    "test:watch": "jest --watch",
+    "test": "npm run lint && jest",
+    "prepublishOnly": "npm test"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

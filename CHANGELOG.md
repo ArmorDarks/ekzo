@@ -2,6 +2,9 @@
 
 ## HEAD
 
+### Added
+- Added basic tests [#59](https://github.com/ArmorDarks/ekzo/issues/59)
+
 ### Changed
 - All modules reworked to be mixins.
 
