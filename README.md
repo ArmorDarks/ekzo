@@ -11,6 +11,9 @@
   <a href='https://www.npmjs.com/package/ekzo'>
     <img src='https://img.shields.io/npm/v/ekzo.svg' alt='NPM version' />
   </a>
+  <a href='https://travis-ci.org/ArmorDarks/ekzo'>
+    <img src='https://img.shields.io/travis/ArmorDarks/ekzo/master.svg?label=travis' alt='Travis Build Status' />
+  </a>
 </p>
 
 How to use
