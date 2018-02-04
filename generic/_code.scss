@@ -6,8 +6,11 @@
 
 @mixin exports (
   $font-family: ekzo-ui-font-family(code),
-  $font-size: 90%
+  $font-size: 90%,
+  $margin-bottom: ekzo-space(1)
 ) {
+
+  pre { margin-bottom: $margin-bottom; }
 
   code,
   pre,

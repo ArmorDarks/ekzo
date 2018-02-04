@@ -6,7 +6,9 @@
 
 @mixin exports (
   $ns: $ekzo-g-ns,
-  $type: disc
+  $type: disc,
+  $margin-bottom: ekzo-space(1),
+  $padding-left: ekzo-space(2)
 ) {
 
   // -----------------------------------------------------------------------------
@@ -14,6 +16,14 @@
   // -----------------------------------------------------------------------------
 
   ul { list-style-type: $type; }
+
+  ul,
+  ol,
+  dl { margin-bottom: $margin-bottom; }
+
+  ul,
+  ol,
+  dd { padding-left: $padding-left; }
 
   // -----------------------------------------------------------------------------
   // Unstyle list
@@ -31,8 +41,8 @@
   %#{$ns}list0 {
     list-style: none;
 
-    margin-left:   0;
-    padding-left:  0;
+    margin-left: 0;
+    padding-left: 0;
     margin-bottom: 0;
   }
 

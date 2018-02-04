@@ -1,9 +1,12 @@
+// stylelint-disable selector-max-type
+
 // =============================================================================
 // Forms
 // =============================================================================
 
 @mixin exports (
   $ns: $ekzo-g-ns,
+  $margin-bottom: ekzo-space(1),
   $font-size: $ekzo-font-size,
   $font-family: ekzo-ui-font-family(forms),
   $placeholder-font-size: null,
@@ -12,6 +15,8 @@
 ) {
   $placeholder-font-size: $font-size !default;
   $placeholder-font-family: $font-family !default;
+
+  fieldset { margin-bottom: $margin-bottom; }
 
   // -----------------------------------------------------------------------------
   // Default input

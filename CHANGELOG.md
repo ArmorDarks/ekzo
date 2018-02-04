@@ -41,11 +41,22 @@
 
    List of moved and thus removed settings can be seen in "Removed" section below.
 
+- Moved `generic/_shared.scss` content to relevant files.
+
+   * `pre` default `margin-bottom` moved to `generic/_code.scss`
+   * `fieldset` default `margin-bottom` moved to `generic/_form.scss`
+   * Headings default `margin-bottom` moved to `generic/_headings.scss`
+   * `hr` default `margin-bottom` and height moved to `generic/_hr.scss`
+   * Lists default `margin-bottom` and `padding-left` moved to `generic/_list.scss`
+   * `table` default `margin-bottom` moved to `generic/_table.scss`
+   * Text-related elements default `margin-bottom` moved to `generic/_text.scss`
+
 - Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`.
 - Moved animations and font-stacks from `helpers` to `variables`.
 - Moved definition of `margin-bottom` on `.o-media` from `generic/_shared.scss` to object's file.
 
 ### Removed
+- Removed `base/_shared.scss`, since its content has been moved to relevant files.
 - Removed `base/_box-sizing.scss`, since its content has been embeded into `base/_normalize.scss`.
 - Removed following settings in favor of built-in exporting mixins arguments:
 

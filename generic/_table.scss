@@ -4,9 +4,12 @@
 // Tables
 // =============================================================================
 
-@mixin exports () {
+@mixin exports ($margin-bottom: ekzo-space(1)) {
 
-  table { width: 100%; }
+  table {
+    width: 100%;
+    margin-bottom: $margin-bottom;
+  }
 
   // -----------------------------------------------------------------------------
   // Cell alignments

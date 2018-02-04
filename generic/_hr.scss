@@ -2,10 +2,18 @@
 // Hr
 // =============================================================================
 
-@mixin exports () {
+@mixin exports (
+  $height: 1px,
+  $margin-bottom: ekzo-space(1)
+) {
 
   hr {
     @include ekzo-theme() { color: ekzo-theme(hr); }
+
+    // `hr` elements only take up a few pixels, so we need to give them special
+    // treatment regarding vertical rhythm.
+
+    margin-bottom: $margin-bottom - ekzo-units($height, unit(ekzo-space()));
   }
 
 }

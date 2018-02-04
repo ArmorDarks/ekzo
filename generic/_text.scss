@@ -1,8 +1,14 @@
+// stylelint-disable selector-max-type
+
 // =============================================================================
 // Text
 // =============================================================================
 
-@mixin exports () {
+@mixin exports ($margin-bottom: ekzo-space(1)) {
+
+  address,
+  blockquote,
+  p { margin-bottom: $margin-bottom; }
 
   // -----------------------------------------------------------------------------
   // Text select style
