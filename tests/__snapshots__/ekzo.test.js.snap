@@ -282,28 +282,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre,
-.g-media {
+pre {
   margin-bottom: 21px; }
-
-hr {
-  margin-bottom: 20px; }
-
-ul,
-ol,
-dd {
-  padding-left: 42px; }
 
 code,
 pre,
 samp {
   font-family: monospace, monospace;
   font-size: 90%; }
+
+fieldset {
+  margin-bottom: 21px; }
 
 .g-input,
 input,
@@ -320,6 +309,14 @@ select {
   font-family: inherit;
   font-size: 14px;
   font-style: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 21px; }
 
 h1 {
   font-weight: inherit;
@@ -352,7 +349,8 @@ h6 {
   line-height: 1.3125; }
 
 hr {
-  color: #464c53; }
+  color: #464c53;
+  margin-bottom: 20px; }
 
 img {
   max-width: 100%; }
@@ -432,6 +430,16 @@ a,
 ul {
   list-style-type: disc; }
 
+ul,
+ol,
+dl {
+  margin-bottom: 21px; }
+
+ul,
+ol,
+dd {
+  padding-left: 42px; }
+
 .g-list0,
 .o-breadcrumb,
 .o-nav {
@@ -441,7 +449,8 @@ ul {
   margin-bottom: 0; }
 
 table {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 21px; }
 
 [colspan] {
   text-align: center; }
@@ -454,6 +463,11 @@ table {
 
 [rowspan='1'] {
   vertical-align: top; }
+
+address,
+blockquote,
+p {
+  margin-bottom: 21px; }
 
 .o-aspect-ratio {
   position: relative; }
@@ -728,7 +742,8 @@ table {
 
 .o-media {
   display: flex;
-  align-items: flex-start; }
+  align-items: flex-start;
+  margin-bottom: 21px; }
 
 .o-media__aside {
   flex: 0 0 auto;
