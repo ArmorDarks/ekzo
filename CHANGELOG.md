@@ -134,6 +134,11 @@
    * `$ekzo-extra-headings-font-weight: inherit`;
    * `$ekzo-forms-placeholder-font-style: italic`;
 
+- Removed function `ekzo-sprite-map()`. It wasn't very useful.
+- Removed mixin `ekzo-sprite()`, which allowed to print specific sprite with tricky specific styling.
+
+   It was too complicated and not useful enough. In most cases it's easier to retrieve particular sprite data manually from storing sprites map and build necessary component yourself.
+
 ## 2.7.0
 
 ### Changed
