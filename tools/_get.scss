@@ -17,7 +17,7 @@
   $key: nth($keys, 1);
 
   @if (type-of($map) != 'map') {
-    @error '[ekzo-get]: cannot searh property `#{$keys}` in non-map value, `#{type-of($map)}` provided';
+    @error '[ekzo-get]: cannot search property `#{$keys}` in non-map value, `#{type-of($map)}` provided';
   }
 
   @if not map-has-key($map, $key) {
