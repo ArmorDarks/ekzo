@@ -125,7 +125,7 @@
 
 @import 'objects/icon';
 
-@include exports();
+@include exports($path: '/icons');
 
 @import 'objects/iconic-list';
 
