@@ -9,12 +9,10 @@
   $margin-bottom: ekzo-space(1),
   $font-size: $ekzo-font-size,
   $font-family: ekzo-ui-font-family(forms),
-  $placeholder-font-size: null,
-  $placeholder-font-family: null,
+  $placeholder-font-size: $font-size,
+  $placeholder-font-family: $font-family,
   $placeholder-font-style: inherit
 ) {
-  $placeholder-font-size: $font-size !default;
-  $placeholder-font-family: $font-family !default;
 
   fieldset { margin-bottom: $margin-bottom; }
 
