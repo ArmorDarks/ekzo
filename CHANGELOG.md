@@ -56,6 +56,7 @@
 - Moved definition of `margin-bottom` on `.o-media` from `generic/_shared.scss` to object's file.
 - Mixin `ekzo-icons()` no longer relies on `$ekzo-icons` map and `$ekzo-icons-prefix` setting. Instead, it requires `$icons` argument and provides `Icon--` as a default prefix.
 - Mixin `ekzo-sprites()` no longer relies on `$ekzo-sprites` map and `$ekzo-sprites-prefix` setting. Instead, it requires `$sprites` argument and provides `Sprite--` as a default prefix.
+- `$matches` parameter of the `ekzo-for-each-breakpoint()` no longer points to `$matches: $ekzo-responsive-helpers-breakpoints` and instead is a required parameter.
 
 ### Removed
 - Removed `base/_shared.scss`, since its content has been moved to relevant files.

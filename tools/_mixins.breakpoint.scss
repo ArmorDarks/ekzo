@@ -1,5 +1,5 @@
 // =============================================================================
-// ^MIXINS.BREAKPOINT
+// Mixins.breakpoint
 // =============================================================================
 
 // -----------------------------------------------------------------------------
@@ -48,7 +48,11 @@
 // Include for each breakpoint
 // -----------------------------------------------------------------------------
 
-@mixin ekzo-for-each-breakpoint ($matches: $ekzo-responsive-helpers-breakpoints, $include-self: false, $breakpoints: $ekzo-breakpoints) {
+@mixin ekzo-for-each-breakpoint (
+  $matches,
+  $include-self: false,
+  $breakpoints: $ekzo-breakpoints
+) {
   @include ekzo-set-temp('');
 
   @if $include-self {
