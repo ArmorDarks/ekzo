@@ -1,18 +1,18 @@
 // =============================================================================
 // Get
 // =============================================================================
-//
-// Make work with maps easier
 
-// -----------------------------------------------------------------------------
-// Map Get Deep
-// -----------------------------------------------------------------------------
-//
-// Given a map and a list of keys, find the value at the given key
-//
-// @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
-// @todo Should support paths in `$keys...`. This required by `@mixin ekzo-breakpoint`
-
+///
+// Get the value from the map
+// Same as default `map-get`, but supports spreaded keys
+// On contrary to default `map-get`, it will throw in case
+// path leads to nowhere
+// @param {map} $map   The map to query
+// @param {*} $keys... The path of the property to get
+// @return {*} The resolved value
+// @example
+//   ekzo-get($borders, 'thin', 'dashed');
+///
 @function ekzo-get ($map, $keys...) {
   $key: nth($keys, 1);
 
@@ -35,13 +35,13 @@
   @return ekzo-get($map, $shifted...);
 }
 
-// ----
-// Map Get Deep Warning
-//
-// Displays a warning if the retrieved value is `null`
-//
-// @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
-
+///
+// Remove first value from the list
+// @param {list} $list The list to process
+// @return {list} The list without first value
+// @example
+//   ekzo-shift((1, 2, 3)) // => (2, 3)
+///
 @function ekzo-shift ($list) {
   $shifted: ();
   $length: length($list);
