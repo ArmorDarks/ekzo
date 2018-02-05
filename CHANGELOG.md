@@ -67,6 +67,23 @@
    * Global settings `$ekzo-fonts-path` and `$ekzo-use-svg-fonts` no longer used
 
 - `objects/icon` and `objects/sprite` now requiring `$path` parameter, which should point to files to be used for icons and sprites.
+- All tools (mixins and function) has been reorganized. Instead of being divided into `functions.*` and `mixins.*` files, they now live together, based on their relevance:
+
+   * `tools/functions.map` moved to `tools/get`
+   * `tools/functions.misc` and `tools/mixins.misc` moved to `tools/misc`
+   * `tools/functions.spacing` moved to `tools/space`
+   * `tools/functions.themes` and `tools/mixins.themes` moved to `tools/theme`
+   * `tools/functions.typography` and `tools/mixins.typography` moved to `tools/typography`
+   * `tools/functions.units` moved to `tools/units`
+   * `tools/functions.z-index` moved to `tools/z-index`
+   * `tools/mixins.arrows` moved to `tools/arrow`
+   * `tools/mixins.border-radius` moved to `tools/border-radius`
+   * `tools/mixins.breakpoint` moved to `tools/breakpoint`
+   * `tools/mixins.icons` moved to `tools/icons`
+   * `tools/mixins.sprites` moved to `tools/sprites`
+   * `tools/mixins.temp` moved to `tools/temp`
+  
+  It makes importing of relevant tools much easier.
 
 ### Removed
 - Removed `base/_shared.scss`, since its content has been moved to relevant files.

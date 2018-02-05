@@ -1,7 +1,7 @@
-@import './functions.maps';
+@import './get';
 
 // =============================================================================
-// ^FUNCTIONS.Z-INDEX
+// Z-index
 // =============================================================================
 
 @function ekzo-z-index ($z-index-name, $map: $ekzo-z-indexes) {

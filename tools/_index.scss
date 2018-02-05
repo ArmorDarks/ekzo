@@ -1,29 +1,17 @@
 // =============================================================================
-// ^TOOLS
+// Tools
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Functions
-// -----------------------------------------------------------------------------
-
-@import './functions.border-radius';
-@import './functions.maps';
-@import './functions.misc';
-@import './functions.spacing';
-@import './functions.temp';
-@import './functions.themes';
-@import './functions.typography';
-@import './functions.units';
-@import './functions.z-index';
-
-// -----------------------------------------------------------------------------
-// Mixins
-// -----------------------------------------------------------------------------
-
-@import './mixins.arrows';
-@import './mixins.breakpoint';
-@import './mixins.icons';
-@import './mixins.misc';
-@import './mixins.sprites';
-@import './mixins.themes';
-@import './mixins.typography';
+@import './arrow';
+@import './border-radius';
+@import './breakpoint';
+@import './get';
+@import './icons';
+@import './misc';
+@import './space';
+@import './sprites';
+@import './temp';
+@import './theme';
+@import './typography';
+@import './units';
+@import './z-index';
