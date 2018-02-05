@@ -85,7 +85,7 @@
   
   It makes importing of relevant tools much easier.
 
-- Function `ekzo-get()` will now throw error instead of just printing warnings.
+- Refactored function `ekzo-get()`. It should be faster and will now throw errors whenever needed instead of just printing warnings.
 
 ### Removed
 - Removed `base/_shared.scss`, since its content has been moved to relevant files.

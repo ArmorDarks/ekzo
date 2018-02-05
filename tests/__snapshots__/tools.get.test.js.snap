@@ -12,6 +12,6 @@ exports[`Tool get should get from nested map 1`] = `
 "
 `;
 
-exports[`Tool get should throw on non-map value 1`] = `"[ekzo-get]: non-map value found for key search \`depth1\`, can not search for key \`depth2\`"`;
+exports[`Tool get should throw on non-map value 1`] = `"[ekzo-get]: cannot searh property \`depth2\` in non-map value, \`string\` provided"`;
 
-exports[`Tool get should throw on wrong key 1`] = `"[ekzo-get]: map has no value for key search \`depth1->depth2\`"`;
+exports[`Tool get should throw on wrong key 1`] = `"[ekzo-get]: cannot find property \`depth2\` in specified map"`;

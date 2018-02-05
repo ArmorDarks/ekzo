@@ -14,32 +14,25 @@
 // @todo Should support paths in `$keys...`. This required by `@mixin ekzo-breakpoint`
 
 @function ekzo-get ($map, $keys...) {
-  @if length($keys) == 1 {
-    $keys: nth($keys, 1);
+  $key: nth($keys, 1);
+
+  @if (type-of($map) != 'map') {
+    @error '[ekzo-get]: cannot searh property `#{$keys}` in non-map value, `#{type-of($map)}` provided';
   }
 
-  $warn: '#{nth($keys, 1)}';
-  $length: length($keys);
-  $get: map-get($map, nth($keys, 1));
-
-  @if $length > 1 {
-    @for $i from 2 through $length {
-      @if $get != null and type-of($get) == 'map' {
-        $warn: $warn + '->#{nth($keys, $i)}';
-        $get: map-get($get, nth($keys, $i));
-
-        @if $get == null {
-          @return ekzo-get-warning($warn, $get, nth($keys, $i));
-        }
-      }
-
-      @else {
-        @return ekzo-get-warning($warn, $get, nth($keys, $i));
-      }
-    }
+  @if not map-has-key($map, $key) {
+    @error '[ekzo-get]: cannot find property `#{$keys}` in specified map';
   }
 
-  @return $get;
+  $map: map-get($map, $key);
+
+  $shifted: ekzo-shift($keys);
+
+  @if length($shifted) == 0 {
+    @return $map;
+  }
+
+  @return ekzo-get($map, $shifted...);
 }
 
 // ----
@@ -49,14 +42,18 @@
 //
 // @source https://github.com/at-import/Sassy-Maps/blob/0.x.x/sass/sassy-maps/_map-get.scss#L8
 
-@function ekzo-get-warning ($warn, $get, $key) {
-  @if $get == null {
-    @error '[ekzo-get]: map has no value for key search `#{$warn}`';
+@function ekzo-shift ($list) {
+  $shifted: ();
+  $length: length($list);
+  $i: 1;
+
+  @each $l in $list {
+    @if ($i >= 2) {
+      $shifted: append($shifted, $l);
+    }
+
+    $i: $i + 1;
   }
 
-  @else if type-of($get) != 'map' {
-    @error '[ekzo-get]: non-map value found for key search `#{$warn}`, can not search for key `#{$key}`';
-  }
-
-  @return null;
+  @return $shifted;
 }
