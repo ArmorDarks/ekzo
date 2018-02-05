@@ -3,8 +3,9 @@
 ## HEAD
 
 ### Added
-- Added basic tests [#59](https://github.com/ArmorDarks/ekzo/issues/59)
-- Added Travis integration
+- Added `ekzo-shift()` function.
+- Added basic tests [#59](https://github.com/ArmorDarks/ekzo/issues/59).
+- Added Travis integration.
 
 ### Changed
 - All modules reworked to be mixins.
@@ -41,19 +42,19 @@
 
    List of moved and thus removed settings can be seen in "Removed" section below.
 
-- Moved `generic/_shared.scss` content to relevant files.
+- Moved `generic/shared` content to relevant files.
 
-   * `pre` default `margin-bottom` moved to `generic/_code.scss`
-   * `fieldset` default `margin-bottom` moved to `generic/_form.scss`
-   * Headings default `margin-bottom` moved to `generic/_headings.scss`
-   * `hr` default `margin-bottom` and height moved to `generic/_hr.scss`
-   * Lists default `margin-bottom` and `padding-left` moved to `generic/_list.scss`
-   * `table` default `margin-bottom` moved to `generic/_table.scss`
-   * Text-related elements default `margin-bottom` moved to `generic/_text.scss`
+   * `pre` default `margin-bottom` moved to `generic/code`
+   * `fieldset` default `margin-bottom` moved to `generic/form`
+   * Headings default `margin-bottom` moved to `generic/headings`
+   * `hr` default `margin-bottom` and height moved to `generic/hr`
+   * Lists default `margin-bottom` and `padding-left` moved to `generic/list`
+   * `table` default `margin-bottom` moved to `generic/table`
+   * Text-related elements default `margin-bottom` moved to `generic/text`
 
-- Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`.
+- Moved `base/box-sizing` to be part of `base/normalize`.
 - Moved animations and font-stacks from `helpers` to `variables`.
-- Moved definition of `margin-bottom` on `.o-media` from `generic/_shared.scss` to object's file.
+- Moved definition of `margin-bottom` on `.o-media` from `generic/shared` to object's file.
 - Mixin `ekzo-icons()` no longer relies on `$ekzo-icons` map and `$ekzo-icons-prefix` setting. Instead, it requires `$icons` argument and provides `Icon--` as a default prefix.
 - Mixin `ekzo-sprites()` no longer relies on `$ekzo-sprites` map and `$ekzo-sprites-prefix` setting. Instead, it requires `$sprites` argument and provides `Sprite--` as a default prefix.
 - `$matches` parameter of the `ekzo-for-each-breakpoint()` no longer points to `$matches: $ekzo-responsive-helpers-breakpoints` and instead is a required parameter.
@@ -88,8 +89,8 @@
 - Refactored function `ekzo-get()`. It should be faster and will now throw errors whenever needed instead of just printing warnings.
 
 ### Removed
-- Removed `base/_shared.scss`, since its content has been moved to relevant files.
-- Removed `base/_box-sizing.scss`, since its content has been embeded into `base/_normalize.scss`.
+- Removed `base/shared`, since its content has been moved to relevant files.
+- Removed `base/box-sizing`, since its content has been embeded into `base/normalize`.
 - Removed following settings in favor of built-in exporting mixins arguments:
 
    * `$ekzo-sprites-path: '#{$ekzo-assets-path}/sprites';`

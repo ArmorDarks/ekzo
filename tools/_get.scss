@@ -1,3 +1,5 @@
+@import './shift';
+
 // =============================================================================
 // Get
 // =============================================================================
@@ -33,27 +35,4 @@
   }
 
   @return ekzo-get($map, $shifted...);
-}
-
-///
-// Remove first value from the list
-// @param {list} $list The list to process
-// @return {list} The list without first value
-// @example
-//   ekzo-shift((1, 2, 3)) // => (2, 3)
-///
-@function ekzo-shift ($list) {
-  $shifted: ();
-  $length: length($list);
-  $i: 1;
-
-  @each $l in $list {
-    @if ($i >= 2) {
-      $shifted: append($shifted, $l);
-    }
-
-    $i: $i + 1;
-  }
-
-  @return $shifted;
 }
