@@ -9,17 +9,15 @@
 // Requires extension in stylesheet.
 
 @mixin exports (
+  $path,
   $ns: $ekzo-o-ns,
   $font: icons,
-  $version: false,
-  $svg-id: null
+  $version: false
 ) {
-  $svg-id: $font !default;
-
   @include ekzo-font-face(
     $font: $font,
-    $version: $version,
-    $svg-id: $svg-id
+    $path: $path,
+    $version: $version
   );
 
   .#{$ns}icon {

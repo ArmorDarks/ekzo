@@ -57,6 +57,16 @@
 - Mixin `ekzo-icons()` no longer relies on `$ekzo-icons` map and `$ekzo-icons-prefix` setting. Instead, it requires `$icons` argument and provides `Icon--` as a default prefix.
 - Mixin `ekzo-sprites()` no longer relies on `$ekzo-sprites` map and `$ekzo-sprites-prefix` setting. Instead, it requires `$sprites` argument and provides `Sprite--` as a default prefix.
 - `$matches` parameter of the `ekzo-for-each-breakpoint()` no longer points to `$matches: $ekzo-responsive-helpers-breakpoints` and instead is a required parameter.
+- Mixin `ekzo-font-face()` has been refactored:
+
+   * It no longer generates SVG font-face URL, and thus doesn't accept `$svg` and `$svg-id` parameters.
+
+     SVG fonts required only by Safari 8-9 and iOS Safari 8.4-9.1, which are no longer in use, which makes this setting obsolete.
+
+   * Instead of `$file-name` should be specified new argument `$filepath`, which should already contain full path to the font file, without an extension
+   * Global settings `$ekzo-fonts-path` and `$ekzo-use-svg-fonts` no longer used
+
+- `objects/icon` and `objects/sprite` now requiring `$path` parameter, which should point to files to be used for icons and sprites.
 
 ### Removed
 - Removed `base/_shared.scss`, since its content has been moved to relevant files.
@@ -73,6 +83,7 @@
    * `$ekzo-sprites`
    * `$ekzo-sprites-prefix: Sprite--;`
    * `$ekzo-sprites-file: 'sprite.png';`
+   * `$ekzo-use-svg-fonts: false;`
    * `$ekzo-links-text-decoration: underline;`
    * `$ekzo-links-hover-text-decoration: none;`
    * `$ekzo-bold-font-weight: bolder;`
