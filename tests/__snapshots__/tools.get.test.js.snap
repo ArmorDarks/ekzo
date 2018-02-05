@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tool get should get from map 1`] = `
+".output {
+  result: value; }
+"
+`;
+
+exports[`Tool get should get from nested map 1`] = `
+".output {
+  result: depth2Value; }
+"
+`;
+
+exports[`Tool get should throw on non-map value 1`] = `"[ekzo-get]: non-map value found for key search \`depth1\`, can not search for key \`depth2\`"`;
+
+exports[`Tool get should throw on wrong key 1`] = `"[ekzo-get]: map has no value for key search \`depth1->depth2\`"`;
