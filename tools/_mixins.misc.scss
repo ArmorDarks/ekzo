@@ -2,19 +2,13 @@
 // ^MIXINS.MISC
 // =============================================================================
 
-// -----------------------------------------------------------------------------
-// Truncate
-// -----------------------------------------------------------------------------
-//
+///
 // Quick way to specify multiple border radii at once
 //
 // @prop {percent|px|em|rem} $truncation-boundary - widths of text, which shouldn't be truncated
 // @example
-//
-//  .box {
-//    @include ekzo-truncate(100%);
-//  }
-
+//  .box { @include ekzo-truncate(100%); }
+///
 @mixin ekzo-truncate ($truncation-boundary) {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -24,12 +18,9 @@
   white-space: nowrap;
 }
 
-// -----------------------------------------------------------------------------
-// SHORTHAND BORDER RADIUS
-// -----------------------------------------------------------------------------
-//
+///
 // Quick way to specify multiple border radii at once
-
+///
 @mixin ekzo-border-top-radius ($radius) {
   border-top-left-radius:  $radius;
   border-top-right-radius: $radius;
@@ -50,10 +41,8 @@
   border-bottom-right-radius: $radius;
 }
 
-// -----------------------------------------------------------------------------
-// ASPECT RATIO
-// -----------------------------------------------------------------------------
-//
+///
+// Calculate aspect ratio
 // For making iframes (YouTubes, Google Map) and some
 // occasion divs obeying to certein aspect ratio
 //
@@ -61,11 +50,8 @@
 // @param (height) $height - height of aspect ration
 //
 // @example
-//
-//  .responsive-iframe--widescreen {
-//    @include ekzo-aspect-ratio(16, 9);
-//  }
-
+//  .responsive-iframe--widescreen { @include ekzo-aspect-ratio(16, 9); }
+///
 @mixin ekzo-aspect-ratio ($width, $height) {
   height: 0;
   width: 100%;

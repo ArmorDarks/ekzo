@@ -39,7 +39,11 @@
 //    .heading { font-size: ekzo-font-size(h1, headings); }
 //    .heading { font-size: (big, my-group, $map:$my-custom-sizes); }
 
-@function ekzo-font-size ($name, $type:text, $map:$ekzo-font-sizes) {
+@function ekzo-font-size (
+  $name,
+  $type: text,
+  $map: $ekzo-font-sizes
+) {
   $value: null;
 
   @if map-has-key($map, $type) {
@@ -65,7 +69,10 @@
 // Get font-family
 // -----------------------------------------------------------------------------
 
-@function ekzo-font-family ($font-family-name, $map: $ekzo-font-families) {
+@function ekzo-font-family (
+  $font-family-name,
+  $map: $ekzo-font-families
+) {
   $value: map-get($map, $font-family-name);
 
   @if $value == false {
@@ -83,7 +90,10 @@
 // Get element font-family
 // -----------------------------------------------------------------------------
 
-@function ekzo-ui-font-family ($font-family-name, $map: $ekzo-ui-font-families) {
+@function ekzo-ui-font-family (
+  $font-family-name,
+  $map: $ekzo-ui-font-families
+) {
   $value: map-get($map, $font-family-name);
 
   @if $value == false {

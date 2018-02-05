@@ -10,7 +10,10 @@
 // @example
 //   padding: ekzo-space(2.5);
 
-@function ekzo-space ($multiplier: 1, $space: $ekzo-space) {
+@function ekzo-space (
+  $multiplier: 1,
+  $space: $ekzo-space
+) {
   @if $multiplier % .25 != 0 {
     @warn '[ekzo-spacing]: multiplier value must be a multiple of `.25`';
   }

@@ -37,9 +37,7 @@
   $ekzo-themes: map-merge($ekzo-themes, $new-theme) !global;
 }
 
-// -----------------------------------------------------------------------------
-// Themify
-// -----------------------------------------------------------------------------
+///
 // Write themified code without breaking modular project structure
 // Improved version of http://www.sitepoint.com/sass-theming-neverending-story/
 //
@@ -57,8 +55,15 @@
 //    .themeSpecificOverride { @include ekzo-theme('flat') { color: red; } }
 //
 //  }
-
-@mixin ekzo-theme ($themes: $ekzo-themes, $prefix: $ekzo-t-ns, $postfix: '', $also-chain:true, $enable-theming: $ekzo-enable-theming, $default-theme: base) {
+///
+@mixin ekzo-theme (
+  $themes: $ekzo-themes,
+  $prefix: $ekzo-t-ns,
+  $postfix: '',
+  $also-chain: true,
+  $enable-theming: $ekzo-enable-theming,
+  $default-theme: base
+) {
   @each $theme, $data in $themes {
     @include ekzo-set-temp(theme, $data);
 

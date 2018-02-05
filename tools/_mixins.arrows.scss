@@ -5,7 +5,7 @@
 //         It shouldn't be used any further until complete
 //         overhaul
 
-//
+///
 //  CSS arrows!!! But... before you read on, you might want to grab a coffee...
 //
 //  This mixin creates a CSS arrow on a given element. We can have the arrow
@@ -38,10 +38,14 @@
 //       border:1px solid #ace;
 //       @include ekzo-arrow(top, left, #bada55, #ace);
 //     }
-//
-//
-
-@mixin ekzo-arrow ($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
+///
+@mixin ekzo-arrow (
+  $arrow-edge,
+  $arrow-location,
+  $arrow-color,
+  $border-color:
+  $arrow-color
+) {
   @if $arrow-edge == top {
     @extend %arrow--top;
 

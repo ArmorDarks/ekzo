@@ -1,6 +1,8 @@
 // =============================================================================
 // Mixins.sprites
 // =============================================================================
+
+///
 // @param {map}    $sprites         Sprites map
 // @param {string} [$prefix:Icon--] Sprite class name
 // @example
@@ -8,7 +10,7 @@
 //     'sprite-name1': ( width: 18px, height: 18px, offset-x:  0,    offset-y: 0 ),
 //     'sprite-name2': ( width: 18px, height: 18px, offset-x: -20px, offset-y: 0 ),
 //   ));
-
+///
 @mixin ekzo-sprites ($sprites, $prefix: Sprite--) {
   @each $sprite, $params in $sprites {
 

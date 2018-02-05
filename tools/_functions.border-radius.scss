@@ -2,7 +2,10 @@
 // ^FUNCTIONS.Border-radius
 // =============================================================================
 
-@function ekzo-border-radius ($border-radius-name, $map: $ekzo-border-radius) {
+@function ekzo-border-radius (
+  $border-radius-name,
+  $map: $ekzo-border-radius
+) {
   @if not map-has-key($map, $border-radius-name) {
     @error '[ekzo-border-radius]: no such border-radius key: #{$border-radius-name}';
   }

@@ -1,13 +1,15 @@
 // =============================================================================
 // Mixins.icons
 // =============================================================================
+
+///
 // @param {map}    $icons            Icons map
 // @param {string} [$prefix:Icon--] Icon class name
 // @example
 //   @include ekzo-icons((
 //     map: '\e815',
 //   ));
-
+///
 @mixin ekzo-icons ($icons, $prefix: Icon--) {
   @each $icon, $content in $icons {
 
