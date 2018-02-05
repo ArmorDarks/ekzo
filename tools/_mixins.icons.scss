@@ -1,31 +1,17 @@
 // =============================================================================
-// ^MIXINS.ICONS
+// Mixins.icons
 // =============================================================================
-//
-// Call all icons
-//
-// Simple mixin to convert all icons into  classes
-// within single loop.
-//
-// All sprites names will be appended with specified
-// in projects settings `$ekzo-icons-prefix`
-//
-// @dep {map} $ekzo-icons               - map of sprites
-//
-//      @example
-//
-//      $icons: (
-//        icon-name: '\e815',
-//      );
-//
-//      {string=sprite--} $icons-prefix - prefix which will be appended to
-//                                        icon name
+// @param {map}    $icons            Icons map
+// @param {string} [$prefix:Icon--] Icon class name
+// @example
+//   @include ekzo-icons((
+//     map: '\e815',
+//   ));
 
-@mixin ekzo-icons ($map: $ekzo-icons, $prefix: $ekzo-icons-prefix) {
-  @each $name, $param in $map {
-    $prefixed-name: $prefix + $name;
+@mixin ekzo-icons ($icons, $prefix: Icon--) {
+  @each $icon, $content in $icons {
 
-    .#{$prefixed-name}:before { content: $param; }
+    .#{$prefix + $icon}:before { content: $content; }
 
   }
 }

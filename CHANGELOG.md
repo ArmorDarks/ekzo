@@ -54,6 +54,8 @@
 - Moved `base/_box-sizing.scss` to be part of `base/_normalize.scss`.
 - Moved animations and font-stacks from `helpers` to `variables`.
 - Moved definition of `margin-bottom` on `.o-media` from `generic/_shared.scss` to object's file.
+- Mixin `ekzo-icons()` no longer relies on `$ekzo-icons` map and `$ekzo-icons-prefix` setting. Instead, it requires `$icons` argument and provides `Icon--` as a default prefix.
+- Mixin `ekzo-sprites()` no longer relies on `$ekzo-sprites` map and `$ekzo-sprites-prefix` setting. Instead, it requires `$sprites` argument and provides `Sprite--` as a default prefix.
 
 ### Removed
 - Removed `base/_shared.scss`, since its content has been moved to relevant files.
@@ -62,9 +64,13 @@
 
    * `$ekzo-sprites-path: '#{$ekzo-assets-path}/sprites';`
    * `$ekzo-bg: null;`
+   * `$ekzo-icons`
+   * `$ekzo-icons-prefix: Icon--;`
    * `$ekzo-icon-font: icons;`
    * `$ekzo-icon-font-version: 79220573;`
    * `$ekzo-icon-font-svg-id: $ekzo-icon-font;`
+   * `$ekzo-sprites`
+   * `$ekzo-sprites-prefix: Sprite--;`
    * `$ekzo-sprites-file: 'sprite.png';`
    * `$ekzo-links-text-decoration: underline;`
    * `$ekzo-links-hover-text-decoration: none;`
