@@ -85,6 +85,8 @@
   
   It makes importing of relevant tools much easier.
 
+- Function `ekzo-get()` will now throw error instead of just printing warnings.
+
 ### Removed
 - Removed `base/_shared.scss`, since its content has been moved to relevant files.
 - Removed `base/_box-sizing.scss`, since its content has been embeded into `base/_normalize.scss`.
