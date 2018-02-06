@@ -22,6 +22,7 @@
     "functional"
   ],
   "devDependencies": {
+    "glob": "7.1.2",
     "jest": "22.1.4",
     "node-sass": "4.7.2",
     "snazzy": "7.0.0",
