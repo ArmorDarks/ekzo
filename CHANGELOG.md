@@ -3,6 +3,10 @@
 ## HEAD
 
 ### Added
+- Added imports of required dependencies to all modules.
+
+  Because modules now exposing a correct dependency graph, they can be imported individually, without need to import before them specific tools.
+
 - Added `ekzo-shift()` function.
 - Added basic tests [#59](https://github.com/ArmorDarks/ekzo/issues/59).
 - Added Travis integration.
