@@ -91,6 +91,7 @@
   It makes importing of relevant tools much easier.
 
 - Refactored function `ekzo-get()`. It should be faster and will now throw errors whenever needed instead of just printing warnings.
+- Reworked `_ie` not rely on default settings. Instead, it requires some parameters to be defined manually. It's up to developer how to pass them to `_ie`.
 
 ### Removed
 - Removed `base/shared`, since its content has been moved to relevant files.

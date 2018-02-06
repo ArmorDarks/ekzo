@@ -1,48 +1,79 @@
+@import './tools/breakpoint';
+
 // stylelint-disable declaration-no-important, selector-max-universal
 
 // =============================================================================
 // ^IE hacks
 // =============================================================================
-//
 // Making world a bit better for IE
-// Usually you don't want to write anything here
-
-// -----------------------------------------------------------------------------
-// Imports
-// -----------------------------------------------------------------------------
-//
-// @note We need to declare here imports too, since it's standalone file
-
-// -----------------------------------------------------------------------------
-// Tools: functions and mixins
-// -----------------------------------------------------------------------------
-
-@import './tools/index';
-
-// -----------------------------------------------------------------------------
-// Default options, styles, colors etc
-// -----------------------------------------------------------------------------
-
-@import 'settings.defaults/typography';
-@import 'settings.defaults/framework';
-@import 'settings.defaults/themes';
-@import 'settings.defaults/assets';
-@import 'settings.defaults/options';
-@import 'settings.defaults/responsive';
-
-// -----------------------------------------------------------------------------
-// Objects
-// -----------------------------------------------------------------------------
 
 @import './objects/clearfix';
 
-@include exports();
+@mixin clearfix ($ns) { @include exports($ns: $ns); }
+
+// -----------------------------------------------------------------------------
+// Flex aligment hacks
+// -----------------------------------------------------------------------------
+// When used with `.o-grid`, try to mimic flex
+// behavior as close as possible
+
+@mixin ekzo-flex-helpers--ie ($prefix: '', $postfix: '') {
+
+  // -----
+  // Main axis aligment
+
+  .#{$prefix}flex--nowrap#{$postfix}    {
+    display: table;
+
+    > * { display: table-cell; }
+
+  }
+
+  .#{$prefix}flex-x--start#{$postfix} { text-align: left !important; }
+
+  .#{$prefix}flex-x--center#{$postfix} {
+    text-align: center !important;
+
+    > * { text-align: left; }
+
+  }
+
+  .#{$prefix}flex-x--end#{$postfix} {
+    text-align: right !important;
+
+    > * { text-align: left; }
+
+  }
+
+  .#{$prefix}flex-x--between#{$postfix},
+  .#{$prefix}flex-x--around#{$postfix} {
+    text-align: justify !important;
+
+    > * { text-align: left; }
+
+  }
+
+  // -----
+  // Cross axis aligment
+
+  .#{$prefix}flex-y--top#{$postfix}      { > * { vertical-align: top      !important; } }
+  .#{$prefix}flex-y--center#{$postfix}   { > * { vertical-align: middle   !important; } }
+  .#{$prefix}flex-y--end#{$postfix}      { > * { vertical-align: bottom   !important; } }
+  .#{$prefix}flex-y--baseline#{$postfix} { > * { vertical-align: baseline !important; } }
+
+  .#{$prefix}flex__item--start#{$postfix}    { vertical-align: top      !important; }
+  .#{$prefix}flex__item--center#{$postfix}   { vertical-align: middle   !important; }
+  .#{$prefix}flex__item--end#{$postfix}      { vertical-align: bottom   !important; }
+  .#{$prefix}flex__item--baseline#{$postfix} { vertical-align: baseline !important; }
+
+}
 
 @mixin exports (
-  $o-ns: $ekzo-o-ns,
-  $h-ns: $ekzo-h-ns,
-  $flex-helpers-breakpoints: $ekzo-responsive-helpers-breakpoints
+  $o-ns,
+  $h-ns,
+  $flex-helpers-breakpoints
 ) {
+  @include clearfix($ns: $o-ns);
 
   // -----------------------------------------------------------------------------
   // Grid legacy hacks
@@ -63,68 +94,14 @@
     }
 
   // -----------------------------------------------------------------------------
-  // Flex aligment hacks
-  // -----------------------------------------------------------------------------
-  // When used with `.o-grid`, try to mimic flex
-  // behavior as close as possible
-
-  @mixin ekzo-flex-helpers ($prefix: $h-ns, $postfix: '') {
-
-    // -----
-    // Main axis aligment
-
-    .#{$prefix}flex--nowrap#{$postfix}    {
-      display: table;
-
-      > * { display: table-cell; }
-
-    }
-
-    .#{$prefix}flex-x--start#{$postfix} { text-align: left !important; }
-
-    .#{$prefix}flex-x--center#{$postfix} {
-      text-align: center !important;
-
-      > * { text-align: left; }
-
-    }
-
-    .#{$prefix}flex-x--end#{$postfix} {
-      text-align: right !important;
-
-      > * { text-align: left; }
-
-    }
-
-    .#{$prefix}flex-x--between#{$postfix},
-    .#{$prefix}flex-x--around#{$postfix} {
-      text-align: justify !important;
-
-      > * { text-align: left; }
-
-    }
-
-    // -----
-    // Cross axis aligment
-
-    .#{$prefix}flex-y--top#{$postfix}      { > * { vertical-align: top      !important; } }
-    .#{$prefix}flex-y--center#{$postfix}   { > * { vertical-align: middle   !important; } }
-    .#{$prefix}flex-y--end#{$postfix}      { > * { vertical-align: bottom   !important; } }
-    .#{$prefix}flex-y--baseline#{$postfix} { > * { vertical-align: baseline !important; } }
-
-    .#{$prefix}flex__item--start#{$postfix}    { vertical-align: top      !important; }
-    .#{$prefix}flex__item--center#{$postfix}   { vertical-align: middle   !important; }
-    .#{$prefix}flex__item--end#{$postfix}      { vertical-align: bottom   !important; }
-    .#{$prefix}flex__item--baseline#{$postfix} { vertical-align: baseline !important; }
-
-  }
-
-  // -----------------------------------------------------------------------------
   // Call
   // -----------------------------------------------------------------------------
 
   @include ekzo-for-each-breakpoint($matches: $flex-helpers-breakpoints, $include-self: true) {
-    @include ekzo-flex-helpers($postfix: ekzo-temp());
+    @include ekzo-flex-helpers--ie(
+      $prefix: $h-ns,
+      $postfix: ekzo-temp()
+    );
   }
 
   // =============================================================================
