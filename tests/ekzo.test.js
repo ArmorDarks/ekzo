@@ -12,7 +12,7 @@ describe('Ekzo', () => {
     expect(css.toString()).toMatchSnapshot()
   })
 
-  it('modules should compile individually', (done) => {
+  it('modules should compile individually', () => {
     glob('**/*.{scss,sass}', { ignore: '**/node_modules/**' }, (error, files) => {
       if (error) throw new Error('Encountered an error in test')
 
