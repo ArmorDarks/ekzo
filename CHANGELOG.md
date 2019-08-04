@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.1
+
+### Fixed
+- Fixed lint errors
+
 ## 2.7.0
 
 ### Changed
